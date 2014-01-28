@@ -41,6 +41,11 @@ void Print::Hexadecimal(const std::string &data)
 	printf("%s", "\n");
 }
 
+void Print::Hexadecimal(char character)
+{
+	printf("%02X\n", character);	
+}
+
 void Print::Integer(int value)
 {
 	printf("%i\n", value);

@@ -55,6 +55,14 @@ public:
 	 * \param data The data to print hexadecimal.
 	 */
 	static void Hexadecimal(const std::string &data);
+
+	/*!
+ 	 * \brief Prints the specified character in it's hexadecimal notation, followed by a new-line
+	 *		  character.
+	 *
+	 * \param data The data to print hexadecimal.
+	 */
+	static void Hexadecimal(char character);
 	
 	/*!
  	 * \brief Prints the specified integer value to the screen, followed by a new-line

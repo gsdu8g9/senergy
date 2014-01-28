@@ -90,6 +90,13 @@ bool MessageQuestion::Serialize(ByteBuffer &buffer)
 	return true;
 }
 
+void MessageQuestion::Dump()
+{
+	printf("Hostname: %s\n", m_hostname.c_str());
+	printf("Type: %hu\n", this->Fields.Type);
+	printf("Class: %hu\n", this->Fields.Class);
+}
+
 std::string MessageQuestion::__encode_hostname(const std::string &hostname)
 {
 	if(hostname.empty())
@@ -167,27 +174,6 @@ void MessageQuestion::__update_host_to_fields(const std::string &hostname)
 
 	memcpy(this->Fields.Hostname, raw_hostname, hostname_len);
 	this->Fields.Hostname[hostname_len] = '\0';
-}
-
-void MessageQuestion::__update_host_from_fields()
-{
-	if(this->Fields.Hostname == NULL)
-		return;
-
-	m_hostname = "";
-
-	char current_character = this->Fields.Hostname[0];
-
-	int len = 0;
-	while(current_character != 0 && len <= 256)
-	{
-		m_hostname += current_character;
-		len++;
-
-		current_character = this->Fields.Hostname[len];
-	}
-
-	m_hostname = __decode_hostname(m_hostname);
 }
 
 } // namespace Dns

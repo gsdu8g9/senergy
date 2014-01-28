@@ -23,6 +23,7 @@
 #define SY_DNS_MESSAGE_H
 
 #include <senergy/dns/message_header.h>
+#include <senergy/dns/message_question.h>
 #include <senergy/bytebuffer.h>
 
 namespace Senergy
@@ -79,6 +80,11 @@ public:
 	 *	 	  See the MessageHeader class and the MessageHeaderFields structure for more information.
  	 */
 	MessageHeader Header;
+	
+	/*!
+	 * \brief Holds all the 'question messages' that are part of this DNS message.
+	 */
+	MessageQuestionPtrVector Questions;
 };
 
 } // namespace Dns

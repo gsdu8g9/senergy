@@ -5,6 +5,9 @@
 #include <senergy/bytebuffer.h>
 #include <cstdio>
 #include <cctype>
+#include <string>
+#include <vector>
+#include <memory>
 
 #ifdef _WIN32
 	#include <winsock2.h>
@@ -119,6 +122,14 @@ public:
 	 */
 	bool Serialize(ByteBuffer &buffer);
 
+	/*!
+	 * \brief Dumps all fields from the 'Fields' member to the standard output, with
+	 *		  their values. In the following format:
+	 *
+	 * 		  [field name]: [field_value]\n
+	 */
+	void Dump();
+
 public:
 	/*!
  	 * \brief The fields that are part of a DNS question message. See MessageQuestionFields
@@ -136,14 +147,21 @@ public:
 
 	// Updates the 'Hostname' field within the 'Fields' member with m_hostname.
 	void __update_host_to_fields(const std::string &hostname);
-	
-	// Updates m_hostname with the 'Hostname' field from the 'Fields' member.
-	void __update_host_from_fields();
 
 private:
 	// Holds the host name that is currently set.
 	std::string 	m_hostname;
 };
+
+/*!
+ * \brief Simple typedef for a shared pointer to a MessageQuestion.
+ */
+typedef std::shared_ptr<MessageQuestion> MessageQuestionPtr;
+
+/*!
+ * \brief Simple typedef for a vector of MessageQuestion smart pointers.
+ */
+typedef std::vector<MessageQuestionPtr> MessageQuestionPtrVector;
 
 } // namespace Dns
 } // namespace Senergy
