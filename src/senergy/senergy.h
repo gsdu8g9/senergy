@@ -27,6 +27,7 @@
 #include <senergy/convert.h>
 #include <senergy/print.h>
 #include <senergy/dns/message_header.h>
+#include <senergy/dns/message_question.h>
 #include <senergy/dns/message.h>
 
 #endif // SENERY_H

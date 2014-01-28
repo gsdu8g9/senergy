@@ -36,4 +36,9 @@ std::string Convert::ToString(int value)
 	return std::string(raw_result);
 }
 
+char Convert::ToChar(int value)
+{
+	return ToString(value)[0];
+}
+
 } // namespace Senergy

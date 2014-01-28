@@ -23,6 +23,7 @@
 #define SY_PRINT_H
 
 #include <cstdio>
+#include <string>
 
 namespace Senergy
 {
@@ -37,7 +38,7 @@ class Print
 {
 public:
 	/*!
- 	 * \brief Prints the specified char array of the specified string, byte by byte
+ 	 * \brief Prints the specified char array, byte by byte
 	 *		  where each byte is shown in it's hexadecimal representation. Followed
 	 *		  by a new-line character (\n).
 	 *
@@ -45,6 +46,15 @@ public:
 	 * \param size The size of the data to print.
 	 */
 	static void Hexadecimal(char *data, int size);
+
+	/*!
+ 	 * \brief Prints the specified string, byte by byte
+	 *		  where each byte is shown in it's hexadecimal representation. Followed
+	 *		  by a new-line character (\n).
+	 *
+	 * \param data The data to print hexadecimal.
+	 */
+	static void Hexadecimal(const std::string &data);
 	
 	/*!
  	 * \brief Prints the specified integer value to the screen, followed by a new-line

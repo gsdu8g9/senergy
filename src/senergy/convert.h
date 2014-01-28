@@ -48,6 +48,15 @@ public:
 	 * \returns The specified integer value as a string.
  	 */
 	static std::string ToString(int value);
+
+	/*!
+  	 * \brief Converts the specified integer value to a character.
+	 *
+	 * \param value The integer value to convert to a character.
+	 *
+	 * \returns The specified integer value as a character.
+ 	 */
+	static char ToChar(int value);
 };
 
 } // namespace Senergy

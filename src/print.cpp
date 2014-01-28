@@ -32,6 +32,15 @@ void Print::Hexadecimal(char *data, int size)
 	printf("%s", "\n");
 }
 
+void Print::Hexadecimal(const std::string &data)
+{
+	int data_len = (int)data.size();
+	for(int i = 0; i < data_len; ++i)
+		printf("%02X ", data[i]);
+
+	printf("%s", "\n");
+}
+
 void Print::Integer(int value)
 {
 	printf("%i\n", value);
