@@ -4,51 +4,56 @@
     <compoundname>message_header.cpp</compoundname>
     <includes refid="message__header_8h" local="no">senergy/dns/message_header.h</includes>
     <incdepgraph>
-      <node id="49">
+      <node id="64">
+        <label>arpa/inet.h</label>
+      </node>
+      <node id="58">
         <label>string</label>
       </node>
-      <node id="54">
+      <node id="63">
         <label>cstdio</label>
       </node>
-      <node id="46">
+      <node id="55">
         <label>src/message_header.cpp</label>
         <link refid="message_header.cpp"/>
-        <childnode refid="47" relation="include">
+        <childnode refid="56" relation="include">
         </childnode>
       </node>
-      <node id="53">
+      <node id="62">
         <label>senergy/print.h</label>
         <link refid="print_8h"/>
-        <childnode refid="54" relation="include">
+        <childnode refid="63" relation="include">
         </childnode>
       </node>
-      <node id="51">
+      <node id="60">
         <label>cstdlib</label>
       </node>
-      <node id="48">
+      <node id="57">
         <label>senergy/bytebuffer.h</label>
         <link refid="bytebuffer_8h"/>
-        <childnode refid="49" relation="include">
+        <childnode refid="58" relation="include">
         </childnode>
-        <childnode refid="50" relation="include">
+        <childnode refid="59" relation="include">
         </childnode>
-        <childnode refid="51" relation="include">
+        <childnode refid="60" relation="include">
         </childnode>
-        <childnode refid="52" relation="include">
+        <childnode refid="61" relation="include">
         </childnode>
-        <childnode refid="53" relation="include">
+        <childnode refid="62" relation="include">
         </childnode>
       </node>
-      <node id="50">
+      <node id="59">
         <label>cstring</label>
       </node>
-      <node id="47">
+      <node id="56">
         <label>senergy/dns/message_header.h</label>
         <link refid="message__header_8h"/>
-        <childnode refid="48" relation="include">
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
         </childnode>
       </node>
-      <node id="52">
+      <node id="61">
         <label>memory</label>
       </node>
     </incdepgraph>
@@ -87,52 +92,64 @@
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Dns</highlight></codeline>
 <codeline lineno="27"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29" refid="class_senergy_1_1_dns_1_1_message_header_1aa103a12edc759b885f57728c091a84eb" refkind="member"><highlight class="normal"><ref refid="class_senergy_1_1_dns_1_1_message_header_1aa103a12edc759b885f57728c091a84eb" kindref="member">MessageHeader::MessageHeader</ref>()<sp/>:</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>m_valid<sp/>(true)</highlight></codeline>
-<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="class_senergy_1_1_dns_1_1_message_header_1a3636da2fa7e96513080d1985ef515958" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_message_header_1a3636da2fa7e96513080d1985ef515958" kindref="member">MessageHeader::IsValid</ref>()</highlight></codeline>
-<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_valid;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="class_senergy_1_1_dns_1_1_message_header_1a69f4475bc3153926dbb011f37cbbfea9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_message_header_1a69f4475bc3153926dbb011f37cbbfea9" kindref="member">MessageHeader::GetSize</ref>()</highlight></codeline>
-<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields" kindref="compound">MessageHeaderFields</ref>);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="class_senergy_1_1_dns_1_1_message_header_1aec3c0b3f2af0504bfa8fca6562c5b039" refkind="member"><highlight class="normal"><ref refid="class_senergy_1_1_dns_1_1_message_header" kindref="compound">MessageHeader</ref><sp/><ref refid="class_senergy_1_1_dns_1_1_message_header_1aec3c0b3f2af0504bfa8fca6562c5b039" kindref="member">MessageHeader::Deserialize</ref>(<ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref><sp/>&amp;buffer)<sp/></highlight><highlight class="comment">//<sp/>static</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_dns_1_1_message_header" kindref="compound">MessageHeader</ref><sp/>return_header;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>return_header.m_valid<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>header_size<sp/>=<sp/>return_header.<ref refid="class_senergy_1_1_dns_1_1_message_header_1a69f4475bc3153926dbb011f37cbbfea9" kindref="member">GetSize</ref>();</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(buffer.<ref refid="class_senergy_1_1_byte_buffer_1ab938ed32f9f909145f93099f4620da69" kindref="member">GetRemainingSize</ref>()<sp/>&lt;<sp/>header_size)</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>return_header;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!buffer.<ref refid="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" kindref="member">Read</ref>((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)&amp;return_header.<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>,<sp/>header_size))</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>return_header;</highlight></codeline>
+<codeline lineno="29" refid="class_senergy_1_1_dns_1_1_message_header_1aa103a12edc759b885f57728c091a84eb" refkind="member"><highlight class="normal"><ref refid="class_senergy_1_1_dns_1_1_message_header_1aa103a12edc759b885f57728c091a84eb" kindref="member">MessageHeader::MessageHeader</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_senergy_1_1_dns_1_1_message_header_1a69f4475bc3153926dbb011f37cbbfea9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_message_header_1a69f4475bc3153926dbb011f37cbbfea9" kindref="member">MessageHeader::GetSize</ref>()</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields" kindref="compound">MessageHeaderFields</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="class_senergy_1_1_dns_1_1_message_header_1aa54f3864838fe22a4406e0c52a90a010" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_message_header_1aa54f3864838fe22a4406e0c52a90a010" kindref="member">MessageHeader::Deserialize</ref>(<ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref><sp/>&amp;buffer)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>header_size<sp/>=<sp/><ref refid="class_senergy_1_1_dns_1_1_message_header_1a69f4475bc3153926dbb011f37cbbfea9" kindref="member">GetSize</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(buffer.<ref refid="class_senergy_1_1_byte_buffer_1ab938ed32f9f909145f93099f4620da69" kindref="member">GetRemainingSize</ref>()<sp/>&lt;<sp/>header_size)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!buffer.<ref refid="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" kindref="member">Read</ref>((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)&amp;this-&gt;Fields,<sp/>header_size))</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>__host_to_network_byte_order();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_senergy_1_1_dns_1_1_message_header_1ab443595ff8e11a828022f0cc5f3f6fbe" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_message_header_1ab443595ff8e11a828022f0cc5f3f6fbe" kindref="member">MessageHeader::Serialize</ref>(<ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref><sp/>&amp;buffer)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>header_size<sp/>=<sp/><ref refid="class_senergy_1_1_dns_1_1_message_header_1a69f4475bc3153926dbb011f37cbbfea9" kindref="member">GetSize</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a25b96a3aed3e617362dbaee66915c33a" kindref="member">Reserve</ref>(header_size);</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>return_header.m_valid<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>return_header;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>__host_to_network_byte_order();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a9a561b3dd8778ee68e75e5a62a38fa60" kindref="member">Write</ref>((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)&amp;this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>,<sp/>header_size);</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61" refid="class_senergy_1_1_dns_1_1_message_header_1ab443595ff8e11a828022f0cc5f3f6fbe" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_message_header_1ab443595ff8e11a828022f0cc5f3f6fbe" kindref="member">MessageHeader::Serialize</ref>(<ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref><sp/>&amp;buffer)</highlight></codeline>
-<codeline lineno="62"><highlight class="normal">{<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="class_senergy_1_1_dns_1_1_message_header_1a3636da2fa7e96513080d1985ef515958" kindref="member">IsValid</ref>())</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reverse</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>__host_to_network_byte_order();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>header_size<sp/>=<sp/><ref refid="class_senergy_1_1_dns_1_1_message_header_1a69f4475bc3153926dbb011f37cbbfea9" kindref="member">GetSize</ref>();</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a25b96a3aed3e617362dbaee66915c33a" kindref="member">Reserve</ref>(header_size);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a9a561b3dd8778ee68e75e5a62a38fa60" kindref="member">Write</ref>((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)&amp;this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>,<sp/>header_size);</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Dns</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MessageHeader::__host_to_network_byte_order()</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1ab423a1e91fecd6ad2ec36a4bdafd5c2b" kindref="member">Id</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>htons(this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1ab423a1e91fecd6ad2ec36a4bdafd5c2b" kindref="member">Id</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1ab5d7c8933016bb7288462b4a0ac131a5" kindref="member">RecursionDesired</ref><sp/><sp/><sp/>=<sp/>htons(this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1ab5d7c8933016bb7288462b4a0ac131a5" kindref="member">RecursionDesired</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a15d1ee99bf788c080001c3216c88274c" kindref="member">Truncation</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>htons(this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a15d1ee99bf788c080001c3216c88274c" kindref="member">Truncation</ref>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a706fe34b459a6aaacc28f0249213b013" kindref="member">Authoritative</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>htons(this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a706fe34b459a6aaacc28f0249213b013" kindref="member">Authoritative</ref>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1ac2d7ba4468405e5693f07d4321058be0" kindref="member">Opcode</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>htons(this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1ac2d7ba4468405e5693f07d4321058be0" kindref="member">Opcode</ref>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a0d0ac4fa85684c3d66a84e3392f3ef99" kindref="member">IsResponse</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>htons(this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a0d0ac4fa85684c3d66a84e3392f3ef99" kindref="member">IsResponse</ref>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a2f42c94d4e50dd7a63b11c8b374597c4" kindref="member">ResponseCode</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>htons(this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a2f42c94d4e50dd7a63b11c8b374597c4" kindref="member">ResponseCode</ref>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a2c846064b4582f46a94bd90b32ef1cd9" kindref="member">CheckingDisabled</ref><sp/><sp/><sp/>=<sp/>htons(this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a2c846064b4582f46a94bd90b32ef1cd9" kindref="member">CheckingDisabled</ref>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a3788cbe9e2663b3be0cad8cbca8dc985" kindref="member">AuthenticatedData</ref><sp/><sp/>=<sp/>htons(this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a3788cbe9e2663b3be0cad8cbca8dc985" kindref="member">AuthenticatedData</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1afb988d15085d4f740df367d1792440c7" kindref="member">Reserved</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>htons(this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1afb988d15085d4f740df367d1792440c7" kindref="member">Reserved</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1afbb68b60a28f855e64eb13615fc2633e" kindref="member">RecursionAvailable</ref><sp/>=<sp/>htons(this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1afbb68b60a28f855e64eb13615fc2633e" kindref="member">RecursionAvailable</ref>);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a8af9bbfa134c9e0d4fc846103f7b72ad" kindref="member">QuestionCount</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>htons(this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a8af9bbfa134c9e0d4fc846103f7b72ad" kindref="member">QuestionCount</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a38e5101ec862c400628d66192c5b9878" kindref="member">AnswerCount</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>htons(this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a38e5101ec862c400628d66192c5b9878" kindref="member">AnswerCount</ref>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a963b92841b3f7fc5fc9268c963d32d8d" kindref="member">NameServerCount</ref><sp/><sp/><sp/><sp/>=<sp/>htons(this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a963b92841b3f7fc5fc9268c963d32d8d" kindref="member">NameServerCount</ref>);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1aae6ba21a1c8baa30f0aafe90d165420f" kindref="member">AdditionalCount</ref><sp/><sp/><sp/><sp/>=<sp/>htons(this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1aae6ba21a1c8baa30f0aafe90d165420f" kindref="member">AdditionalCount</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Dns</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/photonios/Documents/Senergy/src/message_header.cpp"/>
   </compounddef>

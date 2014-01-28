@@ -110,6 +110,7 @@ $(document).ready(function(){initNavTree('class_senergy_1_1_dns_1_1_message.html
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_senergy_1_1_dns_1_1_message-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Senergy::Dns::Message Class Reference</div>  </div>
@@ -126,12 +127,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3e7192f2293903a43e7d08960b08a8b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_message.html#a3e7192f2293903a43e7d08960b08a8b1">Message</a> ()</td></tr>
 <tr class="memdesc:a3e7192f2293903a43e7d08960b08a8b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="class_senergy_1_1_dns_1_1_message.html" title="Represents a DNS packet as described in section 4 of RFC-1035. A DNS packet is the standard message f...">Message</a> class, with default values, without questions, answers, authorities and additionals.  <a href="#a3e7192f2293903a43e7d08960b08a8b1">More...</a><br/></td></tr>
 <tr class="separator:a3e7192f2293903a43e7d08960b08a8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3857764a799ab123405420345f9b03ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_message.html#a3857764a799ab123405420345f9b03ee">Deserialize</a> (<a class="el" href="class_senergy_1_1_byte_buffer.html">ByteBuffer</a> &amp;buffer)</td></tr>
+<tr class="memdesc:a3857764a799ab123405420345f9b03ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserializes a DNS packet header from the specified buffer into this instance.  <a href="#a3857764a799ab123405420345f9b03ee">More...</a><br/></td></tr>
+<tr class="separator:a3857764a799ab123405420345f9b03ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e7978e799fadaa4f03fc881e5c8e0f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_message.html#a2e7978e799fadaa4f03fc881e5c8e0f6">Serialize</a> (<a class="el" href="class_senergy_1_1_byte_buffer.html">ByteBuffer</a> &amp;buffer)</td></tr>
+<tr class="memdesc:a2e7978e799fadaa4f03fc881e5c8e0f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes this DNS message (packet) into the specified <a class="el" href="class_senergy_1_1_byte_buffer.html" title="A dynamiclly sized buffer for binary data. Resizes the underlying buffer when new data is written...">ByteBuffer</a>.  <a href="#a2e7978e799fadaa4f03fc881e5c8e0f6">More...</a><br/></td></tr>
+<tr class="separator:a2e7978e799fadaa4f03fc881e5c8e0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a0c9ed7b89b18762ae55c3bd53278126f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_senergy_1_1_dns_1_1_message_header.html">MessageHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_message.html#a0c9ed7b89b18762ae55c3bd53278126f">Header</a></td></tr>
+<tr class="memdesc:a0c9ed7b89b18762ae55c3bd53278126f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the DNS packet header. The first part of a DNS message. See the <a class="el" href="class_senergy_1_1_dns_1_1_message_header.html" title="Defines the header of a DNS packet, as described in section 4.1 of RFC-1035. All DNS messages start w...">MessageHeader</a> class and the <a class="el" href="struct_senergy_1_1_dns_1_1_message_header_fields.html" title="Defines the fields within a DNS packet header, as described in section 4.1 of RFC-1035. This data structure is used as the &quot;Fields&quot; member/property of the MessageHeader class, and serves as the container of the actual data. ">MessageHeaderFields</a> structure for more information.  <a href="#a0c9ed7b89b18762ae55c3bd53278126f">More...</a><br/></td></tr>
+<tr class="separator:a0c9ed7b89b18762ae55c3bd53278126f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a DNS packet as described in section 4 of RFC-1035. A DNS packet is the standard message format that is transmitted and received by DNS clients and hosts. </p>
 <dl class="section author"><dt>Author</dt><dd>Swen Kooij (Photonios) </dd></dl>
 
-<p>Definition at line <a class="el" href="message_8h_source.html#l00036">36</a> of file <a class="el" href="message_8h_source.html">message.h</a>.</p>
+<p>Definition at line <a class="el" href="message_8h_source.html#l00039">39</a> of file <a class="el" href="message_8h_source.html">message.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a3e7192f2293903a43e7d08960b08a8b1"></a>
 <div class="memitem">
@@ -152,6 +165,81 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a3857764a799ab123405420345f9b03ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Senergy::Dns::Message::Deserialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_senergy_1_1_byte_buffer.html">ByteBuffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deserializes a DNS packet header from the specified buffer into this instance. </p>
+<dl class="section note"><dt>Note</dt><dd>The DNS packet header is 12 bytes, the specified buffer should have at least 12 bytes left to read. Deserialization will fail when there are less then 12 bytes left to read.</dd>
+<dd>
+If the operation suceseeded, the buffer's position will have at least advanced 12 bytes.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>The buffer to read from, should contain a DNS packet message.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A boolean indicating whether deserialization was succesfull. True is returned when it was a success and false is returned when it failed. </dd></dl>
+
+<p>Definition at line <a class="el" href="message_8cpp_source.html#l00033">33</a> of file <a class="el" href="message_8cpp_source.html">message.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2e7978e799fadaa4f03fc881e5c8e0f6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Senergy::Dns::Message::Serialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_senergy_1_1_byte_buffer.html">ByteBuffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Serializes this DNS message (packet) into the specified <a class="el" href="class_senergy_1_1_byte_buffer.html" title="A dynamiclly sized buffer for binary data. Resizes the underlying buffer when new data is written...">ByteBuffer</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>The buffer to write the serialized DNS message to.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A boolean indicating whether serialization was succesfull. True is returned when it was a success and false is returned when it failed. </dd></dl>
+
+<p>Definition at line <a class="el" href="message_8cpp_source.html#l00043">43</a> of file <a class="el" href="message_8cpp_source.html">message.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a0c9ed7b89b18762ae55c3bd53278126f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_senergy_1_1_dns_1_1_message_header.html">MessageHeader</a> Senergy::Dns::Message::Header</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Represents the DNS packet header. The first part of a DNS message. See the <a class="el" href="class_senergy_1_1_dns_1_1_message_header.html" title="Defines the header of a DNS packet, as described in section 4.1 of RFC-1035. All DNS messages start w...">MessageHeader</a> class and the <a class="el" href="struct_senergy_1_1_dns_1_1_message_header_fields.html" title="Defines the fields within a DNS packet header, as described in section 4.1 of RFC-1035. This data structure is used as the &quot;Fields&quot; member/property of the MessageHeader class, and serves as the container of the actual data. ">MessageHeaderFields</a> structure for more information. </p>
+
+<p>Definition at line <a class="el" href="message_8h_source.html#l00081">81</a> of file <a class="el" href="message_8h_source.html">message.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/senergy/dns/<a class="el" href="message_8h_source.html">message.h</a></li>
 <li>src/<a class="el" href="message_8cpp_source.html">message.cpp</a></li>
@@ -162,7 +250,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_senergy.html">Senergy</a></li><li class="navelem"><a class="el" href="namespace_senergy_1_1_dns.html">Dns</a></li><li class="navelem"><a class="el" href="class_senergy_1_1_dns_1_1_message.html">Message</a></li>
-    <li class="footer">Generated on Tue Jan 28 2014 15:01:56 for Senergy by
+    <li class="footer">Generated on Tue Jan 28 2014 15:28:43 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

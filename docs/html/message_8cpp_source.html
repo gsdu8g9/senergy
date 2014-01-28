@@ -143,17 +143,42 @@ $(document).ready(function(){initNavTree('message_8cpp_source.html','');});
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;} <span class="comment">// namespace Dns</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;} <span class="comment">// namespace Senergy</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_senergy_1_1_dns_1_1_message.html#a3857764a799ab123405420345f9b03ee">   33</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_senergy_1_1_dns_1_1_message.html#a3857764a799ab123405420345f9b03ee">Message::Deserialize</a>(<a class="code" href="class_senergy_1_1_byte_buffer.html">ByteBuffer</a> &amp;buffer)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">if</span>(!this-&gt;<a class="code" href="class_senergy_1_1_dns_1_1_message.html#a0c9ed7b89b18762ae55c3bd53278126f">Header</a>.<a class="code" href="class_senergy_1_1_dns_1_1_message_header.html#aa54f3864838fe22a4406e0c52a90a010">Deserialize</a>(buffer))</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">// \todo implement deserialization of rest of packet</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_senergy_1_1_dns_1_1_message.html#a2e7978e799fadaa4f03fc881e5c8e0f6">   43</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_senergy_1_1_dns_1_1_message.html#a2e7978e799fadaa4f03fc881e5c8e0f6">Message::Serialize</a>(<a class="code" href="class_senergy_1_1_byte_buffer.html">ByteBuffer</a> &amp;buffer)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span>(!this-&gt;<a class="code" href="class_senergy_1_1_dns_1_1_message.html#a0c9ed7b89b18762ae55c3bd53278126f">Header</a>.<a class="code" href="class_senergy_1_1_dns_1_1_message_header.html#ab443595ff8e11a828022f0cc5f3f6fbe">Serialize</a>(buffer))</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// \todo implement serialization of rest of packet</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;} <span class="comment">// namespace Dns</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;} <span class="comment">// namespace Senergy</span></div>
+<div class="ttc" id="class_senergy_1_1_dns_1_1_message_header_html_aa54f3864838fe22a4406e0c52a90a010"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_message_header.html#aa54f3864838fe22a4406e0c52a90a010">Senergy::Dns::MessageHeader::Deserialize</a></div><div class="ttdeci">bool Deserialize(ByteBuffer &amp;buffer)</div><div class="ttdoc">Deserializes a DNS packet header from the specified buffer into this instance. </div><div class="ttdef"><b>Definition:</b> <a href="message__header_8cpp_source.html#l00038">message_header.cpp:38</a></div></div>
+<div class="ttc" id="class_senergy_1_1_dns_1_1_message_html_a3857764a799ab123405420345f9b03ee"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_message.html#a3857764a799ab123405420345f9b03ee">Senergy::Dns::Message::Deserialize</a></div><div class="ttdeci">bool Deserialize(ByteBuffer &amp;buffer)</div><div class="ttdoc">Deserializes a DNS packet header from the specified buffer into this instance. </div><div class="ttdef"><b>Definition:</b> <a href="message_8cpp_source.html#l00033">message.cpp:33</a></div></div>
 <div class="ttc" id="message_8h_html"><div class="ttname"><a href="message_8h.html">message.h</a></div></div>
+<div class="ttc" id="class_senergy_1_1_byte_buffer_html"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html">Senergy::ByteBuffer</a></div><div class="ttdoc">A dynamiclly sized buffer for binary data. Resizes the underlying buffer when new data is written...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8h_source.html#l00040">bytebuffer.h:40</a></div></div>
+<div class="ttc" id="class_senergy_1_1_dns_1_1_message_html_a0c9ed7b89b18762ae55c3bd53278126f"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_message.html#a0c9ed7b89b18762ae55c3bd53278126f">Senergy::Dns::Message::Header</a></div><div class="ttdeci">MessageHeader Header</div><div class="ttdoc">Represents the DNS packet header. The first part of a DNS message. See the MessageHeader class and th...</div><div class="ttdef"><b>Definition:</b> <a href="message_8h_source.html#l00081">message.h:81</a></div></div>
+<div class="ttc" id="class_senergy_1_1_dns_1_1_message_header_html_ab443595ff8e11a828022f0cc5f3f6fbe"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_message_header.html#ab443595ff8e11a828022f0cc5f3f6fbe">Senergy::Dns::MessageHeader::Serialize</a></div><div class="ttdeci">bool Serialize(ByteBuffer &amp;buffer)</div><div class="ttdoc">Serializes this instance into the specified buffer, ready for transmission. </div><div class="ttdef"><b>Definition:</b> <a href="message__header_8cpp_source.html#l00052">message_header.cpp:52</a></div></div>
 <div class="ttc" id="class_senergy_1_1_dns_1_1_message_html_a3e7192f2293903a43e7d08960b08a8b1"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_message.html#a3e7192f2293903a43e7d08960b08a8b1">Senergy::Dns::Message::Message</a></div><div class="ttdeci">Message()</div><div class="ttdoc">Initializes a new instance of the Message class, with default values, without questions, answers, authorities and additionals. </div><div class="ttdef"><b>Definition:</b> <a href="message_8cpp_source.html#l00029">message.cpp:29</a></div></div>
+<div class="ttc" id="class_senergy_1_1_dns_1_1_message_html_a2e7978e799fadaa4f03fc881e5c8e0f6"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_message.html#a2e7978e799fadaa4f03fc881e5c8e0f6">Senergy::Dns::Message::Serialize</a></div><div class="ttdeci">bool Serialize(ByteBuffer &amp;buffer)</div><div class="ttdoc">Serializes this DNS message (packet) into the specified ByteBuffer. </div><div class="ttdef"><b>Definition:</b> <a href="message_8cpp_source.html#l00043">message.cpp:43</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="message_8cpp.html">message.cpp</a></li>
-    <li class="footer">Generated on Tue Jan 28 2014 15:01:56 for Senergy by
+    <li class="footer">Generated on Tue Jan 28 2014 15:28:43 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -14,7 +14,16 @@ Represents a D\-N\-S packet as described in section 4 of R\-F\-C-\/1035. A D\-N\
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_senergy_1_1_dns_1_1_message_a3e7192f2293903a43e7d08960b08a8b1}{Message} ()
-\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_message}{Message} class, with default values, without questions, answers, authorities and additionals. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_message}{Message} class, with default values, without questions, answers, authorities and additionals. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_dns_1_1_message_a3857764a799ab123405420345f9b03ee}{Deserialize} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
+\begin{DoxyCompactList}\small\item\em Deserializes a D\-N\-S packet header from the specified buffer into this instance. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_dns_1_1_message_a2e7978e799fadaa4f03fc881e5c8e0f6}{Serialize} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
+\begin{DoxyCompactList}\small\item\em Serializes this D\-N\-S message (packet) into the specified \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_senergy_1_1_dns_1_1_message_header}{Message\-Header} \hyperlink{class_senergy_1_1_dns_1_1_message_a0c9ed7b89b18762ae55c3bd53278126f}{Header}
+\begin{DoxyCompactList}\small\item\em Represents the D\-N\-S packet header. The first part of a D\-N\-S message. See the \hyperlink{class_senergy_1_1_dns_1_1_message_header}{Message\-Header} class and the \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields}{Message\-Header\-Fields} structure for more information. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -25,7 +34,7 @@ Swen Kooij (Photonios)
 \end{DoxyAuthor}
 
 
-Definition at line 36 of file message.\-h.
+Definition at line 39 of file message.\-h.
 
 
 
@@ -44,6 +53,74 @@ Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_message}{
 
 
 Definition at line 29 of file message.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_message_a3857764a799ab123405420345f9b03ee}{\index{Senergy\-::\-Dns\-::\-Message@{Senergy\-::\-Dns\-::\-Message}!Deserialize@{Deserialize}}
+\index{Deserialize@{Deserialize}!Senergy::Dns::Message@{Senergy\-::\-Dns\-::\-Message}}
+\subsubsection[{Deserialize}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Message\-::\-Deserialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Byte\-Buffer} \&}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_message_a3857764a799ab123405420345f9b03ee}
+
+
+Deserializes a D\-N\-S packet header from the specified buffer into this instance. 
+
+\begin{DoxyNote}{Note}
+The D\-N\-S packet header is 12 bytes, the specified buffer should have at least 12 bytes left to read. Deserialization will fail when there are less then 12 bytes left to read.
+
+If the operation suceseeded, the buffer's position will have at least advanced 12 bytes.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to read from, should contain a D\-N\-S packet message.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether deserialization was succesfull. True is returned when it was a success and false is returned when it failed. 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file message.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_message_a2e7978e799fadaa4f03fc881e5c8e0f6}{\index{Senergy\-::\-Dns\-::\-Message@{Senergy\-::\-Dns\-::\-Message}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Senergy::Dns::Message@{Senergy\-::\-Dns\-::\-Message}}
+\subsubsection[{Serialize}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Message\-::\-Serialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Byte\-Buffer} \&}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_message_a2e7978e799fadaa4f03fc881e5c8e0f6}
+
+
+Serializes this D\-N\-S message (packet) into the specified \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to write the serialized D\-N\-S message to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether serialization was succesfull. True is returned when it was a success and false is returned when it failed. 
+\end{DoxyReturn}
+
+
+Definition at line 43 of file message.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_message_a0c9ed7b89b18762ae55c3bd53278126f}{\index{Senergy\-::\-Dns\-::\-Message@{Senergy\-::\-Dns\-::\-Message}!Header@{Header}}
+\index{Header@{Header}!Senergy::Dns::Message@{Senergy\-::\-Dns\-::\-Message}}
+\subsubsection[{Header}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message\-Header} Senergy\-::\-Dns\-::\-Message\-::\-Header}}\label{class_senergy_1_1_dns_1_1_message_a0c9ed7b89b18762ae55c3bd53278126f}
+
+
+Represents the D\-N\-S packet header. The first part of a D\-N\-S message. See the \hyperlink{class_senergy_1_1_dns_1_1_message_header}{Message\-Header} class and the \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields}{Message\-Header\-Fields} structure for more information. 
+
+
+
+Definition at line 81 of file message.\-h.
 
 
 

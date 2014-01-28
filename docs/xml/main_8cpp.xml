@@ -73,6 +73,10 @@
       <node id="41">
         <label>senergy/dns/message.h</label>
         <link refid="message_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
       </node>
       <node id="26">
         <label>vector</label>
@@ -132,6 +136,8 @@
         <label>senergy/dns/message_header.h</label>
         <link refid="message__header_8h"/>
         <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
         </childnode>
       </node>
       <node id="27">

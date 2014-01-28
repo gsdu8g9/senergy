@@ -4,15 +4,65 @@
     <compoundname>message.cpp</compoundname>
     <includes refid="message_8h" local="no">senergy/dns/message.h</includes>
     <incdepgraph>
+      <node id="53">
+        <label>arpa/inet.h</label>
+      </node>
+      <node id="47">
+        <label>string</label>
+      </node>
       <node id="43">
         <label>src/message.cpp</label>
         <link refid="message.cpp"/>
         <childnode refid="44" relation="include">
         </childnode>
       </node>
+      <node id="52">
+        <label>cstdio</label>
+      </node>
       <node id="44">
         <label>senergy/dns/message.h</label>
         <link refid="message_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>senergy/print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>cstdlib</label>
+      </node>
+      <node id="46">
+        <label>senergy/bytebuffer.h</label>
+        <link refid="bytebuffer_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>cstring</label>
+      </node>
+      <node id="45">
+        <label>senergy/dns/message_header.h</label>
+        <link refid="message__header_8h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>memory</label>
       </node>
     </incdepgraph>
     <innernamespace refid="namespace_senergy">Senergy</innernamespace>
@@ -54,8 +104,27 @@
 <codeline lineno="30"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="31"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Dns</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_senergy_1_1_dns_1_1_message_1a3857764a799ab123405420345f9b03ee" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_message_1a3857764a799ab123405420345f9b03ee" kindref="member">Message::Deserialize</ref>(<ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref><sp/>&amp;buffer)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_1a0c9ed7b89b18762ae55c3bd53278126f" kindref="member">Header</ref>.<ref refid="class_senergy_1_1_dns_1_1_message_header_1aa54f3864838fe22a4406e0c52a90a010" kindref="member">Deserialize</ref>(buffer))</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>\todo<sp/>implement<sp/>deserialization<sp/>of<sp/>rest<sp/>of<sp/>packet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="class_senergy_1_1_dns_1_1_message_1a2e7978e799fadaa4f03fc881e5c8e0f6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_message_1a2e7978e799fadaa4f03fc881e5c8e0f6" kindref="member">Message::Serialize</ref>(<ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref><sp/>&amp;buffer)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!this-&gt;<ref refid="class_senergy_1_1_dns_1_1_message_1a0c9ed7b89b18762ae55c3bd53278126f" kindref="member">Header</ref>.<ref refid="class_senergy_1_1_dns_1_1_message_header_1ab443595ff8e11a828022f0cc5f3f6fbe" kindref="member">Serialize</ref>(buffer))</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>\todo<sp/>implement<sp/>serialization<sp/>of<sp/>rest<sp/>of<sp/>packet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Dns</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/photonios/Documents/Senergy/src/message.cpp"/>
   </compounddef>

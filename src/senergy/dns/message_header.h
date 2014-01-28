@@ -222,9 +222,8 @@ public:
 	MessageHeader();
 	
 	/*!
- 	 * \brief Deserializes a DNS packet header from the specified buffer and
-	 *		  returns the deserialized result as an instance of the MessageHeader
-	 *	 	  class.
+ 	 * \brief Deserializes a DNS packet header from the specified buffer into this
+	 *		  instance.
 	 *
 	 * \note The DNS message header is 12 bytes, the specified buffer must at least
 	 *		 have 12 bytes left to read.
@@ -235,21 +234,10 @@ public:
 	 * \param buffer A reference to an instance of the ByteBuffer class,
 	 *		  	 	 the buffer to read from.
 	 *
-	 * \returns An instance of the MessageHeader class, containing the deserialized
-	 *		 	DNS packet header. If deserialization failed, an invalid MessageHeader
-	 *			instance is returned.
+	 * \returns A boolean indicating whether deserialization was succesfull. True is
+	 *			returned when it was a success and false is returned when it failed.
 	 */
-	static MessageHeader Deserialize(ByteBuffer &buffer);
-
-	/*!
- 	 * \brief Gets whether this instance is a valid DNS packet header.
-	 *
-	 * \returns Whether this instance is a valid DNS packet header. True
-	 *			is returned when this instance is valid, and suited
- 	 *			for transmission, and false is returned when this instance
-	 *			is invalid, and should not be used for transmission.
-	 */
-	bool IsValid();
+	bool Deserialize(ByteBuffer &buffer);
 
 	/*!
  	 * \brief Gets the size of a DNS packet header. This is almost constant
@@ -263,8 +251,6 @@ public:
 	/*!
  	 * \brief Serializes this instance into the specified buffer, ready
 	 *		  for transmission.
-	 *
-	 * \note Serialization will fail when this instance is not valid.
 	 *
 	 * \note Using this will advance the position of the specified ByteBuffer with
 	 *		 12 bytes.
@@ -289,10 +275,6 @@ public:
 private:
 	// Converts all fields from host to network byte order
 	void __host_to_network_byte_order();
-
-private:
-	// Indicates whether this instance is valid, default is true.
-	bool 	m_valid;
 };
 
 } // namespace Dns

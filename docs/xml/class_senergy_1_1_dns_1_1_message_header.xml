@@ -15,22 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="279" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="279" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_message_header_1adbf9f2103fb720b55870d04b9dc9d007" prot="private" static="no" mutable="no">
-        <type>bool</type>
-        <definition>bool Senergy::Dns::MessageHeader::m_valid</definition>
-        <argsstring></argsstring>
-        <name>m_valid</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="283" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="283" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="273" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="273" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -45,21 +30,34 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="214" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_header.cpp" bodystart="29" bodyend="32"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="222" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_header.cpp" bodystart="29" bodyend="31"/>
       </memberdef>
-      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_header_1a3636da2fa7e96513080d1985ef515958" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_header_1aa54f3864838fe22a4406e0c52a90a010" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
-        <definition>bool Senergy::Dns::MessageHeader::IsValid</definition>
-        <argsstring>()</argsstring>
-        <name>IsValid</name>
+        <definition>bool Senergy::Dns::MessageHeader::Deserialize</definition>
+        <argsstring>(ByteBuffer &amp;buffer)</argsstring>
+        <name>Deserialize</name>
+        <param>
+          <type><ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> &amp;</type>
+          <declname>buffer</declname>
+        </param>
         <briefdescription>
-<para>Gets whether this instance is a valid DNS packet header. </para>        </briefdescription>
+<para>Deserializes a DNS packet header from the specified buffer into this instance. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>Whether this instance is a valid DNS packet header. True is returned when this instance is valid, and suited for transmission, and false is returned when this instance is invalid, and should not be used for transmission. </para></simplesect>
+<para><simplesect kind="note"><para>The DNS message header is 12 bytes, the specified buffer must at least have 12 bytes left to read.</para><simplesectsep/><para>Using this will advance the position of the specified <ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> with 12 bytes.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to an instance of the <ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> class, the buffer to read from.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean indicating whether deserialization was succesfull. True is returned when it was a success and false is returned when it failed. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="244" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_header.cpp" bodystart="34" bodyend="37"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="240" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_header.cpp" bodystart="38" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_header_1a69f4475bc3153926dbb011f37cbbfea9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -73,7 +71,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="253" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_header.cpp" bodystart="39" bodyend="42"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="249" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_header.cpp" bodystart="33" bodyend="36"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_header_1ab443595ff8e11a828022f0cc5f3f6fbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -87,7 +85,7 @@
         <briefdescription>
 <para>Serializes this instance into the specified buffer, ready for transmission. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Serialization will fail when this instance is not valid.</para><simplesectsep/><para>Using this will advance the position of the specified <ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> with 12 bytes.</para></simplesect>
+<para><simplesect kind="note"><para>Using this will advance the position of the specified <ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> with 12 bytes.</para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>buffer</parametername>
@@ -100,36 +98,22 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="271" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_header.cpp" bodystart="61" bodyend="71"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="265" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_header.cpp" bodystart="52" bodyend="64"/>
       </memberdef>
       </sectiondef>
-      <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_header_1aec3c0b3f2af0504bfa8fca6562c5b039" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="class_senergy_1_1_dns_1_1_message_header" kindref="compound">MessageHeader</ref></type>
-        <definition>MessageHeader Senergy::Dns::MessageHeader::Deserialize</definition>
-        <argsstring>(ByteBuffer &amp;buffer)</argsstring>
-        <name>Deserialize</name>
-        <param>
-          <type><ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> &amp;</type>
-          <declname>buffer</declname>
-        </param>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_header_1a02c88dc51e95e5706d2e2ff5c701a6a1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::Dns::MessageHeader::__host_to_network_byte_order</definition>
+        <argsstring>()</argsstring>
+        <name>__host_to_network_byte_order</name>
         <briefdescription>
-<para>Deserializes a DNS packet header from the specified buffer and returns the deserialized result as an instance of the <ref refid="class_senergy_1_1_dns_1_1_message_header" kindref="compound">MessageHeader</ref> class. </para>        </briefdescription>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>The DNS message header is 12 bytes, the specified buffer must at least have 12 bytes left to read.</para><simplesectsep/><para>Using this will advance the position of the specified <ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> with 12 bytes.</para></simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>buffer</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A reference to an instance of the <ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> class, the buffer to read from.</para></parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>An instance of the <ref refid="class_senergy_1_1_dns_1_1_message_header" kindref="compound">MessageHeader</ref> class, containing the deserialized DNS packet header. If deserialization failed, an invalid <ref refid="class_senergy_1_1_dns_1_1_message_header" kindref="compound">MessageHeader</ref> instance is returned. </para></simplesect>
-</para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="234" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_header.cpp" bodystart="44" bodyend="59"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="277" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_header.cpp" bodystart="66" bodyend="83"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -140,25 +124,24 @@
 <simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
 </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="10">
+      <node id="12">
         <label>Senergy::Dns::MessageHeaderFields</label>
         <link refid="struct_senergy_1_1_dns_1_1_message_header_fields"/>
       </node>
-      <node id="9">
+      <node id="11">
         <label>Senergy::Dns::MessageHeader</label>
         <link refid="class_senergy_1_1_dns_1_1_message_header"/>
-        <childnode refid="10" relation="usage">
+        <childnode refid="12" relation="usage">
           <edgelabel>Fields</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="208" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="207" bodyend="284"/>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="216" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="215" bodyend="278"/>
     <listofallmembers>
-      <member refid="class_senergy_1_1_dns_1_1_message_header_1aec3c0b3f2af0504bfa8fca6562c5b039" prot="public" virt="non-virtual"><scope>Senergy::Dns::MessageHeader</scope><name>Deserialize</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_message_header_1a02c88dc51e95e5706d2e2ff5c701a6a1" prot="private" virt="non-virtual"><scope>Senergy::Dns::MessageHeader</scope><name>__host_to_network_byte_order</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_message_header_1aa54f3864838fe22a4406e0c52a90a010" prot="public" virt="non-virtual"><scope>Senergy::Dns::MessageHeader</scope><name>Deserialize</name></member>
       <member refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" prot="public" virt="non-virtual"><scope>Senergy::Dns::MessageHeader</scope><name>Fields</name></member>
       <member refid="class_senergy_1_1_dns_1_1_message_header_1a69f4475bc3153926dbb011f37cbbfea9" prot="public" virt="non-virtual"><scope>Senergy::Dns::MessageHeader</scope><name>GetSize</name></member>
-      <member refid="class_senergy_1_1_dns_1_1_message_header_1a3636da2fa7e96513080d1985ef515958" prot="public" virt="non-virtual"><scope>Senergy::Dns::MessageHeader</scope><name>IsValid</name></member>
-      <member refid="class_senergy_1_1_dns_1_1_message_header_1adbf9f2103fb720b55870d04b9dc9d007" prot="private" virt="non-virtual"><scope>Senergy::Dns::MessageHeader</scope><name>m_valid</name></member>
       <member refid="class_senergy_1_1_dns_1_1_message_header_1aa103a12edc759b885f57728c091a84eb" prot="public" virt="non-virtual"><scope>Senergy::Dns::MessageHeader</scope><name>MessageHeader</name></member>
       <member refid="class_senergy_1_1_dns_1_1_message_header_1ab443595ff8e11a828022f0cc5f3f6fbe" prot="public" virt="non-virtual"><scope>Senergy::Dns::MessageHeader</scope><name>Serialize</name></member>
     </listofallmembers>

@@ -22,6 +22,9 @@
 #ifndef SY_DNS_MESSAGE_H
 #define SY_DNS_MESSAGE_H
 
+#include <senergy/dns/message_header.h>
+#include <senergy/bytebuffer.h>
+
 namespace Senergy
 {
 namespace Dns
@@ -41,6 +44,41 @@ public:
 	 *		  answers, authorities and additionals.
  	 */
 	Message();
+
+	/*!
+	 * \brief Deserializes a DNS packet header from the specified buffer into
+	 *		  this instance.
+	 *
+	 * \note The DNS packet header is 12 bytes, the specified buffer should
+	 *		 have at least 12 bytes left to read. Deserialization will fail
+	 *		 when there are less then 12 bytes left to read.
+	 *
+	 * \note If the operation suceseeded, the buffer's position will have
+	 *		 at least advanced 12 bytes.
+	 *
+	 * \param buffer The buffer to read from, should contain a DNS packet message.
+	 * 
+	 * \returns A boolean indicating whether deserialization was succesfull. True is returned
+	 *			when it was a success and false is returned when it failed.
+	 */
+	bool Deserialize(ByteBuffer &buffer);
+	
+	/*!
+ 	 * \brief Serializes this DNS message (packet) into the specified ByteBuffer.
+	 *
+	 * \param buffer The buffer to write the serialized DNS message to.
+	 * 
+	 * \returns A boolean indicating whether serialization was succesfull. True is returned
+	 *			when it was a success and false is returned when it failed.
+	 */
+	bool Serialize(ByteBuffer &buffer);
+
+public:
+	/*!
+ 	 * \brief Represents the DNS packet header. The first part of a DNS message.
+	 *	 	  See the MessageHeader class and the MessageHeaderFields structure for more information.
+ 	 */
+	MessageHeader Header;
 };
 
 } // namespace Dns

@@ -30,5 +30,24 @@ Message::Message()
 {
 }
 
+bool Message::Deserialize(ByteBuffer &buffer)
+{
+	if(!this->Header.Deserialize(buffer))
+		return false;
+
+	// \todo implement deserialization of rest of packet
+
+	return true;
+}
+
+bool Message::Serialize(ByteBuffer &buffer)
+{
+	if(!this->Header.Serialize(buffer))
+		return false;
+
+	// \todo implement serialization of rest of packet
+	return true;
+}
+
 } // namespace Dns
 } // namespace Senergy

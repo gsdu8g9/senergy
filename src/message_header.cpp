@@ -26,14 +26,8 @@ namespace Senergy
 namespace Dns
 {
 
-MessageHeader::MessageHeader() :
-	m_valid	(true)
+MessageHeader::MessageHeader()
 {
-}
-
-bool MessageHeader::IsValid()
-{
-	return m_valid;
 }
 
 int MessageHeader::GetSize()
@@ -41,30 +35,22 @@ int MessageHeader::GetSize()
 	return sizeof(MessageHeaderFields);
 }
 
-MessageHeader MessageHeader::Deserialize(ByteBuffer &buffer) // static
+bool MessageHeader::Deserialize(ByteBuffer &buffer)
 {
-	MessageHeader return_header;
-	return_header.m_valid = false;
-
-	int header_size = return_header.GetSize();
+	int header_size = GetSize();
 
 	if(buffer.GetRemainingSize() < header_size)
-		return return_header;
+		return false;
 
-	if(!buffer.Read((char*)&return_header.Fields, header_size))
-		return return_header;
+	if(!buffer.Read((char*)&this->Fields, header_size))
+		return false;
 
-	return_header.__host_to_network_byte_order();
-
-	return_header.m_valid = true;
-	return return_header;
+	__host_to_network_byte_order();
+	return true;
 }
 
 bool MessageHeader::Serialize(ByteBuffer &buffer)
 {	
-	if(!IsValid())
-		return false;
-
 	int header_size = GetSize();
 	buffer.Reserve(header_size);
 

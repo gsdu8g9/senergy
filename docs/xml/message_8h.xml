@@ -2,29 +2,87 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
   <compounddef id="message_8h" kind="file">
     <compoundname>message.h</compoundname>
+    <includes refid="message__header_8h" local="no">senergy/dns/message_header.h</includes>
+    <includes refid="bytebuffer_8h" local="no">senergy/bytebuffer.h</includes>
     <includedby refid="message_8cpp" local="no">src/message.cpp</includedby>
     <includedby refid="senergy_8h" local="no">src/senergy/senergy.h</includedby>
+    <incdepgraph>
+      <node id="108">
+        <label>arpa/inet.h</label>
+      </node>
+      <node id="102">
+        <label>string</label>
+      </node>
+      <node id="107">
+        <label>cstdio</label>
+      </node>
+      <node id="99">
+        <label>src/senergy/dns/message.h</label>
+        <link refid="message.h"/>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>senergy/print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="107" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>cstdlib</label>
+      </node>
+      <node id="101">
+        <label>senergy/bytebuffer.h</label>
+        <link refid="bytebuffer_8h"/>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+      </node>
+      <node id="103">
+        <label>cstring</label>
+      </node>
+      <node id="100">
+        <label>senergy/dns/message_header.h</label>
+        <link refid="message__header_8h"/>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+      </node>
+      <node id="105">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
     <invincdepgraph>
-      <node id="91">
+      <node id="112">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="89">
+      <node id="110">
         <label>src/message.cpp</label>
         <link refid="message_8cpp"/>
       </node>
-      <node id="88">
+      <node id="109">
         <label>src/senergy/dns/message.h</label>
         <link refid="message.h"/>
-        <childnode refid="89" relation="include">
+        <childnode refid="110" relation="include">
         </childnode>
-        <childnode refid="90" relation="include">
+        <childnode refid="111" relation="include">
         </childnode>
       </node>
-      <node id="90">
+      <node id="111">
         <label>src/senergy/senergy.h</label>
         <link refid="senergy_8h"/>
-        <childnode refid="91" relation="include">
+        <childnode refid="112" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -60,21 +118,31 @@
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SY_DNS_MESSAGE_H</highlight></codeline>
 <codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SY_DNS_MESSAGE_H</highlight></codeline>
 <codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Senergy</highlight></codeline>
-<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Dns</highlight></codeline>
-<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36" refid="class_senergy_1_1_dns_1_1_message" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_senergy_1_1_dns_1_1_message" kindref="compound">Message</ref></highlight></codeline>
-<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_dns_1_1_message_1a3e7192f2293903a43e7d08960b08a8b1" kindref="member">Message</ref>();</highlight></codeline>
-<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Dns</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SY_DNS_MESSAGE_H</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="message__header_8h" kindref="compound">senergy/dns/message_header.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="bytebuffer_8h" kindref="compound">senergy/bytebuffer.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Senergy</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Dns</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_senergy_1_1_dns_1_1_message" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_senergy_1_1_dns_1_1_message" kindref="compound">Message</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_dns_1_1_message_1a3e7192f2293903a43e7d08960b08a8b1" kindref="member">Message</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_message_1a3857764a799ab123405420345f9b03ee" kindref="member">Deserialize</ref>(<ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref><sp/>&amp;buffer);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_message_1a2e7978e799fadaa4f03fc881e5c8e0f6" kindref="member">Serialize</ref>(<ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref><sp/>&amp;buffer);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="81" refid="class_senergy_1_1_dns_1_1_message_1a0c9ed7b89b18762ae55c3bd53278126f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_dns_1_1_message_header" kindref="compound">MessageHeader</ref><sp/><ref refid="class_senergy_1_1_dns_1_1_message_1a0c9ed7b89b18762ae55c3bd53278126f" kindref="member">Header</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Dns</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SY_DNS_MESSAGE_H</highlight></codeline>
     </programlisting>
     <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h"/>
   </compounddef>

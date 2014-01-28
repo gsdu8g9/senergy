@@ -19,9 +19,9 @@ Defines the header of a DNS packet, as described in section 4\&.1 of RFC-1035\&.
 .br
 .RI "\fIInitializes a new instance of the \fBMessageHeader\fP class, with the default values\&. \fP"
 .ti -1c
-.RI "bool \fBIsValid\fP ()"
+.RI "bool \fBDeserialize\fP (\fBByteBuffer\fP &buffer)"
 .br
-.RI "\fIGets whether this instance is a valid DNS packet header\&. \fP"
+.RI "\fIDeserializes a DNS packet header from the specified buffer into this instance\&. \fP"
 .ti -1c
 .RI "int \fBGetSize\fP ()"
 .br
@@ -30,14 +30,6 @@ Defines the header of a DNS packet, as described in section 4\&.1 of RFC-1035\&.
 .RI "bool \fBSerialize\fP (\fBByteBuffer\fP &buffer)"
 .br
 .RI "\fISerializes this instance into the specified buffer, ready for transmission\&. \fP"
-.in -1c
-.SS "Static Public Member Functions"
-
-.in +1c
-.ti -1c
-.RI "static \fBMessageHeader\fP \fBDeserialize\fP (\fBByteBuffer\fP &buffer)"
-.br
-.RI "\fIDeserializes a DNS packet header from the specified buffer and returns the deserialized result as an instance of the \fBMessageHeader\fP class\&. \fP"
 .in -1c
 .SS "Public Attributes"
 
@@ -72,7 +64,7 @@ Swen Kooij (Photonios)
 .PP
 
 .PP
-Definition at line 207 of file message_header\&.h\&.
+Definition at line 215 of file message_header\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Senergy::Dns::MessageHeader::MessageHeader ()"
@@ -83,10 +75,10 @@ Initializes a new instance of the \fBMessageHeader\fP class, with the default va
 Definition at line 29 of file message_header\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "\fBMessageHeader\fP Senergy::Dns::MessageHeader::Deserialize (\fBByteBuffer\fP &buffer)\fC [static]\fP"
+.SS "bool Senergy::Dns::MessageHeader::Deserialize (\fBByteBuffer\fP &buffer)"
 
 .PP
-Deserializes a DNS packet header from the specified buffer and returns the deserialized result as an instance of the \fBMessageHeader\fP class\&. 
+Deserializes a DNS packet header from the specified buffer into this instance\&. 
 .PP
 \fBNote:\fP
 .RS 4
@@ -102,12 +94,12 @@ Using this will advance the position of the specified \fBByteBuffer\fP with 12 b
 .PP
 \fBReturns:\fP
 .RS 4
-An instance of the \fBMessageHeader\fP class, containing the deserialized DNS packet header\&. If deserialization failed, an invalid \fBMessageHeader\fP instance is returned\&. 
+A boolean indicating whether deserialization was succesfull\&. True is returned when it was a success and false is returned when it failed\&. 
 .RE
 .PP
 
 .PP
-Definition at line 44 of file message_header\&.cpp\&.
+Definition at line 38 of file message_header\&.cpp\&.
 .SS "int Senergy::Dns::MessageHeader::GetSize ()"
 
 .PP
@@ -120,20 +112,7 @@ The size of a \fBMessageHeaderFields\fP structure, the size of a DNS packet head
 .PP
 
 .PP
-Definition at line 39 of file message_header\&.cpp\&.
-.SS "bool Senergy::Dns::MessageHeader::IsValid ()"
-
-.PP
-Gets whether this instance is a valid DNS packet header\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-Whether this instance is a valid DNS packet header\&. True is returned when this instance is valid, and suited for transmission, and false is returned when this instance is invalid, and should not be used for transmission\&. 
-.RE
-.PP
-
-.PP
-Definition at line 34 of file message_header\&.cpp\&.
+Definition at line 33 of file message_header\&.cpp\&.
 .SS "bool Senergy::Dns::MessageHeader::Serialize (\fBByteBuffer\fP &buffer)"
 
 .PP
@@ -141,8 +120,6 @@ Serializes this instance into the specified buffer, ready for transmission\&.
 .PP
 \fBNote:\fP
 .RS 4
-Serialization will fail when this instance is not valid\&.
-.PP
 Using this will advance the position of the specified \fBByteBuffer\fP with 12 bytes\&.
 .RE
 .PP
@@ -158,7 +135,7 @@ A boolean indicating whether serialization was sucessful\&. True is returned whe
 .PP
 
 .PP
-Definition at line 61 of file message_header\&.cpp\&.
+Definition at line 52 of file message_header\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "\fBMessageHeaderFields\fP Senergy::Dns::MessageHeader::Fields"
@@ -166,7 +143,7 @@ Definition at line 61 of file message_header\&.cpp\&.
 .PP
 The fields that are part of a DNS packet header\&. See \fBMessageHeaderFields\fP for a complete list\&. This contains the actual data that is transmitted and received\&. 
 .PP
-Definition at line 279 of file message_header\&.h\&.
+Definition at line 273 of file message_header\&.h\&.
 
 .SH "Author"
 .PP 

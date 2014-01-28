@@ -62,16 +62,18 @@
     <member refid="struct_d_n_s___h_e_a_d_e_r_1a62902698d81157eba889e57f56b11702" kind="variable"><name>add_count</name></member>
   </compound>
   <compound refid="class_senergy_1_1_dns_1_1_message" kind="class"><name>Senergy::Dns::Message</name>
+    <member refid="class_senergy_1_1_dns_1_1_message_1a0c9ed7b89b18762ae55c3bd53278126f" kind="variable"><name>Header</name></member>
     <member refid="class_senergy_1_1_dns_1_1_message_1a3e7192f2293903a43e7d08960b08a8b1" kind="function"><name>Message</name></member>
+    <member refid="class_senergy_1_1_dns_1_1_message_1a3857764a799ab123405420345f9b03ee" kind="function"><name>Deserialize</name></member>
+    <member refid="class_senergy_1_1_dns_1_1_message_1a2e7978e799fadaa4f03fc881e5c8e0f6" kind="function"><name>Serialize</name></member>
   </compound>
   <compound refid="class_senergy_1_1_dns_1_1_message_header" kind="class"><name>Senergy::Dns::MessageHeader</name>
     <member refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kind="variable"><name>Fields</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_message_header_1adbf9f2103fb720b55870d04b9dc9d007" kind="variable"><name>m_valid</name></member>
     <member refid="class_senergy_1_1_dns_1_1_message_header_1aa103a12edc759b885f57728c091a84eb" kind="function"><name>MessageHeader</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_message_header_1a3636da2fa7e96513080d1985ef515958" kind="function"><name>IsValid</name></member>
+    <member refid="class_senergy_1_1_dns_1_1_message_header_1aa54f3864838fe22a4406e0c52a90a010" kind="function"><name>Deserialize</name></member>
     <member refid="class_senergy_1_1_dns_1_1_message_header_1a69f4475bc3153926dbb011f37cbbfea9" kind="function"><name>GetSize</name></member>
     <member refid="class_senergy_1_1_dns_1_1_message_header_1ab443595ff8e11a828022f0cc5f3f6fbe" kind="function"><name>Serialize</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_message_header_1aec3c0b3f2af0504bfa8fca6562c5b039" kind="function"><name>Deserialize</name></member>
+    <member refid="class_senergy_1_1_dns_1_1_message_header_1a02c88dc51e95e5706d2e2ff5c701a6a1" kind="function"><name>__host_to_network_byte_order</name></member>
   </compound>
   <compound refid="struct_senergy_1_1_dns_1_1_message_header_fields" kind="struct"><name>Senergy::Dns::MessageHeaderFields</name>
     <member refid="struct_senergy_1_1_dns_1_1_message_header_fields_1ab423a1e91fecd6ad2ec36a4bdafd5c2b" kind="variable"><name>Id</name></member>
