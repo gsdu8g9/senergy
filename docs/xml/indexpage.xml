@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>About Senergy</title>
+    <detaileddescription>
+<para><ref refid="namespace_senergy" kindref="compound">Senergy</ref> is a open-source, recursive DNS server written in C++. <ref refid="namespace_senergy" kindref="compound">Senergy</ref> is currently being written for a graduation project, but intends to be light DNS server, mostly for learning purposes. <ref refid="namespace_senergy" kindref="compound">Senergy</ref> is developed on Linux (Xubuntu 14.04 x64) but could be (with a little work) compiled on other platforms such as Windows or Mac OS X. <ref refid="namespace_senergy" kindref="compound">Senergy</ref> uses Git for source version control (Github), Doxygen for documentation, GCC (4.7) as compiler, GDB as debugger and Valgrind as memory leak scanner. Another important aspect of <ref refid="namespace_senergy" kindref="compound">Senergy</ref> is that it intends to use as little external libraries as possible.</para><para>For for more information on building and running <ref refid="namespace_senergy" kindref="compound">Senergy</ref>, see the &apos;Building&apos; page.</para><para>Currently <ref refid="namespace_senergy" kindref="compound">Senergy</ref> is under initial development. When version 1.0 is finished new goals will be set. The current goals, requirements and definition of done can be found in the project proposal document (see Documents page). </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

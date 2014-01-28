@@ -119,6 +119,10 @@
   <compound refid="namespace_senergy_1_1_networking" kind="namespace"><name>Senergy::Networking</name>
     <member refid="namespace_senergy_1_1_networking_1aced57616d1b0ede6535865d5909abaf1" kind="typedef"><name>SocketPtr</name></member>
   </compound>
+  <compound refid="building_8dox" kind="file"><name>building.dox</name>
+  </compound>
+  <compound refid="mainpage_8dox" kind="file"><name>mainpage.dox</name>
+  </compound>
   <compound refid="bytebuffer_8cpp" kind="file"><name>bytebuffer.cpp</name>
   </compound>
   <compound refid="convert_8cpp" kind="file"><name>convert.cpp</name>
@@ -141,8 +145,12 @@
   </compound>
   <compound refid="socket_8cpp" kind="file"><name>socket.cpp</name>
   </compound>
+  <compound refid="a" kind="page"><name>a</name>
+  </compound>
   <compound refid="dir_43fe9c611a9fdc7364335d381ea28669" kind="dir"><name>src/senergy</name>
   </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
   </compound>
 </doxygenindex>

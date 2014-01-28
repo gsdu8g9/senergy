@@ -1,0 +1,42 @@
+/*!
+  \page a Building
+The following is required to to build Senergy:
+
+- Debian based operating system
+- GCC 4.7
+- GNU Make
+- Git
+- GFlags
+- Snappy
+- Zlib
+- Bzip2
+- RocksDB
+
+All external libraries are for RocksDB, you can download and install them all at once:
+
+\code{.c}
+sudo apt-get install libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev
+\endcode
+
+When you have setup all required libraries and tools, you can clone the source code repository
+using Git:
+
+\code{.c}
+git clone https://github.com/Photonios/senergy.git
+\endcode
+
+You should now have the Senergy source code. Change into the cloned directory:
+
+\code{.c}
+cd senergy
+\endcode
+
+And build the project:
+
+\code{.c}
+make
+\endcode
+
+The RocksDB library is added as a Git submodule and will be build when you build Senergy. After
+compiling and linking finishes, you should have the executable in the 'bin' directory.
+*/

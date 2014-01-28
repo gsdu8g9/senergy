@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="a" kind="page">
+    <compoundname>a</compoundname>
+    <title>Building</title>
+    <detaileddescription>
+<para>The following is required to to build <ref refid="namespace_senergy" kindref="compound">Senergy</ref>:</para><para><itemizedlist>
+<listitem><para>Debian based operating system</para></listitem><listitem><para>GCC 4.7</para></listitem><listitem><para>GNU Make</para></listitem><listitem><para>Git</para></listitem><listitem><para>GFlags</para></listitem><listitem><para>Snappy</para></listitem><listitem><para>Zlib</para></listitem><listitem><para>Bzip2</para></listitem><listitem><para>RocksDB</para></listitem></itemizedlist>
+</para><para>All external libraries are for RocksDB, you can download and install them all at once:</para><para><programlisting><codeline><highlight class="normal">sudo<sp/>apt-</highlight><highlight class="keyword">get</highlight><highlight class="normal"><sp/>install<sp/>libgflags-dev<sp/>libsnappy-dev<sp/>zlib1g-dev<sp/>libbz2-dev</highlight></codeline>
+</programlisting></para><para>When you have setup all required libraries and tools, you can clone the source code repository using Git:</para><para><programlisting><codeline><highlight class="normal">git<sp/>clone<sp/>https:</highlight><highlight class="comment">//github.com/Photonios/senergy.git</highlight></codeline>
+</programlisting></para><para>You should now have the <ref refid="namespace_senergy" kindref="compound">Senergy</ref> source code. Change into the cloned directory:</para><para><programlisting><codeline><highlight class="normal">cd<sp/>senergy</highlight></codeline>
+</programlisting></para><para>And build the project:</para><para><programlisting><codeline><highlight class="normal">make</highlight></codeline>
+</programlisting></para><para>The RocksDB library is added as a Git submodule and will be build when you build <ref refid="namespace_senergy" kindref="compound">Senergy</ref>. After compiling and linking finishes, you should have the executable in the &apos;bin&apos; directory. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>
