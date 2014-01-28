@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <h2 align="center" style="text-align: center;">Senergy</h2>
+  <h2 align="center">Senergy</h2>
 </p>
 
 
