@@ -120,6 +120,8 @@ Swen Kooij / Photonios
 .RE
 .PP
 
+.PP
+Definition at line 61 of file socket\&.h\&.
 .SH "Member Typedef Documentation"
 .PP 
 .SS "typedef std::shared_ptr<\fBSocket\fP> \fBSenergy::Networking::Socket::SocketPtr\fP"
@@ -133,6 +135,8 @@ This is defined outside the class definition as well to make it usuable for libr
 .RE
 .PP
 
+.PP
+Definition at line 120 of file socket\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBSenergy::Networking::Socket::CloseType\fP : int\fC [strong]\fP"
@@ -151,6 +155,8 @@ Stop sending data, but receive all remaining data\&.
 .TP
 \fB\fIStopAll \fP\fP
 Stop sending and receiving data immeditially\&./\&. 
+.PP
+Definition at line 68 of file socket\&.h\&.
 .SS "enum \fBSenergy::Networking::Socket::SocketProtocol\fP : int\fC [strong]\fP"
 
 .PP
@@ -162,6 +168,8 @@ Defines the possible socket protocols that this class supports\&.
 \fB\fITCP \fP\fP
 .TP
 \fB\fIUDP \fP\fP
+.PP
+Definition at line 108 of file socket\&.h\&.
 .SS "enum \fBSenergy::Networking::Socket::SocketRole\fP : int\fC [strong]\fP"
 
 .PP
@@ -175,6 +183,8 @@ The instance is behaving as a client socket, which is connected to a server\&.
 .TP
 \fB\fIServer \fP\fP
 The instance is behaving as a server and is binded on a specific port, and listens for incoming connections\&. 
+.PP
+Definition at line 90 of file socket\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Senergy::Networking::Socket::Socket (\fBSocketProtocol\fPprotocol)"
@@ -188,6 +198,8 @@ Initializes a new instance of the TSocket class that is not connected to a remot
 .RE
 .PP
 
+.PP
+Definition at line 29 of file socket\&.cpp\&.
 .SS "Senergy::Networking::Socket::Socket (const \fBSocket\fP &socket)"
 
 .PP
@@ -204,6 +216,8 @@ This copy constructor is defined to allow the \fBSocket\fP class to be used in S
 .RE
 .PP
 
+.PP
+Definition at line 41 of file socket\&.cpp\&.
 .SS "Senergy::Networking::Socket::Socket (\fBSocketProtocol\fPprotocol, intnative_socket, struct sockaddr_inremote_address)"
 
 .PP
@@ -221,6 +235,8 @@ This constructor is also used when an incoming remote connection is accepted\&.
 .RE
 .PP
 
+.PP
+Definition at line 55 of file socket\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "\fBSocketPtr\fP Senergy::Networking::Socket::Accept ()"
@@ -239,6 +255,8 @@ A shared pointer to an instance of the \fBSocket\fP class, which represents the 
 .RE
 .PP
 
+.PP
+Definition at line 272 of file socket\&.cpp\&.
 .SS "bool Senergy::Networking::Socket::Close (\fBCloseType\fPclose_type = \fC\fBCloseType::StopAll\fP\fP)"
 
 .PP
@@ -255,6 +273,8 @@ A boolean indiciating whether the operation succeseeded and false when the opera
 .RE
 .PP
 
+.PP
+Definition at line 137 of file socket\&.cpp\&.
 .SS "bool Senergy::Networking::Socket::Connect (const std::string &remote_ip, unsigned intremote_port)"
 
 .PP
@@ -278,6 +298,8 @@ A boolean indicating whether setting up a connection with the specified remote h
 .RE
 .PP
 
+.PP
+Definition at line 90 of file socket\&.cpp\&.
 .SS "int Senergy::Networking::Socket::GetErrorCode ()"
 
 .PP
@@ -289,6 +311,8 @@ The last error code that was set during a socket operation\&. If a negative numb
 .RE
 .PP
 
+.PP
+Definition at line 294 of file socket\&.cpp\&.
 .SS "std::string Senergy::Networking::Socket::GetRemoteHost ()"
 
 .PP
@@ -300,6 +324,8 @@ The textual representation of the remote host, can return an empty string when t
 .RE
 .PP
 
+.PP
+Definition at line 68 of file socket\&.cpp\&.
 .SS "bool Senergy::Networking::Socket::IsConnected ()"
 
 .PP
@@ -316,6 +342,8 @@ A boolean indicating whether there's an active connection with the remote host\&
 .RE
 .PP
 
+.PP
+Definition at line 73 of file socket\&.cpp\&.
 .SS "bool Senergy::Networking::Socket::Listen (unsigned intport)"
 
 .PP
@@ -337,6 +365,8 @@ A boolean indiciating whether the operation succeseeded\&. True is returned when
 .RE
 .PP
 
+.PP
+Definition at line 110 of file socket\&.cpp\&.
 .SS "int Senergy::Networking::Socket::Receive (const char *receive_buffer, size_tsize)"
 
 .PP
@@ -360,6 +390,8 @@ The amount of bytes that were actually received and stored into the specified re
 .RE
 .PP
 
+.PP
+Definition at line 185 of file socket\&.cpp\&.
 .SS "std::string Senergy::Networking::Socket::Receive (size_tsize)"
 
 .PP
@@ -381,6 +413,8 @@ A string containing the received data\&. The length (size) of the returned strin
 .RE
 .PP
 
+.PP
+Definition at line 230 of file socket\&.cpp\&.
 .SS "int Senergy::Networking::Socket::Receive (\fBByteBuffer\fP &receive_buffer, size_tsize)"
 
 .PP
@@ -404,6 +438,8 @@ The amount of bytes that were received\&. This number can be equal or less then 
 .RE
 .PP
 
+.PP
+Definition at line 251 of file socket\&.cpp\&.
 .SS "int Senergy::Networking::Socket::Send (const char *data, size_tdata_size)"
 
 .PP
@@ -427,6 +463,8 @@ The amount of bytes that were succesfuly transmitted to the remote host\&. If th
 .RE
 .PP
 
+.PP
+Definition at line 148 of file socket\&.cpp\&.
 .SS "int Senergy::Networking::Socket::Send (const std::string &data, size_tdata_size)"
 
 .PP
@@ -450,6 +488,8 @@ The amount of bytes that were succesfuly transmitted to the remote host\&. If th
 .RE
 .PP
 
+.PP
+Definition at line 172 of file socket\&.cpp\&.
 .SS "int Senergy::Networking::Socket::Send (const std::string &data)"
 
 .PP
@@ -471,6 +511,8 @@ The amount of bytes that were succesfuly transmitted to the remote host\&. If th
 .RE
 .PP
 
+.PP
+Definition at line 180 of file socket\&.cpp\&.
 .SS "bool Senergy::Networking::Socket::SetTimeout (unsigned intmilliseconds)"
 
 .PP
@@ -487,6 +529,8 @@ A boolean indiciating whether setting the timeout succeseeded\&. True is returne
 .RE
 .PP
 
+.PP
+Definition at line 84 of file socket\&.cpp\&.
 
 .SH "Author"
 .PP 

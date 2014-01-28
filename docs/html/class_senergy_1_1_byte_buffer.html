@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="senergy-dns.ico"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Senergy
    &#160;<span id="projectnumber">1.0</span>
@@ -215,6 +216,8 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A dynamiclly sized buffer for binary data. Resizes the underlying buffer when new data is written. Makes it easier to write to buffers that already contain data. </p>
 <dl class="section author"><dt>Author</dt><dd>Swen Kooij (Photonios) </dd></dl>
+
+<p>Definition at line <a class="el" href="bytebuffer_8h_source.html#l00040">40</a> of file <a class="el" href="bytebuffer_8h_source.html">bytebuffer.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ab3b85c02a2ee01df37673e8887df7956"></a>
 <div class="memitem">
@@ -230,6 +233,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initializes a new instance of the <a class="el" href="class_senergy_1_1_byte_buffer.html" title="A dynamiclly sized buffer for binary data. Resizes the underlying buffer when new data is written...">ByteBuffer</a> class. The intial buffer size is 0 bytes. </p>
+
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00027">27</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -249,6 +254,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Initializes a new instance of the <a class="el" href="class_senergy_1_1_byte_buffer.html" title="A dynamiclly sized buffer for binary data. Resizes the underlying buffer when new data is written...">ByteBuffer</a> class with the specified size. After initialization, the buffer is enlarged to the specified size. </p>
 
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00035">35</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aef390f867878292a797065c21cec6afe"></a>
@@ -265,6 +272,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The <a class="el" href="class_senergy_1_1_byte_buffer.html" title="A dynamiclly sized buffer for binary data. Resizes the underlying buffer when new data is written...">ByteBuffer</a>'s destructor. Free's the underlying buffer, and cleans up used resources. </p>
+
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00043">43</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -285,6 +294,8 @@ Public Member Functions</h2></td></tr>
 <p>Gets the current position within the byte buffer. The position is the offset within the buffer that writing/reading starts at. </p>
 <dl class="section return"><dt>Returns</dt><dd>The position within the byte buffer. </dd></dl>
 
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00062">62</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ab938ed32f9f909145f93099f4620da69"></a>
@@ -303,6 +314,8 @@ Public Member Functions</h2></td></tr>
 <p>Gets the amount of bytes that can be read until the end of the buffer is reached. </p>
 <dl class="section return"><dt>Returns</dt><dd>The amount of bytes that can be read until the end of the buffer is reached. </dd></dl>
 
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00067">67</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ad141d494b81ff561ede715c4f7ceb840"></a>
@@ -320,6 +333,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Checks if the buffer is empty and returns true when the buffer is empty and false when the buffer is not empty. </p>
 <dl class="section return"><dt>Returns</dt><dd>A boolean indicating whether the buffer is empty. True is returned when the buffer is empty and false when it is not. </dd></dl>
+
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00052">52</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -357,6 +372,8 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A boolean indicating whether reading succeseeded. True is returned when reading succeseeded and false when reading failed. </dd></dl>
 
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00171">171</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ace3d04d38706d534a16e596ee291630b"></a>
@@ -393,6 +410,8 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A boolean indicating whether reading succeseeded. True is returned when reading succeseeded and false when reading failed. </dd></dl>
 
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00186">186</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a5c3f960422533abc898061be11b6f613"></a>
@@ -412,6 +431,8 @@ Public Member Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>This does not affect the current position.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The contents of the buffer as a string. </dd></dl>
 
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00221">221</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a806db1b33ff86b572a0804879d181dc8"></a>
@@ -430,6 +451,8 @@ Public Member Functions</h2></td></tr>
 <p>Reads a char from the buffer. </p>
 <dl class="section return"><dt>Returns</dt><dd>The char that was read from the buffer. -1 is returned when reading failed. </dd></dl>
 
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00201">201</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ab15f04d43dd82cebf6dc25254d210e4e"></a>
@@ -447,6 +470,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Reads an integer from the buffer. </p>
 <dl class="section return"><dt>Returns</dt><dd>The integer that was read from the buffer. -1 is returned when reading failed. </dd></dl>
+
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00191">191</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -518,6 +543,8 @@ Public Member Functions</h2></td></tr>
 <p>Reads a short from the buffer. </p>
 <dl class="section return"><dt>Returns</dt><dd>The short that was read from the buffer. -1 is returned when reading failed. </dd></dl>
 
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00211">211</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ad9a7a05b0285fe070cde3983458de5f6"></a>
@@ -535,6 +562,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Reads an unsigned char from the buffer. </p>
 <dl class="section return"><dt>Returns</dt><dd>The unsigned char that was read from the buffer. 0 is returned when reading failed. </dd></dl>
+
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00206">206</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -554,6 +583,8 @@ Public Member Functions</h2></td></tr>
 <p>Reads an unsigned integer from the buffer. </p>
 <dl class="section return"><dt>Returns</dt><dd>The unsigned integer that was read from the buffer. 0 is returned when reading failed. </dd></dl>
 
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00196">196</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aa6b6bfdb398a75b92c79bcdfc1986821"></a>
@@ -571,6 +602,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Reads an unsigned short from the buffer. </p>
 <dl class="section return"><dt>Returns</dt><dd>The unsigned short that was read from the buffer. 0 is returned when reading failed. </dd></dl>
+
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00216">216</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -596,6 +629,8 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00085">85</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aa650965d24700a696af31aa9cc20fa68"></a>
@@ -619,6 +654,8 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00096">96</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -645,6 +682,8 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A boolean indicating whether setting the position to the requested offset succeseeded. True is returned when the operation succeseeded and false is returned when the operation failed. </dd></dl>
 
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00072">72</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a52af5d53098be5cb179f9a05f84f39e2"></a>
@@ -670,6 +709,8 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A boolean indicating whether setting the position to the requested offset succeseeded. True is returned when the operation succeseeded and false is returned when the operation failed. </dd></dl>
 
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00080">80</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a22be2d9d356958c4cf352bc31edb1735"></a>
@@ -687,6 +728,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Gets the size of the buffer. This is not the same as the data size. </p>
 <dl class="section return"><dt>Returns</dt><dd>The size of the buffer, in bytes. </dd></dl>
+
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00057">57</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -724,6 +767,8 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00104">104</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ac4a328ba46fb339b37cb0475c6944c18"></a>
@@ -759,6 +804,8 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00114">114</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -796,6 +843,8 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00109">109</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="adeb00769eae3728d222587e00810d422"></a>
@@ -832,6 +881,8 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00128">128</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a9dc9ad6de5d9401a698984634537b27a"></a>
@@ -856,6 +907,8 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00136">136</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -882,6 +935,8 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00141">141</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a8a51e4f9795d312ff2ab8f152b533bb7"></a>
@@ -897,6 +952,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00146">146</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -914,6 +971,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00151">151</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a061fe3c4158ba940e68bf4545639561e"></a>
@@ -929,6 +988,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00156">156</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -946,6 +1007,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00161">161</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a9286d05c71ce66859098778f11be9c51"></a>
@@ -962,11 +1025,13 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="bytebuffer_8cpp_source.html#l00166">166</a> of file <a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/senergy/<a class="el" href="bytebuffer_8h_source.html">bytebuffer.h</a></li>
-<li>src/<a class="el" href="bytebuffer_8cpp.html">bytebuffer.cpp</a></li>
+<li>src/<a class="el" href="bytebuffer_8cpp_source.html">bytebuffer.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -974,7 +1039,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_senergy.html">Senergy</a></li><li class="navelem"><a class="el" href="class_senergy_1_1_byte_buffer.html">ByteBuffer</a></li>
-    <li class="footer">Generated on Tue Jan 28 2014 10:48:58 for Senergy by
+    <li class="footer">Generated on Tue Jan 28 2014 10:55:10 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

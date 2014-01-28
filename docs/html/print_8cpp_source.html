@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Senergy: src/senergy/convert.h Source File</title>
+<title>Senergy: src/print.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -86,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('convert_8h_source.html','');});
+$(document).ready(function(){initNavTree('print_8cpp_source.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -105,10 +105,10 @@ $(document).ready(function(){initNavTree('convert_8h_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">convert.h</div>  </div>
+<div class="title">print.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="convert_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<a href="print_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*******************************************************************************</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *   This file is part of Senergy.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
@@ -128,35 +128,35 @@ $(document).ready(function(){initNavTree('convert_8h_source.html','');});
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *   Swen Kooij (Photonios) &lt;swenkooij@gmail.com&gt; &lt;photonios@outlook.com&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *******************************************************************************/</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#ifndef SY_CONVERT_H</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SY_CONVERT_H</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;cstdio&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span> </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;ctgmath&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span>Senergy</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_senergy_1_1_convert.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_senergy_1_1_convert.html">Convert</a></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">static</span> std::string <a class="code" href="class_senergy_1_1_convert.html#a80cf7b84b0ff65171da68ca40cbf817f">ToString</a>(<span class="keywordtype">int</span> value);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;} <span class="comment">// namespace Senergy</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif // SY_CONVERT_H</span></div>
-<div class="ttc" id="class_senergy_1_1_convert_html_a80cf7b84b0ff65171da68ca40cbf817f"><div class="ttname"><a href="class_senergy_1_1_convert.html#a80cf7b84b0ff65171da68ca40cbf817f">Senergy::Convert::ToString</a></div><div class="ttdeci">static std::string ToString(int value)</div><div class="ttdoc">Converts the specified integer value to a string. </div><div class="ttdef"><b>Definition:</b> <a href="convert_8cpp_source.html#l00027">convert.cpp:27</a></div></div>
-<div class="ttc" id="class_senergy_1_1_convert_html"><div class="ttname"><a href="class_senergy_1_1_convert.html">Senergy::Convert</a></div><div class="ttdoc">A simple conversion class, which simplifies conversion between various native data types...</div><div class="ttdef"><b>Definition:</b> <a href="convert_8h_source.html#l00040">convert.h:40</a></div></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="print_8h.html">senergy/print.h</a>&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span>Senergy</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_senergy_1_1_print.html#a6c6b70bd91e56896058004bf82201010">   27</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_senergy_1_1_print.html#a6c6b70bd91e56896058004bf82201010">Print::Hexadecimal</a>(<span class="keywordtype">char</span> *data, <span class="keywordtype">int</span> size)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; size; ++i)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        printf(<span class="stringliteral">&quot;%02X &quot;</span>, data[i]);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    printf(<span class="stringliteral">&quot;%s&quot;</span>, <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_senergy_1_1_print.html#a7899dd50cdb0b0a6e7ed144d62ea227d">   35</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_senergy_1_1_print.html#a7899dd50cdb0b0a6e7ed144d62ea227d">Print::Integer</a>(<span class="keywordtype">int</span> value)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    printf(<span class="stringliteral">&quot;%i\n&quot;</span>, value);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;} <span class="comment">// namespace Senergy</span></div>
+<div class="ttc" id="class_senergy_1_1_print_html_a7899dd50cdb0b0a6e7ed144d62ea227d"><div class="ttname"><a href="class_senergy_1_1_print.html#a7899dd50cdb0b0a6e7ed144d62ea227d">Senergy::Print::Integer</a></div><div class="ttdeci">static void Integer(int value)</div><div class="ttdoc">Prints the specified integer value to the screen, followed by a new-line character. </div><div class="ttdef"><b>Definition:</b> <a href="print_8cpp_source.html#l00035">print.cpp:35</a></div></div>
+<div class="ttc" id="print_8h_html"><div class="ttname"><a href="print_8h.html">print.h</a></div></div>
+<div class="ttc" id="class_senergy_1_1_print_html_a6c6b70bd91e56896058004bf82201010"><div class="ttname"><a href="class_senergy_1_1_print.html#a6c6b70bd91e56896058004bf82201010">Senergy::Print::Hexadecimal</a></div><div class="ttdeci">static void Hexadecimal(char *data, int size)</div><div class="ttdoc">Prints the specified char array of the specified string, byte by byte where each byte is shown in it&#39;...</div><div class="ttdef"><b>Definition:</b> <a href="print_8cpp_source.html#l00027">print.cpp:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_43fe9c611a9fdc7364335d381ea28669.html">senergy</a></li><li class="navelem"><a class="el" href="convert_8h.html">convert.h</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="print_8cpp.html">print.cpp</a></li>
     <li class="footer">Generated on Tue Jan 28 2014 10:55:10 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
