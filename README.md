@@ -1,4 +1,11 @@
-![alt text](https://raw2.github.com/Photonios/senergy/master/res/senergy-dns.png "Logo Title Text 1")
+<p align="center">
+  <img src="https://raw2.github.com/Photonios/senergy/master/res/senergy-dns.png" alt="Sublime's custom image"/>
+</p>
+
+<p align="center">
+  <h2 align="center" style="text-align: center;">Senergy</h2>
+</p>
+
 
 Work in progress. Please do not disturb.
 
