@@ -19,8 +19,8 @@
  *
  *******************************************************************************/
 
-#ifndef SY_NETWORKING_SOCKET
-#define SY_NETWORKING_SOCKET
+#ifndef SY_SOCKET
+#define SY_SOCKET
 
 #include <cstring>
 #include <string>
@@ -40,8 +40,6 @@
 #endif
 
 namespace Senergy
-{
-namespace Networking
 {
 
 /*!
@@ -440,7 +438,6 @@ private:
  */
 typedef std::shared_ptr<Socket> SocketPtr;
 
-} // namespace Networking
 } // namespace Senergy
 
-#endif // SY_NETWORKING_SOCKET
+#endif // SY_SOCKET

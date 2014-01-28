@@ -23,8 +23,6 @@
 
 namespace Senergy
 {
-namespace Networking
-{
 
 Socket::Socket(SocketProtocol protocol) :
 	m_protocol				(protocol),
@@ -408,5 +406,4 @@ void Socket::__update_remote_host()
 	m_remote_host = std::string(current_remote_host);
 }
 
-} // namespace Networking
 } // namespace Senergy

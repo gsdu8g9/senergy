@@ -96,7 +96,7 @@ unsigned char* ReadName(unsigned char* reader,unsigned char* buffer,int* count)
 
 int main(int argc, char **argv)
 {	
-	Senergy::Networking::Socket socket(Senergy::Networking::Socket::SocketProtocol::UDP);
+	Senergy::Socket socket(Senergy::Socket::SocketProtocol::UDP);
 	
 	socket.SetTimeout(9999);
 	socket.Listen(53);
