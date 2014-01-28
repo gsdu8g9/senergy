@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['geterrorcode',['GetErrorCode',['../class_senergy_1_1_socket.html#a403f7a2f6c5a94d4b14f73f0965da061',1,'Senergy::Socket']]],
-  ['getposition',['GetPosition',['../class_senergy_1_1_byte_buffer.html#a286e096451b62a14a8d645e1c9da62af',1,'Senergy::ByteBuffer']]],
-  ['getremainingsize',['GetRemainingSize',['../class_senergy_1_1_byte_buffer.html#ab938ed32f9f909145f93099f4620da69',1,'Senergy::ByteBuffer']]],
-  ['getremotehost',['GetRemoteHost',['../class_senergy_1_1_socket.html#aaab6b46c9e2733982df87eefb0fc77a2',1,'Senergy::Socket']]],
-  ['getsize',['GetSize',['../class_senergy_1_1_dns_1_1_message_header.html#a69f4475bc3153926dbb011f37cbbfea9',1,'Senergy::Dns::MessageHeader']]]
+  ['deserialize',['Deserialize',['../class_senergy_1_1_dns_1_1_message.html#a3857764a799ab123405420345f9b03ee',1,'Senergy::Dns::Message::Deserialize()'],['../class_senergy_1_1_dns_1_1_message_header.html#aa54f3864838fe22a4406e0c52a90a010',1,'Senergy::Dns::MessageHeader::Deserialize()'],['../class_senergy_1_1_dns_1_1_message_question.html#a1c66b45b448f262a4f2cf1317c89b5b3',1,'Senergy::Dns::MessageQuestion::Deserialize()']]],
+  ['dump',['Dump',['../class_senergy_1_1_dns_1_1_message_header.html#a54b75c73f901b0fc7cf21bed6391aa4e',1,'Senergy::Dns::MessageHeader::Dump()'],['../class_senergy_1_1_dns_1_1_message_question.html#a7ac084601ff3285c6e47e7ce7ccc09cf',1,'Senergy::Dns::MessageQuestion::Dump()']]]
 ];

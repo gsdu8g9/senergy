@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['id',['id',['../struct_d_n_s___h_e_a_d_e_r.html#a5ac83f81b8da8ddb83e3f5baf9a51e94',1,'DNS_HEADER::id()'],['../struct_senergy_1_1_dns_1_1_message_header_fields.html#ab423a1e91fecd6ad2ec36a4bdafd5c2b',1,'Senergy::Dns::MessageHeaderFields::Id()']]],
-  ['integer',['Integer',['../class_senergy_1_1_print.html#a7899dd50cdb0b0a6e7ed144d62ea227d',1,'Senergy::Print']]],
-  ['isconnected',['IsConnected',['../class_senergy_1_1_socket.html#a6d22575e6fc0d6ab4a61097d60b6e773',1,'Senergy::Socket']]],
-  ['isempty',['IsEmpty',['../class_senergy_1_1_byte_buffer.html#ad141d494b81ff561ede715c4f7ceb840',1,'Senergy::ByteBuffer']]],
-  ['isresponse',['IsResponse',['../struct_senergy_1_1_dns_1_1_message_header_fields.html#a0d0ac4fa85684c3d66a84e3392f3ef99',1,'Senergy::Dns::MessageHeaderFields']]]
+  ['header',['Header',['../class_senergy_1_1_dns_1_1_message.html#a0c9ed7b89b18762ae55c3bd53278126f',1,'Senergy::Dns::Message']]],
+  ['hexadecimal',['Hexadecimal',['../class_senergy_1_1_print.html#a6c6b70bd91e56896058004bf82201010',1,'Senergy::Print::Hexadecimal(char *data, int size)'],['../class_senergy_1_1_print.html#a28060c00de905d945667cf606f7ad1d6',1,'Senergy::Print::Hexadecimal(const std::string &amp;data)'],['../class_senergy_1_1_print.html#ac85fea5b673455bfc796d48c56fac38d',1,'Senergy::Print::Hexadecimal(char character)']]],
+  ['hostname',['Hostname',['../struct_senergy_1_1_dns_1_1_message_question_fields.html#a0d4513020862cecabd53e86ba5d9e05d',1,'Senergy::Dns::MessageQuestionFields']]]
 ];

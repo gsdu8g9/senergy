@@ -135,169 +135,73 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html','');});
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="senergy_8h.html">senergy/senergy.h</a>&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_d_n_s___h_e_a_d_e_r.html">   25</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_d_n_s___h_e_a_d_e_r.html#a5ac83f81b8da8ddb83e3f5baf9a51e94">   27</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="struct_d_n_s___h_e_a_d_e_r.html#a5ac83f81b8da8ddb83e3f5baf9a51e94">id</a>;       <span class="comment">// identification number</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="struct_d_n_s___h_e_a_d_e_r.html#ae36057dbcab8fd192148aed912270462">   28</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> rd :1;     <span class="comment">// recursion desired</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="struct_d_n_s___h_e_a_d_e_r.html#acfd94249b1b03793d63a6b87fea41d9e">   29</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> tc :1;     <span class="comment">// truncated message</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="struct_d_n_s___h_e_a_d_e_r.html#a0b35c4f2cf9cc0d1555afa24676c2b26">   30</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> aa :1;     <span class="comment">// authoritive answer</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_d_n_s___h_e_a_d_e_r.html#a07b70b04059dd68a0f7c1c879ccf1ef2">   31</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> opcode :4; <span class="comment">// purpose of message</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_d_n_s___h_e_a_d_e_r.html#a874c920bbfec9e40d6b77e97128d1da9">   32</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> qr :1;     <span class="comment">// query/response flag</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="struct_d_n_s___h_e_a_d_e_r.html#a3b7ff1e78cc57527d2afe217fd4d0178">   33</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> rcode :4;  <span class="comment">// response code</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="struct_d_n_s___h_e_a_d_e_r.html#af63c835c6ea830833207e2c8e3327fbd">   34</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> cd :1;     <span class="comment">// checking disabled</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="struct_d_n_s___h_e_a_d_e_r.html#a61bfa8d857d74fb70872b179ddbe59e5">   35</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> ad :1;     <span class="comment">// authenticated data</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="struct_d_n_s___h_e_a_d_e_r.html#a4a09d9fe1ea80fcc992af0e4a90b0e6c">   36</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> z :1;      <span class="comment">// its z! reserved</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="struct_d_n_s___h_e_a_d_e_r.html#ab689629314dd78eb571b9d4d82feef8a">   37</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> ra :1;     <span class="comment">// recursion available</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="struct_d_n_s___h_e_a_d_e_r.html#a6b9815b90208910759572254bf0905e5">   38</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="struct_d_n_s___h_e_a_d_e_r.html#a6b9815b90208910759572254bf0905e5">q_count</a>;  <span class="comment">// number of question entries</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="struct_d_n_s___h_e_a_d_e_r.html#abf109ef7bbba2e8145177411c6835faa">   39</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="struct_d_n_s___h_e_a_d_e_r.html#abf109ef7bbba2e8145177411c6835faa">ans_count</a>; <span class="comment">// number of answer entries</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="struct_d_n_s___h_e_a_d_e_r.html#aa8c1b1d176c5ff1ab2007af10cecccf7">   40</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="struct_d_n_s___h_e_a_d_e_r.html#aa8c1b1d176c5ff1ab2007af10cecccf7">auth_count</a>; <span class="comment">// number of authority entries</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="struct_d_n_s___h_e_a_d_e_r.html#a62902698d81157eba889e57f56b11702">   41</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="struct_d_n_s___h_e_a_d_e_r.html#a62902698d81157eba889e57f56b11702">add_count</a>; <span class="comment">// number of resource entries</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;} <a class="code" href="struct_d_n_s___h_e_a_d_e_r.html">DNS_HEADER</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="main_8cpp.html#a1390696935c0b2a9bdebc396feef9688">   44</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* <a class="code" href="main_8cpp.html#a1390696935c0b2a9bdebc396feef9688">ReadName</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* reader,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* buffer,<span class="keywordtype">int</span>* count)</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *name;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> p=0,jumped=0,offset;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> i , j;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    *count = 1;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    name = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*)malloc(256);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    name[0]=<span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">//read the names in 3www6google3com format</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">while</span>(*reader!=0)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">if</span>(*reader&gt;=192)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            offset = (*reader)*256 + *(reader+1) - 49152; <span class="comment">//49152 = 11000000 00000000 ;)</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            reader = buffer + offset - 1;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            jumped = 1; <span class="comment">//we have jumped to another location so counting wont go up!</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            name[p++]=*reader;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        reader=reader+1;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span>(jumped==0) *count = *count + 1; <span class="comment">//if we havent jumped to another location then we can count up</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    name[p]=<span class="charliteral">&#39;\0&#39;</span>; <span class="comment">//string complete</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span>(jumped==1) </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        *count = *count + 1; <span class="comment">//number of steps we actually moved forward in the packet</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">//now convert 3www6google3com0 to www.google.com</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">for</span>(i=0;i&lt;(int)strlen((<span class="keyword">const</span> <span class="keywordtype">char</span>*)name);i++)</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        p=name[i];</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">for</span>(j=0;j&lt;(int)p;j++)</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            name[i]=name[i+1];</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            i=i+1;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        name[i]=<span class="charliteral">&#39;.&#39;</span>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;     </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    name[i-1]=<span class="charliteral">&#39;\0&#39;</span>; <span class="comment">//remove the last dot</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;     </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> name;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">   97</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{   </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">/*Senergy::ByteBuffer buffer;</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">    Senergy::Dns::Message dns_message;</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">    dns_message.Header.Dump();</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">    printf(&quot;\n&quot;);</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">    dns_message.Serialize(buffer);</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">    buffer.SetPosition(0);</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">    dns_message.Deserialize(buffer);</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">    dns_message.Header.Dump();</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">    printf(&quot;\n&quot;);*/</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="class_senergy_1_1_socket.html">Senergy::Socket</a> socket(<a class="code" href="class_senergy_1_1_socket.html#ad400245278746ac26e261bdda171c178af5ef036b4d8b630721e51fe23489fbc9">Senergy::Socket::SocketProtocol::UDP</a>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    socket.<a class="code" href="class_senergy_1_1_socket.html#a7ca3e4fb2e2f216773498e6f29e9ea14">SetTimeout</a>(9999);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    socket.<a class="code" href="class_senergy_1_1_socket.html#a9f2cfa080e3a5f365b52cc5fff94eb74">Listen</a>(53);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>)</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="class_senergy_1_1_byte_buffer.html">Senergy::ByteBuffer</a> receive_buffer;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordtype">int</span> bytes_received = socket.<a class="code" href="class_senergy_1_1_socket.html#a7045f756d3c542ee1187a92ca13fa232">Receive</a>(receive_buffer, 1024);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">if</span>(bytes_received &lt; 0)</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        {</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">if</span>(socket.<a class="code" href="class_senergy_1_1_socket.html#a403f7a2f6c5a94d4b14f73f0965da061">GetErrorCode</a>() != <a class="code" href="namespace_senergy_1_1_socket_error.html#aa78be48fe668e1748c69b145a3c3fe16">Senergy::SocketError::Timeout</a>)</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                printf(<span class="stringliteral">&quot;Error: socket error %i\n&quot;</span>, socket.<a class="code" href="class_senergy_1_1_socket.html#a403f7a2f6c5a94d4b14f73f0965da061">GetErrorCode</a>());</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        printf(<span class="stringliteral">&quot;Received from: %s\n&quot;</span>, socket.<a class="code" href="class_senergy_1_1_socket.html#aaab6b46c9e2733982df87eefb0fc77a2">GetRemoteHost</a>().c_str());</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        receive_buffer.<a class="code" href="class_senergy_1_1_byte_buffer.html#a13dd8a2eec8b93ac224f0da614c7f6f8">SetPosition</a>(0);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <a class="code" href="class_senergy_1_1_dns_1_1_message.html">Senergy::Dns::Message</a> dns_message;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">if</span>(!dns_message.<a class="code" href="class_senergy_1_1_dns_1_1_message.html#a3857764a799ab123405420345f9b03ee">Deserialize</a>(receive_buffer))</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            printf(<span class="stringliteral">&quot;Deserialization failed!\n&quot;</span>);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        }</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; dns_message.<a class="code" href="class_senergy_1_1_dns_1_1_message.html#a0c9ed7b89b18762ae55c3bd53278126f">Header</a>.<a class="code" href="class_senergy_1_1_dns_1_1_message_header.html#a014c173ce2b2c5bb06ae9e5d0e201159">Fields</a>.<a class="code" href="struct_senergy_1_1_dns_1_1_message_header_fields.html#a8af9bbfa134c9e0d4fc846103f7b72ad">QuestionCount</a>; ++i)</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="keywordtype">int</span> remaining_bytes = receive_buffer.<a class="code" href="class_senergy_1_1_byte_buffer.html#a22be2d9d356958c4cf352bc31edb1735">Size</a>() - receive_buffer.<a class="code" href="class_senergy_1_1_byte_buffer.html#a286e096451b62a14a8d645e1c9da62af">GetPosition</a>();</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="keywordtype">char</span> *remaining = (<span class="keywordtype">char</span>*)malloc(remaining_bytes);</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            printf(<span class="stringliteral">&quot;Questions: %hu\n&quot;</span>, dns_message.<a class="code" href="class_senergy_1_1_dns_1_1_message.html#a0c9ed7b89b18762ae55c3bd53278126f">Header</a>.<a class="code" href="class_senergy_1_1_dns_1_1_message_header.html#a014c173ce2b2c5bb06ae9e5d0e201159">Fields</a>.<a class="code" href="struct_senergy_1_1_dns_1_1_message_header_fields.html#a8af9bbfa134c9e0d4fc846103f7b72ad">QuestionCount</a>);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordflow">if</span>(!receive_buffer.<a class="code" href="class_senergy_1_1_byte_buffer.html#ae4e73e6e193bec7b9f7df0919d1641d9">Read</a>(remaining, remaining_bytes))</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            {</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                printf(<span class="stringliteral">&quot;Error: failed to read name\n&quot;</span>);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                free(remaining);</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            }</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordtype">int</span> name_len = 0;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *name = <a class="code" href="main_8cpp.html#a1390696935c0b2a9bdebc396feef9688">ReadName</a>((<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *)remaining, (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*)remaining, &amp;name_len);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            printf(<span class="stringliteral">&quot;Question for: %s\n\n&quot;</span>, name);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="comment">//printf(&quot;%s\n&quot;, receive_buffer.ReadAll().c_str()); </span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
-<div class="ttc" id="struct_senergy_1_1_dns_1_1_message_header_fields_html_a8af9bbfa134c9e0d4fc846103f7b72ad"><div class="ttname"><a href="struct_senergy_1_1_dns_1_1_message_header_fields.html#a8af9bbfa134c9e0d4fc846103f7b72ad">Senergy::Dns::MessageHeaderFields::QuestionCount</a></div><div class="ttdeci">unsigned short QuestionCount</div><div class="ttdoc">An unsigned 16 bit integer specifying the number of entries in the question section. </div><div class="ttdef"><b>Definition:</b> <a href="message__header_8h_source.html#l00184">message_header.h:184</a></div></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">   25</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{   </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_senergy_1_1_socket.html">Senergy::Socket</a> socket(<a class="code" href="class_senergy_1_1_socket.html#ad400245278746ac26e261bdda171c178af5ef036b4d8b630721e51fe23489fbc9">Senergy::Socket::SocketProtocol::UDP</a>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    socket.<a class="code" href="class_senergy_1_1_socket.html#a7ca3e4fb2e2f216773498e6f29e9ea14">SetTimeout</a>(2000);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span>(!socket.<a class="code" href="class_senergy_1_1_socket.html#a9f2cfa080e3a5f365b52cc5fff94eb74">Listen</a>(53))</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        printf(<span class="stringliteral">&quot;Error: Unable to start listening on port 53\n&quot;</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    printf(<span class="stringliteral">&quot;Info: Listening on port 53\n&quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="class_senergy_1_1_byte_buffer.html">Senergy::ByteBuffer</a> receive_buffer;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">int</span> bytes_received = socket.<a class="code" href="class_senergy_1_1_socket.html#a7045f756d3c542ee1187a92ca13fa232">Receive</a>(receive_buffer, 1024);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span>(bytes_received &lt;= 0)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">if</span>(socket.<a class="code" href="class_senergy_1_1_socket.html#a403f7a2f6c5a94d4b14f73f0965da061">GetErrorCode</a>() != <a class="code" href="namespace_senergy_1_1_socket_error.html#aa78be48fe668e1748c69b145a3c3fe16">Senergy::SocketError::Timeout</a>)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                printf(<span class="stringliteral">&quot;Error: During receiving a socket error occured: %i\n\n&quot;</span>, socket.<a class="code" href="class_senergy_1_1_socket.html#a403f7a2f6c5a94d4b14f73f0965da061">GetErrorCode</a>());</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        receive_buffer.<a class="code" href="class_senergy_1_1_byte_buffer.html#a13dd8a2eec8b93ac224f0da614c7f6f8">SetPosition</a>(0);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        printf(<span class="stringliteral">&quot;Info: received message from: %s\n&quot;</span>, socket.<a class="code" href="class_senergy_1_1_socket.html#aaab6b46c9e2733982df87eefb0fc77a2">GetRemoteHost</a>().c_str());</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="class_senergy_1_1_dns_1_1_message.html">Senergy::Dns::Message</a> dns_message;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">if</span>(!dns_message.Deserialize(receive_buffer))</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            printf(<span class="stringliteral">&quot;Error: unable to deserialize message\n\n&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">int</span> question_count = (int)dns_message.Questions.size();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span>(question_count &lt;= 0)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            printf(<span class="stringliteral">&quot;Error: did not receive any questions\n\n&quot;</span>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        printf(<span class="stringliteral">&quot;Info: received %i questions\n&quot;</span>, question_count);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; question_count; i++)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            std::string requested_hostname = dns_message.Questions[i]-&gt;GetHostname();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            printf(<span class="stringliteral">&quot;Info: received question for %s\n&quot;</span>, requested_hostname.c_str());</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
 <div class="ttc" id="class_senergy_1_1_byte_buffer_html_a13dd8a2eec8b93ac224f0da614c7f6f8"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a13dd8a2eec8b93ac224f0da614c7f6f8">Senergy::ByteBuffer::SetPosition</a></div><div class="ttdeci">bool SetPosition(int position)</div><div class="ttdoc">Sets the current position within the byte buffer. The position is the offset within the buffer that w...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00072">bytebuffer.cpp:72</a></div></div>
-<div class="ttc" id="main_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00097">main.cpp:97</a></div></div>
+<div class="ttc" id="main_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00025">main.cpp:25</a></div></div>
 <div class="ttc" id="class_senergy_1_1_socket_html_ad400245278746ac26e261bdda171c178af5ef036b4d8b630721e51fe23489fbc9"><div class="ttname"><a href="class_senergy_1_1_socket.html#ad400245278746ac26e261bdda171c178af5ef036b4d8b630721e51fe23489fbc9">Senergy::Socket::SocketProtocol::UDP</a></div></div>
-<div class="ttc" id="class_senergy_1_1_dns_1_1_message_html_a3857764a799ab123405420345f9b03ee"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_message.html#a3857764a799ab123405420345f9b03ee">Senergy::Dns::Message::Deserialize</a></div><div class="ttdeci">bool Deserialize(ByteBuffer &amp;buffer)</div><div class="ttdoc">Deserializes a DNS packet header from the specified buffer into this instance. </div><div class="ttdef"><b>Definition:</b> <a href="message_8cpp_source.html#l00033">message.cpp:33</a></div></div>
-<div class="ttc" id="class_senergy_1_1_byte_buffer_html_a22be2d9d356958c4cf352bc31edb1735"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a22be2d9d356958c4cf352bc31edb1735">Senergy::ByteBuffer::Size</a></div><div class="ttdeci">int Size()</div><div class="ttdoc">Gets the size of the buffer. This is not the same as the data size. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00057">bytebuffer.cpp:57</a></div></div>
 <div class="ttc" id="class_senergy_1_1_socket_html_aaab6b46c9e2733982df87eefb0fc77a2"><div class="ttname"><a href="class_senergy_1_1_socket.html#aaab6b46c9e2733982df87eefb0fc77a2">Senergy::Socket::GetRemoteHost</a></div><div class="ttdeci">std::string GetRemoteHost()</div><div class="ttdoc">Gets the textual representation of the remote host that this socket is currently connected to...</div><div class="ttdef"><b>Definition:</b> <a href="socket_8cpp_source.html#l00066">socket.cpp:66</a></div></div>
-<div class="ttc" id="struct_d_n_s___h_e_a_d_e_r_html_a5ac83f81b8da8ddb83e3f5baf9a51e94"><div class="ttname"><a href="struct_d_n_s___h_e_a_d_e_r.html#a5ac83f81b8da8ddb83e3f5baf9a51e94">DNS_HEADER::id</a></div><div class="ttdeci">unsigned short id</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00027">main.cpp:27</a></div></div>
 <div class="ttc" id="class_senergy_1_1_socket_html_a7ca3e4fb2e2f216773498e6f29e9ea14"><div class="ttname"><a href="class_senergy_1_1_socket.html#a7ca3e4fb2e2f216773498e6f29e9ea14">Senergy::Socket::SetTimeout</a></div><div class="ttdeci">bool SetTimeout(unsigned int milliseconds)</div><div class="ttdoc">Sets the timeout time that is used for socket operations, such as sending, receiving, and connecting. A timeout specifies the maximum time to wait for an operation to complete. </div><div class="ttdef"><b>Definition:</b> <a href="socket_8cpp_source.html#l00082">socket.cpp:82</a></div></div>
-<div class="ttc" id="struct_d_n_s___h_e_a_d_e_r_html_a6b9815b90208910759572254bf0905e5"><div class="ttname"><a href="struct_d_n_s___h_e_a_d_e_r.html#a6b9815b90208910759572254bf0905e5">DNS_HEADER::q_count</a></div><div class="ttdeci">unsigned short q_count</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00038">main.cpp:38</a></div></div>
 <div class="ttc" id="class_senergy_1_1_byte_buffer_html"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html">Senergy::ByteBuffer</a></div><div class="ttdoc">A dynamiclly sized buffer for binary data. Resizes the underlying buffer when new data is written...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8h_source.html#l00040">bytebuffer.h:40</a></div></div>
-<div class="ttc" id="class_senergy_1_1_dns_1_1_message_html_a0c9ed7b89b18762ae55c3bd53278126f"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_message.html#a0c9ed7b89b18762ae55c3bd53278126f">Senergy::Dns::Message::Header</a></div><div class="ttdeci">MessageHeader Header</div><div class="ttdoc">Represents the DNS packet header. The first part of a DNS message. See the MessageHeader class and th...</div><div class="ttdef"><b>Definition:</b> <a href="message_8h_source.html#l00081">message.h:81</a></div></div>
-<div class="ttc" id="struct_d_n_s___h_e_a_d_e_r_html_a62902698d81157eba889e57f56b11702"><div class="ttname"><a href="struct_d_n_s___h_e_a_d_e_r.html#a62902698d81157eba889e57f56b11702">DNS_HEADER::add_count</a></div><div class="ttdeci">unsigned short add_count</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00041">main.cpp:41</a></div></div>
-<div class="ttc" id="class_senergy_1_1_byte_buffer_html_ae4e73e6e193bec7b9f7df0919d1641d9"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#ae4e73e6e193bec7b9f7df0919d1641d9">Senergy::ByteBuffer::Read</a></div><div class="ttdeci">bool Read(char *buffer, int size)</div><div class="ttdoc">Reads the specified amount of bytes from the buffer and copies it into the specified buffer...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00171">bytebuffer.cpp:171</a></div></div>
-<div class="ttc" id="main_8cpp_html_a1390696935c0b2a9bdebc396feef9688"><div class="ttname"><a href="main_8cpp.html#a1390696935c0b2a9bdebc396feef9688">ReadName</a></div><div class="ttdeci">unsigned char * ReadName(unsigned char *reader, unsigned char *buffer, int *count)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00044">main.cpp:44</a></div></div>
-<div class="ttc" id="class_senergy_1_1_byte_buffer_html_a286e096451b62a14a8d645e1c9da62af"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a286e096451b62a14a8d645e1c9da62af">Senergy::ByteBuffer::GetPosition</a></div><div class="ttdeci">int GetPosition()</div><div class="ttdoc">Gets the current position within the byte buffer. The position is the offset within the buffer that w...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00062">bytebuffer.cpp:62</a></div></div>
 <div class="ttc" id="namespace_senergy_1_1_socket_error_html_aa78be48fe668e1748c69b145a3c3fe16"><div class="ttname"><a href="namespace_senergy_1_1_socket_error.html#aa78be48fe668e1748c69b145a3c3fe16">Senergy::SocketError::Timeout</a></div><div class="ttdeci">static const int Timeout</div><div class="ttdoc">Thrown when a socket operation (receing/binding/sending/connecting) times out. </div><div class="ttdef"><b>Definition:</b> <a href="socket_8h_source.html#l00053">socket.h:53</a></div></div>
 <div class="ttc" id="class_senergy_1_1_socket_html_a403f7a2f6c5a94d4b14f73f0965da061"><div class="ttname"><a href="class_senergy_1_1_socket.html#a403f7a2f6c5a94d4b14f73f0965da061">Senergy::Socket::GetErrorCode</a></div><div class="ttdeci">int GetErrorCode()</div><div class="ttdoc">Gets the last error code that was set by a socket operation. The error code that is returned are norm...</div><div class="ttdef"><b>Definition:</b> <a href="socket_8cpp_source.html#l00292">socket.cpp:292</a></div></div>
 <div class="ttc" id="class_senergy_1_1_socket_html_a7045f756d3c542ee1187a92ca13fa232"><div class="ttname"><a href="class_senergy_1_1_socket.html#a7045f756d3c542ee1187a92ca13fa232">Senergy::Socket::Receive</a></div><div class="ttdeci">int Receive(const char *receive_buffer, size_t size)</div><div class="ttdoc">Attempts to receive the specified amount of data into the specified buffer. </div><div class="ttdef"><b>Definition:</b> <a href="socket_8cpp_source.html#l00183">socket.cpp:183</a></div></div>
-<div class="ttc" id="struct_d_n_s___h_e_a_d_e_r_html_abf109ef7bbba2e8145177411c6835faa"><div class="ttname"><a href="struct_d_n_s___h_e_a_d_e_r.html#abf109ef7bbba2e8145177411c6835faa">DNS_HEADER::ans_count</a></div><div class="ttdeci">unsigned short ans_count</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00039">main.cpp:39</a></div></div>
-<div class="ttc" id="struct_d_n_s___h_e_a_d_e_r_html_aa8c1b1d176c5ff1ab2007af10cecccf7"><div class="ttname"><a href="struct_d_n_s___h_e_a_d_e_r.html#aa8c1b1d176c5ff1ab2007af10cecccf7">DNS_HEADER::auth_count</a></div><div class="ttdeci">unsigned short auth_count</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00040">main.cpp:40</a></div></div>
-<div class="ttc" id="struct_d_n_s___h_e_a_d_e_r_html"><div class="ttname"><a href="struct_d_n_s___h_e_a_d_e_r.html">DNS_HEADER</a></div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00025">main.cpp:25</a></div></div>
-<div class="ttc" id="class_senergy_1_1_dns_1_1_message_header_html_a014c173ce2b2c5bb06ae9e5d0e201159"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_message_header.html#a014c173ce2b2c5bb06ae9e5d0e201159">Senergy::Dns::MessageHeader::Fields</a></div><div class="ttdeci">MessageHeaderFields Fields</div><div class="ttdoc">The fields that are part of a DNS packet header. See MessageHeaderFields for a complete list...</div><div class="ttdef"><b>Definition:</b> <a href="message__header_8h_source.html#l00282">message_header.h:282</a></div></div>
 <div class="ttc" id="senergy_8h_html"><div class="ttname"><a href="senergy_8h.html">senergy.h</a></div></div>
 <div class="ttc" id="class_senergy_1_1_socket_html_a9f2cfa080e3a5f365b52cc5fff94eb74"><div class="ttname"><a href="class_senergy_1_1_socket.html#a9f2cfa080e3a5f365b52cc5fff94eb74">Senergy::Socket::Listen</a></div><div class="ttdeci">bool Listen(unsigned int port)</div><div class="ttdoc">Starts listening for incoming connections on the specified port. Binds itself to the specified port...</div><div class="ttdef"><b>Definition:</b> <a href="socket_8cpp_source.html#l00108">socket.cpp:108</a></div></div>
-<div class="ttc" id="class_senergy_1_1_dns_1_1_message_html"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_message.html">Senergy::Dns::Message</a></div><div class="ttdoc">Represents a DNS packet as described in section 4 of RFC-1035. A DNS packet is the standard message f...</div><div class="ttdef"><b>Definition:</b> <a href="message_8h_source.html#l00039">message.h:39</a></div></div>
+<div class="ttc" id="class_senergy_1_1_dns_1_1_message_html"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_message.html">Senergy::Dns::Message</a></div><div class="ttdoc">Represents a DNS packet as described in section 4 of RFC-1035. A DNS packet is the standard message f...</div><div class="ttdef"><b>Definition:</b> <a href="message_8h_source.html#l00040">message.h:40</a></div></div>
 <div class="ttc" id="class_senergy_1_1_socket_html"><div class="ttname"><a href="class_senergy_1_1_socket.html">Senergy::Socket</a></div><div class="ttdoc">Provides an object-oriented interface for Berkely (BSD) sockets. Can act both as a server as well as ...</div><div class="ttdef"><b>Definition:</b> <a href="socket_8h_source.html#l00070">socket.h:70</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -305,7 +209,7 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generated on Tue Jan 28 2014 17:05:40 for Senergy by
+    <li class="footer">Generated on Tue Jan 28 2014 23:17:17 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

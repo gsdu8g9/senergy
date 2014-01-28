@@ -43,26 +43,11 @@
   </compound>
   <compound refid="class_senergy_1_1_convert" kind="class"><name>Senergy::Convert</name>
     <member refid="class_senergy_1_1_convert_1a80cf7b84b0ff65171da68ca40cbf817f" kind="function"><name>ToString</name></member>
-  </compound>
-  <compound refid="struct_d_n_s___h_e_a_d_e_r" kind="struct"><name>DNS_HEADER</name>
-    <member refid="struct_d_n_s___h_e_a_d_e_r_1a5ac83f81b8da8ddb83e3f5baf9a51e94" kind="variable"><name>id</name></member>
-    <member refid="struct_d_n_s___h_e_a_d_e_r_1ae36057dbcab8fd192148aed912270462" kind="variable"><name>rd</name></member>
-    <member refid="struct_d_n_s___h_e_a_d_e_r_1acfd94249b1b03793d63a6b87fea41d9e" kind="variable"><name>tc</name></member>
-    <member refid="struct_d_n_s___h_e_a_d_e_r_1a0b35c4f2cf9cc0d1555afa24676c2b26" kind="variable"><name>aa</name></member>
-    <member refid="struct_d_n_s___h_e_a_d_e_r_1a07b70b04059dd68a0f7c1c879ccf1ef2" kind="variable"><name>opcode</name></member>
-    <member refid="struct_d_n_s___h_e_a_d_e_r_1a874c920bbfec9e40d6b77e97128d1da9" kind="variable"><name>qr</name></member>
-    <member refid="struct_d_n_s___h_e_a_d_e_r_1a3b7ff1e78cc57527d2afe217fd4d0178" kind="variable"><name>rcode</name></member>
-    <member refid="struct_d_n_s___h_e_a_d_e_r_1af63c835c6ea830833207e2c8e3327fbd" kind="variable"><name>cd</name></member>
-    <member refid="struct_d_n_s___h_e_a_d_e_r_1a61bfa8d857d74fb70872b179ddbe59e5" kind="variable"><name>ad</name></member>
-    <member refid="struct_d_n_s___h_e_a_d_e_r_1a4a09d9fe1ea80fcc992af0e4a90b0e6c" kind="variable"><name>z</name></member>
-    <member refid="struct_d_n_s___h_e_a_d_e_r_1ab689629314dd78eb571b9d4d82feef8a" kind="variable"><name>ra</name></member>
-    <member refid="struct_d_n_s___h_e_a_d_e_r_1a6b9815b90208910759572254bf0905e5" kind="variable"><name>q_count</name></member>
-    <member refid="struct_d_n_s___h_e_a_d_e_r_1abf109ef7bbba2e8145177411c6835faa" kind="variable"><name>ans_count</name></member>
-    <member refid="struct_d_n_s___h_e_a_d_e_r_1aa8c1b1d176c5ff1ab2007af10cecccf7" kind="variable"><name>auth_count</name></member>
-    <member refid="struct_d_n_s___h_e_a_d_e_r_1a62902698d81157eba889e57f56b11702" kind="variable"><name>add_count</name></member>
+    <member refid="class_senergy_1_1_convert_1a66c09e2b461268212cc384e71a2f57c6" kind="function"><name>ToChar</name></member>
   </compound>
   <compound refid="class_senergy_1_1_dns_1_1_message" kind="class"><name>Senergy::Dns::Message</name>
     <member refid="class_senergy_1_1_dns_1_1_message_1a0c9ed7b89b18762ae55c3bd53278126f" kind="variable"><name>Header</name></member>
+    <member refid="class_senergy_1_1_dns_1_1_message_1a1e72009ea8004f0e8cc1ce0ea07f4ad1" kind="variable"><name>Questions</name></member>
     <member refid="class_senergy_1_1_dns_1_1_message_1a3e7192f2293903a43e7d08960b08a8b1" kind="function"><name>Message</name></member>
     <member refid="class_senergy_1_1_dns_1_1_message_1a3857764a799ab123405420345f9b03ee" kind="function"><name>Deserialize</name></member>
     <member refid="class_senergy_1_1_dns_1_1_message_1a2e7978e799fadaa4f03fc881e5c8e0f6" kind="function"><name>Serialize</name></member>
@@ -94,8 +79,29 @@
     <member refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a963b92841b3f7fc5fc9268c963d32d8d" kind="variable"><name>NameServerCount</name></member>
     <member refid="struct_senergy_1_1_dns_1_1_message_header_fields_1aae6ba21a1c8baa30f0aafe90d165420f" kind="variable"><name>AdditionalCount</name></member>
   </compound>
+  <compound refid="class_senergy_1_1_dns_1_1_message_question" kind="class"><name>Senergy::Dns::MessageQuestion</name>
+    <member refid="class_senergy_1_1_dns_1_1_message_question_1a9fad900307a2b2f48c441b657429102f" kind="variable"><name>Fields</name></member>
+    <member refid="class_senergy_1_1_dns_1_1_message_question_1add4b04cade47309c42a4d8ddded7337a" kind="variable"><name>m_hostname</name></member>
+    <member refid="class_senergy_1_1_dns_1_1_message_question_1a956458fba0c9b96fbd78408250095148" kind="function"><name>MessageQuestion</name></member>
+    <member refid="class_senergy_1_1_dns_1_1_message_question_1a5fa467b516be4914f865bc5d053e98be" kind="function"><name>GetHostname</name></member>
+    <member refid="class_senergy_1_1_dns_1_1_message_question_1a239d21d940aa38b8d953ff29b400b9cf" kind="function"><name>SetHostname</name></member>
+    <member refid="class_senergy_1_1_dns_1_1_message_question_1a0a007a1d002a37189ce0f8c943335216" kind="function"><name>GetSize</name></member>
+    <member refid="class_senergy_1_1_dns_1_1_message_question_1a1c66b45b448f262a4f2cf1317c89b5b3" kind="function"><name>Deserialize</name></member>
+    <member refid="class_senergy_1_1_dns_1_1_message_question_1a60772687d382e1d376852e1b5ff59968" kind="function"><name>Serialize</name></member>
+    <member refid="class_senergy_1_1_dns_1_1_message_question_1a7ac084601ff3285c6e47e7ce7ccc09cf" kind="function"><name>Dump</name></member>
+    <member refid="class_senergy_1_1_dns_1_1_message_question_1a4557a95908c9f5e0b52c160f5ad70cc8" kind="function"><name>__encode_hostname</name></member>
+    <member refid="class_senergy_1_1_dns_1_1_message_question_1aa0c2322c65b839fd806c255549cb6ca6" kind="function"><name>__decode_hostname</name></member>
+    <member refid="class_senergy_1_1_dns_1_1_message_question_1a38d37becaefb52d8a2f9fb73d08b039e" kind="function"><name>__update_host_to_fields</name></member>
+  </compound>
+  <compound refid="struct_senergy_1_1_dns_1_1_message_question_fields" kind="struct"><name>Senergy::Dns::MessageQuestionFields</name>
+    <member refid="struct_senergy_1_1_dns_1_1_message_question_fields_1a0d4513020862cecabd53e86ba5d9e05d" kind="variable"><name>Hostname</name></member>
+    <member refid="struct_senergy_1_1_dns_1_1_message_question_fields_1a15156bfecd74744319a3ce51e3fd1800" kind="variable"><name>Type</name></member>
+    <member refid="struct_senergy_1_1_dns_1_1_message_question_fields_1a3287d0766033d31e14623d864348bd84" kind="variable"><name>Class</name></member>
+  </compound>
   <compound refid="class_senergy_1_1_print" kind="class"><name>Senergy::Print</name>
     <member refid="class_senergy_1_1_print_1a6c6b70bd91e56896058004bf82201010" kind="function"><name>Hexadecimal</name></member>
+    <member refid="class_senergy_1_1_print_1a28060c00de905d945667cf606f7ad1d6" kind="function"><name>Hexadecimal</name></member>
+    <member refid="class_senergy_1_1_print_1ac85fea5b673455bfc796d48c56fac38d" kind="function"><name>Hexadecimal</name></member>
     <member refid="class_senergy_1_1_print_1a7899dd50cdb0b0a6e7ed144d62ea227d" kind="function"><name>Integer</name></member>
   </compound>
   <compound refid="class_senergy_1_1_dns_1_1_root_name_server" kind="class"><name>Senergy::Dns::RootNameServer</name>
@@ -153,6 +159,8 @@
     <member refid="namespace_senergy_1a9014e48a368555ba932efd8d17eb2d23" kind="typedef"><name>SocketPtr</name></member>
   </compound>
   <compound refid="namespace_senergy_1_1_dns" kind="namespace"><name>Senergy::Dns</name>
+    <member refid="namespace_senergy_1_1_dns_1a425a2a6f3b5c18973c524a99bdfa4ef0" kind="typedef"><name>MessageQuestionPtr</name></member>
+    <member refid="namespace_senergy_1_1_dns_1a76982150ca0b86c08d888f3e3e805747" kind="typedef"><name>MessageQuestionPtrVector</name></member>
   </compound>
   <compound refid="namespace_senergy_1_1_socket_error" kind="namespace"><name>Senergy::SocketError</name>
     <member refid="namespace_senergy_1_1_socket_error_1aa78be48fe668e1748c69b145a3c3fe16" kind="variable"><name>Timeout</name></member>
@@ -166,12 +174,13 @@
   <compound refid="convert_8cpp" kind="file"><name>convert.cpp</name>
   </compound>
   <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
-    <member refid="main_8cpp_1a1390696935c0b2a9bdebc396feef9688" kind="function"><name>ReadName</name></member>
     <member refid="main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
   <compound refid="message_8cpp" kind="file"><name>message.cpp</name>
   </compound>
   <compound refid="message__header_8cpp" kind="file"><name>message_header.cpp</name>
+  </compound>
+  <compound refid="message__question_8cpp" kind="file"><name>message_question.cpp</name>
   </compound>
   <compound refid="print_8cpp" kind="file"><name>print.cpp</name>
   </compound>
@@ -184,6 +193,8 @@
   <compound refid="message_8h" kind="file"><name>message.h</name>
   </compound>
   <compound refid="message__header_8h" kind="file"><name>message_header.h</name>
+  </compound>
+  <compound refid="message__question_8h" kind="file"><name>message_question.h</name>
   </compound>
   <compound refid="rootnameserver_8h" kind="file"><name>rootnameserver.h</name>
   </compound>

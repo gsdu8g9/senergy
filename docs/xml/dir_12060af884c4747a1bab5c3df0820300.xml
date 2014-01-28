@@ -4,6 +4,7 @@
     <compoundname>src/senergy/dns</compoundname>
     <innerfile refid="message_8h">message.h</innerfile>
     <innerfile refid="message__header_8h">message_header.h</innerfile>
+    <innerfile refid="message__question_8h">message_question.h</innerfile>
     <innerfile refid="rootnameserver_8h">rootnameserver.h</innerfile>
     <briefdescription>
     </briefdescription>

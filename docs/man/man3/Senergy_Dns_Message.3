@@ -34,6 +34,10 @@ Represents a DNS packet as described in section 4 of RFC-1035\&. A DNS packet is
 .RI "\fBMessageHeader\fP \fBHeader\fP"
 .br
 .RI "\fIRepresents the DNS packet header\&. The first part of a DNS message\&. See the \fBMessageHeader\fP class and the \fBMessageHeaderFields\fP structure for more information\&. \fP"
+.ti -1c
+.RI "\fBMessageQuestionPtrVector\fP \fBQuestions\fP"
+.br
+.RI "\fIHolds all the 'question messages' that are part of this DNS message\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -48,7 +52,7 @@ Swen Kooij (Photonios)
 .PP
 
 .PP
-Definition at line 39 of file message\&.h\&.
+Definition at line 40 of file message\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Senergy::Dns::Message::Message ()"
@@ -101,7 +105,7 @@ A boolean indicating whether serialization was succesfull\&. True is returned wh
 .PP
 
 .PP
-Definition at line 43 of file message\&.cpp\&.
+Definition at line 52 of file message\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "\fBMessageHeader\fP Senergy::Dns::Message::Header"
@@ -109,7 +113,13 @@ Definition at line 43 of file message\&.cpp\&.
 .PP
 Represents the DNS packet header\&. The first part of a DNS message\&. See the \fBMessageHeader\fP class and the \fBMessageHeaderFields\fP structure for more information\&. 
 .PP
-Definition at line 81 of file message\&.h\&.
+Definition at line 82 of file message\&.h\&.
+.SS "\fBMessageQuestionPtrVector\fP Senergy::Dns::Message::Questions"
+
+.PP
+Holds all the 'question messages' that are part of this DNS message\&. 
+.PP
+Definition at line 87 of file message\&.h\&.
 
 .SH "Author"
 .PP 

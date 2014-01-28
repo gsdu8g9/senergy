@@ -23,7 +23,9 @@ bool \hyperlink{class_senergy_1_1_dns_1_1_message_a2e7978e799fadaa4f03fc881e5c8e
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_senergy_1_1_dns_1_1_message_header}{Message\-Header} \hyperlink{class_senergy_1_1_dns_1_1_message_a0c9ed7b89b18762ae55c3bd53278126f}{Header}
-\begin{DoxyCompactList}\small\item\em Represents the D\-N\-S packet header. The first part of a D\-N\-S message. See the \hyperlink{class_senergy_1_1_dns_1_1_message_header}{Message\-Header} class and the \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields}{Message\-Header\-Fields} structure for more information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Represents the D\-N\-S packet header. The first part of a D\-N\-S message. See the \hyperlink{class_senergy_1_1_dns_1_1_message_header}{Message\-Header} class and the \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields}{Message\-Header\-Fields} structure for more information. \end{DoxyCompactList}\item 
+\hyperlink{namespace_senergy_1_1_dns_a76982150ca0b86c08d888f3e3e805747}{Message\-Question\-Ptr\-Vector} \hyperlink{class_senergy_1_1_dns_1_1_message_a1e72009ea8004f0e8cc1ce0ea07f4ad1}{Questions}
+\begin{DoxyCompactList}\small\item\em Holds all the 'question messages' that are part of this D\-N\-S message. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -34,7 +36,7 @@ Swen Kooij (Photonios)
 \end{DoxyAuthor}
 
 
-Definition at line 39 of file message.\-h.
+Definition at line 40 of file message.\-h.
 
 
 
@@ -106,7 +108,7 @@ A boolean indicating whether serialization was succesfull. True is returned when
 \end{DoxyReturn}
 
 
-Definition at line 43 of file message.\-cpp.
+Definition at line 52 of file message.\-cpp.
 
 
 
@@ -120,7 +122,18 @@ Represents the D\-N\-S packet header. The first part of a D\-N\-S message. See t
 
 
 
-Definition at line 81 of file message.\-h.
+Definition at line 82 of file message.\-h.
+
+\hypertarget{class_senergy_1_1_dns_1_1_message_a1e72009ea8004f0e8cc1ce0ea07f4ad1}{\index{Senergy\-::\-Dns\-::\-Message@{Senergy\-::\-Dns\-::\-Message}!Questions@{Questions}}
+\index{Questions@{Questions}!Senergy::Dns::Message@{Senergy\-::\-Dns\-::\-Message}}
+\subsubsection[{Questions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message\-Question\-Ptr\-Vector} Senergy\-::\-Dns\-::\-Message\-::\-Questions}}\label{class_senergy_1_1_dns_1_1_message_a1e72009ea8004f0e8cc1ce0ea07f4ad1}
+
+
+Holds all the 'question messages' that are part of this D\-N\-S message. 
+
+
+
+Definition at line 87 of file message.\-h.
 
 
 

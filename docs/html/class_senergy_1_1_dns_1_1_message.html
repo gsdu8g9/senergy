@@ -139,12 +139,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a0c9ed7b89b18762ae55c3bd53278126f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_senergy_1_1_dns_1_1_message_header.html">MessageHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_message.html#a0c9ed7b89b18762ae55c3bd53278126f">Header</a></td></tr>
 <tr class="memdesc:a0c9ed7b89b18762ae55c3bd53278126f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the DNS packet header. The first part of a DNS message. See the <a class="el" href="class_senergy_1_1_dns_1_1_message_header.html" title="Defines the header of a DNS packet, as described in section 4.1 of RFC-1035. All DNS messages start w...">MessageHeader</a> class and the <a class="el" href="struct_senergy_1_1_dns_1_1_message_header_fields.html" title="Defines the fields within a DNS packet header, as described in section 4.1 of RFC-1035. This data structure is used as the &quot;Fields&quot; member/property of the MessageHeader class, and serves as the container of the actual data. ">MessageHeaderFields</a> structure for more information.  <a href="#a0c9ed7b89b18762ae55c3bd53278126f">More...</a><br/></td></tr>
 <tr class="separator:a0c9ed7b89b18762ae55c3bd53278126f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e72009ea8004f0e8cc1ce0ea07f4ad1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_senergy_1_1_dns.html#a76982150ca0b86c08d888f3e3e805747">MessageQuestionPtrVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_message.html#a1e72009ea8004f0e8cc1ce0ea07f4ad1">Questions</a></td></tr>
+<tr class="memdesc:a1e72009ea8004f0e8cc1ce0ea07f4ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds all the 'question messages' that are part of this DNS message.  <a href="#a1e72009ea8004f0e8cc1ce0ea07f4ad1">More...</a><br/></td></tr>
+<tr class="separator:a1e72009ea8004f0e8cc1ce0ea07f4ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a DNS packet as described in section 4 of RFC-1035. A DNS packet is the standard message format that is transmitted and received by DNS clients and hosts. </p>
 <dl class="section author"><dt>Author</dt><dd>Swen Kooij (Photonios) </dd></dl>
 
-<p>Definition at line <a class="el" href="message_8h_source.html#l00039">39</a> of file <a class="el" href="message_8h_source.html">message.h</a>.</p>
+<p>Definition at line <a class="el" href="message_8h_source.html#l00040">40</a> of file <a class="el" href="message_8h_source.html">message.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a3e7192f2293903a43e7d08960b08a8b1"></a>
 <div class="memitem">
@@ -219,7 +222,7 @@ If the operation suceseeded, the buffer's position will have at least advanced 1
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A boolean indicating whether serialization was succesfull. True is returned when it was a success and false is returned when it failed. </dd></dl>
 
-<p>Definition at line <a class="el" href="message_8cpp_source.html#l00043">43</a> of file <a class="el" href="message_8cpp_source.html">message.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message_8cpp_source.html#l00052">52</a> of file <a class="el" href="message_8cpp_source.html">message.cpp</a>.</p>
 
 </div>
 </div>
@@ -236,7 +239,23 @@ If the operation suceseeded, the buffer's position will have at least advanced 1
 
 <p>Represents the DNS packet header. The first part of a DNS message. See the <a class="el" href="class_senergy_1_1_dns_1_1_message_header.html" title="Defines the header of a DNS packet, as described in section 4.1 of RFC-1035. All DNS messages start w...">MessageHeader</a> class and the <a class="el" href="struct_senergy_1_1_dns_1_1_message_header_fields.html" title="Defines the fields within a DNS packet header, as described in section 4.1 of RFC-1035. This data structure is used as the &quot;Fields&quot; member/property of the MessageHeader class, and serves as the container of the actual data. ">MessageHeaderFields</a> structure for more information. </p>
 
-<p>Definition at line <a class="el" href="message_8h_source.html#l00081">81</a> of file <a class="el" href="message_8h_source.html">message.h</a>.</p>
+<p>Definition at line <a class="el" href="message_8h_source.html#l00082">82</a> of file <a class="el" href="message_8h_source.html">message.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1e72009ea8004f0e8cc1ce0ea07f4ad1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_senergy_1_1_dns.html#a76982150ca0b86c08d888f3e3e805747">MessageQuestionPtrVector</a> Senergy::Dns::Message::Questions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Holds all the 'question messages' that are part of this DNS message. </p>
+
+<p>Definition at line <a class="el" href="message_8h_source.html#l00087">87</a> of file <a class="el" href="message_8h_source.html">message.h</a>.</p>
 
 </div>
 </div>
@@ -250,7 +269,7 @@ If the operation suceseeded, the buffer's position will have at least advanced 1
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_senergy.html">Senergy</a></li><li class="navelem"><a class="el" href="namespace_senergy_1_1_dns.html">Dns</a></li><li class="navelem"><a class="el" href="class_senergy_1_1_dns_1_1_message.html">Message</a></li>
-    <li class="footer">Generated on Tue Jan 28 2014 17:05:40 for Senergy by
+    <li class="footer">Generated on Tue Jan 28 2014 23:17:17 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

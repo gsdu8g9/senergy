@@ -149,8 +149,14 @@ $(document).ready(function(){initNavTree('convert_8cpp_source.html','');});
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> std::string(raw_result);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;} <span class="comment">// namespace Senergy</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_senergy_1_1_convert.html#a66c09e2b461268212cc384e71a2f57c6">   39</a></span>&#160;<span class="keywordtype">char</span> <a class="code" href="class_senergy_1_1_convert.html#a66c09e2b461268212cc384e71a2f57c6">Convert::ToChar</a>(<span class="keywordtype">int</span> value)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_senergy_1_1_convert.html#a80cf7b84b0ff65171da68ca40cbf817f">ToString</a>(value)[0];</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;} <span class="comment">// namespace Senergy</span></div>
 <div class="ttc" id="class_senergy_1_1_convert_html_a80cf7b84b0ff65171da68ca40cbf817f"><div class="ttname"><a href="class_senergy_1_1_convert.html#a80cf7b84b0ff65171da68ca40cbf817f">Senergy::Convert::ToString</a></div><div class="ttdeci">static std::string ToString(int value)</div><div class="ttdoc">Converts the specified integer value to a string. </div><div class="ttdef"><b>Definition:</b> <a href="convert_8cpp_source.html#l00027">convert.cpp:27</a></div></div>
+<div class="ttc" id="class_senergy_1_1_convert_html_a66c09e2b461268212cc384e71a2f57c6"><div class="ttname"><a href="class_senergy_1_1_convert.html#a66c09e2b461268212cc384e71a2f57c6">Senergy::Convert::ToChar</a></div><div class="ttdeci">static char ToChar(int value)</div><div class="ttdoc">Converts the specified integer value to a character. </div><div class="ttdef"><b>Definition:</b> <a href="convert_8cpp_source.html#l00039">convert.cpp:39</a></div></div>
 <div class="ttc" id="convert_8h_html"><div class="ttname"><a href="convert_8h.html">convert.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -158,7 +164,7 @@ $(document).ready(function(){initNavTree('convert_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="convert_8cpp.html">convert.cpp</a></li>
-    <li class="footer">Generated on Tue Jan 28 2014 17:05:40 for Senergy by
+    <li class="footer">Generated on Tue Jan 28 2014 23:17:17 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

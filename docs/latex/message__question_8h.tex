@@ -1,0 +1,33 @@
+\hypertarget{message__question_8h}{\section{src/senergy/dns/message\-\_\-question.h File Reference}
+\label{message__question_8h}\index{src/senergy/dns/message\-\_\-question.\-h@{src/senergy/dns/message\-\_\-question.\-h}}
+}
+{\ttfamily \#include $<$senergy/bytebuffer.\-h$>$}\\*
+{\ttfamily \#include $<$cstdio$>$}\\*
+{\ttfamily \#include $<$cctype$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$arpa/inet.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_senergy_1_1_dns_1_1_message_question_fields}{Senergy\-::\-Dns\-::\-Message\-Question\-Fields}
+\begin{DoxyCompactList}\small\item\em Describes the fields of a question message as defined in section 4.\-1.\-2 of R\-F\-C-\/1035. This data structure is used as the \char`\"{}\-Fields\char`\"{} member/property of the \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} class, and serves as the container of the actual data. \end{DoxyCompactList}\item 
+class \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Senergy\-::\-Dns\-::\-Message\-Question}
+\begin{DoxyCompactList}\small\item\em Represents a D\-N\-S question, as defined in section 4.\-1.\-2 of R\-F\-C-\/1035. A D\-N\-S question is usually transmitted by a D\-N\-S client, asking to lookup the I\-P address of a host name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_senergy}{Senergy}
+\item 
+\hyperlink{namespace_senergy_1_1_dns}{Senergy\-::\-Dns}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::shared\-\_\-ptr\\*
+$<$ Message\-Question $>$ \hyperlink{namespace_senergy_1_1_dns_a425a2a6f3b5c18973c524a99bdfa4ef0}{Senergy\-::\-Dns\-::\-Message\-Question\-Ptr}
+\begin{DoxyCompactList}\small\item\em Simple typedef for a shared pointer to a \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question}. \end{DoxyCompactList}\item 
+typedef std\-::vector\\*
+$<$ Message\-Question\-Ptr $>$ \hyperlink{namespace_senergy_1_1_dns_a76982150ca0b86c08d888f3e3e805747}{Senergy\-::\-Dns\-::\-Message\-Question\-Ptr\-Vector}
+\begin{DoxyCompactList}\small\item\em Simple typedef for a vector of \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} smart pointers. \end{DoxyCompactList}\end{DoxyCompactItemize}

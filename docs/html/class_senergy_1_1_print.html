@@ -124,9 +124,16 @@ $(document).ready(function(){initNavTree('class_senergy_1_1_print.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a6c6b70bd91e56896058004bf82201010"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_print.html#a6c6b70bd91e56896058004bf82201010">Hexadecimal</a> (char *data, int size)</td></tr>
-<tr class="memdesc:a6c6b70bd91e56896058004bf82201010"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the specified char array of the specified string, byte by byte where each byte is shown in it's hexadecimal representation. Followed by a new-line character (<br/>
+<tr class="memdesc:a6c6b70bd91e56896058004bf82201010"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the specified char array, byte by byte where each byte is shown in it's hexadecimal representation. Followed by a new-line character (<br/>
 ).  <a href="#a6c6b70bd91e56896058004bf82201010">More...</a><br/></td></tr>
 <tr class="separator:a6c6b70bd91e56896058004bf82201010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28060c00de905d945667cf606f7ad1d6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_print.html#a28060c00de905d945667cf606f7ad1d6">Hexadecimal</a> (const std::string &amp;data)</td></tr>
+<tr class="memdesc:a28060c00de905d945667cf606f7ad1d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the specified string, byte by byte where each byte is shown in it's hexadecimal representation. Followed by a new-line character (<br/>
+).  <a href="#a28060c00de905d945667cf606f7ad1d6">More...</a><br/></td></tr>
+<tr class="separator:a28060c00de905d945667cf606f7ad1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac85fea5b673455bfc796d48c56fac38d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_print.html#ac85fea5b673455bfc796d48c56fac38d">Hexadecimal</a> (char character)</td></tr>
+<tr class="memdesc:ac85fea5b673455bfc796d48c56fac38d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the specified character in it's hexadecimal notation, followed by a new-line character.  <a href="#ac85fea5b673455bfc796d48c56fac38d">More...</a><br/></td></tr>
+<tr class="separator:ac85fea5b673455bfc796d48c56fac38d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7899dd50cdb0b0a6e7ed144d62ea227d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_print.html#a7899dd50cdb0b0a6e7ed144d62ea227d">Integer</a> (int value)</td></tr>
 <tr class="memdesc:a7899dd50cdb0b0a6e7ed144d62ea227d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the specified integer value to the screen, followed by a new-line character.  <a href="#a7899dd50cdb0b0a6e7ed144d62ea227d">More...</a><br/></td></tr>
 <tr class="separator:a7899dd50cdb0b0a6e7ed144d62ea227d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,7 +142,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Contains simple utilities that facilitate printing various data types or data structures to the screen. </p>
 <dl class="section author"><dt>Author</dt><dd>Swen Kooij (Photonios) </dd></dl>
 
-<p>Definition at line <a class="el" href="print_8h_source.html#l00036">36</a> of file <a class="el" href="print_8h_source.html">print.h</a>.</p>
+<p>Definition at line <a class="el" href="print_8h_source.html#l00037">37</a> of file <a class="el" href="print_8h_source.html">print.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a6c6b70bd91e56896058004bf82201010"></a>
 <div class="memitem">
@@ -169,7 +176,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Prints the specified char array of the specified string, byte by byte where each byte is shown in it's hexadecimal representation. Followed by a new-line character (<br/>
+<p>Prints the specified char array, byte by byte where each byte is shown in it's hexadecimal representation. Followed by a new-line character (<br/>
 ). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -180,6 +187,75 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="print_8cpp_source.html#l00027">27</a> of file <a class="el" href="print_8cpp_source.html">print.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a28060c00de905d945667cf606f7ad1d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Senergy::Print::Hexadecimal </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prints the specified string, byte by byte where each byte is shown in it's hexadecimal representation. Followed by a new-line character (<br/>
+). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The data to print hexadecimal. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="print_8cpp_source.html#l00035">35</a> of file <a class="el" href="print_8cpp_source.html">print.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac85fea5b673455bfc796d48c56fac38d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Senergy::Print::Hexadecimal </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>character</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prints the specified character in it's hexadecimal notation, followed by a new-line character. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The data to print hexadecimal. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="print_8cpp_source.html#l00044">44</a> of file <a class="el" href="print_8cpp_source.html">print.cpp</a>.</p>
 
 </div>
 </div>
@@ -213,7 +289,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="print_8cpp_source.html#l00035">35</a> of file <a class="el" href="print_8cpp_source.html">print.cpp</a>.</p>
+<p>Definition at line <a class="el" href="print_8cpp_source.html#l00049">49</a> of file <a class="el" href="print_8cpp_source.html">print.cpp</a>.</p>
 
 </div>
 </div>
@@ -227,7 +303,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_senergy.html">Senergy</a></li><li class="navelem"><a class="el" href="class_senergy_1_1_print.html">Print</a></li>
-    <li class="footer">Generated on Tue Jan 28 2014 17:05:40 for Senergy by
+    <li class="footer">Generated on Tue Jan 28 2014 23:17:17 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

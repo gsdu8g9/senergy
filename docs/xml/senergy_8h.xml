@@ -7,148 +7,176 @@
     <includes refid="convert_8h" local="no">senergy/convert.h</includes>
     <includes refid="print_8h" local="no">senergy/print.h</includes>
     <includes refid="message__header_8h" local="no">senergy/dns/message_header.h</includes>
+    <includes refid="message__question_8h" local="no">senergy/dns/message_question.h</includes>
     <includes refid="message_8h" local="no">senergy/dns/message.h</includes>
     <includedby refid="main_8cpp" local="no">src/main.cpp</includedby>
     <incdepgraph>
-      <node id="157">
+      <node id="205">
         <label>netinet/in.h</label>
       </node>
-      <node id="155">
+      <node id="203">
         <label>arpa/inet.h</label>
       </node>
-      <node id="161">
+      <node id="209">
         <label>cmath</label>
       </node>
-      <node id="159">
+      <node id="207">
         <label>errno.h</label>
       </node>
-      <node id="146">
+      <node id="194">
         <label>senergy/socket.h</label>
         <link refid="socket_8h"/>
-        <childnode refid="147" relation="include">
+        <childnode refid="195" relation="include">
         </childnode>
-        <childnode refid="148" relation="include">
+        <childnode refid="196" relation="include">
         </childnode>
-        <childnode refid="149" relation="include">
+        <childnode refid="197" relation="include">
         </childnode>
-        <childnode refid="150" relation="include">
+        <childnode refid="198" relation="include">
         </childnode>
-        <childnode refid="151" relation="include">
+        <childnode refid="199" relation="include">
         </childnode>
-        <childnode refid="155" relation="include">
+        <childnode refid="203" relation="include">
         </childnode>
-        <childnode refid="156" relation="include">
+        <childnode refid="204" relation="include">
         </childnode>
-        <childnode refid="157" relation="include">
+        <childnode refid="205" relation="include">
         </childnode>
-        <childnode refid="158" relation="include">
+        <childnode refid="206" relation="include">
         </childnode>
-        <childnode refid="159" relation="include">
+        <childnode refid="207" relation="include">
         </childnode>
       </node>
-      <node id="148">
+      <node id="196">
         <label>string</label>
       </node>
-      <node id="160">
+      <node id="208">
         <label>senergy/convert.h</label>
         <link refid="convert_8h"/>
-        <childnode refid="148" relation="include">
+        <childnode refid="196" relation="include">
         </childnode>
-        <childnode refid="154" relation="include">
+        <childnode refid="202" relation="include">
         </childnode>
-        <childnode refid="161" relation="include">
+        <childnode refid="209" relation="include">
         </childnode>
-        <childnode refid="162" relation="include">
+        <childnode refid="210" relation="include">
         </childnode>
       </node>
-      <node id="158">
+      <node id="206">
         <label>netdb.h</label>
       </node>
-      <node id="154">
+      <node id="202">
         <label>cstdio</label>
       </node>
-      <node id="164">
+      <node id="214">
         <label>senergy/dns/message.h</label>
         <link refid="message_8h"/>
-        <childnode refid="163" relation="include">
+        <childnode refid="211" relation="include">
         </childnode>
-        <childnode refid="151" relation="include">
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
         </childnode>
       </node>
-      <node id="149">
+      <node id="197">
         <label>vector</label>
       </node>
-      <node id="153">
+      <node id="201">
         <label>senergy/print.h</label>
         <link refid="print_8h"/>
-        <childnode refid="154" relation="include">
+        <childnode refid="202" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
         </childnode>
       </node>
-      <node id="162">
+      <node id="210">
         <label>ctgmath</label>
       </node>
-      <node id="145">
+      <node id="193">
         <label>src/senergy/senergy.h</label>
         <link refid="senergy.h"/>
-        <childnode refid="146" relation="include">
+        <childnode refid="194" relation="include">
         </childnode>
-        <childnode refid="151" relation="include">
+        <childnode refid="199" relation="include">
         </childnode>
-        <childnode refid="160" relation="include">
+        <childnode refid="208" relation="include">
         </childnode>
-        <childnode refid="153" relation="include">
+        <childnode refid="201" relation="include">
         </childnode>
-        <childnode refid="163" relation="include">
+        <childnode refid="211" relation="include">
         </childnode>
-        <childnode refid="164" relation="include">
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
         </childnode>
       </node>
-      <node id="152">
+      <node id="200">
         <label>cstdlib</label>
       </node>
-      <node id="151">
+      <node id="213">
+        <label>cctype</label>
+      </node>
+      <node id="199">
         <label>senergy/bytebuffer.h</label>
         <link refid="bytebuffer_8h"/>
-        <childnode refid="148" relation="include">
+        <childnode refid="196" relation="include">
         </childnode>
-        <childnode refid="147" relation="include">
+        <childnode refid="195" relation="include">
         </childnode>
-        <childnode refid="152" relation="include">
+        <childnode refid="200" relation="include">
         </childnode>
-        <childnode refid="150" relation="include">
+        <childnode refid="198" relation="include">
         </childnode>
-        <childnode refid="153" relation="include">
+        <childnode refid="201" relation="include">
         </childnode>
       </node>
-      <node id="156">
+      <node id="204">
         <label>sys/socket.h</label>
       </node>
-      <node id="147">
+      <node id="195">
         <label>cstring</label>
       </node>
-      <node id="163">
+      <node id="211">
         <label>senergy/dns/message_header.h</label>
         <link refid="message__header_8h"/>
-        <childnode refid="151" relation="include">
+        <childnode refid="199" relation="include">
         </childnode>
-        <childnode refid="154" relation="include">
+        <childnode refid="202" relation="include">
         </childnode>
-        <childnode refid="155" relation="include">
+        <childnode refid="203" relation="include">
         </childnode>
       </node>
-      <node id="150">
+      <node id="198">
         <label>memory</label>
+      </node>
+      <node id="212">
+        <label>senergy/dns/message_question.h</label>
+        <link refid="message__question_8h"/>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="203" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="166">
+      <node id="216">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="165">
+      <node id="215">
         <label>src/senergy/senergy.h</label>
         <link refid="senergy.h"/>
-        <childnode refid="166" relation="include">
+        <childnode refid="216" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -186,10 +214,11 @@
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="convert_8h" kindref="compound">senergy/convert.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="print_8h" kindref="compound">senergy/print.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="message__header_8h" kindref="compound">senergy/dns/message_header.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="message_8h" kindref="compound">senergy/dns/message.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SENERY_H</highlight></codeline>
-<codeline lineno="33"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="message__question_8h" kindref="compound">senergy/dns/message_question.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="message_8h" kindref="compound">senergy/dns/message.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SENERY_H</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/photonios/Documents/Senergy/src/senergy/senergy.h"/>
   </compounddef>

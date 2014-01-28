@@ -3,99 +3,121 @@
   <compounddef id="print_8h" kind="file">
     <compoundname>print.h</compoundname>
     <includes local="no">cstdio</includes>
+    <includes local="no">string</includes>
     <includedby refid="print_8cpp" local="no">src/print.cpp</includedby>
     <includedby refid="bytebuffer_8h" local="no">src/senergy/bytebuffer.h</includedby>
     <includedby refid="senergy_8h" local="no">src/senergy/senergy.h</includedby>
     <incdepgraph>
-      <node id="132">
+      <node id="178">
+        <label>string</label>
+      </node>
+      <node id="177">
         <label>cstdio</label>
       </node>
-      <node id="131">
+      <node id="176">
         <label>src/senergy/print.h</label>
         <link refid="print.h"/>
-        <childnode refid="132" relation="include">
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="140">
+      <node id="190">
+        <label>src/message_question.cpp</label>
+        <link refid="message__question_8cpp"/>
+      </node>
+      <node id="186">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="143">
+      <node id="191">
         <label>src/senergy/socket.h</label>
         <link refid="socket_8h"/>
-        <childnode refid="139" relation="include">
+        <childnode refid="185" relation="include">
         </childnode>
-        <childnode refid="144" relation="include">
+        <childnode refid="192" relation="include">
         </childnode>
       </node>
-      <node id="138">
+      <node id="184">
         <label>src/message.cpp</label>
         <link refid="message_8cpp"/>
       </node>
-      <node id="136">
+      <node id="182">
         <label>src/bytebuffer.cpp</label>
         <link refid="bytebuffer_8cpp"/>
       </node>
-      <node id="144">
+      <node id="192">
         <label>src/socket.cpp</label>
         <link refid="socket_8cpp"/>
       </node>
-      <node id="137">
+      <node id="183">
         <label>src/senergy/dns/message.h</label>
         <link refid="message_8h"/>
-        <childnode refid="138" relation="include">
+        <childnode refid="184" relation="include">
         </childnode>
-        <childnode refid="139" relation="include">
+        <childnode refid="185" relation="include">
         </childnode>
       </node>
-      <node id="142">
+      <node id="188">
         <label>src/message_header.cpp</label>
         <link refid="message__header_8cpp"/>
       </node>
-      <node id="133">
+      <node id="179">
         <label>src/senergy/print.h</label>
         <link refid="print.h"/>
-        <childnode refid="134" relation="include">
+        <childnode refid="180" relation="include">
         </childnode>
-        <childnode refid="135" relation="include">
+        <childnode refid="181" relation="include">
         </childnode>
-        <childnode refid="139" relation="include">
+        <childnode refid="185" relation="include">
         </childnode>
       </node>
-      <node id="139">
+      <node id="185">
         <label>src/senergy/senergy.h</label>
         <link refid="senergy_8h"/>
-        <childnode refid="140" relation="include">
+        <childnode refid="186" relation="include">
         </childnode>
       </node>
-      <node id="135">
+      <node id="181">
         <label>src/senergy/bytebuffer.h</label>
         <link refid="bytebuffer_8h"/>
-        <childnode refid="136" relation="include">
+        <childnode refid="182" relation="include">
         </childnode>
-        <childnode refid="137" relation="include">
+        <childnode refid="183" relation="include">
         </childnode>
-        <childnode refid="141" relation="include">
+        <childnode refid="187" relation="include">
         </childnode>
-        <childnode refid="139" relation="include">
+        <childnode refid="189" relation="include">
         </childnode>
-        <childnode refid="143" relation="include">
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
         </childnode>
       </node>
-      <node id="134">
+      <node id="180">
         <label>src/print.cpp</label>
         <link refid="print_8cpp"/>
       </node>
-      <node id="141">
+      <node id="187">
         <label>src/senergy/dns/message_header.h</label>
         <link refid="message__header_8h"/>
-        <childnode refid="142" relation="include">
+        <childnode refid="188" relation="include">
         </childnode>
-        <childnode refid="137" relation="include">
+        <childnode refid="183" relation="include">
         </childnode>
-        <childnode refid="139" relation="include">
+        <childnode refid="185" relation="include">
+        </childnode>
+      </node>
+      <node id="189">
+        <label>src/senergy/dns/message_question.h</label>
+        <link refid="message__question_8h"/>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="183" relation="include">
+        </childnode>
+        <childnode refid="185" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -131,21 +153,26 @@
 <codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SY_PRINT_H</highlight></codeline>
 <codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdio&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Senergy</highlight></codeline>
-<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36" refid="class_senergy_1_1_print" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_senergy_1_1_print" kindref="compound">Print</ref></highlight></codeline>
-<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_print_1a6c6b70bd91e56896058004bf82201010" kindref="member">Hexadecimal</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_print_1a7899dd50cdb0b0a6e7ed144d62ea227d" kindref="member">Integer</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
-<codeline lineno="56"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SY_PRINT_H</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Senergy</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="class_senergy_1_1_print" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_senergy_1_1_print" kindref="compound">Print</ref></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_print_1a6c6b70bd91e56896058004bf82201010" kindref="member">Hexadecimal</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_print_1a6c6b70bd91e56896058004bf82201010" kindref="member">Hexadecimal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;data);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_print_1a6c6b70bd91e56896058004bf82201010" kindref="member">Hexadecimal</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>character);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_print_1a7899dd50cdb0b0a6e7ed144d62ea227d" kindref="member">Integer</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SY_PRINT_H</highlight></codeline>
     </programlisting>
     <location file="/home/photonios/Documents/Senergy/src/senergy/print.h"/>
   </compounddef>

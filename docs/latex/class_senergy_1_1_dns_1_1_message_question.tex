@@ -1,0 +1,253 @@
+\hypertarget{class_senergy_1_1_dns_1_1_message_question}{\section{Senergy\-:\-:Dns\-:\-:Message\-Question Class Reference}
+\label{class_senergy_1_1_dns_1_1_message_question}\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}}
+}
+
+
+Represents a D\-N\-S question, as defined in section 4.\-1.\-2 of R\-F\-C-\/1035. A D\-N\-S question is usually transmitted by a D\-N\-S client, asking to lookup the I\-P address of a host name.  
+
+
+
+
+{\ttfamily \#include $<$message\-\_\-question.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_senergy_1_1_dns_1_1_message_question_a956458fba0c9b96fbd78408250095148}{Message\-Question} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} class with default values. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_senergy_1_1_dns_1_1_message_question_a5fa467b516be4914f865bc5d053e98be}{Get\-Hostname} ()
+\begin{DoxyCompactList}\small\item\em Gets the host name from the fields. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_dns_1_1_message_question_a239d21d940aa38b8d953ff29b400b9cf}{Set\-Hostname} (const std\-::string \&hostname)
+\begin{DoxyCompactList}\small\item\em Sets the host name that needs to be requested (resolved). \end{DoxyCompactList}\item 
+int \hyperlink{class_senergy_1_1_dns_1_1_message_question_a0a007a1d002a37189ce0f8c943335216}{Get\-Size} ()
+\begin{DoxyCompactList}\small\item\em Gets the current size of this message, this is variable, depending on the length of the host name. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_dns_1_1_message_question_a1c66b45b448f262a4f2cf1317c89b5b3}{Deserialize} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
+\begin{DoxyCompactList}\small\item\em Deserializes a single D\-N\-S question message from the specified buffer into this instance. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_dns_1_1_message_question_a60772687d382e1d376852e1b5ff59968}{Serialize} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
+\begin{DoxyCompactList}\small\item\em Serializes this instance into the specified buffer as a D\-N\-S question message. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_dns_1_1_message_question_a7ac084601ff3285c6e47e7ce7ccc09cf}{Dump} ()
+\begin{DoxyCompactList}\small\item\em Dumps all fields from the 'Fields' member to the standard output, with their values. In the following format\-: \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_senergy_1_1_dns_1_1_message_question_a4557a95908c9f5e0b52c160f5ad70cc8}{\-\_\-\-\_\-encode\-\_\-hostname} (const std\-::string \&hostname)
+\item 
+std\-::string \hyperlink{class_senergy_1_1_dns_1_1_message_question_aa0c2322c65b839fd806c255549cb6ca6}{\-\_\-\-\_\-decode\-\_\-hostname} (const std\-::string \&hostname)
+\item 
+void \hyperlink{class_senergy_1_1_dns_1_1_message_question_a38d37becaefb52d8a2f9fb73d08b039e}{\-\_\-\-\_\-update\-\_\-host\-\_\-to\-\_\-fields} (const std\-::string \&hostname)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_senergy_1_1_dns_1_1_message_question_fields}{Message\-Question\-Fields} \hyperlink{class_senergy_1_1_dns_1_1_message_question_a9fad900307a2b2f48c441b657429102f}{Fields}
+\begin{DoxyCompactList}\small\item\em The fields that are part of a D\-N\-S question message. See \hyperlink{struct_senergy_1_1_dns_1_1_message_question_fields}{Message\-Question\-Fields} for a complete list. This contains the actual data that is transmitted and received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a D\-N\-S question, as defined in section 4.\-1.\-2 of R\-F\-C-\/1035. A D\-N\-S question is usually transmitted by a D\-N\-S client, asking to lookup the I\-P address of a host name. 
+
+\begin{DoxyAuthor}{Author}
+Swen Kooij (Photonios) 
+\end{DoxyAuthor}
+
+
+Definition at line 65 of file message\-\_\-question.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_message_question_a956458fba0c9b96fbd78408250095148}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Message\-Question@{Message\-Question}}
+\index{Message\-Question@{Message\-Question}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
+\subsubsection[{Message\-Question}]{\setlength{\rightskip}{0pt plus 5cm}Senergy\-::\-Dns\-::\-Message\-Question\-::\-Message\-Question (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_message_question_a956458fba0c9b96fbd78408250095148}
+
+
+Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} class with default values. 
+
+
+
+Definition at line 30 of file message\-\_\-question.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_message_question_aa0c2322c65b839fd806c255549cb6ca6}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!\-\_\-\-\_\-decode\-\_\-hostname@{\-\_\-\-\_\-decode\-\_\-hostname}}
+\index{\-\_\-\-\_\-decode\-\_\-hostname@{\-\_\-\-\_\-decode\-\_\-hostname}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
+\subsubsection[{\-\_\-\-\_\-decode\-\_\-hostname}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Senergy\-::\-Dns\-::\-Message\-Question\-::\-\_\-\-\_\-decode\-\_\-hostname (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{hostname}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_message_question_aa0c2322c65b839fd806c255549cb6ca6}
+
+
+Definition at line 138 of file message\-\_\-question.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_message_question_a4557a95908c9f5e0b52c160f5ad70cc8}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!\-\_\-\-\_\-encode\-\_\-hostname@{\-\_\-\-\_\-encode\-\_\-hostname}}
+\index{\-\_\-\-\_\-encode\-\_\-hostname@{\-\_\-\-\_\-encode\-\_\-hostname}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
+\subsubsection[{\-\_\-\-\_\-encode\-\_\-hostname}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Senergy\-::\-Dns\-::\-Message\-Question\-::\-\_\-\-\_\-encode\-\_\-hostname (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{hostname}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_message_question_a4557a95908c9f5e0b52c160f5ad70cc8}
+
+
+Definition at line 100 of file message\-\_\-question.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_message_question_a38d37becaefb52d8a2f9fb73d08b039e}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!\-\_\-\-\_\-update\-\_\-host\-\_\-to\-\_\-fields@{\-\_\-\-\_\-update\-\_\-host\-\_\-to\-\_\-fields}}
+\index{\-\_\-\-\_\-update\-\_\-host\-\_\-to\-\_\-fields@{\-\_\-\-\_\-update\-\_\-host\-\_\-to\-\_\-fields}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
+\subsubsection[{\-\_\-\-\_\-update\-\_\-host\-\_\-to\-\_\-fields}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Dns\-::\-Message\-Question\-::\-\_\-\-\_\-update\-\_\-host\-\_\-to\-\_\-fields (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{hostname}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_message_question_a38d37becaefb52d8a2f9fb73d08b039e}
+
+
+Definition at line 168 of file message\-\_\-question.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_message_question_a1c66b45b448f262a4f2cf1317c89b5b3}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Deserialize@{Deserialize}}
+\index{Deserialize@{Deserialize}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
+\subsubsection[{Deserialize}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Message\-Question\-::\-Deserialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Byte\-Buffer} \&}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_message_question_a1c66b45b448f262a4f2cf1317c89b5b3}
+
+
+Deserializes a single D\-N\-S question message from the specified buffer into this instance. 
+
+\begin{DoxyNote}{Note}
+The question message is of variable size, due to the hostname. We must at least be able to read 3 bytes from the specified buffer, otherwise the operation will fail.
+
+This will advance the position of the buffer with the size of the message.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to read from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether deserilization was successful. True is returned when it was a success and false is returned when it failed. 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file message\-\_\-question.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_message_question_a7ac084601ff3285c6e47e7ce7ccc09cf}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Dump@{Dump}}
+\index{Dump@{Dump}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
+\subsubsection[{Dump}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Dns\-::\-Message\-Question\-::\-Dump (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_message_question_a7ac084601ff3285c6e47e7ce7ccc09cf}
+
+
+Dumps all fields from the 'Fields' member to the standard output, with their values. In the following format\-: 
+
+
+
+Definition at line 93 of file message\-\_\-question.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_message_question_a5fa467b516be4914f865bc5d053e98be}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Get\-Hostname@{Get\-Hostname}}
+\index{Get\-Hostname@{Get\-Hostname}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
+\subsubsection[{Get\-Hostname}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Senergy\-::\-Dns\-::\-Message\-Question\-::\-Get\-Hostname (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_message_question_a5fa467b516be4914f865bc5d053e98be}
+
+
+Gets the host name from the fields. 
+
+\begin{DoxyReturn}{Returns}
+The host name that is being requested (resolved). 
+\end{DoxyReturn}
+
+
+Definition at line 34 of file message\-\_\-question.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_message_question_a0a007a1d002a37189ce0f8c943335216}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Get\-Size@{Get\-Size}}
+\index{Get\-Size@{Get\-Size}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
+\subsubsection[{Get\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Dns\-::\-Message\-Question\-::\-Get\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_message_question_a0a007a1d002a37189ce0f8c943335216}
+
+
+Gets the current size of this message, this is variable, depending on the length of the host name. 
+
+\begin{DoxyReturn}{Returns}
+The current size of this message. 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file message\-\_\-question.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_message_question_a60772687d382e1d376852e1b5ff59968}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
+\subsubsection[{Serialize}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Message\-Question\-::\-Serialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Byte\-Buffer} \&}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_message_question_a60772687d382e1d376852e1b5ff59968}
+
+
+Serializes this instance into the specified buffer as a D\-N\-S question message. 
+
+\begin{DoxyNote}{Note}
+This will advance the position of the buffer with the size of the message.
+
+Serilization will fail when no hostname is set.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to write the serialized message to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether serilization was successful. True is returned when it was a success and false is returned when it failed. 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file message\-\_\-question.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_message_question_a239d21d940aa38b8d953ff29b400b9cf}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Set\-Hostname@{Set\-Hostname}}
+\index{Set\-Hostname@{Set\-Hostname}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
+\subsubsection[{Set\-Hostname}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Dns\-::\-Message\-Question\-::\-Set\-Hostname (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{hostname}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_message_question_a239d21d940aa38b8d953ff29b400b9cf}
+
+
+Sets the host name that needs to be requested (resolved). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & The host name that needs to be requested (resolved). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 39 of file message\-\_\-question.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_message_question_a9fad900307a2b2f48c441b657429102f}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Fields@{Fields}}
+\index{Fields@{Fields}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
+\subsubsection[{Fields}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message\-Question\-Fields} Senergy\-::\-Dns\-::\-Message\-Question\-::\-Fields}}\label{class_senergy_1_1_dns_1_1_message_question_a9fad900307a2b2f48c441b657429102f}
+
+
+The fields that are part of a D\-N\-S question message. See \hyperlink{struct_senergy_1_1_dns_1_1_message_question_fields}{Message\-Question\-Fields} for a complete list. This contains the actual data that is transmitted and received. 
+
+
+
+Definition at line 139 of file message\-\_\-question.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/senergy/dns/\hyperlink{message__question_8h}{message\-\_\-question.\-h}\item 
+src/\hyperlink{message__question_8cpp}{message\-\_\-question.\-cpp}\end{DoxyCompactItemize}

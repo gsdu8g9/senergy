@@ -8,6 +8,7 @@
     <innerfile refid="main_8cpp">main.cpp</innerfile>
     <innerfile refid="message_8cpp">message.cpp</innerfile>
     <innerfile refid="message__header_8cpp">message_header.cpp</innerfile>
+    <innerfile refid="message__question_8cpp">message_question.cpp</innerfile>
     <innerfile refid="print_8cpp">print.cpp</innerfile>
     <innerfile refid="rootnameserver_8cpp">rootnameserver.cpp</innerfile>
     <innerfile refid="socket_8cpp">socket.cpp</innerfile>

@@ -1,4 +1,9 @@
 var searchData=
 [
-  ['hexadecimal',['Hexadecimal',['../class_senergy_1_1_print.html#a6c6b70bd91e56896058004bf82201010',1,'Senergy::Print']]]
+  ['geterrorcode',['GetErrorCode',['../class_senergy_1_1_socket.html#a403f7a2f6c5a94d4b14f73f0965da061',1,'Senergy::Socket']]],
+  ['gethostname',['GetHostname',['../class_senergy_1_1_dns_1_1_message_question.html#a5fa467b516be4914f865bc5d053e98be',1,'Senergy::Dns::MessageQuestion']]],
+  ['getposition',['GetPosition',['../class_senergy_1_1_byte_buffer.html#a286e096451b62a14a8d645e1c9da62af',1,'Senergy::ByteBuffer']]],
+  ['getremainingsize',['GetRemainingSize',['../class_senergy_1_1_byte_buffer.html#ab938ed32f9f909145f93099f4620da69',1,'Senergy::ByteBuffer']]],
+  ['getremotehost',['GetRemoteHost',['../class_senergy_1_1_socket.html#aaab6b46c9e2733982df87eefb0fc77a2',1,'Senergy::Socket']]],
+  ['getsize',['GetSize',['../class_senergy_1_1_dns_1_1_message_header.html#a69f4475bc3153926dbb011f37cbbfea9',1,'Senergy::Dns::MessageHeader::GetSize()'],['../class_senergy_1_1_dns_1_1_message_question.html#a0a007a1d002a37189ce0f8c943335216',1,'Senergy::Dns::MessageQuestion::GetSize()']]]
 ];

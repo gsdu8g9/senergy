@@ -1,0 +1,205 @@
+.TH "Senergy::Dns::MessageQuestion" 3 "Tue Jan 28 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::Dns::MessageQuestion \- 
+.PP
+Represents a DNS question, as defined in section 4\&.1\&.2 of RFC-1035\&. A DNS question is usually transmitted by a DNS client, asking to lookup the IP address of a host name\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <message_question\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMessageQuestion\fP ()"
+.br
+.RI "\fIInitializes a new instance of the \fBMessageQuestion\fP class with default values\&. \fP"
+.ti -1c
+.RI "std::string \fBGetHostname\fP ()"
+.br
+.RI "\fIGets the host name from the fields\&. \fP"
+.ti -1c
+.RI "void \fBSetHostname\fP (const std::string &hostname)"
+.br
+.RI "\fISets the host name that needs to be requested (resolved)\&. \fP"
+.ti -1c
+.RI "int \fBGetSize\fP ()"
+.br
+.RI "\fIGets the current size of this message, this is variable, depending on the length of the host name\&. \fP"
+.ti -1c
+.RI "bool \fBDeserialize\fP (\fBByteBuffer\fP &buffer)"
+.br
+.RI "\fIDeserializes a single DNS question message from the specified buffer into this instance\&. \fP"
+.ti -1c
+.RI "bool \fBSerialize\fP (\fBByteBuffer\fP &buffer)"
+.br
+.RI "\fISerializes this instance into the specified buffer as a DNS question message\&. \fP"
+.ti -1c
+.RI "void \fBDump\fP ()"
+.br
+.RI "\fIDumps all fields from the 'Fields' member to the standard output, with their values\&. In the following format: \fP"
+.ti -1c
+.RI "std::string \fB__encode_hostname\fP (const std::string &hostname)"
+.br
+.ti -1c
+.RI "std::string \fB__decode_hostname\fP (const std::string &hostname)"
+.br
+.ti -1c
+.RI "void \fB__update_host_to_fields\fP (const std::string &hostname)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBMessageQuestionFields\fP \fBFields\fP"
+.br
+.RI "\fIThe fields that are part of a DNS question message\&. See \fBMessageQuestionFields\fP for a complete list\&. This contains the actual data that is transmitted and received\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Represents a DNS question, as defined in section 4\&.1\&.2 of RFC-1035\&. A DNS question is usually transmitted by a DNS client, asking to lookup the IP address of a host name\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.PP
+Definition at line 65 of file message_question\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Senergy::Dns::MessageQuestion::MessageQuestion ()"
+
+.PP
+Initializes a new instance of the \fBMessageQuestion\fP class with default values\&. 
+.PP
+Definition at line 30 of file message_question\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "std::string Senergy::Dns::MessageQuestion::__decode_hostname (const std::string &hostname)"
+
+.PP
+Definition at line 138 of file message_question\&.cpp\&.
+.SS "std::string Senergy::Dns::MessageQuestion::__encode_hostname (const std::string &hostname)"
+
+.PP
+Definition at line 100 of file message_question\&.cpp\&.
+.SS "void Senergy::Dns::MessageQuestion::__update_host_to_fields (const std::string &hostname)"
+
+.PP
+Definition at line 168 of file message_question\&.cpp\&.
+.SS "bool Senergy::Dns::MessageQuestion::Deserialize (\fBByteBuffer\fP &buffer)"
+
+.PP
+Deserializes a single DNS question message from the specified buffer into this instance\&. 
+.PP
+\fBNote:\fP
+.RS 4
+The question message is of variable size, due to the hostname\&. We must at least be able to read 3 bytes from the specified buffer, otherwise the operation will fail\&.
+.PP
+This will advance the position of the buffer with the size of the message\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to read from\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether deserilization was successful\&. True is returned when it was a success and false is returned when it failed\&. 
+.RE
+.PP
+
+.PP
+Definition at line 50 of file message_question\&.cpp\&.
+.SS "void Senergy::Dns::MessageQuestion::Dump ()"
+
+.PP
+Dumps all fields from the 'Fields' member to the standard output, with their values\&. In the following format: 
+.PP
+Definition at line 93 of file message_question\&.cpp\&.
+.SS "std::string Senergy::Dns::MessageQuestion::GetHostname ()"
+
+.PP
+Gets the host name from the fields\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The host name that is being requested (resolved)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 34 of file message_question\&.cpp\&.
+.SS "int Senergy::Dns::MessageQuestion::GetSize ()"
+
+.PP
+Gets the current size of this message, this is variable, depending on the length of the host name\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The current size of this message\&. 
+.RE
+.PP
+
+.PP
+Definition at line 44 of file message_question\&.cpp\&.
+.SS "bool Senergy::Dns::MessageQuestion::Serialize (\fBByteBuffer\fP &buffer)"
+
+.PP
+Serializes this instance into the specified buffer as a DNS question message\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This will advance the position of the buffer with the size of the message\&.
+.PP
+Serilization will fail when no hostname is set\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to write the serialized message to\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether serilization was successful\&. True is returned when it was a success and false is returned when it failed\&. 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file message_question\&.cpp\&.
+.SS "void Senergy::Dns::MessageQuestion::SetHostname (const std::string &hostname)"
+
+.PP
+Sets the host name that needs to be requested (resolved)\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIhostname\fP The host name that needs to be requested (resolved)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file message_question\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBMessageQuestionFields\fP Senergy::Dns::MessageQuestion::Fields"
+
+.PP
+The fields that are part of a DNS question message\&. See \fBMessageQuestionFields\fP for a complete list\&. This contains the actual data that is transmitted and received\&. 
+.PP
+Definition at line 139 of file message_question\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

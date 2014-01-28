@@ -15,7 +15,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" line="81" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" bodystart="81" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" line="82" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_message_1a1e72009ea8004f0e8cc1ce0ea07f4ad1" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_senergy_1_1_dns_1a76982150ca0b86c08d888f3e3e805747" kindref="member">MessageQuestionPtrVector</ref></type>
+        <definition>MessageQuestionPtrVector Senergy::Dns::Message::Questions</definition>
+        <argsstring></argsstring>
+        <name>Questions</name>
+        <briefdescription>
+<para>Holds all the &apos;question messages&apos; that are part of this DNS message. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" line="87" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" bodystart="87" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -30,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" line="46" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message.cpp" bodystart="29" bodyend="31"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" line="47" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message.cpp" bodystart="29" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_1a3857764a799ab123405420345f9b03ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -57,7 +70,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" line="64" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message.cpp" bodystart="33" bodyend="41"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" line="65" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message.cpp" bodystart="33" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_1a2e7978e799fadaa4f03fc881e5c8e0f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -83,7 +96,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" line="74" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message.cpp" bodystart="43" bodyend="50"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" line="75" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message.cpp" bodystart="52" bodyend="72"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -92,30 +105,31 @@
 <para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
 </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="7">
+      <node id="5">
         <label>Senergy::Dns::Message</label>
         <link refid="class_senergy_1_1_dns_1_1_message"/>
-        <childnode refid="8" relation="usage">
+        <childnode refid="6" relation="usage">
           <edgelabel>Header</edgelabel>
         </childnode>
       </node>
-      <node id="9">
+      <node id="7">
         <label>Senergy::Dns::MessageHeaderFields</label>
         <link refid="struct_senergy_1_1_dns_1_1_message_header_fields"/>
       </node>
-      <node id="8">
+      <node id="6">
         <label>Senergy::Dns::MessageHeader</label>
         <link refid="class_senergy_1_1_dns_1_1_message_header"/>
-        <childnode refid="9" relation="usage">
+        <childnode refid="7" relation="usage">
           <edgelabel>Fields</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" line="40" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" bodystart="39" bodyend="82"/>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" line="41" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" bodystart="40" bodyend="88"/>
     <listofallmembers>
       <member refid="class_senergy_1_1_dns_1_1_message_1a3857764a799ab123405420345f9b03ee" prot="public" virt="non-virtual"><scope>Senergy::Dns::Message</scope><name>Deserialize</name></member>
       <member refid="class_senergy_1_1_dns_1_1_message_1a0c9ed7b89b18762ae55c3bd53278126f" prot="public" virt="non-virtual"><scope>Senergy::Dns::Message</scope><name>Header</name></member>
       <member refid="class_senergy_1_1_dns_1_1_message_1a3e7192f2293903a43e7d08960b08a8b1" prot="public" virt="non-virtual"><scope>Senergy::Dns::Message</scope><name>Message</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_message_1a1e72009ea8004f0e8cc1ce0ea07f4ad1" prot="public" virt="non-virtual"><scope>Senergy::Dns::Message</scope><name>Questions</name></member>
       <member refid="class_senergy_1_1_dns_1_1_message_1a2e7978e799fadaa4f03fc881e5c8e0f6" prot="public" virt="non-virtual"><scope>Senergy::Dns::Message</scope><name>Serialize</name></member>
     </listofallmembers>
   </compounddef>

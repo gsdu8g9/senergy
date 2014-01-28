@@ -14,8 +14,13 @@ Contains simple utilities that facilitate printing various data types or data st
 \begin{DoxyCompactItemize}
 \item 
 static void \hyperlink{class_senergy_1_1_print_a6c6b70bd91e56896058004bf82201010}{Hexadecimal} (char $\ast$data, int size)
-\begin{DoxyCompactList}\small\item\em Prints the specified char array of the specified string, byte by byte where each byte is shown in it's hexadecimal representation. Followed by a new-\/line character (\par
+\begin{DoxyCompactList}\small\item\em Prints the specified char array, byte by byte where each byte is shown in it's hexadecimal representation. Followed by a new-\/line character (\par
 ). \end{DoxyCompactList}\item 
+static void \hyperlink{class_senergy_1_1_print_a28060c00de905d945667cf606f7ad1d6}{Hexadecimal} (const std\-::string \&data)
+\begin{DoxyCompactList}\small\item\em Prints the specified string, byte by byte where each byte is shown in it's hexadecimal representation. Followed by a new-\/line character (\par
+). \end{DoxyCompactList}\item 
+static void \hyperlink{class_senergy_1_1_print_ac85fea5b673455bfc796d48c56fac38d}{Hexadecimal} (char character)
+\begin{DoxyCompactList}\small\item\em Prints the specified character in it's hexadecimal notation, followed by a new-\/line character. \end{DoxyCompactList}\item 
 static void \hyperlink{class_senergy_1_1_print_a7899dd50cdb0b0a6e7ed144d62ea227d}{Integer} (int value)
 \begin{DoxyCompactList}\small\item\em Prints the specified integer value to the screen, followed by a new-\/line character. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -28,7 +33,7 @@ Swen Kooij (Photonios)
 \end{DoxyAuthor}
 
 
-Definition at line 36 of file print.\-h.
+Definition at line 37 of file print.\-h.
 
 
 
@@ -43,7 +48,7 @@ Definition at line 36 of file print.\-h.
 )\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_print_a6c6b70bd91e56896058004bf82201010}
 
 
-Prints the specified char array of the specified string, byte by byte where each byte is shown in it's hexadecimal representation. Followed by a new-\/line character (\par
+Prints the specified char array, byte by byte where each byte is shown in it's hexadecimal representation. Followed by a new-\/line character (\par
 ). 
 
 
@@ -56,6 +61,47 @@ Prints the specified char array of the specified string, byte by byte where each
 
 
 Definition at line 27 of file print.\-cpp.
+
+\hypertarget{class_senergy_1_1_print_a28060c00de905d945667cf606f7ad1d6}{\index{Senergy\-::\-Print@{Senergy\-::\-Print}!Hexadecimal@{Hexadecimal}}
+\index{Hexadecimal@{Hexadecimal}!Senergy::Print@{Senergy\-::\-Print}}
+\subsubsection[{Hexadecimal}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Print\-::\-Hexadecimal (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_print_a28060c00de905d945667cf606f7ad1d6}
+
+
+Prints the specified string, byte by byte where each byte is shown in it's hexadecimal representation. Followed by a new-\/line character (\par
+). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to print hexadecimal. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 35 of file print.\-cpp.
+
+\hypertarget{class_senergy_1_1_print_ac85fea5b673455bfc796d48c56fac38d}{\index{Senergy\-::\-Print@{Senergy\-::\-Print}!Hexadecimal@{Hexadecimal}}
+\index{Hexadecimal@{Hexadecimal}!Senergy::Print@{Senergy\-::\-Print}}
+\subsubsection[{Hexadecimal}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Print\-::\-Hexadecimal (
+\begin{DoxyParamCaption}
+\item[{char}]{character}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_print_ac85fea5b673455bfc796d48c56fac38d}
+
+
+Prints the specified character in it's hexadecimal notation, followed by a new-\/line character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to print hexadecimal. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 44 of file print.\-cpp.
 
 \hypertarget{class_senergy_1_1_print_a7899dd50cdb0b0a6e7ed144d62ea227d}{\index{Senergy\-::\-Print@{Senergy\-::\-Print}!Integer@{Integer}}
 \index{Integer@{Integer}!Senergy::Print@{Senergy\-::\-Print}}
@@ -75,7 +121,7 @@ Prints the specified integer value to the screen, followed by a new-\/line chara
 \end{DoxyParams}
 
 
-Definition at line 35 of file print.\-cpp.
+Definition at line 49 of file print.\-cpp.
 
 
 

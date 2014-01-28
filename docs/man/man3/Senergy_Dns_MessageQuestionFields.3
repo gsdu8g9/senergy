@@ -1,0 +1,72 @@
+.TH "Senergy::Dns::MessageQuestionFields" 3 "Tue Jan 28 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::Dns::MessageQuestionFields \- 
+.PP
+Describes the fields of a question message as defined in section 4\&.1\&.2 of RFC-1035\&. This data structure is used as the 'Fields' member/property of the \fBMessageQuestion\fP class, and serves as the container of the actual data\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <message_question\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "unsigned char * \fBHostname\fP"
+.br
+.RI "\fIA domain name represented as a sequence of labels, where each label consists of a length octet followed by that number of octets\&. The domain name terminates with the zero length octet for the null label of the root\&. Note that this field may be an odd number of octets; no padding is used\&. \fP"
+.ti -1c
+.RI "unsigned short \fBType\fP"
+.br
+.RI "\fIA two octet code which specifies the type of the query\&. The values for this field include all codes valid for a TYPE field, together with some more general codes which can match more than one type of RR\&. \fP"
+.ti -1c
+.RI "unsigned short \fBClass\fP"
+.br
+.RI "\fIA two octet code that specifies the class of the query\&. For example, the QCLASS field is IN for the Internet\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Describes the fields of a question message as defined in section 4\&.1\&.2 of RFC-1035\&. This data structure is used as the 'Fields' member/property of the \fBMessageQuestion\fP class, and serves as the container of the actual data\&. 
+
+
+.PP
+\fBNote:\fP
+.RS 4
+The size of this structure is variable, because of the host name, but it is at least 2 bytes\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.PP
+Definition at line 32 of file message_question\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "unsigned short Senergy::Dns::MessageQuestionFields::Class"
+
+.PP
+A two octet code that specifies the class of the query\&. For example, the QCLASS field is IN for the Internet\&. 
+.PP
+Definition at line 56 of file message_question\&.h\&.
+.SS "unsigned char* Senergy::Dns::MessageQuestionFields::Hostname"
+
+.PP
+A domain name represented as a sequence of labels, where each label consists of a length octet followed by that number of octets\&. The domain name terminates with the zero length octet for the null label of the root\&. Note that this field may be an odd number of octets; no padding is used\&. 
+.PP
+Definition at line 42 of file message_question\&.h\&.
+.SS "unsigned short Senergy::Dns::MessageQuestionFields::Type"
+
+.PP
+A two octet code which specifies the type of the query\&. The values for this field include all codes valid for a TYPE field, together with some more general codes which can match more than one type of RR\&. 
+.PP
+Definition at line 50 of file message_question\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

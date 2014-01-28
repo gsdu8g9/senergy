@@ -22,10 +22,48 @@ Senergy::Dns \-
 .br
 .RI "\fIDefines the header of a DNS packet, as described in section 4\&.1 of RFC-1035\&. All DNS messages start with this header\&. \fP"
 .ti -1c
+.RI "struct \fBMessageQuestionFields\fP"
+.br
+.RI "\fIDescribes the fields of a question message as defined in section 4\&.1\&.2 of RFC-1035\&. This data structure is used as the 'Fields' member/property of the \fBMessageQuestion\fP class, and serves as the container of the actual data\&. \fP"
+.ti -1c
+.RI "class \fBMessageQuestion\fP"
+.br
+.RI "\fIRepresents a DNS question, as defined in section 4\&.1\&.2 of RFC-1035\&. A DNS question is usually transmitted by a DNS client, asking to lookup the IP address of a host name\&. \fP"
+.ti -1c
 .RI "class \fBRootNameServer\fP"
 .br
 .RI "\fIRepresents one of the 13 Root Name Servers (DNS) that are currently operating around the world\&. Provides access to the functionalities that root name servers offer\&. \fP"
 .in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::shared_ptr
+.br
+< \fBMessageQuestion\fP > \fBMessageQuestionPtr\fP"
+.br
+.RI "\fISimple typedef for a shared pointer to a \fBMessageQuestion\fP\&. \fP"
+.ti -1c
+.RI "typedef std::vector
+.br
+< \fBMessageQuestionPtr\fP > \fBMessageQuestionPtrVector\fP"
+.br
+.RI "\fISimple typedef for a vector of \fBMessageQuestion\fP smart pointers\&. \fP"
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef std::shared_ptr<\fBMessageQuestion\fP> \fBSenergy::Dns::MessageQuestionPtr\fP"
+
+.PP
+Simple typedef for a shared pointer to a \fBMessageQuestion\fP\&. 
+.PP
+Definition at line 159 of file message_question\&.h\&.
+.SS "typedef std::vector<\fBMessageQuestionPtr\fP> \fBSenergy::Dns::MessageQuestionPtrVector\fP"
+
+.PP
+Simple typedef for a vector of \fBMessageQuestion\fP smart pointers\&. 
+.PP
+Definition at line 164 of file message_question\&.h\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Senergy from the source code\&.

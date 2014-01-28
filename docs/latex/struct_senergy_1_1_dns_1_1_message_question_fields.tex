@@ -1,0 +1,77 @@
+\hypertarget{struct_senergy_1_1_dns_1_1_message_question_fields}{\section{Senergy\-:\-:Dns\-:\-:Message\-Question\-Fields Struct Reference}
+\label{struct_senergy_1_1_dns_1_1_message_question_fields}\index{Senergy\-::\-Dns\-::\-Message\-Question\-Fields@{Senergy\-::\-Dns\-::\-Message\-Question\-Fields}}
+}
+
+
+Describes the fields of a question message as defined in section 4.\-1.\-2 of R\-F\-C-\/1035. This data structure is used as the \char`\"{}\-Fields\char`\"{} member/property of the \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} class, and serves as the container of the actual data.  
+
+
+
+
+{\ttfamily \#include $<$message\-\_\-question.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char $\ast$ \hyperlink{struct_senergy_1_1_dns_1_1_message_question_fields_a0d4513020862cecabd53e86ba5d9e05d}{Hostname}
+\begin{DoxyCompactList}\small\item\em A domain name represented as a sequence of labels, where each label consists of a length octet followed by that number of octets. The domain name terminates with the zero length octet for the null label of the root. Note that this field may be an odd number of octets; no padding is used. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{struct_senergy_1_1_dns_1_1_message_question_fields_a15156bfecd74744319a3ce51e3fd1800}{Type}
+\begin{DoxyCompactList}\small\item\em A two octet code which specifies the type of the query. The values for this field include all codes valid for a T\-Y\-P\-E field, together with some more general codes which can match more than one type of R\-R. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{struct_senergy_1_1_dns_1_1_message_question_fields_a3287d0766033d31e14623d864348bd84}{Class}
+\begin{DoxyCompactList}\small\item\em A two octet code that specifies the class of the query. For example, the Q\-C\-L\-A\-S\-S field is I\-N for the Internet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Describes the fields of a question message as defined in section 4.\-1.\-2 of R\-F\-C-\/1035. This data structure is used as the \char`\"{}\-Fields\char`\"{} member/property of the \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} class, and serves as the container of the actual data. 
+
+\begin{DoxyNote}{Note}
+The size of this structure is variable, because of the host name, but it is at least 2 bytes.
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Swen Kooij (Photonios) 
+\end{DoxyAuthor}
+
+
+Definition at line 32 of file message\-\_\-question.\-h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_senergy_1_1_dns_1_1_message_question_fields_a3287d0766033d31e14623d864348bd84}{\index{Senergy\-::\-Dns\-::\-Message\-Question\-Fields@{Senergy\-::\-Dns\-::\-Message\-Question\-Fields}!Class@{Class}}
+\index{Class@{Class}!Senergy::Dns::MessageQuestionFields@{Senergy\-::\-Dns\-::\-Message\-Question\-Fields}}
+\subsubsection[{Class}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short Senergy\-::\-Dns\-::\-Message\-Question\-Fields\-::\-Class}}\label{struct_senergy_1_1_dns_1_1_message_question_fields_a3287d0766033d31e14623d864348bd84}
+
+
+A two octet code that specifies the class of the query. For example, the Q\-C\-L\-A\-S\-S field is I\-N for the Internet. 
+
+
+
+Definition at line 56 of file message\-\_\-question.\-h.
+
+\hypertarget{struct_senergy_1_1_dns_1_1_message_question_fields_a0d4513020862cecabd53e86ba5d9e05d}{\index{Senergy\-::\-Dns\-::\-Message\-Question\-Fields@{Senergy\-::\-Dns\-::\-Message\-Question\-Fields}!Hostname@{Hostname}}
+\index{Hostname@{Hostname}!Senergy::Dns::MessageQuestionFields@{Senergy\-::\-Dns\-::\-Message\-Question\-Fields}}
+\subsubsection[{Hostname}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ Senergy\-::\-Dns\-::\-Message\-Question\-Fields\-::\-Hostname}}\label{struct_senergy_1_1_dns_1_1_message_question_fields_a0d4513020862cecabd53e86ba5d9e05d}
+
+
+A domain name represented as a sequence of labels, where each label consists of a length octet followed by that number of octets. The domain name terminates with the zero length octet for the null label of the root. Note that this field may be an odd number of octets; no padding is used. 
+
+
+
+Definition at line 42 of file message\-\_\-question.\-h.
+
+\hypertarget{struct_senergy_1_1_dns_1_1_message_question_fields_a15156bfecd74744319a3ce51e3fd1800}{\index{Senergy\-::\-Dns\-::\-Message\-Question\-Fields@{Senergy\-::\-Dns\-::\-Message\-Question\-Fields}!Type@{Type}}
+\index{Type@{Type}!Senergy::Dns::MessageQuestionFields@{Senergy\-::\-Dns\-::\-Message\-Question\-Fields}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short Senergy\-::\-Dns\-::\-Message\-Question\-Fields\-::\-Type}}\label{struct_senergy_1_1_dns_1_1_message_question_fields_a15156bfecd74744319a3ce51e3fd1800}
+
+
+A two octet code which specifies the type of the query. The values for this field include all codes valid for a T\-Y\-P\-E field, together with some more general codes which can match more than one type of R\-R. 
+
+
+
+Definition at line 50 of file message\-\_\-question.\-h.
+
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/senergy/dns/\hyperlink{message__question_8h}{message\-\_\-question.\-h}\end{DoxyCompactItemize}

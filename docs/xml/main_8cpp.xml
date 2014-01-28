@@ -70,10 +70,12 @@
       <node id="31">
         <label>cstdio</label>
       </node>
-      <node id="41">
+      <node id="43">
         <label>senergy/dns/message.h</label>
         <link refid="message_8h"/>
         <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
@@ -85,6 +87,8 @@
         <label>senergy/print.h</label>
         <link refid="print_8h"/>
         <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
         </childnode>
       </node>
       <node id="39">
@@ -105,9 +109,14 @@
         </childnode>
         <childnode refid="41" relation="include">
         </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
       </node>
       <node id="29">
         <label>cstdlib</label>
+      </node>
+      <node id="42">
+        <label>cctype</label>
       </node>
       <node id="28">
         <label>senergy/bytebuffer.h</label>
@@ -145,34 +154,26 @@
       <node id="27">
         <label>memory</label>
       </node>
+      <node id="41">
+        <label>senergy/dns/message_question.h</label>
+        <link refid="message__question_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
     </incdepgraph>
-    <innerclass refid="struct_d_n_s___h_e_a_d_e_r" prot="public">DNS_HEADER</innerclass>
       <sectiondef kind="func">
-      <memberdef kind="function" id="main_8cpp_1a1390696935c0b2a9bdebc396feef9688" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>unsigned char *</type>
-        <definition>unsigned char* ReadName</definition>
-        <argsstring>(unsigned char *reader, unsigned char *buffer, int *count)</argsstring>
-        <name>ReadName</name>
-        <param>
-          <type>unsigned char *</type>
-          <declname>reader</declname>
-        </param>
-        <param>
-          <type>unsigned char *</type>
-          <declname>buffer</declname>
-        </param>
-        <param>
-          <type>int *</type>
-          <declname>count</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="44" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="44" bodyend="95"/>
-      </memberdef>
       <memberdef kind="function" id="main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int main</definition>
@@ -192,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="97" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="97" bodyend="161"/>
+        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="25" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="25" bodyend="79"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -224,143 +225,61 @@
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="senergy_8h" kindref="compound">senergy/senergy.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25" refid="struct_d_n_s___h_e_a_d_e_r" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="27" refid="struct_d_n_s___h_e_a_d_e_r_1a5ac83f81b8da8ddb83e3f5baf9a51e94" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="struct_d_n_s___h_e_a_d_e_r_1a5ac83f81b8da8ddb83e3f5baf9a51e94" kindref="member">id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>identification<sp/>number</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28" refid="struct_d_n_s___h_e_a_d_e_r_1ae36057dbcab8fd192148aed912270462" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>rd<sp/>:1;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>recursion<sp/>desired</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29" refid="struct_d_n_s___h_e_a_d_e_r_1acfd94249b1b03793d63a6b87fea41d9e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>tc<sp/>:1;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>truncated<sp/>message</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30" refid="struct_d_n_s___h_e_a_d_e_r_1a0b35c4f2cf9cc0d1555afa24676c2b26" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aa<sp/>:1;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>authoritive<sp/>answer</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31" refid="struct_d_n_s___h_e_a_d_e_r_1a07b70b04059dd68a0f7c1c879ccf1ef2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>opcode<sp/>:4;<sp/></highlight><highlight class="comment">//<sp/>purpose<sp/>of<sp/>message</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32" refid="struct_d_n_s___h_e_a_d_e_r_1a874c920bbfec9e40d6b77e97128d1da9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>qr<sp/>:1;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>query/response<sp/>flag</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33" refid="struct_d_n_s___h_e_a_d_e_r_1a3b7ff1e78cc57527d2afe217fd4d0178" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>rcode<sp/>:4;<sp/><sp/></highlight><highlight class="comment">//<sp/>response<sp/>code</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="struct_d_n_s___h_e_a_d_e_r_1af63c835c6ea830833207e2c8e3327fbd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>cd<sp/>:1;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>checking<sp/>disabled</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35" refid="struct_d_n_s___h_e_a_d_e_r_1a61bfa8d857d74fb70872b179ddbe59e5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ad<sp/>:1;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>authenticated<sp/>data</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36" refid="struct_d_n_s___h_e_a_d_e_r_1a4a09d9fe1ea80fcc992af0e4a90b0e6c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>z<sp/>:1;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>its<sp/>z!<sp/>reserved</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37" refid="struct_d_n_s___h_e_a_d_e_r_1ab689629314dd78eb571b9d4d82feef8a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ra<sp/>:1;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>recursion<sp/>available</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38" refid="struct_d_n_s___h_e_a_d_e_r_1a6b9815b90208910759572254bf0905e5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="struct_d_n_s___h_e_a_d_e_r_1a6b9815b90208910759572254bf0905e5" kindref="member">q_count</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>question<sp/>entries</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="struct_d_n_s___h_e_a_d_e_r_1abf109ef7bbba2e8145177411c6835faa" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="struct_d_n_s___h_e_a_d_e_r_1abf109ef7bbba2e8145177411c6835faa" kindref="member">ans_count</ref>;<sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>answer<sp/>entries</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="struct_d_n_s___h_e_a_d_e_r_1aa8c1b1d176c5ff1ab2007af10cecccf7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="struct_d_n_s___h_e_a_d_e_r_1aa8c1b1d176c5ff1ab2007af10cecccf7" kindref="member">auth_count</ref>;<sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>authority<sp/>entries</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41" refid="struct_d_n_s___h_e_a_d_e_r_1a62902698d81157eba889e57f56b11702" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="struct_d_n_s___h_e_a_d_e_r_1a62902698d81157eba889e57f56b11702" kindref="member">add_count</ref>;<sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>resource<sp/>entries</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal">}<sp/><ref refid="struct_d_n_s___h_e_a_d_e_r" kindref="compound">DNS_HEADER</ref>;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="main_8cpp_1a1390696935c0b2a9bdebc396feef9688" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="main_8cpp_1a1390696935c0b2a9bdebc396feef9688" kindref="member">ReadName</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>reader,</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>count)</highlight></codeline>
-<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>p=0,jumped=0,offset;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>,<sp/>j;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>*count<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)malloc(256);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>name[0]=</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//read<sp/>the<sp/>names<sp/>in<sp/>3www6google3com<sp/>format</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(*reader!=0)</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(*reader&gt;=192)</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offset<sp/>=<sp/>(*reader)*256<sp/>+<sp/>*(reader+1)<sp/>-<sp/>49152;<sp/></highlight><highlight class="comment">//49152<sp/>=<sp/>11000000<sp/>00000000<sp/>;)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reader<sp/>=<sp/>buffer<sp/>+<sp/>offset<sp/>-<sp/>1;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jumped<sp/>=<sp/>1;<sp/></highlight><highlight class="comment">//we<sp/>have<sp/>jumped<sp/>to<sp/>another<sp/>location<sp/>so<sp/>counting<sp/>wont<sp/>go<sp/>up!</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name[p++]=*reader;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reader=reader+1;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(jumped==0)<sp/>*count<sp/>=<sp/>*count<sp/>+<sp/>1;<sp/></highlight><highlight class="comment">//if<sp/>we<sp/>havent<sp/>jumped<sp/>to<sp/>another<sp/>location<sp/>then<sp/>we<sp/>can<sp/>count<sp/>up</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>name[p]=</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//string<sp/>complete</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(jumped==1)<sp/></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*count<sp/>=<sp/>*count<sp/>+<sp/>1;<sp/></highlight><highlight class="comment">//number<sp/>of<sp/>steps<sp/>we<sp/>actually<sp/>moved<sp/>forward<sp/>in<sp/>the<sp/>packet</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//now<sp/>convert<sp/>3www6google3com0<sp/>to<sp/>www.google.com</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;i&lt;(int)strlen((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)name);i++)</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p=name[i];</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(j=0;j&lt;(int)p;j++)</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name[i]=name[i+1];</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i=i+1;</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name[i]=</highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>name[i-1]=</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//remove<sp/>the<sp/>last<sp/>dot</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>name;</highlight></codeline>
-<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97" refid="main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv)</highlight></codeline>
-<codeline lineno="98"><highlight class="normal">{<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Senergy::ByteBuffer<sp/>buffer;</highlight></codeline>
-<codeline lineno="100"><highlight class="comment"><sp/><sp/><sp/><sp/>Senergy::Dns::Message<sp/>dns_message;</highlight></codeline>
-<codeline lineno="101"><highlight class="comment"></highlight></codeline>
-<codeline lineno="102"><highlight class="comment"><sp/><sp/><sp/><sp/>dns_message.Header.Dump();</highlight></codeline>
-<codeline lineno="103"><highlight class="comment"><sp/><sp/><sp/><sp/>printf(&quot;\n&quot;);</highlight></codeline>
-<codeline lineno="104"><highlight class="comment"><sp/><sp/><sp/><sp/>dns_message.Serialize(buffer);</highlight></codeline>
-<codeline lineno="105"><highlight class="comment"></highlight></codeline>
-<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/><sp/>buffer.SetPosition(0);</highlight></codeline>
-<codeline lineno="107"><highlight class="comment"></highlight></codeline>
-<codeline lineno="108"><highlight class="comment"><sp/><sp/><sp/><sp/>dns_message.Deserialize(buffer);</highlight></codeline>
-<codeline lineno="109"><highlight class="comment"><sp/><sp/><sp/><sp/>dns_message.Header.Dump();</highlight></codeline>
-<codeline lineno="110"><highlight class="comment"><sp/><sp/><sp/><sp/>printf(&quot;\n&quot;);*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_socket" kindref="compound">Senergy::Socket</ref><sp/>socket(<ref refid="class_senergy_1_1_socket_1ad400245278746ac26e261bdda171c178af5ef036b4d8b630721e51fe23489fbc9" kindref="member">Senergy::Socket::SocketProtocol::UDP</ref>);</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>socket.<ref refid="class_senergy_1_1_socket_1a7ca3e4fb2e2f216773498e6f29e9ea14" kindref="member">SetTimeout</ref>(9999);</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>socket.<ref refid="class_senergy_1_1_socket_1a9f2cfa080e3a5f365b52cc5fff94eb74" kindref="member">Listen</ref>(53);</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_byte_buffer" kindref="compound">Senergy::ByteBuffer</ref><sp/>receive_buffer;</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bytes_received<sp/>=<sp/>socket.<ref refid="class_senergy_1_1_socket_1a7045f756d3c542ee1187a92ca13fa232" kindref="member">Receive</ref>(receive_buffer,<sp/>1024);</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(bytes_received<sp/>&lt;<sp/>0)</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(socket.<ref refid="class_senergy_1_1_socket_1a403f7a2f6c5a94d4b14f73f0965da061" kindref="member">GetErrorCode</ref>()<sp/>!=<sp/><ref refid="namespace_senergy_1_1_socket_error_1aa78be48fe668e1748c69b145a3c3fe16" kindref="member">Senergy::SocketError::Timeout</ref>)</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error:<sp/>socket<sp/>error<sp/>%i\n&quot;</highlight><highlight class="normal">,<sp/>socket.<ref refid="class_senergy_1_1_socket_1a403f7a2f6c5a94d4b14f73f0965da061" kindref="member">GetErrorCode</ref>());</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"></highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Received<sp/>from:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>socket.<ref refid="class_senergy_1_1_socket_1aaab6b46c9e2733982df87eefb0fc77a2" kindref="member">GetRemoteHost</ref>().c_str());</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>receive_buffer.<ref refid="class_senergy_1_1_byte_buffer_1a13dd8a2eec8b93ac224f0da614c7f6f8" kindref="member">SetPosition</ref>(0);</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_dns_1_1_message" kindref="compound">Senergy::Dns::Message</ref><sp/>dns_message;</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!dns_message.<ref refid="class_senergy_1_1_dns_1_1_message_1a3857764a799ab123405420345f9b03ee" kindref="member">Deserialize</ref>(receive_buffer))</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Deserialization<sp/>failed!\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"></highlight></codeline>
-<codeline lineno="138"><highlight class="normal"></highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dns_message.<ref refid="class_senergy_1_1_dns_1_1_message_1a0c9ed7b89b18762ae55c3bd53278126f" kindref="member">Header</ref>.<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a8af9bbfa134c9e0d4fc846103f7b72ad" kindref="member">QuestionCount</ref>;<sp/>++i)</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>remaining_bytes<sp/>=<sp/>receive_buffer.<ref refid="class_senergy_1_1_byte_buffer_1a22be2d9d356958c4cf352bc31edb1735" kindref="member">Size</ref>()<sp/>-<sp/>receive_buffer.<ref refid="class_senergy_1_1_byte_buffer_1a286e096451b62a14a8d645e1c9da62af" kindref="member">GetPosition</ref>();</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*remaining<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)malloc(remaining_bytes);</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"></highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Questions:<sp/>%hu\n&quot;</highlight><highlight class="normal">,<sp/>dns_message.<ref refid="class_senergy_1_1_dns_1_1_message_1a0c9ed7b89b18762ae55c3bd53278126f" kindref="member">Header</ref>.<ref refid="class_senergy_1_1_dns_1_1_message_header_1a014c173ce2b2c5bb06ae9e5d0e201159" kindref="member">Fields</ref>.<ref refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a8af9bbfa134c9e0d4fc846103f7b72ad" kindref="member">QuestionCount</ref>);</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!receive_buffer.<ref refid="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" kindref="member">Read</ref>(remaining,<sp/>remaining_bytes))</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error:<sp/>failed<sp/>to<sp/>read<sp/>name\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(remaining);</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"></highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>name_len<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name<sp/>=<sp/><ref refid="main_8cpp_1a1390696935c0b2a9bdebc396feef9688" kindref="member">ReadName</ref>((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)remaining,<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)remaining,<sp/>&amp;name_len);</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Question<sp/>for:<sp/>%s\n\n&quot;</highlight><highlight class="normal">,<sp/>name);</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"></highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//printf(&quot;%s\n&quot;,<sp/>receive_buffer.ReadAll().c_str());<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25" refid="main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_socket" kindref="compound">Senergy::Socket</ref><sp/>socket(<ref refid="class_senergy_1_1_socket_1ad400245278746ac26e261bdda171c178af5ef036b4d8b630721e51fe23489fbc9" kindref="member">Senergy::Socket::SocketProtocol::UDP</ref>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>socket.<ref refid="class_senergy_1_1_socket_1a7ca3e4fb2e2f216773498e6f29e9ea14" kindref="member">SetTimeout</ref>(2000);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!socket.<ref refid="class_senergy_1_1_socket_1a9f2cfa080e3a5f365b52cc5fff94eb74" kindref="member">Listen</ref>(53))</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error:<sp/>Unable<sp/>to<sp/>start<sp/>listening<sp/>on<sp/>port<sp/>53\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Info:<sp/>Listening<sp/>on<sp/>port<sp/>53\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_byte_buffer" kindref="compound">Senergy::ByteBuffer</ref><sp/>receive_buffer;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bytes_received<sp/>=<sp/>socket.<ref refid="class_senergy_1_1_socket_1a7045f756d3c542ee1187a92ca13fa232" kindref="member">Receive</ref>(receive_buffer,<sp/>1024);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(bytes_received<sp/>&lt;=<sp/>0)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(socket.<ref refid="class_senergy_1_1_socket_1a403f7a2f6c5a94d4b14f73f0965da061" kindref="member">GetErrorCode</ref>()<sp/>!=<sp/><ref refid="namespace_senergy_1_1_socket_error_1aa78be48fe668e1748c69b145a3c3fe16" kindref="member">Senergy::SocketError::Timeout</ref>)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error:<sp/>During<sp/>receiving<sp/>a<sp/>socket<sp/>error<sp/>occured:<sp/>%i\n\n&quot;</highlight><highlight class="normal">,<sp/>socket.<ref refid="class_senergy_1_1_socket_1a403f7a2f6c5a94d4b14f73f0965da061" kindref="member">GetErrorCode</ref>());</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>receive_buffer.<ref refid="class_senergy_1_1_byte_buffer_1a13dd8a2eec8b93ac224f0da614c7f6f8" kindref="member">SetPosition</ref>(0);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Info:<sp/>received<sp/>message<sp/>from:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>socket.<ref refid="class_senergy_1_1_socket_1aaab6b46c9e2733982df87eefb0fc77a2" kindref="member">GetRemoteHost</ref>().c_str());</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_dns_1_1_message" kindref="compound">Senergy::Dns::Message</ref><sp/>dns_message;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!dns_message.Deserialize(receive_buffer))</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error:<sp/>unable<sp/>to<sp/>deserialize<sp/>message\n\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>question_count<sp/>=<sp/>(int)dns_message.Questions.size();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(question_count<sp/>&lt;=<sp/>0)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error:<sp/>did<sp/>not<sp/>receive<sp/>any<sp/>questions\n\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Info:<sp/>received<sp/>%i<sp/>questions\n&quot;</highlight><highlight class="normal">,<sp/>question_count);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>question_count;<sp/>i++)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>requested_hostname<sp/>=<sp/>dns_message.Questions[i]-&gt;GetHostname();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Info:<sp/>received<sp/>question<sp/>for<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>requested_hostname.c_str());</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/photonios/Documents/Senergy/src/main.cpp"/>
   </compounddef>

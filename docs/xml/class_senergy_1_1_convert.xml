@@ -30,14 +30,41 @@
         </inbodydescription>
         <location file="/home/photonios/Documents/Senergy/src/senergy/convert.h" line="50" column="1" bodyfile="/home/photonios/Documents/Senergy/src/convert.cpp" bodystart="27" bodyend="37"/>
       </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_convert_1a66c09e2b461268212cc384e71a2f57c6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char Senergy::Convert::ToChar</definition>
+        <argsstring>(int value)</argsstring>
+        <name>ToChar</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Converts the specified integer value to a character. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer value to convert to a character.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The specified integer value as a character. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/convert.h" line="59" column="1" bodyfile="/home/photonios/Documents/Senergy/src/convert.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A simple conversion class, which simplifies conversion between various native data types. Based on the idea of the &apos;<ref refid="class_senergy_1_1_convert" kindref="compound">Convert</ref>&apos; class in the .NET framework. </para>    </briefdescription>
     <detaileddescription>
 <para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/convert.h" line="41" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/convert.h" bodystart="40" bodyend="51"/>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/convert.h" line="41" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/convert.h" bodystart="40" bodyend="60"/>
     <listofallmembers>
+      <member refid="class_senergy_1_1_convert_1a66c09e2b461268212cc384e71a2f57c6" prot="public" virt="non-virtual"><scope>Senergy::Convert</scope><name>ToChar</name></member>
       <member refid="class_senergy_1_1_convert_1a80cf7b84b0ff65171da68ca40cbf817f" prot="public" virt="non-virtual"><scope>Senergy::Convert</scope><name>ToString</name></member>
     </listofallmembers>
   </compounddef>

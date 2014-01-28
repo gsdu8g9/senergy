@@ -17,9 +17,19 @@ Contains simple utilities that facilitate printing various data types or data st
 .ti -1c
 .RI "static void \fBHexadecimal\fP (char *data, int size)"
 .br
-.RI "\fIPrints the specified char array of the specified string, byte by byte where each byte is shown in it's hexadecimal representation\&. Followed by a new-line character (
+.RI "\fIPrints the specified char array, byte by byte where each byte is shown in it's hexadecimal representation\&. Followed by a new-line character (
 .br
 )\&. \fP"
+.ti -1c
+.RI "static void \fBHexadecimal\fP (const std::string &data)"
+.br
+.RI "\fIPrints the specified string, byte by byte where each byte is shown in it's hexadecimal representation\&. Followed by a new-line character (
+.br
+)\&. \fP"
+.ti -1c
+.RI "static void \fBHexadecimal\fP (char character)"
+.br
+.RI "\fIPrints the specified character in it's hexadecimal notation, followed by a new-line character\&. \fP"
 .ti -1c
 .RI "static void \fBInteger\fP (int value)"
 .br
@@ -38,13 +48,13 @@ Swen Kooij (Photonios)
 .PP
 
 .PP
-Definition at line 36 of file print\&.h\&.
+Definition at line 37 of file print\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void Senergy::Print::Hexadecimal (char *data, intsize)\fC [static]\fP"
 
 .PP
-Prints the specified char array of the specified string, byte by byte where each byte is shown in it's hexadecimal representation\&. Followed by a new-line character (
+Prints the specified char array, byte by byte where each byte is shown in it's hexadecimal representation\&. Followed by a new-line character (
 .br
 )\&. 
 .PP
@@ -58,6 +68,34 @@ Prints the specified char array of the specified string, byte by byte where each
 
 .PP
 Definition at line 27 of file print\&.cpp\&.
+.SS "void Senergy::Print::Hexadecimal (const std::string &data)\fC [static]\fP"
+
+.PP
+Prints the specified string, byte by byte where each byte is shown in it's hexadecimal representation\&. Followed by a new-line character (
+.br
+)\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP The data to print hexadecimal\&. 
+.RE
+.PP
+
+.PP
+Definition at line 35 of file print\&.cpp\&.
+.SS "void Senergy::Print::Hexadecimal (charcharacter)\fC [static]\fP"
+
+.PP
+Prints the specified character in it's hexadecimal notation, followed by a new-line character\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP The data to print hexadecimal\&. 
+.RE
+.PP
+
+.PP
+Definition at line 44 of file print\&.cpp\&.
 .SS "void Senergy::Print::Integer (intvalue)\fC [static]\fP"
 
 .PP
@@ -70,7 +108,7 @@ Prints the specified integer value to the screen, followed by a new-line charact
 .PP
 
 .PP
-Definition at line 35 of file print\&.cpp\&.
+Definition at line 49 of file print\&.cpp\&.
 
 .SH "Author"
 .PP 

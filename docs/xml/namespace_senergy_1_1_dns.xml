@@ -5,7 +5,37 @@
     <innerclass refid="class_senergy_1_1_dns_1_1_message" prot="public">Senergy::Dns::Message</innerclass>
     <innerclass refid="struct_senergy_1_1_dns_1_1_message_header_fields" prot="public">Senergy::Dns::MessageHeaderFields</innerclass>
     <innerclass refid="class_senergy_1_1_dns_1_1_message_header" prot="public">Senergy::Dns::MessageHeader</innerclass>
+    <innerclass refid="struct_senergy_1_1_dns_1_1_message_question_fields" prot="public">Senergy::Dns::MessageQuestionFields</innerclass>
+    <innerclass refid="class_senergy_1_1_dns_1_1_message_question" prot="public">Senergy::Dns::MessageQuestion</innerclass>
     <innerclass refid="class_senergy_1_1_dns_1_1_root_name_server" prot="public">Senergy::Dns::RootNameServer</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespace_senergy_1_1_dns_1a425a2a6f3b5c18973c524a99bdfa4ef0" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="class_senergy_1_1_dns_1_1_message_question" kindref="compound">MessageQuestion</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;MessageQuestion&gt; Senergy::Dns::MessageQuestionPtr</definition>
+        <argsstring></argsstring>
+        <name>MessageQuestionPtr</name>
+        <briefdescription>
+<para>Simple typedef for a shared pointer to a <ref refid="class_senergy_1_1_dns_1_1_message_question" kindref="compound">MessageQuestion</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="159" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespace_senergy_1_1_dns_1a76982150ca0b86c08d888f3e3e805747" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="namespace_senergy_1_1_dns_1a425a2a6f3b5c18973c524a99bdfa4ef0" kindref="member">MessageQuestionPtr</ref> &gt;</type>
+        <definition>typedef std::vector&lt;MessageQuestionPtr&gt; Senergy::Dns::MessageQuestionPtrVector</definition>
+        <argsstring></argsstring>
+        <name>MessageQuestionPtrVector</name>
+        <briefdescription>
+<para>Simple typedef for a vector of <ref refid="class_senergy_1_1_dns_1_1_message_question" kindref="compound">MessageQuestion</ref> smart pointers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="164" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
