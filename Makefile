@@ -28,6 +28,10 @@ all:
 docs: .FORCE
 	doxygen docs/Doxyfile
 
+commit: .FORCE
+	$(INVOKE) docs
+	git gui
+
 .FORCE:
 
 .DEFAULT:
