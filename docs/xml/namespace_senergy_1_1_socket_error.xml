@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_senergy_1_1_socket_error" kind="namespace">
+    <compoundname>Senergy::SocketError</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_senergy_1_1_socket_error_1aa78be48fe668e1748c69b145a3c3fe16" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Senergy::SocketError::Timeout</definition>
+        <argsstring></argsstring>
+        <name>Timeout</name>
+        <initializer>= 9</initializer>
+        <briefdescription>
+<para>Thrown when a socket operation (receing/binding/sending/connecting) times out. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="53" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines possible errors that can occur within the <ref refid="class_senergy_1_1_socket" kindref="compound">Socket</ref> class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="49" column="1"/>
+  </compounddef>
+</doxygen>

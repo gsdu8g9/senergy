@@ -13,6 +13,7 @@ var searchData=
   ['socket',['Socket',['../class_senergy_1_1_socket.html#a6fcb47adc585aa2bb5d3d81a5e5b22e1',1,'Senergy::Socket::Socket(SocketProtocol protocol)'],['../class_senergy_1_1_socket.html#ad287e0ea5d32febd95ed7ba590d9e08d',1,'Senergy::Socket::Socket(const Socket &amp;socket)'],['../class_senergy_1_1_socket.html#ad6ac199d691bbbb3915c375900a11ca7',1,'Senergy::Socket::Socket(SocketProtocol protocol, int native_socket, struct sockaddr_in remote_address)']]],
   ['socket_2ecpp',['socket.cpp',['../socket_8cpp.html',1,'']]],
   ['socket_2eh',['socket.h',['../socket_8h.html',1,'']]],
+  ['socketerror',['SocketError',['../namespace_senergy_1_1_socket_error.html',1,'Senergy']]],
   ['socketprotocol',['SocketProtocol',['../class_senergy_1_1_socket.html#ad400245278746ac26e261bdda171c178',1,'Senergy::Socket']]],
   ['socketptr',['SocketPtr',['../class_senergy_1_1_socket.html#ac9ff20ce80df2d0c2900cd0940ffe860',1,'Senergy::Socket::SocketPtr()'],['../namespace_senergy.html#a9014e48a368555ba932efd8d17eb2d23',1,'Senergy::SocketPtr()']]],
   ['socketrole',['SocketRole',['../class_senergy_1_1_socket.html#ad82ad4c4412684091e687b92641bfbe9',1,'Senergy::Socket']]],

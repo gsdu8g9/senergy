@@ -136,6 +136,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab443595ff8e11a828022f0cc5f3f6fbe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_message_header.html#ab443595ff8e11a828022f0cc5f3f6fbe">Serialize</a> (<a class="el" href="class_senergy_1_1_byte_buffer.html">ByteBuffer</a> &amp;buffer)</td></tr>
 <tr class="memdesc:ab443595ff8e11a828022f0cc5f3f6fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes this instance into the specified buffer, ready for transmission.  <a href="#ab443595ff8e11a828022f0cc5f3f6fbe">More...</a><br/></td></tr>
 <tr class="separator:ab443595ff8e11a828022f0cc5f3f6fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54b75c73f901b0fc7cf21bed6391aa4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_message_header.html#a54b75c73f901b0fc7cf21bed6391aa4e">Dump</a> ()</td></tr>
+<tr class="memdesc:a54b75c73f901b0fc7cf21bed6391aa4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dumps all fields and their values to the standard output in the following format:  <a href="#a54b75c73f901b0fc7cf21bed6391aa4e">More...</a><br/></td></tr>
+<tr class="separator:a54b75c73f901b0fc7cf21bed6391aa4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -151,7 +154,7 @@ Public Attributes</h2></td></tr>
 <a href="http://www.ietf.org/rfc/rfc1035.txt">http://www.ietf.org/rfc/rfc1035.txt</a></dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Swen Kooij (Photonios) </dd></dl>
 
-<p>Definition at line <a class="el" href="message__header_8h_source.html#l00215">215</a> of file <a class="el" href="message__header_8h_source.html">message_header.h</a>.</p>
+<p>Definition at line <a class="el" href="message__header_8h_source.html#l00216">216</a> of file <a class="el" href="message__header_8h_source.html">message_header.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa103a12edc759b885f57728c091a84eb"></a>
 <div class="memitem">
@@ -199,7 +202,26 @@ Using this will advance the position of the specified <a class="el" href="class_
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A boolean indicating whether deserialization was succesfull. True is returned when it was a success and false is returned when it failed. </dd></dl>
 
-<p>Definition at line <a class="el" href="message__header_8cpp_source.html#l00038">38</a> of file <a class="el" href="message__header_8cpp_source.html">message_header.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message__header_8cpp_source.html#l00042">42</a> of file <a class="el" href="message__header_8cpp_source.html">message_header.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a54b75c73f901b0fc7cf21bed6391aa4e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Senergy::Dns::MessageHeader::Dump </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dumps all fields and their values to the standard output in the following format: </p>
+
+<p>Definition at line <a class="el" href="message__header_8cpp_source.html#l00088">88</a> of file <a class="el" href="message__header_8cpp_source.html">message_header.cpp</a>.</p>
 
 </div>
 </div>
@@ -219,7 +241,7 @@ Using this will advance the position of the specified <a class="el" href="class_
 <p>Gets the size of a DNS packet header. This is almost constant as long as the <a class="el" href="struct_senergy_1_1_dns_1_1_message_header_fields.html" title="Defines the fields within a DNS packet header, as described in section 4.1 of RFC-1035. This data structure is used as the &quot;Fields&quot; member/property of the MessageHeader class, and serves as the container of the actual data. ">MessageHeaderFields</a> structure doesn't change. </p>
 <dl class="section return"><dt>Returns</dt><dd>The size of a <a class="el" href="struct_senergy_1_1_dns_1_1_message_header_fields.html" title="Defines the fields within a DNS packet header, as described in section 4.1 of RFC-1035. This data structure is used as the &quot;Fields&quot; member/property of the MessageHeader class, and serves as the container of the actual data. ">MessageHeaderFields</a> structure, the size of a DNS packet header. </dd></dl>
 
-<p>Definition at line <a class="el" href="message__header_8cpp_source.html#l00033">33</a> of file <a class="el" href="message__header_8cpp_source.html">message_header.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message__header_8cpp_source.html#l00037">37</a> of file <a class="el" href="message__header_8cpp_source.html">message_header.cpp</a>.</p>
 
 </div>
 </div>
@@ -247,7 +269,7 @@ Using this will advance the position of the specified <a class="el" href="class_
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A boolean indicating whether serialization was sucessful. True is returned when seralization suceseeded and false is returned when it failed. </dd></dl>
 
-<p>Definition at line <a class="el" href="message__header_8cpp_source.html#l00052">52</a> of file <a class="el" href="message__header_8cpp_source.html">message_header.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message__header_8cpp_source.html#l00056">56</a> of file <a class="el" href="message__header_8cpp_source.html">message_header.cpp</a>.</p>
 
 </div>
 </div>
@@ -264,7 +286,7 @@ Using this will advance the position of the specified <a class="el" href="class_
 
 <p>The fields that are part of a DNS packet header. See <a class="el" href="struct_senergy_1_1_dns_1_1_message_header_fields.html" title="Defines the fields within a DNS packet header, as described in section 4.1 of RFC-1035. This data structure is used as the &quot;Fields&quot; member/property of the MessageHeader class, and serves as the container of the actual data. ">MessageHeaderFields</a> for a complete list. This contains the actual data that is transmitted and received. </p>
 
-<p>Definition at line <a class="el" href="message__header_8h_source.html#l00273">273</a> of file <a class="el" href="message__header_8h_source.html">message_header.h</a>.</p>
+<p>Definition at line <a class="el" href="message__header_8h_source.html#l00282">282</a> of file <a class="el" href="message__header_8h_source.html">message_header.h</a>.</p>
 
 </div>
 </div>
@@ -278,7 +300,7 @@ Using this will advance the position of the specified <a class="el" href="class_
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_senergy.html">Senergy</a></li><li class="navelem"><a class="el" href="namespace_senergy_1_1_dns.html">Dns</a></li><li class="navelem"><a class="el" href="class_senergy_1_1_dns_1_1_message_header.html">MessageHeader</a></li>
-    <li class="footer">Generated on Tue Jan 28 2014 15:36:18 for Senergy by
+    <li class="footer">Generated on Tue Jan 28 2014 17:05:40 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

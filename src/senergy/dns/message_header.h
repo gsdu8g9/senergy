@@ -23,6 +23,7 @@
 #define SY_DNS_MESSAGE_HEADER_H
 
 #include <senergy/bytebuffer.h>
+#include <cstdio>
 
 #ifdef _WIN32
 	#include <winsock2.h>
@@ -264,6 +265,14 @@ public:
 	 */
 	bool Serialize(ByteBuffer &buffer);
 
+	/*!
+ 	 * \brief Dumps all fields and their values to the standard output in the following
+	 *		  format:
+	 *	 
+	 *		  [field name]: [field_value]\n
+	 */
+	void Dump();
+
 public:
 	/*!
  	 * \brief The fields that are part of a DNS packet header. See MessageHeaderFields
@@ -275,6 +284,9 @@ public:
 private:
 	// Converts all fields from host to network byte order
 	void __host_to_network_byte_order();
+
+	// Converts all fields from network to host byte order
+	void __network_to_host_byte_order();
 };
 
 } // namespace Dns

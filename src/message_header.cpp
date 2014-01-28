@@ -28,6 +28,10 @@ namespace Dns
 
 MessageHeader::MessageHeader()
 {
+	this->Fields.QuestionCount = 0;
+	this->Fields.AnswerCount = 0;
+	this->Fields.NameServerCount = 0;
+	this->Fields.AdditionalCount = 0;
 }
 
 int MessageHeader::GetSize()
@@ -45,7 +49,7 @@ bool MessageHeader::Deserialize(ByteBuffer &buffer)
 	if(!buffer.Read((char*)&this->Fields, header_size))
 		return false;
 
-	__host_to_network_byte_order();
+	__network_to_host_byte_order();
 	return true;
 }
 
@@ -66,20 +70,38 @@ bool MessageHeader::Serialize(ByteBuffer &buffer)
 void MessageHeader::__host_to_network_byte_order()
 {
 	this->Fields.Id 				= htons(this->Fields.Id);
-	this->Fields.RecursionDesired 	= htons(this->Fields.RecursionDesired);
-	this->Fields.Truncation 		= htons(this->Fields.Truncation);
-	this->Fields.Authoritative 		= htons(this->Fields.Authoritative);
-	this->Fields.Opcode 			= htons(this->Fields.Opcode);
-	this->Fields.IsResponse 		= htons(this->Fields.IsResponse);
-	this->Fields.ResponseCode 		= htons(this->Fields.ResponseCode);
-	this->Fields.CheckingDisabled 	= htons(this->Fields.CheckingDisabled);
-	this->Fields.AuthenticatedData 	= htons(this->Fields.AuthenticatedData);
-	this->Fields.Reserved 			= htons(this->Fields.Reserved);
-	this->Fields.RecursionAvailable = htons(this->Fields.RecursionAvailable);
 	this->Fields.QuestionCount 		= htons(this->Fields.QuestionCount);
 	this->Fields.AnswerCount 		= htons(this->Fields.AnswerCount);
 	this->Fields.NameServerCount 	= htons(this->Fields.NameServerCount);
 	this->Fields.AdditionalCount 	= htons(this->Fields.AdditionalCount);
+}
+
+void MessageHeader::__network_to_host_byte_order()
+{
+	this->Fields.Id 				= ntohs(this->Fields.Id);
+	this->Fields.QuestionCount 		= ntohs(this->Fields.QuestionCount);
+	this->Fields.AnswerCount 		= ntohs(this->Fields.AnswerCount);
+	this->Fields.NameServerCount 	= ntohs(this->Fields.NameServerCount);
+	this->Fields.AdditionalCount 	= ntohs(this->Fields.AdditionalCount);
+}
+
+void MessageHeader::Dump()
+{
+	printf("Id: %hu\n", this->Fields.Id);
+	printf("RecursionDesired: %hu\n", this->Fields.RecursionDesired);
+	printf("Truncation: %u\n", this->Fields.Truncation);
+	printf("Authoritative: %u\n", this->Fields.Authoritative);
+	printf("Opcode: %u\n", this->Fields.Opcode);
+	printf("IsResponse: %u\n", this->Fields.IsResponse);
+	printf("ResponseCode: %u\n", this->Fields.ResponseCode);
+	printf("CheckingDisabled: %u\n", this->Fields.CheckingDisabled);
+	printf("AuthenticatedData: %u\n", this->Fields.AuthenticatedData);
+	printf("Reserved: %u\n", this->Fields.Reserved);
+	printf("RecursionAvailable: %u\n",this->Fields.RecursionAvailable);
+	printf("QuestionCount: %hu\n", this->Fields.QuestionCount);
+	printf("AnswerCount: %hu\n", this->Fields.AnswerCount);
+	printf("NameServerCount: %hu\n", this->Fields.NameServerCount);
+	printf("AdditionalCount: %hu\n", this->Fields.AdditionalCount);
 }
 
 } // namespace Dns

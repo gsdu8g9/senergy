@@ -73,7 +73,9 @@
     <member refid="class_senergy_1_1_dns_1_1_message_header_1aa54f3864838fe22a4406e0c52a90a010" kind="function"><name>Deserialize</name></member>
     <member refid="class_senergy_1_1_dns_1_1_message_header_1a69f4475bc3153926dbb011f37cbbfea9" kind="function"><name>GetSize</name></member>
     <member refid="class_senergy_1_1_dns_1_1_message_header_1ab443595ff8e11a828022f0cc5f3f6fbe" kind="function"><name>Serialize</name></member>
+    <member refid="class_senergy_1_1_dns_1_1_message_header_1a54b75c73f901b0fc7cf21bed6391aa4e" kind="function"><name>Dump</name></member>
     <member refid="class_senergy_1_1_dns_1_1_message_header_1a02c88dc51e95e5706d2e2ff5c701a6a1" kind="function"><name>__host_to_network_byte_order</name></member>
+    <member refid="class_senergy_1_1_dns_1_1_message_header_1a57e08763dc105e435695e8e82042a9a2" kind="function"><name>__network_to_host_byte_order</name></member>
   </compound>
   <compound refid="struct_senergy_1_1_dns_1_1_message_header_fields" kind="struct"><name>Senergy::Dns::MessageHeaderFields</name>
     <member refid="struct_senergy_1_1_dns_1_1_message_header_fields_1ab423a1e91fecd6ad2ec36a4bdafd5c2b" kind="variable"><name>Id</name></member>
@@ -151,6 +153,9 @@
     <member refid="namespace_senergy_1a9014e48a368555ba932efd8d17eb2d23" kind="typedef"><name>SocketPtr</name></member>
   </compound>
   <compound refid="namespace_senergy_1_1_dns" kind="namespace"><name>Senergy::Dns</name>
+  </compound>
+  <compound refid="namespace_senergy_1_1_socket_error" kind="namespace"><name>Senergy::SocketError</name>
+    <member refid="namespace_senergy_1_1_socket_error_1aa78be48fe668e1748c69b145a3c3fe16" kind="variable"><name>Timeout</name></member>
   </compound>
   <compound refid="building_8dox" kind="file"><name>building.dox</name>
   </compound>

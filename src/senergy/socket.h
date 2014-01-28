@@ -43,6 +43,17 @@ namespace Senergy
 {
 
 /*!
+ * \brief Defines possible errors that can occur within the Socket class.
+ */
+namespace SocketError
+{
+	/*!
+ 	 * \brief Thrown when a socket operation (receing/binding/sending/connecting) times out.
+	 */
+	const static int Timeout = 9;
+} // namespace SocketError
+
+/*!
  * \brief Provides an object-oriented interface for Berkely (BSD) sockets.
  *		  Can act both as a server as well as a client. The main purpose of this class
  *		  class is to provide a more C++ like interface for TCP sockets. 

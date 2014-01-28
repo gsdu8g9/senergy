@@ -20,7 +20,9 @@ bool \hyperlink{class_senergy_1_1_dns_1_1_message_header_aa54f3864838fe22a4406e0
 int \hyperlink{class_senergy_1_1_dns_1_1_message_header_a69f4475bc3153926dbb011f37cbbfea9}{Get\-Size} ()
 \begin{DoxyCompactList}\small\item\em Gets the size of a D\-N\-S packet header. This is almost constant as long as the \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields}{Message\-Header\-Fields} structure doesn't change. \end{DoxyCompactList}\item 
 bool \hyperlink{class_senergy_1_1_dns_1_1_message_header_ab443595ff8e11a828022f0cc5f3f6fbe}{Serialize} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
-\begin{DoxyCompactList}\small\item\em Serializes this instance into the specified buffer, ready for transmission. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Serializes this instance into the specified buffer, ready for transmission. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_dns_1_1_message_header_a54b75c73f901b0fc7cf21bed6391aa4e}{Dump} ()
+\begin{DoxyCompactList}\small\item\em Dumps all fields and their values to the standard output in the following format\-: \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -44,7 +46,7 @@ Swen Kooij (Photonios)
 \end{DoxyAuthor}
 
 
-Definition at line 215 of file message\-\_\-header.\-h.
+Definition at line 216 of file message\-\_\-header.\-h.
 
 
 
@@ -93,7 +95,22 @@ A boolean indicating whether deserialization was succesfull. True is returned wh
 \end{DoxyReturn}
 
 
-Definition at line 38 of file message\-\_\-header.\-cpp.
+Definition at line 42 of file message\-\_\-header.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_message_header_a54b75c73f901b0fc7cf21bed6391aa4e}{\index{Senergy\-::\-Dns\-::\-Message\-Header@{Senergy\-::\-Dns\-::\-Message\-Header}!Dump@{Dump}}
+\index{Dump@{Dump}!Senergy::Dns::MessageHeader@{Senergy\-::\-Dns\-::\-Message\-Header}}
+\subsubsection[{Dump}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Dns\-::\-Message\-Header\-::\-Dump (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_message_header_a54b75c73f901b0fc7cf21bed6391aa4e}
+
+
+Dumps all fields and their values to the standard output in the following format\-: 
+
+
+
+Definition at line 88 of file message\-\_\-header.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_message_header_a69f4475bc3153926dbb011f37cbbfea9}{\index{Senergy\-::\-Dns\-::\-Message\-Header@{Senergy\-::\-Dns\-::\-Message\-Header}!Get\-Size@{Get\-Size}}
 \index{Get\-Size@{Get\-Size}!Senergy::Dns::MessageHeader@{Senergy\-::\-Dns\-::\-Message\-Header}}
@@ -111,7 +128,7 @@ The size of a \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields}{Messa
 \end{DoxyReturn}
 
 
-Definition at line 33 of file message\-\_\-header.\-cpp.
+Definition at line 37 of file message\-\_\-header.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_message_header_ab443595ff8e11a828022f0cc5f3f6fbe}{\index{Senergy\-::\-Dns\-::\-Message\-Header@{Senergy\-::\-Dns\-::\-Message\-Header}!Serialize@{Serialize}}
 \index{Serialize@{Serialize}!Senergy::Dns::MessageHeader@{Senergy\-::\-Dns\-::\-Message\-Header}}
@@ -137,7 +154,7 @@ A boolean indicating whether serialization was sucessful. True is returned when 
 \end{DoxyReturn}
 
 
-Definition at line 52 of file message\-\_\-header.\-cpp.
+Definition at line 56 of file message\-\_\-header.\-cpp.
 
 
 
@@ -151,7 +168,7 @@ The fields that are part of a D\-N\-S packet header. See \hyperlink{struct_sener
 
 
 
-Definition at line 273 of file message\-\_\-header.\-h.
+Definition at line 282 of file message\-\_\-header.\-h.
 
 
 

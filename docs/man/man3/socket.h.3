@@ -41,6 +41,10 @@ src/senergy/socket.h \-
 .ti -1c
 .RI "\fBSenergy\fP"
 .br
+.ti -1c
+.RI "\fBSenergy::SocketError\fP"
+.br
+.RI "\fIDefines possible errors that can occur within the \fBSocket\fP class\&. \fP"
 .in -1c
 .SS "Typedefs"
 
@@ -49,6 +53,14 @@ src/senergy/socket.h \-
 .RI "typedef std::shared_ptr< Socket > \fBSenergy::SocketPtr\fP"
 .br
 .RI "\fIA simple typedef for the shared pointer of a TcpSocket instance\&. \fP"
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static const int \fBSenergy::SocketError::Timeout\fP = 9"
+.br
+.RI "\fIThrown when a socket operation (receing/binding/sending/connecting) times out\&. \fP"
 .in -1c
 .SH "Author"
 .PP 

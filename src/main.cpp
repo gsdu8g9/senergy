@@ -96,6 +96,19 @@ unsigned char* ReadName(unsigned char* reader,unsigned char* buffer,int* count)
 
 int main(int argc, char **argv)
 {	
+	/*Senergy::ByteBuffer buffer;
+	Senergy::Dns::Message dns_message;
+
+	dns_message.Header.Dump();
+	printf("\n");
+	dns_message.Serialize(buffer);
+
+	buffer.SetPosition(0);
+
+	dns_message.Deserialize(buffer);
+	dns_message.Header.Dump();
+	printf("\n");*/
+
 	Senergy::Socket socket(Senergy::Socket::SocketProtocol::UDP);
 	
 	socket.SetTimeout(9999);
@@ -107,7 +120,7 @@ int main(int argc, char **argv)
 		int bytes_received = socket.Receive(receive_buffer, 1024);
 		if(bytes_received < 0)
 		{
-			if(socket.GetErrorCode() != 9)
+			if(socket.GetErrorCode() != Senergy::SocketError::Timeout)
 				printf("Error: socket error %i\n", socket.GetErrorCode());
 			continue;
 		}

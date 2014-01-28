@@ -7,6 +7,7 @@
     <innerclass refid="class_senergy_1_1_print" prot="public">Senergy::Print</innerclass>
     <innerclass refid="class_senergy_1_1_socket" prot="public">Senergy::Socket</innerclass>
     <innernamespace refid="namespace_senergy_1_1_dns">Senergy::Dns</innernamespace>
+    <innernamespace refid="namespace_senergy_1_1_socket_error">Senergy::SocketError</innernamespace>
       <sectiondef kind="typedef">
       <memberdef kind="typedef" id="namespace_senergy_1a30f5cfaeb333ffdf2c3332cc590a57ea" prot="public" static="no">
         <type>std::shared_ptr&lt; <ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> &gt;</type>
@@ -32,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="439" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="439" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="450" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="450" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

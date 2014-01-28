@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="67" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="66" bodyend="82"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="78" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="77" bodyend="93"/>
       </memberdef>
       <memberdef kind="enum" id="class_senergy_1_1_socket_1ad82ad4c4412684091e687b92641bfbe9" prot="public" static="no">
         <name>SocketRole</name>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="89" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="88" bodyend="101"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="100" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="99" bodyend="112"/>
       </memberdef>
       <memberdef kind="enum" id="class_senergy_1_1_socket_1ad400245278746ac26e261bdda171c178" prot="public" static="no">
         <name>SocketProtocol</name>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="107" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="106" bodyend="110"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="118" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="117" bodyend="121"/>
       </memberdef>
       <memberdef kind="typedef" id="class_senergy_1_1_socket_1ac9ff20ce80df2d0c2900cd0940ffe860" prot="public" static="no">
         <type>std::shared_ptr&lt; <ref refid="class_senergy_1_1_socket" kindref="compound">Socket</ref> &gt;</type>
@@ -100,7 +100,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="118" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="118" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="129" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="129" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -115,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="405" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="405" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="416" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="416" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_senergy_1_1_socket_1af5a7357eabdf1ed00c9c3c52def347af" prot="private" static="no" mutable="no">
         <type>unsigned int</type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="408" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="408" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="419" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="419" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_senergy_1_1_socket_1a93462ce0004128386f0f4f05f569d37e" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="411" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="411" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="422" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="422" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_senergy_1_1_socket_1a1ae0a64d0e4ad02f01106a6591a846ef" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -154,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="414" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="414" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="425" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="425" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_senergy_1_1_socket_1a464bf22d61640c34ae86f78f2b393ceb" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -167,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="417" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="417" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="428" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="428" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_senergy_1_1_socket_1ade29780721413965d913c408822036e4" prot="private" static="no" mutable="no">
         <type>struct sockaddr_in</type>
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="417" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="420" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="428" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="431" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_senergy_1_1_socket_1a0ef40f577e0fb6c1279a1da105769dc9" prot="private" static="no" mutable="no">
         <type>struct timeval</type>
@@ -193,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="417" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="424" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="428" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="435" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_senergy_1_1_socket_1aaaace880e043b8a79351b62c3d7f2083" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -206,7 +206,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="427" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="427" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="438" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="438" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_senergy_1_1_socket_1a1648f5eca31446c62baa03f0e4b0b366" prot="private" static="no" mutable="no">
         <type><ref refid="class_senergy_1_1_socket_1ad82ad4c4412684091e687b92641bfbe9" kindref="member">SocketRole</ref></type>
@@ -219,7 +219,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="430" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="430" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="441" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="441" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_senergy_1_1_socket_1a40e9fe058208a4c199d18258e766ca33" prot="private" static="no" mutable="no">
         <type><ref refid="class_senergy_1_1_socket_1ad400245278746ac26e261bdda171c178" kindref="member">SocketProtocol</ref></type>
@@ -232,7 +232,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="433" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="433" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="444" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="444" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -259,7 +259,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="131" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="27" bodyend="37"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="142" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="27" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1ad287e0ea5d32febd95ed7ba590d9e08d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -285,7 +285,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="145" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="39" bodyend="51"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="156" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="39" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1ad6ac199d691bbbb3915c375900a11ca7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -332,7 +332,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="163" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="53" bodyend="64"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="174" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="53" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1aaab6b46c9e2733982df87eefb0fc77a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -346,7 +346,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="178" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="66" bodyend="69"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="189" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="66" bodyend="69"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1a6d22575e6fc0d6ab4a61097d60b6e773" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -361,7 +361,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="193" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="71" bodyend="80"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="204" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="71" bodyend="80"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1a7ca3e4fb2e2f216773498e6f29e9ea14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -387,7 +387,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="207" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="82" bodyend="86"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="218" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="82" bodyend="86"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1a75946ce55f263abb105a22611819e11e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -425,7 +425,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="226" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="88" bodyend="106"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="237" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="88" bodyend="106"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1a9f2cfa080e3a5f365b52cc5fff94eb74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -452,7 +452,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="243" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="108" bodyend="133"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="254" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="108" bodyend="133"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1a859e2c4eec6792215f04363404658b0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -479,7 +479,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="256" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="135" bodyend="144"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="267" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="135" bodyend="144"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1a1407e054edc1fd012d8c85e563683947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -517,7 +517,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="272" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="146" bodyend="168"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="283" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="146" bodyend="168"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1a9ca07e0de8c6f74f27963f17c8b1398d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -555,7 +555,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="287" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="170" bodyend="176"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="298" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="170" bodyend="176"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1a72e1de4e0e3ef63bb020c62bea989fa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -582,7 +582,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="300" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="178" bodyend="181"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="311" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="178" bodyend="181"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1a7045f756d3c542ee1187a92ca13fa232" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -620,7 +620,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="318" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="183" bodyend="226"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="329" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="183" bodyend="226"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1a0c1510be39bef49de15e8647b64dbb5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -647,7 +647,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="331" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="228" bodyend="247"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="342" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="228" bodyend="247"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1aad6b0a1a9f7ac380b11b9ef814ada58b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -685,7 +685,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="348" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="249" bodyend="268"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="359" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="249" bodyend="268"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1abefda24a1a73b49e108a54342be0457e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_senergy_1_1_socket_1ac9ff20ce80df2d0c2900cd0940ffe860" kindref="member">SocketPtr</ref></type>
@@ -700,7 +700,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="360" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="270" bodyend="290"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="371" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="270" bodyend="290"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1a403f7a2f6c5a94d4b14f73f0965da061" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -714,7 +714,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="370" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="292" bodyend="295"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="381" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="292" bodyend="295"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -729,7 +729,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="374" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="297" bodyend="316"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="385" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="297" bodyend="316"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1a1500b42bc89e99121fe3e1f48cd235a2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -742,7 +742,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="378" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="318" bodyend="347"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="389" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="318" bodyend="347"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1a8dac439029bcdf60b95b813f3fde074f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -755,7 +755,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="382" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="349" bodyend="358"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="393" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="349" bodyend="358"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1a6edaed683233e8d1106921de37efe4d8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -768,7 +768,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="386" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="360" bodyend="366"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="397" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="360" bodyend="366"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1acce8fccf32a6f5fcbb627ef3af9e896f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -781,7 +781,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="390" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="368" bodyend="374"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="401" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="368" bodyend="374"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1a7312a149eaf481679a4df587a1961c08" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -794,7 +794,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="394" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="376" bodyend="383"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="405" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="376" bodyend="383"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1a65762dbbd5425677cc0e21471453dd8b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -807,7 +807,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="397" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="385" bodyend="398"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="408" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="385" bodyend="398"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_socket_1aa4e8612d22ff22c0fb1e344e59fc4d50" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -820,7 +820,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="400" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="400" bodyend="407"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="411" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="400" bodyend="407"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -829,7 +829,7 @@
 <para>Another important purpose of this class is thread-safety. Due to the &apos;global&apos; nature nature in C, Berkely sockets are not thread safe. Using mutexes this class is and allows the socket to be used in a multi-threaded environment.</para><para><simplesect kind="note"><para>This class does not use exceptions. Error handeling is done the same way as in the Berkely Sockets interface. Call GetErrorCode(..) for the latest BSD error code.</para></simplesect>
 <simplesect kind="author"><para>Swen Kooij / Photonios </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="60" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="59" bodyend="434"/>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="71" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="70" bodyend="445"/>
     <listofallmembers>
       <member refid="class_senergy_1_1_socket_1a6edaed683233e8d1106921de37efe4d8" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>__bind_on_port</name></member>
       <member refid="class_senergy_1_1_socket_1ae0c15aa32e1b926b73dd161b6a860aff" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>__create_native_socket</name></member>

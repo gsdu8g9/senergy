@@ -99,7 +99,7 @@ Swen Kooij (Photonios)
 .PP
 
 .PP
-Definition at line 50 of file message_header\&.h\&.
+Definition at line 51 of file message_header\&.h\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "unsigned short Senergy::Dns::MessageHeaderFields::AdditionalCount"
@@ -107,13 +107,13 @@ Definition at line 50 of file message_header\&.h\&.
 .PP
 Reserved\&. Do not use\&. 
 .PP
-Definition at line 201 of file message_header\&.h\&.
+Definition at line 202 of file message_header\&.h\&.
 .SS "unsigned short Senergy::Dns::MessageHeaderFields::AnswerCount"
 
 .PP
 The number of resource records (RRs) contained in the answer section of the DNS message\&. 
 .PP
-Definition at line 189 of file message_header\&.h\&.
+Definition at line 190 of file message_header\&.h\&.
 .SS "unsigned char Senergy::Dns::MessageHeaderFields::AuthenticatedData"
 
 .PP
@@ -121,7 +121,7 @@ A value that specifies whether the DNS data following the DNS packet header is a
 .PP
 1 The DNS data is authenticated\&. 
 .PP
-Definition at line 161 of file message_header\&.h\&.
+Definition at line 162 of file message_header\&.h\&.
 .SS "unsigned char Senergy::Dns::MessageHeaderFields::Authoritative"
 
 .PP
@@ -134,7 +134,7 @@ The contents of the answer section may have multiple owner names because of alia
 .PP
 
 .PP
-Definition at line 85 of file message_header\&.h\&.
+Definition at line 86 of file message_header\&.h\&.
 .SS "unsigned char Senergy::Dns::MessageHeaderFields::CheckingDisabled"
 \\ brief A value that specifies whether checking is supported by the DNS resolver\&. 
 .PP
@@ -146,25 +146,25 @@ Definition at line 85 of file message_header\&.h\&.
 .PP
  
 .PP
-Definition at line 151 of file message_header\&.h\&.
+Definition at line 152 of file message_header\&.h\&.
 .SS "unsigned short Senergy::Dns::MessageHeaderFields::Id"
 
 .PP
 A 16 bit identifier assigned by the program that generates any kind of query\&. This identifier is copied the corresponding reply and can be used by the requester to match up replies to outstanding queries\&. 
 .PP
-Definition at line 58 of file message_header\&.h\&.
+Definition at line 59 of file message_header\&.h\&.
 .SS "unsigned char Senergy::Dns::MessageHeaderFields::IsResponse"
 
 .PP
 A one bit field that specifies whether this message is a query (0), or a response (1)\&. 
 .PP
-Definition at line 106 of file message_header\&.h\&.
+Definition at line 107 of file message_header\&.h\&.
 .SS "unsigned short Senergy::Dns::MessageHeaderFields::NameServerCount"
 
 .PP
 The number of DNS name server RRs contained in the authority section of the DNS message\&. This value is the number of DNS name servers the message has traversed in its search for resolution\&. 
 .PP
-Definition at line 196 of file message_header\&.h\&.
+Definition at line 197 of file message_header\&.h\&.
 .SS "unsigned char Senergy::Dns::MessageHeaderFields::Opcode"
 
 .PP
@@ -176,25 +176,25 @@ A four bit field that specifies kind of query in this message\&. This value is s
 .PP
 3-15 reserved for future use 
 .PP
-Definition at line 100 of file message_header\&.h\&.
+Definition at line 101 of file message_header\&.h\&.
 .SS "unsigned short Senergy::Dns::MessageHeaderFields::QuestionCount"
 
 .PP
 An unsigned 16 bit integer specifying the number of entries in the question section\&. 
 .PP
-Definition at line 183 of file message_header\&.h\&.
+Definition at line 184 of file message_header\&.h\&.
 .SS "unsigned char Senergy::Dns::MessageHeaderFields::RecursionAvailable"
 
 .PP
 Recursion Available - this be is set or cleared in a response, and denotes whether recursive query support is available in the name server\&. 
 .PP
-Definition at line 177 of file message_header\&.h\&.
+Definition at line 178 of file message_header\&.h\&.
 .SS "unsigned char Senergy::Dns::MessageHeaderFields::RecursionDesired"
 
 .PP
 Recursion Desired - this bit may be set in a query and is copied into the response\&. If RD is set, it directs the name server to pursue the query recursively\&. Recursive query support is optional\&. 
 .PP
-Definition at line 66 of file message_header\&.h\&.
+Definition at line 67 of file message_header\&.h\&.
 .SS "unsigned char Senergy::Dns::MessageHeaderFields::Reserved"
 
 .PP
@@ -207,7 +207,7 @@ Specification (RFC 1035) says that this field must be zero at all times, however
 .PP
 
 .PP
-Definition at line 170 of file message_header\&.h\&.
+Definition at line 171 of file message_header\&.h\&.
 .SS "unsigned char Senergy::Dns::MessageHeaderFields::ResponseCode"
 
 .PP
@@ -225,13 +225,13 @@ Response code - this 4 bit field is set as part of responses\&. The values have 
 .PP
 6-15 Reserved for future use\&. 
 .PP
-Definition at line 142 of file message_header\&.h\&.
+Definition at line 143 of file message_header\&.h\&.
 .SS "unsigned char Senergy::Dns::MessageHeaderFields::Truncation"
 
 .PP
 TrunCation - specifies that this message was truncated due to length greater than that permitted on the transmission channel\&. 
 .PP
-Definition at line 73 of file message_header\&.h\&.
+Definition at line 74 of file message_header\&.h\&.
 
 .SH "Author"
 .PP 
