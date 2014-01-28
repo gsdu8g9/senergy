@@ -171,22 +171,15 @@ void ByteBuffer::Write(unsigned short value)
 bool ByteBuffer::Read(char *buffer, int size)
 {
 	if(buffer == NULL || size <= 0)
-	{
-		printf("ByteBuffer::Read:175\n");
 		return false;
-	}
 
 	int buffer_end_offset = m_position + size;
 	if(buffer_end_offset > m_current_size)
-	{
-		printf("ByteBuffer::Read:179\n");
 		return false;
-	}
 
 	memcpy(buffer, m_data + m_position, size);
-	
 	m_position += size;
-	printf("ByteBuffer::Read:189\n");
+
 	return true; 
 }
 

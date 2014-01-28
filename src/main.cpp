@@ -107,66 +107,39 @@ int main(int argc, char **argv)
 		int bytes_received = socket.Receive(receive_buffer, 1024);
 		if(bytes_received < 0)
 		{
-			printf("Error: %i\n", socket.GetErrorCode());
-			printf("continue\n");
+			if(socket.GetErrorCode() != 9)
+				printf("Error: socket error %i\n", socket.GetErrorCode());
 			continue;
 		}
 
 		printf("Received from: %s\n", socket.GetRemoteHost().c_str());
-
 		receive_buffer.SetPosition(0);
 
-		Senergy::Dns::MessageHeaderFields header;
-		unsigned int header_size = sizeof(Senergy::Dns::MessageHeaderFields);
-
-		printf("header size: %u\n", header_size);
-
-		if(!receive_buffer.Read((char*)&header, header_size))
+		Senergy::Dns::Message dns_message;
+		if(!dns_message.Deserialize(receive_buffer))
 		{
-			printf("Failed to read header\n");
+			printf("Deserialization failed!\n");
 			continue;
 		}
 
-		//memcpy((void*)&header, header_buffer, header_size);
 
-		/*header.id = (unsigned short)htons(header.id);
-		header.q_count = (unsigned short)htons(header.q_count);
-
-		printf("id: %hu\n", header.id);
-		printf("rd: %u\n", header.rd);
-		printf("tc: %u\n", header.tc);
-		printf("aa: %u\n", header.aa);
-		printf("opcode: %u\n", header.opcode);
-		printf("qr: %u\n", header.qr);
-		printf("rcode: %u\n", header.rcode);
-		printf("cd: %u\n", header.cd);
-		printf("ad: %u\n", header.ad);
-		printf("z: %u\n", header.z);
-		printf("ra: %u\n", header.ra);
-		printf("q_count: %hu\n", header.q_count);
-		printf("ans_count: %hu\n", header.ans_count);
-		printf("auth_count: %hu\n", header.auth_count);
-		printf("add_count: %hu\n\n", header.add_count);*/
-
-		header.QuestionCount = (unsigned short)htons(header.QuestionCount);
-
-		for(int i = 0; i < header.QuestionCount; ++i)
+		for(int i = 0; i < dns_message.Header.Fields.QuestionCount; ++i)
 		{
 			int remaining_bytes = receive_buffer.Size() - receive_buffer.GetPosition();
 			char *remaining = (char*)malloc(remaining_bytes);
 
-			printf("Questions: %hu\n", header.QuestionCount);
+			printf("Questions: %hu\n", dns_message.Header.Fields.QuestionCount);
 			
 			if(!receive_buffer.Read(remaining, remaining_bytes))
 			{
-				printf("failed to read name\n");
+				printf("Error: failed to read name\n");
 				free(remaining);
 				break;
 			}
 
 			int name_len = 0;
 			unsigned char *name = ReadName((unsigned char *)remaining, (unsigned char*)remaining, &name_len);
-			printf("name: %s\n\n", name);
+			printf("Question for: %s\n\n", name);
 		}
 
 		//printf("%s\n", receive_buffer.ReadAll().c_str());	
