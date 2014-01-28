@@ -163,6 +163,21 @@ public:
 	 *					 	 that this socket is connected to.
 	 */
 	Socket(SocketProtocol protocol, int native_socket, struct sockaddr_in remote_address);
+
+	/*!
+	 * \brief Gets the textual representation of the remote host that this socket
+	 *		  is currently connected to. This can either be an IP address or
+	 *		  a host name.
+	 *
+	 *		  The remote host gets updated when connections are made. When data is received
+	 *		  over UDP, the remote host gets updated with the host that we last
+	 *		  received data from.
+	 *
+	 * \returns The textual representation of the remote host, can return an empty
+	 *		    string when there is no active connection, or when the remote
+	 *	  	 	host is unknown.
+	 */
+	std::string GetRemoteHost();
 	
 	/*!
  	 * \brief Determines whether this instance has an active connection with

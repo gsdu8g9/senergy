@@ -65,6 +65,11 @@ Socket::Socket(SocketProtocol protocol, int native_socket, struct sockaddr_in re
 {	
 }
 
+std::string Socket::GetRemoteHost()
+{
+	return m_remote_host;
+}
+
 bool Socket::IsConnected()
 {
 	if(m_native_socket < 0)
@@ -159,6 +164,8 @@ int Socket::Send(const char *data, size_t data_size)
 	}
 
 	__update_last_error();		
+	__update_remote_host();
+
 	return send_result;
 }
 
@@ -215,6 +222,8 @@ int	Socket::Receive(const char *receive_buffer, size_t size)
 	}
 
 	__update_last_error();	
+	__update_remote_host();
+
 	return bytes_received;
 }
 
@@ -277,6 +286,7 @@ SocketPtr Socket::Accept()
 	SocketPtr client_socket(new Socket(m_protocol, new_client_socket, remote_address));
 	client_socket->m_timeout_milliseconds = m_timeout_milliseconds;
 	client_socket->m_socket_role = SocketRole::Client;
+	client_socket->__update_remote_host();
 	
 	return client_socket;
 }
@@ -332,6 +342,8 @@ bool Socket::__set_address_struct()
 			m_remote_address.sin_addr.s_addr = htonl(INADDR_ANY);
 		break;
 	}
+
+	__update_remote_host();
 	
 	return true;	
 }
@@ -342,6 +354,7 @@ bool Socket::__native_connect()
 	
 	int connection_result = connect(m_native_socket, (struct sockaddr *)&m_remote_address, sizeof(m_remote_address));
 	__update_last_error();
+	__update_remote_host();
 	
 	return (connection_result >= 0);
 }
@@ -388,7 +401,11 @@ bool Socket::__enfore_timeout()
 
 void Socket::__update_remote_host()
 {
-	
+	char *current_remote_host = inet_ntoa(m_remote_address.sin_addr);
+	if(current_remote_host == NULL)
+		return;
+
+	m_remote_host = std::string(current_remote_host);
 }
 
 } // namespace Networking
