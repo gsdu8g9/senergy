@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct_d_n_s___h_e_a_d_e_r" kind="struct" prot="public">
+    <compoundname>DNS_HEADER</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_d_n_s___h_e_a_d_e_r_1a5ac83f81b8da8ddb83e3f5baf9a51e94" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short DNS_HEADER::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="27" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_n_s___h_e_a_d_e_r_1ae36057dbcab8fd192148aed912270462" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char DNS_HEADER::rd</definition>
+        <argsstring></argsstring>
+        <name>rd</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="28" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_n_s___h_e_a_d_e_r_1acfd94249b1b03793d63a6b87fea41d9e" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char DNS_HEADER::tc</definition>
+        <argsstring></argsstring>
+        <name>tc</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="29" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_n_s___h_e_a_d_e_r_1a0b35c4f2cf9cc0d1555afa24676c2b26" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char DNS_HEADER::aa</definition>
+        <argsstring></argsstring>
+        <name>aa</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="30" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_n_s___h_e_a_d_e_r_1a07b70b04059dd68a0f7c1c879ccf1ef2" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char DNS_HEADER::opcode</definition>
+        <argsstring></argsstring>
+        <name>opcode</name>
+        <bitfield>4</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="31" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_n_s___h_e_a_d_e_r_1a874c920bbfec9e40d6b77e97128d1da9" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char DNS_HEADER::qr</definition>
+        <argsstring></argsstring>
+        <name>qr</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="32" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_n_s___h_e_a_d_e_r_1a3b7ff1e78cc57527d2afe217fd4d0178" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char DNS_HEADER::rcode</definition>
+        <argsstring></argsstring>
+        <name>rcode</name>
+        <bitfield>4</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="33" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_n_s___h_e_a_d_e_r_1af63c835c6ea830833207e2c8e3327fbd" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char DNS_HEADER::cd</definition>
+        <argsstring></argsstring>
+        <name>cd</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="34" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_n_s___h_e_a_d_e_r_1a61bfa8d857d74fb70872b179ddbe59e5" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char DNS_HEADER::ad</definition>
+        <argsstring></argsstring>
+        <name>ad</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="35" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_n_s___h_e_a_d_e_r_1a4a09d9fe1ea80fcc992af0e4a90b0e6c" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char DNS_HEADER::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="36" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_n_s___h_e_a_d_e_r_1ab689629314dd78eb571b9d4d82feef8a" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char DNS_HEADER::ra</definition>
+        <argsstring></argsstring>
+        <name>ra</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="37" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_n_s___h_e_a_d_e_r_1a6b9815b90208910759572254bf0905e5" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short DNS_HEADER::q_count</definition>
+        <argsstring></argsstring>
+        <name>q_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="38" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_n_s___h_e_a_d_e_r_1abf109ef7bbba2e8145177411c6835faa" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short DNS_HEADER::ans_count</definition>
+        <argsstring></argsstring>
+        <name>ans_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="39" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_n_s___h_e_a_d_e_r_1aa8c1b1d176c5ff1ab2007af10cecccf7" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short DNS_HEADER::auth_count</definition>
+        <argsstring></argsstring>
+        <name>auth_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="40" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_n_s___h_e_a_d_e_r_1a62902698d81157eba889e57f56b11702" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short DNS_HEADER::add_count</definition>
+        <argsstring></argsstring>
+        <name>add_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="41" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="26" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="25" bodyend="42"/>
+    <listofallmembers>
+      <member refid="struct_d_n_s___h_e_a_d_e_r_1a0b35c4f2cf9cc0d1555afa24676c2b26" prot="public" virt="non-virtual"><scope>DNS_HEADER</scope><name>aa</name></member>
+      <member refid="struct_d_n_s___h_e_a_d_e_r_1a61bfa8d857d74fb70872b179ddbe59e5" prot="public" virt="non-virtual"><scope>DNS_HEADER</scope><name>ad</name></member>
+      <member refid="struct_d_n_s___h_e_a_d_e_r_1a62902698d81157eba889e57f56b11702" prot="public" virt="non-virtual"><scope>DNS_HEADER</scope><name>add_count</name></member>
+      <member refid="struct_d_n_s___h_e_a_d_e_r_1abf109ef7bbba2e8145177411c6835faa" prot="public" virt="non-virtual"><scope>DNS_HEADER</scope><name>ans_count</name></member>
+      <member refid="struct_d_n_s___h_e_a_d_e_r_1aa8c1b1d176c5ff1ab2007af10cecccf7" prot="public" virt="non-virtual"><scope>DNS_HEADER</scope><name>auth_count</name></member>
+      <member refid="struct_d_n_s___h_e_a_d_e_r_1af63c835c6ea830833207e2c8e3327fbd" prot="public" virt="non-virtual"><scope>DNS_HEADER</scope><name>cd</name></member>
+      <member refid="struct_d_n_s___h_e_a_d_e_r_1a5ac83f81b8da8ddb83e3f5baf9a51e94" prot="public" virt="non-virtual"><scope>DNS_HEADER</scope><name>id</name></member>
+      <member refid="struct_d_n_s___h_e_a_d_e_r_1a07b70b04059dd68a0f7c1c879ccf1ef2" prot="public" virt="non-virtual"><scope>DNS_HEADER</scope><name>opcode</name></member>
+      <member refid="struct_d_n_s___h_e_a_d_e_r_1a6b9815b90208910759572254bf0905e5" prot="public" virt="non-virtual"><scope>DNS_HEADER</scope><name>q_count</name></member>
+      <member refid="struct_d_n_s___h_e_a_d_e_r_1a874c920bbfec9e40d6b77e97128d1da9" prot="public" virt="non-virtual"><scope>DNS_HEADER</scope><name>qr</name></member>
+      <member refid="struct_d_n_s___h_e_a_d_e_r_1ab689629314dd78eb571b9d4d82feef8a" prot="public" virt="non-virtual"><scope>DNS_HEADER</scope><name>ra</name></member>
+      <member refid="struct_d_n_s___h_e_a_d_e_r_1a3b7ff1e78cc57527d2afe217fd4d0178" prot="public" virt="non-virtual"><scope>DNS_HEADER</scope><name>rcode</name></member>
+      <member refid="struct_d_n_s___h_e_a_d_e_r_1ae36057dbcab8fd192148aed912270462" prot="public" virt="non-virtual"><scope>DNS_HEADER</scope><name>rd</name></member>
+      <member refid="struct_d_n_s___h_e_a_d_e_r_1acfd94249b1b03793d63a6b87fea41d9e" prot="public" virt="non-virtual"><scope>DNS_HEADER</scope><name>tc</name></member>
+      <member refid="struct_d_n_s___h_e_a_d_e_r_1a4a09d9fe1ea80fcc992af0e4a90b0e6c" prot="public" virt="non-virtual"><scope>DNS_HEADER</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

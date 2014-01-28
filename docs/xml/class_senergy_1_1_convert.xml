@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_senergy_1_1_convert" kind="class" prot="public">
+    <compoundname>Senergy::Convert</compoundname>
+    <includes refid="convert_8h" local="no">convert.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_senergy_1_1_convert_1a80cf7b84b0ff65171da68ca40cbf817f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Senergy::Convert::ToString</definition>
+        <argsstring>(int value)</argsstring>
+        <name>ToString</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Converts the specified integer value to a string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer value to convert to a string.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The specified integer value as a string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/convert.h" line="50" column="1" bodyfile="/home/photonios/Documents/Senergy/src/convert.cpp" bodystart="27" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A simple conversion class, which simplifies conversion between various native data types. Based on the idea of the &apos;<ref refid="class_senergy_1_1_convert" kindref="compound">Convert</ref>&apos; class in the .NET framework. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/convert.h" line="41" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/convert.h" bodystart="40" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_senergy_1_1_convert_1a80cf7b84b0ff65171da68ca40cbf817f" prot="public" virt="non-virtual"><scope>Senergy::Convert</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

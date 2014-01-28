@@ -1,0 +1,58 @@
+.TH "src/senergy/socket.h" 3 "Tue Jan 28 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/senergy/socket.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cstring>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <memory>\fP
+.br
+\fC#include <senergy/bytebuffer\&.h>\fP
+.br
+\fC#include <arpa/inet\&.h>\fP
+.br
+\fC#include <sys/socket\&.h>\fP
+.br
+\fC#include <netinet/in\&.h>\fP
+.br
+\fC#include <netdb\&.h>\fP
+.br
+\fC#include <errno\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBSenergy::Networking::Socket\fP"
+.br
+.RI "\fIProvides an object-oriented interface for Berkely (BSD) sockets\&. Can act both as a server as well as a client\&. The main purpose of this class class is to provide a more C++ like interface for TCP sockets\&. \fP"
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "\fBSenergy\fP"
+.br
+.ti -1c
+.RI "\fBSenergy::Networking\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::shared_ptr< Socket > \fBSenergy::Networking::SocketPtr\fP"
+.br
+.RI "\fIA simple typedef for the shared pointer of a TcpSocket instance\&. \fP"
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

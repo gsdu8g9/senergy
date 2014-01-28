@@ -25,5 +25,10 @@ SOURCE_DIR=./src
 all:
 	$(INVOKE) -C $(SOURCE_DIR) all
 
+docs: .FORCE
+	doxygen docs/Doxyfile
+
+.FORCE:
+
 .DEFAULT:
 	$(INVOKE) -C $(SOURCE_DIR) $@

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_senergy_1_1_networking" kind="namespace">
+    <compoundname>Senergy::Networking</compoundname>
+    <innerclass refid="class_senergy_1_1_networking_1_1_socket" prot="public">Senergy::Networking::Socket</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespace_senergy_1_1_networking_1aced57616d1b0ede6535865d5909abaf1" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="class_senergy_1_1_networking_1_1_socket" kindref="compound">Socket</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;Socket&gt; Senergy::Networking::SocketPtr</definition>
+        <argsstring></argsstring>
+        <name>SocketPtr</name>
+        <briefdescription>
+<para>A simple typedef for the shared pointer of a TcpSocket instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="441" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="441" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="45" column="1"/>
+  </compounddef>
+</doxygen>

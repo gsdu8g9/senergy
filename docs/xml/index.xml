@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
+  <compound refid="class_senergy_1_1_byte_buffer" kind="class"><name>Senergy::ByteBuffer</name>
+    <member refid="class_senergy_1_1_byte_buffer_1a082756804ba24434ffe524d53fba18a5" kind="variable"><name>m_data</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a2aede7f584b693426777c72b06e4d32b" kind="variable"><name>m_current_size</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1ac9aafe3bb1332c3f32310ee6aa8c9f06" kind="variable"><name>m_position</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1ab3b85c02a2ee01df37673e8887df7956" kind="function"><name>ByteBuffer</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a95197b8b57bb0a752ad7650a59d5facd" kind="function"><name>ByteBuffer</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1aef390f867878292a797065c21cec6afe" kind="function"><name>~ByteBuffer</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1ad141d494b81ff561ede715c4f7ceb840" kind="function"><name>IsEmpty</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a22be2d9d356958c4cf352bc31edb1735" kind="function"><name>Size</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1ab938ed32f9f909145f93099f4620da69" kind="function"><name>GetRemainingSize</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a286e096451b62a14a8d645e1c9da62af" kind="function"><name>GetPosition</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a13dd8a2eec8b93ac224f0da614c7f6f8" kind="function"><name>SetPosition</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a52af5d53098be5cb179f9a05f84f39e2" kind="function"><name>SetPosition</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a25b96a3aed3e617362dbaee66915c33a" kind="function"><name>Reserve</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1aa650965d24700a696af31aa9cc20fa68" kind="function"><name>Reserve</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a9a561b3dd8778ee68e75e5a62a38fa60" kind="function"><name>Write</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1ac4a328ba46fb339b37cb0475c6944c18" kind="function"><name>Write</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a3dbfe87ee79c1322252c625bf4915f18" kind="function"><name>Write</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1adeb00769eae3728d222587e00810d422" kind="function"><name>Write</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a9dc9ad6de5d9401a698984634537b27a" kind="function"><name>Write</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1ab523222c96a0c1fff96a7f6c2794ca2d" kind="function"><name>Write</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a8a51e4f9795d312ff2ab8f152b533bb7" kind="function"><name>Write</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1add80584faab29bcadcb437b45ad97a87" kind="function"><name>Write</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a061fe3c4158ba940e68bf4545639561e" kind="function"><name>Write</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1ae0e9d53b9afa8b098eed7b517a60b938" kind="function"><name>Write</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a9286d05c71ce66859098778f11be9c51" kind="function"><name>Write</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" kind="function"><name>Read</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1ace3d04d38706d534a16e596ee291630b" kind="function"><name>Read</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a391deafd9b6e3c4b4c2b92fe78358ebf" kind="function"><name>ReadRemaining</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a8e9ec7a8d6c26c01a738768928fff704" kind="function"><name>ReadRemaining</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1ab15f04d43dd82cebf6dc25254d210e4e" kind="function"><name>ReadInt</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a7abe5475b2a9adcad384d3125640aba2" kind="function"><name>ReadUnsignedInt</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a806db1b33ff86b572a0804879d181dc8" kind="function"><name>ReadChar</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1ad9a7a05b0285fe070cde3983458de5f6" kind="function"><name>ReadUnsignedChar</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a989443842e20c2feba4268e968911fe8" kind="function"><name>ReadShort</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1aa6b6bfdb398a75b92c79bcdfc1986821" kind="function"><name>ReadUnsignedShort</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a5c3f960422533abc898061be11b6f613" kind="function"><name>ReadAll</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a93918fd327173e3468f2d68cef7b8027" kind="function"><name>__set_size</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a818472c84e319ab1f8a1a63987d2ed98" kind="function"><name>__write_native_type</name></member>
+    <member refid="class_senergy_1_1_byte_buffer_1a653903da9aac48f4ee93cf387036079f" kind="function"><name>__read_native_type</name></member>
+  </compound>
+  <compound refid="class_senergy_1_1_convert" kind="class"><name>Senergy::Convert</name>
+    <member refid="class_senergy_1_1_convert_1a80cf7b84b0ff65171da68ca40cbf817f" kind="function"><name>ToString</name></member>
+  </compound>
+  <compound refid="struct_d_n_s___h_e_a_d_e_r" kind="struct"><name>DNS_HEADER</name>
+    <member refid="struct_d_n_s___h_e_a_d_e_r_1a5ac83f81b8da8ddb83e3f5baf9a51e94" kind="variable"><name>id</name></member>
+    <member refid="struct_d_n_s___h_e_a_d_e_r_1ae36057dbcab8fd192148aed912270462" kind="variable"><name>rd</name></member>
+    <member refid="struct_d_n_s___h_e_a_d_e_r_1acfd94249b1b03793d63a6b87fea41d9e" kind="variable"><name>tc</name></member>
+    <member refid="struct_d_n_s___h_e_a_d_e_r_1a0b35c4f2cf9cc0d1555afa24676c2b26" kind="variable"><name>aa</name></member>
+    <member refid="struct_d_n_s___h_e_a_d_e_r_1a07b70b04059dd68a0f7c1c879ccf1ef2" kind="variable"><name>opcode</name></member>
+    <member refid="struct_d_n_s___h_e_a_d_e_r_1a874c920bbfec9e40d6b77e97128d1da9" kind="variable"><name>qr</name></member>
+    <member refid="struct_d_n_s___h_e_a_d_e_r_1a3b7ff1e78cc57527d2afe217fd4d0178" kind="variable"><name>rcode</name></member>
+    <member refid="struct_d_n_s___h_e_a_d_e_r_1af63c835c6ea830833207e2c8e3327fbd" kind="variable"><name>cd</name></member>
+    <member refid="struct_d_n_s___h_e_a_d_e_r_1a61bfa8d857d74fb70872b179ddbe59e5" kind="variable"><name>ad</name></member>
+    <member refid="struct_d_n_s___h_e_a_d_e_r_1a4a09d9fe1ea80fcc992af0e4a90b0e6c" kind="variable"><name>z</name></member>
+    <member refid="struct_d_n_s___h_e_a_d_e_r_1ab689629314dd78eb571b9d4d82feef8a" kind="variable"><name>ra</name></member>
+    <member refid="struct_d_n_s___h_e_a_d_e_r_1a6b9815b90208910759572254bf0905e5" kind="variable"><name>q_count</name></member>
+    <member refid="struct_d_n_s___h_e_a_d_e_r_1abf109ef7bbba2e8145177411c6835faa" kind="variable"><name>ans_count</name></member>
+    <member refid="struct_d_n_s___h_e_a_d_e_r_1aa8c1b1d176c5ff1ab2007af10cecccf7" kind="variable"><name>auth_count</name></member>
+    <member refid="struct_d_n_s___h_e_a_d_e_r_1a62902698d81157eba889e57f56b11702" kind="variable"><name>add_count</name></member>
+  </compound>
+  <compound refid="class_senergy_1_1_print" kind="class"><name>Senergy::Print</name>
+    <member refid="class_senergy_1_1_print_1a6c6b70bd91e56896058004bf82201010" kind="function"><name>Hexadecimal</name></member>
+    <member refid="class_senergy_1_1_print_1a7899dd50cdb0b0a6e7ed144d62ea227d" kind="function"><name>Integer</name></member>
+  </compound>
+  <compound refid="class_senergy_1_1_networking_1_1_socket" kind="class"><name>Senergy::Networking::Socket</name>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a9a69a0d516b18e2a3bec77dc032b9993" kind="enum"><name>CloseType</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a9a69a0d516b18e2a3bec77dc032b9993a1851aea8452370ffbc6364027d018da9" kind="enumvalue"><name>StopReceiving</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a9a69a0d516b18e2a3bec77dc032b9993a948c383a847087d69042e091d164380b" kind="enumvalue"><name>StopSending</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a9a69a0d516b18e2a3bec77dc032b9993a40b522922220c34afd8e1d4a3ba02208" kind="enumvalue"><name>StopAll</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a78ca8d55b9849962428e844d3bf4ff49" kind="enum"><name>SocketRole</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a78ca8d55b9849962428e844d3bf4ff49a577d7068826de925ea2aec01dbadf5e4" kind="enumvalue"><name>Client</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a78ca8d55b9849962428e844d3bf4ff49a9aa1b03934893d7134a660af4204f2a9" kind="enumvalue"><name>Server</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a83b2c6873ed6de08855f226e473d9eb9" kind="enum"><name>SocketProtocol</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a83b2c6873ed6de08855f226e473d9eb9ab136ef5f6a01d816991fe3cf7a6ac763" kind="enumvalue"><name>TCP</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a83b2c6873ed6de08855f226e473d9eb9af5ef036b4d8b630721e51fe23489fbc9" kind="enumvalue"><name>UDP</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a19cb724ef153aebdbcc66cd4c3c4952a" kind="typedef"><name>SocketPtr</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1aeac55e8b7a3fac8be1d9bbeb2c7a5385" kind="variable"><name>m_remote_host</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1af56887e7b8b7eb9b685c715456e4f80c" kind="variable"><name>m_remote_port</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1ae1ed5cfeb9a1356317682dcef0b04146" kind="variable"><name>m_connected</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a85c72b69e270ec87d827035b1e82b74d" kind="variable"><name>m_last_error</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1aff89c394d9d2d35e5cf6a4ae0d0d09dc" kind="variable"><name>m_native_socket</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1af4a9c01296534db48d73281b5c80a479" kind="variable"><name>m_remote_address</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1aede47df3cf21bbaa3b4ab5520b6f81b0" kind="variable"><name>m_timeout</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a58838c3fa80ef44cf9eb6e1c7bcb40eb" kind="variable"><name>m_timeout_milliseconds</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1ab86f1f5d8df4bb39b299f9d252d243a2" kind="variable"><name>m_socket_role</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1aef485ce64ff6f3f0d93cd207d0ab4cc6" kind="variable"><name>m_protocol</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a0dac1aaaf33a465923caec6d60156879" kind="function"><name>Socket</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1aa6a06a0a8e5dd2bd9f831a843d13ed75" kind="function"><name>Socket</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a06b93c702b77c936f6bdfec55a243177" kind="function"><name>Socket</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a3839f6b5e87e7e53007fa15246159830" kind="function"><name>GetRemoteHost</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1adae19c7088b61be82507a18ff1865ac8" kind="function"><name>IsConnected</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a5d68f35398c2460bdfca32f0d43a556d" kind="function"><name>SetTimeout</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a8ed864e9b8fa933e7e69e95bc0fcb6d7" kind="function"><name>Connect</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1ad347de7d31d90e088c9f7a1aefb1c288" kind="function"><name>Listen</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1ab44920bee76aba954e1dd8cfc7a7b6bf" kind="function"><name>Close</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a61bd1c30a7e0238b7a2d9b1db20685bb" kind="function"><name>Send</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a2a1d9af479c41fb2e9c12c696454f824" kind="function"><name>Send</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a9e1382ced3780b0150e354fd115249d3" kind="function"><name>Send</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1abc6a27d4972efa3b7e103d94993190b7" kind="function"><name>Receive</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a535e4367070b4aa66d458d87fd1acf1b" kind="function"><name>Receive</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a77cdf17b5493e2f83cbb5ff46575823e" kind="function"><name>Receive</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a7796c8d13c593c99384a4ba7b54a2756" kind="function"><name>Accept</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1af41c4b3448f3f7aff3dcc3b3580b6c1a" kind="function"><name>GetErrorCode</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1ad07d17f6abe52ba6bd6c2a8534c8552f" kind="function"><name>__create_native_socket</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1ab98bce7c5f2b0ccbe996c16d12c303ee" kind="function"><name>__set_address_struct</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a4eab5049cd984f13fd697f0805324e8c" kind="function"><name>__native_connect</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1aba58458b9f196bd82e6638e2ed9bc8c2" kind="function"><name>__bind_on_port</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a34065ea84a8c93f147f27364f662da2b" kind="function"><name>__listen</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a077a85d2dfcb8ac2f49166b2fcc3f204" kind="function"><name>__update_last_error</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a1b86c224ca60c7ad93e83c0192afe3c5" kind="function"><name>__enfore_timeout</name></member>
+    <member refid="class_senergy_1_1_networking_1_1_socket_1a6795d12244e2486b8c037784e760efa7" kind="function"><name>__update_remote_host</name></member>
+  </compound>
+  <compound refid="namespace_senergy" kind="namespace"><name>Senergy</name>
+    <member refid="namespace_senergy_1a30f5cfaeb333ffdf2c3332cc590a57ea" kind="typedef"><name>ByteBufferPtr</name></member>
+  </compound>
+  <compound refid="namespace_senergy_1_1_networking" kind="namespace"><name>Senergy::Networking</name>
+    <member refid="namespace_senergy_1_1_networking_1aced57616d1b0ede6535865d5909abaf1" kind="typedef"><name>SocketPtr</name></member>
+  </compound>
+  <compound refid="bytebuffer_8cpp" kind="file"><name>bytebuffer.cpp</name>
+  </compound>
+  <compound refid="convert_8cpp" kind="file"><name>convert.cpp</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a1390696935c0b2a9bdebc396feef9688" kind="function"><name>ReadName</name></member>
+    <member refid="main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="print_8cpp" kind="file"><name>print.cpp</name>
+  </compound>
+  <compound refid="bytebuffer_8h" kind="file"><name>bytebuffer.h</name>
+  </compound>
+  <compound refid="convert_8h" kind="file"><name>convert.h</name>
+  </compound>
+  <compound refid="print_8h" kind="file"><name>print.h</name>
+  </compound>
+  <compound refid="senergy_8h" kind="file"><name>senergy.h</name>
+  </compound>
+  <compound refid="socket_8h" kind="file"><name>socket.h</name>
+  </compound>
+  <compound refid="socket_8cpp" kind="file"><name>socket.cpp</name>
+  </compound>
+  <compound refid="dir_43fe9c611a9fdc7364335d381ea28669" kind="dir"><name>src/senergy</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>

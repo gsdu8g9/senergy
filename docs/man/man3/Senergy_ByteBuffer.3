@@ -1,0 +1,508 @@
+.TH "Senergy::ByteBuffer" 3 "Tue Jan 28 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::ByteBuffer \- 
+.PP
+A dynamiclly sized buffer for binary data\&. Resizes the underlying buffer when new data is written\&. Makes it easier to write to buffers that already contain data\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <bytebuffer\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBByteBuffer\fP ()"
+.br
+.RI "\fIInitializes a new instance of the \fBByteBuffer\fP class\&. The intial buffer size is 0 bytes\&. \fP"
+.ti -1c
+.RI "\fBByteBuffer\fP (unsigned int size)"
+.br
+.RI "\fIInitializes a new instance of the \fBByteBuffer\fP class with the specified size\&. After initialization, the buffer is enlarged to the specified size\&. \fP"
+.ti -1c
+.RI "\fB~ByteBuffer\fP ()"
+.br
+.RI "\fIThe \fBByteBuffer\fP's destructor\&. Free's the underlying buffer, and cleans up used resources\&. \fP"
+.ti -1c
+.RI "bool \fBIsEmpty\fP ()"
+.br
+.RI "\fIChecks if the buffer is empty and returns true when the buffer is empty and false when the buffer is not empty\&. \fP"
+.ti -1c
+.RI "int \fBSize\fP ()"
+.br
+.RI "\fIGets the size of the buffer\&. This is not the same as the data size\&. \fP"
+.ti -1c
+.RI "int \fBGetRemainingSize\fP ()"
+.br
+.RI "\fIGets the amount of bytes that can be read until the end of the buffer is reached\&. \fP"
+.ti -1c
+.RI "int \fBGetPosition\fP ()"
+.br
+.RI "\fIGets the current position within the byte buffer\&. The position is the offset within the buffer that writing/reading starts at\&. \fP"
+.ti -1c
+.RI "bool \fBSetPosition\fP (int position)"
+.br
+.RI "\fISets the current position within the byte buffer\&. The position is the offset within the buffer that writing/reading starts at\&. \fP"
+.ti -1c
+.RI "bool \fBSetPosition\fP (unsigned int position)"
+.br
+.RI "\fISets the current position within the byte buffer\&. The position is the offset within the buffer that writing/reading starts at\&. \fP"
+.ti -1c
+.RI "void \fBReserve\fP (unsigned int size)"
+.br
+.RI "\fIAssures that the buffer is of the specified size and enlarges the buffer when the current size of the buffer is below the specified, desired size\&. \fP"
+.ti -1c
+.RI "void \fBReserve\fP (int size)"
+.br
+.RI "\fIAssures that the buffer is of the specified size and enlarges the buffer when the current size of the buffer is below the specified, desired size\&. \fP"
+.ti -1c
+.RI "void \fBWrite\fP (char *data, unsigned int size)"
+.br
+.RI "\fIWrites the specified data of the specified size to the buffer\&. The buffer is automaticlly resized when the specified data does not fit into the current buffer\&. \fP"
+.ti -1c
+.RI "void \fBWrite\fP (void *data, unsigned int size)"
+.br
+.RI "\fIWrites the specified data of the specified size to the buffer\&. The buffer is automaticlly resized when the specified data does not fit into the current buffer\&. \fP"
+.ti -1c
+.RI "void \fBWrite\fP (char *data, int size)"
+.br
+.RI "\fIWrites the specified data of the specified size to the buffer\&. The buffer is automaticlly resized when the specified data does not fit into the current buffer\&. \fP"
+.ti -1c
+.RI "void \fBWrite\fP (void *data, int size)"
+.br
+.RI "\fIWrites the specified data of the specified size to the buffer\&. The buffer is automaticlly resized when the specified data does not fit into the current buffer\&. \fP"
+.ti -1c
+.RI "void \fBWrite\fP (const std::string &data)"
+.br
+.RI "\fIWrites the specified string to the buffer\&. The buffer is automaticlly resized when the specified string does not fit into the buffer\&. \fP"
+.ti -1c
+.RI "void \fBWrite\fP (int value)"
+.br
+.RI "\fIWrites the specified value to the buffer\&. The buffer is automaticlly resized when the specified value does not fit into the buffer\&. \fP"
+.ti -1c
+.RI "void \fBWrite\fP (unsigned int value)"
+.br
+.ti -1c
+.RI "void \fBWrite\fP (char value)"
+.br
+.ti -1c
+.RI "void \fBWrite\fP (unsigned char value)"
+.br
+.ti -1c
+.RI "void \fBWrite\fP (short value)"
+.br
+.ti -1c
+.RI "void \fBWrite\fP (unsigned short value)"
+.br
+.ti -1c
+.RI "bool \fBRead\fP (char *buffer, int size)"
+.br
+.RI "\fIReads the specified amount of bytes from the buffer and copies it into the specified buffer\&. \fP"
+.ti -1c
+.RI "bool \fBRead\fP (char *buffer, unsigned int size)"
+.br
+.RI "\fIReads the specified amount of bytes from the buffer and copies it into the specified buffer\&. \fP"
+.ti -1c
+.RI "bool \fBReadRemaining\fP (char *buffer, int max_size)"
+.br
+.ti -1c
+.RI "bool \fBReadRemaining\fP (char *buffer, unsigned int max_size)"
+.br
+.ti -1c
+.RI "int \fBReadInt\fP ()"
+.br
+.RI "\fIReads an integer from the buffer\&. \fP"
+.ti -1c
+.RI "unsigned int \fBReadUnsignedInt\fP ()"
+.br
+.RI "\fIReads an unsigned integer from the buffer\&. \fP"
+.ti -1c
+.RI "char \fBReadChar\fP ()"
+.br
+.RI "\fIReads a char from the buffer\&. \fP"
+.ti -1c
+.RI "unsigned char \fBReadUnsignedChar\fP ()"
+.br
+.RI "\fIReads an unsigned char from the buffer\&. \fP"
+.ti -1c
+.RI "short \fBReadShort\fP ()"
+.br
+.RI "\fIReads a short from the buffer\&. \fP"
+.ti -1c
+.RI "unsigned short \fBReadUnsignedShort\fP ()"
+.br
+.RI "\fIReads an unsigned short from the buffer\&. \fP"
+.ti -1c
+.RI "std::string \fBReadAll\fP ()"
+.br
+.RI "\fIReads the contents of the buffer from start to end and returns the contents as a string\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+A dynamiclly sized buffer for binary data\&. Resizes the underlying buffer when new data is written\&. Makes it easier to write to buffers that already contain data\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Senergy::ByteBuffer::ByteBuffer ()"
+
+.PP
+Initializes a new instance of the \fBByteBuffer\fP class\&. The intial buffer size is 0 bytes\&. 
+.SS "Senergy::ByteBuffer::ByteBuffer (unsigned intsize)"
+
+.PP
+Initializes a new instance of the \fBByteBuffer\fP class with the specified size\&. After initialization, the buffer is enlarged to the specified size\&. 
+.SS "Senergy::ByteBuffer::~ByteBuffer ()"
+
+.PP
+The \fBByteBuffer\fP's destructor\&. Free's the underlying buffer, and cleans up used resources\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "int Senergy::ByteBuffer::GetPosition ()"
+
+.PP
+Gets the current position within the byte buffer\&. The position is the offset within the buffer that writing/reading starts at\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The position within the byte buffer\&. 
+.RE
+.PP
+
+.SS "int Senergy::ByteBuffer::GetRemainingSize ()"
+
+.PP
+Gets the amount of bytes that can be read until the end of the buffer is reached\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The amount of bytes that can be read until the end of the buffer is reached\&. 
+.RE
+.PP
+
+.SS "bool Senergy::ByteBuffer::IsEmpty ()"
+
+.PP
+Checks if the buffer is empty and returns true when the buffer is empty and false when the buffer is not empty\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether the buffer is empty\&. True is returned when the buffer is empty and false when it is not\&. 
+.RE
+.PP
+
+.SS "bool Senergy::ByteBuffer::Read (char *buffer, intsize)"
+
+.PP
+Reads the specified amount of bytes from the buffer and copies it into the specified buffer\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to write to\&. 
+.br
+\fIsize\fP The amount of bytes to read from the buffer\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether reading succeseeded\&. True is returned when reading succeseeded and false when reading failed\&. 
+.RE
+.PP
+
+.SS "bool Senergy::ByteBuffer::Read (char *buffer, unsigned intsize)"
+
+.PP
+Reads the specified amount of bytes from the buffer and copies it into the specified buffer\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to write to\&. 
+.br
+\fIsize\fP The amount of bytes to read from the buffer\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether reading succeseeded\&. True is returned when reading succeseeded and false when reading failed\&. 
+.RE
+.PP
+
+.SS "std::string Senergy::ByteBuffer::ReadAll ()"
+
+.PP
+Reads the contents of the buffer from start to end and returns the contents as a string\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This does not affect the current position\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The contents of the buffer as a string\&. 
+.RE
+.PP
+
+.SS "char Senergy::ByteBuffer::ReadChar ()"
+
+.PP
+Reads a char from the buffer\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The char that was read from the buffer\&. -1 is returned when reading failed\&. 
+.RE
+.PP
+
+.SS "int Senergy::ByteBuffer::ReadInt ()"
+
+.PP
+Reads an integer from the buffer\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The integer that was read from the buffer\&. -1 is returned when reading failed\&. 
+.RE
+.PP
+
+.SS "bool Senergy::ByteBuffer::ReadRemaining (char *buffer, intmax_size)"
+
+.SS "bool Senergy::ByteBuffer::ReadRemaining (char *buffer, unsigned intmax_size)"
+
+.SS "short Senergy::ByteBuffer::ReadShort ()"
+
+.PP
+Reads a short from the buffer\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The short that was read from the buffer\&. -1 is returned when reading failed\&. 
+.RE
+.PP
+
+.SS "unsigned char Senergy::ByteBuffer::ReadUnsignedChar ()"
+
+.PP
+Reads an unsigned char from the buffer\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The unsigned char that was read from the buffer\&. 0 is returned when reading failed\&. 
+.RE
+.PP
+
+.SS "unsigned int Senergy::ByteBuffer::ReadUnsignedInt ()"
+
+.PP
+Reads an unsigned integer from the buffer\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The unsigned integer that was read from the buffer\&. 0 is returned when reading failed\&. 
+.RE
+.PP
+
+.SS "unsigned short Senergy::ByteBuffer::ReadUnsignedShort ()"
+
+.PP
+Reads an unsigned short from the buffer\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The unsigned short that was read from the buffer\&. 0 is returned when reading failed\&. 
+.RE
+.PP
+
+.SS "void Senergy::ByteBuffer::Reserve (unsigned intsize)"
+
+.PP
+Assures that the buffer is of the specified size and enlarges the buffer when the current size of the buffer is below the specified, desired size\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsize\fP The desired size of the buffer\&. 
+.RE
+.PP
+
+.SS "void Senergy::ByteBuffer::Reserve (intsize)"
+
+.PP
+Assures that the buffer is of the specified size and enlarges the buffer when the current size of the buffer is below the specified, desired size\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsize\fP The desired size of the buffer\&. 
+.RE
+.PP
+
+.SS "bool Senergy::ByteBuffer::SetPosition (intposition)"
+
+.PP
+Sets the current position within the byte buffer\&. The position is the offset within the buffer that writing/reading starts at\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIposition\fP The offset to set the current position to\&. The new offset must be 0 and not exceed the size of the buffer\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether setting the position to the requested offset succeseeded\&. True is returned when the operation succeseeded and false is returned when the operation failed\&. 
+.RE
+.PP
+
+.SS "bool Senergy::ByteBuffer::SetPosition (unsigned intposition)"
+
+.PP
+Sets the current position within the byte buffer\&. The position is the offset within the buffer that writing/reading starts at\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIposition\fP The offset to set the current position to\&. The new offset must be 0 and not exceed the size of the buffer\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether setting the position to the requested offset succeseeded\&. True is returned when the operation succeseeded and false is returned when the operation failed\&. 
+.RE
+.PP
+
+.SS "int Senergy::ByteBuffer::Size ()"
+
+.PP
+Gets the size of the buffer\&. This is not the same as the data size\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The size of the buffer, in bytes\&. 
+.RE
+.PP
+
+.SS "void Senergy::ByteBuffer::Write (char *data, unsigned intsize)"
+
+.PP
+Writes the specified data of the specified size to the buffer\&. The buffer is automaticlly resized when the specified data does not fit into the current buffer\&. 
+.PP
+\fBNote:\fP
+.RS 4
+Increases the position by the specified size\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP The data to write to the buffer\&. If the specified data is NULL, no data will be written\&. 
+.br
+\fIsize\fP The size of the data to write\&. 
+.RE
+.PP
+
+.SS "void Senergy::ByteBuffer::Write (void *data, unsigned intsize)"
+
+.PP
+Writes the specified data of the specified size to the buffer\&. The buffer is automaticlly resized when the specified data does not fit into the current buffer\&. 
+.PP
+\fBNote:\fP
+.RS 4
+Increases the position by the specified size\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP The data to write to the buffer\&. If the specified data is NULL, no data will be written\&. 
+.br
+\fIsize\fP The size of the data to write\&. 
+.RE
+.PP
+
+.SS "void Senergy::ByteBuffer::Write (char *data, intsize)"
+
+.PP
+Writes the specified data of the specified size to the buffer\&. The buffer is automaticlly resized when the specified data does not fit into the current buffer\&. 
+.PP
+\fBNote:\fP
+.RS 4
+Increases the position by the specified size\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP The data to write to the buffer\&. If the specified data is NULL, no data will be written\&. 
+.br
+\fIsize\fP The size of the data to write\&. 
+.RE
+.PP
+
+.SS "void Senergy::ByteBuffer::Write (void *data, intsize)"
+
+.PP
+Writes the specified data of the specified size to the buffer\&. The buffer is automaticlly resized when the specified data does not fit into the current buffer\&. 
+.PP
+\fBNote:\fP
+.RS 4
+Increases the position by the specified size\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP The data to write to the buffer\&. If the specified data is NULL, no data will be written\&. 
+.br
+\fIsize\fP The size of the data to write\&. 
+.RE
+.PP
+
+.SS "void Senergy::ByteBuffer::Write (const std::string &data)"
+
+.PP
+Writes the specified string to the buffer\&. The buffer is automaticlly resized when the specified string does not fit into the buffer\&. 
+.PP
+\fBNote:\fP
+.RS 4
+Increases the position by the size of the specified string\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP The string to write to the buffer\&. 
+.RE
+.PP
+
+.SS "void Senergy::ByteBuffer::Write (intvalue)"
+
+.PP
+Writes the specified value to the buffer\&. The buffer is automaticlly resized when the specified value does not fit into the buffer\&. 
+.PP
+\fBNote:\fP
+.RS 4
+Increases the position by the size of the specified value\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The value to write to the buffer\&. 
+.RE
+.PP
+
+.SS "void Senergy::ByteBuffer::Write (unsigned intvalue)"
+
+.SS "void Senergy::ByteBuffer::Write (charvalue)"
+
+.SS "void Senergy::ByteBuffer::Write (unsigned charvalue)"
+
+.SS "void Senergy::ByteBuffer::Write (shortvalue)"
+
+.SS "void Senergy::ByteBuffer::Write (unsigned shortvalue)"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

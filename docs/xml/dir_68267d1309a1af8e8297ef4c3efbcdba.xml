@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerdir refid="dir_43fe9c611a9fdc7364335d381ea28669">src/senergy</innerdir>
+    <innerfile refid="bytebuffer_8cpp">bytebuffer.cpp</innerfile>
+    <innerfile refid="convert_8cpp">convert.cpp</innerfile>
+    <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <innerfile refid="print_8cpp">print.cpp</innerfile>
+    <innerfile refid="socket_8cpp">socket.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/photonios/Documents/Senergy/src/"/>
+  </compounddef>
+</doxygen>

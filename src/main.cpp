@@ -107,9 +107,12 @@ int main(int argc, char **argv)
 		int bytes_received = socket.Receive(receive_buffer, 1024);
 		if(bytes_received < 0)
 		{
+			printf("Error: %i\n", socket.GetErrorCode());
 			printf("continue\n");
 			continue;
 		}
+
+		printf("Received from: %s\n", socket.GetRemoteHost().c_str());
 
 		receive_buffer.SetPosition(0);
 

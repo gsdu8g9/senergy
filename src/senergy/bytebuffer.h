@@ -198,7 +198,7 @@ public:
 	 *
 	 * \note Increases the position by the size of the specified value.
 	 *
-	 * \param data The value to write to the buffer.
+	 * \param value The value to write to the buffer.
 	 */
 	void Write(int value);
 	void Write(unsigned int value);

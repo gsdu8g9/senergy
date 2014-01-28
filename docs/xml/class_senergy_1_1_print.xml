@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_senergy_1_1_print" kind="class" prot="public">
+    <compoundname>Senergy::Print</compoundname>
+    <includes refid="print_8h" local="no">print.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_senergy_1_1_print_1a6c6b70bd91e56896058004bf82201010" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::Print::Hexadecimal</definition>
+        <argsstring>(char *data, int size)</argsstring>
+        <name>Hexadecimal</name>
+        <param>
+          <type>char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Prints the specified char array of the specified string, byte by byte where each byte is shown in it&apos;s hexadecimal representation. Followed by a new-line character (<linebreak/>
+). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to print hexadecimal. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the data to print. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/print.h" line="47" column="1" bodyfile="/home/photonios/Documents/Senergy/src/print.cpp" bodystart="27" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_print_1a7899dd50cdb0b0a6e7ed144d62ea227d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::Print::Integer</definition>
+        <argsstring>(int value)</argsstring>
+        <name>Integer</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Prints the specified integer value to the screen, followed by a new-line character. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer value to print to the screen. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/print.h" line="55" column="1" bodyfile="/home/photonios/Documents/Senergy/src/print.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains simple utilities that facilitate printing various data types or data structures to the screen. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/print.h" line="37" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/print.h" bodystart="36" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_senergy_1_1_print_1a6c6b70bd91e56896058004bf82201010" prot="public" virt="non-virtual"><scope>Senergy::Print</scope><name>Hexadecimal</name></member>
+      <member refid="class_senergy_1_1_print_1a7899dd50cdb0b0a6e7ed144d62ea227d" prot="public" virt="non-virtual"><scope>Senergy::Print</scope><name>Integer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

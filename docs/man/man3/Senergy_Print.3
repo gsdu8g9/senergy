@@ -1,0 +1,71 @@
+.TH "Senergy::Print" 3 "Tue Jan 28 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::Print \- 
+.PP
+Contains simple utilities that facilitate printing various data types or data structures to the screen\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <print\&.h>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBHexadecimal\fP (char *data, int size)"
+.br
+.RI "\fIPrints the specified char array of the specified string, byte by byte where each byte is shown in it's hexadecimal representation\&. Followed by a new-line character (
+.br
+)\&. \fP"
+.ti -1c
+.RI "static void \fBInteger\fP (int value)"
+.br
+.RI "\fIPrints the specified integer value to the screen, followed by a new-line character\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains simple utilities that facilitate printing various data types or data structures to the screen\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Senergy::Print::Hexadecimal (char *data, intsize)\fC [static]\fP"
+
+.PP
+Prints the specified char array of the specified string, byte by byte where each byte is shown in it's hexadecimal representation\&. Followed by a new-line character (
+.br
+)\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP The data to print hexadecimal\&. 
+.br
+\fIsize\fP The size of the data to print\&. 
+.RE
+.PP
+
+.SS "void Senergy::Print::Integer (intvalue)\fC [static]\fP"
+
+.PP
+Prints the specified integer value to the screen, followed by a new-line character\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The integer value to print to the screen\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

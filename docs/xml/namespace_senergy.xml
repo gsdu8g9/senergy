@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_senergy" kind="namespace">
+    <compoundname>Senergy</compoundname>
+    <innerclass refid="class_senergy_1_1_byte_buffer" prot="public">Senergy::ByteBuffer</innerclass>
+    <innerclass refid="class_senergy_1_1_convert" prot="public">Senergy::Convert</innerclass>
+    <innerclass refid="class_senergy_1_1_print" prot="public">Senergy::Print</innerclass>
+    <innernamespace refid="namespace_senergy_1_1_networking">Senergy::Networking</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespace_senergy_1a30f5cfaeb333ffdf2c3332cc590a57ea" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;ByteBuffer&gt; Senergy::ByteBufferPtr</definition>
+        <argsstring></argsstring>
+        <name>ByteBufferPtr</name>
+        <briefdescription>
+<para>A simple typedef for a shared pointer to a <ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="349" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" line="25" column="1"/>
+  </compounddef>
+</doxygen>

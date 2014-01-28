@@ -1,0 +1,93 @@
+.TH "DNS_HEADER" 3 "Tue Jan 28 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DNS_HEADER \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "unsigned short \fBid\fP"
+.br
+.ti -1c
+.RI "unsigned char \fBrd\fP:1"
+.br
+.ti -1c
+.RI "unsigned char \fBtc\fP:1"
+.br
+.ti -1c
+.RI "unsigned char \fBaa\fP:1"
+.br
+.ti -1c
+.RI "unsigned char \fBopcode\fP:4"
+.br
+.ti -1c
+.RI "unsigned char \fBqr\fP:1"
+.br
+.ti -1c
+.RI "unsigned char \fBrcode\fP:4"
+.br
+.ti -1c
+.RI "unsigned char \fBcd\fP:1"
+.br
+.ti -1c
+.RI "unsigned char \fBad\fP:1"
+.br
+.ti -1c
+.RI "unsigned char \fBz\fP:1"
+.br
+.ti -1c
+.RI "unsigned char \fBra\fP:1"
+.br
+.ti -1c
+.RI "unsigned short \fBq_count\fP"
+.br
+.ti -1c
+.RI "unsigned short \fBans_count\fP"
+.br
+.ti -1c
+.RI "unsigned short \fBauth_count\fP"
+.br
+.ti -1c
+.RI "unsigned short \fBadd_count\fP"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "unsigned char DNS_HEADER::aa"
+
+.SS "unsigned char DNS_HEADER::ad"
+
+.SS "unsigned short DNS_HEADER::add_count"
+
+.SS "unsigned short DNS_HEADER::ans_count"
+
+.SS "unsigned short DNS_HEADER::auth_count"
+
+.SS "unsigned char DNS_HEADER::cd"
+
+.SS "unsigned short DNS_HEADER::id"
+
+.SS "unsigned char DNS_HEADER::opcode"
+
+.SS "unsigned short DNS_HEADER::q_count"
+
+.SS "unsigned char DNS_HEADER::qr"
+
+.SS "unsigned char DNS_HEADER::ra"
+
+.SS "unsigned char DNS_HEADER::rcode"
+
+.SS "unsigned char DNS_HEADER::rd"
+
+.SS "unsigned char DNS_HEADER::tc"
+
+.SS "unsigned char DNS_HEADER::z"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

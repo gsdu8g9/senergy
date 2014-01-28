@@ -1,0 +1,47 @@
+.TH "src/senergy/bytebuffer.h" 3 "Tue Jan 28 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/senergy/bytebuffer.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <string>\fP
+.br
+\fC#include <cstring>\fP
+.br
+\fC#include <cstdlib>\fP
+.br
+\fC#include <memory>\fP
+.br
+\fC#include <senergy/print\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBSenergy::ByteBuffer\fP"
+.br
+.RI "\fIA dynamiclly sized buffer for binary data\&. Resizes the underlying buffer when new data is written\&. Makes it easier to write to buffers that already contain data\&. \fP"
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "\fBSenergy\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::shared_ptr
+.br
+< ByteBuffer > \fBSenergy::ByteBufferPtr\fP"
+.br
+.RI "\fIA simple typedef for a shared pointer to a \fBByteBuffer\fP instance\&. \fP"
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

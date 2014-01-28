@@ -1,0 +1,582 @@
+\hypertarget{class_senergy_1_1_byte_buffer}{\section{Senergy\-:\-:Byte\-Buffer Class Reference}
+\label{class_senergy_1_1_byte_buffer}\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}}
+}
+
+
+A dynamiclly sized buffer for binary data. Resizes the underlying buffer when new data is written. Makes it easier to write to buffers that already contain data.  
+
+
+
+
+{\ttfamily \#include $<$bytebuffer.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_senergy_1_1_byte_buffer_ab3b85c02a2ee01df37673e8887df7956}{Byte\-Buffer} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} class. The intial buffer size is 0 bytes. \end{DoxyCompactList}\item 
+\hyperlink{class_senergy_1_1_byte_buffer_a95197b8b57bb0a752ad7650a59d5facd}{Byte\-Buffer} (unsigned int size)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} class with the specified size. After initialization, the buffer is enlarged to the specified size. \end{DoxyCompactList}\item 
+\hyperlink{class_senergy_1_1_byte_buffer_aef390f867878292a797065c21cec6afe}{$\sim$\-Byte\-Buffer} ()
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer}'s destructor. Free's the underlying buffer, and cleans up used resources. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_byte_buffer_ad141d494b81ff561ede715c4f7ceb840}{Is\-Empty} ()
+\begin{DoxyCompactList}\small\item\em Checks if the buffer is empty and returns true when the buffer is empty and false when the buffer is not empty. \end{DoxyCompactList}\item 
+int \hyperlink{class_senergy_1_1_byte_buffer_a22be2d9d356958c4cf352bc31edb1735}{Size} ()
+\begin{DoxyCompactList}\small\item\em Gets the size of the buffer. This is not the same as the data size. \end{DoxyCompactList}\item 
+int \hyperlink{class_senergy_1_1_byte_buffer_ab938ed32f9f909145f93099f4620da69}{Get\-Remaining\-Size} ()
+\begin{DoxyCompactList}\small\item\em Gets the amount of bytes that can be read until the end of the buffer is reached. \end{DoxyCompactList}\item 
+int \hyperlink{class_senergy_1_1_byte_buffer_a286e096451b62a14a8d645e1c9da62af}{Get\-Position} ()
+\begin{DoxyCompactList}\small\item\em Gets the current position within the byte buffer. The position is the offset within the buffer that writing/reading starts at. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_byte_buffer_a13dd8a2eec8b93ac224f0da614c7f6f8}{Set\-Position} (int position)
+\begin{DoxyCompactList}\small\item\em Sets the current position within the byte buffer. The position is the offset within the buffer that writing/reading starts at. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_byte_buffer_a52af5d53098be5cb179f9a05f84f39e2}{Set\-Position} (unsigned int position)
+\begin{DoxyCompactList}\small\item\em Sets the current position within the byte buffer. The position is the offset within the buffer that writing/reading starts at. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_byte_buffer_a25b96a3aed3e617362dbaee66915c33a}{Reserve} (unsigned int size)
+\begin{DoxyCompactList}\small\item\em Assures that the buffer is of the specified size and enlarges the buffer when the current size of the buffer is below the specified, desired size. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_byte_buffer_aa650965d24700a696af31aa9cc20fa68}{Reserve} (int size)
+\begin{DoxyCompactList}\small\item\em Assures that the buffer is of the specified size and enlarges the buffer when the current size of the buffer is below the specified, desired size. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_byte_buffer_a9a561b3dd8778ee68e75e5a62a38fa60}{Write} (char $\ast$data, unsigned int size)
+\begin{DoxyCompactList}\small\item\em Writes the specified data of the specified size to the buffer. The buffer is automaticlly resized when the specified data does not fit into the current buffer. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_byte_buffer_ac4a328ba46fb339b37cb0475c6944c18}{Write} (void $\ast$data, unsigned int size)
+\begin{DoxyCompactList}\small\item\em Writes the specified data of the specified size to the buffer. The buffer is automaticlly resized when the specified data does not fit into the current buffer. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_byte_buffer_a3dbfe87ee79c1322252c625bf4915f18}{Write} (char $\ast$data, int size)
+\begin{DoxyCompactList}\small\item\em Writes the specified data of the specified size to the buffer. The buffer is automaticlly resized when the specified data does not fit into the current buffer. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_byte_buffer_adeb00769eae3728d222587e00810d422}{Write} (void $\ast$data, int size)
+\begin{DoxyCompactList}\small\item\em Writes the specified data of the specified size to the buffer. The buffer is automaticlly resized when the specified data does not fit into the current buffer. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_byte_buffer_a9dc9ad6de5d9401a698984634537b27a}{Write} (const std\-::string \&data)
+\begin{DoxyCompactList}\small\item\em Writes the specified string to the buffer. The buffer is automaticlly resized when the specified string does not fit into the buffer. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_byte_buffer_ab523222c96a0c1fff96a7f6c2794ca2d}{Write} (int value)
+\begin{DoxyCompactList}\small\item\em Writes the specified value to the buffer. The buffer is automaticlly resized when the specified value does not fit into the buffer. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_byte_buffer_a8a51e4f9795d312ff2ab8f152b533bb7}{Write} (unsigned int value)
+\item 
+void \hyperlink{class_senergy_1_1_byte_buffer_add80584faab29bcadcb437b45ad97a87}{Write} (char value)
+\item 
+void \hyperlink{class_senergy_1_1_byte_buffer_a061fe3c4158ba940e68bf4545639561e}{Write} (unsigned char value)
+\item 
+void \hyperlink{class_senergy_1_1_byte_buffer_ae0e9d53b9afa8b098eed7b517a60b938}{Write} (short value)
+\item 
+void \hyperlink{class_senergy_1_1_byte_buffer_a9286d05c71ce66859098778f11be9c51}{Write} (unsigned short value)
+\item 
+bool \hyperlink{class_senergy_1_1_byte_buffer_ae4e73e6e193bec7b9f7df0919d1641d9}{Read} (char $\ast$buffer, int size)
+\begin{DoxyCompactList}\small\item\em Reads the specified amount of bytes from the buffer and copies it into the specified buffer. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_byte_buffer_ace3d04d38706d534a16e596ee291630b}{Read} (char $\ast$buffer, unsigned int size)
+\begin{DoxyCompactList}\small\item\em Reads the specified amount of bytes from the buffer and copies it into the specified buffer. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_byte_buffer_a391deafd9b6e3c4b4c2b92fe78358ebf}{Read\-Remaining} (char $\ast$buffer, int max\-\_\-size)
+\item 
+bool \hyperlink{class_senergy_1_1_byte_buffer_a8e9ec7a8d6c26c01a738768928fff704}{Read\-Remaining} (char $\ast$buffer, unsigned int max\-\_\-size)
+\item 
+int \hyperlink{class_senergy_1_1_byte_buffer_ab15f04d43dd82cebf6dc25254d210e4e}{Read\-Int} ()
+\begin{DoxyCompactList}\small\item\em Reads an integer from the buffer. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_senergy_1_1_byte_buffer_a7abe5475b2a9adcad384d3125640aba2}{Read\-Unsigned\-Int} ()
+\begin{DoxyCompactList}\small\item\em Reads an unsigned integer from the buffer. \end{DoxyCompactList}\item 
+char \hyperlink{class_senergy_1_1_byte_buffer_a806db1b33ff86b572a0804879d181dc8}{Read\-Char} ()
+\begin{DoxyCompactList}\small\item\em Reads a char from the buffer. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{class_senergy_1_1_byte_buffer_ad9a7a05b0285fe070cde3983458de5f6}{Read\-Unsigned\-Char} ()
+\begin{DoxyCompactList}\small\item\em Reads an unsigned char from the buffer. \end{DoxyCompactList}\item 
+short \hyperlink{class_senergy_1_1_byte_buffer_a989443842e20c2feba4268e968911fe8}{Read\-Short} ()
+\begin{DoxyCompactList}\small\item\em Reads a short from the buffer. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{class_senergy_1_1_byte_buffer_aa6b6bfdb398a75b92c79bcdfc1986821}{Read\-Unsigned\-Short} ()
+\begin{DoxyCompactList}\small\item\em Reads an unsigned short from the buffer. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_senergy_1_1_byte_buffer_a5c3f960422533abc898061be11b6f613}{Read\-All} ()
+\begin{DoxyCompactList}\small\item\em Reads the contents of the buffer from start to end and returns the contents as a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A dynamiclly sized buffer for binary data. Resizes the underlying buffer when new data is written. Makes it easier to write to buffers that already contain data. 
+
+\begin{DoxyAuthor}{Author}
+Swen Kooij (Photonios) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_senergy_1_1_byte_buffer_ab3b85c02a2ee01df37673e8887df7956}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Byte\-Buffer@{Byte\-Buffer}}
+\index{Byte\-Buffer@{Byte\-Buffer}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Byte\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}Senergy\-::\-Byte\-Buffer\-::\-Byte\-Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_ab3b85c02a2ee01df37673e8887df7956}
+
+
+Initializes a new instance of the \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} class. The intial buffer size is 0 bytes. 
+
+\hypertarget{class_senergy_1_1_byte_buffer_a95197b8b57bb0a752ad7650a59d5facd}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Byte\-Buffer@{Byte\-Buffer}}
+\index{Byte\-Buffer@{Byte\-Buffer}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Byte\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}Senergy\-::\-Byte\-Buffer\-::\-Byte\-Buffer (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a95197b8b57bb0a752ad7650a59d5facd}
+
+
+Initializes a new instance of the \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} class with the specified size. After initialization, the buffer is enlarged to the specified size. 
+
+\hypertarget{class_senergy_1_1_byte_buffer_aef390f867878292a797065c21cec6afe}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!$\sim$\-Byte\-Buffer@{$\sim$\-Byte\-Buffer}}
+\index{$\sim$\-Byte\-Buffer@{$\sim$\-Byte\-Buffer}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{$\sim$\-Byte\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}Senergy\-::\-Byte\-Buffer\-::$\sim$\-Byte\-Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_aef390f867878292a797065c21cec6afe}
+
+
+The \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer}'s destructor. Free's the underlying buffer, and cleans up used resources. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_byte_buffer_a286e096451b62a14a8d645e1c9da62af}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Get\-Position@{Get\-Position}}
+\index{Get\-Position@{Get\-Position}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Get\-Position}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Byte\-Buffer\-::\-Get\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a286e096451b62a14a8d645e1c9da62af}
+
+
+Gets the current position within the byte buffer. The position is the offset within the buffer that writing/reading starts at. 
+
+\begin{DoxyReturn}{Returns}
+The position within the byte buffer. 
+\end{DoxyReturn}
+\hypertarget{class_senergy_1_1_byte_buffer_ab938ed32f9f909145f93099f4620da69}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Get\-Remaining\-Size@{Get\-Remaining\-Size}}
+\index{Get\-Remaining\-Size@{Get\-Remaining\-Size}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Get\-Remaining\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Byte\-Buffer\-::\-Get\-Remaining\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_ab938ed32f9f909145f93099f4620da69}
+
+
+Gets the amount of bytes that can be read until the end of the buffer is reached. 
+
+\begin{DoxyReturn}{Returns}
+The amount of bytes that can be read until the end of the buffer is reached. 
+\end{DoxyReturn}
+\hypertarget{class_senergy_1_1_byte_buffer_ad141d494b81ff561ede715c4f7ceb840}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Is\-Empty@{Is\-Empty}}
+\index{Is\-Empty@{Is\-Empty}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Byte\-Buffer\-::\-Is\-Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_ad141d494b81ff561ede715c4f7ceb840}
+
+
+Checks if the buffer is empty and returns true when the buffer is empty and false when the buffer is not empty. 
+
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether the buffer is empty. True is returned when the buffer is empty and false when it is not. 
+\end{DoxyReturn}
+\hypertarget{class_senergy_1_1_byte_buffer_ae4e73e6e193bec7b9f7df0919d1641d9}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read@{Read}}
+\index{Read@{Read}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Byte\-Buffer\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buffer, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_ae4e73e6e193bec7b9f7df0919d1641d9}
+
+
+Reads the specified amount of bytes from the buffer and copies it into the specified buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to write to. \\
+\hline
+{\em size} & The amount of bytes to read from the buffer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether reading succeseeded. True is returned when reading succeseeded and false when reading failed. 
+\end{DoxyReturn}
+\hypertarget{class_senergy_1_1_byte_buffer_ace3d04d38706d534a16e596ee291630b}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read@{Read}}
+\index{Read@{Read}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Byte\-Buffer\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buffer, }
+\item[{unsigned int}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_ace3d04d38706d534a16e596ee291630b}
+
+
+Reads the specified amount of bytes from the buffer and copies it into the specified buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to write to. \\
+\hline
+{\em size} & The amount of bytes to read from the buffer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether reading succeseeded. True is returned when reading succeseeded and false when reading failed. 
+\end{DoxyReturn}
+\hypertarget{class_senergy_1_1_byte_buffer_a5c3f960422533abc898061be11b6f613}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-All@{Read\-All}}
+\index{Read\-All@{Read\-All}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Read\-All}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Senergy\-::\-Byte\-Buffer\-::\-Read\-All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a5c3f960422533abc898061be11b6f613}
+
+
+Reads the contents of the buffer from start to end and returns the contents as a string. 
+
+\begin{DoxyNote}{Note}
+This does not affect the current position.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The contents of the buffer as a string. 
+\end{DoxyReturn}
+\hypertarget{class_senergy_1_1_byte_buffer_a806db1b33ff86b572a0804879d181dc8}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-Char@{Read\-Char}}
+\index{Read\-Char@{Read\-Char}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Read\-Char}]{\setlength{\rightskip}{0pt plus 5cm}char Senergy\-::\-Byte\-Buffer\-::\-Read\-Char (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a806db1b33ff86b572a0804879d181dc8}
+
+
+Reads a char from the buffer. 
+
+\begin{DoxyReturn}{Returns}
+The char that was read from the buffer. -\/1 is returned when reading failed. 
+\end{DoxyReturn}
+\hypertarget{class_senergy_1_1_byte_buffer_ab15f04d43dd82cebf6dc25254d210e4e}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-Int@{Read\-Int}}
+\index{Read\-Int@{Read\-Int}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Read\-Int}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Byte\-Buffer\-::\-Read\-Int (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_ab15f04d43dd82cebf6dc25254d210e4e}
+
+
+Reads an integer from the buffer. 
+
+\begin{DoxyReturn}{Returns}
+The integer that was read from the buffer. -\/1 is returned when reading failed. 
+\end{DoxyReturn}
+\hypertarget{class_senergy_1_1_byte_buffer_a391deafd9b6e3c4b4c2b92fe78358ebf}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-Remaining@{Read\-Remaining}}
+\index{Read\-Remaining@{Read\-Remaining}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Read\-Remaining}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Byte\-Buffer\-::\-Read\-Remaining (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buffer, }
+\item[{int}]{max\-\_\-size}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a391deafd9b6e3c4b4c2b92fe78358ebf}
+\hypertarget{class_senergy_1_1_byte_buffer_a8e9ec7a8d6c26c01a738768928fff704}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-Remaining@{Read\-Remaining}}
+\index{Read\-Remaining@{Read\-Remaining}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Read\-Remaining}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Byte\-Buffer\-::\-Read\-Remaining (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buffer, }
+\item[{unsigned int}]{max\-\_\-size}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a8e9ec7a8d6c26c01a738768928fff704}
+\hypertarget{class_senergy_1_1_byte_buffer_a989443842e20c2feba4268e968911fe8}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-Short@{Read\-Short}}
+\index{Read\-Short@{Read\-Short}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Read\-Short}]{\setlength{\rightskip}{0pt plus 5cm}short Senergy\-::\-Byte\-Buffer\-::\-Read\-Short (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a989443842e20c2feba4268e968911fe8}
+
+
+Reads a short from the buffer. 
+
+\begin{DoxyReturn}{Returns}
+The short that was read from the buffer. -\/1 is returned when reading failed. 
+\end{DoxyReturn}
+\hypertarget{class_senergy_1_1_byte_buffer_ad9a7a05b0285fe070cde3983458de5f6}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-Unsigned\-Char@{Read\-Unsigned\-Char}}
+\index{Read\-Unsigned\-Char@{Read\-Unsigned\-Char}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Read\-Unsigned\-Char}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Senergy\-::\-Byte\-Buffer\-::\-Read\-Unsigned\-Char (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_ad9a7a05b0285fe070cde3983458de5f6}
+
+
+Reads an unsigned char from the buffer. 
+
+\begin{DoxyReturn}{Returns}
+The unsigned char that was read from the buffer. 0 is returned when reading failed. 
+\end{DoxyReturn}
+\hypertarget{class_senergy_1_1_byte_buffer_a7abe5475b2a9adcad384d3125640aba2}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-Unsigned\-Int@{Read\-Unsigned\-Int}}
+\index{Read\-Unsigned\-Int@{Read\-Unsigned\-Int}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Read\-Unsigned\-Int}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Senergy\-::\-Byte\-Buffer\-::\-Read\-Unsigned\-Int (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a7abe5475b2a9adcad384d3125640aba2}
+
+
+Reads an unsigned integer from the buffer. 
+
+\begin{DoxyReturn}{Returns}
+The unsigned integer that was read from the buffer. 0 is returned when reading failed. 
+\end{DoxyReturn}
+\hypertarget{class_senergy_1_1_byte_buffer_aa6b6bfdb398a75b92c79bcdfc1986821}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-Unsigned\-Short@{Read\-Unsigned\-Short}}
+\index{Read\-Unsigned\-Short@{Read\-Unsigned\-Short}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Read\-Unsigned\-Short}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short Senergy\-::\-Byte\-Buffer\-::\-Read\-Unsigned\-Short (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_aa6b6bfdb398a75b92c79bcdfc1986821}
+
+
+Reads an unsigned short from the buffer. 
+
+\begin{DoxyReturn}{Returns}
+The unsigned short that was read from the buffer. 0 is returned when reading failed. 
+\end{DoxyReturn}
+\hypertarget{class_senergy_1_1_byte_buffer_a25b96a3aed3e617362dbaee66915c33a}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Reserve@{Reserve}}
+\index{Reserve@{Reserve}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Reserve}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Byte\-Buffer\-::\-Reserve (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a25b96a3aed3e617362dbaee66915c33a}
+
+
+Assures that the buffer is of the specified size and enlarges the buffer when the current size of the buffer is below the specified, desired size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The desired size of the buffer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_senergy_1_1_byte_buffer_aa650965d24700a696af31aa9cc20fa68}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Reserve@{Reserve}}
+\index{Reserve@{Reserve}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Reserve}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Byte\-Buffer\-::\-Reserve (
+\begin{DoxyParamCaption}
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_aa650965d24700a696af31aa9cc20fa68}
+
+
+Assures that the buffer is of the specified size and enlarges the buffer when the current size of the buffer is below the specified, desired size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The desired size of the buffer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_senergy_1_1_byte_buffer_a13dd8a2eec8b93ac224f0da614c7f6f8}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Set\-Position@{Set\-Position}}
+\index{Set\-Position@{Set\-Position}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Byte\-Buffer\-::\-Set\-Position (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a13dd8a2eec8b93ac224f0da614c7f6f8}
+
+
+Sets the current position within the byte buffer. The position is the offset within the buffer that writing/reading starts at. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The offset to set the current position to. The new offset must be 0 and not exceed the size of the buffer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether setting the position to the requested offset succeseeded. True is returned when the operation succeseeded and false is returned when the operation failed. 
+\end{DoxyReturn}
+\hypertarget{class_senergy_1_1_byte_buffer_a52af5d53098be5cb179f9a05f84f39e2}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Set\-Position@{Set\-Position}}
+\index{Set\-Position@{Set\-Position}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Byte\-Buffer\-::\-Set\-Position (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{position}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a52af5d53098be5cb179f9a05f84f39e2}
+
+
+Sets the current position within the byte buffer. The position is the offset within the buffer that writing/reading starts at. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The offset to set the current position to. The new offset must be 0 and not exceed the size of the buffer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether setting the position to the requested offset succeseeded. True is returned when the operation succeseeded and false is returned when the operation failed. 
+\end{DoxyReturn}
+\hypertarget{class_senergy_1_1_byte_buffer_a22be2d9d356958c4cf352bc31edb1735}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Size@{Size}}
+\index{Size@{Size}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Byte\-Buffer\-::\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a22be2d9d356958c4cf352bc31edb1735}
+
+
+Gets the size of the buffer. This is not the same as the data size. 
+
+\begin{DoxyReturn}{Returns}
+The size of the buffer, in bytes. 
+\end{DoxyReturn}
+\hypertarget{class_senergy_1_1_byte_buffer_a9a561b3dd8778ee68e75e5a62a38fa60}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Write@{Write}}
+\index{Write@{Write}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Byte\-Buffer\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{data, }
+\item[{unsigned int}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a9a561b3dd8778ee68e75e5a62a38fa60}
+
+
+Writes the specified data of the specified size to the buffer. The buffer is automaticlly resized when the specified data does not fit into the current buffer. 
+
+\begin{DoxyNote}{Note}
+Increases the position by the specified size.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to write to the buffer. If the specified data is N\-U\-L\-L, no data will be written. \\
+\hline
+{\em size} & The size of the data to write. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_senergy_1_1_byte_buffer_ac4a328ba46fb339b37cb0475c6944c18}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Write@{Write}}
+\index{Write@{Write}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Byte\-Buffer\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{unsigned int}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_ac4a328ba46fb339b37cb0475c6944c18}
+
+
+Writes the specified data of the specified size to the buffer. The buffer is automaticlly resized when the specified data does not fit into the current buffer. 
+
+\begin{DoxyNote}{Note}
+Increases the position by the specified size.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to write to the buffer. If the specified data is N\-U\-L\-L, no data will be written. \\
+\hline
+{\em size} & The size of the data to write. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_senergy_1_1_byte_buffer_a3dbfe87ee79c1322252c625bf4915f18}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Write@{Write}}
+\index{Write@{Write}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Byte\-Buffer\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{data, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a3dbfe87ee79c1322252c625bf4915f18}
+
+
+Writes the specified data of the specified size to the buffer. The buffer is automaticlly resized when the specified data does not fit into the current buffer. 
+
+\begin{DoxyNote}{Note}
+Increases the position by the specified size.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to write to the buffer. If the specified data is N\-U\-L\-L, no data will be written. \\
+\hline
+{\em size} & The size of the data to write. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_senergy_1_1_byte_buffer_adeb00769eae3728d222587e00810d422}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Write@{Write}}
+\index{Write@{Write}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Byte\-Buffer\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_adeb00769eae3728d222587e00810d422}
+
+
+Writes the specified data of the specified size to the buffer. The buffer is automaticlly resized when the specified data does not fit into the current buffer. 
+
+\begin{DoxyNote}{Note}
+Increases the position by the specified size.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to write to the buffer. If the specified data is N\-U\-L\-L, no data will be written. \\
+\hline
+{\em size} & The size of the data to write. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_senergy_1_1_byte_buffer_a9dc9ad6de5d9401a698984634537b27a}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Write@{Write}}
+\index{Write@{Write}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Byte\-Buffer\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a9dc9ad6de5d9401a698984634537b27a}
+
+
+Writes the specified string to the buffer. The buffer is automaticlly resized when the specified string does not fit into the buffer. 
+
+\begin{DoxyNote}{Note}
+Increases the position by the size of the specified string.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The string to write to the buffer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_senergy_1_1_byte_buffer_ab523222c96a0c1fff96a7f6c2794ca2d}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Write@{Write}}
+\index{Write@{Write}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Byte\-Buffer\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_ab523222c96a0c1fff96a7f6c2794ca2d}
+
+
+Writes the specified value to the buffer. The buffer is automaticlly resized when the specified value does not fit into the buffer. 
+
+\begin{DoxyNote}{Note}
+Increases the position by the size of the specified value.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to write to the buffer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_senergy_1_1_byte_buffer_a8a51e4f9795d312ff2ab8f152b533bb7}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Write@{Write}}
+\index{Write@{Write}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Byte\-Buffer\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a8a51e4f9795d312ff2ab8f152b533bb7}
+\hypertarget{class_senergy_1_1_byte_buffer_add80584faab29bcadcb437b45ad97a87}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Write@{Write}}
+\index{Write@{Write}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Byte\-Buffer\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{char}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_add80584faab29bcadcb437b45ad97a87}
+\hypertarget{class_senergy_1_1_byte_buffer_a061fe3c4158ba940e68bf4545639561e}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Write@{Write}}
+\index{Write@{Write}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Byte\-Buffer\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a061fe3c4158ba940e68bf4545639561e}
+\hypertarget{class_senergy_1_1_byte_buffer_ae0e9d53b9afa8b098eed7b517a60b938}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Write@{Write}}
+\index{Write@{Write}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Byte\-Buffer\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{short}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_ae0e9d53b9afa8b098eed7b517a60b938}
+\hypertarget{class_senergy_1_1_byte_buffer_a9286d05c71ce66859098778f11be9c51}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Write@{Write}}
+\index{Write@{Write}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Byte\-Buffer\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a9286d05c71ce66859098778f11be9c51}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/senergy/\hyperlink{bytebuffer_8h}{bytebuffer.\-h}\item 
+src/\hyperlink{bytebuffer_8cpp}{bytebuffer.\-cpp}\end{DoxyCompactItemize}

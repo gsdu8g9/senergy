@@ -1,0 +1,857 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_senergy_1_1_byte_buffer" kind="class" prot="public">
+    <compoundname>Senergy::ByteBuffer</compoundname>
+    <includes refid="bytebuffer_8h" local="no">bytebuffer.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_senergy_1_1_byte_buffer_1a082756804ba24434ffe524d53fba18a5" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* Senergy::ByteBuffer::m_data</definition>
+        <argsstring></argsstring>
+        <name>m_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="337" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_senergy_1_1_byte_buffer_1a2aede7f584b693426777c72b06e4d32b" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Senergy::ByteBuffer::m_current_size</definition>
+        <argsstring></argsstring>
+        <name>m_current_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="340" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_senergy_1_1_byte_buffer_1ac9aafe3bb1332c3f32310ee6aa8c9f06" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Senergy::ByteBuffer::m_position</definition>
+        <argsstring></argsstring>
+        <name>m_position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="343" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" bodystart="343" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1ab3b85c02a2ee01df37673e8887df7956" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Senergy::ByteBuffer::ByteBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>ByteBuffer</name>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> class. The intial buffer size is 0 bytes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="46" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="27" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a95197b8b57bb0a752ad7650a59d5facd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Senergy::ByteBuffer::ByteBuffer</definition>
+        <argsstring>(unsigned int size)</argsstring>
+        <name>ByteBuffer</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> class with the specified size. After initialization, the buffer is enlarged to the specified size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="52" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="35" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1aef390f867878292a797065c21cec6afe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Senergy::ByteBuffer::~ByteBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>~ByteBuffer</name>
+        <briefdescription>
+<para>The <ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref>&apos;s destructor. Free&apos;s the underlying buffer, and cleans up used resources. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="57" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="43" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1ad141d494b81ff561ede715c4f7ceb840" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::ByteBuffer::IsEmpty</definition>
+        <argsstring>()</argsstring>
+        <name>IsEmpty</name>
+        <briefdescription>
+<para>Checks if the buffer is empty and returns true when the buffer is empty and false when the buffer is not empty. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A boolean indicating whether the buffer is empty. True is returned when the buffer is empty and false when it is not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="66" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a22be2d9d356958c4cf352bc31edb1735" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Senergy::ByteBuffer::Size</definition>
+        <argsstring>()</argsstring>
+        <name>Size</name>
+        <briefdescription>
+<para>Gets the size of the buffer. This is not the same as the data size. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The size of the buffer, in bytes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="73" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1ab938ed32f9f909145f93099f4620da69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Senergy::ByteBuffer::GetRemainingSize</definition>
+        <argsstring>()</argsstring>
+        <name>GetRemainingSize</name>
+        <briefdescription>
+<para>Gets the amount of bytes that can be read until the end of the buffer is reached. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The amount of bytes that can be read until the end of the buffer is reached. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="81" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a286e096451b62a14a8d645e1c9da62af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Senergy::ByteBuffer::GetPosition</definition>
+        <argsstring>()</argsstring>
+        <name>GetPosition</name>
+        <briefdescription>
+<para>Gets the current position within the byte buffer. The position is the offset within the buffer that writing/reading starts at. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The position within the byte buffer. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="89" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a13dd8a2eec8b93ac224f0da614c7f6f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::ByteBuffer::SetPosition</definition>
+        <argsstring>(int position)</argsstring>
+        <name>SetPosition</name>
+        <param>
+          <type>int</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Sets the current position within the byte buffer. The position is the offset within the buffer that writing/reading starts at. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The offset to set the current position to. The new offset must be 0 and not exceed the size of the buffer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean indicating whether setting the position to the requested offset succeseeded. True is returned when the operation succeseeded and false is returned when the operation failed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="102" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="72" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a52af5d53098be5cb179f9a05f84f39e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::ByteBuffer::SetPosition</definition>
+        <argsstring>(unsigned int position)</argsstring>
+        <name>SetPosition</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Sets the current position within the byte buffer. The position is the offset within the buffer that writing/reading starts at. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The offset to set the current position to. The new offset must be 0 and not exceed the size of the buffer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean indicating whether setting the position to the requested offset succeseeded. True is returned when the operation succeseeded and false is returned when the operation failed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="115" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a25b96a3aed3e617362dbaee66915c33a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::ByteBuffer::Reserve</definition>
+        <argsstring>(unsigned int size)</argsstring>
+        <name>Reserve</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Assures that the buffer is of the specified size and enlarges the buffer when the current size of the buffer is below the specified, desired size. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired size of the buffer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="123" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="85" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1aa650965d24700a696af31aa9cc20fa68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::ByteBuffer::Reserve</definition>
+        <argsstring>(int size)</argsstring>
+        <name>Reserve</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Assures that the buffer is of the specified size and enlarges the buffer when the current size of the buffer is below the specified, desired size. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired size of the buffer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="131" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="96" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a9a561b3dd8778ee68e75e5a62a38fa60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::ByteBuffer::Write</definition>
+        <argsstring>(char *data, unsigned int size)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Writes the specified data of the specified size to the buffer. The buffer is automaticlly resized when the specified data does not fit into the current buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Increases the position by the specified size.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to write to the buffer. If the specified data is NULL, no data will be written. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the data to write. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="144" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1ac4a328ba46fb339b37cb0475c6944c18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::ByteBuffer::Write</definition>
+        <argsstring>(void *data, unsigned int size)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Writes the specified data of the specified size to the buffer. The buffer is automaticlly resized when the specified data does not fit into the current buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Increases the position by the specified size.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to write to the buffer. If the specified data is NULL, no data will be written. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the data to write. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="157" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="114" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a3dbfe87ee79c1322252c625bf4915f18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::ByteBuffer::Write</definition>
+        <argsstring>(char *data, int size)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Writes the specified data of the specified size to the buffer. The buffer is automaticlly resized when the specified data does not fit into the current buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Increases the position by the specified size.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to write to the buffer. If the specified data is NULL, no data will be written. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the data to write. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="170" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1adeb00769eae3728d222587e00810d422" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::ByteBuffer::Write</definition>
+        <argsstring>(void *data, int size)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Writes the specified data of the specified size to the buffer. The buffer is automaticlly resized when the specified data does not fit into the current buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Increases the position by the specified size.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to write to the buffer. If the specified data is NULL, no data will be written. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the data to write. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="183" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="128" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a9dc9ad6de5d9401a698984634537b27a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::ByteBuffer::Write</definition>
+        <argsstring>(const std::string &amp;data)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Writes the specified string to the buffer. The buffer is automaticlly resized when the specified string does not fit into the buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Increases the position by the size of the specified string.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to write to the buffer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="193" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1ab523222c96a0c1fff96a7f6c2794ca2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::ByteBuffer::Write</definition>
+        <argsstring>(int value)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Writes the specified value to the buffer. The buffer is automaticlly resized when the specified value does not fit into the buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Increases the position by the size of the specified value.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to write to the buffer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="203" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="141" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a8a51e4f9795d312ff2ab8f152b533bb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::ByteBuffer::Write</definition>
+        <argsstring>(unsigned int value)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="204" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="146" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1add80584faab29bcadcb437b45ad97a87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::ByteBuffer::Write</definition>
+        <argsstring>(char value)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>char</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="205" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="151" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a061fe3c4158ba940e68bf4545639561e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::ByteBuffer::Write</definition>
+        <argsstring>(unsigned char value)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="206" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="156" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1ae0e9d53b9afa8b098eed7b517a60b938" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::ByteBuffer::Write</definition>
+        <argsstring>(short value)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>short</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="207" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="161" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a9286d05c71ce66859098778f11be9c51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::ByteBuffer::Write</definition>
+        <argsstring>(unsigned short value)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="208" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="166" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::ByteBuffer::Read</definition>
+        <argsstring>(char *buffer, int size)</argsstring>
+        <name>Read</name>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Reads the specified amount of bytes from the buffer and copies it into the specified buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to write to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of bytes to read from the buffer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean indicating whether reading succeseeded. True is returned when reading succeseeded and false when reading failed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="220" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="171" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1ace3d04d38706d534a16e596ee291630b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::ByteBuffer::Read</definition>
+        <argsstring>(char *buffer, unsigned int size)</argsstring>
+        <name>Read</name>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Reads the specified amount of bytes from the buffer and copies it into the specified buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to write to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of bytes to read from the buffer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean indicating whether reading succeseeded. True is returned when reading succeseeded and false when reading failed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="232" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="186" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a391deafd9b6e3c4b4c2b92fe78358ebf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::ByteBuffer::ReadRemaining</definition>
+        <argsstring>(char *buffer, int max_size)</argsstring>
+        <name>ReadRemaining</name>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="234" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a8e9ec7a8d6c26c01a738768928fff704" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::ByteBuffer::ReadRemaining</definition>
+        <argsstring>(char *buffer, unsigned int max_size)</argsstring>
+        <name>ReadRemaining</name>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>max_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="235" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1ab15f04d43dd82cebf6dc25254d210e4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Senergy::ByteBuffer::ReadInt</definition>
+        <argsstring>()</argsstring>
+        <name>ReadInt</name>
+        <briefdescription>
+<para>Reads an integer from the buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The integer that was read from the buffer. -1 is returned when reading failed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="243" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="191" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a7abe5475b2a9adcad384d3125640aba2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Senergy::ByteBuffer::ReadUnsignedInt</definition>
+        <argsstring>()</argsstring>
+        <name>ReadUnsignedInt</name>
+        <briefdescription>
+<para>Reads an unsigned integer from the buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The unsigned integer that was read from the buffer. 0 is returned when reading failed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="251" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="196" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a806db1b33ff86b572a0804879d181dc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char Senergy::ByteBuffer::ReadChar</definition>
+        <argsstring>()</argsstring>
+        <name>ReadChar</name>
+        <briefdescription>
+<para>Reads a char from the buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The char that was read from the buffer. -1 is returned when reading failed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="259" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="201" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1ad9a7a05b0285fe070cde3983458de5f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char Senergy::ByteBuffer::ReadUnsignedChar</definition>
+        <argsstring>()</argsstring>
+        <name>ReadUnsignedChar</name>
+        <briefdescription>
+<para>Reads an unsigned char from the buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The unsigned char that was read from the buffer. 0 is returned when reading failed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="268" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="206" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a989443842e20c2feba4268e968911fe8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>short</type>
+        <definition>short Senergy::ByteBuffer::ReadShort</definition>
+        <argsstring>()</argsstring>
+        <name>ReadShort</name>
+        <briefdescription>
+<para>Reads a short from the buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The short that was read from the buffer. -1 is returned when reading failed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="276" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="211" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1aa6b6bfdb398a75b92c79bcdfc1986821" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short Senergy::ByteBuffer::ReadUnsignedShort</definition>
+        <argsstring>()</argsstring>
+        <name>ReadUnsignedShort</name>
+        <briefdescription>
+<para>Reads an unsigned short from the buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The unsigned short that was read from the buffer. 0 is returned when reading failed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="284" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="216" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a5c3f960422533abc898061be11b6f613" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Senergy::ByteBuffer::ReadAll</definition>
+        <argsstring>()</argsstring>
+        <name>ReadAll</name>
+        <briefdescription>
+<para>Reads the contents of the buffer from start to end and returns the contents as a string. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This does not affect the current position.</para></simplesect>
+<simplesect kind="return"><para>The contents of the buffer as a string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="294" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="221" bodyend="227"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a93918fd327173e3468f2d68cef7b8027" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::ByteBuffer::__set_size</definition>
+        <argsstring>(unsigned int new_size)</argsstring>
+        <name>__set_size</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>new_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="299" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="229" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a818472c84e319ab1f8a1a63987d2ed98" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void Senergy::ByteBuffer::__write_native_type</definition>
+        <argsstring>(T value)</argsstring>
+        <name>__write_native_type</name>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="303" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" bodystart="303" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a653903da9aac48f4ee93cf387036079f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Senergy::ByteBuffer::__read_native_type</definition>
+        <argsstring>()</argsstring>
+        <name>__read_native_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="316" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" bodystart="316" bodyend="333"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A dynamiclly sized buffer for binary data. Resizes the underlying buffer when new data is written. Makes it easier to write to buffers that already contain data. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="41" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" bodystart="40" bodyend="344"/>
+    <listofallmembers>
+      <member refid="class_senergy_1_1_byte_buffer_1a653903da9aac48f4ee93cf387036079f" prot="private" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>__read_native_type</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a93918fd327173e3468f2d68cef7b8027" prot="private" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>__set_size</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a818472c84e319ab1f8a1a63987d2ed98" prot="private" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>__write_native_type</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1ab3b85c02a2ee01df37673e8887df7956" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>ByteBuffer</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a95197b8b57bb0a752ad7650a59d5facd" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>ByteBuffer</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a286e096451b62a14a8d645e1c9da62af" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>GetPosition</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1ab938ed32f9f909145f93099f4620da69" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>GetRemainingSize</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1ad141d494b81ff561ede715c4f7ceb840" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>IsEmpty</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a2aede7f584b693426777c72b06e4d32b" prot="private" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>m_current_size</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a082756804ba24434ffe524d53fba18a5" prot="private" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>m_data</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1ac9aafe3bb1332c3f32310ee6aa8c9f06" prot="private" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>m_position</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>Read</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1ace3d04d38706d534a16e596ee291630b" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>Read</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a5c3f960422533abc898061be11b6f613" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>ReadAll</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a806db1b33ff86b572a0804879d181dc8" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>ReadChar</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1ab15f04d43dd82cebf6dc25254d210e4e" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>ReadInt</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a391deafd9b6e3c4b4c2b92fe78358ebf" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>ReadRemaining</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a8e9ec7a8d6c26c01a738768928fff704" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>ReadRemaining</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a989443842e20c2feba4268e968911fe8" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>ReadShort</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1ad9a7a05b0285fe070cde3983458de5f6" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>ReadUnsignedChar</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a7abe5475b2a9adcad384d3125640aba2" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>ReadUnsignedInt</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1aa6b6bfdb398a75b92c79bcdfc1986821" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>ReadUnsignedShort</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a25b96a3aed3e617362dbaee66915c33a" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>Reserve</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1aa650965d24700a696af31aa9cc20fa68" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>Reserve</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a13dd8a2eec8b93ac224f0da614c7f6f8" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>SetPosition</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a52af5d53098be5cb179f9a05f84f39e2" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>SetPosition</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a22be2d9d356958c4cf352bc31edb1735" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>Size</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a9a561b3dd8778ee68e75e5a62a38fa60" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>Write</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1ac4a328ba46fb339b37cb0475c6944c18" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>Write</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a3dbfe87ee79c1322252c625bf4915f18" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>Write</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1adeb00769eae3728d222587e00810d422" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>Write</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a9dc9ad6de5d9401a698984634537b27a" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>Write</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1ab523222c96a0c1fff96a7f6c2794ca2d" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>Write</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a8a51e4f9795d312ff2ab8f152b533bb7" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>Write</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1add80584faab29bcadcb437b45ad97a87" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>Write</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a061fe3c4158ba940e68bf4545639561e" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>Write</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1ae0e9d53b9afa8b098eed7b517a60b938" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>Write</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1a9286d05c71ce66859098778f11be9c51" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>Write</name></member>
+      <member refid="class_senergy_1_1_byte_buffer_1aef390f867878292a797065c21cec6afe" prot="public" virt="non-virtual"><scope>Senergy::ByteBuffer</scope><name>~ByteBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
