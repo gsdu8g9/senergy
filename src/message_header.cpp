@@ -54,6 +54,8 @@ MessageHeader MessageHeader::Deserialize(ByteBuffer &buffer) // static
 	if(!buffer.Read((char*)&return_header.Fields, header_size))
 		return return_header;
 
+	return_header.__host_to_network_byte_order();
+
 	return_header.m_valid = true;
 	return return_header;
 }
@@ -66,8 +68,32 @@ bool MessageHeader::Serialize(ByteBuffer &buffer)
 	int header_size = GetSize();
 	buffer.Reserve(header_size);
 
+	__host_to_network_byte_order();
+
 	buffer.Write((char *)&this->Fields, header_size);
+
+	// reverse
+	__host_to_network_byte_order();
 	return true;
+}
+
+void MessageHeader::__host_to_network_byte_order()
+{
+	this->Fields.Id 				= htons(this->Fields.Id);
+	this->Fields.RecursionDesired 	= htons(this->Fields.RecursionDesired);
+	this->Fields.Truncation 		= htons(this->Fields.Truncation);
+	this->Fields.Authoritative 		= htons(this->Fields.Authoritative);
+	this->Fields.Opcode 			= htons(this->Fields.Opcode);
+	this->Fields.IsResponse 		= htons(this->Fields.IsResponse);
+	this->Fields.ResponseCode 		= htons(this->Fields.ResponseCode);
+	this->Fields.CheckingDisabled 	= htons(this->Fields.CheckingDisabled);
+	this->Fields.AuthenticatedData 	= htons(this->Fields.AuthenticatedData);
+	this->Fields.Reserved 			= htons(this->Fields.Reserved);
+	this->Fields.RecursionAvailable = htons(this->Fields.RecursionAvailable);
+	this->Fields.QuestionCount 		= htons(this->Fields.QuestionCount);
+	this->Fields.AnswerCount 		= htons(this->Fields.AnswerCount);
+	this->Fields.NameServerCount 	= htons(this->Fields.NameServerCount);
+	this->Fields.AdditionalCount 	= htons(this->Fields.AdditionalCount);
 }
 
 } // namespace Dns

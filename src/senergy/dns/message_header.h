@@ -24,6 +24,12 @@
 
 #include <senergy/bytebuffer.h>
 
+#ifdef _WIN32
+	#include <winsock2.h>
+#else
+	#include <arpa/inet.h>
+#endif
+
 namespace Senergy
 {
 namespace Dns
@@ -32,7 +38,9 @@ namespace Dns
 /*!
  * \brief Defines the fields within a DNS packet header, as described in section 4.1 of RFC-1035.
  *	 	  This data structure is used as the "Fields" member/property of the MessageHeader class,
- *		  and serves as the container of the actual data. 
+ *		  and serves as the container of the actual data.
+ *
+ * \note This size of this structure is 12 bytes. 
  * 
  * \see http://msdn.microsoft.com/en-us/library/windows/desktop/ms682059(v=vs.85).aspx
  * \see http://www.ietf.org/rfc/rfc1035.txt
@@ -143,7 +151,7 @@ struct MessageHeaderFields
 	unsigned char CheckingDisabled :1;    
 
 	/*!
- 	 * \brief A value that specifies whether the DNS data following the DNS_HEADER is 
+ 	 * \brief A value that specifies whether the DNS data following the DNS packet header is 
 	 *		  authenticated by the DNS server.
 	 *
 	 *		  0				  The DNS data is not authenticated.
@@ -277,6 +285,10 @@ public:
 	 *		  that is transmitted and received.
 	 */
 	MessageHeaderFields Fields;
+
+private:
+	// Converts all fields from host to network byte order
+	void __host_to_network_byte_order();
 
 private:
 	// Indicates whether this instance is valid, default is true.
