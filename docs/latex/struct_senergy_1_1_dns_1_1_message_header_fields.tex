@@ -1,0 +1,260 @@
+\hypertarget{struct_senergy_1_1_dns_1_1_message_header_fields}{\section{Senergy\-:\-:Dns\-:\-:Message\-Header\-Fields Struct Reference}
+\label{struct_senergy_1_1_dns_1_1_message_header_fields}\index{Senergy\-::\-Dns\-::\-Message\-Header\-Fields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}}
+}
+
+
+Defines the fields within a D\-N\-S packet header, as described in section 4.\-1 of R\-F\-C-\/1035. This data structure is used as the \char`\"{}\-Fields\char`\"{} member/property of the \hyperlink{class_senergy_1_1_dns_1_1_message_header}{Message\-Header} class, and serves as the container of the actual data.  
+
+
+
+
+{\ttfamily \#include $<$message\-\_\-header.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned short \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields_ab423a1e91fecd6ad2ec36a4bdafd5c2b}{Id}
+\begin{DoxyCompactList}\small\item\em A 16 bit identifier assigned by the program that generates any kind of query. This identifier is copied the corresponding reply and can be used by the requester to match up replies to outstanding queries. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields_ab5d7c8933016bb7288462b4a0ac131a5}{Recursion\-Desired}\-:1
+\begin{DoxyCompactList}\small\item\em Recursion Desired -\/ this bit may be set in a query and is copied into the response. If R\-D is set, it directs the name server to pursue the query recursively. Recursive query support is optional. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields_a15d1ee99bf788c080001c3216c88274c}{Truncation}\-:1
+\begin{DoxyCompactList}\small\item\em Trun\-Cation -\/ specifies that this message was truncated due to length greater than that permitted on the transmission channel. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields_a706fe34b459a6aaacc28f0249213b013}{Authoritative}\-:1
+\begin{DoxyCompactList}\small\item\em Authoritative Answer -\/ this bit is valid in responses, and specifies that the responding name server is an authority for the domain name in question section. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields_ac2d7ba4468405e5693f07d4321058be0}{Opcode}\-:4
+\begin{DoxyCompactList}\small\item\em A four bit field that specifies kind of query in this message. This value is set by the originator of a query and copied into the response. The values are\-: \end{DoxyCompactList}\item 
+unsigned char \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields_a0d0ac4fa85684c3d66a84e3392f3ef99}{Is\-Response}\-:1
+\begin{DoxyCompactList}\small\item\em A one bit field that specifies whether this message is a query (0), or a response (1). \end{DoxyCompactList}\item 
+unsigned char \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields_a2f42c94d4e50dd7a63b11c8b374597c4}{Response\-Code}\-:4
+\begin{DoxyCompactList}\small\item\em Response code -\/ this 4 bit field is set as part of responses. The values have the following interpretation\-: \end{DoxyCompactList}\item 
+unsigned char \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields_a2c846064b4582f46a94bd90b32ef1cd9}{Checking\-Disabled}\-:1
+\item 
+unsigned char \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields_a3788cbe9e2663b3be0cad8cbca8dc985}{Authenticated\-Data}\-:1
+\begin{DoxyCompactList}\small\item\em A value that specifies whether the D\-N\-S data following the \hyperlink{struct_d_n_s___h_e_a_d_e_r}{D\-N\-S\-\_\-\-H\-E\-A\-D\-E\-R} is authenticated by the D\-N\-S server. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields_afb988d15085d4f740df367d1792440c7}{Reserved}\-:1
+\begin{DoxyCompactList}\small\item\em Reserved for future use. Must be zero in all queries and responses. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields_afbb68b60a28f855e64eb13615fc2633e}{Recursion\-Available}\-:1
+\begin{DoxyCompactList}\small\item\em Recursion Available -\/ this be is set or cleared in a response, and denotes whether recursive query support is available in the name server. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields_a8af9bbfa134c9e0d4fc846103f7b72ad}{Question\-Count}
+\begin{DoxyCompactList}\small\item\em An unsigned 16 bit integer specifying the number of entries in the question section. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields_a38e5101ec862c400628d66192c5b9878}{Answer\-Count}
+\begin{DoxyCompactList}\small\item\em The number of resource records (R\-Rs) contained in the answer section of the D\-N\-S message. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields_a963b92841b3f7fc5fc9268c963d32d8d}{Name\-Server\-Count}
+\begin{DoxyCompactList}\small\item\em The number of D\-N\-S name server R\-Rs contained in the authority section of the D\-N\-S message. This value is the number of D\-N\-S name servers the message has traversed in its search for resolution. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields_aae6ba21a1c8baa30f0aafe90d165420f}{Additional\-Count}
+\begin{DoxyCompactList}\small\item\em Reserved. Do not use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines the fields within a D\-N\-S packet header, as described in section 4.\-1 of R\-F\-C-\/1035. This data structure is used as the \char`\"{}\-Fields\char`\"{} member/property of the \hyperlink{class_senergy_1_1_dns_1_1_message_header}{Message\-Header} class, and serves as the container of the actual data. 
+
+\begin{DoxySeeAlso}{See Also}
+\href{http://msdn.microsoft.com/en-us/library/windows/desktop/ms682059(v=vs.85).aspx}{\tt http\-://msdn.\-microsoft.\-com/en-\/us/library/windows/desktop/ms682059(v=vs.\-85).\-aspx} 
+
+\href{http://www.ietf.org/rfc/rfc1035.txt}{\tt http\-://www.\-ietf.\-org/rfc/rfc1035.\-txt}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Swen Kooij (Photonios) 
+\end{DoxyAuthor}
+
+
+Definition at line 42 of file message\-\_\-header.\-h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_senergy_1_1_dns_1_1_message_header_fields_aae6ba21a1c8baa30f0aafe90d165420f}{\index{Senergy\-::\-Dns\-::\-Message\-Header\-Fields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}!Additional\-Count@{Additional\-Count}}
+\index{Additional\-Count@{Additional\-Count}!Senergy::Dns::MessageHeaderFields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}}
+\subsubsection[{Additional\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short Senergy\-::\-Dns\-::\-Message\-Header\-Fields\-::\-Additional\-Count}}\label{struct_senergy_1_1_dns_1_1_message_header_fields_aae6ba21a1c8baa30f0aafe90d165420f}
+
+
+Reserved. Do not use. 
+
+
+
+Definition at line 193 of file message\-\_\-header.\-h.
+
+\hypertarget{struct_senergy_1_1_dns_1_1_message_header_fields_a38e5101ec862c400628d66192c5b9878}{\index{Senergy\-::\-Dns\-::\-Message\-Header\-Fields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}!Answer\-Count@{Answer\-Count}}
+\index{Answer\-Count@{Answer\-Count}!Senergy::Dns::MessageHeaderFields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}}
+\subsubsection[{Answer\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short Senergy\-::\-Dns\-::\-Message\-Header\-Fields\-::\-Answer\-Count}}\label{struct_senergy_1_1_dns_1_1_message_header_fields_a38e5101ec862c400628d66192c5b9878}
+
+
+The number of resource records (R\-Rs) contained in the answer section of the D\-N\-S message. 
+
+
+
+Definition at line 181 of file message\-\_\-header.\-h.
+
+\hypertarget{struct_senergy_1_1_dns_1_1_message_header_fields_a3788cbe9e2663b3be0cad8cbca8dc985}{\index{Senergy\-::\-Dns\-::\-Message\-Header\-Fields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}!Authenticated\-Data@{Authenticated\-Data}}
+\index{Authenticated\-Data@{Authenticated\-Data}!Senergy::Dns::MessageHeaderFields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}}
+\subsubsection[{Authenticated\-Data}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Senergy\-::\-Dns\-::\-Message\-Header\-Fields\-::\-Authenticated\-Data}}\label{struct_senergy_1_1_dns_1_1_message_header_fields_a3788cbe9e2663b3be0cad8cbca8dc985}
+
+
+A value that specifies whether the D\-N\-S data following the \hyperlink{struct_d_n_s___h_e_a_d_e_r}{D\-N\-S\-\_\-\-H\-E\-A\-D\-E\-R} is authenticated by the D\-N\-S server. 
+
+0 The D\-N\-S data is not authenticated.
+
+1 The D\-N\-S data is authenticated. 
+
+Definition at line 153 of file message\-\_\-header.\-h.
+
+\hypertarget{struct_senergy_1_1_dns_1_1_message_header_fields_a706fe34b459a6aaacc28f0249213b013}{\index{Senergy\-::\-Dns\-::\-Message\-Header\-Fields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}!Authoritative@{Authoritative}}
+\index{Authoritative@{Authoritative}!Senergy::Dns::MessageHeaderFields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}}
+\subsubsection[{Authoritative}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Senergy\-::\-Dns\-::\-Message\-Header\-Fields\-::\-Authoritative}}\label{struct_senergy_1_1_dns_1_1_message_header_fields_a706fe34b459a6aaacc28f0249213b013}
+
+
+Authoritative Answer -\/ this bit is valid in responses, and specifies that the responding name server is an authority for the domain name in question section. 
+
+\begin{DoxyNote}{Note}
+The contents of the answer section may have multiple owner names because of aliases. The A\-A bit corresponds to the name which atches the query name, or the first owner name in the answer section. 
+\end{DoxyNote}
+
+
+Definition at line 77 of file message\-\_\-header.\-h.
+
+\hypertarget{struct_senergy_1_1_dns_1_1_message_header_fields_a2c846064b4582f46a94bd90b32ef1cd9}{\index{Senergy\-::\-Dns\-::\-Message\-Header\-Fields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}!Checking\-Disabled@{Checking\-Disabled}}
+\index{Checking\-Disabled@{Checking\-Disabled}!Senergy::Dns::MessageHeaderFields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}}
+\subsubsection[{Checking\-Disabled}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Senergy\-::\-Dns\-::\-Message\-Header\-Fields\-::\-Checking\-Disabled}}\label{struct_senergy_1_1_dns_1_1_message_header_fields_a2c846064b4582f46a94bd90b32ef1cd9}
+\textbackslash{} brief A value that specifies whether checking is supported by the D\-N\-S resolver. \begin{DoxyVerb}      0               Checking is enabled on the DNS resolver.
+
+      1               Checking is enabled on the DNS resolver.\end{DoxyVerb}
+ 
+
+Definition at line 143 of file message\-\_\-header.\-h.
+
+\hypertarget{struct_senergy_1_1_dns_1_1_message_header_fields_ab423a1e91fecd6ad2ec36a4bdafd5c2b}{\index{Senergy\-::\-Dns\-::\-Message\-Header\-Fields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}!Id@{Id}}
+\index{Id@{Id}!Senergy::Dns::MessageHeaderFields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}}
+\subsubsection[{Id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short Senergy\-::\-Dns\-::\-Message\-Header\-Fields\-::\-Id}}\label{struct_senergy_1_1_dns_1_1_message_header_fields_ab423a1e91fecd6ad2ec36a4bdafd5c2b}
+
+
+A 16 bit identifier assigned by the program that generates any kind of query. This identifier is copied the corresponding reply and can be used by the requester to match up replies to outstanding queries. 
+
+
+
+Definition at line 50 of file message\-\_\-header.\-h.
+
+\hypertarget{struct_senergy_1_1_dns_1_1_message_header_fields_a0d0ac4fa85684c3d66a84e3392f3ef99}{\index{Senergy\-::\-Dns\-::\-Message\-Header\-Fields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}!Is\-Response@{Is\-Response}}
+\index{Is\-Response@{Is\-Response}!Senergy::Dns::MessageHeaderFields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}}
+\subsubsection[{Is\-Response}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Senergy\-::\-Dns\-::\-Message\-Header\-Fields\-::\-Is\-Response}}\label{struct_senergy_1_1_dns_1_1_message_header_fields_a0d0ac4fa85684c3d66a84e3392f3ef99}
+
+
+A one bit field that specifies whether this message is a query (0), or a response (1). 
+
+
+
+Definition at line 98 of file message\-\_\-header.\-h.
+
+\hypertarget{struct_senergy_1_1_dns_1_1_message_header_fields_a963b92841b3f7fc5fc9268c963d32d8d}{\index{Senergy\-::\-Dns\-::\-Message\-Header\-Fields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}!Name\-Server\-Count@{Name\-Server\-Count}}
+\index{Name\-Server\-Count@{Name\-Server\-Count}!Senergy::Dns::MessageHeaderFields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}}
+\subsubsection[{Name\-Server\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short Senergy\-::\-Dns\-::\-Message\-Header\-Fields\-::\-Name\-Server\-Count}}\label{struct_senergy_1_1_dns_1_1_message_header_fields_a963b92841b3f7fc5fc9268c963d32d8d}
+
+
+The number of D\-N\-S name server R\-Rs contained in the authority section of the D\-N\-S message. This value is the number of D\-N\-S name servers the message has traversed in its search for resolution. 
+
+
+
+Definition at line 188 of file message\-\_\-header.\-h.
+
+\hypertarget{struct_senergy_1_1_dns_1_1_message_header_fields_ac2d7ba4468405e5693f07d4321058be0}{\index{Senergy\-::\-Dns\-::\-Message\-Header\-Fields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}!Opcode@{Opcode}}
+\index{Opcode@{Opcode}!Senergy::Dns::MessageHeaderFields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}}
+\subsubsection[{Opcode}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Senergy\-::\-Dns\-::\-Message\-Header\-Fields\-::\-Opcode}}\label{struct_senergy_1_1_dns_1_1_message_header_fields_ac2d7ba4468405e5693f07d4321058be0}
+
+
+A four bit field that specifies kind of query in this message. This value is set by the originator of a query and copied into the response. The values are\-: 
+
+0 a standard query (Q\-U\-E\-R\-Y)
+
+1 an inverse query (I\-Q\-U\-E\-R\-Y)
+
+2 a server status request (S\-T\-A\-T\-U\-S)
+
+3-\/15 reserved for future use 
+
+Definition at line 92 of file message\-\_\-header.\-h.
+
+\hypertarget{struct_senergy_1_1_dns_1_1_message_header_fields_a8af9bbfa134c9e0d4fc846103f7b72ad}{\index{Senergy\-::\-Dns\-::\-Message\-Header\-Fields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}!Question\-Count@{Question\-Count}}
+\index{Question\-Count@{Question\-Count}!Senergy::Dns::MessageHeaderFields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}}
+\subsubsection[{Question\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short Senergy\-::\-Dns\-::\-Message\-Header\-Fields\-::\-Question\-Count}}\label{struct_senergy_1_1_dns_1_1_message_header_fields_a8af9bbfa134c9e0d4fc846103f7b72ad}
+
+
+An unsigned 16 bit integer specifying the number of entries in the question section. 
+
+
+
+Definition at line 175 of file message\-\_\-header.\-h.
+
+\hypertarget{struct_senergy_1_1_dns_1_1_message_header_fields_afbb68b60a28f855e64eb13615fc2633e}{\index{Senergy\-::\-Dns\-::\-Message\-Header\-Fields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}!Recursion\-Available@{Recursion\-Available}}
+\index{Recursion\-Available@{Recursion\-Available}!Senergy::Dns::MessageHeaderFields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}}
+\subsubsection[{Recursion\-Available}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Senergy\-::\-Dns\-::\-Message\-Header\-Fields\-::\-Recursion\-Available}}\label{struct_senergy_1_1_dns_1_1_message_header_fields_afbb68b60a28f855e64eb13615fc2633e}
+
+
+Recursion Available -\/ this be is set or cleared in a response, and denotes whether recursive query support is available in the name server. 
+
+
+
+Definition at line 169 of file message\-\_\-header.\-h.
+
+\hypertarget{struct_senergy_1_1_dns_1_1_message_header_fields_ab5d7c8933016bb7288462b4a0ac131a5}{\index{Senergy\-::\-Dns\-::\-Message\-Header\-Fields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}!Recursion\-Desired@{Recursion\-Desired}}
+\index{Recursion\-Desired@{Recursion\-Desired}!Senergy::Dns::MessageHeaderFields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}}
+\subsubsection[{Recursion\-Desired}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Senergy\-::\-Dns\-::\-Message\-Header\-Fields\-::\-Recursion\-Desired}}\label{struct_senergy_1_1_dns_1_1_message_header_fields_ab5d7c8933016bb7288462b4a0ac131a5}
+
+
+Recursion Desired -\/ this bit may be set in a query and is copied into the response. If R\-D is set, it directs the name server to pursue the query recursively. Recursive query support is optional. 
+
+
+
+Definition at line 58 of file message\-\_\-header.\-h.
+
+\hypertarget{struct_senergy_1_1_dns_1_1_message_header_fields_afb988d15085d4f740df367d1792440c7}{\index{Senergy\-::\-Dns\-::\-Message\-Header\-Fields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}!Reserved@{Reserved}}
+\index{Reserved@{Reserved}!Senergy::Dns::MessageHeaderFields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}}
+\subsubsection[{Reserved}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Senergy\-::\-Dns\-::\-Message\-Header\-Fields\-::\-Reserved}}\label{struct_senergy_1_1_dns_1_1_message_header_fields_afb988d15085d4f740df367d1792440c7}
+
+
+Reserved for future use. Must be zero in all queries and responses. 
+
+\begin{DoxyNote}{Note}
+Specification (R\-F\-C 1035) says that this field must be zero at all times, however, bytes get reversed, so 1 becomes zero. 
+\end{DoxyNote}
+
+
+Definition at line 162 of file message\-\_\-header.\-h.
+
+\hypertarget{struct_senergy_1_1_dns_1_1_message_header_fields_a2f42c94d4e50dd7a63b11c8b374597c4}{\index{Senergy\-::\-Dns\-::\-Message\-Header\-Fields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}!Response\-Code@{Response\-Code}}
+\index{Response\-Code@{Response\-Code}!Senergy::Dns::MessageHeaderFields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}}
+\subsubsection[{Response\-Code}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Senergy\-::\-Dns\-::\-Message\-Header\-Fields\-::\-Response\-Code}}\label{struct_senergy_1_1_dns_1_1_message_header_fields_a2f42c94d4e50dd7a63b11c8b374597c4}
+
+
+Response code -\/ this 4 bit field is set as part of responses. The values have the following interpretation\-: 
+
+0 No error condition
+
+1 Format error -\/ The name server was unable to interpret the query.
+
+2 Server failure -\/ The name server was unable to process this query due to a problem with the name server.
+
+3 Name Error -\/ Meaningful only for responses from an authoritative name server, this code signifies that the domain name referenced in the query does not exist.
+
+4 Not Implemented -\/ The name server does not support the requested kind of query.
+
+5 Refused -\/ The name server refuses to perform the specified operation for policy reasons. For example, a name server may not wish to provide the information to the particular requester, or a name server may not wish to perform a particular operation (e.\-g., zone transfer) for particular data.
+
+6-\/15 Reserved for future use. 
+
+Definition at line 134 of file message\-\_\-header.\-h.
+
+\hypertarget{struct_senergy_1_1_dns_1_1_message_header_fields_a15d1ee99bf788c080001c3216c88274c}{\index{Senergy\-::\-Dns\-::\-Message\-Header\-Fields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}!Truncation@{Truncation}}
+\index{Truncation@{Truncation}!Senergy::Dns::MessageHeaderFields@{Senergy\-::\-Dns\-::\-Message\-Header\-Fields}}
+\subsubsection[{Truncation}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Senergy\-::\-Dns\-::\-Message\-Header\-Fields\-::\-Truncation}}\label{struct_senergy_1_1_dns_1_1_message_header_fields_a15d1ee99bf788c080001c3216c88274c}
+
+
+Trun\-Cation -\/ specifies that this message was truncated due to length greater than that permitted on the transmission channel. 
+
+
+
+Definition at line 65 of file message\-\_\-header.\-h.
+
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/senergy/dns/\hyperlink{message__header_8h}{message\-\_\-header.\-h}\end{DoxyCompactItemize}

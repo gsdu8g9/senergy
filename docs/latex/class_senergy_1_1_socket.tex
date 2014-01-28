@@ -1,0 +1,602 @@
+\hypertarget{class_senergy_1_1_socket}{\section{Senergy\-:\-:Socket Class Reference}
+\label{class_senergy_1_1_socket}\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}}
+}
+
+
+Provides an object-\/oriented interface for Berkely (B\-S\-D) sockets. Can act both as a server as well as a client. The main purpose of this class class is to provide a more C++ like interface for T\-C\-P sockets.  
+
+
+
+
+{\ttfamily \#include $<$socket.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_senergy_1_1_socket_a88ed1eb1a5c47ea1b395715aabd37ab4}{Close\-Type} \-: int \{ \hyperlink{class_senergy_1_1_socket_a88ed1eb1a5c47ea1b395715aabd37ab4a1851aea8452370ffbc6364027d018da9}{Close\-Type\-::\-Stop\-Receiving} = 0, 
+\hyperlink{class_senergy_1_1_socket_a88ed1eb1a5c47ea1b395715aabd37ab4a948c383a847087d69042e091d164380b}{Close\-Type\-::\-Stop\-Sending} = 1, 
+\hyperlink{class_senergy_1_1_socket_a88ed1eb1a5c47ea1b395715aabd37ab4a40b522922220c34afd8e1d4a3ba02208}{Close\-Type\-::\-Stop\-All} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Defines possible ways/means of closing/disconnecting an active socket connection. \end{DoxyCompactList}\item 
+enum \hyperlink{class_senergy_1_1_socket_ad82ad4c4412684091e687b92641bfbe9}{Socket\-Role} \-: int \{ \hyperlink{class_senergy_1_1_socket_ad82ad4c4412684091e687b92641bfbe9a577d7068826de925ea2aec01dbadf5e4}{Socket\-Role\-::\-Client} = 0, 
+\hyperlink{class_senergy_1_1_socket_ad82ad4c4412684091e687b92641bfbe9a9aa1b03934893d7134a660af4204f2a9}{Socket\-Role\-::\-Server} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Defines the possible socket roles we can have. An instance of the \hyperlink{class_senergy_1_1_socket}{Socket} socket class can be of two different roles. \end{DoxyCompactList}\item 
+enum \hyperlink{class_senergy_1_1_socket_ad400245278746ac26e261bdda171c178}{Socket\-Protocol} \-: int \{ \hyperlink{class_senergy_1_1_socket_ad400245278746ac26e261bdda171c178ab136ef5f6a01d816991fe3cf7a6ac763}{Socket\-Protocol\-::\-T\-C\-P}, 
+\hyperlink{class_senergy_1_1_socket_ad400245278746ac26e261bdda171c178af5ef036b4d8b630721e51fe23489fbc9}{Socket\-Protocol\-::\-U\-D\-P}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines the possible socket protocols that this class supports. \end{DoxyCompactList}\item 
+typedef std\-::shared\-\_\-ptr$<$ \hyperlink{class_senergy_1_1_socket}{Socket} $>$ \hyperlink{class_senergy_1_1_socket_ac9ff20ce80df2d0c2900cd0940ffe860}{Socket\-Ptr}
+\begin{DoxyCompactList}\small\item\em A shared pointer typedef for the \hyperlink{class_senergy_1_1_socket}{Socket} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_senergy_1_1_socket_a6fcb47adc585aa2bb5d3d81a5e5b22e1}{Socket} (\hyperlink{class_senergy_1_1_socket_ad400245278746ac26e261bdda171c178}{Socket\-Protocol} protocol)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the T\-Socket class that is not connected to a remote host, and starts as the 'client' socket type. \end{DoxyCompactList}\item 
+\hyperlink{class_senergy_1_1_socket_ad287e0ea5d32febd95ed7ba590d9e08d}{Socket} (const \hyperlink{class_senergy_1_1_socket}{Socket} \&socket)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_socket}{Socket} class based on the specified reference to another instance of the \hyperlink{class_senergy_1_1_socket}{Socket} class. This constructor is defined as the 'copy constructor' and performs a hard copy of the specified \hyperlink{class_senergy_1_1_socket}{Socket} instance. \end{DoxyCompactList}\item 
+\hyperlink{class_senergy_1_1_socket_ad6ac199d691bbbb3915c375900a11ca7}{Socket} (\hyperlink{class_senergy_1_1_socket_ad400245278746ac26e261bdda171c178}{Socket\-Protocol} protocol, int native\-\_\-socket, struct sockaddr\-\_\-in remote\-\_\-address)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_socket}{Socket} class using the specified native socket and remote address. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_senergy_1_1_socket_aaab6b46c9e2733982df87eefb0fc77a2}{Get\-Remote\-Host} ()
+\begin{DoxyCompactList}\small\item\em Gets the textual representation of the remote host that this socket is currently connected to. This can either be an I\-P address or a host name. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_socket_a6d22575e6fc0d6ab4a61097d60b6e773}{Is\-Connected} ()
+\begin{DoxyCompactList}\small\item\em Determines whether this instance has an active connection with a remote rost and returns the result. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_socket_a7ca3e4fb2e2f216773498e6f29e9ea14}{Set\-Timeout} (unsigned int milliseconds)
+\begin{DoxyCompactList}\small\item\em Sets the timeout time that is used for socket operations, such as sending, receiving, and connecting. A timeout specifies the maximum time to wait for an operation to complete. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_socket_a75946ce55f263abb105a22611819e11e}{Connect} (const std\-::string \&remote\-\_\-ip, unsigned int remote\-\_\-port)
+\begin{DoxyCompactList}\small\item\em Attempts to setup a T\-C\-P connection with the specified remote host over the specified port. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_socket_a9f2cfa080e3a5f365b52cc5fff94eb74}{Listen} (unsigned int port)
+\begin{DoxyCompactList}\small\item\em Starts listening for incoming connections on the specified port. Binds itself to the specified port. Incoming connections can be accepted using the 'Accept(..)' method. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_socket_a859e2c4eec6792215f04363404658b0a}{Close} (\hyperlink{class_senergy_1_1_socket_a88ed1eb1a5c47ea1b395715aabd37ab4}{Close\-Type} close\-\_\-type=\hyperlink{class_senergy_1_1_socket_a88ed1eb1a5c47ea1b395715aabd37ab4a40b522922220c34afd8e1d4a3ba02208}{Close\-Type\-::\-Stop\-All})
+\begin{DoxyCompactList}\small\item\em Closes the current connection with the remote host. The method of closing the connection can be specified. \end{DoxyCompactList}\item 
+int \hyperlink{class_senergy_1_1_socket_a1407e054edc1fd012d8c85e563683947}{Send} (const char $\ast$data, size\-\_\-t data\-\_\-size)
+\begin{DoxyCompactList}\small\item\em Sends the specified data, with the specified size to the remote host. \end{DoxyCompactList}\item 
+int \hyperlink{class_senergy_1_1_socket_a9ca07e0de8c6f74f27963f17c8b1398d}{Send} (const std\-::string \&data, size\-\_\-t data\-\_\-size)
+\begin{DoxyCompactList}\small\item\em Sends the specified data, with the specified size to the remote host. \end{DoxyCompactList}\item 
+int \hyperlink{class_senergy_1_1_socket_a72e1de4e0e3ef63bb020c62bea989fa6}{Send} (const std\-::string \&data)
+\begin{DoxyCompactList}\small\item\em Sends the specified data, the size (length) of the specified string is the size of the data that will be transmitted. \end{DoxyCompactList}\item 
+int \hyperlink{class_senergy_1_1_socket_a7045f756d3c542ee1187a92ca13fa232}{Receive} (const char $\ast$receive\-\_\-buffer, size\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em Attempts to receive the specified amount of data into the specified buffer. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_senergy_1_1_socket_a0c1510be39bef49de15e8647b64dbb5e}{Receive} (size\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em Attempts to receive the specified amount of data and return it as a string. \end{DoxyCompactList}\item 
+int \hyperlink{class_senergy_1_1_socket_aad6b0a1a9f7ac380b11b9ef814ada58b}{Receive} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&receive\-\_\-buffer, size\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em Attempts to receive the specified amount of data and store it into the specified byte buffer. \end{DoxyCompactList}\item 
+\hyperlink{class_senergy_1_1_socket_ac9ff20ce80df2d0c2900cd0940ffe860}{Socket\-Ptr} \hyperlink{class_senergy_1_1_socket_abefda24a1a73b49e108a54342be0457e}{Accept} ()
+\begin{DoxyCompactList}\small\item\em Attempts to accept an incoming remote connection. This can be used to accept incoming remote connections when this instance is listening for incoming connections. \end{DoxyCompactList}\item 
+int \hyperlink{class_senergy_1_1_socket_a403f7a2f6c5a94d4b14f73f0965da061}{Get\-Error\-Code} ()
+\begin{DoxyCompactList}\small\item\em Gets the last error code that was set by a socket operation. The error code that is returned are normal Berkely sockets error codes. Performing another socket operation overwrites the last error code that was set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides an object-\/oriented interface for Berkely (B\-S\-D) sockets. Can act both as a server as well as a client. The main purpose of this class class is to provide a more C++ like interface for T\-C\-P sockets. 
+
+Another important purpose of this class is thread-\/safety. Due to the 'global' nature nature in C, Berkely sockets are not thread safe. Using mutexes this class is and allows the socket to be used in a multi-\/threaded environment.
+
+\begin{DoxyNote}{Note}
+This class does not use exceptions. Error handeling is done the same way as in the Berkely Sockets interface. Call Get\-Error\-Code(..) for the latest B\-S\-D error code.
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Swen Kooij / Photonios 
+\end{DoxyAuthor}
+
+
+Definition at line 59 of file socket.\-h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_senergy_1_1_socket_ac9ff20ce80df2d0c2900cd0940ffe860}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Socket\-Ptr@{Socket\-Ptr}}
+\index{Socket\-Ptr@{Socket\-Ptr}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Socket\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::shared\-\_\-ptr$<${\bf Socket}$>$ {\bf Senergy\-::\-Socket\-::\-Socket\-Ptr}}}\label{class_senergy_1_1_socket_ac9ff20ce80df2d0c2900cd0940ffe860}
+
+
+A shared pointer typedef for the \hyperlink{class_senergy_1_1_socket}{Socket} class. 
+
+\begin{DoxyNote}{Note}
+This is defined outside the class definition as well to make it usuable for library users. 
+\end{DoxyNote}
+
+
+Definition at line 118 of file socket.\-h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_senergy_1_1_socket_a88ed1eb1a5c47ea1b395715aabd37ab4}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Close\-Type@{Close\-Type}}
+\index{Close\-Type@{Close\-Type}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Close\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Senergy\-::\-Socket\-::\-Close\-Type} \-: int\hspace{0.3cm}{\ttfamily [strong]}}}\label{class_senergy_1_1_socket_a88ed1eb1a5c47ea1b395715aabd37ab4}
+
+
+Defines possible ways/means of closing/disconnecting an active socket connection. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Stop\-Receiving@{Stop\-Receiving}!Senergy\-::\-Socket@{Senergy\-::\-Socket}}\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Stop\-Receiving@{Stop\-Receiving}}\item[{\em 
+\hypertarget{class_senergy_1_1_socket_a88ed1eb1a5c47ea1b395715aabd37ab4a1851aea8452370ffbc6364027d018da9}{Stop\-Receiving}\label{class_senergy_1_1_socket_a88ed1eb1a5c47ea1b395715aabd37ab4a1851aea8452370ffbc6364027d018da9}
+}]Stop receiving incoming data, but send all remaining data. \index{Stop\-Sending@{Stop\-Sending}!Senergy\-::\-Socket@{Senergy\-::\-Socket}}\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Stop\-Sending@{Stop\-Sending}}\item[{\em 
+\hypertarget{class_senergy_1_1_socket_a88ed1eb1a5c47ea1b395715aabd37ab4a948c383a847087d69042e091d164380b}{Stop\-Sending}\label{class_senergy_1_1_socket_a88ed1eb1a5c47ea1b395715aabd37ab4a948c383a847087d69042e091d164380b}
+}]Stop sending data, but receive all remaining data. \index{Stop\-All@{Stop\-All}!Senergy\-::\-Socket@{Senergy\-::\-Socket}}\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Stop\-All@{Stop\-All}}\item[{\em 
+\hypertarget{class_senergy_1_1_socket_a88ed1eb1a5c47ea1b395715aabd37ab4a40b522922220c34afd8e1d4a3ba02208}{Stop\-All}\label{class_senergy_1_1_socket_a88ed1eb1a5c47ea1b395715aabd37ab4a40b522922220c34afd8e1d4a3ba02208}
+}]Stop sending and receiving data immeditially./. \end{description}
+\end{Desc}
+
+
+Definition at line 66 of file socket.\-h.
+
+\hypertarget{class_senergy_1_1_socket_ad400245278746ac26e261bdda171c178}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Socket\-Protocol@{Socket\-Protocol}}
+\index{Socket\-Protocol@{Socket\-Protocol}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Socket\-Protocol}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Senergy\-::\-Socket\-::\-Socket\-Protocol} \-: int\hspace{0.3cm}{\ttfamily [strong]}}}\label{class_senergy_1_1_socket_ad400245278746ac26e261bdda171c178}
+
+
+Defines the possible socket protocols that this class supports. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{T\-C\-P@{T\-C\-P}!Senergy\-::\-Socket@{Senergy\-::\-Socket}}\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!T\-C\-P@{T\-C\-P}}\item[{\em 
+\hypertarget{class_senergy_1_1_socket_ad400245278746ac26e261bdda171c178ab136ef5f6a01d816991fe3cf7a6ac763}{T\-C\-P}\label{class_senergy_1_1_socket_ad400245278746ac26e261bdda171c178ab136ef5f6a01d816991fe3cf7a6ac763}
+}]\index{U\-D\-P@{U\-D\-P}!Senergy\-::\-Socket@{Senergy\-::\-Socket}}\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!U\-D\-P@{U\-D\-P}}\item[{\em 
+\hypertarget{class_senergy_1_1_socket_ad400245278746ac26e261bdda171c178af5ef036b4d8b630721e51fe23489fbc9}{U\-D\-P}\label{class_senergy_1_1_socket_ad400245278746ac26e261bdda171c178af5ef036b4d8b630721e51fe23489fbc9}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 106 of file socket.\-h.
+
+\hypertarget{class_senergy_1_1_socket_ad82ad4c4412684091e687b92641bfbe9}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Socket\-Role@{Socket\-Role}}
+\index{Socket\-Role@{Socket\-Role}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Socket\-Role}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Senergy\-::\-Socket\-::\-Socket\-Role} \-: int\hspace{0.3cm}{\ttfamily [strong]}}}\label{class_senergy_1_1_socket_ad82ad4c4412684091e687b92641bfbe9}
+
+
+Defines the possible socket roles we can have. An instance of the \hyperlink{class_senergy_1_1_socket}{Socket} socket class can be of two different roles. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Client@{Client}!Senergy\-::\-Socket@{Senergy\-::\-Socket}}\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Client@{Client}}\item[{\em 
+\hypertarget{class_senergy_1_1_socket_ad82ad4c4412684091e687b92641bfbe9a577d7068826de925ea2aec01dbadf5e4}{Client}\label{class_senergy_1_1_socket_ad82ad4c4412684091e687b92641bfbe9a577d7068826de925ea2aec01dbadf5e4}
+}]The instance is behaving as a client socket, which is connected to a server. \index{Server@{Server}!Senergy\-::\-Socket@{Senergy\-::\-Socket}}\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Server@{Server}}\item[{\em 
+\hypertarget{class_senergy_1_1_socket_ad82ad4c4412684091e687b92641bfbe9a9aa1b03934893d7134a660af4204f2a9}{Server}\label{class_senergy_1_1_socket_ad82ad4c4412684091e687b92641bfbe9a9aa1b03934893d7134a660af4204f2a9}
+}]The instance is behaving as a server and is binded on a specific port, and listens for incoming connections. \end{description}
+\end{Desc}
+
+
+Definition at line 88 of file socket.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_senergy_1_1_socket_a6fcb47adc585aa2bb5d3d81a5e5b22e1}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Socket@{Socket}}
+\index{Socket@{Socket}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Socket}]{\setlength{\rightskip}{0pt plus 5cm}Senergy\-::\-Socket\-::\-Socket (
+\begin{DoxyParamCaption}
+\item[{{\bf Socket\-Protocol}}]{protocol}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_socket_a6fcb47adc585aa2bb5d3d81a5e5b22e1}
+
+
+Initializes a new instance of the T\-Socket class that is not connected to a remote host, and starts as the 'client' socket type. 
+
+One should use the Connect(..) or the Listen(..) functions to either connect to a remote host, or to start listening for incoming connections.
+
+
+\begin{DoxyParams}{Parameters}
+{\em protocol} & A value from the Socket\-Protocol enumuration, which indicates what kind of protocol this socket is going to use. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file socket.\-cpp.
+
+\hypertarget{class_senergy_1_1_socket_ad287e0ea5d32febd95ed7ba590d9e08d}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Socket@{Socket}}
+\index{Socket@{Socket}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Socket}]{\setlength{\rightskip}{0pt plus 5cm}Senergy\-::\-Socket\-::\-Socket (
+\begin{DoxyParamCaption}
+\item[{const {\bf Socket} \&}]{socket}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_socket_ad287e0ea5d32febd95ed7ba590d9e08d}
+
+
+Initializes a new instance of the \hyperlink{class_senergy_1_1_socket}{Socket} class based on the specified reference to another instance of the \hyperlink{class_senergy_1_1_socket}{Socket} class. This constructor is defined as the 'copy constructor' and performs a hard copy of the specified \hyperlink{class_senergy_1_1_socket}{Socket} instance. 
+
+\begin{DoxyNote}{Note}
+This copy constructor is defined to allow the \hyperlink{class_senergy_1_1_socket}{Socket} class to be used in S\-T\-L collections like map, vector and list.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & A reference to an instance of the \hyperlink{class_senergy_1_1_socket}{Socket} class that needs to be hard-\/copied into a new instance. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 39 of file socket.\-cpp.
+
+\hypertarget{class_senergy_1_1_socket_ad6ac199d691bbbb3915c375900a11ca7}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Socket@{Socket}}
+\index{Socket@{Socket}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Socket}]{\setlength{\rightskip}{0pt plus 5cm}Senergy\-::\-Socket\-::\-Socket (
+\begin{DoxyParamCaption}
+\item[{{\bf Socket\-Protocol}}]{protocol, }
+\item[{int}]{native\-\_\-socket, }
+\item[{struct sockaddr\-\_\-in}]{remote\-\_\-address}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_socket_ad6ac199d691bbbb3915c375900a11ca7}
+
+
+Initializes a new instance of the \hyperlink{class_senergy_1_1_socket}{Socket} class using the specified native socket and remote address. 
+
+The intention of this constructor is to easily allow the user of the library to wrap existing/created Berkely sockets.
+
+This constructor is also used when an incoming remote connection is accepted.
+
+
+\begin{DoxyParams}{Parameters}
+{\em protocol} & A value from the Socket\-Protocol enumuration, which indicates what kind of protocol this socket is going to use. \\
+\hline
+{\em native\-\_\-socket} & A valid/connected descriptor for a Berkeley \hyperlink{class_senergy_1_1_socket}{Socket} (B\-S\-D), that the new instance needs to wrap. \\
+\hline
+{\em remote\-\_\-address} & A sockaddr\-\_\-int structure, which defines the remote host that this socket is connected to. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file socket.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_socket_abefda24a1a73b49e108a54342be0457e}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Accept@{Accept}}
+\index{Accept@{Accept}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Accept}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Socket\-Ptr} Senergy\-::\-Socket\-::\-Accept (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_socket_abefda24a1a73b49e108a54342be0457e}
+
+
+Attempts to accept an incoming remote connection. This can be used to accept incoming remote connections when this instance is listening for incoming connections. 
+
+\begin{DoxyNote}{Note}
+This does not work when this instance is not listening for incoming connections.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+A shared pointer to an instance of the \hyperlink{class_senergy_1_1_socket}{Socket} class, which represents the accepted remote connection. When the operation failed, an invalid shared pointer is returned. 
+\end{DoxyReturn}
+
+
+Definition at line 270 of file socket.\-cpp.
+
+\hypertarget{class_senergy_1_1_socket_a859e2c4eec6792215f04363404658b0a}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Close@{Close}}
+\index{Close@{Close}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Close}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Socket\-::\-Close (
+\begin{DoxyParamCaption}
+\item[{{\bf Close\-Type}}]{close\-\_\-type = {\ttfamily {\bf Close\-Type\-::\-Stop\-All}}}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_socket_a859e2c4eec6792215f04363404658b0a}
+
+
+Closes the current connection with the remote host. The method of closing the connection can be specified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em close\-\_\-type} & Optional\-: Specifies the method of closing the connection with the remote host.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indiciating whether the operation succeseeded and false when the operation failed. The operation can fail when there is no active connection with a remote host. 
+\end{DoxyReturn}
+
+
+Definition at line 135 of file socket.\-cpp.
+
+\hypertarget{class_senergy_1_1_socket_a75946ce55f263abb105a22611819e11e}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Connect@{Connect}}
+\index{Connect@{Connect}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Connect}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Socket\-::\-Connect (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{remote\-\_\-ip, }
+\item[{unsigned int}]{remote\-\_\-port}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_socket_a75946ce55f263abb105a22611819e11e}
+
+
+Attempts to setup a T\-C\-P connection with the specified remote host over the specified port. 
+
+\begin{DoxyNote}{Note}
+This sets the type of this instance to 'Cient', but only if the operation was succesful.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em remote\-\_\-ip} & A string containing the remote host name or I\-P address to connect to. \\
+\hline
+{\em remote\-\_\-port} & The T\-C\-P port to connect over to the specified remote host.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether setting up a connection with the specified remote host succeseeded. True is returned when setting up the connection succseeded and false when it failed. Reason for failure can be an invalid or non-\/existing remote host, or no remote server listening on the specified port. 
+\end{DoxyReturn}
+
+
+Definition at line 88 of file socket.\-cpp.
+
+\hypertarget{class_senergy_1_1_socket_a403f7a2f6c5a94d4b14f73f0965da061}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Get\-Error\-Code@{Get\-Error\-Code}}
+\index{Get\-Error\-Code@{Get\-Error\-Code}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Get\-Error\-Code}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Socket\-::\-Get\-Error\-Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_socket_a403f7a2f6c5a94d4b14f73f0965da061}
+
+
+Gets the last error code that was set by a socket operation. The error code that is returned are normal Berkely sockets error codes. Performing another socket operation overwrites the last error code that was set. 
+
+\begin{DoxyReturn}{Returns}
+The last error code that was set during a socket operation. If a negative number or zero is returned, the last operation did not cause an error and was sucessful. 
+\end{DoxyReturn}
+
+
+Definition at line 292 of file socket.\-cpp.
+
+\hypertarget{class_senergy_1_1_socket_aaab6b46c9e2733982df87eefb0fc77a2}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Get\-Remote\-Host@{Get\-Remote\-Host}}
+\index{Get\-Remote\-Host@{Get\-Remote\-Host}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Get\-Remote\-Host}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Senergy\-::\-Socket\-::\-Get\-Remote\-Host (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_socket_aaab6b46c9e2733982df87eefb0fc77a2}
+
+
+Gets the textual representation of the remote host that this socket is currently connected to. This can either be an I\-P address or a host name. 
+
+The remote host gets updated when connections are made. When data is received over U\-D\-P, the remote host gets updated with the host that we last received data from.
+
+\begin{DoxyReturn}{Returns}
+The textual representation of the remote host, can return an empty string when there is no active connection, or when the remote host is unknown. 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file socket.\-cpp.
+
+\hypertarget{class_senergy_1_1_socket_a6d22575e6fc0d6ab4a61097d60b6e773}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Is\-Connected@{Is\-Connected}}
+\index{Is\-Connected@{Is\-Connected}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Is\-Connected}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Socket\-::\-Is\-Connected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_socket_a6d22575e6fc0d6ab4a61097d60b6e773}
+
+
+Determines whether this instance has an active connection with a remote rost and returns the result. 
+
+\begin{DoxyNote}{Note}
+This cannot be used to accurately determine the status of the connection. When the remote host closes the connection, the status is not updated. The status is only updated when a connection is initiated or destroyed/closed by this instance.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether there's an active connection with the remote host. True is returned when there is an active connection and false is returned when there is no active connection. 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file socket.\-cpp.
+
+\hypertarget{class_senergy_1_1_socket_a9f2cfa080e3a5f365b52cc5fff94eb74}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Listen@{Listen}}
+\index{Listen@{Listen}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Listen}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Socket\-::\-Listen (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{port}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_socket_a9f2cfa080e3a5f365b52cc5fff94eb74}
+
+
+Starts listening for incoming connections on the specified port. Binds itself to the specified port. Incoming connections can be accepted using the 'Accept(..)' method. 
+
+\begin{DoxyNote}{Note}
+This sets the type of this instance to 'Server', but only if the operation was successful.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The T\-C\-P port number to start listening on for incoming connections.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indiciating whether the operation succeseeded. True is returned when the operationg succeseeded and false when it failed. Reason for failure can be, that another T\-C\-P server is already binded/listening on the specified port. 
+\end{DoxyReturn}
+
+
+Definition at line 108 of file socket.\-cpp.
+
+\hypertarget{class_senergy_1_1_socket_a7045f756d3c542ee1187a92ca13fa232}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Receive@{Receive}}
+\index{Receive@{Receive}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Receive}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Socket\-::\-Receive (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{receive\-\_\-buffer, }
+\item[{size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_socket_a7045f756d3c542ee1187a92ca13fa232}
+
+
+Attempts to receive the specified amount of data into the specified buffer. 
+
+\begin{DoxyNote}{Note}
+This operation will fail when there is no active connection with the remote host.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em receive\-\_\-buffer} & The buffer to store the received data into. Writing starts at the start of the buffer. If N\-U\-L\-L is specified, the operation will fail immediately. \\
+\hline
+{\em size} & The amount of bytes to receive. Make sure that the specified receive buffer is this size, or greater.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The amount of bytes that were actually received and stored into the specified receive buffer. This can be less then the specified size, but never greater. If a number below zero is returned, the operation failed. The reason of failure can be retrieved using the \hyperlink{class_senergy_1_1_socket_a403f7a2f6c5a94d4b14f73f0965da061}{Get\-Error\-Code()} method. 
+\end{DoxyReturn}
+
+
+Definition at line 183 of file socket.\-cpp.
+
+\hypertarget{class_senergy_1_1_socket_a0c1510be39bef49de15e8647b64dbb5e}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Receive@{Receive}}
+\index{Receive@{Receive}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Receive}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Senergy\-::\-Socket\-::\-Receive (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_socket_a0c1510be39bef49de15e8647b64dbb5e}
+
+
+Attempts to receive the specified amount of data and return it as a string. 
+
+\begin{DoxyNote}{Note}
+This operation will fail when there is no active connection with the remote host.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The amount of bytes to receive and return as a string.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string containing the received data. The length (size) of the returned string can be equal or less then the specified size, but never greater. If the operatin failed, an empty string is returned. 
+\end{DoxyReturn}
+
+
+Definition at line 228 of file socket.\-cpp.
+
+\hypertarget{class_senergy_1_1_socket_aad6b0a1a9f7ac380b11b9ef814ada58b}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Receive@{Receive}}
+\index{Receive@{Receive}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Receive}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Socket\-::\-Receive (
+\begin{DoxyParamCaption}
+\item[{{\bf Byte\-Buffer} \&}]{receive\-\_\-buffer, }
+\item[{size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_socket_aad6b0a1a9f7ac380b11b9ef814ada58b}
+
+
+Attempts to receive the specified amount of data and store it into the specified byte buffer. 
+
+\begin{DoxyNote}{Note}
+This operation will fail when there is no active connection with the remote host.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em receive\-\_\-buffer} & A reference to an instance of the \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} class, which is dynamiclly sized binary data container, to store/write to the received data. \\
+\hline
+{\em size} & The amount of bytes to receive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The amount of bytes that were received. This number can be equal or less then the specified desired amount of bytes. If a number below zero (negative) is returned, the operation failed. The reason of failure can be retrieved using the \hyperlink{class_senergy_1_1_socket_a403f7a2f6c5a94d4b14f73f0965da061}{Get\-Error\-Code()} method. 
+\end{DoxyReturn}
+
+
+Definition at line 249 of file socket.\-cpp.
+
+\hypertarget{class_senergy_1_1_socket_a1407e054edc1fd012d8c85e563683947}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Send@{Send}}
+\index{Send@{Send}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Send}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Socket\-::\-Send (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{size\-\_\-t}]{data\-\_\-size}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_socket_a1407e054edc1fd012d8c85e563683947}
+
+
+Sends the specified data, with the specified size to the remote host. 
+
+\begin{DoxyNote}{Note}
+This operation will fail when there is no active connection with the remote host.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to send to the remote host. If N\-U\-L\-L is specified, the operation will immediately fail. \\
+\hline
+{\em data\-\_\-size} & The size of the data that was specified, the size of the data to send to the remote host. If zero or less is specified, the operation will fail immediately.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The amount of bytes that were succesfuly transmitted to the remote host. If the operation failed, zero will be returned. 
+\end{DoxyReturn}
+
+
+Definition at line 146 of file socket.\-cpp.
+
+\hypertarget{class_senergy_1_1_socket_a9ca07e0de8c6f74f27963f17c8b1398d}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Send@{Send}}
+\index{Send@{Send}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Send}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Socket\-::\-Send (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{data, }
+\item[{size\-\_\-t}]{data\-\_\-size}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_socket_a9ca07e0de8c6f74f27963f17c8b1398d}
+
+
+Sends the specified data, with the specified size to the remote host. 
+
+\begin{DoxyNote}{Note}
+This operation will fail when there is no active connection with the remote host.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The textual data to transmit to the remote host. \\
+\hline
+{\em data\-\_\-size} & The size of the data that was specified, the size of the data to send to the remote host. If zero or less is specified, the operation will fail immediately.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The amount of bytes that were succesfuly transmitted to the remote host. If the operation failed, zero will be returned. 
+\end{DoxyReturn}
+
+
+Definition at line 170 of file socket.\-cpp.
+
+\hypertarget{class_senergy_1_1_socket_a72e1de4e0e3ef63bb020c62bea989fa6}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Send@{Send}}
+\index{Send@{Send}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Send}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Socket\-::\-Send (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_socket_a72e1de4e0e3ef63bb020c62bea989fa6}
+
+
+Sends the specified data, the size (length) of the specified string is the size of the data that will be transmitted. 
+
+\begin{DoxyNote}{Note}
+This operation will fail when there is no active connection with the remote host.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The textual data to transmit to the remote host.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The amount of bytes that were succesfuly transmitted to the remote host. If the operation failed, zero will be returned. 
+\end{DoxyReturn}
+
+
+Definition at line 178 of file socket.\-cpp.
+
+\hypertarget{class_senergy_1_1_socket_a7ca3e4fb2e2f216773498e6f29e9ea14}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Set\-Timeout@{Set\-Timeout}}
+\index{Set\-Timeout@{Set\-Timeout}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Set\-Timeout}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Socket\-::\-Set\-Timeout (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{milliseconds}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_socket_a7ca3e4fb2e2f216773498e6f29e9ea14}
+
+
+Sets the timeout time that is used for socket operations, such as sending, receiving, and connecting. A timeout specifies the maximum time to wait for an operation to complete. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em milliseconds} & The maximum time to wait for an operation to complete. The timeout has to be specified in milliseconds.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indiciating whether setting the timeout succeseeded. True is returned when the operation sucesseeded and false when it failed. Failure can be caused by not having an active connection. 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file socket.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/senergy/\hyperlink{socket_8h}{socket.\-h}\item 
+src/\hyperlink{socket_8cpp}{socket.\-cpp}\end{DoxyCompactItemize}

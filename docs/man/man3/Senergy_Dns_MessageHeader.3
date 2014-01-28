@@ -1,0 +1,173 @@
+.TH "Senergy::Dns::MessageHeader" 3 "Tue Jan 28 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::Dns::MessageHeader \- 
+.PP
+Defines the header of a DNS packet, as described in section 4\&.1 of RFC-1035\&. All DNS messages start with this header\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <message_header\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMessageHeader\fP ()"
+.br
+.RI "\fIInitializes a new instance of the \fBMessageHeader\fP class, with the default values\&. \fP"
+.ti -1c
+.RI "bool \fBIsValid\fP ()"
+.br
+.RI "\fIGets whether this instance is a valid DNS packet header\&. \fP"
+.ti -1c
+.RI "int \fBGetSize\fP ()"
+.br
+.RI "\fIGets the size of a DNS packet header\&. This is almost constant as long as the \fBMessageHeaderFields\fP structure doesn't change\&. \fP"
+.ti -1c
+.RI "bool \fBSerialize\fP (\fBByteBuffer\fP &buffer)"
+.br
+.RI "\fISerializes this instance into the specified buffer, ready for transmission\&. \fP"
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBMessageHeader\fP \fBDeserialize\fP (\fBByteBuffer\fP &buffer)"
+.br
+.RI "\fIDeserializes a DNS packet header from the specified buffer and returns the deserialized result as an instance of the \fBMessageHeader\fP class\&. \fP"
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBMessageHeaderFields\fP \fBFields\fP"
+.br
+.RI "\fIThe fields that are part of a DNS packet header\&. See \fBMessageHeaderFields\fP for a complete list\&. This contains the actual data that is transmitted and received\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Defines the header of a DNS packet, as described in section 4\&.1 of RFC-1035\&. All DNS messages start with this header\&. 
+
+
+.PP
+\fBNote:\fP
+.RS 4
+The actual data will be within a \fBMessageHeaderFields\fP data structure\&.
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+http://msdn.microsoft.com/en-us/library/windows/desktop/ms682059(v=vs.85).aspx 
+.PP
+http://www.ietf.org/rfc/rfc1035.txt
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.PP
+Definition at line 207 of file message_header\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Senergy::Dns::MessageHeader::MessageHeader ()"
+
+.PP
+Initializes a new instance of the \fBMessageHeader\fP class, with the default values\&. 
+.PP
+Definition at line 29 of file message_header\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBMessageHeader\fP Senergy::Dns::MessageHeader::Deserialize (\fBByteBuffer\fP &buffer)\fC [static]\fP"
+
+.PP
+Deserializes a DNS packet header from the specified buffer and returns the deserialized result as an instance of the \fBMessageHeader\fP class\&. 
+.PP
+\fBNote:\fP
+.RS 4
+The DNS message header is 12 bytes, the specified buffer must at least have 12 bytes left to read\&.
+.PP
+Using this will advance the position of the specified \fBByteBuffer\fP with 12 bytes\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP A reference to an instance of the \fBByteBuffer\fP class, the buffer to read from\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+An instance of the \fBMessageHeader\fP class, containing the deserialized DNS packet header\&. If deserialization failed, an invalid \fBMessageHeader\fP instance is returned\&. 
+.RE
+.PP
+
+.PP
+Definition at line 44 of file message_header\&.cpp\&.
+.SS "int Senergy::Dns::MessageHeader::GetSize ()"
+
+.PP
+Gets the size of a DNS packet header\&. This is almost constant as long as the \fBMessageHeaderFields\fP structure doesn't change\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The size of a \fBMessageHeaderFields\fP structure, the size of a DNS packet header\&. 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file message_header\&.cpp\&.
+.SS "bool Senergy::Dns::MessageHeader::IsValid ()"
+
+.PP
+Gets whether this instance is a valid DNS packet header\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Whether this instance is a valid DNS packet header\&. True is returned when this instance is valid, and suited for transmission, and false is returned when this instance is invalid, and should not be used for transmission\&. 
+.RE
+.PP
+
+.PP
+Definition at line 34 of file message_header\&.cpp\&.
+.SS "bool Senergy::Dns::MessageHeader::Serialize (\fBByteBuffer\fP &buffer)"
+
+.PP
+Serializes this instance into the specified buffer, ready for transmission\&. 
+.PP
+\fBNote:\fP
+.RS 4
+Serialization will fail when this instance is not valid\&.
+.PP
+Using this will advance the position of the specified \fBByteBuffer\fP with 12 bytes\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP A reference to the \fBByteBuffer\fP to write the serialized DNS packet header into\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether serialization was sucessful\&. True is returned when seralization suceseeded and false is returned when it failed\&. 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file message_header\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBMessageHeaderFields\fP Senergy::Dns::MessageHeader::Fields"
+
+.PP
+The fields that are part of a DNS packet header\&. See \fBMessageHeaderFields\fP for a complete list\&. This contains the actual data that is transmitted and received\&. 
+.PP
+Definition at line 279 of file message_header\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

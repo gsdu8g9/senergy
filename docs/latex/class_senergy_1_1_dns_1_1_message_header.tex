@@ -1,0 +1,186 @@
+\hypertarget{class_senergy_1_1_dns_1_1_message_header}{\section{Senergy\-:\-:Dns\-:\-:Message\-Header Class Reference}
+\label{class_senergy_1_1_dns_1_1_message_header}\index{Senergy\-::\-Dns\-::\-Message\-Header@{Senergy\-::\-Dns\-::\-Message\-Header}}
+}
+
+
+Defines the header of a D\-N\-S packet, as described in section 4.\-1 of R\-F\-C-\/1035. All D\-N\-S messages start with this header.  
+
+
+
+
+{\ttfamily \#include $<$message\-\_\-header.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_senergy_1_1_dns_1_1_message_header_aa103a12edc759b885f57728c091a84eb}{Message\-Header} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_message_header}{Message\-Header} class, with the default values. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_dns_1_1_message_header_a3636da2fa7e96513080d1985ef515958}{Is\-Valid} ()
+\begin{DoxyCompactList}\small\item\em Gets whether this instance is a valid D\-N\-S packet header. \end{DoxyCompactList}\item 
+int \hyperlink{class_senergy_1_1_dns_1_1_message_header_a69f4475bc3153926dbb011f37cbbfea9}{Get\-Size} ()
+\begin{DoxyCompactList}\small\item\em Gets the size of a D\-N\-S packet header. This is almost constant as long as the \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields}{Message\-Header\-Fields} structure doesn't change. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_dns_1_1_message_header_ab443595ff8e11a828022f0cc5f3f6fbe}{Serialize} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
+\begin{DoxyCompactList}\small\item\em Serializes this instance into the specified buffer, ready for transmission. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_senergy_1_1_dns_1_1_message_header}{Message\-Header} \hyperlink{class_senergy_1_1_dns_1_1_message_header_aec3c0b3f2af0504bfa8fca6562c5b039}{Deserialize} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
+\begin{DoxyCompactList}\small\item\em Deserializes a D\-N\-S packet header from the specified buffer and returns the deserialized result as an instance of the \hyperlink{class_senergy_1_1_dns_1_1_message_header}{Message\-Header} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields}{Message\-Header\-Fields} \hyperlink{class_senergy_1_1_dns_1_1_message_header_a014c173ce2b2c5bb06ae9e5d0e201159}{Fields}
+\begin{DoxyCompactList}\small\item\em The fields that are part of a D\-N\-S packet header. See \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields}{Message\-Header\-Fields} for a complete list. This contains the actual data that is transmitted and received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines the header of a D\-N\-S packet, as described in section 4.\-1 of R\-F\-C-\/1035. All D\-N\-S messages start with this header. 
+
+\begin{DoxyNote}{Note}
+The actual data will be within a \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields}{Message\-Header\-Fields} data structure.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See Also}
+\href{http://msdn.microsoft.com/en-us/library/windows/desktop/ms682059(v=vs.85).aspx}{\tt http\-://msdn.\-microsoft.\-com/en-\/us/library/windows/desktop/ms682059(v=vs.\-85).\-aspx} 
+
+\href{http://www.ietf.org/rfc/rfc1035.txt}{\tt http\-://www.\-ietf.\-org/rfc/rfc1035.\-txt}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Swen Kooij (Photonios) 
+\end{DoxyAuthor}
+
+
+Definition at line 207 of file message\-\_\-header.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_message_header_aa103a12edc759b885f57728c091a84eb}{\index{Senergy\-::\-Dns\-::\-Message\-Header@{Senergy\-::\-Dns\-::\-Message\-Header}!Message\-Header@{Message\-Header}}
+\index{Message\-Header@{Message\-Header}!Senergy::Dns::MessageHeader@{Senergy\-::\-Dns\-::\-Message\-Header}}
+\subsubsection[{Message\-Header}]{\setlength{\rightskip}{0pt plus 5cm}Senergy\-::\-Dns\-::\-Message\-Header\-::\-Message\-Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_message_header_aa103a12edc759b885f57728c091a84eb}
+
+
+Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_message_header}{Message\-Header} class, with the default values. 
+
+
+
+Definition at line 29 of file message\-\_\-header.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_message_header_aec3c0b3f2af0504bfa8fca6562c5b039}{\index{Senergy\-::\-Dns\-::\-Message\-Header@{Senergy\-::\-Dns\-::\-Message\-Header}!Deserialize@{Deserialize}}
+\index{Deserialize@{Deserialize}!Senergy::Dns::MessageHeader@{Senergy\-::\-Dns\-::\-Message\-Header}}
+\subsubsection[{Deserialize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message\-Header} Senergy\-::\-Dns\-::\-Message\-Header\-::\-Deserialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Byte\-Buffer} \&}]{buffer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_message_header_aec3c0b3f2af0504bfa8fca6562c5b039}
+
+
+Deserializes a D\-N\-S packet header from the specified buffer and returns the deserialized result as an instance of the \hyperlink{class_senergy_1_1_dns_1_1_message_header}{Message\-Header} class. 
+
+\begin{DoxyNote}{Note}
+The D\-N\-S message header is 12 bytes, the specified buffer must at least have 12 bytes left to read.
+
+Using this will advance the position of the specified \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} with 12 bytes.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & A reference to an instance of the \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} class, the buffer to read from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An instance of the \hyperlink{class_senergy_1_1_dns_1_1_message_header}{Message\-Header} class, containing the deserialized D\-N\-S packet header. If deserialization failed, an invalid \hyperlink{class_senergy_1_1_dns_1_1_message_header}{Message\-Header} instance is returned. 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file message\-\_\-header.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_message_header_a69f4475bc3153926dbb011f37cbbfea9}{\index{Senergy\-::\-Dns\-::\-Message\-Header@{Senergy\-::\-Dns\-::\-Message\-Header}!Get\-Size@{Get\-Size}}
+\index{Get\-Size@{Get\-Size}!Senergy::Dns::MessageHeader@{Senergy\-::\-Dns\-::\-Message\-Header}}
+\subsubsection[{Get\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Dns\-::\-Message\-Header\-::\-Get\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_message_header_a69f4475bc3153926dbb011f37cbbfea9}
+
+
+Gets the size of a D\-N\-S packet header. This is almost constant as long as the \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields}{Message\-Header\-Fields} structure doesn't change. 
+
+\begin{DoxyReturn}{Returns}
+The size of a \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields}{Message\-Header\-Fields} structure, the size of a D\-N\-S packet header. 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file message\-\_\-header.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_message_header_a3636da2fa7e96513080d1985ef515958}{\index{Senergy\-::\-Dns\-::\-Message\-Header@{Senergy\-::\-Dns\-::\-Message\-Header}!Is\-Valid@{Is\-Valid}}
+\index{Is\-Valid@{Is\-Valid}!Senergy::Dns::MessageHeader@{Senergy\-::\-Dns\-::\-Message\-Header}}
+\subsubsection[{Is\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Message\-Header\-::\-Is\-Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_message_header_a3636da2fa7e96513080d1985ef515958}
+
+
+Gets whether this instance is a valid D\-N\-S packet header. 
+
+\begin{DoxyReturn}{Returns}
+Whether this instance is a valid D\-N\-S packet header. True is returned when this instance is valid, and suited for transmission, and false is returned when this instance is invalid, and should not be used for transmission. 
+\end{DoxyReturn}
+
+
+Definition at line 34 of file message\-\_\-header.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_message_header_ab443595ff8e11a828022f0cc5f3f6fbe}{\index{Senergy\-::\-Dns\-::\-Message\-Header@{Senergy\-::\-Dns\-::\-Message\-Header}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Senergy::Dns::MessageHeader@{Senergy\-::\-Dns\-::\-Message\-Header}}
+\subsubsection[{Serialize}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Message\-Header\-::\-Serialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Byte\-Buffer} \&}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_message_header_ab443595ff8e11a828022f0cc5f3f6fbe}
+
+
+Serializes this instance into the specified buffer, ready for transmission. 
+
+\begin{DoxyNote}{Note}
+Serialization will fail when this instance is not valid.
+
+Using this will advance the position of the specified \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} with 12 bytes.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & A reference to the \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} to write the serialized D\-N\-S packet header into.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether serialization was sucessful. True is returned when seralization suceseeded and false is returned when it failed. 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file message\-\_\-header.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_message_header_a014c173ce2b2c5bb06ae9e5d0e201159}{\index{Senergy\-::\-Dns\-::\-Message\-Header@{Senergy\-::\-Dns\-::\-Message\-Header}!Fields@{Fields}}
+\index{Fields@{Fields}!Senergy::Dns::MessageHeader@{Senergy\-::\-Dns\-::\-Message\-Header}}
+\subsubsection[{Fields}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message\-Header\-Fields} Senergy\-::\-Dns\-::\-Message\-Header\-::\-Fields}}\label{class_senergy_1_1_dns_1_1_message_header_a014c173ce2b2c5bb06ae9e5d0e201159}
+
+
+The fields that are part of a D\-N\-S packet header. See \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields}{Message\-Header\-Fields} for a complete list. This contains the actual data that is transmitted and received. 
+
+
+
+Definition at line 279 of file message\-\_\-header.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/senergy/dns/\hyperlink{message__header_8h}{message\-\_\-header.\-h}\item 
+src/\hyperlink{message__header_8cpp}{message\-\_\-header.\-cpp}\end{DoxyCompactItemize}

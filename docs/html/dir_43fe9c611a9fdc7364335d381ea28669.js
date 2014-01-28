@@ -1,5 +1,6 @@
 var dir_43fe9c611a9fdc7364335d381ea28669 =
 [
+    [ "dns", "dir_12060af884c4747a1bab5c3df0820300.html", "dir_12060af884c4747a1bab5c3df0820300" ],
     [ "bytebuffer.h", "bytebuffer_8h.html", "bytebuffer_8h" ],
     [ "convert.h", "convert_8h.html", [
       [ "Convert", "class_senergy_1_1_convert.html", "class_senergy_1_1_convert" ]

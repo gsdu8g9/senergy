@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['q_5fcount',['q_count',['../struct_d_n_s___h_e_a_d_e_r.html#a6b9815b90208910759572254bf0905e5',1,'DNS_HEADER']]],
-  ['qr',['qr',['../struct_d_n_s___h_e_a_d_e_r.html#a874c920bbfec9e40d6b77e97128d1da9',1,'DNS_HEADER']]]
+  ['opcode',['opcode',['../struct_d_n_s___h_e_a_d_e_r.html#a07b70b04059dd68a0f7c1c879ccf1ef2',1,'DNS_HEADER::opcode()'],['../struct_senergy_1_1_dns_1_1_message_header_fields.html#ac2d7ba4468405e5693f07d4321058be0',1,'Senergy::Dns::MessageHeaderFields::Opcode()']]]
 ];

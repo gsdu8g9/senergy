@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['socketprotocol',['SocketProtocol',['../class_senergy_1_1_networking_1_1_socket.html#a83b2c6873ed6de08855f226e473d9eb9',1,'Senergy::Networking::Socket']]],
-  ['socketrole',['SocketRole',['../class_senergy_1_1_networking_1_1_socket.html#a78ca8d55b9849962428e844d3bf4ff49',1,'Senergy::Networking::Socket']]]
+  ['socketprotocol',['SocketProtocol',['../class_senergy_1_1_socket.html#ad400245278746ac26e261bdda171c178',1,'Senergy::Socket']]],
+  ['socketrole',['SocketRole',['../class_senergy_1_1_socket.html#ad82ad4c4412684091e687b92641bfbe9',1,'Senergy::Socket']]]
 ];

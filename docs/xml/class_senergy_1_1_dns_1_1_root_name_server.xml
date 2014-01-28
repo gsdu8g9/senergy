@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_senergy_1_1_dns_1_1_root_name_server" kind="class" prot="public">
+    <compoundname>Senergy::Dns::RootNameServer</compoundname>
+    <includes refid="rootnameserver_8h" local="no">rootnameserver.h</includes>
+    <briefdescription>
+<para>Represents one of the 13 Root Name Servers (DNS) that are currently operating around the world. Provides access to the functionalities that root name servers offer. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/rootnameserver.h" line="37" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/rootnameserver.h" bodystart="36" bodyend="38"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

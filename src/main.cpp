@@ -1,19 +1,19 @@
 /*******************************************************************************
  *
- *	 This file is part of WhatsDesk.
+ *	 This file is part of Senergy.
  *
- *   WhatsDesk is free software: you can redistribute it and/or modify
+ *   Senergy is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
  *   the Free Software Foundation, either version 3 of the License, or
  *   (at your option) any later version.
  *
- *   WhatsDesk is distributed in the hope that it will be useful,
+ *   Senergy is distributed in the hope that it will be useful,
  *   but WITHOUT ANY WARRANTY; without even the implied warranty of
  *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *   GNU General Public License for more details.
  *
  *   You should have received a copy of the GNU General Public License
- *   along with WhatsDesk. If not, see <http://www.gnu.org/licenses/>.
+ *   along with Senergy. If not, see <http://www.gnu.org/licenses/>.
  *
  *   Swen Kooij (Photonios) <swenkooij@gmail.com> <photonios@outlook.com>
  *
@@ -116,10 +116,10 @@ int main(int argc, char **argv)
 
 		receive_buffer.SetPosition(0);
 
-		DNS_HEADER header;
-		unsigned int header_size = sizeof(DNS_HEADER);
+		Senergy::Dns::MessageHeaderFields header;
+		unsigned int header_size = sizeof(Senergy::Dns::MessageHeaderFields);
 
-		//char *header_buffer = (char *)malloc(header_size);
+		printf("header size: %u\n", header_size);
 
 		if(!receive_buffer.Read((char*)&header, header_size))
 		{
@@ -129,7 +129,7 @@ int main(int argc, char **argv)
 
 		//memcpy((void*)&header, header_buffer, header_size);
 
-		header.id = (unsigned short)htons(header.id);
+		/*header.id = (unsigned short)htons(header.id);
 		header.q_count = (unsigned short)htons(header.q_count);
 
 		printf("id: %hu\n", header.id);
@@ -146,12 +146,16 @@ int main(int argc, char **argv)
 		printf("q_count: %hu\n", header.q_count);
 		printf("ans_count: %hu\n", header.ans_count);
 		printf("auth_count: %hu\n", header.auth_count);
-		printf("add_count: %hu\n\n", header.add_count);
+		printf("add_count: %hu\n\n", header.add_count);*/
 
-		for(int i = 0; i < header.q_count; ++i)
+		header.QuestionCount = (unsigned short)htons(header.QuestionCount);
+
+		for(int i = 0; i < header.QuestionCount; ++i)
 		{
 			int remaining_bytes = receive_buffer.Size() - receive_buffer.GetPosition();
 			char *remaining = (char*)malloc(remaining_bytes);
+
+			printf("Questions: %hu\n", header.QuestionCount);
 			
 			if(!receive_buffer.Read(remaining, remaining_bytes))
 			{
@@ -162,7 +166,7 @@ int main(int argc, char **argv)
 
 			int name_len = 0;
 			unsigned char *name = ReadName((unsigned char *)remaining, (unsigned char*)remaining, &name_len);
-			printf("name: %s\n", name);
+			printf("name: %s\n\n", name);
 		}
 
 		//printf("%s\n", receive_buffer.ReadAll().c_str());	

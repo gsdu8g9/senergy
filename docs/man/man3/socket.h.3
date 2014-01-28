@@ -31,7 +31,7 @@ src/senergy/socket.h \-
 
 .in +1c
 .ti -1c
-.RI "class \fBSenergy::Networking::Socket\fP"
+.RI "class \fBSenergy::Socket\fP"
 .br
 .RI "\fIProvides an object-oriented interface for Berkely (BSD) sockets\&. Can act both as a server as well as a client\&. The main purpose of this class class is to provide a more C++ like interface for TCP sockets\&. \fP"
 .in -1c
@@ -41,15 +41,12 @@ src/senergy/socket.h \-
 .ti -1c
 .RI "\fBSenergy\fP"
 .br
-.ti -1c
-.RI "\fBSenergy::Networking\fP"
-.br
 .in -1c
 .SS "Typedefs"
 
 .in +1c
 .ti -1c
-.RI "typedef std::shared_ptr< Socket > \fBSenergy::Networking::SocketPtr\fP"
+.RI "typedef std::shared_ptr< Socket > \fBSenergy::SocketPtr\fP"
 .br
 .RI "\fIA simple typedef for the shared pointer of a TcpSocket instance\&. \fP"
 .in -1c

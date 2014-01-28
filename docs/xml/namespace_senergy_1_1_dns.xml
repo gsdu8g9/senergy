@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_senergy_1_1_dns" kind="namespace">
+    <compoundname>Senergy::Dns</compoundname>
+    <innerclass refid="class_senergy_1_1_dns_1_1_message" prot="public">Senergy::Dns::Message</innerclass>
+    <innerclass refid="struct_senergy_1_1_dns_1_1_message_header_fields" prot="public">Senergy::Dns::MessageHeaderFields</innerclass>
+    <innerclass refid="class_senergy_1_1_dns_1_1_message_header" prot="public">Senergy::Dns::MessageHeader</innerclass>
+    <innerclass refid="class_senergy_1_1_dns_1_1_root_name_server" prot="public">Senergy::Dns::RootNameServer</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/photonios/Documents/Senergy/src/message.cpp" line="27" column="1"/>
+  </compounddef>
+</doxygen>

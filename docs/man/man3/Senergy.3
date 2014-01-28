@@ -10,7 +10,7 @@ Senergy \-
 
 .in +1c
 .ti -1c
-.RI "\fBNetworking\fP"
+.RI "\fBDns\fP"
 .br
 .in -1c
 .SS "Classes"
@@ -28,6 +28,10 @@ Senergy \-
 .RI "class \fBPrint\fP"
 .br
 .RI "\fIContains simple utilities that facilitate printing various data types or data structures to the screen\&. \fP"
+.ti -1c
+.RI "class \fBSocket\fP"
+.br
+.RI "\fIProvides an object-oriented interface for Berkely (BSD) sockets\&. Can act both as a server as well as a client\&. The main purpose of this class class is to provide a more C++ like interface for TCP sockets\&. \fP"
 .in -1c
 .SS "Typedefs"
 
@@ -38,6 +42,10 @@ Senergy \-
 < \fBByteBuffer\fP > \fBByteBufferPtr\fP"
 .br
 .RI "\fIA simple typedef for a shared pointer to a \fBByteBuffer\fP instance\&. \fP"
+.ti -1c
+.RI "typedef std::shared_ptr< \fBSocket\fP > \fBSocketPtr\fP"
+.br
+.RI "\fIA simple typedef for the shared pointer of a TcpSocket instance\&. \fP"
 .in -1c
 .SH "Typedef Documentation"
 .PP 
@@ -47,6 +55,12 @@ Senergy \-
 A simple typedef for a shared pointer to a \fBByteBuffer\fP instance\&. 
 .PP
 Definition at line 349 of file bytebuffer\&.h\&.
+.SS "typedef std::shared_ptr<\fBSocket\fP> \fBSenergy::SocketPtr\fP"
+
+.PP
+A simple typedef for the shared pointer of a TcpSocket instance\&. 
+.PP
+Definition at line 439 of file socket\&.h\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Senergy from the source code\&.

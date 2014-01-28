@@ -4,7 +4,7 @@
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{namespace_senergy_1_1_networking}{Networking}
+\hyperlink{namespace_senergy_1_1_dns}{Dns}
 \end{DoxyCompactItemize}
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
@@ -14,13 +14,17 @@ class \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer}
 class \hyperlink{class_senergy_1_1_convert}{Convert}
 \begin{DoxyCompactList}\small\item\em A simple conversion class, which simplifies conversion between various native data types. Based on the idea of the '\hyperlink{class_senergy_1_1_convert}{Convert}' class in the .N\-E\-T framework. \end{DoxyCompactList}\item 
 class \hyperlink{class_senergy_1_1_print}{Print}
-\begin{DoxyCompactList}\small\item\em Contains simple utilities that facilitate printing various data types or data structures to the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Contains simple utilities that facilitate printing various data types or data structures to the screen. \end{DoxyCompactList}\item 
+class \hyperlink{class_senergy_1_1_socket}{Socket}
+\begin{DoxyCompactList}\small\item\em Provides an object-\/oriented interface for Berkely (B\-S\-D) sockets. Can act both as a server as well as a client. The main purpose of this class class is to provide a more C++ like interface for T\-C\-P sockets. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 typedef std\-::shared\-\_\-ptr\\*
 $<$ \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} $>$ \hyperlink{namespace_senergy_a30f5cfaeb333ffdf2c3332cc590a57ea}{Byte\-Buffer\-Ptr}
-\begin{DoxyCompactList}\small\item\em A simple typedef for a shared pointer to a \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A simple typedef for a shared pointer to a \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} instance. \end{DoxyCompactList}\item 
+typedef std\-::shared\-\_\-ptr$<$ \hyperlink{class_senergy_1_1_socket}{Socket} $>$ \hyperlink{namespace_senergy_a9014e48a368555ba932efd8d17eb2d23}{Socket\-Ptr}
+\begin{DoxyCompactList}\small\item\em A simple typedef for the shared pointer of a Tcp\-Socket instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Typedef Documentation}
@@ -34,4 +38,15 @@ A simple typedef for a shared pointer to a \hyperlink{class_senergy_1_1_byte_buf
 
 
 Definition at line 349 of file bytebuffer.\-h.
+
+\hypertarget{namespace_senergy_a9014e48a368555ba932efd8d17eb2d23}{\index{Senergy@{Senergy}!Socket\-Ptr@{Socket\-Ptr}}
+\index{Socket\-Ptr@{Socket\-Ptr}!Senergy@{Senergy}}
+\subsubsection[{Socket\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::shared\-\_\-ptr$<${\bf Socket}$>$ {\bf Senergy\-::\-Socket\-Ptr}}}\label{namespace_senergy_a9014e48a368555ba932efd8d17eb2d23}
+
+
+A simple typedef for the shared pointer of a Tcp\-Socket instance. 
+
+
+
+Definition at line 439 of file socket.\-h.
 

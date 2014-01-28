@@ -1,0 +1,875 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_senergy_1_1_socket" kind="class" prot="public">
+    <compoundname>Senergy::Socket</compoundname>
+    <includes refid="socket_8h" local="no">socket.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_senergy_1_1_socket_1a88ed1eb1a5c47ea1b395715aabd37ab4" prot="public" static="no">
+        <name>CloseType</name>
+        <enumvalue id="class_senergy_1_1_socket_1a88ed1eb1a5c47ea1b395715aabd37ab4a1851aea8452370ffbc6364027d018da9" prot="public">
+          <name>StopReceiving</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Stop receiving incoming data, but send all remaining data. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_senergy_1_1_socket_1a88ed1eb1a5c47ea1b395715aabd37ab4a948c383a847087d69042e091d164380b" prot="public">
+          <name>StopSending</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Stop sending data, but receive all remaining data. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_senergy_1_1_socket_1a88ed1eb1a5c47ea1b395715aabd37ab4a40b522922220c34afd8e1d4a3ba02208" prot="public">
+          <name>StopAll</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>Stop sending and receiving data immeditially./. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Defines possible ways/means of closing/disconnecting an active socket connection. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="67" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="66" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_senergy_1_1_socket_1ad82ad4c4412684091e687b92641bfbe9" prot="public" static="no">
+        <name>SocketRole</name>
+        <enumvalue id="class_senergy_1_1_socket_1ad82ad4c4412684091e687b92641bfbe9a577d7068826de925ea2aec01dbadf5e4" prot="public">
+          <name>Client</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>The instance is behaving as a client socket, which is connected to a server. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_senergy_1_1_socket_1ad82ad4c4412684091e687b92641bfbe9a9aa1b03934893d7134a660af4204f2a9" prot="public">
+          <name>Server</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>The instance is behaving as a server and is binded on a specific port, and listens for incoming connections. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Defines the possible socket roles we can have. An instance of the <ref refid="class_senergy_1_1_socket" kindref="compound">Socket</ref> socket class can be of two different roles. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="89" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="88" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_senergy_1_1_socket_1ad400245278746ac26e261bdda171c178" prot="public" static="no">
+        <name>SocketProtocol</name>
+        <enumvalue id="class_senergy_1_1_socket_1ad400245278746ac26e261bdda171c178ab136ef5f6a01d816991fe3cf7a6ac763" prot="public">
+          <name>TCP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_senergy_1_1_socket_1ad400245278746ac26e261bdda171c178af5ef036b4d8b630721e51fe23489fbc9" prot="public">
+          <name>UDP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Defines the possible socket protocols that this class supports. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="107" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="106" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_senergy_1_1_socket_1ac9ff20ce80df2d0c2900cd0940ffe860" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="class_senergy_1_1_socket" kindref="compound">Socket</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;Socket&gt; Senergy::Socket::SocketPtr</definition>
+        <argsstring></argsstring>
+        <name>SocketPtr</name>
+        <briefdescription>
+<para>A shared pointer typedef for the <ref refid="class_senergy_1_1_socket" kindref="compound">Socket</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This is defined outside the class definition as well to make it usuable for library users. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="118" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_senergy_1_1_socket_1abe51464158214b89f9fb1a484d701879" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Senergy::Socket::m_remote_host</definition>
+        <argsstring></argsstring>
+        <name>m_remote_host</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="405" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_senergy_1_1_socket_1af5a7357eabdf1ed00c9c3c52def347af" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Senergy::Socket::m_remote_port</definition>
+        <argsstring></argsstring>
+        <name>m_remote_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="408" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_senergy_1_1_socket_1a93462ce0004128386f0f4f05f569d37e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Senergy::Socket::m_connected</definition>
+        <argsstring></argsstring>
+        <name>m_connected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="411" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_senergy_1_1_socket_1a1ae0a64d0e4ad02f01106a6591a846ef" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Senergy::Socket::m_last_error</definition>
+        <argsstring></argsstring>
+        <name>m_last_error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="414" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_senergy_1_1_socket_1a464bf22d61640c34ae86f78f2b393ceb" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Senergy::Socket::m_native_socket</definition>
+        <argsstring></argsstring>
+        <name>m_native_socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="417" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_senergy_1_1_socket_1ade29780721413965d913c408822036e4" prot="private" static="no" mutable="no">
+        <type>struct sockaddr_in</type>
+        <definition>struct sockaddr_in Senergy::Socket::m_remote_address</definition>
+        <argsstring></argsstring>
+        <name>m_remote_address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="417" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="420" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_senergy_1_1_socket_1a0ef40f577e0fb6c1279a1da105769dc9" prot="private" static="no" mutable="no">
+        <type>struct timeval</type>
+        <definition>struct timeval Senergy::Socket::m_timeout</definition>
+        <argsstring></argsstring>
+        <name>m_timeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="417" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_senergy_1_1_socket_1aaaace880e043b8a79351b62c3d7f2083" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Senergy::Socket::m_timeout_milliseconds</definition>
+        <argsstring></argsstring>
+        <name>m_timeout_milliseconds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="427" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="427" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_senergy_1_1_socket_1a1648f5eca31446c62baa03f0e4b0b366" prot="private" static="no" mutable="no">
+        <type><ref refid="class_senergy_1_1_socket_1ad82ad4c4412684091e687b92641bfbe9" kindref="member">SocketRole</ref></type>
+        <definition>SocketRole Senergy::Socket::m_socket_role</definition>
+        <argsstring></argsstring>
+        <name>m_socket_role</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="430" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="430" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_senergy_1_1_socket_1a40e9fe058208a4c199d18258e766ca33" prot="private" static="no" mutable="no">
+        <type><ref refid="class_senergy_1_1_socket_1ad400245278746ac26e261bdda171c178" kindref="member">SocketProtocol</ref></type>
+        <definition>SocketProtocol Senergy::Socket::m_protocol</definition>
+        <argsstring></argsstring>
+        <name>m_protocol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="433" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="433" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_senergy_1_1_socket_1a6fcb47adc585aa2bb5d3d81a5e5b22e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Senergy::Socket::Socket</definition>
+        <argsstring>(SocketProtocol protocol)</argsstring>
+        <name>Socket</name>
+        <param>
+          <type><ref refid="class_senergy_1_1_socket_1ad400245278746ac26e261bdda171c178" kindref="member">SocketProtocol</ref></type>
+          <declname>protocol</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the TSocket class that is not connected to a remote host, and starts as the &apos;client&apos; socket type. </para>        </briefdescription>
+        <detaileddescription>
+<para>One should use the Connect(..) or the Listen(..) functions to either connect to a remote host, or to start listening for incoming connections.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>protocol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A value from the SocketProtocol enumuration, which indicates what kind of protocol this socket is going to use. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="131" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="27" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1ad287e0ea5d32febd95ed7ba590d9e08d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Senergy::Socket::Socket</definition>
+        <argsstring>(const Socket &amp;socket)</argsstring>
+        <name>Socket</name>
+        <param>
+          <type>const <ref refid="class_senergy_1_1_socket" kindref="compound">Socket</ref> &amp;</type>
+          <declname>socket</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_senergy_1_1_socket" kindref="compound">Socket</ref> class based on the specified reference to another instance of the <ref refid="class_senergy_1_1_socket" kindref="compound">Socket</ref> class. This constructor is defined as the &apos;copy constructor&apos; and performs a hard copy of the specified <ref refid="class_senergy_1_1_socket" kindref="compound">Socket</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This copy constructor is defined to allow the <ref refid="class_senergy_1_1_socket" kindref="compound">Socket</ref> class to be used in STL collections like map, vector and list.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to an instance of the <ref refid="class_senergy_1_1_socket" kindref="compound">Socket</ref> class that needs to be hard-copied into a new instance. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="145" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="39" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1ad6ac199d691bbbb3915c375900a11ca7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Senergy::Socket::Socket</definition>
+        <argsstring>(SocketProtocol protocol, int native_socket, struct sockaddr_in remote_address)</argsstring>
+        <name>Socket</name>
+        <param>
+          <type><ref refid="class_senergy_1_1_socket_1ad400245278746ac26e261bdda171c178" kindref="member">SocketProtocol</ref></type>
+          <declname>protocol</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>native_socket</declname>
+        </param>
+        <param>
+          <type>struct sockaddr_in</type>
+          <declname>remote_address</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_senergy_1_1_socket" kindref="compound">Socket</ref> class using the specified native socket and remote address. </para>        </briefdescription>
+        <detaileddescription>
+<para>The intention of this constructor is to easily allow the user of the library to wrap existing/created Berkely sockets.</para><para>This constructor is also used when an incoming remote connection is accepted.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>protocol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A value from the SocketProtocol enumuration, which indicates what kind of protocol this socket is going to use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>native_socket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A valid/connected descriptor for a Berkeley <ref refid="class_senergy_1_1_socket" kindref="compound">Socket</ref> (BSD), that the new instance needs to wrap. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>remote_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A sockaddr_int structure, which defines the remote host that this socket is connected to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="163" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="53" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1aaab6b46c9e2733982df87eefb0fc77a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Senergy::Socket::GetRemoteHost</definition>
+        <argsstring>()</argsstring>
+        <name>GetRemoteHost</name>
+        <briefdescription>
+<para>Gets the textual representation of the remote host that this socket is currently connected to. This can either be an IP address or a host name. </para>        </briefdescription>
+        <detaileddescription>
+<para>The remote host gets updated when connections are made. When data is received over UDP, the remote host gets updated with the host that we last received data from.</para><para><simplesect kind="return"><para>The textual representation of the remote host, can return an empty string when there is no active connection, or when the remote host is unknown. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="178" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1a6d22575e6fc0d6ab4a61097d60b6e773" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::Socket::IsConnected</definition>
+        <argsstring>()</argsstring>
+        <name>IsConnected</name>
+        <briefdescription>
+<para>Determines whether this instance has an active connection with a remote rost and returns the result. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This cannot be used to accurately determine the status of the connection. When the remote host closes the connection, the status is not updated. The status is only updated when a connection is initiated or destroyed/closed by this instance.</para></simplesect>
+<simplesect kind="return"><para>A boolean indicating whether there&apos;s an active connection with the remote host. True is returned when there is an active connection and false is returned when there is no active connection. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="193" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="71" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1a7ca3e4fb2e2f216773498e6f29e9ea14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::Socket::SetTimeout</definition>
+        <argsstring>(unsigned int milliseconds)</argsstring>
+        <name>SetTimeout</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>milliseconds</declname>
+        </param>
+        <briefdescription>
+<para>Sets the timeout time that is used for socket operations, such as sending, receiving, and connecting. A timeout specifies the maximum time to wait for an operation to complete. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>milliseconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum time to wait for an operation to complete. The timeout has to be specified in milliseconds.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean indiciating whether setting the timeout succeseeded. True is returned when the operation sucesseeded and false when it failed. Failure can be caused by not having an active connection. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="207" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="82" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1a75946ce55f263abb105a22611819e11e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::Socket::Connect</definition>
+        <argsstring>(const std::string &amp;remote_ip, unsigned int remote_port)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>remote_ip</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>remote_port</declname>
+        </param>
+        <briefdescription>
+<para>Attempts to setup a TCP connection with the specified remote host over the specified port. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This sets the type of this instance to &apos;Cient&apos;, but only if the operation was succesful.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>remote_ip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string containing the remote host name or IP address to connect to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>remote_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The TCP port to connect over to the specified remote host.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean indicating whether setting up a connection with the specified remote host succeseeded. True is returned when setting up the connection succseeded and false when it failed. Reason for failure can be an invalid or non-existing remote host, or no remote server listening on the specified port. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="226" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="88" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1a9f2cfa080e3a5f365b52cc5fff94eb74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::Socket::Listen</definition>
+        <argsstring>(unsigned int port)</argsstring>
+        <name>Listen</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+<para>Starts listening for incoming connections on the specified port. Binds itself to the specified port. Incoming connections can be accepted using the &apos;Accept(..)&apos; method. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This sets the type of this instance to &apos;Server&apos;, but only if the operation was successful.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The TCP port number to start listening on for incoming connections.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean indiciating whether the operation succeseeded. True is returned when the operationg succeseeded and false when it failed. Reason for failure can be, that another TCP server is already binded/listening on the specified port. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="243" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="108" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1a859e2c4eec6792215f04363404658b0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::Socket::Close</definition>
+        <argsstring>(CloseType close_type=CloseType::StopAll)</argsstring>
+        <name>Close</name>
+        <param>
+          <type><ref refid="class_senergy_1_1_socket_1a88ed1eb1a5c47ea1b395715aabd37ab4" kindref="member">CloseType</ref></type>
+          <declname>close_type</declname>
+          <defval><ref refid="class_senergy_1_1_socket_1a88ed1eb1a5c47ea1b395715aabd37ab4a40b522922220c34afd8e1d4a3ba02208" kindref="member">CloseType::StopAll</ref></defval>
+        </param>
+        <briefdescription>
+<para>Closes the current connection with the remote host. The method of closing the connection can be specified. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>close_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional: Specifies the method of closing the connection with the remote host.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean indiciating whether the operation succeseeded and false when the operation failed. The operation can fail when there is no active connection with a remote host. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="256" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="135" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1a1407e054edc1fd012d8c85e563683947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Senergy::Socket::Send</definition>
+        <argsstring>(const char *data, size_t data_size)</argsstring>
+        <name>Send</name>
+        <param>
+          <type>const char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>data_size</declname>
+        </param>
+        <briefdescription>
+<para>Sends the specified data, with the specified size to the remote host. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This operation will fail when there is no active connection with the remote host.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to send to the remote host. If NULL is specified, the operation will immediately fail. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the data that was specified, the size of the data to send to the remote host. If zero or less is specified, the operation will fail immediately.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The amount of bytes that were succesfuly transmitted to the remote host. If the operation failed, zero will be returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="272" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="146" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1a9ca07e0de8c6f74f27963f17c8b1398d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Senergy::Socket::Send</definition>
+        <argsstring>(const std::string &amp;data, size_t data_size)</argsstring>
+        <name>Send</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>data_size</declname>
+        </param>
+        <briefdescription>
+<para>Sends the specified data, with the specified size to the remote host. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This operation will fail when there is no active connection with the remote host.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The textual data to transmit to the remote host. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the data that was specified, the size of the data to send to the remote host. If zero or less is specified, the operation will fail immediately.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The amount of bytes that were succesfuly transmitted to the remote host. If the operation failed, zero will be returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="287" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="170" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1a72e1de4e0e3ef63bb020c62bea989fa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Senergy::Socket::Send</definition>
+        <argsstring>(const std::string &amp;data)</argsstring>
+        <name>Send</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Sends the specified data, the size (length) of the specified string is the size of the data that will be transmitted. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This operation will fail when there is no active connection with the remote host.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The textual data to transmit to the remote host.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The amount of bytes that were succesfuly transmitted to the remote host. If the operation failed, zero will be returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="300" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="178" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1a7045f756d3c542ee1187a92ca13fa232" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Senergy::Socket::Receive</definition>
+        <argsstring>(const char *receive_buffer, size_t size)</argsstring>
+        <name>Receive</name>
+        <param>
+          <type>const char *</type>
+          <declname>receive_buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Attempts to receive the specified amount of data into the specified buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This operation will fail when there is no active connection with the remote host.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>receive_buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to store the received data into. Writing starts at the start of the buffer. If NULL is specified, the operation will fail immediately. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of bytes to receive. Make sure that the specified receive buffer is this size, or greater.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The amount of bytes that were actually received and stored into the specified receive buffer. This can be less then the specified size, but never greater. If a number below zero is returned, the operation failed. The reason of failure can be retrieved using the <ref refid="class_senergy_1_1_socket_1a403f7a2f6c5a94d4b14f73f0965da061" kindref="member">GetErrorCode()</ref> method. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="318" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="183" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1a0c1510be39bef49de15e8647b64dbb5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Senergy::Socket::Receive</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>Receive</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Attempts to receive the specified amount of data and return it as a string. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This operation will fail when there is no active connection with the remote host.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of bytes to receive and return as a string.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string containing the received data. The length (size) of the returned string can be equal or less then the specified size, but never greater. If the operatin failed, an empty string is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="331" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="228" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1aad6b0a1a9f7ac380b11b9ef814ada58b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Senergy::Socket::Receive</definition>
+        <argsstring>(ByteBuffer &amp;receive_buffer, size_t size)</argsstring>
+        <name>Receive</name>
+        <param>
+          <type><ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> &amp;</type>
+          <declname>receive_buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Attempts to receive the specified amount of data and store it into the specified byte buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This operation will fail when there is no active connection with the remote host.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>receive_buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to an instance of the <ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> class, which is dynamiclly sized binary data container, to store/write to the received data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of bytes to receive.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The amount of bytes that were received. This number can be equal or less then the specified desired amount of bytes. If a number below zero (negative) is returned, the operation failed. The reason of failure can be retrieved using the <ref refid="class_senergy_1_1_socket_1a403f7a2f6c5a94d4b14f73f0965da061" kindref="member">GetErrorCode()</ref> method. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="348" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="249" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1abefda24a1a73b49e108a54342be0457e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_senergy_1_1_socket_1ac9ff20ce80df2d0c2900cd0940ffe860" kindref="member">SocketPtr</ref></type>
+        <definition>SocketPtr Senergy::Socket::Accept</definition>
+        <argsstring>()</argsstring>
+        <name>Accept</name>
+        <briefdescription>
+<para>Attempts to accept an incoming remote connection. This can be used to accept incoming remote connections when this instance is listening for incoming connections. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This does not work when this instance is not listening for incoming connections.</para></simplesect>
+<simplesect kind="return"><para>A shared pointer to an instance of the <ref refid="class_senergy_1_1_socket" kindref="compound">Socket</ref> class, which represents the accepted remote connection. When the operation failed, an invalid shared pointer is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="360" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="270" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1a403f7a2f6c5a94d4b14f73f0965da061" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Senergy::Socket::GetErrorCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetErrorCode</name>
+        <briefdescription>
+<para>Gets the last error code that was set by a socket operation. The error code that is returned are normal Berkely sockets error codes. Performing another socket operation overwrites the last error code that was set. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The last error code that was set during a socket operation. If a negative number or zero is returned, the last operation did not cause an error and was sucessful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="370" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="292" bodyend="295"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_senergy_1_1_socket_1ae0c15aa32e1b926b73dd161b6a860aff" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::Socket::__create_native_socket</definition>
+        <argsstring>()</argsstring>
+        <name>__create_native_socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="374" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="297" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1a1500b42bc89e99121fe3e1f48cd235a2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::Socket::__set_address_struct</definition>
+        <argsstring>()</argsstring>
+        <name>__set_address_struct</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="378" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="318" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1a8dac439029bcdf60b95b813f3fde074f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::Socket::__native_connect</definition>
+        <argsstring>()</argsstring>
+        <name>__native_connect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="382" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="349" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1a6edaed683233e8d1106921de37efe4d8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::Socket::__bind_on_port</definition>
+        <argsstring>()</argsstring>
+        <name>__bind_on_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="386" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="360" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1acce8fccf32a6f5fcbb627ef3af9e896f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::Socket::__listen</definition>
+        <argsstring>()</argsstring>
+        <name>__listen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="390" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="368" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1a7312a149eaf481679a4df587a1961c08" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::Socket::__update_last_error</definition>
+        <argsstring>()</argsstring>
+        <name>__update_last_error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="394" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="376" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1a65762dbbd5425677cc0e21471453dd8b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::Socket::__enfore_timeout</definition>
+        <argsstring>()</argsstring>
+        <name>__enfore_timeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="397" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="385" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_socket_1aa4e8612d22ff22c0fb1e344e59fc4d50" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::Socket::__update_remote_host</definition>
+        <argsstring>()</argsstring>
+        <name>__update_remote_host</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="400" column="1" bodyfile="/home/photonios/Documents/Senergy/src/socket.cpp" bodystart="400" bodyend="407"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Provides an object-oriented interface for Berkely (BSD) sockets. Can act both as a server as well as a client. The main purpose of this class class is to provide a more C++ like interface for TCP sockets. </para>    </briefdescription>
+    <detaileddescription>
+<para>Another important purpose of this class is thread-safety. Due to the &apos;global&apos; nature nature in C, Berkely sockets are not thread safe. Using mutexes this class is and allows the socket to be used in a multi-threaded environment.</para><para><simplesect kind="note"><para>This class does not use exceptions. Error handeling is done the same way as in the Berkely Sockets interface. Call GetErrorCode(..) for the latest BSD error code.</para></simplesect>
+<simplesect kind="author"><para>Swen Kooij / Photonios </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="60" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="59" bodyend="434"/>
+    <listofallmembers>
+      <member refid="class_senergy_1_1_socket_1a6edaed683233e8d1106921de37efe4d8" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>__bind_on_port</name></member>
+      <member refid="class_senergy_1_1_socket_1ae0c15aa32e1b926b73dd161b6a860aff" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>__create_native_socket</name></member>
+      <member refid="class_senergy_1_1_socket_1a65762dbbd5425677cc0e21471453dd8b" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>__enfore_timeout</name></member>
+      <member refid="class_senergy_1_1_socket_1acce8fccf32a6f5fcbb627ef3af9e896f" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>__listen</name></member>
+      <member refid="class_senergy_1_1_socket_1a8dac439029bcdf60b95b813f3fde074f" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>__native_connect</name></member>
+      <member refid="class_senergy_1_1_socket_1a1500b42bc89e99121fe3e1f48cd235a2" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>__set_address_struct</name></member>
+      <member refid="class_senergy_1_1_socket_1a7312a149eaf481679a4df587a1961c08" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>__update_last_error</name></member>
+      <member refid="class_senergy_1_1_socket_1aa4e8612d22ff22c0fb1e344e59fc4d50" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>__update_remote_host</name></member>
+      <member refid="class_senergy_1_1_socket_1abefda24a1a73b49e108a54342be0457e" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>Accept</name></member>
+      <member refid="class_senergy_1_1_socket_1a859e2c4eec6792215f04363404658b0a" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>Close</name></member>
+      <member refid="class_senergy_1_1_socket_1a88ed1eb1a5c47ea1b395715aabd37ab4" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>CloseType</name></member>
+      <member refid="class_senergy_1_1_socket_1a75946ce55f263abb105a22611819e11e" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>Connect</name></member>
+      <member refid="class_senergy_1_1_socket_1a403f7a2f6c5a94d4b14f73f0965da061" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>GetErrorCode</name></member>
+      <member refid="class_senergy_1_1_socket_1aaab6b46c9e2733982df87eefb0fc77a2" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>GetRemoteHost</name></member>
+      <member refid="class_senergy_1_1_socket_1a6d22575e6fc0d6ab4a61097d60b6e773" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>IsConnected</name></member>
+      <member refid="class_senergy_1_1_socket_1a9f2cfa080e3a5f365b52cc5fff94eb74" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>Listen</name></member>
+      <member refid="class_senergy_1_1_socket_1a93462ce0004128386f0f4f05f569d37e" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>m_connected</name></member>
+      <member refid="class_senergy_1_1_socket_1a1ae0a64d0e4ad02f01106a6591a846ef" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>m_last_error</name></member>
+      <member refid="class_senergy_1_1_socket_1a464bf22d61640c34ae86f78f2b393ceb" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>m_native_socket</name></member>
+      <member refid="class_senergy_1_1_socket_1a40e9fe058208a4c199d18258e766ca33" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>m_protocol</name></member>
+      <member refid="class_senergy_1_1_socket_1ade29780721413965d913c408822036e4" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>m_remote_address</name></member>
+      <member refid="class_senergy_1_1_socket_1abe51464158214b89f9fb1a484d701879" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>m_remote_host</name></member>
+      <member refid="class_senergy_1_1_socket_1af5a7357eabdf1ed00c9c3c52def347af" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>m_remote_port</name></member>
+      <member refid="class_senergy_1_1_socket_1a1648f5eca31446c62baa03f0e4b0b366" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>m_socket_role</name></member>
+      <member refid="class_senergy_1_1_socket_1a0ef40f577e0fb6c1279a1da105769dc9" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>m_timeout</name></member>
+      <member refid="class_senergy_1_1_socket_1aaaace880e043b8a79351b62c3d7f2083" prot="private" virt="non-virtual"><scope>Senergy::Socket</scope><name>m_timeout_milliseconds</name></member>
+      <member refid="class_senergy_1_1_socket_1a7045f756d3c542ee1187a92ca13fa232" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>Receive</name></member>
+      <member refid="class_senergy_1_1_socket_1a0c1510be39bef49de15e8647b64dbb5e" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>Receive</name></member>
+      <member refid="class_senergy_1_1_socket_1aad6b0a1a9f7ac380b11b9ef814ada58b" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>Receive</name></member>
+      <member refid="class_senergy_1_1_socket_1a1407e054edc1fd012d8c85e563683947" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>Send</name></member>
+      <member refid="class_senergy_1_1_socket_1a9ca07e0de8c6f74f27963f17c8b1398d" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>Send</name></member>
+      <member refid="class_senergy_1_1_socket_1a72e1de4e0e3ef63bb020c62bea989fa6" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>Send</name></member>
+      <member refid="class_senergy_1_1_socket_1a7ca3e4fb2e2f216773498e6f29e9ea14" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>SetTimeout</name></member>
+      <member refid="class_senergy_1_1_socket_1a6fcb47adc585aa2bb5d3d81a5e5b22e1" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>Socket</name></member>
+      <member refid="class_senergy_1_1_socket_1ad287e0ea5d32febd95ed7ba590d9e08d" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>Socket</name></member>
+      <member refid="class_senergy_1_1_socket_1ad6ac199d691bbbb3915c375900a11ca7" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>Socket</name></member>
+      <member refid="class_senergy_1_1_socket_1ad400245278746ac26e261bdda171c178" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>SocketProtocol</name></member>
+      <member refid="class_senergy_1_1_socket_1ac9ff20ce80df2d0c2900cd0940ffe860" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>SocketPtr</name></member>
+      <member refid="class_senergy_1_1_socket_1ad82ad4c4412684091e687b92641bfbe9" prot="public" virt="non-virtual"><scope>Senergy::Socket</scope><name>SocketRole</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

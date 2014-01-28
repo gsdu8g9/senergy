@@ -566,7 +566,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="220" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="171" bodyend="184"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="220" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="171" bodyend="191"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1ace3d04d38706d534a16e596ee291630b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -603,7 +603,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="232" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="186" bodyend="189"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="232" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="193" bodyend="196"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a391deafd9b6e3c4b4c2b92fe78358ebf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -659,7 +659,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="243" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="191" bodyend="194"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="243" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="198" bodyend="201"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a7abe5475b2a9adcad384d3125640aba2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -673,7 +673,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="251" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="196" bodyend="199"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="251" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="203" bodyend="206"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a806db1b33ff86b572a0804879d181dc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>char</type>
@@ -687,7 +687,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="259" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="201" bodyend="204"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="259" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="208" bodyend="211"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1ad9a7a05b0285fe070cde3983458de5f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned char</type>
@@ -701,7 +701,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="268" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="206" bodyend="209"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="268" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="213" bodyend="216"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a989443842e20c2feba4268e968911fe8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>short</type>
@@ -715,7 +715,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="276" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="211" bodyend="214"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="276" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="218" bodyend="221"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1aa6b6bfdb398a75b92c79bcdfc1986821" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned short</type>
@@ -729,7 +729,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="284" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="216" bodyend="219"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="284" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="223" bodyend="226"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a5c3f960422533abc898061be11b6f613" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -744,7 +744,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="294" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="221" bodyend="227"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="294" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="228" bodyend="234"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -763,7 +763,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="299" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="229" bodyend="236"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="299" column="1" bodyfile="/home/photonios/Documents/Senergy/src/bytebuffer.cpp" bodystart="236" bodyend="243"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_byte_buffer_1a818472c84e319ab1f8a1a63987d2ed98" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>

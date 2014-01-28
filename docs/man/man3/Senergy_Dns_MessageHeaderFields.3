@@ -1,0 +1,233 @@
+.TH "Senergy::Dns::MessageHeaderFields" 3 "Tue Jan 28 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::Dns::MessageHeaderFields \- 
+.PP
+Defines the fields within a DNS packet header, as described in section 4\&.1 of RFC-1035\&. This data structure is used as the 'Fields' member/property of the \fBMessageHeader\fP class, and serves as the container of the actual data\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <message_header\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "unsigned short \fBId\fP"
+.br
+.RI "\fIA 16 bit identifier assigned by the program that generates any kind of query\&. This identifier is copied the corresponding reply and can be used by the requester to match up replies to outstanding queries\&. \fP"
+.ti -1c
+.RI "unsigned char \fBRecursionDesired\fP:1"
+.br
+.RI "\fIRecursion Desired - this bit may be set in a query and is copied into the response\&. If RD is set, it directs the name server to pursue the query recursively\&. Recursive query support is optional\&. \fP"
+.ti -1c
+.RI "unsigned char \fBTruncation\fP:1"
+.br
+.RI "\fITrunCation - specifies that this message was truncated due to length greater than that permitted on the transmission channel\&. \fP"
+.ti -1c
+.RI "unsigned char \fBAuthoritative\fP:1"
+.br
+.RI "\fIAuthoritative Answer - this bit is valid in responses, and specifies that the responding name server is an authority for the domain name in question section\&. \fP"
+.ti -1c
+.RI "unsigned char \fBOpcode\fP:4"
+.br
+.RI "\fIA four bit field that specifies kind of query in this message\&. This value is set by the originator of a query and copied into the response\&. The values are: \fP"
+.ti -1c
+.RI "unsigned char \fBIsResponse\fP:1"
+.br
+.RI "\fIA one bit field that specifies whether this message is a query (0), or a response (1)\&. \fP"
+.ti -1c
+.RI "unsigned char \fBResponseCode\fP:4"
+.br
+.RI "\fIResponse code - this 4 bit field is set as part of responses\&. The values have the following interpretation: \fP"
+.ti -1c
+.RI "unsigned char \fBCheckingDisabled\fP:1"
+.br
+.ti -1c
+.RI "unsigned char \fBAuthenticatedData\fP:1"
+.br
+.RI "\fIA value that specifies whether the DNS data following the \fBDNS_HEADER\fP is authenticated by the DNS server\&. \fP"
+.ti -1c
+.RI "unsigned char \fBReserved\fP:1"
+.br
+.RI "\fIReserved for future use\&. Must be zero in all queries and responses\&. \fP"
+.ti -1c
+.RI "unsigned char \fBRecursionAvailable\fP:1"
+.br
+.RI "\fIRecursion Available - this be is set or cleared in a response, and denotes whether recursive query support is available in the name server\&. \fP"
+.ti -1c
+.RI "unsigned short \fBQuestionCount\fP"
+.br
+.RI "\fIAn unsigned 16 bit integer specifying the number of entries in the question section\&. \fP"
+.ti -1c
+.RI "unsigned short \fBAnswerCount\fP"
+.br
+.RI "\fIThe number of resource records (RRs) contained in the answer section of the DNS message\&. \fP"
+.ti -1c
+.RI "unsigned short \fBNameServerCount\fP"
+.br
+.RI "\fIThe number of DNS name server RRs contained in the authority section of the DNS message\&. This value is the number of DNS name servers the message has traversed in its search for resolution\&. \fP"
+.ti -1c
+.RI "unsigned short \fBAdditionalCount\fP"
+.br
+.RI "\fIReserved\&. Do not use\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Defines the fields within a DNS packet header, as described in section 4\&.1 of RFC-1035\&. This data structure is used as the 'Fields' member/property of the \fBMessageHeader\fP class, and serves as the container of the actual data\&. 
+
+
+.PP
+\fBSee Also:\fP
+.RS 4
+http://msdn.microsoft.com/en-us/library/windows/desktop/ms682059(v=vs.85).aspx 
+.PP
+http://www.ietf.org/rfc/rfc1035.txt
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file message_header\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "unsigned short Senergy::Dns::MessageHeaderFields::AdditionalCount"
+
+.PP
+Reserved\&. Do not use\&. 
+.PP
+Definition at line 193 of file message_header\&.h\&.
+.SS "unsigned short Senergy::Dns::MessageHeaderFields::AnswerCount"
+
+.PP
+The number of resource records (RRs) contained in the answer section of the DNS message\&. 
+.PP
+Definition at line 181 of file message_header\&.h\&.
+.SS "unsigned char Senergy::Dns::MessageHeaderFields::AuthenticatedData"
+
+.PP
+A value that specifies whether the DNS data following the \fBDNS_HEADER\fP is authenticated by the DNS server\&. 0 The DNS data is not authenticated\&.
+.PP
+1 The DNS data is authenticated\&. 
+.PP
+Definition at line 153 of file message_header\&.h\&.
+.SS "unsigned char Senergy::Dns::MessageHeaderFields::Authoritative"
+
+.PP
+Authoritative Answer - this bit is valid in responses, and specifies that the responding name server is an authority for the domain name in question section\&. 
+.PP
+\fBNote:\fP
+.RS 4
+The contents of the answer section may have multiple owner names because of aliases\&. The AA bit corresponds to the name which atches the query name, or the first owner name in the answer section\&. 
+.RE
+.PP
+
+.PP
+Definition at line 77 of file message_header\&.h\&.
+.SS "unsigned char Senergy::Dns::MessageHeaderFields::CheckingDisabled"
+\\ brief A value that specifies whether checking is supported by the DNS resolver\&. 
+.PP
+.nf
+      0               Checking is enabled on the DNS resolver.
+
+      1               Checking is enabled on the DNS resolver.
+.fi
+.PP
+ 
+.PP
+Definition at line 143 of file message_header\&.h\&.
+.SS "unsigned short Senergy::Dns::MessageHeaderFields::Id"
+
+.PP
+A 16 bit identifier assigned by the program that generates any kind of query\&. This identifier is copied the corresponding reply and can be used by the requester to match up replies to outstanding queries\&. 
+.PP
+Definition at line 50 of file message_header\&.h\&.
+.SS "unsigned char Senergy::Dns::MessageHeaderFields::IsResponse"
+
+.PP
+A one bit field that specifies whether this message is a query (0), or a response (1)\&. 
+.PP
+Definition at line 98 of file message_header\&.h\&.
+.SS "unsigned short Senergy::Dns::MessageHeaderFields::NameServerCount"
+
+.PP
+The number of DNS name server RRs contained in the authority section of the DNS message\&. This value is the number of DNS name servers the message has traversed in its search for resolution\&. 
+.PP
+Definition at line 188 of file message_header\&.h\&.
+.SS "unsigned char Senergy::Dns::MessageHeaderFields::Opcode"
+
+.PP
+A four bit field that specifies kind of query in this message\&. This value is set by the originator of a query and copied into the response\&. The values are: 0 a standard query (QUERY)
+.PP
+1 an inverse query (IQUERY)
+.PP
+2 a server status request (STATUS)
+.PP
+3-15 reserved for future use 
+.PP
+Definition at line 92 of file message_header\&.h\&.
+.SS "unsigned short Senergy::Dns::MessageHeaderFields::QuestionCount"
+
+.PP
+An unsigned 16 bit integer specifying the number of entries in the question section\&. 
+.PP
+Definition at line 175 of file message_header\&.h\&.
+.SS "unsigned char Senergy::Dns::MessageHeaderFields::RecursionAvailable"
+
+.PP
+Recursion Available - this be is set or cleared in a response, and denotes whether recursive query support is available in the name server\&. 
+.PP
+Definition at line 169 of file message_header\&.h\&.
+.SS "unsigned char Senergy::Dns::MessageHeaderFields::RecursionDesired"
+
+.PP
+Recursion Desired - this bit may be set in a query and is copied into the response\&. If RD is set, it directs the name server to pursue the query recursively\&. Recursive query support is optional\&. 
+.PP
+Definition at line 58 of file message_header\&.h\&.
+.SS "unsigned char Senergy::Dns::MessageHeaderFields::Reserved"
+
+.PP
+Reserved for future use\&. Must be zero in all queries and responses\&. 
+.PP
+\fBNote:\fP
+.RS 4
+Specification (RFC 1035) says that this field must be zero at all times, however, bytes get reversed, so 1 becomes zero\&. 
+.RE
+.PP
+
+.PP
+Definition at line 162 of file message_header\&.h\&.
+.SS "unsigned char Senergy::Dns::MessageHeaderFields::ResponseCode"
+
+.PP
+Response code - this 4 bit field is set as part of responses\&. The values have the following interpretation: 0 No error condition
+.PP
+1 Format error - The name server was unable to interpret the query\&.
+.PP
+2 Server failure - The name server was unable to process this query due to a problem with the name server\&.
+.PP
+3 Name Error - Meaningful only for responses from an authoritative name server, this code signifies that the domain name referenced in the query does not exist\&.
+.PP
+4 Not Implemented - The name server does not support the requested kind of query\&.
+.PP
+5 Refused - The name server refuses to perform the specified operation for policy reasons\&. For example, a name server may not wish to provide the information to the particular requester, or a name server may not wish to perform a particular operation (e\&.g\&., zone transfer) for particular data\&.
+.PP
+6-15 Reserved for future use\&. 
+.PP
+Definition at line 134 of file message_header\&.h\&.
+.SS "unsigned char Senergy::Dns::MessageHeaderFields::Truncation"
+
+.PP
+TrunCation - specifies that this message was truncated due to length greater than that permitted on the transmission channel\&. 
+.PP
+Definition at line 65 of file message_header\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

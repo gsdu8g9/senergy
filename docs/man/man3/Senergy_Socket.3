@@ -1,0 +1,537 @@
+.TH "Senergy::Socket" 3 "Tue Jan 28 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::Socket \- 
+.PP
+Provides an object-oriented interface for Berkely (BSD) sockets\&. Can act both as a server as well as a client\&. The main purpose of this class class is to provide a more C++ like interface for TCP sockets\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <socket\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBCloseType\fP : int { \fBCloseType::StopReceiving\fP = 0, \fBCloseType::StopSending\fP = 1, \fBCloseType::StopAll\fP = 2 }"
+.br
+.RI "\fIDefines possible ways/means of closing/disconnecting an active socket connection\&. \fP"
+.ti -1c
+.RI "enum \fBSocketRole\fP : int { \fBSocketRole::Client\fP = 0, \fBSocketRole::Server\fP = 1 }"
+.br
+.RI "\fIDefines the possible socket roles we can have\&. An instance of the \fBSocket\fP socket class can be of two different roles\&. \fP"
+.ti -1c
+.RI "enum \fBSocketProtocol\fP : int { \fBSocketProtocol::TCP\fP, \fBSocketProtocol::UDP\fP }"
+.br
+.RI "\fIDefines the possible socket protocols that this class supports\&. \fP"
+.ti -1c
+.RI "typedef std::shared_ptr< \fBSocket\fP > \fBSocketPtr\fP"
+.br
+.RI "\fIA shared pointer typedef for the \fBSocket\fP class\&. \fP"
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSocket\fP (\fBSocketProtocol\fP protocol)"
+.br
+.RI "\fIInitializes a new instance of the TSocket class that is not connected to a remote host, and starts as the 'client' socket type\&. \fP"
+.ti -1c
+.RI "\fBSocket\fP (const \fBSocket\fP &socket)"
+.br
+.RI "\fIInitializes a new instance of the \fBSocket\fP class based on the specified reference to another instance of the \fBSocket\fP class\&. This constructor is defined as the 'copy constructor' and performs a hard copy of the specified \fBSocket\fP instance\&. \fP"
+.ti -1c
+.RI "\fBSocket\fP (\fBSocketProtocol\fP protocol, int native_socket, struct sockaddr_in remote_address)"
+.br
+.RI "\fIInitializes a new instance of the \fBSocket\fP class using the specified native socket and remote address\&. \fP"
+.ti -1c
+.RI "std::string \fBGetRemoteHost\fP ()"
+.br
+.RI "\fIGets the textual representation of the remote host that this socket is currently connected to\&. This can either be an IP address or a host name\&. \fP"
+.ti -1c
+.RI "bool \fBIsConnected\fP ()"
+.br
+.RI "\fIDetermines whether this instance has an active connection with a remote rost and returns the result\&. \fP"
+.ti -1c
+.RI "bool \fBSetTimeout\fP (unsigned int milliseconds)"
+.br
+.RI "\fISets the timeout time that is used for socket operations, such as sending, receiving, and connecting\&. A timeout specifies the maximum time to wait for an operation to complete\&. \fP"
+.ti -1c
+.RI "bool \fBConnect\fP (const std::string &remote_ip, unsigned int remote_port)"
+.br
+.RI "\fIAttempts to setup a TCP connection with the specified remote host over the specified port\&. \fP"
+.ti -1c
+.RI "bool \fBListen\fP (unsigned int port)"
+.br
+.RI "\fIStarts listening for incoming connections on the specified port\&. Binds itself to the specified port\&. Incoming connections can be accepted using the 'Accept(\&.\&.)' method\&. \fP"
+.ti -1c
+.RI "bool \fBClose\fP (\fBCloseType\fP close_type=\fBCloseType::StopAll\fP)"
+.br
+.RI "\fICloses the current connection with the remote host\&. The method of closing the connection can be specified\&. \fP"
+.ti -1c
+.RI "int \fBSend\fP (const char *data, size_t data_size)"
+.br
+.RI "\fISends the specified data, with the specified size to the remote host\&. \fP"
+.ti -1c
+.RI "int \fBSend\fP (const std::string &data, size_t data_size)"
+.br
+.RI "\fISends the specified data, with the specified size to the remote host\&. \fP"
+.ti -1c
+.RI "int \fBSend\fP (const std::string &data)"
+.br
+.RI "\fISends the specified data, the size (length) of the specified string is the size of the data that will be transmitted\&. \fP"
+.ti -1c
+.RI "int \fBReceive\fP (const char *receive_buffer, size_t size)"
+.br
+.RI "\fIAttempts to receive the specified amount of data into the specified buffer\&. \fP"
+.ti -1c
+.RI "std::string \fBReceive\fP (size_t size)"
+.br
+.RI "\fIAttempts to receive the specified amount of data and return it as a string\&. \fP"
+.ti -1c
+.RI "int \fBReceive\fP (\fBByteBuffer\fP &receive_buffer, size_t size)"
+.br
+.RI "\fIAttempts to receive the specified amount of data and store it into the specified byte buffer\&. \fP"
+.ti -1c
+.RI "\fBSocketPtr\fP \fBAccept\fP ()"
+.br
+.RI "\fIAttempts to accept an incoming remote connection\&. This can be used to accept incoming remote connections when this instance is listening for incoming connections\&. \fP"
+.ti -1c
+.RI "int \fBGetErrorCode\fP ()"
+.br
+.RI "\fIGets the last error code that was set by a socket operation\&. The error code that is returned are normal Berkely sockets error codes\&. Performing another socket operation overwrites the last error code that was set\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Provides an object-oriented interface for Berkely (BSD) sockets\&. Can act both as a server as well as a client\&. The main purpose of this class class is to provide a more C++ like interface for TCP sockets\&. 
+
+Another important purpose of this class is thread-safety\&. Due to the 'global' nature nature in C, Berkely sockets are not thread safe\&. Using mutexes this class is and allows the socket to be used in a multi-threaded environment\&.
+.PP
+\fBNote:\fP
+.RS 4
+This class does not use exceptions\&. Error handeling is done the same way as in the Berkely Sockets interface\&. Call GetErrorCode(\&.\&.) for the latest BSD error code\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij / Photonios 
+.RE
+.PP
+
+.PP
+Definition at line 59 of file socket\&.h\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::shared_ptr<\fBSocket\fP> \fBSenergy::Socket::SocketPtr\fP"
+
+.PP
+A shared pointer typedef for the \fBSocket\fP class\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This is defined outside the class definition as well to make it usuable for library users\&. 
+.RE
+.PP
+
+.PP
+Definition at line 118 of file socket\&.h\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBSenergy::Socket::CloseType\fP : int\fC [strong]\fP"
+
+.PP
+Defines possible ways/means of closing/disconnecting an active socket connection\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIStopReceiving \fP\fP
+Stop receiving incoming data, but send all remaining data\&. 
+.TP
+\fB\fIStopSending \fP\fP
+Stop sending data, but receive all remaining data\&. 
+.TP
+\fB\fIStopAll \fP\fP
+Stop sending and receiving data immeditially\&./\&. 
+.PP
+Definition at line 66 of file socket\&.h\&.
+.SS "enum \fBSenergy::Socket::SocketProtocol\fP : int\fC [strong]\fP"
+
+.PP
+Defines the possible socket protocols that this class supports\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fITCP \fP\fP
+.TP
+\fB\fIUDP \fP\fP
+.PP
+Definition at line 106 of file socket\&.h\&.
+.SS "enum \fBSenergy::Socket::SocketRole\fP : int\fC [strong]\fP"
+
+.PP
+Defines the possible socket roles we can have\&. An instance of the \fBSocket\fP socket class can be of two different roles\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIClient \fP\fP
+The instance is behaving as a client socket, which is connected to a server\&. 
+.TP
+\fB\fIServer \fP\fP
+The instance is behaving as a server and is binded on a specific port, and listens for incoming connections\&. 
+.PP
+Definition at line 88 of file socket\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Senergy::Socket::Socket (\fBSocketProtocol\fPprotocol)"
+
+.PP
+Initializes a new instance of the TSocket class that is not connected to a remote host, and starts as the 'client' socket type\&. One should use the Connect(\&.\&.) or the Listen(\&.\&.) functions to either connect to a remote host, or to start listening for incoming connections\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIprotocol\fP A value from the SocketProtocol enumuration, which indicates what kind of protocol this socket is going to use\&. 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file socket\&.cpp\&.
+.SS "Senergy::Socket::Socket (const \fBSocket\fP &socket)"
+
+.PP
+Initializes a new instance of the \fBSocket\fP class based on the specified reference to another instance of the \fBSocket\fP class\&. This constructor is defined as the 'copy constructor' and performs a hard copy of the specified \fBSocket\fP instance\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This copy constructor is defined to allow the \fBSocket\fP class to be used in STL collections like map, vector and list\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsocket\fP A reference to an instance of the \fBSocket\fP class that needs to be hard-copied into a new instance\&. 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file socket\&.cpp\&.
+.SS "Senergy::Socket::Socket (\fBSocketProtocol\fPprotocol, intnative_socket, struct sockaddr_inremote_address)"
+
+.PP
+Initializes a new instance of the \fBSocket\fP class using the specified native socket and remote address\&. The intention of this constructor is to easily allow the user of the library to wrap existing/created Berkely sockets\&.
+.PP
+This constructor is also used when an incoming remote connection is accepted\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIprotocol\fP A value from the SocketProtocol enumuration, which indicates what kind of protocol this socket is going to use\&. 
+.br
+\fInative_socket\fP A valid/connected descriptor for a Berkeley \fBSocket\fP (BSD), that the new instance needs to wrap\&. 
+.br
+\fIremote_address\fP A sockaddr_int structure, which defines the remote host that this socket is connected to\&. 
+.RE
+.PP
+
+.PP
+Definition at line 53 of file socket\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBSocketPtr\fP Senergy::Socket::Accept ()"
+
+.PP
+Attempts to accept an incoming remote connection\&. This can be used to accept incoming remote connections when this instance is listening for incoming connections\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This does not work when this instance is not listening for incoming connections\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A shared pointer to an instance of the \fBSocket\fP class, which represents the accepted remote connection\&. When the operation failed, an invalid shared pointer is returned\&. 
+.RE
+.PP
+
+.PP
+Definition at line 270 of file socket\&.cpp\&.
+.SS "bool Senergy::Socket::Close (\fBCloseType\fPclose_type = \fC\fBCloseType::StopAll\fP\fP)"
+
+.PP
+Closes the current connection with the remote host\&. The method of closing the connection can be specified\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIclose_type\fP Optional: Specifies the method of closing the connection with the remote host\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indiciating whether the operation succeseeded and false when the operation failed\&. The operation can fail when there is no active connection with a remote host\&. 
+.RE
+.PP
+
+.PP
+Definition at line 135 of file socket\&.cpp\&.
+.SS "bool Senergy::Socket::Connect (const std::string &remote_ip, unsigned intremote_port)"
+
+.PP
+Attempts to setup a TCP connection with the specified remote host over the specified port\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This sets the type of this instance to 'Cient', but only if the operation was succesful\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIremote_ip\fP A string containing the remote host name or IP address to connect to\&. 
+.br
+\fIremote_port\fP The TCP port to connect over to the specified remote host\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether setting up a connection with the specified remote host succeseeded\&. True is returned when setting up the connection succseeded and false when it failed\&. Reason for failure can be an invalid or non-existing remote host, or no remote server listening on the specified port\&. 
+.RE
+.PP
+
+.PP
+Definition at line 88 of file socket\&.cpp\&.
+.SS "int Senergy::Socket::GetErrorCode ()"
+
+.PP
+Gets the last error code that was set by a socket operation\&. The error code that is returned are normal Berkely sockets error codes\&. Performing another socket operation overwrites the last error code that was set\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The last error code that was set during a socket operation\&. If a negative number or zero is returned, the last operation did not cause an error and was sucessful\&. 
+.RE
+.PP
+
+.PP
+Definition at line 292 of file socket\&.cpp\&.
+.SS "std::string Senergy::Socket::GetRemoteHost ()"
+
+.PP
+Gets the textual representation of the remote host that this socket is currently connected to\&. This can either be an IP address or a host name\&. The remote host gets updated when connections are made\&. When data is received over UDP, the remote host gets updated with the host that we last received data from\&.
+.PP
+\fBReturns:\fP
+.RS 4
+The textual representation of the remote host, can return an empty string when there is no active connection, or when the remote host is unknown\&. 
+.RE
+.PP
+
+.PP
+Definition at line 66 of file socket\&.cpp\&.
+.SS "bool Senergy::Socket::IsConnected ()"
+
+.PP
+Determines whether this instance has an active connection with a remote rost and returns the result\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This cannot be used to accurately determine the status of the connection\&. When the remote host closes the connection, the status is not updated\&. The status is only updated when a connection is initiated or destroyed/closed by this instance\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether there's an active connection with the remote host\&. True is returned when there is an active connection and false is returned when there is no active connection\&. 
+.RE
+.PP
+
+.PP
+Definition at line 71 of file socket\&.cpp\&.
+.SS "bool Senergy::Socket::Listen (unsigned intport)"
+
+.PP
+Starts listening for incoming connections on the specified port\&. Binds itself to the specified port\&. Incoming connections can be accepted using the 'Accept(\&.\&.)' method\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This sets the type of this instance to 'Server', but only if the operation was successful\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIport\fP The TCP port number to start listening on for incoming connections\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indiciating whether the operation succeseeded\&. True is returned when the operationg succeseeded and false when it failed\&. Reason for failure can be, that another TCP server is already binded/listening on the specified port\&. 
+.RE
+.PP
+
+.PP
+Definition at line 108 of file socket\&.cpp\&.
+.SS "int Senergy::Socket::Receive (const char *receive_buffer, size_tsize)"
+
+.PP
+Attempts to receive the specified amount of data into the specified buffer\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This operation will fail when there is no active connection with the remote host\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIreceive_buffer\fP The buffer to store the received data into\&. Writing starts at the start of the buffer\&. If NULL is specified, the operation will fail immediately\&. 
+.br
+\fIsize\fP The amount of bytes to receive\&. Make sure that the specified receive buffer is this size, or greater\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The amount of bytes that were actually received and stored into the specified receive buffer\&. This can be less then the specified size, but never greater\&. If a number below zero is returned, the operation failed\&. The reason of failure can be retrieved using the \fBGetErrorCode()\fP method\&. 
+.RE
+.PP
+
+.PP
+Definition at line 183 of file socket\&.cpp\&.
+.SS "std::string Senergy::Socket::Receive (size_tsize)"
+
+.PP
+Attempts to receive the specified amount of data and return it as a string\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This operation will fail when there is no active connection with the remote host\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsize\fP The amount of bytes to receive and return as a string\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A string containing the received data\&. The length (size) of the returned string can be equal or less then the specified size, but never greater\&. If the operatin failed, an empty string is returned\&. 
+.RE
+.PP
+
+.PP
+Definition at line 228 of file socket\&.cpp\&.
+.SS "int Senergy::Socket::Receive (\fBByteBuffer\fP &receive_buffer, size_tsize)"
+
+.PP
+Attempts to receive the specified amount of data and store it into the specified byte buffer\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This operation will fail when there is no active connection with the remote host\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIreceive_buffer\fP A reference to an instance of the \fBByteBuffer\fP class, which is dynamiclly sized binary data container, to store/write to the received data\&. 
+.br
+\fIsize\fP The amount of bytes to receive\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The amount of bytes that were received\&. This number can be equal or less then the specified desired amount of bytes\&. If a number below zero (negative) is returned, the operation failed\&. The reason of failure can be retrieved using the \fBGetErrorCode()\fP method\&. 
+.RE
+.PP
+
+.PP
+Definition at line 249 of file socket\&.cpp\&.
+.SS "int Senergy::Socket::Send (const char *data, size_tdata_size)"
+
+.PP
+Sends the specified data, with the specified size to the remote host\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This operation will fail when there is no active connection with the remote host\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP The data to send to the remote host\&. If NULL is specified, the operation will immediately fail\&. 
+.br
+\fIdata_size\fP The size of the data that was specified, the size of the data to send to the remote host\&. If zero or less is specified, the operation will fail immediately\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The amount of bytes that were succesfuly transmitted to the remote host\&. If the operation failed, zero will be returned\&. 
+.RE
+.PP
+
+.PP
+Definition at line 146 of file socket\&.cpp\&.
+.SS "int Senergy::Socket::Send (const std::string &data, size_tdata_size)"
+
+.PP
+Sends the specified data, with the specified size to the remote host\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This operation will fail when there is no active connection with the remote host\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP The textual data to transmit to the remote host\&. 
+.br
+\fIdata_size\fP The size of the data that was specified, the size of the data to send to the remote host\&. If zero or less is specified, the operation will fail immediately\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The amount of bytes that were succesfuly transmitted to the remote host\&. If the operation failed, zero will be returned\&. 
+.RE
+.PP
+
+.PP
+Definition at line 170 of file socket\&.cpp\&.
+.SS "int Senergy::Socket::Send (const std::string &data)"
+
+.PP
+Sends the specified data, the size (length) of the specified string is the size of the data that will be transmitted\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This operation will fail when there is no active connection with the remote host\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP The textual data to transmit to the remote host\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The amount of bytes that were succesfuly transmitted to the remote host\&. If the operation failed, zero will be returned\&. 
+.RE
+.PP
+
+.PP
+Definition at line 178 of file socket\&.cpp\&.
+.SS "bool Senergy::Socket::SetTimeout (unsigned intmilliseconds)"
+
+.PP
+Sets the timeout time that is used for socket operations, such as sending, receiving, and connecting\&. A timeout specifies the maximum time to wait for an operation to complete\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImilliseconds\fP The maximum time to wait for an operation to complete\&. The timeout has to be specified in milliseconds\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indiciating whether setting the timeout succeseeded\&. True is returned when the operation sucesseeded and false when it failed\&. Failure can be caused by not having an active connection\&. 
+.RE
+.PP
+
+.PP
+Definition at line 82 of file socket\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

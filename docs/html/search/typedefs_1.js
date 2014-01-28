@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['socketptr',['SocketPtr',['../class_senergy_1_1_networking_1_1_socket.html#a19cb724ef153aebdbcc66cd4c3c4952a',1,'Senergy::Networking::Socket::SocketPtr()'],['../namespace_senergy_1_1_networking.html#aced57616d1b0ede6535865d5909abaf1',1,'Senergy::Networking::SocketPtr()']]]
+  ['socketptr',['SocketPtr',['../class_senergy_1_1_socket.html#ac9ff20ce80df2d0c2900cd0940ffe860',1,'Senergy::Socket::SocketPtr()'],['../namespace_senergy.html#a9014e48a368555ba932efd8d17eb2d23',1,'Senergy::SocketPtr()']]]
 ];

@@ -118,7 +118,7 @@ $(document).ready(function(){initNavTree('namespace_senergy.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespace_senergy_1_1_networking"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_senergy_1_1_networking.html">Networking</a></td></tr>
+<tr class="memitem:namespace_senergy_1_1_dns"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_senergy_1_1_dns.html">Dns</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -132,6 +132,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_print.html">Print</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains simple utilities that facilitate printing various data types or data structures to the screen.  <a href="class_senergy_1_1_print.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_socket.html">Socket</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides an object-oriented interface for Berkely (BSD) sockets. Can act both as a server as well as a client. The main purpose of this class class is to provide a more C++ like interface for TCP sockets.  <a href="class_senergy_1_1_socket.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -139,6 +142,9 @@ Typedefs</h2></td></tr>
 &lt; <a class="el" href="class_senergy_1_1_byte_buffer.html">ByteBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_senergy.html#a30f5cfaeb333ffdf2c3332cc590a57ea">ByteBufferPtr</a></td></tr>
 <tr class="memdesc:a30f5cfaeb333ffdf2c3332cc590a57ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple typedef for a shared pointer to a <a class="el" href="class_senergy_1_1_byte_buffer.html" title="A dynamiclly sized buffer for binary data. Resizes the underlying buffer when new data is written...">ByteBuffer</a> instance.  <a href="#a30f5cfaeb333ffdf2c3332cc590a57ea">More...</a><br/></td></tr>
 <tr class="separator:a30f5cfaeb333ffdf2c3332cc590a57ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9014e48a368555ba932efd8d17eb2d23"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="class_senergy_1_1_socket.html">Socket</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_senergy.html#a9014e48a368555ba932efd8d17eb2d23">SocketPtr</a></td></tr>
+<tr class="memdesc:a9014e48a368555ba932efd8d17eb2d23"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple typedef for the shared pointer of a TcpSocket instance.  <a href="#a9014e48a368555ba932efd8d17eb2d23">More...</a><br/></td></tr>
+<tr class="separator:a9014e48a368555ba932efd8d17eb2d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="a30f5cfaeb333ffdf2c3332cc590a57ea"></a>
@@ -157,13 +163,29 @@ Typedefs</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a9014e48a368555ba932efd8d17eb2d23"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="class_senergy_1_1_socket.html">Socket</a>&gt; <a class="el" href="namespace_senergy.html#a9014e48a368555ba932efd8d17eb2d23">Senergy::SocketPtr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A simple typedef for the shared pointer of a TcpSocket instance. </p>
+
+<p>Definition at line <a class="el" href="socket_8h_source.html#l00439">439</a> of file <a class="el" href="socket_8h_source.html">socket.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_senergy.html">Senergy</a></li>
-    <li class="footer">Generated on Tue Jan 28 2014 13:20:14 for Senergy by
+    <li class="footer">Generated on Tue Jan 28 2014 15:01:56 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

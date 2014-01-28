@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
   <compounddef id="dir_43fe9c611a9fdc7364335d381ea28669" kind="dir">
     <compoundname>src/senergy</compoundname>
+    <innerdir refid="dir_12060af884c4747a1bab5c3df0820300">src/senergy/dns</innerdir>
     <innerfile refid="bytebuffer_8h">bytebuffer.h</innerfile>
     <innerfile refid="convert_8h">convert.h</innerfile>
     <innerfile refid="print_8h">print.h</innerfile>

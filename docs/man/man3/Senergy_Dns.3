@@ -1,0 +1,31 @@
+.TH "Senergy::Dns" 3 "Tue Jan 28 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::Dns \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBMessage\fP"
+.br
+.RI "\fIRepresents a DNS packet as described in section 4 of RFC-1035\&. A DNS packet is the standard message format that is transmitted and received by DNS clients and hosts\&. \fP"
+.ti -1c
+.RI "struct \fBMessageHeaderFields\fP"
+.br
+.RI "\fIDefines the fields within a DNS packet header, as described in section 4\&.1 of RFC-1035\&. This data structure is used as the 'Fields' member/property of the \fBMessageHeader\fP class, and serves as the container of the actual data\&. \fP"
+.ti -1c
+.RI "class \fBMessageHeader\fP"
+.br
+.RI "\fIDefines the header of a DNS packet, as described in section 4\&.1 of RFC-1035\&. All DNS messages start with this header\&. \fP"
+.ti -1c
+.RI "class \fBRootNameServer\fP"
+.br
+.RI "\fIRepresents one of the 13 Root Name Servers (DNS) that are currently operating around the world\&. Provides access to the functionalities that root name servers offer\&. \fP"
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.
