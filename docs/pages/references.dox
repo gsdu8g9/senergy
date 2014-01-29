@@ -1,0 +1,19 @@
+/*!
+  \page references References
+An overview of websites, links, references and all kinds of sources of information.
+
+- http://www.zytrax.com/books/dns/ch15
+- http://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml
+- http://www.george-barwood.pwp.blueyonder.co.uk/DnsServer/
+- http://www.ietf.org/rfc/rfc1035.txt
+- http://www.binarytides.com/dns-query-code-in-c-with-winsock/
+- http://www.iana.org/domains/root/servers
+- http://www.iana.org/domains/root/files
+- http://tools.ietf.org/html/rfc2606
+- http://www.icann.org/en/resources/idn
+- http://tools.ietf.org/html/rfc3172
+- http://www.iana.org/domains/arpa
+- http://www.iana.org/domains/idn-tables
+- http://www.iana.org/domains/int
+- https://www.iana.org/dnssec
+*/

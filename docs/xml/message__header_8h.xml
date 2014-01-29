@@ -9,47 +9,34 @@
     <includedby refid="message_8h" local="no">src/senergy/dns/message.h</includedby>
     <includedby refid="senergy_8h" local="no">src/senergy/senergy.h</includedby>
     <incdepgraph>
-      <node id="171">
+      <node id="173">
         <label>arpa/inet.h</label>
       </node>
-      <node id="165">
+      <node id="167">
         <label>string</label>
       </node>
-      <node id="170">
+      <node id="172">
         <label>cstdio</label>
       </node>
-      <node id="169">
+      <node id="171">
         <label>senergy/print.h</label>
         <link refid="print_8h"/>
-        <childnode refid="170" relation="include">
+        <childnode refid="172" relation="include">
         </childnode>
-        <childnode refid="165" relation="include">
+        <childnode refid="167" relation="include">
         </childnode>
       </node>
-      <node id="167">
+      <node id="169">
         <label>cstdlib</label>
       </node>
-      <node id="164">
+      <node id="166">
         <label>senergy/bytebuffer.h</label>
         <link refid="bytebuffer_8h"/>
-        <childnode refid="165" relation="include">
-        </childnode>
-        <childnode refid="166" relation="include">
-        </childnode>
         <childnode refid="167" relation="include">
         </childnode>
         <childnode refid="168" relation="include">
         </childnode>
         <childnode refid="169" relation="include">
-        </childnode>
-      </node>
-      <node id="166">
-        <label>cstring</label>
-      </node>
-      <node id="163">
-        <label>src/senergy/dns/message_header.h</label>
-        <link refid="message_header.h"/>
-        <childnode refid="164" relation="include">
         </childnode>
         <childnode refid="170" relation="include">
         </childnode>
@@ -57,44 +44,57 @@
         </childnode>
       </node>
       <node id="168">
+        <label>cstring</label>
+      </node>
+      <node id="165">
+        <label>src/senergy/dns/message_header.h</label>
+        <link refid="message_header.h"/>
+        <childnode refid="166" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="173" relation="include">
+        </childnode>
+      </node>
+      <node id="170">
         <label>memory</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="177">
+      <node id="179">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="175">
+      <node id="177">
         <label>src/message.cpp</label>
         <link refid="message_8cpp"/>
       </node>
-      <node id="174">
+      <node id="176">
         <label>src/senergy/dns/message.h</label>
         <link refid="message_8h"/>
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+      </node>
+      <node id="175">
+        <label>src/message_header.cpp</label>
+        <link refid="message__header_8cpp"/>
+      </node>
+      <node id="178">
+        <label>src/senergy/senergy.h</label>
+        <link refid="senergy_8h"/>
+        <childnode refid="179" relation="include">
+        </childnode>
+      </node>
+      <node id="174">
+        <label>src/senergy/dns/message_header.h</label>
+        <link refid="message_header.h"/>
         <childnode refid="175" relation="include">
         </childnode>
         <childnode refid="176" relation="include">
         </childnode>
-      </node>
-      <node id="173">
-        <label>src/message_header.cpp</label>
-        <link refid="message__header_8cpp"/>
-      </node>
-      <node id="176">
-        <label>src/senergy/senergy.h</label>
-        <link refid="senergy_8h"/>
-        <childnode refid="177" relation="include">
-        </childnode>
-      </node>
-      <node id="172">
-        <label>src/senergy/dns/message_header.h</label>
-        <link refid="message_header.h"/>
-        <childnode refid="173" relation="include">
-        </childnode>
-        <childnode refid="174" relation="include">
-        </childnode>
-        <childnode refid="176" relation="include">
+        <childnode refid="178" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

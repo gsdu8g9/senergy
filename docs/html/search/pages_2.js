@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['terminology',['Terminology',['../terminology.html',1,'']]]
+  ['references',['References',['../references.html',1,'']]]
 ];

@@ -258,6 +258,8 @@
   </compound>
   <compound refid="mainpage_8dox" kind="file"><name>mainpage.dox</name>
   </compound>
+  <compound refid="references_8dox" kind="file"><name>references.dox</name>
+  </compound>
   <compound refid="terminology_8dox" kind="file"><name>terminology.dox</name>
   </compound>
   <compound refid="bytebuffer_8cpp" kind="file"><name>bytebuffer.cpp</name>
@@ -302,6 +304,8 @@
   <compound refid="socket_8cpp" kind="file"><name>socket.cpp</name>
   </compound>
   <compound refid="building" kind="page"><name>building</name>
+  </compound>
+  <compound refid="references" kind="page"><name>references</name>
   </compound>
   <compound refid="terminology" kind="page"><name>terminology</name>
   </compound>

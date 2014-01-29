@@ -4,53 +4,40 @@
     <compoundname>message_header.cpp</compoundname>
     <includes refid="message__header_8h" local="no">senergy/dns/message_header.h</includes>
     <incdepgraph>
-      <node id="80">
+      <node id="82">
         <label>arpa/inet.h</label>
       </node>
-      <node id="74">
+      <node id="76">
         <label>string</label>
       </node>
-      <node id="79">
+      <node id="81">
         <label>cstdio</label>
       </node>
-      <node id="71">
+      <node id="73">
         <label>src/message_header.cpp</label>
         <link refid="message_header.cpp"/>
-        <childnode refid="72" relation="include">
+        <childnode refid="74" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>senergy/print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
         </childnode>
       </node>
       <node id="78">
-        <label>senergy/print.h</label>
-        <link refid="print_8h"/>
-        <childnode refid="79" relation="include">
-        </childnode>
-        <childnode refid="74" relation="include">
-        </childnode>
-      </node>
-      <node id="76">
         <label>cstdlib</label>
       </node>
-      <node id="73">
+      <node id="75">
         <label>senergy/bytebuffer.h</label>
         <link refid="bytebuffer_8h"/>
-        <childnode refid="74" relation="include">
-        </childnode>
-        <childnode refid="75" relation="include">
-        </childnode>
         <childnode refid="76" relation="include">
         </childnode>
         <childnode refid="77" relation="include">
         </childnode>
         <childnode refid="78" relation="include">
-        </childnode>
-      </node>
-      <node id="75">
-        <label>cstring</label>
-      </node>
-      <node id="72">
-        <label>senergy/dns/message_header.h</label>
-        <link refid="message__header_8h"/>
-        <childnode refid="73" relation="include">
         </childnode>
         <childnode refid="79" relation="include">
         </childnode>
@@ -58,6 +45,19 @@
         </childnode>
       </node>
       <node id="77">
+        <label>cstring</label>
+      </node>
+      <node id="74">
+        <label>senergy/dns/message_header.h</label>
+        <link refid="message__header_8h"/>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
         <label>memory</label>
       </node>
     </incdepgraph>

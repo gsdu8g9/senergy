@@ -3,6 +3,7 @@ var NAVTREE =
   [ "Senergy", "index.html", [
     [ "About Senergy", "index.html", null ],
     [ "Building", "building.html", null ],
+    [ "References", "references.html", null ],
     [ "Terminology", "terminology.html", null ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
@@ -39,7 +40,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"rootnameserver_8cpp_source.html"
+"rootnameserver_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

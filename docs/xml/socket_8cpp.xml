@@ -4,31 +4,27 @@
     <compoundname>socket.cpp</compoundname>
     <includes refid="socket_8h" local="no">senergy/socket.h</includes>
     <incdepgraph>
-      <node id="293">
+      <node id="295">
         <label>netinet/in.h</label>
       </node>
-      <node id="291">
+      <node id="293">
         <label>arpa/inet.h</label>
       </node>
-      <node id="295">
+      <node id="297">
         <label>errno.h</label>
       </node>
-      <node id="282">
+      <node id="284">
         <label>senergy/socket.h</label>
         <link refid="socket_8h"/>
-        <childnode refid="283" relation="include">
-        </childnode>
-        <childnode refid="284" relation="include">
-        </childnode>
         <childnode refid="285" relation="include">
         </childnode>
         <childnode refid="286" relation="include">
         </childnode>
         <childnode refid="287" relation="include">
         </childnode>
-        <childnode refid="291" relation="include">
+        <childnode refid="288" relation="include">
         </childnode>
-        <childnode refid="292" relation="include">
+        <childnode refid="289" relation="include">
         </childnode>
         <childnode refid="293" relation="include">
         </childnode>
@@ -36,57 +32,61 @@
         </childnode>
         <childnode refid="295" relation="include">
         </childnode>
+        <childnode refid="296" relation="include">
+        </childnode>
+        <childnode refid="297" relation="include">
+        </childnode>
       </node>
-      <node id="284">
+      <node id="286">
         <label>string</label>
       </node>
-      <node id="294">
+      <node id="296">
         <label>netdb.h</label>
       </node>
-      <node id="281">
+      <node id="283">
         <label>src/socket.cpp</label>
         <link refid="socket.cpp"/>
-        <childnode refid="282" relation="include">
-        </childnode>
-      </node>
-      <node id="290">
-        <label>cstdio</label>
-      </node>
-      <node id="285">
-        <label>vector</label>
-      </node>
-      <node id="289">
-        <label>senergy/print.h</label>
-        <link refid="print_8h"/>
-        <childnode refid="290" relation="include">
-        </childnode>
         <childnode refid="284" relation="include">
-        </childnode>
-      </node>
-      <node id="288">
-        <label>cstdlib</label>
-      </node>
-      <node id="287">
-        <label>senergy/bytebuffer.h</label>
-        <link refid="bytebuffer_8h"/>
-        <childnode refid="284" relation="include">
-        </childnode>
-        <childnode refid="283" relation="include">
-        </childnode>
-        <childnode refid="288" relation="include">
-        </childnode>
-        <childnode refid="286" relation="include">
-        </childnode>
-        <childnode refid="289" relation="include">
         </childnode>
       </node>
       <node id="292">
+        <label>cstdio</label>
+      </node>
+      <node id="287">
+        <label>vector</label>
+      </node>
+      <node id="291">
+        <label>senergy/print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="292" relation="include">
+        </childnode>
+        <childnode refid="286" relation="include">
+        </childnode>
+      </node>
+      <node id="290">
+        <label>cstdlib</label>
+      </node>
+      <node id="289">
+        <label>senergy/bytebuffer.h</label>
+        <link refid="bytebuffer_8h"/>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+        <childnode refid="290" relation="include">
+        </childnode>
+        <childnode refid="288" relation="include">
+        </childnode>
+        <childnode refid="291" relation="include">
+        </childnode>
+      </node>
+      <node id="294">
         <label>sys/socket.h</label>
       </node>
-      <node id="283">
+      <node id="285">
         <label>cstring</label>
       </node>
-      <node id="286">
+      <node id="288">
         <label>memory</label>
       </node>
     </incdepgraph>

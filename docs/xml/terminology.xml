@@ -4,7 +4,7 @@
     <compoundname>terminology</compoundname>
     <title>Terminology</title>
     <detaileddescription>
-<para><table rows="6" cols="2"><row>
+<para>This page contains an overview of terms that are not easy to understand, when you don&apos;t know the meaning of them. Normal terms, or at least terms assumed a &apos;technical&apos; person understands is not documented here.</para><para><table rows="6" cols="2"><row>
 <entry thead="no"><para><bold>Term</bold> </para></entry><entry thead="no"><para><bold>Explaination</bold> </para><para></para></entry></row>
 <row>
 <entry thead="no"><para>FQDN </para></entry><entry thead="no"><para>Fully Qualified Domain Name </para><para></para></entry></row>
