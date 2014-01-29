@@ -5,42 +5,42 @@
     <includes local="no">iostream</includes>
     <includes refid="senergy_8h" local="no">senergy/senergy.h</includes>
     <incdepgraph>
-      <node id="34">
+      <node id="36">
         <label>netinet/in.h</label>
       </node>
-      <node id="32">
+      <node id="34">
         <label>arpa/inet.h</label>
       </node>
-      <node id="20">
+      <node id="22">
         <label>src/main.cpp</label>
         <link refid="main.cpp"/>
-        <childnode refid="21" relation="include">
+        <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-      </node>
-      <node id="38">
-        <label>cmath</label>
-      </node>
-      <node id="36">
-        <label>errno.h</label>
-      </node>
-      <node id="23">
-        <label>senergy/socket.h</label>
-        <link refid="socket_8h"/>
         <childnode refid="24" relation="include">
         </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
+      </node>
+      <node id="40">
+        <label>cmath</label>
+      </node>
+      <node id="38">
+        <label>errno.h</label>
+      </node>
+      <node id="45">
+        <label>senergy/dns/resource_record_classes.h</label>
+        <link refid="resource__record__classes_8h"/>
+      </node>
+      <node id="25">
+        <label>senergy/socket.h</label>
+        <link refid="socket_8h"/>
         <childnode refid="26" relation="include">
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
-        <childnode refid="32" relation="include">
+        <childnode refid="29" relation="include">
         </childnode>
-        <childnode refid="33" relation="include">
+        <childnode refid="30" relation="include">
         </childnode>
         <childnode refid="34" relation="include">
         </childnode>
@@ -48,129 +48,148 @@
         </childnode>
         <childnode refid="36" relation="include">
         </childnode>
-      </node>
-      <node id="25">
-        <label>string</label>
-      </node>
-      <node id="37">
-        <label>senergy/convert.h</label>
-        <link refid="convert_8h"/>
-        <childnode refid="25" relation="include">
-        </childnode>
-        <childnode refid="31" relation="include">
+        <childnode refid="37" relation="include">
         </childnode>
         <childnode refid="38" relation="include">
         </childnode>
-        <childnode refid="39" relation="include">
-        </childnode>
       </node>
-      <node id="35">
-        <label>netdb.h</label>
-      </node>
-      <node id="31">
-        <label>cstdio</label>
-      </node>
-      <node id="43">
-        <label>senergy/dns/message.h</label>
-        <link refid="message_8h"/>
-        <childnode refid="40" relation="include">
-        </childnode>
-        <childnode refid="41" relation="include">
-        </childnode>
-        <childnode refid="28" relation="include">
-        </childnode>
-      </node>
-      <node id="26">
-        <label>vector</label>
-      </node>
-      <node id="30">
-        <label>senergy/print.h</label>
-        <link refid="print_8h"/>
-        <childnode refid="31" relation="include">
-        </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
+      <node id="27">
+        <label>string</label>
       </node>
       <node id="39">
-        <label>ctgmath</label>
-      </node>
-      <node id="22">
-        <label>senergy/senergy.h</label>
-        <link refid="senergy_8h"/>
-        <childnode refid="23" relation="include">
+        <label>senergy/convert.h</label>
+        <link refid="convert_8h"/>
+        <childnode refid="27" relation="include">
         </childnode>
-        <childnode refid="28" relation="include">
-        </childnode>
-        <childnode refid="37" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
+        <childnode refid="33" relation="include">
         </childnode>
         <childnode refid="40" relation="include">
         </childnode>
         <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>netdb.h</label>
+      </node>
+      <node id="33">
+        <label>cstdio</label>
+      </node>
+      <node id="47">
+        <label>senergy/dns/message.h</label>
+        <link refid="message_8h"/>
+        <childnode refid="42" relation="include">
         </childnode>
         <childnode refid="43" relation="include">
         </childnode>
-      </node>
-      <node id="29">
-        <label>cstdlib</label>
-      </node>
-      <node id="42">
-        <label>cctype</label>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
       </node>
       <node id="28">
-        <label>senergy/bytebuffer.h</label>
-        <link refid="bytebuffer_8h"/>
-        <childnode refid="25" relation="include">
-        </childnode>
-        <childnode refid="24" relation="include">
-        </childnode>
-        <childnode refid="29" relation="include">
+        <label>vector</label>
+      </node>
+      <node id="32">
+        <label>senergy/print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="33" relation="include">
         </childnode>
         <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>ctgmath</label>
+      </node>
+      <node id="24">
+        <label>senergy/senergy.h</label>
+        <link refid="senergy_8h"/>
+        <childnode refid="25" relation="include">
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
-      </node>
-      <node id="21">
-        <label>iostream</label>
-      </node>
-      <node id="33">
-        <label>sys/socket.h</label>
-      </node>
-      <node id="24">
-        <label>cstring</label>
-      </node>
-      <node id="40">
-        <label>senergy/dns/message_header.h</label>
-        <link refid="message__header_8h"/>
-        <childnode refid="28" relation="include">
-        </childnode>
-        <childnode refid="31" relation="include">
+        <childnode refid="39" relation="include">
         </childnode>
         <childnode refid="32" relation="include">
-        </childnode>
-      </node>
-      <node id="27">
-        <label>memory</label>
-      </node>
-      <node id="41">
-        <label>senergy/dns/message_question.h</label>
-        <link refid="message__question_8h"/>
-        <childnode refid="28" relation="include">
-        </childnode>
-        <childnode refid="31" relation="include">
         </childnode>
         <childnode refid="42" relation="include">
         </childnode>
-        <childnode refid="25" relation="include">
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>cstdlib</label>
+      </node>
+      <node id="46">
+        <label>cctype</label>
+      </node>
+      <node id="30">
+        <label>senergy/bytebuffer.h</label>
+        <link refid="bytebuffer_8h"/>
+        <childnode refid="27" relation="include">
         </childnode>
         <childnode refid="26" relation="include">
         </childnode>
-        <childnode refid="27" relation="include">
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
         </childnode>
         <childnode refid="32" relation="include">
         </childnode>
+      </node>
+      <node id="23">
+        <label>iostream</label>
+      </node>
+      <node id="35">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="48">
+        <label>algorithm</label>
+      </node>
+      <node id="26">
+        <label>cstring</label>
+      </node>
+      <node id="42">
+        <label>senergy/dns/message_header.h</label>
+        <link refid="message__header_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>memory</label>
+      </node>
+      <node id="43">
+        <label>senergy/dns/message_question.h</label>
+        <link refid="message__question_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>senergy/dns/resource_record_types.h</label>
+        <link refid="resource__record__types_8h"/>
       </node>
     </incdepgraph>
       <sectiondef kind="func">
@@ -193,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="25" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="25" bodyend="79"/>
+        <location file="/home/photonios/Documents/Senergy/src/main.cpp" line="25" column="1" bodyfile="/home/photonios/Documents/Senergy/src/main.cpp" bodystart="25" bodyend="81"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -260,7 +279,7 @@
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>question_count<sp/>=<sp/>(int)dns_message.Questions.size();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>question_count<sp/>=<sp/>dns_message.GetQuestionCount();</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(question_count<sp/>&lt;=<sp/>0)</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -273,13 +292,15 @@
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>requested_hostname<sp/>=<sp/>dns_message.Questions[i]-&gt;GetHostname();</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Info:<sp/>received<sp/>question<sp/>for<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>requested_hostname.c_str());</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Info:<sp/>question<sp/>is<sp/>of<sp/>type<sp/>%hu\n&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)dns_message.Questions[i]-&gt;GetType());</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Info:<sp/>question<sp/>has<sp/>class<sp/>%hu\n&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)dns_message.Questions[i]-&gt;GetClass());</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/photonios/Documents/Senergy/src/main.cpp"/>
   </compounddef>

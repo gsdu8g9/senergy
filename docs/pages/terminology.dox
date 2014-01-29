@@ -1,0 +1,35 @@
+/*!
+  \page terminology Terminology
+
+<table>
+	<tr>
+		<td><strong>Term</strong></td>
+		<td><strong>Explaination</strong></td>
+	</tr>
+
+	<tr>
+		<td>FQDN</td>
+		<td>Fully Qualified Domain Name</td>
+	</tr>
+
+	<tr>
+		<td>Domain Label</td>
+		<td>Typically this is the format that is used in the QNAME field of a question (3www6google3com)</td>
+	</tr>
+
+	<tr>
+		<td>RR</td>
+		<td>Resource Record, a record that can appear in the answer, authority and additional section of DNS packets.</td>
+	</tr>
+
+	<tr>
+		<td>AAAA</td>
+		<td>IPv6</td>
+	</tr>
+
+	<tr>
+		<td>A</td>
+		<td>IPv4</td>
+	</tr>
+</table>
+*/

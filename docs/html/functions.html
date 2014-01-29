@@ -90,7 +90,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow4" class="tabs3">
     <ul class="tablist">
-      <li><a href="#index__"><span>_</span></a></li>
       <li><a href="#index_a"><span>a</span></a></li>
       <li><a href="#index_b"><span>b</span></a></li>
       <li><a href="#index_c"><span>c</span></a></li>
@@ -144,19 +143,6 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <div class="contents">
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
-<h3><a class="anchor" id="index__"></a>- _ -</h3><ul>
-<li>__decode_hostname()
-: <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#aa0c2322c65b839fd806c255549cb6ca6">Senergy::Dns::MessageQuestion</a>
-</li>
-<li>__encode_hostname()
-: <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a4557a95908c9f5e0b52c160f5ad70cc8">Senergy::Dns::MessageQuestion</a>
-</li>
-<li>__update_host_to_fields()
-: <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a38d37becaefb52d8a2f9fb73d08b039e">Senergy::Dns::MessageQuestion</a>
-</li>
-</ul>
-
-
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
 <li>Accept()
 : <a class="el" href="class_senergy_1_1_socket.html#abefda24a1a73b49e108a54342be0457e">Senergy::Socket</a>
@@ -186,9 +172,6 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
 <li>CheckingDisabled
 : <a class="el" href="struct_senergy_1_1_dns_1_1_message_header_fields.html#a2c846064b4582f46a94bd90b32ef1cd9">Senergy::Dns::MessageHeaderFields</a>
-</li>
-<li>Class
-: <a class="el" href="struct_senergy_1_1_dns_1_1_message_question_fields.html#a3287d0766033d31e14623d864348bd84">Senergy::Dns::MessageQuestionFields</a>
 </li>
 <li>Client
 : <a class="el" href="class_senergy_1_1_socket.html#ad82ad4c4412684091e687b92641bfbe9a577d7068826de925ea2aec01dbadf5e4">Senergy::Socket</a>
@@ -221,12 +204,14 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
 <li>Fields
 : <a class="el" href="class_senergy_1_1_dns_1_1_message_header.html#a014c173ce2b2c5bb06ae9e5d0e201159">Senergy::Dns::MessageHeader</a>
-, <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a9fad900307a2b2f48c441b657429102f">Senergy::Dns::MessageQuestion</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>GetClass()
+: <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#ae86936e1268d7abf0a2210df9caa0840">Senergy::Dns::MessageQuestion</a>
+</li>
 <li>GetErrorCode()
 : <a class="el" href="class_senergy_1_1_socket.html#a403f7a2f6c5a94d4b14f73f0965da061">Senergy::Socket</a>
 </li>
@@ -235,6 +220,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>GetPosition()
 : <a class="el" href="class_senergy_1_1_byte_buffer.html#a286e096451b62a14a8d645e1c9da62af">Senergy::ByteBuffer</a>
+</li>
+<li>GetQuestionCount()
+: <a class="el" href="class_senergy_1_1_dns_1_1_message.html#a5d5219532098cf60e2395764e7f61aca">Senergy::Dns::Message</a>
 </li>
 <li>GetRemainingSize()
 : <a class="el" href="class_senergy_1_1_byte_buffer.html#ab938ed32f9f909145f93099f4620da69">Senergy::ByteBuffer</a>
@@ -246,18 +234,15 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="class_senergy_1_1_dns_1_1_message_header.html#a69f4475bc3153926dbb011f37cbbfea9">Senergy::Dns::MessageHeader</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a0a007a1d002a37189ce0f8c943335216">Senergy::Dns::MessageQuestion</a>
 </li>
+<li>GetType()
+: <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a66d9d051672d30c1f4b5663d25430ec8">Senergy::Dns::MessageQuestion</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
-<li>Header
-: <a class="el" href="class_senergy_1_1_dns_1_1_message.html#a0c9ed7b89b18762ae55c3bd53278126f">Senergy::Dns::Message</a>
-</li>
 <li>Hexadecimal()
 : <a class="el" href="class_senergy_1_1_print.html#a6c6b70bd91e56896058004bf82201010">Senergy::Print</a>
-</li>
-<li>Hostname
-: <a class="el" href="struct_senergy_1_1_dns_1_1_message_question_fields.html#a0d4513020862cecabd53e86ba5d9e05d">Senergy::Dns::MessageQuestionFields</a>
 </li>
 </ul>
 
@@ -368,6 +353,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>Reserved
 : <a class="el" href="struct_senergy_1_1_dns_1_1_message_header_fields.html#afb988d15085d4f740df367d1792440c7">Senergy::Dns::MessageHeaderFields</a>
 </li>
+<li>Reset()
+: <a class="el" href="class_senergy_1_1_dns_1_1_message.html#a60d242fef8b20993f9cd9b4591453e1b">Senergy::Dns::Message</a>
+</li>
 <li>ResponseCode
 : <a class="el" href="struct_senergy_1_1_dns_1_1_message_header_fields.html#a2f42c94d4e50dd7a63b11c8b374597c4">Senergy::Dns::MessageHeaderFields</a>
 </li>
@@ -386,6 +374,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>Server
 : <a class="el" href="class_senergy_1_1_socket.html#ad82ad4c4412684091e687b92641bfbe9a9aa1b03934893d7134a660af4204f2a9">Senergy::Socket</a>
 </li>
+<li>SetClass()
+: <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a8676f25315240afe4473154f3708d3e5">Senergy::Dns::MessageQuestion</a>
+</li>
 <li>SetHostname()
 : <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a239d21d940aa38b8d953ff29b400b9cf">Senergy::Dns::MessageQuestion</a>
 </li>
@@ -395,11 +386,14 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>SetTimeout()
 : <a class="el" href="class_senergy_1_1_socket.html#a7ca3e4fb2e2f216773498e6f29e9ea14">Senergy::Socket</a>
 </li>
+<li>SetType()
+: <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a3fbcbad88592bf5cde58c7b22119cc4f">Senergy::Dns::MessageQuestion</a>
+</li>
 <li>Size()
 : <a class="el" href="class_senergy_1_1_byte_buffer.html#a22be2d9d356958c4cf352bc31edb1735">Senergy::ByteBuffer</a>
 </li>
 <li>Socket()
-: <a class="el" href="class_senergy_1_1_socket.html#ad287e0ea5d32febd95ed7ba590d9e08d">Senergy::Socket</a>
+: <a class="el" href="class_senergy_1_1_socket.html#ad6ac199d691bbbb3915c375900a11ca7">Senergy::Socket</a>
 </li>
 <li>SocketProtocol
 : <a class="el" href="class_senergy_1_1_socket.html#ad400245278746ac26e261bdda171c178">Senergy::Socket</a>
@@ -435,9 +429,6 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>Truncation
 : <a class="el" href="struct_senergy_1_1_dns_1_1_message_header_fields.html#a15d1ee99bf788c080001c3216c88274c">Senergy::Dns::MessageHeaderFields</a>
 </li>
-<li>Type
-: <a class="el" href="struct_senergy_1_1_dns_1_1_message_question_fields.html#a15156bfecd74744319a3ce51e3fd1800">Senergy::Dns::MessageQuestionFields</a>
-</li>
 </ul>
 
 
@@ -465,7 +456,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jan 28 2014 23:17:17 for Senergy by
+    <li class="footer">Generated on Wed Jan 29 2014 22:08:20 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

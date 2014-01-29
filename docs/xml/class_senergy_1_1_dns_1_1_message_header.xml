@@ -150,14 +150,14 @@
 <simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
 </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="10">
+      <node id="8">
         <label>Senergy::Dns::MessageHeaderFields</label>
         <link refid="struct_senergy_1_1_dns_1_1_message_header_fields"/>
       </node>
-      <node id="9">
+      <node id="7">
         <label>Senergy::Dns::MessageHeader</label>
         <link refid="class_senergy_1_1_dns_1_1_message_header"/>
-        <childnode refid="10" relation="usage">
+        <childnode refid="8" relation="usage">
           <edgelabel>Fields</edgelabel>
         </childnode>
       </node>

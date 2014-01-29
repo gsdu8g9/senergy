@@ -1,14 +1,12 @@
 var searchData=
 [
-  ['read',['Read',['../class_senergy_1_1_byte_buffer.html#ae4e73e6e193bec7b9f7df0919d1641d9',1,'Senergy::ByteBuffer::Read(char *buffer, int size)'],['../class_senergy_1_1_byte_buffer.html#ace3d04d38706d534a16e596ee291630b',1,'Senergy::ByteBuffer::Read(char *buffer, unsigned int size)']]],
-  ['readall',['ReadAll',['../class_senergy_1_1_byte_buffer.html#a5c3f960422533abc898061be11b6f613',1,'Senergy::ByteBuffer']]],
-  ['readchar',['ReadChar',['../class_senergy_1_1_byte_buffer.html#a806db1b33ff86b572a0804879d181dc8',1,'Senergy::ByteBuffer']]],
-  ['readint',['ReadInt',['../class_senergy_1_1_byte_buffer.html#ab15f04d43dd82cebf6dc25254d210e4e',1,'Senergy::ByteBuffer']]],
-  ['readremaining',['ReadRemaining',['../class_senergy_1_1_byte_buffer.html#a391deafd9b6e3c4b4c2b92fe78358ebf',1,'Senergy::ByteBuffer::ReadRemaining(char *buffer, int max_size)'],['../class_senergy_1_1_byte_buffer.html#a8e9ec7a8d6c26c01a738768928fff704',1,'Senergy::ByteBuffer::ReadRemaining(char *buffer, unsigned int max_size)']]],
-  ['readshort',['ReadShort',['../class_senergy_1_1_byte_buffer.html#a989443842e20c2feba4268e968911fe8',1,'Senergy::ByteBuffer']]],
-  ['readunsignedchar',['ReadUnsignedChar',['../class_senergy_1_1_byte_buffer.html#ad9a7a05b0285fe070cde3983458de5f6',1,'Senergy::ByteBuffer']]],
-  ['readunsignedint',['ReadUnsignedInt',['../class_senergy_1_1_byte_buffer.html#a7abe5475b2a9adcad384d3125640aba2',1,'Senergy::ByteBuffer']]],
-  ['readunsignedshort',['ReadUnsignedShort',['../class_senergy_1_1_byte_buffer.html#aa6b6bfdb398a75b92c79bcdfc1986821',1,'Senergy::ByteBuffer']]],
-  ['receive',['Receive',['../class_senergy_1_1_socket.html#a7045f756d3c542ee1187a92ca13fa232',1,'Senergy::Socket::Receive(const char *receive_buffer, size_t size)'],['../class_senergy_1_1_socket.html#a0c1510be39bef49de15e8647b64dbb5e',1,'Senergy::Socket::Receive(size_t size)'],['../class_senergy_1_1_socket.html#aad6b0a1a9f7ac380b11b9ef814ada58b',1,'Senergy::Socket::Receive(ByteBuffer &amp;receive_buffer, size_t size)']]],
-  ['reserve',['Reserve',['../class_senergy_1_1_byte_buffer.html#a25b96a3aed3e617362dbaee66915c33a',1,'Senergy::ByteBuffer::Reserve(unsigned int size)'],['../class_senergy_1_1_byte_buffer.html#aa650965d24700a696af31aa9cc20fa68',1,'Senergy::ByteBuffer::Reserve(int size)']]]
+  ['send',['Send',['../class_senergy_1_1_socket.html#a1407e054edc1fd012d8c85e563683947',1,'Senergy::Socket::Send(const char *data, size_t data_size)'],['../class_senergy_1_1_socket.html#a9ca07e0de8c6f74f27963f17c8b1398d',1,'Senergy::Socket::Send(const std::string &amp;data, size_t data_size)'],['../class_senergy_1_1_socket.html#a72e1de4e0e3ef63bb020c62bea989fa6',1,'Senergy::Socket::Send(const std::string &amp;data)']]],
+  ['serialize',['Serialize',['../class_senergy_1_1_dns_1_1_message.html#a2e7978e799fadaa4f03fc881e5c8e0f6',1,'Senergy::Dns::Message::Serialize()'],['../class_senergy_1_1_dns_1_1_message_header.html#ab443595ff8e11a828022f0cc5f3f6fbe',1,'Senergy::Dns::MessageHeader::Serialize()'],['../class_senergy_1_1_dns_1_1_message_question.html#a60772687d382e1d376852e1b5ff59968',1,'Senergy::Dns::MessageQuestion::Serialize()']]],
+  ['setclass',['SetClass',['../class_senergy_1_1_dns_1_1_message_question.html#a8676f25315240afe4473154f3708d3e5',1,'Senergy::Dns::MessageQuestion']]],
+  ['sethostname',['SetHostname',['../class_senergy_1_1_dns_1_1_message_question.html#a239d21d940aa38b8d953ff29b400b9cf',1,'Senergy::Dns::MessageQuestion']]],
+  ['setposition',['SetPosition',['../class_senergy_1_1_byte_buffer.html#a13dd8a2eec8b93ac224f0da614c7f6f8',1,'Senergy::ByteBuffer::SetPosition(int position)'],['../class_senergy_1_1_byte_buffer.html#a52af5d53098be5cb179f9a05f84f39e2',1,'Senergy::ByteBuffer::SetPosition(unsigned int position)']]],
+  ['settimeout',['SetTimeout',['../class_senergy_1_1_socket.html#a7ca3e4fb2e2f216773498e6f29e9ea14',1,'Senergy::Socket']]],
+  ['settype',['SetType',['../class_senergy_1_1_dns_1_1_message_question.html#a3fbcbad88592bf5cde58c7b22119cc4f',1,'Senergy::Dns::MessageQuestion']]],
+  ['size',['Size',['../class_senergy_1_1_byte_buffer.html#a22be2d9d356958c4cf352bc31edb1735',1,'Senergy::ByteBuffer']]],
+  ['socket',['Socket',['../class_senergy_1_1_socket.html#a6fcb47adc585aa2bb5d3d81a5e5b22e1',1,'Senergy::Socket::Socket(SocketProtocol protocol)'],['../class_senergy_1_1_socket.html#ad287e0ea5d32febd95ed7ba590d9e08d',1,'Senergy::Socket::Socket(const Socket &amp;socket)'],['../class_senergy_1_1_socket.html#ad6ac199d691bbbb3915c375900a11ca7',1,'Senergy::Socket::Socket(SocketProtocol protocol, int native_socket, struct sockaddr_in remote_address)']]]
 ];

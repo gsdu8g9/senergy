@@ -2,13 +2,16 @@ var NAVTREE =
 [
   [ "Senergy", "index.html", [
     [ "About Senergy", "index.html", null ],
-    [ "Building", "a.html", null ],
+    [ "Building", "building.html", null ],
+    [ "Terminology", "terminology.html", null ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ],
-        [ "Typedefs", "namespacemembers_type.html", null ]
+        [ "Typedefs", "namespacemembers_type.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ],
+        [ "Enumerator", "namespacemembers_eval.html", null ]
       ] ]
     ] ],
     [ "Classes", null, [
@@ -35,7 +38,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"a.html"
+"annotated.html",
+"rootnameserver_8cpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

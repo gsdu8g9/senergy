@@ -1,0 +1,29 @@
+.TH "src/senergy/dns/resource_record_types.h" 3 "Wed Jan 29 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/senergy/dns/resource_record_types.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "\fBSenergy\fP"
+.br
+.ti -1c
+.RI "\fBSenergy::Dns\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSenergy::Dns::ResourceRecordType\fP : unsigned short { \fBSenergy::Dns::ResourceRecordType::A\fP = 1, \fBSenergy::Dns::ResourceRecordType::NS\fP = 2, \fBSenergy::Dns::ResourceRecordType::MD\fP = 3, \fBSenergy::Dns::ResourceRecordType::MF\fP = 4, \fBSenergy::Dns::ResourceRecordType::CNAME\fP = 5, \fBSenergy::Dns::ResourceRecordType::SOA\fP = 6, \fBSenergy::Dns::ResourceRecordType::MB\fP = 7, \fBSenergy::Dns::ResourceRecordType::MG\fP = 8, \fBSenergy::Dns::ResourceRecordType::MR\fP = 9, \fBSenergy::Dns::ResourceRecordType::NUL\fP = 10, \fBSenergy::Dns::ResourceRecordType::WKS\fP = 11, \fBSenergy::Dns::ResourceRecordType::PTR\fP = 12, \fBSenergy::Dns::ResourceRecordType::HINFO\fP = 13, \fBSenergy::Dns::ResourceRecordType::MINFO\fP = 14, \fBSenergy::Dns::ResourceRecordType::MX\fP = 15, \fBSenergy::Dns::ResourceRecordType::TXT\fP = 16, \fBSenergy::Dns::ResourceRecordType::RP\fP = 17, \fBSenergy::Dns::ResourceRecordType::AFSDB\fP = 18, \fBSenergy::Dns::ResourceRecordType::X25\fP = 19, \fBSenergy::Dns::ResourceRecordType::ISDN\fP = 20, \fBSenergy::Dns::ResourceRecordType::RT\fP = 21, \fBSenergy::Dns::ResourceRecordType::NSAP\fP = 22, \fBSenergy::Dns::ResourceRecordType::NSAP_PTR\fP = 23, \fBSenergy::Dns::ResourceRecordType::SIG\fP = 24, \fBSenergy::Dns::ResourceRecordType::KEY\fP = 25, \fBSenergy::Dns::ResourceRecordType::PX\fP = 26, \fBSenergy::Dns::ResourceRecordType::GPOS\fP = 27, \fBSenergy::Dns::ResourceRecordType::AAAA\fP = 28, \fBSenergy::Dns::ResourceRecordType::LOC\fP = 29, \fBSenergy::Dns::ResourceRecordType::NXT\fP = 30, \fBSenergy::Dns::ResourceRecordType::EID\fP = 31, \fBSenergy::Dns::ResourceRecordType::NIMLOC\fP = 32, \fBSenergy::Dns::ResourceRecordType::SRV\fP = 33, \fBSenergy::Dns::ResourceRecordType::ATMA\fP = 34, \fBSenergy::Dns::ResourceRecordType::NAPTR\fP = 35, \fBSenergy::Dns::ResourceRecordType::KX\fP = 36, \fBSenergy::Dns::ResourceRecordType::CERT\fP = 37, \fBSenergy::Dns::ResourceRecordType::A6\fP = 38, \fBSenergy::Dns::ResourceRecordType::DNAME\fP = 39, \fBSenergy::Dns::ResourceRecordType::SINK\fP = 40, \fBSenergy::Dns::ResourceRecordType::OPT\fP = 41, \fBSenergy::Dns::ResourceRecordType::APL\fP = 42, \fBSenergy::Dns::ResourceRecordType::DS\fP = 43, \fBSenergy::Dns::ResourceRecordType::SSHFP\fP = 44, \fBSenergy::Dns::ResourceRecordType::IPSECKEY\fP = 45, \fBSenergy::Dns::ResourceRecordType::RRSIG\fP = 46, \fBSenergy::Dns::ResourceRecordType::NSEC\fP = 47, \fBSenergy::Dns::ResourceRecordType::DNSKEY\fP = 48, \fBSenergy::Dns::ResourceRecordType::DHCID\fP = 49, \fBSenergy::Dns::ResourceRecordType::NSEC3\fP = 50, \fBSenergy::Dns::ResourceRecordType::NSEC3PARAM\fP = 51, \fBSenergy::Dns::ResourceRecordType::TLSA\fP = 52, \fBSenergy::Dns::ResourceRecordType::HIP\fP = 55, \fBSenergy::Dns::ResourceRecordType::NFINO\fP = 56, \fBSenergy::Dns::ResourceRecordType::RKEY\fP = 57, \fBSenergy::Dns::ResourceRecordType::TALINK\fP = 58, \fBSenergy::Dns::ResourceRecordType::CDS\fP = 59, \fBSenergy::Dns::ResourceRecordType::SPF\fP = 99, \fBSenergy::Dns::ResourceRecordType::UINFO\fP = 100, \fBSenergy::Dns::ResourceRecordType::UID\fP = 101, \fBSenergy::Dns::ResourceRecordType::GID\fP = 102, \fBSenergy::Dns::ResourceRecordType::UNSPEC\fP = 103, \fBSenergy::Dns::ResourceRecordType::NID\fP = 104, \fBSenergy::Dns::ResourceRecordType::L32\fP = 105, \fBSenergy::Dns::ResourceRecordType::L64\fP = 106, \fBSenergy::Dns::ResourceRecordType::LP\fP = 107, \fBSenergy::Dns::ResourceRecordType::EUI48\fP = 108, \fBSenergy::Dns::ResourceRecordType::EUI64\fP = 109, \fBSenergy::Dns::ResourceRecordType::TKEY\fP = 249, \fBSenergy::Dns::ResourceRecordType::TSIG\fP = 250, \fBSenergy::Dns::ResourceRecordType::IXFR\fP = 251, \fBSenergy::Dns::ResourceRecordType::AXFR\fP = 252, \fBSenergy::Dns::ResourceRecordType::MAILB\fP = 253, \fBSenergy::Dns::ResourceRecordType::MAILA\fP = 254, \fBSenergy::Dns::ResourceRecordType::ALL_RECORDS\fP = 255, \fBSenergy::Dns::ResourceRecordType::URI\fP = 256, \fBSenergy::Dns::ResourceRecordType::CAA\fP = 257, \fBSenergy::Dns::ResourceRecordType::TA\fP = 32768, \fBSenergy::Dns::ResourceRecordType::DLV\fP = 32769 }"
+.br
+.RI "\fIAn enumuration of all possible resource record types (RR), as defined by IANA\&. \fP"
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

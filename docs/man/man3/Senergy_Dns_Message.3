@@ -1,4 +1,4 @@
-.TH "Senergy::Dns::Message" 3 "Tue Jan 28 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::Dns::Message" 3 "Wed Jan 29 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -26,14 +26,18 @@ Represents a DNS packet as described in section 4 of RFC-1035\&. A DNS packet is
 .RI "bool \fBSerialize\fP (\fBByteBuffer\fP &buffer)"
 .br
 .RI "\fISerializes this DNS message (packet) into the specified \fBByteBuffer\fP\&. \fP"
+.ti -1c
+.RI "void \fBReset\fP ()"
+.br
+.RI "\fIResets this message so that all vectors/collections will be cleared, and default values restored\&. \fP"
+.ti -1c
+.RI "int \fBGetQuestionCount\fP ()"
+.br
+.RI "\fIGets the amount of questions this DNS message currently holds\&. \fP"
 .in -1c
 .SS "Public Attributes"
 
 .in +1c
-.ti -1c
-.RI "\fBMessageHeader\fP \fBHeader\fP"
-.br
-.RI "\fIRepresents the DNS packet header\&. The first part of a DNS message\&. See the \fBMessageHeader\fP class and the \fBMessageHeaderFields\fP structure for more information\&. \fP"
 .ti -1c
 .RI "\fBMessageQuestionPtrVector\fP \fBQuestions\fP"
 .br
@@ -52,7 +56,7 @@ Swen Kooij (Photonios)
 .PP
 
 .PP
-Definition at line 40 of file message\&.h\&.
+Definition at line 41 of file message\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Senergy::Dns::Message::Message ()"
@@ -72,6 +76,8 @@ Deserializes a DNS packet header from the specified buffer into this instance\&.
 .RS 4
 The DNS packet header is 12 bytes, the specified buffer should have at least 12 bytes left to read\&. Deserialization will fail when there are less then 12 bytes left to read\&.
 .PP
+This will overwrite all contents currently in this message\&.
+.PP
 If the operation suceseeded, the buffer's position will have at least advanced 12 bytes\&.
 .RE
 .PP
@@ -88,6 +94,25 @@ A boolean indicating whether deserialization was succesfull\&. True is returned 
 
 .PP
 Definition at line 33 of file message\&.cpp\&.
+.SS "int Senergy::Dns::Message::GetQuestionCount ()"
+
+.PP
+Gets the amount of questions this DNS message currently holds\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The amount of questions this DNS message currently holds\&. 
+.RE
+.PP
+
+.PP
+Definition at line 85 of file message\&.cpp\&.
+.SS "void Senergy::Dns::Message::Reset ()"
+
+.PP
+Resets this message so that all vectors/collections will be cleared, and default values restored\&. 
+.PP
+Definition at line 80 of file message\&.cpp\&.
 .SS "bool Senergy::Dns::Message::Serialize (\fBByteBuffer\fP &buffer)"
 
 .PP
@@ -105,21 +130,15 @@ A boolean indicating whether serialization was succesfull\&. True is returned wh
 .PP
 
 .PP
-Definition at line 52 of file message\&.cpp\&.
+Definition at line 56 of file message\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
-.SS "\fBMessageHeader\fP Senergy::Dns::Message::Header"
-
-.PP
-Represents the DNS packet header\&. The first part of a DNS message\&. See the \fBMessageHeader\fP class and the \fBMessageHeaderFields\fP structure for more information\&. 
-.PP
-Definition at line 82 of file message\&.h\&.
 .SS "\fBMessageQuestionPtrVector\fP Senergy::Dns::Message::Questions"
 
 .PP
 Holds all the 'question messages' that are part of this DNS message\&. 
 .PP
-Definition at line 87 of file message\&.h\&.
+Definition at line 97 of file message\&.h\&.
 
 .SH "Author"
 .PP 

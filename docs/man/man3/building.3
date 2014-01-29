@@ -1,0 +1,60 @@
+.TH "building" 3 "Wed Jan 29 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+building \- Building 
+The following is required to to build \fBSenergy\fP:
+.PP
+.IP "\(bu" 2
+Debian based operating system
+.IP "\(bu" 2
+GCC 4\&.7
+.IP "\(bu" 2
+GNU Make
+.IP "\(bu" 2
+Git
+.IP "\(bu" 2
+GFlags
+.IP "\(bu" 2
+Snappy
+.IP "\(bu" 2
+Zlib
+.IP "\(bu" 2
+Bzip2
+.IP "\(bu" 2
+RocksDB
+.PP
+.PP
+All external libraries are for RocksDB, you can download and install them all at once:
+.PP
+.PP
+.nf
+sudo apt-get install libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev
+.fi
+.PP
+.PP
+When you have setup all required libraries and tools, you can clone the source code repository using Git:
+.PP
+.PP
+.nf
+git clone https://github\&.com/Photonios/senergy\&.git
+.fi
+.PP
+.PP
+You should now have the \fBSenergy\fP source code\&. Change into the cloned directory:
+.PP
+.PP
+.nf
+cd senergy
+.fi
+.PP
+.PP
+And build the project:
+.PP
+.PP
+.nf
+make
+.fi
+.PP
+.PP
+The RocksDB library is added as a Git submodule and will be build when you build \fBSenergy\fP\&. After compiling and linking finishes, you should have the executable in the 'bin' directory\&. 

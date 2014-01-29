@@ -1,4 +1,4 @@
-.TH "src/senergy/dns/message_question.h" 3 "Tue Jan 28 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "src/senergy/dns/message_question.h" 3 "Wed Jan 29 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -7,6 +7,12 @@ src/senergy/dns/message_question.h \-
 .br
 .PP
 \fC#include <senergy/bytebuffer\&.h>\fP
+.br
+\fC#include <senergy/convert\&.h>\fP
+.br
+\fC#include <senergy/dns/resource_record_types\&.h>\fP
+.br
+\fC#include <senergy/dns/resource_record_classes\&.h>\fP
 .br
 \fC#include <cstdio>\fP
 .br
@@ -24,10 +30,6 @@ src/senergy/dns/message_question.h \-
 .SS "Classes"
 
 .in +1c
-.ti -1c
-.RI "struct \fBSenergy::Dns::MessageQuestionFields\fP"
-.br
-.RI "\fIDescribes the fields of a question message as defined in section 4\&.1\&.2 of RFC-1035\&. This data structure is used as the 'Fields' member/property of the \fBMessageQuestion\fP class, and serves as the container of the actual data\&. \fP"
 .ti -1c
 .RI "class \fBSenergy::Dns::MessageQuestion\fP"
 .br

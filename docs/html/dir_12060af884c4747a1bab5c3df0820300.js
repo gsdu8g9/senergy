@@ -8,6 +8,8 @@ var dir_12060af884c4747a1bab5c3df0820300 =
       [ "MessageHeader", "class_senergy_1_1_dns_1_1_message_header.html", "class_senergy_1_1_dns_1_1_message_header" ]
     ] ],
     [ "message_question.h", "message__question_8h.html", "message__question_8h" ],
+    [ "resource_record_classes.h", "resource__record__classes_8h.html", "resource__record__classes_8h" ],
+    [ "resource_record_types.h", "resource__record__types_8h.html", "resource__record__types_8h" ],
     [ "rootnameserver.h", "rootnameserver_8h.html", [
       [ "RootNameServer", "class_senergy_1_1_dns_1_1_root_name_server.html", null ]
     ] ]

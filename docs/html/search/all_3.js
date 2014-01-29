@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['checkingdisabled',['CheckingDisabled',['../struct_senergy_1_1_dns_1_1_message_header_fields.html#a2c846064b4582f46a94bd90b32ef1cd9',1,'Senergy::Dns::MessageHeaderFields']]],
-  ['class',['Class',['../struct_senergy_1_1_dns_1_1_message_question_fields.html#a3287d0766033d31e14623d864348bd84',1,'Senergy::Dns::MessageQuestionFields']]],
-  ['client',['Client',['../class_senergy_1_1_socket.html#ad82ad4c4412684091e687b92641bfbe9a577d7068826de925ea2aec01dbadf5e4',1,'Senergy::Socket']]],
-  ['close',['Close',['../class_senergy_1_1_socket.html#a859e2c4eec6792215f04363404658b0a',1,'Senergy::Socket']]],
-  ['closetype',['CloseType',['../class_senergy_1_1_socket.html#a88ed1eb1a5c47ea1b395715aabd37ab4',1,'Senergy::Socket']]],
-  ['connect',['Connect',['../class_senergy_1_1_socket.html#a75946ce55f263abb105a22611819e11e',1,'Senergy::Socket']]],
-  ['convert',['Convert',['../class_senergy_1_1_convert.html',1,'Senergy']]],
-  ['convert_2ecpp',['convert.cpp',['../convert_8cpp.html',1,'']]],
-  ['convert_2eh',['convert.h',['../convert_8h.html',1,'']]]
+  ['deserialize',['Deserialize',['../class_senergy_1_1_dns_1_1_message.html#a3857764a799ab123405420345f9b03ee',1,'Senergy::Dns::Message::Deserialize()'],['../class_senergy_1_1_dns_1_1_message_header.html#aa54f3864838fe22a4406e0c52a90a010',1,'Senergy::Dns::MessageHeader::Deserialize()'],['../class_senergy_1_1_dns_1_1_message_question.html#a1c66b45b448f262a4f2cf1317c89b5b3',1,'Senergy::Dns::MessageQuestion::Deserialize()']]],
+  ['dhcid',['DHCID',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a6e70731664048d83678c263374c8dd35',1,'Senergy::Dns']]],
+  ['dlv',['DLV',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aede320f6102f02f5903553674ed8a3f5',1,'Senergy::Dns']]],
+  ['dname',['DNAME',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a78e5dce13f93104bcc1c380f63d7ac17',1,'Senergy::Dns']]],
+  ['dnskey',['DNSKEY',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a548deb43a9afe4abcde34a605eb44700',1,'Senergy::Dns']]],
+  ['ds',['DS',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a47b79bd259e22596ffc4be2ffbbe5c5a',1,'Senergy::Dns']]],
+  ['dump',['Dump',['../class_senergy_1_1_dns_1_1_message_header.html#a54b75c73f901b0fc7cf21bed6391aa4e',1,'Senergy::Dns::MessageHeader::Dump()'],['../class_senergy_1_1_dns_1_1_message_question.html#a7ac084601ff3285c6e47e7ce7ccc09cf',1,'Senergy::Dns::MessageQuestion::Dump()']]]
 ];

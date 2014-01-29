@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['header',['Header',['../class_senergy_1_1_dns_1_1_message.html#a0c9ed7b89b18762ae55c3bd53278126f',1,'Senergy::Dns::Message']]],
-  ['hostname',['Hostname',['../struct_senergy_1_1_dns_1_1_message_question_fields.html#a0d4513020862cecabd53e86ba5d9e05d',1,'Senergy::Dns::MessageQuestionFields']]]
+  ['id',['Id',['../struct_senergy_1_1_dns_1_1_message_header_fields.html#ab423a1e91fecd6ad2ec36a4bdafd5c2b',1,'Senergy::Dns::MessageHeaderFields']]],
+  ['isresponse',['IsResponse',['../struct_senergy_1_1_dns_1_1_message_header_fields.html#a0d0ac4fa85684c3d66a84e3392f3ef99',1,'Senergy::Dns::MessageHeaderFields']]]
 ];

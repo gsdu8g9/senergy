@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['accept',['Accept',['../class_senergy_1_1_socket.html#abefda24a1a73b49e108a54342be0457e',1,'Senergy::Socket']]]
+  ['bytebuffer',['ByteBuffer',['../class_senergy_1_1_byte_buffer.html#ab3b85c02a2ee01df37673e8887df7956',1,'Senergy::ByteBuffer::ByteBuffer()'],['../class_senergy_1_1_byte_buffer.html#a95197b8b57bb0a752ad7650a59d5facd',1,'Senergy::ByteBuffer::ByteBuffer(unsigned int size)']]]
 ];

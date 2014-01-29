@@ -1,4 +1,4 @@
-.TH "Senergy::Dns::MessageQuestion" 3 "Tue Jan 28 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::Dns::MessageQuestion" 3 "Wed Jan 29 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -41,24 +41,23 @@ Represents a DNS question, as defined in section 4\&.1\&.2 of RFC-1035\&. A DNS 
 .ti -1c
 .RI "void \fBDump\fP ()"
 .br
-.RI "\fIDumps all fields from the 'Fields' member to the standard output, with their values\&. In the following format: \fP"
+.RI "\fIDumps all fields to the standard output, with their values\&. In the following format: \fP"
 .ti -1c
-.RI "std::string \fB__encode_hostname\fP (const std::string &hostname)"
+.RI "\fBResourceRecordType\fP \fBGetType\fP ()"
 .br
+.RI "\fIGets the type of question this is, what actually is meant, is the type or resource record that is expected when asking this question\&. \fP"
 .ti -1c
-.RI "std::string \fB__decode_hostname\fP (const std::string &hostname)"
+.RI "void \fBSetType\fP (\fBResourceRecordType\fP type)"
 .br
+.RI "\fISets the type of question this is, what actually is meant is the type of resource record that is expected when asking this question\&. \fP"
 .ti -1c
-.RI "void \fB__update_host_to_fields\fP (const std::string &hostname)"
+.RI "\fBResourceRecordClass\fP \fBGetClass\fP ()"
 .br
-.in -1c
-.SS "Public Attributes"
-
-.in +1c
+.RI "\fIGets the class of this question, the class denotes the format of the question\&. We only support IN (Internet) classes (1)\&. \fP"
 .ti -1c
-.RI "\fBMessageQuestionFields\fP \fBFields\fP"
+.RI "void \fBSetClass\fP (\fBResourceRecordClass\fP clas)"
 .br
-.RI "\fIThe fields that are part of a DNS question message\&. See \fBMessageQuestionFields\fP for a complete list\&. This contains the actual data that is transmitted and received\&. \fP"
+.RI "\fISet the class of this question, the class denotes the format of the question\&. We only support IN (Internet) classes (1)\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -73,7 +72,7 @@ Swen Kooij (Photonios)
 .PP
 
 .PP
-Definition at line 65 of file message_question\&.h\&.
+Definition at line 52 of file message_question\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Senergy::Dns::MessageQuestion::MessageQuestion ()"
@@ -81,21 +80,9 @@ Definition at line 65 of file message_question\&.h\&.
 .PP
 Initializes a new instance of the \fBMessageQuestion\fP class with default values\&. 
 .PP
-Definition at line 30 of file message_question\&.cpp\&.
+Definition at line 29 of file message_question\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "std::string Senergy::Dns::MessageQuestion::__decode_hostname (const std::string &hostname)"
-
-.PP
-Definition at line 138 of file message_question\&.cpp\&.
-.SS "std::string Senergy::Dns::MessageQuestion::__encode_hostname (const std::string &hostname)"
-
-.PP
-Definition at line 100 of file message_question\&.cpp\&.
-.SS "void Senergy::Dns::MessageQuestion::__update_host_to_fields (const std::string &hostname)"
-
-.PP
-Definition at line 168 of file message_question\&.cpp\&.
 .SS "bool Senergy::Dns::MessageQuestion::Deserialize (\fBByteBuffer\fP &buffer)"
 
 .PP
@@ -120,13 +107,26 @@ A boolean indicating whether deserilization was successful\&. True is returned w
 .PP
 
 .PP
-Definition at line 50 of file message_question\&.cpp\&.
+Definition at line 49 of file message_question\&.cpp\&.
 .SS "void Senergy::Dns::MessageQuestion::Dump ()"
 
 .PP
-Dumps all fields from the 'Fields' member to the standard output, with their values\&. In the following format: 
+Dumps all fields to the standard output, with their values\&. In the following format: 
 .PP
 Definition at line 93 of file message_question\&.cpp\&.
+.SS "\fBResourceRecordClass\fP Senergy::Dns::MessageQuestion::GetClass ()"
+
+.PP
+Gets the class of this question, the class denotes the format of the question\&. We only support IN (Internet) classes (1)\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A value from the ResourceRecordClass enumuration\&. 
+.RE
+.PP
+
+.PP
+Definition at line 188 of file message_question\&.cpp\&.
 .SS "std::string Senergy::Dns::MessageQuestion::GetHostname ()"
 
 .PP
@@ -139,7 +139,7 @@ The host name that is being requested (resolved)\&.
 .PP
 
 .PP
-Definition at line 34 of file message_question\&.cpp\&.
+Definition at line 33 of file message_question\&.cpp\&.
 .SS "int Senergy::Dns::MessageQuestion::GetSize ()"
 
 .PP
@@ -152,7 +152,20 @@ The current size of this message\&.
 .PP
 
 .PP
-Definition at line 44 of file message_question\&.cpp\&.
+Definition at line 43 of file message_question\&.cpp\&.
+.SS "\fBResourceRecordType\fP Senergy::Dns::MessageQuestion::GetType ()"
+
+.PP
+Gets the type of question this is, what actually is meant, is the type or resource record that is expected when asking this question\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A value from the ResourceRecordType enumuration\&. 
+.RE
+.PP
+
+.PP
+Definition at line 178 of file message_question\&.cpp\&.
 .SS "bool Senergy::Dns::MessageQuestion::Serialize (\fBByteBuffer\fP &buffer)"
 
 .PP
@@ -177,7 +190,20 @@ A boolean indicating whether serilization was successful\&. True is returned whe
 .PP
 
 .PP
-Definition at line 76 of file message_question\&.cpp\&.
+Definition at line 77 of file message_question\&.cpp\&.
+.SS "void Senergy::Dns::MessageQuestion::SetClass (\fBResourceRecordClass\fPclas)"
+
+.PP
+Set the class of this question, the class denotes the format of the question\&. We only support IN (Internet) classes (1)\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIclas\fP A value from the ResourceRecordClass enumuration\&. 
+.RE
+.PP
+
+.PP
+Definition at line 193 of file message_question\&.cpp\&.
 .SS "void Senergy::Dns::MessageQuestion::SetHostname (const std::string &hostname)"
 
 .PP
@@ -190,15 +216,20 @@ Sets the host name that needs to be requested (resolved)\&.
 .PP
 
 .PP
-Definition at line 39 of file message_question\&.cpp\&.
-.SH "Member Data Documentation"
-.PP 
-.SS "\fBMessageQuestionFields\fP Senergy::Dns::MessageQuestion::Fields"
+Definition at line 38 of file message_question\&.cpp\&.
+.SS "void Senergy::Dns::MessageQuestion::SetType (\fBResourceRecordType\fPtype)"
 
 .PP
-The fields that are part of a DNS question message\&. See \fBMessageQuestionFields\fP for a complete list\&. This contains the actual data that is transmitted and received\&. 
+Sets the type of question this is, what actually is meant is the type of resource record that is expected when asking this question\&. 
 .PP
-Definition at line 139 of file message_question\&.h\&.
+\fBParameters:\fP
+.RS 4
+\fItype\fP A value from the ResourceRecordType enumuration, the type to set\&. 
+.RE
+.PP
+
+.PP
+Definition at line 183 of file message_question\&.cpp\&.
 
 .SH "Author"
 .PP 

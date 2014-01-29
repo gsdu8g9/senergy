@@ -1,4 +1,4 @@
-.TH "Senergy::Dns" 3 "Tue Jan 28 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::Dns" 3 "Wed Jan 29 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -21,10 +21,6 @@ Senergy::Dns \-
 .RI "class \fBMessageHeader\fP"
 .br
 .RI "\fIDefines the header of a DNS packet, as described in section 4\&.1 of RFC-1035\&. All DNS messages start with this header\&. \fP"
-.ti -1c
-.RI "struct \fBMessageQuestionFields\fP"
-.br
-.RI "\fIDescribes the fields of a question message as defined in section 4\&.1\&.2 of RFC-1035\&. This data structure is used as the 'Fields' member/property of the \fBMessageQuestion\fP class, and serves as the container of the actual data\&. \fP"
 .ti -1c
 .RI "class \fBMessageQuestion\fP"
 .br
@@ -50,6 +46,18 @@ Senergy::Dns \-
 .br
 .RI "\fISimple typedef for a vector of \fBMessageQuestion\fP smart pointers\&. \fP"
 .in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBResourceRecordClass\fP : unsigned short { \fBResourceRecordClass::Reserved\fP = 0, \fBResourceRecordClass::Internet\fP = 1, \fBResourceRecordClass::Chaos\fP = 2, \fBResourceRecordClass::Hesiod\fP = 3, \fBResourceRecordClass::None\fP = 254, \fBResourceRecordClass::Any\fP = 255 }"
+.br
+.RI "\fIAn enumuration of all possible resource record classes (RR) as defined in RFC-1035\&. None of them except 'Internet' are really used\&. \fP"
+.ti -1c
+.RI "enum \fBResourceRecordType\fP : unsigned short { \fBResourceRecordType::A\fP = 1, \fBResourceRecordType::NS\fP = 2, \fBResourceRecordType::MD\fP = 3, \fBResourceRecordType::MF\fP = 4, \fBResourceRecordType::CNAME\fP = 5, \fBResourceRecordType::SOA\fP = 6, \fBResourceRecordType::MB\fP = 7, \fBResourceRecordType::MG\fP = 8, \fBResourceRecordType::MR\fP = 9, \fBResourceRecordType::NUL\fP = 10, \fBResourceRecordType::WKS\fP = 11, \fBResourceRecordType::PTR\fP = 12, \fBResourceRecordType::HINFO\fP = 13, \fBResourceRecordType::MINFO\fP = 14, \fBResourceRecordType::MX\fP = 15, \fBResourceRecordType::TXT\fP = 16, \fBResourceRecordType::RP\fP = 17, \fBResourceRecordType::AFSDB\fP = 18, \fBResourceRecordType::X25\fP = 19, \fBResourceRecordType::ISDN\fP = 20, \fBResourceRecordType::RT\fP = 21, \fBResourceRecordType::NSAP\fP = 22, \fBResourceRecordType::NSAP_PTR\fP = 23, \fBResourceRecordType::SIG\fP = 24, \fBResourceRecordType::KEY\fP = 25, \fBResourceRecordType::PX\fP = 26, \fBResourceRecordType::GPOS\fP = 27, \fBResourceRecordType::AAAA\fP = 28, \fBResourceRecordType::LOC\fP = 29, \fBResourceRecordType::NXT\fP = 30, \fBResourceRecordType::EID\fP = 31, \fBResourceRecordType::NIMLOC\fP = 32, \fBResourceRecordType::SRV\fP = 33, \fBResourceRecordType::ATMA\fP = 34, \fBResourceRecordType::NAPTR\fP = 35, \fBResourceRecordType::KX\fP = 36, \fBResourceRecordType::CERT\fP = 37, \fBResourceRecordType::A6\fP = 38, \fBResourceRecordType::DNAME\fP = 39, \fBResourceRecordType::SINK\fP = 40, \fBResourceRecordType::OPT\fP = 41, \fBResourceRecordType::APL\fP = 42, \fBResourceRecordType::DS\fP = 43, \fBResourceRecordType::SSHFP\fP = 44, \fBResourceRecordType::IPSECKEY\fP = 45, \fBResourceRecordType::RRSIG\fP = 46, \fBResourceRecordType::NSEC\fP = 47, \fBResourceRecordType::DNSKEY\fP = 48, \fBResourceRecordType::DHCID\fP = 49, \fBResourceRecordType::NSEC3\fP = 50, \fBResourceRecordType::NSEC3PARAM\fP = 51, \fBResourceRecordType::TLSA\fP = 52, \fBResourceRecordType::HIP\fP = 55, \fBResourceRecordType::NFINO\fP = 56, \fBResourceRecordType::RKEY\fP = 57, \fBResourceRecordType::TALINK\fP = 58, \fBResourceRecordType::CDS\fP = 59, \fBResourceRecordType::SPF\fP = 99, \fBResourceRecordType::UINFO\fP = 100, \fBResourceRecordType::UID\fP = 101, \fBResourceRecordType::GID\fP = 102, \fBResourceRecordType::UNSPEC\fP = 103, \fBResourceRecordType::NID\fP = 104, \fBResourceRecordType::L32\fP = 105, \fBResourceRecordType::L64\fP = 106, \fBResourceRecordType::LP\fP = 107, \fBResourceRecordType::EUI48\fP = 108, \fBResourceRecordType::EUI64\fP = 109, \fBResourceRecordType::TKEY\fP = 249, \fBResourceRecordType::TSIG\fP = 250, \fBResourceRecordType::IXFR\fP = 251, \fBResourceRecordType::AXFR\fP = 252, \fBResourceRecordType::MAILB\fP = 253, \fBResourceRecordType::MAILA\fP = 254, \fBResourceRecordType::ALL_RECORDS\fP = 255, \fBResourceRecordType::URI\fP = 256, \fBResourceRecordType::CAA\fP = 257, \fBResourceRecordType::TA\fP = 32768, \fBResourceRecordType::DLV\fP = 32769 }"
+.br
+.RI "\fIAn enumuration of all possible resource record types (RR), as defined by IANA\&. \fP"
+.in -1c
 .SH "Typedef Documentation"
 .PP 
 .SS "typedef std::shared_ptr<\fBMessageQuestion\fP> \fBSenergy::Dns::MessageQuestionPtr\fP"
@@ -57,13 +65,306 @@ Senergy::Dns \-
 .PP
 Simple typedef for a shared pointer to a \fBMessageQuestion\fP\&. 
 .PP
-Definition at line 159 of file message_question\&.h\&.
+Definition at line 179 of file message_question\&.h\&.
 .SS "typedef std::vector<\fBMessageQuestionPtr\fP> \fBSenergy::Dns::MessageQuestionPtrVector\fP"
 
 .PP
 Simple typedef for a vector of \fBMessageQuestion\fP smart pointers\&. 
 .PP
-Definition at line 164 of file message_question\&.h\&.
+Definition at line 184 of file message_question\&.h\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBSenergy::Dns::ResourceRecordClass\fP : unsigned short\fC [strong]\fP"
+
+.PP
+An enumuration of all possible resource record classes (RR) as defined in RFC-1035\&. None of them except 'Internet' are really used\&. 
+.PP
+\fBSee Also:\fP
+.RS 4
+http://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIReserved \fP\fP
+.TP
+\fB\fIInternet \fP\fP
+.TP
+\fB\fIChaos \fP\fP
+.TP
+\fB\fIHesiod \fP\fP
+.TP
+\fB\fINone \fP\fP
+.TP
+\fB\fIAny \fP\fP
+.PP
+Definition at line 38 of file resource_record_classes\&.h\&.
+.SS "enum \fBSenergy::Dns::ResourceRecordType\fP : unsigned short\fC [strong]\fP"
+
+.PP
+An enumuration of all possible resource record types (RR), as defined by IANA\&. 
+.PP
+\fBSee Also:\fP
+.RS 4
+http://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios)\&. 
+.RE
+.PP
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIA \fP\fP
+A host address\&. 
+.TP
+\fB\fINS \fP\fP
+A authoritative name server\&. 
+.TP
+\fB\fIMD \fP\fP
+A mail destination (Obsolete, use MX) 
+.TP
+\fB\fIMF \fP\fP
+A mail forwarder (Obsolete, use MX) 
+.TP
+\fB\fICNAME \fP\fP
+The canonical name for an alias\&. 
+.TP
+\fB\fISOA \fP\fP
+Sexueel Overdraagbare Aandoening (Marks the start of a zone of authority)\&. 
+.TP
+\fB\fIMB \fP\fP
+Mailbox domain name (EXPERIMENTAL)\&. 
+.TP
+\fB\fIMG \fP\fP
+Mail group member (EXPERIMENTAL)\&. 
+.TP
+\fB\fIMR \fP\fP
+Mail rename domain name (EXPERIMENTAL)\&. 
+.TP
+\fB\fINUL \fP\fP
+(NULL) - A null Resource Record (RR)\&. 
+.TP
+\fB\fIWKS \fP\fP
+Well-known service description\&. 
+.TP
+\fB\fIPTR \fP\fP
+Domain name pointer\&. 
+.TP
+\fB\fIHINFO \fP\fP
+Host information\&. 
+.TP
+\fB\fIMINFO \fP\fP
+Mailbox or mail list notification\&. 
+.TP
+\fB\fIMX \fP\fP
+Mail exchange\&. 
+.TP
+\fB\fITXT \fP\fP
+Text strings\&. 
+.TP
+\fB\fIRP \fP\fP
+Responsible person\&. 
+.TP
+\fB\fIAFSDB \fP\fP
+For AFS database location\&. 
+.TP
+\fB\fIX25 \fP\fP
+For X\&.25 PSDN addresses\&. 
+.TP
+\fB\fIISDN \fP\fP
+For ISDN addresses\&. 
+.TP
+\fB\fIRT \fP\fP
+Route-through\&. 
+.TP
+\fB\fINSAP \fP\fP
+NSAP Address, for NSAP style A records\&. 
+.TP
+\fB\fINSAP_PTR \fP\fP
+Domain pointer, NSAP style\&. 
+.TP
+\fB\fISIG \fP\fP
+Domain name signature\&. 
+.TP
+\fB\fIKEY \fP\fP
+Security key\&. 
+.TP
+\fB\fIPX \fP\fP
+X\&.400 mail mapping information\&. 
+.TP
+\fB\fIGPOS \fP\fP
+Geographical position\&. 
+.TP
+\fB\fIAAAA \fP\fP
+IPV6 Address\&. 
+.TP
+\fB\fILOC \fP\fP
+Location finformation\&. 
+.TP
+\fB\fINXT \fP\fP
+Next domain (Obsolete)\&. 
+.TP
+\fB\fIEID \fP\fP
+End point identifier\&. 
+.TP
+\fB\fINIMLOC \fP\fP
+Nimloc locator\&. 
+.TP
+\fB\fISRV \fP\fP
+Server selection\&. 
+.TP
+\fB\fIATMA \fP\fP
+ATM Address\&. 
+.TP
+\fB\fINAPTR \fP\fP
+Naming authority pointer\&. 
+.TP
+\fB\fIKX \fP\fP
+Key exchanger\&. 
+.TP
+\fB\fICERT \fP\fP
+CERT\&. 
+.TP
+\fB\fIA6 \fP\fP
+A6 (OBSOLETE, use AAAA)\&. 
+.TP
+\fB\fIDNAME \fP\fP
+DNAME\&. 
+.TP
+\fB\fISINK \fP\fP
+SINK\&. 
+.TP
+\fB\fIOPT \fP\fP
+OPT\&. 
+.TP
+\fB\fIAPL \fP\fP
+APL\&. 
+.TP
+\fB\fIDS \fP\fP
+Delegation signer\&. 
+.TP
+\fB\fISSHFP \fP\fP
+SSH Key Fingerprint\&. 
+.TP
+\fB\fIIPSECKEY \fP\fP
+IPSEC Key\&. 
+.TP
+\fB\fIRRSIG \fP\fP
+RRSIG\&. 
+.TP
+\fB\fINSEC \fP\fP
+NSEC\&. 
+.TP
+\fB\fIDNSKEY \fP\fP
+DNS Key\&. 
+.TP
+\fB\fIDHCID \fP\fP
+DHCID\&. 
+.TP
+\fB\fINSEC3 \fP\fP
+NSEC3\&. 
+.TP
+\fB\fINSEC3PARAM \fP\fP
+NSEC3PARAM\&. 
+.TP
+\fB\fITLSA \fP\fP
+TLSA\&. 
+.TP
+\fB\fIHIP \fP\fP
+Host identify protocol\&. 
+.TP
+\fB\fINFINO \fP\fP
+NINFO\&. 
+.TP
+\fB\fIRKEY \fP\fP
+RKEY\&. 
+.TP
+\fB\fITALINK \fP\fP
+Trust anchor link\&. 
+.TP
+\fB\fICDS \fP\fP
+Child DS\&. 
+.TP
+\fB\fISPF \fP\fP
+SPF (IANA-Reserved)\&. 
+.TP
+\fB\fIUINFO \fP\fP
+UINFO (IANA-Reserved)\&. 
+.TP
+\fB\fIUID \fP\fP
+UID (IANA-Reserved)\&. 
+.TP
+\fB\fIGID \fP\fP
+GID (IANA-Reserved)\&. 
+.TP
+\fB\fIUNSPEC \fP\fP
+UNSPEC (IANA-Reserved)\&. 
+.TP
+\fB\fINID \fP\fP
+NID\&. 
+.TP
+\fB\fIL32 \fP\fP
+L32\&. 
+.TP
+\fB\fIL64 \fP\fP
+L64\&. 
+.TP
+\fB\fILP \fP\fP
+LP\&. 
+.TP
+\fB\fIEUI48 \fP\fP
+EUI48 address\&. 
+.TP
+\fB\fIEUI64 \fP\fP
+EUI64 address\&. 
+.TP
+\fB\fITKEY \fP\fP
+Transaction key\&. 
+.TP
+\fB\fITSIG \fP\fP
+Transaction signature\&. 
+.TP
+\fB\fIIXFR \fP\fP
+Incremental transfer\&. 
+.TP
+\fB\fIAXFR \fP\fP
+Transfer of an entire zone\&. 
+.TP
+\fB\fIMAILB \fP\fP
+Mailbox-related resource records (RR) (Obsolete, see MX)\&. 
+.TP
+\fB\fIMAILA \fP\fP
+Mail agent resource records (RR) (Obsolete, see MX)\&. 
+.TP
+\fB\fIALL_RECORDS \fP\fP
+A request for all records the server/cache has available\&. 
+.TP
+\fB\fIURI \fP\fP
+URI\&. 
+.TP
+\fB\fICAA \fP\fP
+Certificate authority restriction\&. 
+.TP
+\fB\fITA \fP\fP
+DNSSEC Trust authorities\&. 
+.TP
+\fB\fIDLV \fP\fP
+DNSSEC Lookaside validation\&. 
+.PP
+Definition at line 37 of file resource_record_types\&.h\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Senergy from the source code\&.

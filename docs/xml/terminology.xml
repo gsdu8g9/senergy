@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="terminology" kind="page">
+    <compoundname>terminology</compoundname>
+    <title>Terminology</title>
+    <detaileddescription>
+<para><table rows="6" cols="2"><row>
+<entry thead="no"><para><bold>Term</bold> </para></entry><entry thead="no"><para><bold>Explaination</bold> </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>FQDN </para></entry><entry thead="no"><para>Fully Qualified Domain Name </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Domain Label </para></entry><entry thead="no"><para>Typically this is the format that is used in the QNAME field of a question (3www6google3com) </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>RR </para></entry><entry thead="no"><para>Resource Record, a record that can appear in the answer, authority and additional section of DNS packets. </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>AAAA </para></entry><entry thead="no"><para>IPv6 </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>A </para></entry><entry thead="no"><para>IPv4  </para></entry></row>
+</table>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

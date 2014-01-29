@@ -5,9 +5,714 @@
     <innerclass refid="class_senergy_1_1_dns_1_1_message" prot="public">Senergy::Dns::Message</innerclass>
     <innerclass refid="struct_senergy_1_1_dns_1_1_message_header_fields" prot="public">Senergy::Dns::MessageHeaderFields</innerclass>
     <innerclass refid="class_senergy_1_1_dns_1_1_message_header" prot="public">Senergy::Dns::MessageHeader</innerclass>
-    <innerclass refid="struct_senergy_1_1_dns_1_1_message_question_fields" prot="public">Senergy::Dns::MessageQuestionFields</innerclass>
     <innerclass refid="class_senergy_1_1_dns_1_1_message_question" prot="public">Senergy::Dns::MessageQuestion</innerclass>
     <innerclass refid="class_senergy_1_1_dns_1_1_root_name_server" prot="public">Senergy::Dns::RootNameServer</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_senergy_1_1_dns_1a953f153bc411213d621d00c1e1b3eb9d" prot="public" static="no">
+        <name>ResourceRecordClass</name>
+        <enumvalue id="namespace_senergy_1_1_dns_1a953f153bc411213d621d00c1e1b3eb9da942d4e37dd5607ab68e54755540d4a47" prot="public">
+          <name>Reserved</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a953f153bc411213d621d00c1e1b3eb9dac8205c7636e728d448c2774e6a4a944b" prot="public">
+          <name>Internet</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a953f153bc411213d621d00c1e1b3eb9da7e8214916782021125d0afd9d9d9ee66" prot="public">
+          <name>Chaos</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a953f153bc411213d621d00c1e1b3eb9da04e26d2a6e2432efc191fd0b9d9f0c9c" prot="public">
+          <name>Hesiod</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a953f153bc411213d621d00c1e1b3eb9da6adf97f83acf6453d4a6a4b1070f3754" prot="public">
+          <name>None</name>
+          <initializer>= 254</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a953f153bc411213d621d00c1e1b3eb9daed36a1ef76a59ee3f15180e0441188ad" prot="public">
+          <name>Any</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>An enumuration of all possible resource record classes (RR) as defined in RFC-1035. None of them except &apos;Internet&apos; are really used. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="http://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml">http://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml</ulink></para></simplesect>
+<simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_classes.h" line="39" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_classes.h" bodystart="38" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0" prot="public" static="no">
+        <name>ResourceRecordType</name>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29" prot="public">
+          <name>A</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>A host address. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a53c8d15a175221d2127083e66a8cc937" prot="public">
+          <name>NS</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>A authoritative name server. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a7dc10e66da5549d351765bd940b81be9" prot="public">
+          <name>MD</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>A mail destination (Obsolete, use MX) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a12c578c9f48dd6727464670d5daa0f9c" prot="public">
+          <name>MF</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>A mail forwarder (Obsolete, use MX) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0aadc4bfdb0829dae99e3699393e3fbaa4" prot="public">
+          <name>CNAME</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para>The canonical name for an alias. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0abe5a791366c5f2810d7dd6132dc0f06c" prot="public">
+          <name>SOA</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para>Sexueel Overdraagbare Aandoening (Marks the start of a zone of authority). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a8d8fcc1abd550c5f25dbfaa57d59cb67" prot="public">
+          <name>MB</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+<para>Mailbox domain name (EXPERIMENTAL). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0aba2a034f4d913f87fe07cad29368d114" prot="public">
+          <name>MG</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para>Mail group member (EXPERIMENTAL). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0ad5c44258d51659f96279c470ce8185dc" prot="public">
+          <name>MR</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+<para>Mail rename domain name (EXPERIMENTAL). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a890f5fe6581170eeff26bec1c1e6a023" prot="public">
+          <name>NUL</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+<para>(NULL) - A null Resource Record (RR). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0aeed02d24534183b7a268008603930b67" prot="public">
+          <name>WKS</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+<para>Well-known service description. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0accf95d5d6208e6821c61433d43848f16" prot="public">
+          <name>PTR</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+<para>Domain name pointer. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a6039bc6fb2965fe1e923383f3c3ac936" prot="public">
+          <name>HINFO</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+<para>Host information. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0adfb31d06b1b1f36e6a6ddfe0f94b33da" prot="public">
+          <name>MINFO</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+<para>Mailbox or mail list notification. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a0b98720dcb2cc6fd60358a45dfbc5b87" prot="public">
+          <name>MX</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+<para>Mail exchange. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a5956a437e724cdfc8b1c70dc7bdeebcb" prot="public">
+          <name>TXT</name>
+          <initializer>= 16</initializer>
+          <briefdescription>
+<para>Text strings. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0ac4cb0a6bcf9b947b0e647a11ebfacefa" prot="public">
+          <name>RP</name>
+          <initializer>= 17</initializer>
+          <briefdescription>
+<para>Responsible person. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0ab9e4ee544eaa7fe99267355742f7a03e" prot="public">
+          <name>AFSDB</name>
+          <initializer>= 18</initializer>
+          <briefdescription>
+<para>For AFS database location. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0ab9f72c6f03e2177e0ea0f3f31ba05da1" prot="public">
+          <name>X25</name>
+          <initializer>= 19</initializer>
+          <briefdescription>
+<para>For X.25 PSDN addresses. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a6b76a4f6461388db72ddf5cc41979c4b" prot="public">
+          <name>ISDN</name>
+          <initializer>= 20</initializer>
+          <briefdescription>
+<para>For ISDN addresses. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a705610ed3e5ec724f5cb0d76a5fd3aa1" prot="public">
+          <name>RT</name>
+          <initializer>= 21</initializer>
+          <briefdescription>
+<para>Route-through. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0ab1749646110d92e1818f7f7cf24d374e" prot="public">
+          <name>NSAP</name>
+          <initializer>= 22</initializer>
+          <briefdescription>
+<para>NSAP Address, for NSAP style A records. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0ae71f755427c9351f13e0b14103a8a549" prot="public">
+          <name>NSAP_PTR</name>
+          <initializer>= 23</initializer>
+          <briefdescription>
+<para>Domain pointer, NSAP style. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a8e40932558a1eaaf985335ab7154d6dc" prot="public">
+          <name>SIG</name>
+          <initializer>= 24</initializer>
+          <briefdescription>
+<para>Domain name signature. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a3b5949e0c26b87767a4752a276de9570" prot="public">
+          <name>KEY</name>
+          <initializer>= 25</initializer>
+          <briefdescription>
+<para>Security key. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a87e6c078833a3c35b65067a50c936b37" prot="public">
+          <name>PX</name>
+          <initializer>= 26</initializer>
+          <briefdescription>
+<para>X.400 mail mapping information. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a7fa7750863127fa3f9f1255b582ac34d" prot="public">
+          <name>GPOS</name>
+          <initializer>= 27</initializer>
+          <briefdescription>
+<para>Geographical position. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a098890dde069e9abad63f19a0d9e1f32" prot="public">
+          <name>AAAA</name>
+          <initializer>= 28</initializer>
+          <briefdescription>
+<para>IPV6 Address. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a7982b1597f92456d71b333fe2aead996" prot="public">
+          <name>LOC</name>
+          <initializer>= 29</initializer>
+          <briefdescription>
+<para>Location finformation. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a3f15fada7994f98f3bc6207bed01c16b" prot="public">
+          <name>NXT</name>
+          <initializer>= 30</initializer>
+          <briefdescription>
+<para>Next domain (Obsolete). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a02cf6cb778382bf4014cc10c4c15b449" prot="public">
+          <name>EID</name>
+          <initializer>= 31</initializer>
+          <briefdescription>
+<para>End point identifier. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a1ffe19e6ac60395518851cb93ca2e1cf" prot="public">
+          <name>NIMLOC</name>
+          <initializer>= 32</initializer>
+          <briefdescription>
+<para>Nimloc locator. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0ab71ecf0b186ac1b938e15483f792b7db" prot="public">
+          <name>SRV</name>
+          <initializer>= 33</initializer>
+          <briefdescription>
+<para>Server selection. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a130eec8777bec09e591885428f2ffb75" prot="public">
+          <name>ATMA</name>
+          <initializer>= 34</initializer>
+          <briefdescription>
+<para>ATM Address. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a9bf4e5a83e8c043c90b39c0d1c6a1587" prot="public">
+          <name>NAPTR</name>
+          <initializer>= 35</initializer>
+          <briefdescription>
+<para>Naming authority pointer. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a33ac0876e2026575dc3b41a0b74c3015" prot="public">
+          <name>KX</name>
+          <initializer>= 36</initializer>
+          <briefdescription>
+<para>Key exchanger. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a5d2cfab83ed6e86a4812690790dc7ad5" prot="public">
+          <name>CERT</name>
+          <initializer>= 37</initializer>
+          <briefdescription>
+<para>CERT. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a0b3d5609ee81e50809b7351e848e4698" prot="public">
+          <name>A6</name>
+          <initializer>= 38</initializer>
+          <briefdescription>
+<para>A6 (OBSOLETE, use AAAA). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a78e5dce13f93104bcc1c380f63d7ac17" prot="public">
+          <name>DNAME</name>
+          <initializer>= 39</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>DNAME. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a6091f77137cf4570917f3f4d30585bb1" prot="public">
+          <name>SINK</name>
+          <initializer>= 40</initializer>
+          <briefdescription>
+<para>SINK. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0ad64669882d28591f1a0fe0926f80e751" prot="public">
+          <name>OPT</name>
+          <initializer>= 41</initializer>
+          <briefdescription>
+<para>OPT. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0acd5451fbbc151dc5f8020fb1bbc9ef86" prot="public">
+          <name>APL</name>
+          <initializer>= 42</initializer>
+          <briefdescription>
+<para>APL. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a47b79bd259e22596ffc4be2ffbbe5c5a" prot="public">
+          <name>DS</name>
+          <initializer>= 43</initializer>
+          <briefdescription>
+<para>Delegation signer. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0af228c42396e41cfc2c31c9ee79c50f39" prot="public">
+          <name>SSHFP</name>
+          <initializer>= 44</initializer>
+          <briefdescription>
+<para>SSH Key Fingerprint. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a2b356a14948fa1c2a2ef3c14355c83ea" prot="public">
+          <name>IPSECKEY</name>
+          <initializer>= 45</initializer>
+          <briefdescription>
+<para>IPSEC Key. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0acedf979874cc1ac262a7a836f504a9a3" prot="public">
+          <name>RRSIG</name>
+          <initializer>= 46</initializer>
+          <briefdescription>
+<para>RRSIG. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a6ac9d5292ffcb6323409509895e59c6a" prot="public">
+          <name>NSEC</name>
+          <initializer>= 47</initializer>
+          <briefdescription>
+<para>NSEC. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a548deb43a9afe4abcde34a605eb44700" prot="public">
+          <name>DNSKEY</name>
+          <initializer>= 48</initializer>
+          <briefdescription>
+<para>DNS Key. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a6e70731664048d83678c263374c8dd35" prot="public">
+          <name>DHCID</name>
+          <initializer>= 49</initializer>
+          <briefdescription>
+<para>DHCID. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0aa573cb9749bec7cdc7c1689504db06fa" prot="public">
+          <name>NSEC3</name>
+          <initializer>= 50</initializer>
+          <briefdescription>
+<para>NSEC3. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0ac31c935076390d6c1f649299c706b21a" prot="public">
+          <name>NSEC3PARAM</name>
+          <initializer>= 51</initializer>
+          <briefdescription>
+<para>NSEC3PARAM. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a2528196793228f3ed012ef32a973842d" prot="public">
+          <name>TLSA</name>
+          <initializer>= 52</initializer>
+          <briefdescription>
+<para>TLSA. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a5e4576beae2ab86d6ad1b8b1700d2e11" prot="public">
+          <name>HIP</name>
+          <initializer>= 55</initializer>
+          <briefdescription>
+<para>Host identify protocol. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0af2c8bdba2e1534ec4f29d0d7fd637976" prot="public">
+          <name>NFINO</name>
+          <initializer>= 56</initializer>
+          <briefdescription>
+<para>NINFO. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0aa0c7a61ee259167ff4eb02668a90798e" prot="public">
+          <name>RKEY</name>
+          <initializer>= 57</initializer>
+          <briefdescription>
+<para>RKEY. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0aae5740157bf2828808b460ef253c6d64" prot="public">
+          <name>TALINK</name>
+          <initializer>= 58</initializer>
+          <briefdescription>
+<para>Trust anchor link. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0ab1da7839edd4969a1aaa4435721a149c" prot="public">
+          <name>CDS</name>
+          <initializer>= 59</initializer>
+          <briefdescription>
+<para>Child DS. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0ab4efb35349e5d93905531be07dbacd6d" prot="public">
+          <name>SPF</name>
+          <initializer>= 99</initializer>
+          <briefdescription>
+<para>SPF (IANA-Reserved). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0ae9d3d23146a9fbf510b755d3356199b4" prot="public">
+          <name>UINFO</name>
+          <initializer>= 100</initializer>
+          <briefdescription>
+<para>UINFO (IANA-Reserved). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0ae7d22294bdcb7133967c3548ece982e5" prot="public">
+          <name>UID</name>
+          <initializer>= 101</initializer>
+          <briefdescription>
+<para>UID (IANA-Reserved). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a7af9d03ef884836d52bd6c23c4fc2f79" prot="public">
+          <name>GID</name>
+          <initializer>= 102</initializer>
+          <briefdescription>
+<para>GID (IANA-Reserved). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a2f03cf10116568e1dbf5263143cffaec" prot="public">
+          <name>UNSPEC</name>
+          <initializer>= 103</initializer>
+          <briefdescription>
+<para>UNSPEC (IANA-Reserved). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0ab0db97f062879a0e0cd0788528386743" prot="public">
+          <name>NID</name>
+          <initializer>= 104</initializer>
+          <briefdescription>
+<para>NID. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a3b80517688b93186611e64fe9268fca7" prot="public">
+          <name>L32</name>
+          <initializer>= 105</initializer>
+          <briefdescription>
+<para>L32. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a036a76b97b96b5d46742bb4bcd2ff24d" prot="public">
+          <name>L64</name>
+          <initializer>= 106</initializer>
+          <briefdescription>
+<para>L64. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a233724c5adf28da47784390134db3c66" prot="public">
+          <name>LP</name>
+          <initializer>= 107</initializer>
+          <briefdescription>
+<para>LP. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0ac986a9cd71834016d263ca68de5ac2f4" prot="public">
+          <name>EUI48</name>
+          <initializer>= 108</initializer>
+          <briefdescription>
+<para>EUI48 address. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a5dc04c568f0c0746f9a76d193723e13e" prot="public">
+          <name>EUI64</name>
+          <initializer>= 109</initializer>
+          <briefdescription>
+<para>EUI64 address. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0ad2500ad054637dfb9c46375eb28f7182" prot="public">
+          <name>TKEY</name>
+          <initializer>= 249</initializer>
+          <briefdescription>
+<para>Transaction key. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a60508804d4e825c7191fbdf5a1c6d54b" prot="public">
+          <name>TSIG</name>
+          <initializer>= 250</initializer>
+          <briefdescription>
+<para>Transaction signature. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0afad4f5e8316e9f88b1adcb0ee474c6ac" prot="public">
+          <name>IXFR</name>
+          <initializer>= 251</initializer>
+          <briefdescription>
+<para>Incremental transfer. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0aafa24a70b614aef02cc1a12e829625f7" prot="public">
+          <name>AXFR</name>
+          <initializer>= 252</initializer>
+          <briefdescription>
+<para>Transfer of an entire zone. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0ae599722792c31154f99048e56b9cf384" prot="public">
+          <name>MAILB</name>
+          <initializer>= 253</initializer>
+          <briefdescription>
+<para>Mailbox-related resource records (RR) (Obsolete, see MX). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a59fe37d7dd88b5a7c76146d14db1331f" prot="public">
+          <name>MAILA</name>
+          <initializer>= 254</initializer>
+          <briefdescription>
+<para>Mail agent resource records (RR) (Obsolete, see MX). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a8261d4e71736b8ae72eae60ff8e18191" prot="public">
+          <name>ALL_RECORDS</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+<para>A request for all records the server/cache has available. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a8447306210a0972ac94b7d774799df1a" prot="public">
+          <name>URI</name>
+          <initializer>= 256</initializer>
+          <briefdescription>
+<para>URI. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0ad7ff895c2bd9c10f958833aeb0289ad4" prot="public">
+          <name>CAA</name>
+          <initializer>= 257</initializer>
+          <briefdescription>
+<para>Certificate authority restriction. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a890a10788493e3d572586e991cd43543" prot="public">
+          <name>TA</name>
+          <initializer>= 32768</initializer>
+          <briefdescription>
+<para>DNSSEC Trust authorities. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0aede320f6102f02f5903553674ed8a3f5" prot="public">
+          <name>DLV</name>
+          <initializer>= 32769</initializer>
+          <briefdescription>
+<para>DNSSEC Lookaside validation. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>An enumuration of all possible resource record types (RR), as defined by IANA. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="http://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml">http://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml</ulink></para></simplesect>
+<simplesect kind="author"><para>Swen Kooij (Photonios). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_types.h" line="38" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_types.h" bodystart="37" bodyend="441"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="typedef">
       <memberdef kind="typedef" id="namespace_senergy_1_1_dns_1a425a2a6f3b5c18973c524a99bdfa4ef0" prot="public" static="no">
         <type>std::shared_ptr&lt; <ref refid="class_senergy_1_1_dns_1_1_message_question" kindref="compound">MessageQuestion</ref> &gt;</type>
@@ -20,7 +725,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="159" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="159" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="179" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="179" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespace_senergy_1_1_dns_1a76982150ca0b86c08d888f3e3e805747" prot="public" static="no">
         <type>std::vector&lt; <ref refid="namespace_senergy_1_1_dns_1a425a2a6f3b5c18973c524a99bdfa4ef0" kindref="member">MessageQuestionPtr</ref> &gt;</type>
@@ -33,7 +738,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="164" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="164" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="184" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="184" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
