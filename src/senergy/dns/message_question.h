@@ -21,42 +21,6 @@ namespace Dns
 {
 
 /*!
- * \brief Describes the fields of a question message as defined in section 4.1.2 of RFC-1035. 
- *	 	  This data structure is used as the "Fields" member/property of the MessageQuestion class,
- *		  and serves as the container of the actual data.
- *
- * \note The size of this structure is variable, because of the host name, but it is at least 2 bytes.
- *
- * \author Swen Kooij (Photonios)
- */
-struct MessageQuestionFields
-{
-	/*!
-  	 * \brief  A domain name represented as a sequence of labels, where
-     *         each label consists of a length octet followed by that
-     *         number of octets.  The domain name terminates with the
-     *         zero length octet for the null label of the root.  Note
-     *         that this field may be an odd number of octets; no
-     *         padding is used.
-	 */
-	unsigned char *Hostname;
-
-	/*!
- 	 * \brief A two octet code which specifies the type of the query.
-     *        The values for this field include all codes valid for a
-     *        TYPE field, together with some more general codes which
-     *        can match more than one type of RR.
-	 */
-	unsigned short Type;
-	
-	/*!
-	 * \brief A two octet code that specifies the class of the query.
-     *        For example, the QCLASS field is IN for the Internet.
-	 */
-	unsigned short Class;
-};
-
-/*!
  * \brief Represents a DNS question, as defined in section 4.1.2 of RFC-1035. A DNS question is usually transmitted
  *		  by a DNS client, asking to lookup the IP address of a host name.
  *
@@ -131,14 +95,6 @@ public:
 	void Dump();
 
 public:
-	/*!
- 	 * \brief The fields that are part of a DNS question message. See MessageQuestionFields
-	 *		  for a complete list. This contains the actual data
-	 *		  that is transmitted and received.
-	 */
-	MessageQuestionFields Fields;
-
-public:
 	// Will encode the hostname currently set from 'www.google.com' to '3www6.google.com3'
 	std::string __encode_hostname(const std::string &hostname);
 
@@ -151,6 +107,12 @@ public:
 private:
 	// Holds the host name that is currently set.
 	std::string 	m_hostname;
+
+	// Holds the type for this question
+	unsigned short 	m_type;
+	
+	// Holds the question class
+	unsigned short 	m_class;
 };
 
 /*!

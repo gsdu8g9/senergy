@@ -62,14 +62,13 @@ bool MessageQuestion::Deserialize(ByteBuffer &buffer)
 		m_hostname += current_character;
 	}
 
-	__update_host_to_fields(m_hostname);
 	m_hostname = __decode_hostname(m_hostname);
 	
 	if(buffer.GetRemainingSize() < 2)
 		return false;
 
-	this->Fields.Type = buffer.ReadUnsignedShort();
-	this->Fields.Class = buffer.ReadUnsignedShort();
+	m_type = buffer.ReadUnsignedShort();
+	m_class = buffer.ReadUnsignedShort();
 	return true;	
 }
 
@@ -79,13 +78,12 @@ bool MessageQuestion::Serialize(ByteBuffer &buffer)
 		return false;
 	
 	std::string encoded_hostname = __encode_hostname(m_hostname);
-	__update_host_to_fields(encoded_hostname);
 
 	int encoded_hostname_len = (int) encoded_hostname.size();
 
-	buffer.Write(this->Fields.Hostname, encoded_hostname_len + 1); // accounting for \0
-	buffer.Write(this->Fields.Type);
-	buffer.Write(this->Fields.Class);
+	buffer.Write((char *)encoded_hostname.c_str(), encoded_hostname_len + 1); // accounting for \0
+	buffer.Write(m_type);
+	buffer.Write(m_class);
 
 	return true;
 }
@@ -93,8 +91,8 @@ bool MessageQuestion::Serialize(ByteBuffer &buffer)
 void MessageQuestion::Dump()
 {
 	printf("Hostname: %s\n", m_hostname.c_str());
-	printf("Type: %hu\n", this->Fields.Type);
-	printf("Class: %hu\n", this->Fields.Class);
+	printf("Type: %hu\n", m_type);
+	printf("Class: %hu\n", m_class);
 }
 
 std::string MessageQuestion::__encode_hostname(const std::string &hostname)
@@ -167,13 +165,13 @@ std::string MessageQuestion::__decode_hostname(const std::string &hostname)
 
 void MessageQuestion::__update_host_to_fields(const std::string &hostname)
 {	
-	char *raw_hostname = (char*) hostname.c_str();
+	/*char *raw_hostname = (char*) hostname.c_str();
 	int hostname_len = (int)hostname.size();
 
 	this->Fields.Hostname = (unsigned char*) malloc(hostname_len + 1);
 
 	memcpy(this->Fields.Hostname, raw_hostname, hostname_len);
-	this->Fields.Hostname[hostname_len] = '\0';
+	this->Fields.Hostname[hostname_len] = '\0';&*/
 }
 
 } // namespace Dns
