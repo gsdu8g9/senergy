@@ -1,8 +1,31 @@
+/*******************************************************************************
+ *
+ *	 This file is part of Senergy.
+ *
+ *   Senergy is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
+ *
+ *   Senergy is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with Senergy. If not, see <http://www.gnu.org/licenses/>.
+ *
+ *   Swen Kooij (Photonios) <swenkooij@gmail.com> <photonios@outlook.com>
+ *
+ *******************************************************************************/
 
 #ifndef SY_DNS_MESSAGE_QUESTION_H
 #define SY_DNS_MESSAGE_QUESTION_H
 
 #include <senergy/bytebuffer.h>
+#include <senergy/convert.h>
+#include <senergy/dns/resource_record_types.h>
+#include <senergy/dns/resource_record_classes.h>
 #include <cstdio>
 #include <cctype>
 #include <string>
@@ -87,19 +110,57 @@ public:
 	bool Serialize(ByteBuffer &buffer);
 
 	/*!
-	 * \brief Dumps all fields from the 'Fields' member to the standard output, with
+	 * \brief Dumps all fields to the standard output, with
 	 *		  their values. In the following format:
 	 *
 	 * 		  [field name]: [field_value]\n
 	 */
 	void Dump();
 
-public:
+	/*!
+	 * \brief Gets the type of question this is, what actually is meant, is the type
+	 *		  or resource record that is expected when asking this question.
+	 *
+	 * \returns A value from the ResourceRecordType enumuration.
+	 */
+	ResourceRecordType GetType();
+
+	/*!
+	 * \brief Sets the type of question this is, what actually is meant is the type
+	 *		  of resource record that is expected when asking this question.
+	 *
+	 * \param type A value from the ResourceRecordType enumuration, the type to set.
+	 */
+	void SetType(ResourceRecordType type);
+
+	/*!
+	 * \brief Gets the class of this question, the class denotes the format of the question.
+	 *		  We only support IN (Internet) classes (1).
+	 *
+	 * \returns A value from the ResourceRecordClass enumuration.
+	 */
+	ResourceRecordClass GetClass();
+
+	/*!
+	 * \brief Set the class of this question, the class denotes the format of the question.
+	 *		  We only support IN (Internet) classes (1).
+	 *
+	 * \param clas A value from the ResourceRecordClass enumuration.
+	 */
+	void SetClass(ResourceRecordClass clas);
+
+private:
 	// Will encode the hostname currently set from 'www.google.com' to '3www6.google.com3'
 	std::string __encode_hostname(const std::string &hostname);
 
 	// Will decode the hostname currently set from '3www6.google.com3' to 'www.google.com'
 	std::string __decode_hostname(const std::string &hostname);
+
+	// Converts the specified value from host to network byte order
+	unsigned short __host_to_network_byte_order(unsigned short value);
+
+	// Converts the specified value from network to host byte order
+	unsigned short __network_to_host_byte_order(unsigned short value);
 
 private:
 	// Holds the host name that is currently set.

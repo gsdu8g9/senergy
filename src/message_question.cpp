@@ -20,7 +20,6 @@
  *******************************************************************************/
 
 #include <senergy/dns/message_question.h>
-#include <senergy/convert.h>
 
 namespace Senergy
 {
@@ -69,6 +68,9 @@ bool MessageQuestion::Deserialize(ByteBuffer &buffer)
 
 	m_type = buffer.ReadUnsignedShort();
 	m_class = buffer.ReadUnsignedShort();
+
+	m_type = __network_to_host_byte_order(m_type);
+	m_class = __network_to_host_byte_order(m_class);
 	return true;	
 }
 
@@ -82,8 +84,8 @@ bool MessageQuestion::Serialize(ByteBuffer &buffer)
 	int encoded_hostname_len = (int) encoded_hostname.size();
 
 	buffer.Write((char *)encoded_hostname.c_str(), encoded_hostname_len + 1); // accounting for \0
-	buffer.Write(m_type);
-	buffer.Write(m_class);
+	buffer.Write(__host_to_network_byte_order(m_type));
+	buffer.Write(__host_to_network_byte_order(m_class));
 
 	return true;
 }
@@ -161,6 +163,36 @@ std::string MessageQuestion::__decode_hostname(const std::string &hostname)
 	}
 
 	return new_hostname;
+}
+
+unsigned short MessageQuestion::__host_to_network_byte_order(unsigned short value)
+{
+	return htons(value);	
+}
+
+unsigned short MessageQuestion::__network_to_host_byte_order(unsigned short value)
+{
+	return ntohs(value);
+}
+
+ResourceRecordType MessageQuestion::GetType()
+{
+	return (ResourceRecordType) m_type;
+}
+
+void MessageQuestion::SetType(ResourceRecordType type)
+{
+	m_type = (unsigned short) type;
+}
+
+ResourceRecordClass MessageQuestion::GetClass()
+{
+	return (ResourceRecordClass) m_class;
+}
+
+void MessageQuestion::SetClass(ResourceRecordClass clas)
+{
+	m_class = (unsigned short) clas;
 }
 
 } // namespace Dns

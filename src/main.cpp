@@ -70,6 +70,8 @@ int main(int argc, char **argv)
 		{
 			std::string requested_hostname = dns_message.Questions[i]->GetHostname();
 			printf("Info: received question for %s\n", requested_hostname.c_str());
+			printf("Info: question is of type %hu\n", (unsigned short)dns_message.Questions[i]->GetType());
+			printf("Info: question has class %hu\n", (unsigned short)dns_message.Questions[i]->GetClass());
 		}
 
 		printf("\n");
