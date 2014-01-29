@@ -163,16 +163,5 @@ std::string MessageQuestion::__decode_hostname(const std::string &hostname)
 	return new_hostname;
 }
 
-void MessageQuestion::__update_host_to_fields(const std::string &hostname)
-{	
-	/*char *raw_hostname = (char*) hostname.c_str();
-	int hostname_len = (int)hostname.size();
-
-	this->Fields.Hostname = (unsigned char*) malloc(hostname_len + 1);
-
-	memcpy(this->Fields.Hostname, raw_hostname, hostname_len);
-	this->Fields.Hostname[hostname_len] = '\0';&*/
-}
-
 } // namespace Dns
 } // namespace Senergy

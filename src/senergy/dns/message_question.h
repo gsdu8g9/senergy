@@ -101,9 +101,6 @@ public:
 	// Will decode the hostname currently set from '3www6.google.com3' to 'www.google.com'
 	std::string __decode_hostname(const std::string &hostname);
 
-	// Updates the 'Hostname' field within the 'Fields' member with m_hostname.
-	void __update_host_to_fields(const std::string &hostname);
-
 private:
 	// Holds the host name that is currently set.
 	std::string 	m_hostname;
