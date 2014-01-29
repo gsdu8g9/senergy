@@ -25,6 +25,7 @@
 #include <senergy/dns/message_header.h>
 #include <senergy/dns/message_question.h>
 #include <senergy/bytebuffer.h>
+#include <algorithm>
 
 namespace Senergy
 {
@@ -54,6 +55,8 @@ public:
 	 *		 have at least 12 bytes left to read. Deserialization will fail
 	 *		 when there are less then 12 bytes left to read.
 	 *
+	 * \note This will overwrite all contents currently in this message.
+	 *
 	 * \note If the operation suceseeded, the buffer's position will have
 	 *		 at least advanced 12 bytes.
 	 *
@@ -74,13 +77,20 @@ public:
 	 */
 	bool Serialize(ByteBuffer &buffer);
 
-public:
 	/*!
- 	 * \brief Represents the DNS packet header. The first part of a DNS message.
-	 *	 	  See the MessageHeader class and the MessageHeaderFields structure for more information.
- 	 */
-	MessageHeader Header;
-	
+	 * \brief Resets this message so that all vectors/collections will be cleared,
+	 *		  and default values restored.
+	 */
+	void Reset();
+
+	/*!
+	 * \brief Gets the amount of questions this DNS message currently holds.
+	 * 
+	 * \returns The amount of questions this DNS message currently holds.
+	 */	
+	int GetQuestionCount();
+
+public:	
 	/*!
 	 * \brief Holds all the 'question messages' that are part of this DNS message.
 	 */

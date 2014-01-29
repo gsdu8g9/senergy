@@ -32,10 +32,14 @@ Message::Message()
 
 bool Message::Deserialize(ByteBuffer &buffer)
 {
-	if(!this->Header.Deserialize(buffer))
+	MessageHeader header;
+
+	if(!header.Deserialize(buffer))
 		return false;
 
-	for(int i = 0; i < this->Header.Fields.QuestionCount; ++i)
+	Reset();
+
+	for(int i = 0; i < header.Fields.QuestionCount; ++i)
 	{
 		MessageQuestionPtr new_message = MessageQuestionPtr(new MessageQuestion());
 		if(!new_message->Deserialize(buffer))
@@ -51,10 +55,14 @@ bool Message::Deserialize(ByteBuffer &buffer)
 
 bool Message::Serialize(ByteBuffer &buffer)
 {
-	if(!this->Header.Serialize(buffer))
+	MessageHeader header;
+	header.Fields.QuestionCount = (unsigned short) std::min(GetQuestionCount(), 256);
+
+	if(!header.Serialize(buffer))
 		return false;
 	
-	int question_count = (int) this->Questions.size();
+	int question_count = GetQuestionCount();
+
 	for(int i = 0; i < question_count; ++i)
 	{
 		MessageQuestionPtr current_question = this->Questions[i];
@@ -63,12 +71,20 @@ bool Message::Serialize(ByteBuffer &buffer)
 
 		if(!current_question->Serialize(buffer))
 			return false;
-
-		// \todo update question count in header
 	}
 
 	// \todo implement serialization of rest of packet
 	return true;
+}
+
+void Message::Reset()
+{
+	this->Questions.clear();
+}
+
+int Message::GetQuestionCount()
+{
+	return (int) this->Questions.size();
 }
 
 } // namespace Dns

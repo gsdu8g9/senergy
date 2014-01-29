@@ -57,7 +57,7 @@ int main(int argc, char **argv)
 			continue;
 		}
 
-		int question_count = (int)dns_message.Questions.size();
+		int question_count = dns_message.GetQuestionCount();
 
 		if(question_count <= 0)
 		{
