@@ -268,7 +268,7 @@ enum class ResourceRecordType : unsigned short
 
 	/*!
 	 * \brief NSEC.
-	 */+
+	 */
 	NSEC = 47,
 
 	/*!
