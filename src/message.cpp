@@ -38,8 +38,7 @@ bool Message::Deserialize(ByteBuffer &buffer)
 		return false;
 
 	Reset();
-
-	header.Dump();
+	m_header = header;
 
 	for(int i = 0; i < header.Fields.QuestionCount; ++i)
 	{
@@ -62,6 +61,8 @@ bool Message::Serialize(ByteBuffer &buffer)
 
 	if(!header.Serialize(buffer))
 		return false;
+
+	m_header = header;
 	
 	int question_count = GetQuestionCount();
 
@@ -91,7 +92,7 @@ int Message::GetQuestionCount()
 
 void Message::Dump()
 {
-	// \todo implement
+	m_header.Dump();
 }
 
 } // namespace Dns

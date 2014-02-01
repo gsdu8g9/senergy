@@ -102,6 +102,10 @@ public:
 	 * \brief Holds all the 'question messages' that are part of this DNS message.
 	 */
 	MessageQuestionPtrVector Questions;
+
+private:
+	// Holds the header we're going to write...
+	MessageHeader m_header;
 };
 
 } // namespace Dns
