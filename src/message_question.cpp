@@ -42,7 +42,7 @@ void MessageQuestion::SetHostname(const std::string &hostname)
 
 int MessageQuestion::GetSize()
 {
-	std::string encoded_hostname = __encode_hostname(m_hostname);
+	std::string encoded_hostname = Utils::EncodeHostname(m_hostname);
 	return 2 + (int)encoded_hostname.size() + 1;
 }
 
@@ -51,17 +51,8 @@ bool MessageQuestion::Deserialize(ByteBuffer &buffer)
 	if(buffer.GetRemainingSize() < 3)
 		return false;
 
-	m_hostname = "";
-	while(buffer.GetRemainingSize() > 0 && m_hostname.size() <= 256)
-	{
-		char current_character = buffer.ReadChar();
-		if(current_character == 0)
-			break;
-
-		m_hostname += current_character;
-	}
-
-	m_hostname = __decode_hostname(m_hostname);
+	m_hostname = buffer.ReadString(256);
+	m_hostname = Utils::DecodeHostname(m_hostname);
 	
 	if(buffer.GetRemainingSize() < 2)
 		return false;
@@ -69,8 +60,8 @@ bool MessageQuestion::Deserialize(ByteBuffer &buffer)
 	m_type = buffer.ReadUnsignedShort();
 	m_class = buffer.ReadUnsignedShort();
 
-	m_type = __network_to_host_byte_order(m_type);
-	m_class = __network_to_host_byte_order(m_class);
+	m_type = Utils::NetworkToHostByteOrder(m_type);
+	m_class = Utils::NetworkToHostByteOrder(m_class);
 	return true;	
 }
 
@@ -79,14 +70,14 @@ bool MessageQuestion::Serialize(ByteBuffer &buffer)
 	if(m_hostname.empty())
 		return false;
 	
-	std::string encoded_hostname = __encode_hostname(m_hostname);
+	std::string encoded_hostname = Utils::EncodeHostname(m_hostname);
 
 	int encoded_hostname_len = (int) encoded_hostname.size();
 
-	buffer.Write((char *)encoded_hostname.c_str(), encoded_hostname_len + 1); // accounting for \0
-	buffer.Write(__host_to_network_byte_order(m_type));
-	buffer.Write(__host_to_network_byte_order(m_class));
-
+	buffer.Write(encoded_hostname);
+	buffer.Write(Utils::HostToNetworkByteOrder(m_type));
+	buffer.Write(Utils::HostToNetworkByteOrder(m_class));
+	
 	return true;
 }
 
@@ -95,84 +86,6 @@ void MessageQuestion::Dump()
 	printf("Hostname: %s\n", m_hostname.c_str());
 	printf("Type: %hu\n", m_type);
 	printf("Class: %hu\n", m_class);
-}
-
-std::string MessageQuestion::__encode_hostname(const std::string &hostname)
-{
-	if(hostname.empty())
-		return "";
-
-	/* 
-		www.google.come -> 3www6google3com
-		where 3, 6, 3 are NOT ASCII but just decimals
-	 */
-
-	size_t hostname_len = hostname.size();
-
-	std::string new_hostname = " ";
-	new_hostname += hostname;
-
-	int previous_dot_pos = 0;
-	int segment_count = 0;
-
-	for(size_t i = 1; i < hostname_len + 1; ++i)
-	{
-		if(i == hostname_len) // last char
-			new_hostname[previous_dot_pos] = ++segment_count;
-
-		if(new_hostname[i] == '.')
-		{
-			new_hostname[previous_dot_pos] = segment_count;
-			previous_dot_pos = (int)i;
-			segment_count = 0;
-			continue;
-		}
-
-		new_hostname[i] = tolower(new_hostname[i]);
-		segment_count++;
-	}
-
-	return new_hostname;
-}
-
-std::string MessageQuestion::__decode_hostname(const std::string &hostname)
-{
-	if(hostname.empty())
-		return "";
-
-	/*
-	  	3www6google3com -> www.google.com
-		where 3, 6, 3 are NOT ASCII, but just decimals
-	 */
-	
-	int hostname_len = (int) hostname.size();
-	std::string new_hostname = "";
-
-	for(int i = 0; i < hostname_len; ++i)
-	{
-		int segment_length = hostname[i];
-
-		for(int y = 0; y < segment_length; ++y)
-		{
-			new_hostname += hostname[i + 1];
-			i++;
-		}
-
-		if(i != (hostname_len - 1)) // skip last
-			new_hostname += ".";
-	}
-
-	return new_hostname;
-}
-
-unsigned short MessageQuestion::__host_to_network_byte_order(unsigned short value)
-{
-	return htons(value);	
-}
-
-unsigned short MessageQuestion::__network_to_host_byte_order(unsigned short value)
-{
-	return ntohs(value);
 }
 
 ResourceRecordType MessageQuestion::GetType()

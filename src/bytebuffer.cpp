@@ -135,7 +135,7 @@ void ByteBuffer::Write(void *data, int size)
 
 void ByteBuffer::Write(const std::string &data)
 {
-	Write((char *)data.c_str(), (unsigned int)data.size());
+	Write((char *)data.c_str(), (unsigned int)data.size() + 1);
 }
 
 void ByteBuffer::Write(int value)
@@ -216,6 +216,22 @@ short ByteBuffer::ReadShort()
 unsigned short ByteBuffer::ReadUnsignedShort()
 {
 	return __read_native_type<unsigned short>();
+}
+
+std::string ByteBuffer::ReadString(unsigned int max_length /* = 0 */)
+{
+	std::string result_string = "";	
+
+	while(GetRemainingSize() > 0)
+	{
+		char current_character = ReadChar();
+		if(current_character == 0 || result_string.size() >= max_length)
+			break;
+
+		result_string += current_character;
+	}
+
+	return result_string;
 }
 
 std::string ByteBuffer::ReadAll()

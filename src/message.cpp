@@ -39,6 +39,8 @@ bool Message::Deserialize(ByteBuffer &buffer)
 
 	Reset();
 
+	header.Dump();
+
 	for(int i = 0; i < header.Fields.QuestionCount; ++i)
 	{
 		MessageQuestionPtr new_message = MessageQuestionPtr(new MessageQuestion());

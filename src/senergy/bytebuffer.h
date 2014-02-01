@@ -187,6 +187,7 @@ public:
 	 *		  the specified string does not fit into the buffer.
 	 *
 	 * \note Increases the position by the size of the specified string.
+	 * \note Accounts for the string termination character (\0).
 	 *
 	 * \param data The string to write to the buffer.
 	 */
@@ -201,10 +202,55 @@ public:
 	 * \param value The value to write to the buffer.
 	 */
 	void Write(int value);
+
+	/*!
+	 * \brief Writes the specified value to the buffer. The buffer is automaticlly resized when
+	 *		  the specified value does not fit into the buffer.
+	 *
+	 * \note Increases the position by the size of the specified value.
+	 *
+	 * \param value The value to write to the buffer.
+	 */
 	void Write(unsigned int value);
+
+	/*!
+	 * \brief Writes the specified value to the buffer. The buffer is automaticlly resized when
+	 *		  the specified value does not fit into the buffer.
+	 *
+	 * \note Increases the position by the size of the specified value.
+	 *
+	 * \param value The value to write to the buffer.
+	 */
 	void Write(char value);
+
+	/*!
+	 * \brief Writes the specified value to the buffer. The buffer is automaticlly resized when
+	 *		  the specified value does not fit into the buffer.
+	 *
+	 * \note Increases the position by the size of the specified value.
+	 *
+	 * \param value The value to write to the buffer.
+	 */
 	void Write(unsigned char value);
+
+	/*!
+	 * \brief Writes the specified value to the buffer. The buffer is automaticlly resized when
+	 *		  the specified value does not fit into the buffer.
+	 *
+	 * \note Increases the position by the size of the specified value.
+	 *
+	 * \param value The value to write to the buffer.
+	 */
 	void Write(short value);
+
+	/*!
+	 * \brief Writes the specified value to the buffer. The buffer is automaticlly resized when
+	 *		  the specified value does not fit into the buffer.
+	 *
+	 * \note Increases the position by the size of the specified value.
+	 *
+	 * \param value The value to write to the buffer.
+	 */
 	void Write(unsigned short value);
 
 	/*!
@@ -231,7 +277,32 @@ public:
 	 */
 	bool Read(char *buffer, unsigned int size); 
 
+	/*!
+	 * \brief Reads all remaining bytes from the buffer.
+	 *
+	 * \param buffer   The buffer to write the acquired data to, make
+	 *				   sure the buffer is at least the size of
+	 *				   of the specified maximum size.
+	 * \param max_size The maximum amount of bytes to copy into	the specified
+	 *				   buffer, the size of the specified buffer.
+	 *
+	 * \returns A boolean indicating whether writing the remainging 
+	 *			bytes to the specified buffer was a success.
+	 */
 	bool ReadRemaining(char *buffer, int max_size);
+
+	/*!
+	 * \brief Reads all remaining bytes from the buffer.
+	 *
+	 * \param buffer   The buffer to write the acquired data to, make
+	 *				   sure the buffer is at least the size of
+	 *				   of the specified maximum size.
+	 * \param max_size The maximum amount of bytes to copy into	the specified
+	 *				   buffer, the size of the specified buffer.
+	 *
+	 * \returns A boolean indicating whether writing the remainging 
+	 *			bytes to the specified buffer was a success.
+	 */
 	bool ReadRemaining(char *buffer, unsigned int max_size);
 	
 	/*!
@@ -282,6 +353,20 @@ public:
 	 *			when reading failed.
   	 */
 	unsigned short ReadUnsignedShort();
+	
+	/*!
+	 * \brief Attempts to read a string for the buffer until a string termination character, or
+	 *		  the end of the buffer is encountered.
+	 *
+	 * \param max_length Specifies the maximum length of the string being returned. Specifying
+	 *					 zero disables this functionality.
+	 *
+	 * \returns The string that was read, if something went wrong, or the end of the buffer was
+	 *		    reached, everything that was read so far will be returned. If the buffer
+	 *			is empty, or there are no more bytes left to read, an empty string will
+	 *			be returned.
+ 	 */
+	std::string ReadString(unsigned int max_length = 0);
 	
 	/*!
  	 * \brief Reads the contents of the buffer from start to end and returns the contents

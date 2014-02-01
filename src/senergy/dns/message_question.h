@@ -26,6 +26,7 @@
 #include <senergy/convert.h>
 #include <senergy/dns/resource_record_types.h>
 #include <senergy/dns/resource_record_classes.h>
+#include <senergy/dns/utils.h>
 #include <cstdio>
 #include <cctype>
 #include <string>
@@ -148,19 +149,6 @@ public:
 	 * \param clas A value from the ResourceRecordClass enumuration.
 	 */
 	void SetClass(ResourceRecordClass clas);
-
-private:
-	// Will encode the hostname currently set from 'www.google.com' to '3www6.google.com3'
-	std::string __encode_hostname(const std::string &hostname);
-
-	// Will decode the hostname currently set from '3www6.google.com3' to 'www.google.com'
-	std::string __decode_hostname(const std::string &hostname);
-
-	// Converts the specified value from host to network byte order
-	unsigned short __host_to_network_byte_order(unsigned short value);
-
-	// Converts the specified value from network to host byte order
-	unsigned short __network_to_host_byte_order(unsigned short value);
 
 private:
 	// Holds the host name that is currently set.
