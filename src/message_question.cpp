@@ -26,8 +26,23 @@ namespace Senergy
 namespace Dns
 {
 
-MessageQuestion::MessageQuestion()
+MessageQuestion::MessageQuestion() :
+	m_hostname 	(""),
+	m_type	  	((unsigned short)ResourceRecordType::A),
+	m_class		((unsigned short)ResourceRecordClass::Internet)
 {
+}
+
+MessageQuestion::MessageQuestion(const std::string &hostname, ResourceRecordType type, ResourceRecordClass clas) :
+	m_hostname 	(hostname),
+	m_type		((unsigned short)type),
+	m_class		((unsigned short)clas)
+{
+}
+
+MessageQuestionPtr MessageQuestion::Create(const std::string &hostname, ResourceRecordType type, ResourceRecordClass clas)
+{
+	return MessageQuestionPtr(new MessageQuestion(hostname, type, clas));
 }
 
 std::string MessageQuestion::GetHostname()

@@ -89,5 +89,10 @@ int Message::GetQuestionCount()
 	return (int) this->Questions.size();
 }
 
+void Message::Dump()
+{
+	// \todo implement
+}
+
 } // namespace Dns
 } // namespace Senergy

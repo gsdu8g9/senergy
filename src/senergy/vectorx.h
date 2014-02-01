@@ -19,23 +19,51 @@
  *
  *******************************************************************************/
 
-#ifndef SENERY_H
-#define SENERY_H
+#ifndef SY_VECTOR_X_H
+#define SY_VECTOR_X_H
 
-#include <senergy/socket.h>
-#include <senergy/bytebuffer.h>
-#include <senergy/convert.h>
-#include <senergy/print.h>
-#include <senergy/dns/resource_record_types.h>
-#include <senergy/dns/resource_record_classes.h>
-#include <senergy/dns/utils.h>
-#include <senergy/vectorx.h>
-#include <senergy/types.h>
-#include <senergy/dns/message_header.h>
-#include <senergy/dns/message_question.h>
-#include <senergy/dns/resource_record.h>
-#include <senergy/dns/message.h>
-#include <senergy/dns/requester.h>
+#include <vector>
 
-#endif // SENERY_H
+namespace Senergy
+{
 
+/*!
+ * \brief An improvemend upon the standard vector (std::vector), but it's interface is more like
+ *		  the rest of Senergy (naming). All normal functionality is still available, and switching
+ *		  between VectorX and std::vector should be painless.
+ *
+ * \typeparam T The type that the vector will contain.
+ *
+ * \author Swen Kooij (Photonios)
+ */
+template<class T>
+class VectorX : public std::vector<T>
+{
+public:
+	/*!
+	 * \brief Initializes a new, empty vector.
+	 */
+	VectorX()
+	{
+	}
+
+	/*!
+ 	 * \brief Adds the specified item to the vector.
+	 *
+	 * \param value The object/value to add to the vector.
+ 	 */
+	void Add(T value)
+	{
+		BaseClass::push_back(value);
+	}
+
+private:	
+	/*!
+ 	 * \brief Simple typedef to access the base class.
+	 */
+	typedef std::vector<T> BaseClass;
+};
+
+} // namespace Senergy
+
+#endif // SY_VECTOR_X_H

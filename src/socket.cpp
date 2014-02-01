@@ -88,7 +88,10 @@ bool Socket::SetTimeout(unsigned int milliseconds)
 bool Socket::Connect(const std::string &remote_address, unsigned int remote_port)
 {
 	if(IsConnected())
+	{
+		printf("connection\n");
 		return false;
+	}
 		
 	m_remote_host 		= remote_address;
 	m_remote_port 		= remote_port;
@@ -96,12 +99,20 @@ bool Socket::Connect(const std::string &remote_address, unsigned int remote_port
 	m_socket_role = SocketRole::Client;
 	
 	if(!__set_address_struct())
+	{
+		printf("address\n");
 		return false;
+	}
 		
 	if(!__create_native_socket())
+	{
+		printf("create\n");
 		return false;
+	}
 		
 	m_connected = __native_connect();
+	if(!m_connected)
+		printf("m_connected\n");
 	return m_connected;
 }
 
@@ -178,6 +189,11 @@ int Socket::Send(const std::string &data, size_t data_size)
 int	Socket::Send(const std::string &data)
 {
 	return Send(data, data.size());
+}
+
+int	Socket::Send(ByteBuffer &send_buffer)
+{	
+	return Send((const char *)send_buffer.m_data, (size_t)send_buffer.m_current_size);
 }
 
 int	Socket::Receive(const char *receive_buffer, size_t size)
@@ -321,19 +337,22 @@ bool Socket::__set_address_struct()
 	m_remote_address.sin_family = AF_INET;
 	m_remote_address.sin_port = htons(m_remote_port);
 
+	int result = 0;
+
 	switch(m_socket_role)
 	{
 		case SocketRole::Client:
 			__enfore_timeout();
+
+			struct addrinfo *host_info;
+			result = getaddrinfo(m_remote_host.c_str(), Convert::ToString(m_remote_port).c_str(), NULL, &host_info);
 		
-			struct hostent *host_info;
-			host_info = gethostbyname(m_remote_host.c_str());
 			__update_last_error();
 
-			if(host_info == NULL)
+			if(host_info == NULL || result < 0)
 				return false;
-			
-			m_remote_address.sin_addr = *(struct in_addr *) host_info->h_addr;
+
+			m_remote_address = *(struct sockaddr_in *) host_info->ai_addr;
 		break;
 	
 		case SocketRole::Server:
@@ -349,6 +368,13 @@ bool Socket::__set_address_struct()
 bool Socket::__native_connect()
 {
 	__enfore_timeout();
+
+	if(m_protocol != SocketProtocol::TCP)
+	{
+		__update_last_error();
+		__update_remote_host();
+		return true;
+	}
 	
 	int connection_result = connect(m_native_socket, (struct sockaddr *)&m_remote_address, sizeof(m_remote_address));
 	__update_last_error();

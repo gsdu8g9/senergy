@@ -27,6 +27,7 @@
 #include <vector>
 #include <memory>
 #include <senergy/bytebuffer.h>
+#include <senergy/convert.h>
 
 #ifdef _WIN32
 	#include <windows.h>
@@ -309,6 +310,19 @@ public:
 	 *			If the operation failed, zero will be returned.
 	 */
 	int				Send(const std::string &data);
+
+	/*!
+	 * \brief Sends the contents of the specified buffer. The entire buffer will be transmitted,
+	 *		  regardless of the current position of the buffer.
+	 *
+ 	 * \note This operation will fail when there is no active connection with the remote host.
+	 *
+	 * \param send_buffer The buffer to read the data to transmit from.
+ 	 *
+	 * \returns	The amount of bytes that were succesfuly transmitted to the remote host.
+	 *			If the operation failed, zero will be returned.
+	 */
+	int				Send(ByteBuffer &send_buffer);
 	
 	/*!
  	 * \brief Attempts to receive the specified amount of data into the specified buffer.

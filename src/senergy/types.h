@@ -19,23 +19,21 @@
  *
  *******************************************************************************/
 
-#ifndef SENERY_H
-#define SENERY_H
+#ifndef SY_TYPES_H
+#define SY_TYPES_H
 
-#include <senergy/socket.h>
-#include <senergy/bytebuffer.h>
-#include <senergy/convert.h>
-#include <senergy/print.h>
-#include <senergy/dns/resource_record_types.h>
-#include <senergy/dns/resource_record_classes.h>
-#include <senergy/dns/utils.h>
+#include <string>
+#include <vector>
 #include <senergy/vectorx.h>
-#include <senergy/types.h>
-#include <senergy/dns/message_header.h>
-#include <senergy/dns/message_question.h>
-#include <senergy/dns/resource_record.h>
-#include <senergy/dns/message.h>
-#include <senergy/dns/requester.h>
 
-#endif // SENERY_H
+namespace Senergy
+{
 
+/*!
+ * \brief A std::vector of std::string objects.
+ */
+typedef VectorX<std::string> StringVector;
+
+} // namespace Senergy
+
+#endif // SY_TYPES_H

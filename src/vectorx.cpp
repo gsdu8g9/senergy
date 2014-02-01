@@ -19,23 +19,6 @@
  *
  *******************************************************************************/
 
-#ifndef SENERY_H
-#define SENERY_H
-
-#include <senergy/socket.h>
-#include <senergy/bytebuffer.h>
-#include <senergy/convert.h>
-#include <senergy/print.h>
-#include <senergy/dns/resource_record_types.h>
-#include <senergy/dns/resource_record_classes.h>
-#include <senergy/dns/utils.h>
+// Implementation is in the header file because of templates.
 #include <senergy/vectorx.h>
-#include <senergy/types.h>
-#include <senergy/dns/message_header.h>
-#include <senergy/dns/message_question.h>
-#include <senergy/dns/resource_record.h>
-#include <senergy/dns/message.h>
-#include <senergy/dns/requester.h>
-
-#endif // SENERY_H
 

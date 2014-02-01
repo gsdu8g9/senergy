@@ -287,6 +287,9 @@ private:
 
 	// Converts all fields from network to host byte order
 	void __network_to_host_byte_order();
+
+	// Prepares all fields for serialization by setting the correct values
+	void __prepare_serialization();
 };
 
 } // namespace Dns

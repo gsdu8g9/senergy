@@ -39,6 +39,12 @@ namespace Senergy
  */
 class ByteBuffer
 {
+
+// HUGE VIOLATION OF DESIGN -> But it's faster because the socket 
+//							   can directly access the underlying buffer,
+// 							   thus preventing memory allocations and copies.
+friend class Socket;
+
 public:
 	/*! 
 	 * \brief Initializes a new instance of the ByteBuffer class. The intial buffer size is 0 bytes.

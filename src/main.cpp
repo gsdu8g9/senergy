@@ -24,7 +24,11 @@
 
 int main(int argc, char **argv)
 {	
-	Senergy::Socket socket(Senergy::Socket::SocketProtocol::UDP);
+	Senergy::Dns::Requester request("8.8.8.8");
+	Senergy::StringVector result = request.Lookup(Senergy::Dns::ResourceRecordType::A, "www.google.com");	
+	return 0;
+
+	/*Senergy::Socket socket(Senergy::Socket::SocketProtocol::UDP);
 	socket.SetTimeout(2000);
 	
 	if(!socket.Listen(53))
@@ -75,7 +79,7 @@ int main(int argc, char **argv)
 		}
 
 		printf("\n");
-	}
+	}*/
 
 	return 0;
 }

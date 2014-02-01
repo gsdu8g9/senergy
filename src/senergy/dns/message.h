@@ -25,6 +25,7 @@
 #include <senergy/dns/message_header.h>
 #include <senergy/dns/message_question.h>
 #include <senergy/bytebuffer.h>
+#include <senergy/vectorx.h>
 #include <algorithm>
 
 namespace Senergy
@@ -89,6 +90,12 @@ public:
 	 * \returns The amount of questions this DNS message currently holds.
 	 */	
 	int GetQuestionCount();
+	
+	/*!
+ 	 * \brief Dumps all information currently in this message to the standard
+	 *		  output.
+	 */
+	void Dump();
 
 public:	
 	/*!

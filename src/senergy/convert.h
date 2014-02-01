@@ -50,6 +50,15 @@ public:
 	static std::string ToString(int value);
 
 	/*!
+  	 * \brief Converts the specified unsigned integer value to a string.
+	 *
+	 * \param value The unsigned integer value to convert to a string.
+	 *
+	 * \returns The specified unsigned integer value as a string.
+ 	 */
+	static std::string ToString(unsigned int value);
+
+	/*!
   	 * \brief Converts the specified integer value to a character.
 	 *
 	 * \param value The integer value to convert to a character.

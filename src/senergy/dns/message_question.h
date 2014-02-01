@@ -24,6 +24,7 @@
 
 #include <senergy/bytebuffer.h>
 #include <senergy/convert.h>
+#include <senergy/vectorx.h>
 #include <senergy/dns/resource_record_types.h>
 #include <senergy/dns/resource_record_classes.h>
 #include <senergy/dns/utils.h>
@@ -38,6 +39,9 @@
 #else
 	#include <arpa/inet.h>
 #endif
+
+#define MessageQuestionPtr std::shared_ptr<MessageQuestion>
+#define MessageQuestionPtrVector VectorX<MessageQuestionPtr>
 
 namespace Senergy
 {
@@ -57,6 +61,26 @@ public:
 	 * \brief Initializes a new instance of the MessageQuestion class with default values.
 	 */
 	MessageQuestion();
+
+	/*!
+	 * \brief Initializes a new instance of the MessageQuestion class with the specifed
+	 *		  hostname, and optionally the specified resource record type and class.
+	 *
+	 * \param hostname The hostname/domain name that the question is being asked for.
+	 * \param type	   The type of record that is expected in the reply.
+	 * \param clas	   The class of the record that is expected in the reply.
+	 */
+	MessageQuestion(const std::string &hostname, ResourceRecordType type = ResourceRecordType::A, ResourceRecordClass clas = ResourceRecordClass::Internet);
+
+	/*!
+	 * \brief Initializes a new instance of the MessageQuestion class as a shared pointer with the specifed
+	 *		  hostname, and optionally the specified resource record type and class.
+	 *
+	 * \param hostname The hostname/domain name that the question is being asked for.
+	 * \param type	   The type of record that is expected in the reply.
+	 * \param clas	   The class of the record that is expected in the reply.
+	 */
+	static MessageQuestionPtr Create(const std::string &hostname, ResourceRecordType type = ResourceRecordType::A, ResourceRecordClass clas = ResourceRecordClass::Internet);
 
 	/*!
 	 * \brief Gets the host name from the fields.
@@ -160,16 +184,6 @@ private:
 	// Holds the question class
 	unsigned short 	m_class;
 };
-
-/*!
- * \brief Simple typedef for a shared pointer to a MessageQuestion.
- */
-typedef std::shared_ptr<MessageQuestion> MessageQuestionPtr;
-
-/*!
- * \brief Simple typedef for a vector of MessageQuestion smart pointers.
- */
-typedef std::vector<MessageQuestionPtr> MessageQuestionPtrVector;
 
 } // namespace Dns
 } // namespace Senergy

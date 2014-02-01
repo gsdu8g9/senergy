@@ -58,11 +58,11 @@ bool MessageHeader::Serialize(ByteBuffer &buffer)
 	int header_size = GetSize();
 	buffer.Reserve(header_size);
 
+	__prepare_serialization();
 	__host_to_network_byte_order();
 
 	buffer.Write((char *)&this->Fields, header_size);
 
-	// reverse
 	__host_to_network_byte_order();
 	return true;
 }
@@ -83,6 +83,21 @@ void MessageHeader::__network_to_host_byte_order()
 	this->Fields.AnswerCount 		= ntohs(this->Fields.AnswerCount);
 	this->Fields.NameServerCount 	= ntohs(this->Fields.NameServerCount);
 	this->Fields.AdditionalCount 	= ntohs(this->Fields.AdditionalCount);
+}
+
+void MessageHeader::__prepare_serialization()
+{
+	this->Fields.Id 				= 1337; // \todo fix this, make random id factory here
+	this->Fields.IsResponse 		= 0;
+	this->Fields.Opcode 			= 0;
+	this->Fields.ResponseCode 		= 0;
+	this->Fields.Truncation 		= 0;
+	this->Fields.RecursionAvailable = 0;
+	this->Fields.Reserved 			= 0;
+	this->Fields.AuthenticatedData 	= 0;
+	this->Fields.CheckingDisabled 	= 0;
+	this->Fields.Authoritative 		= 1;
+	this->Fields.RecursionDesired 	= 1;
 }
 
 void MessageHeader::Dump()
