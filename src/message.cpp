@@ -32,15 +32,12 @@ Message::Message()
 
 bool Message::Deserialize(ByteBuffer &buffer)
 {
-	MessageHeader header;
-
-	if(!header.Deserialize(buffer))
+	if(!m_header.Deserialize(buffer))
 		return false;
 
 	Reset();
-	m_header = header;
 
-	for(int i = 0; i < header.Fields.QuestionCount; ++i)
+	for(int i = 0; i < m_header.Fields.QuestionCount; ++i)
 	{
 		MessageQuestionPtr new_message = MessageQuestionPtr(new MessageQuestion());
 		if(!new_message->Deserialize(buffer))
@@ -56,13 +53,10 @@ bool Message::Deserialize(ByteBuffer &buffer)
 
 bool Message::Serialize(ByteBuffer &buffer)
 {
-	MessageHeader header;
-	header.Fields.QuestionCount = (unsigned short) std::min(GetQuestionCount(), 256);
+	m_header.Fields.QuestionCount = (unsigned short) std::min(GetQuestionCount(), 256);
 
-	if(!header.Serialize(buffer))
+	if(!m_header.Serialize(buffer))
 		return false;
-
-	m_header = header;
 	
 	int question_count = GetQuestionCount();
 

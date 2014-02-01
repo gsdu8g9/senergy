@@ -87,7 +87,7 @@ void MessageHeader::__network_to_host_byte_order()
 
 void MessageHeader::__prepare_serialization()
 {
-	this->Fields.Id 				= 1337; // \todo fix this, make random id factory here
+	this->Fields.Id 				= IdFactory::GenerateId();
 	this->Fields.IsResponse 		= 0;
 	this->Fields.Opcode 			= 0;
 	this->Fields.ResponseCode 		= 0;

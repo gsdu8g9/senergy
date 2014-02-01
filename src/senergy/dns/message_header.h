@@ -23,6 +23,8 @@
 #define SY_DNS_MESSAGE_HEADER_H
 
 #include <senergy/bytebuffer.h>
+#include <senergy/dns/id_factory.h>
+
 #include <cstdio>
 
 #ifdef _WIN32
