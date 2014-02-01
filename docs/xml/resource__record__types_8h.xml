@@ -2,48 +2,68 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
   <compounddef id="resource__record__types_8h" kind="file">
     <compoundname>resource_record_types.h</compoundname>
+    <includedby refid="resource__record__types_8cpp" local="no">src/resource_record_types.cpp</includedby>
     <includedby refid="message__question_8h" local="no">src/senergy/dns/message_question.h</includedby>
+    <includedby refid="resource__record_8h" local="no">src/senergy/dns/resource_record.h</includedby>
     <invincdepgraph>
-      <node id="213">
+      <node id="264">
+        <label>src/resource_record.cpp</label>
+        <link refid="resource__record_8cpp"/>
+      </node>
+      <node id="258">
         <label>src/message_question.cpp</label>
         <link refid="message__question_8cpp"/>
       </node>
-      <node id="217">
+      <node id="262">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="215">
+      <node id="260">
         <label>src/message.cpp</label>
         <link refid="message_8cpp"/>
       </node>
-      <node id="214">
+      <node id="259">
         <label>src/senergy/dns/message.h</label>
         <link refid="message_8h"/>
-        <childnode refid="215" relation="include">
+        <childnode refid="260" relation="include">
         </childnode>
-        <childnode refid="216" relation="include">
+        <childnode refid="261" relation="include">
         </childnode>
       </node>
-      <node id="216">
+      <node id="263">
+        <label>src/senergy/dns/resource_record.h</label>
+        <link refid="resource__record_8h"/>
+        <childnode refid="264" relation="include">
+        </childnode>
+      </node>
+      <node id="261">
         <label>src/senergy/senergy.h</label>
         <link refid="senergy_8h"/>
-        <childnode refid="217" relation="include">
+        <childnode refid="262" relation="include">
         </childnode>
       </node>
-      <node id="212">
+      <node id="256">
+        <label>src/resource_record_types.cpp</label>
+        <link refid="resource__record__types_8cpp"/>
+      </node>
+      <node id="257">
         <label>src/senergy/dns/message_question.h</label>
         <link refid="message__question_8h"/>
-        <childnode refid="213" relation="include">
+        <childnode refid="258" relation="include">
         </childnode>
-        <childnode refid="214" relation="include">
+        <childnode refid="259" relation="include">
         </childnode>
-        <childnode refid="216" relation="include">
+        <childnode refid="261" relation="include">
         </childnode>
       </node>
-      <node id="211">
+      <node id="255">
         <label>src/senergy/dns/resource_record_types.h</label>
         <link refid="resource_record_types.h"/>
-        <childnode refid="212" relation="include">
+        <childnode refid="256" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -176,7 +196,7 @@
 <codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a2b356a14948fa1c2a2ef3c14355c83ea" kindref="member">IPSECKEY</ref><sp/>=<sp/>45,</highlight></codeline>
 <codeline lineno="263"><highlight class="normal"></highlight></codeline>
 <codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0acedf979874cc1ac262a7a836f504a9a3" kindref="member">RRSIG</ref><sp/>=<sp/>46,</highlight></codeline>
-<codeline lineno="268"><highlight class="normal">+</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
 <codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a6ac9d5292ffcb6323409509895e59c6a" kindref="member">NSEC</ref><sp/>=<sp/>47,</highlight></codeline>
 <codeline lineno="273"><highlight class="normal"></highlight></codeline>
 <codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a548deb43a9afe4abcde34a605eb44700" kindref="member">DNSKEY</ref><sp/>=<sp/>48,</highlight></codeline>

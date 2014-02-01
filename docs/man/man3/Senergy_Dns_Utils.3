@@ -1,0 +1,248 @@
+.TH "Senergy::Dns::Utils" 3 "Sat Feb 1 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::Dns::Utils \- 
+.PP
+Contains various utilities related to the DNS protocol\&. This are mostly functions that are used throughout the application\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <utils\&.h>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static std::string \fBEncodeHostname\fP (const std::string &hostname)"
+.br
+.RI "\fIEncodes the specified hostname and returns the result\&. Encoding a hostname means, replacing all dots, with single bytes, that tell how many characters one needs to count further to get to the next dot\&. \fP"
+.ti -1c
+.RI "static std::string \fBDecodeHostname\fP (const std::string &hostname)"
+.br
+.RI "\fIDecodes the specified hostname and returns the result, reverse the result of encoding a hostname\&. Encoding a hostname means, replacing all dots, with single bytes, that tell how many characters one needs to count further to get to the next dot\&. \fP"
+.ti -1c
+.RI "static unsigned short \fBHostToNetworkByteOrder\fP (unsigned short value)"
+.br
+.RI "\fIConverts the specified unsigned short value from host to network byte order\&. \fP"
+.ti -1c
+.RI "static unsigned short \fBNetworkToHostByteOrder\fP (unsigned short value)"
+.br
+.RI "\fIConverts the specified unsigned short value from network to host byte order\&. \fP"
+.ti -1c
+.RI "static unsigned char \fBHostToNetworkByteOrder\fP (unsigned char value)"
+.br
+.RI "\fIConverts the specified unsigned character value from host to network byte order\&. \fP"
+.ti -1c
+.RI "static unsigned char \fBNetworkToHostByteOrder\fP (unsigned char value)"
+.br
+.RI "\fIConverts the specified unsigned character value from network to host byte order\&. \fP"
+.ti -1c
+.RI "static unsigned int \fBHostToNetworkByteOrder\fP (unsigned int value)"
+.br
+.RI "\fIConverts the specified unsigned integer value from host to network byte order\&. \fP"
+.ti -1c
+.RI "static unsigned int \fBNetworkToHostByteOrder\fP (unsigned int value)"
+.br
+.RI "\fIConverts the specified unsigned integer value from network to host byte order\&. \fP"
+.ti -1c
+.RI "static bool \fBIsDomainPointer\fP (const std::string &hostname)"
+.br
+.RI "\fIDetermines whether the specified hostname/domain name is a pointer to an earlier occurence of the same domain name\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains various utilities related to the DNS protocol\&. This are mostly functions that are used throughout the application\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.PP
+Definition at line 43 of file utils\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "std::string Senergy::Dns::Utils::DecodeHostname (const std::string &hostname)\fC [static]\fP"
+
+.PP
+Decodes the specified hostname and returns the result, reverse the result of encoding a hostname\&. Encoding a hostname means, replacing all dots, with single bytes, that tell how many characters one needs to count further to get to the next dot\&. www\&.google\&.com -> 3www6google3com
+.PP
+The dots that are being replaced with numbers are NOT ASCII\&. They are just single bytes\&. So, 3, is really 0x03\&.
+.PP
+So, this function reverse the above example:
+.PP
+3www6google3com -> www\&.google\&.com
+.PP
+\fBParameters:\fP
+.RS 4
+\fIhostname\fP The hostname to decode\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The decoded hostname, if the specified hostname was empty, an empty string is returned\&. 
+.RE
+.PP
+
+.PP
+Definition at line 67 of file utils\&.cpp\&.
+.SS "std::string Senergy::Dns::Utils::EncodeHostname (const std::string &hostname)\fC [static]\fP"
+
+.PP
+Encodes the specified hostname and returns the result\&. Encoding a hostname means, replacing all dots, with single bytes, that tell how many characters one needs to count further to get to the next dot\&. www\&.google\&.com -> 3www6google3com
+.PP
+The dots that are being replaced with numbers are NOT ASCII\&. They are just single bytes\&. So, 3, is really 0x03\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIhostname\fP The hostname to encode\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The encoded hostname\&. If the specified hostname was empty, an empty string is returned\&. 
+.RE
+.PP
+
+.PP
+Definition at line 29 of file utils\&.cpp\&.
+.SS "unsigned short Senergy::Dns::Utils::HostToNetworkByteOrder (unsigned shortvalue)\fC [static]\fP"
+
+.PP
+Converts the specified unsigned short value from host to network byte order\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The value to convert from host to network byte order\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The input value, in network byte order\&. 
+.RE
+.PP
+
+.PP
+Definition at line 97 of file utils\&.cpp\&.
+.SS "unsigned char Senergy::Dns::Utils::HostToNetworkByteOrder (unsigned charvalue)\fC [static]\fP"
+
+.PP
+Converts the specified unsigned character value from host to network byte order\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The value to convert from host to network byte order\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The input value, in network byte order\&. 
+.RE
+.PP
+
+.PP
+Definition at line 107 of file utils\&.cpp\&.
+.SS "unsigned int Senergy::Dns::Utils::HostToNetworkByteOrder (unsigned intvalue)\fC [static]\fP"
+
+.PP
+Converts the specified unsigned integer value from host to network byte order\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The value to convert from host to network byte order\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The input value, in network byte order\&. 
+.RE
+.PP
+
+.PP
+Definition at line 117 of file utils\&.cpp\&.
+.SS "bool Senergy::Dns::Utils::IsDomainPointer (const std::string &hostname)\fC [static]\fP"
+
+.PP
+Determines whether the specified hostname/domain name is a pointer to an earlier occurence of the same domain name\&. If it's a pointer, the first two bytes will be 0x01\&.
+.PP
+\fBSee Also:\fP
+.RS 4
+Section 4\&.1\&.4 of RFC-1025 (\fBMessage\fP compression)\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIhostname\fP The hostname/domain name to check if it's a pointer\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether the specified hostname/domain name is a pointer\&. True is returned when it is a pointer and false is returned when it is not\&. 
+.RE
+.PP
+
+.PP
+Definition at line 127 of file utils\&.cpp\&.
+.SS "unsigned short Senergy::Dns::Utils::NetworkToHostByteOrder (unsigned shortvalue)\fC [static]\fP"
+
+.PP
+Converts the specified unsigned short value from network to host byte order\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The value to convert from network to host byte order\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The input value, in host byte order\&. 
+.RE
+.PP
+
+.PP
+Definition at line 102 of file utils\&.cpp\&.
+.SS "unsigned char Senergy::Dns::Utils::NetworkToHostByteOrder (unsigned charvalue)\fC [static]\fP"
+
+.PP
+Converts the specified unsigned character value from network to host byte order\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The value to convert from network to host byte order\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The input value, in host byte order\&. 
+.RE
+.PP
+
+.PP
+Definition at line 112 of file utils\&.cpp\&.
+.SS "unsigned int Senergy::Dns::Utils::NetworkToHostByteOrder (unsigned intvalue)\fC [static]\fP"
+
+.PP
+Converts the specified unsigned integer value from network to host byte order\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The value to convert from network to host byte order\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The input value, in host byte order\&. 
+.RE
+.PP
+
+.PP
+Definition at line 122 of file utils\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

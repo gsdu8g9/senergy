@@ -1,0 +1,278 @@
+\hypertarget{class_senergy_1_1_dns_1_1_utils}{\section{Senergy\-:\-:Dns\-:\-:Utils Class Reference}
+\label{class_senergy_1_1_dns_1_1_utils}\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}}
+}
+
+
+Contains various utilities related to the D\-N\-S protocol. This are mostly functions that are used throughout the application.  
+
+
+
+
+{\ttfamily \#include $<$utils.\-h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::string \hyperlink{class_senergy_1_1_dns_1_1_utils_a68f1ebf9810ecb225a4f73c4200778bf}{Encode\-Hostname} (const std\-::string \&hostname)
+\begin{DoxyCompactList}\small\item\em Encodes the specified hostname and returns the result. Encoding a hostname means, replacing all dots, with single bytes, that tell how many characters one needs to count further to get to the next dot. \end{DoxyCompactList}\item 
+static std\-::string \hyperlink{class_senergy_1_1_dns_1_1_utils_ad621e66ca0463aaa21c9b74b489f09f3}{Decode\-Hostname} (const std\-::string \&hostname)
+\begin{DoxyCompactList}\small\item\em Decodes the specified hostname and returns the result, reverse the result of encoding a hostname. Encoding a hostname means, replacing all dots, with single bytes, that tell how many characters one needs to count further to get to the next dot. \end{DoxyCompactList}\item 
+static unsigned short \hyperlink{class_senergy_1_1_dns_1_1_utils_a26ed8e47210810c24f8ab5a2588bf276}{Host\-To\-Network\-Byte\-Order} (unsigned short value)
+\begin{DoxyCompactList}\small\item\em Converts the specified unsigned short value from host to network byte order. \end{DoxyCompactList}\item 
+static unsigned short \hyperlink{class_senergy_1_1_dns_1_1_utils_aa4e117a17add157b5e9bcb5fada4ac49}{Network\-To\-Host\-Byte\-Order} (unsigned short value)
+\begin{DoxyCompactList}\small\item\em Converts the specified unsigned short value from network to host byte order. \end{DoxyCompactList}\item 
+static unsigned char \hyperlink{class_senergy_1_1_dns_1_1_utils_a952d70b6ddc617c92819eb2ad7e37f0d}{Host\-To\-Network\-Byte\-Order} (unsigned char value)
+\begin{DoxyCompactList}\small\item\em Converts the specified unsigned character value from host to network byte order. \end{DoxyCompactList}\item 
+static unsigned char \hyperlink{class_senergy_1_1_dns_1_1_utils_ac34288e7acfa54f6faaa775ab5654192}{Network\-To\-Host\-Byte\-Order} (unsigned char value)
+\begin{DoxyCompactList}\small\item\em Converts the specified unsigned character value from network to host byte order. \end{DoxyCompactList}\item 
+static unsigned int \hyperlink{class_senergy_1_1_dns_1_1_utils_a7a521aadbb12776e2127abe8028411dc}{Host\-To\-Network\-Byte\-Order} (unsigned int value)
+\begin{DoxyCompactList}\small\item\em Converts the specified unsigned integer value from host to network byte order. \end{DoxyCompactList}\item 
+static unsigned int \hyperlink{class_senergy_1_1_dns_1_1_utils_ad4711275abcbc1d332f3c0208e74c4b8}{Network\-To\-Host\-Byte\-Order} (unsigned int value)
+\begin{DoxyCompactList}\small\item\em Converts the specified unsigned integer value from network to host byte order. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_senergy_1_1_dns_1_1_utils_a96aa042aaec1c2608a13a6ba83792336}{Is\-Domain\-Pointer} (const std\-::string \&hostname)
+\begin{DoxyCompactList}\small\item\em Determines whether the specified hostname/domain name is a pointer to an earlier occurence of the same domain name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains various utilities related to the D\-N\-S protocol. This are mostly functions that are used throughout the application. 
+
+\begin{DoxyAuthor}{Author}
+Swen Kooij (Photonios) 
+\end{DoxyAuthor}
+
+
+Definition at line 43 of file utils.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_utils_ad621e66ca0463aaa21c9b74b489f09f3}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Decode\-Hostname@{Decode\-Hostname}}
+\index{Decode\-Hostname@{Decode\-Hostname}!Senergy::Dns::Utils@{Senergy\-::\-Dns\-::\-Utils}}
+\subsubsection[{Decode\-Hostname}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Senergy\-::\-Dns\-::\-Utils\-::\-Decode\-Hostname (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{hostname}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_utils_ad621e66ca0463aaa21c9b74b489f09f3}
+
+
+Decodes the specified hostname and returns the result, reverse the result of encoding a hostname. Encoding a hostname means, replacing all dots, with single bytes, that tell how many characters one needs to count further to get to the next dot. 
+
+www.\-google.\-com -\/$>$ 3www6google3com
+
+The dots that are being replaced with numbers are N\-O\-T A\-S\-C\-I\-I. They are just single bytes. So, 3, is really 0x03.
+
+So, this function reverse the above example\-:
+
+3www6google3com -\/$>$ www.\-google.\-com
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & The hostname to decode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The decoded hostname, if the specified hostname was empty, an empty string is returned. 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file utils.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_utils_a68f1ebf9810ecb225a4f73c4200778bf}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Encode\-Hostname@{Encode\-Hostname}}
+\index{Encode\-Hostname@{Encode\-Hostname}!Senergy::Dns::Utils@{Senergy\-::\-Dns\-::\-Utils}}
+\subsubsection[{Encode\-Hostname}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Senergy\-::\-Dns\-::\-Utils\-::\-Encode\-Hostname (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{hostname}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_utils_a68f1ebf9810ecb225a4f73c4200778bf}
+
+
+Encodes the specified hostname and returns the result. Encoding a hostname means, replacing all dots, with single bytes, that tell how many characters one needs to count further to get to the next dot. 
+
+www.\-google.\-com -\/$>$ 3www6google3com
+
+The dots that are being replaced with numbers are N\-O\-T A\-S\-C\-I\-I. They are just single bytes. So, 3, is really 0x03.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & The hostname to encode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The encoded hostname. If the specified hostname was empty, an empty string is returned. 
+\end{DoxyReturn}
+
+
+Definition at line 29 of file utils.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_utils_a26ed8e47210810c24f8ab5a2588bf276}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Host\-To\-Network\-Byte\-Order@{Host\-To\-Network\-Byte\-Order}}
+\index{Host\-To\-Network\-Byte\-Order@{Host\-To\-Network\-Byte\-Order}!Senergy::Dns::Utils@{Senergy\-::\-Dns\-::\-Utils}}
+\subsubsection[{Host\-To\-Network\-Byte\-Order}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short Senergy\-::\-Dns\-::\-Utils\-::\-Host\-To\-Network\-Byte\-Order (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_utils_a26ed8e47210810c24f8ab5a2588bf276}
+
+
+Converts the specified unsigned short value from host to network byte order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to convert from host to network byte order.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The input value, in network byte order. 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file utils.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_utils_a952d70b6ddc617c92819eb2ad7e37f0d}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Host\-To\-Network\-Byte\-Order@{Host\-To\-Network\-Byte\-Order}}
+\index{Host\-To\-Network\-Byte\-Order@{Host\-To\-Network\-Byte\-Order}!Senergy::Dns::Utils@{Senergy\-::\-Dns\-::\-Utils}}
+\subsubsection[{Host\-To\-Network\-Byte\-Order}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Senergy\-::\-Dns\-::\-Utils\-::\-Host\-To\-Network\-Byte\-Order (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_utils_a952d70b6ddc617c92819eb2ad7e37f0d}
+
+
+Converts the specified unsigned character value from host to network byte order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to convert from host to network byte order.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The input value, in network byte order. 
+\end{DoxyReturn}
+
+
+Definition at line 107 of file utils.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_utils_a7a521aadbb12776e2127abe8028411dc}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Host\-To\-Network\-Byte\-Order@{Host\-To\-Network\-Byte\-Order}}
+\index{Host\-To\-Network\-Byte\-Order@{Host\-To\-Network\-Byte\-Order}!Senergy::Dns::Utils@{Senergy\-::\-Dns\-::\-Utils}}
+\subsubsection[{Host\-To\-Network\-Byte\-Order}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Senergy\-::\-Dns\-::\-Utils\-::\-Host\-To\-Network\-Byte\-Order (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_utils_a7a521aadbb12776e2127abe8028411dc}
+
+
+Converts the specified unsigned integer value from host to network byte order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to convert from host to network byte order.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The input value, in network byte order. 
+\end{DoxyReturn}
+
+
+Definition at line 117 of file utils.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_utils_a96aa042aaec1c2608a13a6ba83792336}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Is\-Domain\-Pointer@{Is\-Domain\-Pointer}}
+\index{Is\-Domain\-Pointer@{Is\-Domain\-Pointer}!Senergy::Dns::Utils@{Senergy\-::\-Dns\-::\-Utils}}
+\subsubsection[{Is\-Domain\-Pointer}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Utils\-::\-Is\-Domain\-Pointer (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{hostname}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_utils_a96aa042aaec1c2608a13a6ba83792336}
+
+
+Determines whether the specified hostname/domain name is a pointer to an earlier occurence of the same domain name. 
+
+If it's a pointer, the first two bytes will be 0x01.
+
+\begin{DoxySeeAlso}{See Also}
+Section 4.\-1.\-4 of R\-F\-C-\/1025 (\hyperlink{class_senergy_1_1_dns_1_1_message}{Message} compression).
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & The hostname/domain name to check if it's a pointer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether the specified hostname/domain name is a pointer. True is returned when it is a pointer and false is returned when it is not. 
+\end{DoxyReturn}
+
+
+Definition at line 127 of file utils.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_utils_aa4e117a17add157b5e9bcb5fada4ac49}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Network\-To\-Host\-Byte\-Order@{Network\-To\-Host\-Byte\-Order}}
+\index{Network\-To\-Host\-Byte\-Order@{Network\-To\-Host\-Byte\-Order}!Senergy::Dns::Utils@{Senergy\-::\-Dns\-::\-Utils}}
+\subsubsection[{Network\-To\-Host\-Byte\-Order}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short Senergy\-::\-Dns\-::\-Utils\-::\-Network\-To\-Host\-Byte\-Order (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_utils_aa4e117a17add157b5e9bcb5fada4ac49}
+
+
+Converts the specified unsigned short value from network to host byte order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to convert from network to host byte order.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The input value, in host byte order. 
+\end{DoxyReturn}
+
+
+Definition at line 102 of file utils.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_utils_ac34288e7acfa54f6faaa775ab5654192}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Network\-To\-Host\-Byte\-Order@{Network\-To\-Host\-Byte\-Order}}
+\index{Network\-To\-Host\-Byte\-Order@{Network\-To\-Host\-Byte\-Order}!Senergy::Dns::Utils@{Senergy\-::\-Dns\-::\-Utils}}
+\subsubsection[{Network\-To\-Host\-Byte\-Order}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Senergy\-::\-Dns\-::\-Utils\-::\-Network\-To\-Host\-Byte\-Order (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_utils_ac34288e7acfa54f6faaa775ab5654192}
+
+
+Converts the specified unsigned character value from network to host byte order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to convert from network to host byte order.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The input value, in host byte order. 
+\end{DoxyReturn}
+
+
+Definition at line 112 of file utils.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_utils_ad4711275abcbc1d332f3c0208e74c4b8}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Network\-To\-Host\-Byte\-Order@{Network\-To\-Host\-Byte\-Order}}
+\index{Network\-To\-Host\-Byte\-Order@{Network\-To\-Host\-Byte\-Order}!Senergy::Dns::Utils@{Senergy\-::\-Dns\-::\-Utils}}
+\subsubsection[{Network\-To\-Host\-Byte\-Order}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Senergy\-::\-Dns\-::\-Utils\-::\-Network\-To\-Host\-Byte\-Order (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_utils_ad4711275abcbc1d332f3c0208e74c4b8}
+
+
+Converts the specified unsigned integer value from network to host byte order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to convert from network to host byte order.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The input value, in host byte order. 
+\end{DoxyReturn}
+
+
+Definition at line 122 of file utils.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/senergy/dns/\hyperlink{utils_8h}{utils.\-h}\item 
+src/\hyperlink{utils_8cpp}{utils.\-cpp}\end{DoxyCompactItemize}

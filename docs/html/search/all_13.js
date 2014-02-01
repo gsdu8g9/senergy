@@ -4,5 +4,8 @@ var searchData=
   ['uid',['UID',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ae7d22294bdcb7133967c3548ece982e5',1,'Senergy::Dns']]],
   ['uinfo',['UINFO',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ae9d3d23146a9fbf510b755d3356199b4',1,'Senergy::Dns']]],
   ['unspec',['UNSPEC',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a2f03cf10116568e1dbf5263143cffaec',1,'Senergy::Dns']]],
-  ['uri',['URI',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a8447306210a0972ac94b7d774799df1a',1,'Senergy::Dns']]]
+  ['uri',['URI',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a8447306210a0972ac94b7d774799df1a',1,'Senergy::Dns']]],
+  ['utils',['Utils',['../class_senergy_1_1_dns_1_1_utils.html',1,'Senergy::Dns']]],
+  ['utils_2ecpp',['utils.cpp',['../utils_8cpp.html',1,'']]],
+  ['utils_2eh',['utils.h',['../utils_8h.html',1,'']]]
 ];

@@ -48,23 +48,23 @@ void \hyperlink{class_senergy_1_1_byte_buffer_a9dc9ad6de5d9401a698984634537b27a}
 void \hyperlink{class_senergy_1_1_byte_buffer_ab523222c96a0c1fff96a7f6c2794ca2d}{Write} (int value)
 \begin{DoxyCompactList}\small\item\em Writes the specified value to the buffer. The buffer is automaticlly resized when the specified value does not fit into the buffer. \end{DoxyCompactList}\item 
 void \hyperlink{class_senergy_1_1_byte_buffer_a8a51e4f9795d312ff2ab8f152b533bb7}{Write} (unsigned int value)
-\item 
+\begin{DoxyCompactList}\small\item\em Writes the specified value to the buffer. The buffer is automaticlly resized when the specified value does not fit into the buffer. \end{DoxyCompactList}\item 
 void \hyperlink{class_senergy_1_1_byte_buffer_add80584faab29bcadcb437b45ad97a87}{Write} (char value)
-\item 
+\begin{DoxyCompactList}\small\item\em Writes the specified value to the buffer. The buffer is automaticlly resized when the specified value does not fit into the buffer. \end{DoxyCompactList}\item 
 void \hyperlink{class_senergy_1_1_byte_buffer_a061fe3c4158ba940e68bf4545639561e}{Write} (unsigned char value)
-\item 
+\begin{DoxyCompactList}\small\item\em Writes the specified value to the buffer. The buffer is automaticlly resized when the specified value does not fit into the buffer. \end{DoxyCompactList}\item 
 void \hyperlink{class_senergy_1_1_byte_buffer_ae0e9d53b9afa8b098eed7b517a60b938}{Write} (short value)
-\item 
+\begin{DoxyCompactList}\small\item\em Writes the specified value to the buffer. The buffer is automaticlly resized when the specified value does not fit into the buffer. \end{DoxyCompactList}\item 
 void \hyperlink{class_senergy_1_1_byte_buffer_a9286d05c71ce66859098778f11be9c51}{Write} (unsigned short value)
-\item 
+\begin{DoxyCompactList}\small\item\em Writes the specified value to the buffer. The buffer is automaticlly resized when the specified value does not fit into the buffer. \end{DoxyCompactList}\item 
 bool \hyperlink{class_senergy_1_1_byte_buffer_ae4e73e6e193bec7b9f7df0919d1641d9}{Read} (char $\ast$buffer, int size)
 \begin{DoxyCompactList}\small\item\em Reads the specified amount of bytes from the buffer and copies it into the specified buffer. \end{DoxyCompactList}\item 
 bool \hyperlink{class_senergy_1_1_byte_buffer_ace3d04d38706d534a16e596ee291630b}{Read} (char $\ast$buffer, unsigned int size)
 \begin{DoxyCompactList}\small\item\em Reads the specified amount of bytes from the buffer and copies it into the specified buffer. \end{DoxyCompactList}\item 
 bool \hyperlink{class_senergy_1_1_byte_buffer_a391deafd9b6e3c4b4c2b92fe78358ebf}{Read\-Remaining} (char $\ast$buffer, int max\-\_\-size)
-\item 
+\begin{DoxyCompactList}\small\item\em Reads all remaining bytes from the buffer. \end{DoxyCompactList}\item 
 bool \hyperlink{class_senergy_1_1_byte_buffer_a8e9ec7a8d6c26c01a738768928fff704}{Read\-Remaining} (char $\ast$buffer, unsigned int max\-\_\-size)
-\item 
+\begin{DoxyCompactList}\small\item\em Reads all remaining bytes from the buffer. \end{DoxyCompactList}\item 
 int \hyperlink{class_senergy_1_1_byte_buffer_ab15f04d43dd82cebf6dc25254d210e4e}{Read\-Int} ()
 \begin{DoxyCompactList}\small\item\em Reads an integer from the buffer. \end{DoxyCompactList}\item 
 unsigned int \hyperlink{class_senergy_1_1_byte_buffer_a7abe5475b2a9adcad384d3125640aba2}{Read\-Unsigned\-Int} ()
@@ -77,6 +77,8 @@ short \hyperlink{class_senergy_1_1_byte_buffer_a989443842e20c2feba4268e968911fe8
 \begin{DoxyCompactList}\small\item\em Reads a short from the buffer. \end{DoxyCompactList}\item 
 unsigned short \hyperlink{class_senergy_1_1_byte_buffer_aa6b6bfdb398a75b92c79bcdfc1986821}{Read\-Unsigned\-Short} ()
 \begin{DoxyCompactList}\small\item\em Reads an unsigned short from the buffer. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_senergy_1_1_byte_buffer_ab1f14bdb0b09b2144d1775fa2dff95a6}{Read\-String} (unsigned int max\-\_\-length=0)
+\begin{DoxyCompactList}\small\item\em Attempts to read a string for the buffer until a string termination character, or the end of the buffer is encountered. \end{DoxyCompactList}\item 
 std\-::string \hyperlink{class_senergy_1_1_byte_buffer_a5c3f960422533abc898061be11b6f613}{Read\-All} ()
 \begin{DoxyCompactList}\small\item\em Reads the contents of the buffer from start to end and returns the contents as a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -267,7 +269,7 @@ The contents of the buffer as a string.
 \end{DoxyReturn}
 
 
-Definition at line 221 of file bytebuffer.\-cpp.
+Definition at line 237 of file bytebuffer.\-cpp.
 
 \hypertarget{class_senergy_1_1_byte_buffer_a806db1b33ff86b572a0804879d181dc8}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-Char@{Read\-Char}}
 \index{Read\-Char@{Read\-Char}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
@@ -313,6 +315,20 @@ Definition at line 191 of file bytebuffer.\-cpp.
 \item[{int}]{max\-\_\-size}
 \end{DoxyParamCaption}
 )}}\label{class_senergy_1_1_byte_buffer_a391deafd9b6e3c4b4c2b92fe78358ebf}
+
+
+Reads all remaining bytes from the buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to write the acquired data to, make sure the buffer is at least the size of of the specified maximum size. \\
+\hline
+{\em max\-\_\-size} & The maximum amount of bytes to copy into the specified buffer, the size of the specified buffer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether writing the remainging bytes to the specified buffer was a success. 
+\end{DoxyReturn}
 \hypertarget{class_senergy_1_1_byte_buffer_a8e9ec7a8d6c26c01a738768928fff704}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-Remaining@{Read\-Remaining}}
 \index{Read\-Remaining@{Read\-Remaining}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
 \subsubsection[{Read\-Remaining}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Byte\-Buffer\-::\-Read\-Remaining (
@@ -321,6 +337,20 @@ Definition at line 191 of file bytebuffer.\-cpp.
 \item[{unsigned int}]{max\-\_\-size}
 \end{DoxyParamCaption}
 )}}\label{class_senergy_1_1_byte_buffer_a8e9ec7a8d6c26c01a738768928fff704}
+
+
+Reads all remaining bytes from the buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to write the acquired data to, make sure the buffer is at least the size of of the specified maximum size. \\
+\hline
+{\em max\-\_\-size} & The maximum amount of bytes to copy into the specified buffer, the size of the specified buffer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether writing the remainging bytes to the specified buffer was a success. 
+\end{DoxyReturn}
 \hypertarget{class_senergy_1_1_byte_buffer_a989443842e20c2feba4268e968911fe8}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-Short@{Read\-Short}}
 \index{Read\-Short@{Read\-Short}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
 \subsubsection[{Read\-Short}]{\setlength{\rightskip}{0pt plus 5cm}short Senergy\-::\-Byte\-Buffer\-::\-Read\-Short (
@@ -338,6 +368,29 @@ The short that was read from the buffer. -\/1 is returned when reading failed.
 
 
 Definition at line 211 of file bytebuffer.\-cpp.
+
+\hypertarget{class_senergy_1_1_byte_buffer_ab1f14bdb0b09b2144d1775fa2dff95a6}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-String@{Read\-String}}
+\index{Read\-String@{Read\-String}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Read\-String}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Senergy\-::\-Byte\-Buffer\-::\-Read\-String (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{max\-\_\-length = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_ab1f14bdb0b09b2144d1775fa2dff95a6}
+
+
+Attempts to read a string for the buffer until a string termination character, or the end of the buffer is encountered. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\-\_\-length} & Specifies the maximum length of the string being returned. Specifying zero disables this functionality.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string that was read, if something went wrong, or the end of the buffer was reached, everything that was read so far will be returned. If the buffer is empty, or there are no more bytes left to read, an empty string will be returned. 
+\end{DoxyReturn}
+
+
+Definition at line 221 of file bytebuffer.\-cpp.
 
 \hypertarget{class_senergy_1_1_byte_buffer_ad9a7a05b0285fe070cde3983458de5f6}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-Unsigned\-Char@{Read\-Unsigned\-Char}}
 \index{Read\-Unsigned\-Char@{Read\-Unsigned\-Char}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
@@ -613,7 +666,9 @@ Definition at line 128 of file bytebuffer.\-cpp.
 Writes the specified string to the buffer. The buffer is automaticlly resized when the specified string does not fit into the buffer. 
 
 \begin{DoxyNote}{Note}
-Increases the position by the size of the specified string.
+Increases the position by the size of the specified string. 
+
+Accounts for the string termination character (\textbackslash{}0).
 \end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
@@ -656,6 +711,18 @@ Definition at line 141 of file bytebuffer.\-cpp.
 )}}\label{class_senergy_1_1_byte_buffer_a8a51e4f9795d312ff2ab8f152b533bb7}
 
 
+Writes the specified value to the buffer. The buffer is automaticlly resized when the specified value does not fit into the buffer. 
+
+\begin{DoxyNote}{Note}
+Increases the position by the size of the specified value.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to write to the buffer. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 146 of file bytebuffer.\-cpp.
 
 \hypertarget{class_senergy_1_1_byte_buffer_add80584faab29bcadcb437b45ad97a87}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Write@{Write}}
@@ -665,6 +732,18 @@ Definition at line 146 of file bytebuffer.\-cpp.
 \item[{char}]{value}
 \end{DoxyParamCaption}
 )}}\label{class_senergy_1_1_byte_buffer_add80584faab29bcadcb437b45ad97a87}
+
+
+Writes the specified value to the buffer. The buffer is automaticlly resized when the specified value does not fit into the buffer. 
+
+\begin{DoxyNote}{Note}
+Increases the position by the size of the specified value.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to write to the buffer. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 151 of file bytebuffer.\-cpp.
@@ -678,6 +757,18 @@ Definition at line 151 of file bytebuffer.\-cpp.
 )}}\label{class_senergy_1_1_byte_buffer_a061fe3c4158ba940e68bf4545639561e}
 
 
+Writes the specified value to the buffer. The buffer is automaticlly resized when the specified value does not fit into the buffer. 
+
+\begin{DoxyNote}{Note}
+Increases the position by the size of the specified value.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to write to the buffer. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 156 of file bytebuffer.\-cpp.
 
 \hypertarget{class_senergy_1_1_byte_buffer_ae0e9d53b9afa8b098eed7b517a60b938}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Write@{Write}}
@@ -689,6 +780,18 @@ Definition at line 156 of file bytebuffer.\-cpp.
 )}}\label{class_senergy_1_1_byte_buffer_ae0e9d53b9afa8b098eed7b517a60b938}
 
 
+Writes the specified value to the buffer. The buffer is automaticlly resized when the specified value does not fit into the buffer. 
+
+\begin{DoxyNote}{Note}
+Increases the position by the size of the specified value.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to write to the buffer. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 161 of file bytebuffer.\-cpp.
 
 \hypertarget{class_senergy_1_1_byte_buffer_a9286d05c71ce66859098778f11be9c51}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Write@{Write}}
@@ -698,6 +801,18 @@ Definition at line 161 of file bytebuffer.\-cpp.
 \item[{unsigned short}]{value}
 \end{DoxyParamCaption}
 )}}\label{class_senergy_1_1_byte_buffer_a9286d05c71ce66859098778f11be9c51}
+
+
+Writes the specified value to the buffer. The buffer is automaticlly resized when the specified value does not fit into the buffer. 
+
+\begin{DoxyNote}{Note}
+Increases the position by the size of the specified value.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to write to the buffer. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 166 of file bytebuffer.\-cpp.

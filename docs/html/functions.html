@@ -23,6 +23,7 @@
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link rel="shortcut icon" href="../../res/senergy-dns.ico" type="image/x-icon" />
+<link href="Doxygen_Fixes.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -94,6 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_b"><span>b</span></a></li>
       <li><a href="#index_c"><span>c</span></a></li>
       <li><a href="#index_d"><span>d</span></a></li>
+      <li><a href="#index_e"><span>e</span></a></li>
       <li><a href="#index_f"><span>f</span></a></li>
       <li><a href="#index_g"><span>g</span></a></li>
       <li><a href="#index_h"><span>h</span></a></li>
@@ -189,14 +191,25 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
+<li>DecodeHostname()
+: <a class="el" href="class_senergy_1_1_dns_1_1_utils.html#ad621e66ca0463aaa21c9b74b489f09f3">Senergy::Dns::Utils</a>
+</li>
 <li>Deserialize()
 : <a class="el" href="class_senergy_1_1_dns_1_1_message.html#a3857764a799ab123405420345f9b03ee">Senergy::Dns::Message</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_message_header.html#aa54f3864838fe22a4406e0c52a90a010">Senergy::Dns::MessageHeader</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a1c66b45b448f262a4f2cf1317c89b5b3">Senergy::Dns::MessageQuestion</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html#a4426ad69fd06a352835b00d18fd726a7">Senergy::Dns::ResourceRecord</a>
 </li>
 <li>Dump()
 : <a class="el" href="class_senergy_1_1_dns_1_1_message_header.html#a54b75c73f901b0fc7cf21bed6391aa4e">Senergy::Dns::MessageHeader</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a7ac084601ff3285c6e47e7ce7ccc09cf">Senergy::Dns::MessageQuestion</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
+<li>EncodeHostname()
+: <a class="el" href="class_senergy_1_1_dns_1_1_utils.html#a68f1ebf9810ecb225a4f73c4200778bf">Senergy::Dns::Utils</a>
 </li>
 </ul>
 
@@ -211,12 +224,17 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
 <li>GetClass()
 : <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#ae86936e1268d7abf0a2210df9caa0840">Senergy::Dns::MessageQuestion</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html#a5b26da86b8ba4d6c0899dc56a9fee7c1">Senergy::Dns::ResourceRecord</a>
 </li>
 <li>GetErrorCode()
 : <a class="el" href="class_senergy_1_1_socket.html#a403f7a2f6c5a94d4b14f73f0965da061">Senergy::Socket</a>
 </li>
 <li>GetHostname()
 : <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a5fa467b516be4914f865bc5d053e98be">Senergy::Dns::MessageQuestion</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html#a98a7d65be5a756f190247e18a5433661">Senergy::Dns::ResourceRecord</a>
+</li>
+<li>GetMaxCachingTime()
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html#ab391deab6827e4e772809a3d025abb31">Senergy::Dns::ResourceRecord</a>
 </li>
 <li>GetPosition()
 : <a class="el" href="class_senergy_1_1_byte_buffer.html#a286e096451b62a14a8d645e1c9da62af">Senergy::ByteBuffer</a>
@@ -230,12 +248,16 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>GetRemoteHost()
 : <a class="el" href="class_senergy_1_1_socket.html#aaab6b46c9e2733982df87eefb0fc77a2">Senergy::Socket</a>
 </li>
+<li>GetResourceSize()
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html#affea007cc6d81a8a2dd80148c3386c62">Senergy::Dns::ResourceRecord</a>
+</li>
 <li>GetSize()
 : <a class="el" href="class_senergy_1_1_dns_1_1_message_header.html#a69f4475bc3153926dbb011f37cbbfea9">Senergy::Dns::MessageHeader</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a0a007a1d002a37189ce0f8c943335216">Senergy::Dns::MessageQuestion</a>
 </li>
 <li>GetType()
 : <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a66d9d051672d30c1f4b5663d25430ec8">Senergy::Dns::MessageQuestion</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html#a53ff0c81f7f0b79ac69df28a513242e2">Senergy::Dns::ResourceRecord</a>
 </li>
 </ul>
 
@@ -243,6 +265,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
 <li>Hexadecimal()
 : <a class="el" href="class_senergy_1_1_print.html#a6c6b70bd91e56896058004bf82201010">Senergy::Print</a>
+</li>
+<li>HostToNetworkByteOrder()
+: <a class="el" href="class_senergy_1_1_dns_1_1_utils.html#a26ed8e47210810c24f8ab5a2588bf276">Senergy::Dns::Utils</a>
 </li>
 </ul>
 
@@ -256,6 +281,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>IsConnected()
 : <a class="el" href="class_senergy_1_1_socket.html#a6d22575e6fc0d6ab4a61097d60b6e773">Senergy::Socket</a>
+</li>
+<li>IsDomainPointer()
+: <a class="el" href="class_senergy_1_1_dns_1_1_utils.html#a96aa042aaec1c2608a13a6ba83792336">Senergy::Dns::Utils</a>
 </li>
 <li>IsEmpty()
 : <a class="el" href="class_senergy_1_1_byte_buffer.html#ad141d494b81ff561ede715c4f7ceb840">Senergy::ByteBuffer</a>
@@ -274,6 +302,21 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>m_class
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html#a8eea45baed16ff1c408682d9da59b7c6">Senergy::Dns::ResourceRecord</a>
+</li>
+<li>m_hostname
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html#a3992d42302c4bc939f39c58546aaacaf">Senergy::Dns::ResourceRecord</a>
+</li>
+<li>m_rd_length
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html#a598323d2f75156a289df1152e30b563b">Senergy::Dns::ResourceRecord</a>
+</li>
+<li>m_ttl
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html#ac30e456e4945e8bb9abd3d55fa168ff5">Senergy::Dns::ResourceRecord</a>
+</li>
+<li>m_type
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html#a443ff133b10a314058bc6174558415a8">Senergy::Dns::ResourceRecord</a>
+</li>
 <li>Message()
 : <a class="el" href="class_senergy_1_1_dns_1_1_message.html#a3e7192f2293903a43e7d08960b08a8b1">Senergy::Dns::Message</a>
 </li>
@@ -289,6 +332,12 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
 <li>NameServerCount
 : <a class="el" href="struct_senergy_1_1_dns_1_1_message_header_fields.html#a963b92841b3f7fc5fc9268c963d32d8d">Senergy::Dns::MessageHeaderFields</a>
+</li>
+<li>NeedsCaching()
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html#ab90850f8b050337867261a55a2e43284">Senergy::Dns::ResourceRecord</a>
+</li>
+<li>NetworkToHostByteOrder()
+: <a class="el" href="class_senergy_1_1_dns_1_1_utils.html#aa4e117a17add157b5e9bcb5fada4ac49">Senergy::Dns::Utils</a>
 </li>
 </ul>
 
@@ -329,6 +378,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>ReadShort()
 : <a class="el" href="class_senergy_1_1_byte_buffer.html#a989443842e20c2feba4268e968911fe8">Senergy::ByteBuffer</a>
 </li>
+<li>ReadString()
+: <a class="el" href="class_senergy_1_1_byte_buffer.html#ab1f14bdb0b09b2144d1775fa2dff95a6">Senergy::ByteBuffer</a>
+</li>
 <li>ReadUnsignedChar()
 : <a class="el" href="class_senergy_1_1_byte_buffer.html#ad9a7a05b0285fe070cde3983458de5f6">Senergy::ByteBuffer</a>
 </li>
@@ -339,7 +391,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="class_senergy_1_1_byte_buffer.html#aa6b6bfdb398a75b92c79bcdfc1986821">Senergy::ByteBuffer</a>
 </li>
 <li>Receive()
-: <a class="el" href="class_senergy_1_1_socket.html#a7045f756d3c542ee1187a92ca13fa232">Senergy::Socket</a>
+: <a class="el" href="class_senergy_1_1_socket.html#a0c1510be39bef49de15e8647b64dbb5e">Senergy::Socket</a>
 </li>
 <li>RecursionAvailable
 : <a class="el" href="struct_senergy_1_1_dns_1_1_message_header_fields.html#afbb68b60a28f855e64eb13615fc2633e">Senergy::Dns::MessageHeaderFields</a>
@@ -356,6 +408,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>Reset()
 : <a class="el" href="class_senergy_1_1_dns_1_1_message.html#a60d242fef8b20993f9cd9b4591453e1b">Senergy::Dns::Message</a>
 </li>
+<li>ResourceRecord()
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html#a5031132589becf3c4e8e4ecbd6ab4e5d">Senergy::Dns::ResourceRecord</a>
+</li>
 <li>ResponseCode
 : <a class="el" href="struct_senergy_1_1_dns_1_1_message_header_fields.html#a2f42c94d4e50dd7a63b11c8b374597c4">Senergy::Dns::MessageHeaderFields</a>
 </li>
@@ -370,15 +425,18 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="class_senergy_1_1_dns_1_1_message.html#a2e7978e799fadaa4f03fc881e5c8e0f6">Senergy::Dns::Message</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_message_header.html#ab443595ff8e11a828022f0cc5f3f6fbe">Senergy::Dns::MessageHeader</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a60772687d382e1d376852e1b5ff59968">Senergy::Dns::MessageQuestion</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html#ad76b4f450fc1d7f0bd0bbf72c3f68a11">Senergy::Dns::ResourceRecord</a>
 </li>
 <li>Server
 : <a class="el" href="class_senergy_1_1_socket.html#ad82ad4c4412684091e687b92641bfbe9a9aa1b03934893d7134a660af4204f2a9">Senergy::Socket</a>
 </li>
 <li>SetClass()
 : <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a8676f25315240afe4473154f3708d3e5">Senergy::Dns::MessageQuestion</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html#a4fca01c4e494f21c574e5c2bc382f3a3">Senergy::Dns::ResourceRecord</a>
 </li>
 <li>SetHostname()
 : <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a239d21d940aa38b8d953ff29b400b9cf">Senergy::Dns::MessageQuestion</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html#a571a18bfcdcc2e5ac0faa2e9cfac57fb">Senergy::Dns::ResourceRecord</a>
 </li>
 <li>SetPosition()
 : <a class="el" href="class_senergy_1_1_byte_buffer.html#a13dd8a2eec8b93ac224f0da614c7f6f8">Senergy::ByteBuffer</a>
@@ -388,6 +446,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>SetType()
 : <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a3fbcbad88592bf5cde58c7b22119cc4f">Senergy::Dns::MessageQuestion</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html#ac339b08bf936f1971de6b24b46dd5813">Senergy::Dns::ResourceRecord</a>
 </li>
 <li>Size()
 : <a class="el" href="class_senergy_1_1_byte_buffer.html#a22be2d9d356958c4cf352bc31edb1735">Senergy::ByteBuffer</a>
@@ -456,7 +515,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Jan 29 2014 22:17:06 for Senergy by
+    <li class="footer">Generated on Sat Feb 1 2014 19:47:17 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

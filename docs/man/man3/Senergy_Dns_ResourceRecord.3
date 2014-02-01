@@ -1,0 +1,308 @@
+.TH "Senergy::Dns::ResourceRecord" 3 "Sat Feb 1 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::Dns::ResourceRecord \- 
+.PP
+Defines a DNS Resource Record, as defined in RFC 1035, section 4\&.1\&.3\&. A DNS Recource record can appear both in the answer, authority and additional section of a DNS packet/message\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <resource_record\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBResourceRecord\fP ()"
+.br
+.RI "\fIInitializes a new instance of the \fBResourceRecord\fP class\&. \fP"
+.ti -1c
+.RI "virtual bool \fBDeserialize\fP (\fBByteBuffer\fP &buffer)"
+.br
+.RI "\fIDeserializes a resource record from the specified buffer into this instance\&. \fP"
+.ti -1c
+.RI "virtual bool \fBSerialize\fP (\fBByteBuffer\fP &buffer)"
+.br
+.RI "\fISerializes this instance into the specified buffer\&. \fP"
+.ti -1c
+.RI "std::string \fBGetHostname\fP ()"
+.br
+.RI "\fIGets the hostname that was configued in this answer\&. \fP"
+.ti -1c
+.RI "void \fBSetHostname\fP (const std::string hostname)"
+.br
+.RI "\fISets the hostname for this answer\&. \fP"
+.ti -1c
+.RI "\fBResourceRecordType\fP \fBGetType\fP ()"
+.br
+.RI "\fIGets the resource record type, the type of resource this record contains\&. \fP"
+.ti -1c
+.RI "void \fBSetType\fP (\fBResourceRecordType\fP type)"
+.br
+.RI "\fISets the resource record type, the type of resource this record contains\&. \fP"
+.ti -1c
+.RI "\fBResourceRecordClass\fP \fBGetClass\fP ()"
+.br
+.RI "\fIGets the resource record class that was configured for this record\&. \fP"
+.ti -1c
+.RI "void \fBSetClass\fP (\fBResourceRecordClass\fP clas)"
+.br
+.RI "\fISets the resource record class, the class of resource this record contains\&. \fP"
+.ti -1c
+.RI "bool \fBNeedsCaching\fP ()"
+.br
+.RI "\fIDetermines whether the resource in this record should be cached\&. \fP"
+.ti -1c
+.RI "int \fBGetMaxCachingTime\fP ()"
+.br
+.RI "\fIGets the maximum amount of seconds the resource in this record should be cached\&. \fP"
+.ti -1c
+.RI "int \fBGetResourceSize\fP ()"
+.br
+.RI "\fIGets the size of the resource this record contains\&. \fP"
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBm_hostname\fP"
+.br
+.ti -1c
+.RI "\fBResourceRecordType\fP \fBm_type\fP"
+.br
+.ti -1c
+.RI "\fBResourceRecordClass\fP \fBm_class\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBm_ttl\fP"
+.br
+.ti -1c
+.RI "unsigned short \fBm_rd_length\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Defines a DNS Resource Record, as defined in RFC 1035, section 4\&.1\&.3\&. A DNS Recource record can appear both in the answer, authority and additional section of a DNS packet/message\&. 
+
+All fields in a resource record are the same, regardless of whether it is an answer, authority or additional record\&. The only difference is the format of the last field, the resource data field\&. The format of this field depends on the resource record type\&. 
+.PP
+.nf
+This class does NOT implement the resource data field, and does not serialize/deserilize it.
+
+.fi
+.PP
+ Instead, new classes should be created per resource record type, which do implement the resource data field, and inherit from this class\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.PP
+Definition at line 50 of file resource_record\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Senergy::Dns::ResourceRecord::ResourceRecord ()"
+
+.PP
+Initializes a new instance of the \fBResourceRecord\fP class\&. 
+.PP
+Definition at line 29 of file resource_record\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Senergy::Dns::ResourceRecord::Deserialize (\fBByteBuffer\fP &buffer)\fC [virtual]\fP"
+
+.PP
+Deserializes a resource record from the specified buffer into this instance\&. The specified buffer must have at least 4 bytes left to read\&. However, the size of a resource record is variable, because of the name field\&.
+.PP
+When we can not read the entire resource record from the specified buffer, false is returned\&.
+.PP
+\fBNote:\fP
+.RS 4
+This will advance the buffer's position with the size of the record\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to read the resource record from\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether deserialization was succesful\&. True is returned when deseriliazation was succesful and false when it was not\&. 
+.RE
+.PP
+
+.PP
+Definition at line 38 of file resource_record\&.cpp\&.
+.SS "\fBResourceRecordClass\fP Senergy::Dns::ResourceRecord::GetClass ()"
+
+.PP
+Gets the resource record class that was configured for this record\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A value from the ResourceRecordClass enumuration, which indicates what class the resource is of\&. 
+.RE
+.PP
+
+.PP
+Definition at line 104 of file resource_record\&.cpp\&.
+.SS "std::string Senergy::Dns::ResourceRecord::GetHostname ()"
+
+.PP
+Gets the hostname that was configued in this answer\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The hostname configured in this answer\&. 
+.RE
+.PP
+
+.PP
+Definition at line 84 of file resource_record\&.cpp\&.
+.SS "int Senergy::Dns::ResourceRecord::GetMaxCachingTime ()"
+
+.PP
+Gets the maximum amount of seconds the resource in this record should be cached\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The maximum amount of seconds the resource in this record should be cached\&. If zero is returned, the resource should be cached at all\&. 
+.RE
+.PP
+
+.PP
+Definition at line 119 of file resource_record\&.cpp\&.
+.SS "int Senergy::Dns::ResourceRecord::GetResourceSize ()"
+
+.PP
+Gets the size of the resource this record contains\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The size of the resource in this record (amount of bytes)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 124 of file resource_record\&.cpp\&.
+.SS "\fBResourceRecordType\fP Senergy::Dns::ResourceRecord::GetType ()"
+
+.PP
+Gets the resource record type, the type of resource this record contains\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A value from the ResourceRecordType enumuration, which indicates what kind of resource this record contains\&. 
+.RE
+.PP
+
+.PP
+Definition at line 94 of file resource_record\&.cpp\&.
+.SS "bool Senergy::Dns::ResourceRecord::NeedsCaching ()"
+
+.PP
+Determines whether the resource in this record should be cached\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+True when this record needs to be cached, and false when it should not be cached\&. 
+.RE
+.PP
+
+.PP
+Definition at line 114 of file resource_record\&.cpp\&.
+.SS "bool Senergy::Dns::ResourceRecord::Serialize (\fBByteBuffer\fP &buffer)\fC [virtual]\fP"
+
+.PP
+Serializes this instance into the specified buffer\&. The size of a resource record is variable, because of the name field\&.
+.PP
+If we cannot, for whatever reason, serialize this record, false is returned\&.
+.PP
+\fBNote:\fP
+.RS 4
+This will advance the buffer's position with the size of the record\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to write the serialized record to\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether serialization was successful\&. True is returned when serialization was successful, and false is returned when it was not\&. 
+.RE
+.PP
+
+.PP
+Definition at line 69 of file resource_record\&.cpp\&.
+.SS "void Senergy::Dns::ResourceRecord::SetClass (\fBResourceRecordClass\fPclas)"
+
+.PP
+Sets the resource record class, the class of resource this record contains\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIclas\fP A value from the ResourceRecordClass enumuration, which indicates what class the resource is of\&. 
+.RE
+.PP
+
+.PP
+Definition at line 109 of file resource_record\&.cpp\&.
+.SS "void Senergy::Dns::ResourceRecord::SetHostname (const std::stringhostname)"
+
+.PP
+Sets the hostname for this answer\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIhostname\fP The hostname to set\&. 
+.RE
+.PP
+
+.PP
+Definition at line 89 of file resource_record\&.cpp\&.
+.SS "void Senergy::Dns::ResourceRecord::SetType (\fBResourceRecordType\fPtype)"
+
+.PP
+Sets the resource record type, the type of resource this record contains\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItype\fP A value from the ResourceRecordType enumuration, which indicates what kind of resource this record contains\&. 
+.RE
+.PP
+
+.PP
+Definition at line 99 of file resource_record\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBResourceRecordClass\fP Senergy::Dns::ResourceRecord::m_class\fC [protected]\fP"
+
+.PP
+Definition at line 181 of file resource_record\&.h\&.
+.SS "std::string Senergy::Dns::ResourceRecord::m_hostname\fC [protected]\fP"
+
+.PP
+Definition at line 175 of file resource_record\&.h\&.
+.SS "unsigned short Senergy::Dns::ResourceRecord::m_rd_length\fC [protected]\fP"
+
+.PP
+Definition at line 187 of file resource_record\&.h\&.
+.SS "unsigned int Senergy::Dns::ResourceRecord::m_ttl\fC [protected]\fP"
+
+.PP
+Definition at line 184 of file resource_record\&.h\&.
+.SS "\fBResourceRecordType\fP Senergy::Dns::ResourceRecord::m_type\fC [protected]\fP"
+
+.PP
+Definition at line 178 of file resource_record\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

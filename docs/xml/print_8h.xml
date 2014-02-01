@@ -8,116 +8,128 @@
     <includedby refid="bytebuffer_8h" local="no">src/senergy/bytebuffer.h</includedby>
     <includedby refid="senergy_8h" local="no">src/senergy/senergy.h</includedby>
     <incdepgraph>
-      <node id="223">
+      <node id="283">
         <label>string</label>
       </node>
-      <node id="222">
+      <node id="282">
         <label>cstdio</label>
       </node>
-      <node id="221">
+      <node id="281">
         <label>src/senergy/print.h</label>
         <link refid="print.h"/>
-        <childnode refid="222" relation="include">
+        <childnode refid="282" relation="include">
         </childnode>
-        <childnode refid="223" relation="include">
+        <childnode refid="283" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="235">
+      <node id="297">
+        <label>src/resource_record.cpp</label>
+        <link refid="resource__record_8cpp"/>
+      </node>
+      <node id="295">
         <label>src/message_question.cpp</label>
         <link refid="message__question_8cpp"/>
       </node>
-      <node id="231">
+      <node id="291">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="236">
+      <node id="298">
         <label>src/senergy/socket.h</label>
         <link refid="socket_8h"/>
-        <childnode refid="230" relation="include">
+        <childnode refid="290" relation="include">
         </childnode>
-        <childnode refid="237" relation="include">
+        <childnode refid="299" relation="include">
         </childnode>
       </node>
-      <node id="229">
+      <node id="289">
         <label>src/message.cpp</label>
         <link refid="message_8cpp"/>
       </node>
-      <node id="227">
+      <node id="287">
         <label>src/bytebuffer.cpp</label>
         <link refid="bytebuffer_8cpp"/>
       </node>
-      <node id="237">
+      <node id="299">
         <label>src/socket.cpp</label>
         <link refid="socket_8cpp"/>
       </node>
-      <node id="228">
+      <node id="288">
         <label>src/senergy/dns/message.h</label>
         <link refid="message_8h"/>
-        <childnode refid="229" relation="include">
+        <childnode refid="289" relation="include">
         </childnode>
-        <childnode refid="230" relation="include">
+        <childnode refid="290" relation="include">
         </childnode>
       </node>
-      <node id="233">
+      <node id="293">
         <label>src/message_header.cpp</label>
         <link refid="message__header_8cpp"/>
       </node>
-      <node id="224">
+      <node id="284">
         <label>src/senergy/print.h</label>
         <link refid="print.h"/>
-        <childnode refid="225" relation="include">
+        <childnode refid="285" relation="include">
         </childnode>
-        <childnode refid="226" relation="include">
+        <childnode refid="286" relation="include">
         </childnode>
-        <childnode refid="230" relation="include">
+        <childnode refid="290" relation="include">
         </childnode>
       </node>
-      <node id="230">
+      <node id="296">
+        <label>src/senergy/dns/resource_record.h</label>
+        <link refid="resource__record_8h"/>
+        <childnode refid="297" relation="include">
+        </childnode>
+      </node>
+      <node id="290">
         <label>src/senergy/senergy.h</label>
         <link refid="senergy_8h"/>
-        <childnode refid="231" relation="include">
+        <childnode refid="291" relation="include">
         </childnode>
       </node>
-      <node id="226">
+      <node id="286">
         <label>src/senergy/bytebuffer.h</label>
         <link refid="bytebuffer_8h"/>
-        <childnode refid="227" relation="include">
+        <childnode refid="287" relation="include">
         </childnode>
-        <childnode refid="228" relation="include">
+        <childnode refid="288" relation="include">
         </childnode>
-        <childnode refid="232" relation="include">
+        <childnode refid="292" relation="include">
         </childnode>
-        <childnode refid="234" relation="include">
+        <childnode refid="294" relation="include">
         </childnode>
-        <childnode refid="230" relation="include">
+        <childnode refid="296" relation="include">
         </childnode>
-        <childnode refid="236" relation="include">
+        <childnode refid="290" relation="include">
+        </childnode>
+        <childnode refid="298" relation="include">
         </childnode>
       </node>
-      <node id="225">
+      <node id="285">
         <label>src/print.cpp</label>
         <link refid="print_8cpp"/>
       </node>
-      <node id="232">
+      <node id="292">
         <label>src/senergy/dns/message_header.h</label>
         <link refid="message__header_8h"/>
-        <childnode refid="233" relation="include">
+        <childnode refid="293" relation="include">
         </childnode>
-        <childnode refid="228" relation="include">
+        <childnode refid="288" relation="include">
         </childnode>
-        <childnode refid="230" relation="include">
+        <childnode refid="290" relation="include">
         </childnode>
       </node>
-      <node id="234">
+      <node id="294">
         <label>src/senergy/dns/message_question.h</label>
         <link refid="message__question_8h"/>
-        <childnode refid="235" relation="include">
+        <childnode refid="295" relation="include">
         </childnode>
-        <childnode refid="228" relation="include">
+        <childnode refid="288" relation="include">
         </childnode>
-        <childnode refid="230" relation="include">
+        <childnode refid="290" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

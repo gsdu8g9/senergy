@@ -8,6 +8,10 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "message_header.cpp", "message__header_8cpp.html", null ],
     [ "message_question.cpp", "message__question_8cpp.html", null ],
     [ "print.cpp", "print_8cpp.html", null ],
+    [ "resource_record.cpp", "resource__record_8cpp.html", null ],
+    [ "resource_record_classes.cpp", "resource__record__classes_8cpp.html", null ],
+    [ "resource_record_types.cpp", "resource__record__types_8cpp.html", null ],
     [ "rootnameserver.cpp", "rootnameserver_8cpp.html", null ],
-    [ "socket.cpp", "socket_8cpp.html", null ]
+    [ "socket.cpp", "socket_8cpp.html", null ],
+    [ "utils.cpp", "utils_8cpp.html", null ]
 ];

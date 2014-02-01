@@ -23,6 +23,7 @@
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link rel="shortcut icon" href="../../res/senergy-dns.ico" type="image/x-icon" />
+<link href="Doxygen_Fixes.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -161,7 +162,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Represents a DNS question, as defined in section 4.1.2 of RFC-1035. A DNS question is usually transmitted by a DNS client, asking to lookup the IP address of a host name. </p>
 <dl class="section author"><dt>Author</dt><dd>Swen Kooij (Photonios) </dd></dl>
 
-<p>Definition at line <a class="el" href="message__question_8h_source.html#l00052">52</a> of file <a class="el" href="message__question_8h_source.html">message_question.h</a>.</p>
+<p>Definition at line <a class="el" href="message__question_8h_source.html#l00053">53</a> of file <a class="el" href="message__question_8h_source.html">message_question.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a956458fba0c9b96fbd78408250095148"></a>
 <div class="memitem">
@@ -228,7 +229,7 @@ This will advance the position of the buffer with the size of the message.</dd><
 
 <p>Dumps all fields to the standard output, with their values. In the following format: </p>
 
-<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00093">93</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00084">84</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
 
 </div>
 </div>
@@ -248,7 +249,7 @@ This will advance the position of the buffer with the size of the message.</dd><
 <p>Gets the class of this question, the class denotes the format of the question. We only support IN (Internet) classes (1). </p>
 <dl class="section return"><dt>Returns</dt><dd>A value from the ResourceRecordClass enumuration. </dd></dl>
 
-<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00188">188</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00101">101</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
 
 </div>
 </div>
@@ -308,7 +309,7 @@ This will advance the position of the buffer with the size of the message.</dd><
 <p>Gets the type of question this is, what actually is meant, is the type or resource record that is expected when asking this question. </p>
 <dl class="section return"><dt>Returns</dt><dd>A value from the ResourceRecordType enumuration. </dd></dl>
 
-<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00178">178</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00091">91</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
 
 </div>
 </div>
@@ -338,7 +339,7 @@ Serilization will fail when no hostname is set.</dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A boolean indicating whether serilization was successful. True is returned when it was a success and false is returned when it failed. </dd></dl>
 
-<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00077">77</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00068">68</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
 
 </div>
 </div>
@@ -364,7 +365,7 @@ Serilization will fail when no hostname is set.</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00193">193</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00106">106</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
 
 </div>
 </div>
@@ -416,7 +417,7 @@ Serilization will fail when no hostname is set.</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00183">183</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00096">96</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
 
 </div>
 </div>
@@ -430,7 +431,7 @@ Serilization will fail when no hostname is set.</dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_senergy.html">Senergy</a></li><li class="navelem"><a class="el" href="namespace_senergy_1_1_dns.html">Dns</a></li><li class="navelem"><a class="el" href="class_senergy_1_1_dns_1_1_message_question.html">MessageQuestion</a></li>
-    <li class="footer">Generated on Wed Jan 29 2014 22:17:06 for Senergy by
+    <li class="footer">Generated on Sat Feb 1 2014 19:47:17 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -1,4 +1,4 @@
-.TH "Senergy::Dns" 3 "Wed Jan 29 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::Dns" 3 "Sat Feb 1 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -26,9 +26,17 @@ Senergy::Dns \-
 .br
 .RI "\fIRepresents a DNS question, as defined in section 4\&.1\&.2 of RFC-1035\&. A DNS question is usually transmitted by a DNS client, asking to lookup the IP address of a host name\&. \fP"
 .ti -1c
+.RI "class \fBResourceRecord\fP"
+.br
+.RI "\fIDefines a DNS Resource Record, as defined in RFC 1035, section 4\&.1\&.3\&. A DNS Recource record can appear both in the answer, authority and additional section of a DNS packet/message\&. \fP"
+.ti -1c
 .RI "class \fBRootNameServer\fP"
 .br
 .RI "\fIRepresents one of the 13 Root Name Servers (DNS) that are currently operating around the world\&. Provides access to the functionalities that root name servers offer\&. \fP"
+.ti -1c
+.RI "class \fBUtils\fP"
+.br
+.RI "\fIContains various utilities related to the DNS protocol\&. This are mostly functions that are used throughout the application\&. \fP"
 .in -1c
 .SS "Typedefs"
 
@@ -65,13 +73,13 @@ Senergy::Dns \-
 .PP
 Simple typedef for a shared pointer to a \fBMessageQuestion\fP\&. 
 .PP
-Definition at line 179 of file message_question\&.h\&.
+Definition at line 167 of file message_question\&.h\&.
 .SS "typedef std::vector<\fBMessageQuestionPtr\fP> \fBSenergy::Dns::MessageQuestionPtrVector\fP"
 
 .PP
 Simple typedef for a vector of \fBMessageQuestion\fP smart pointers\&. 
 .PP
-Definition at line 184 of file message_question\&.h\&.
+Definition at line 172 of file message_question\&.h\&.
 .SH "Enumeration Type Documentation"
 .PP 
 .SS "enum \fBSenergy::Dns::ResourceRecordClass\fP : unsigned short\fC [strong]\fP"

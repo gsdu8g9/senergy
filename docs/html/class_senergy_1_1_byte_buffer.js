@@ -14,6 +14,7 @@ var class_senergy_1_1_byte_buffer =
     [ "ReadRemaining", "class_senergy_1_1_byte_buffer.html#a391deafd9b6e3c4b4c2b92fe78358ebf", null ],
     [ "ReadRemaining", "class_senergy_1_1_byte_buffer.html#a8e9ec7a8d6c26c01a738768928fff704", null ],
     [ "ReadShort", "class_senergy_1_1_byte_buffer.html#a989443842e20c2feba4268e968911fe8", null ],
+    [ "ReadString", "class_senergy_1_1_byte_buffer.html#ab1f14bdb0b09b2144d1775fa2dff95a6", null ],
     [ "ReadUnsignedChar", "class_senergy_1_1_byte_buffer.html#ad9a7a05b0285fe070cde3983458de5f6", null ],
     [ "ReadUnsignedInt", "class_senergy_1_1_byte_buffer.html#a7abe5475b2a9adcad384d3125640aba2", null ],
     [ "ReadUnsignedShort", "class_senergy_1_1_byte_buffer.html#aa6b6bfdb398a75b92c79bcdfc1986821", null ],

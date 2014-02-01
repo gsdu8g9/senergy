@@ -2,48 +2,68 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
   <compounddef id="resource__record__classes_8h" kind="file">
     <compoundname>resource_record_classes.h</compoundname>
+    <includedby refid="resource__record__classes_8cpp" local="no">src/resource_record_classes.cpp</includedby>
     <includedby refid="message__question_8h" local="no">src/senergy/dns/message_question.h</includedby>
+    <includedby refid="resource__record_8h" local="no">src/senergy/dns/resource_record.h</includedby>
     <invincdepgraph>
-      <node id="205">
+      <node id="253">
+        <label>src/resource_record.cpp</label>
+        <link refid="resource__record_8cpp"/>
+      </node>
+      <node id="247">
         <label>src/message_question.cpp</label>
         <link refid="message__question_8cpp"/>
       </node>
-      <node id="209">
+      <node id="251">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="203">
+      <node id="244">
         <label>src/senergy/dns/resource_record_classes.h</label>
         <link refid="resource_record_classes.h"/>
-        <childnode refid="204" relation="include">
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="246" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
         </childnode>
       </node>
-      <node id="207">
+      <node id="249">
         <label>src/message.cpp</label>
         <link refid="message_8cpp"/>
       </node>
-      <node id="206">
+      <node id="245">
+        <label>src/resource_record_classes.cpp</label>
+        <link refid="resource__record__classes_8cpp"/>
+      </node>
+      <node id="248">
         <label>src/senergy/dns/message.h</label>
         <link refid="message_8h"/>
-        <childnode refid="207" relation="include">
+        <childnode refid="249" relation="include">
         </childnode>
-        <childnode refid="208" relation="include">
+        <childnode refid="250" relation="include">
         </childnode>
       </node>
-      <node id="208">
+      <node id="252">
+        <label>src/senergy/dns/resource_record.h</label>
+        <link refid="resource__record_8h"/>
+        <childnode refid="253" relation="include">
+        </childnode>
+      </node>
+      <node id="250">
         <label>src/senergy/senergy.h</label>
         <link refid="senergy_8h"/>
-        <childnode refid="209" relation="include">
+        <childnode refid="251" relation="include">
         </childnode>
       </node>
-      <node id="204">
+      <node id="246">
         <label>src/senergy/dns/message_question.h</label>
         <link refid="message__question_8h"/>
-        <childnode refid="205" relation="include">
+        <childnode refid="247" relation="include">
         </childnode>
-        <childnode refid="206" relation="include">
+        <childnode refid="248" relation="include">
         </childnode>
-        <childnode refid="208" relation="include">
+        <childnode refid="250" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

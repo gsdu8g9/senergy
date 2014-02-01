@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="349" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" bodystart="349" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="434" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" bodystart="434" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespace_senergy_1a9014e48a368555ba932efd8d17eb2d23" prot="public" static="no">
         <type>std::shared_ptr&lt; <ref refid="class_senergy_1_1_socket" kindref="compound">Socket</ref> &gt;</type>

@@ -1,4 +1,4 @@
-.TH "Senergy::ByteBuffer" 3 "Wed Jan 29 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::ByteBuffer" 3 "Sat Feb 1 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -85,18 +85,23 @@ A dynamiclly sized buffer for binary data\&. Resizes the underlying buffer when 
 .ti -1c
 .RI "void \fBWrite\fP (unsigned int value)"
 .br
+.RI "\fIWrites the specified value to the buffer\&. The buffer is automaticlly resized when the specified value does not fit into the buffer\&. \fP"
 .ti -1c
 .RI "void \fBWrite\fP (char value)"
 .br
+.RI "\fIWrites the specified value to the buffer\&. The buffer is automaticlly resized when the specified value does not fit into the buffer\&. \fP"
 .ti -1c
 .RI "void \fBWrite\fP (unsigned char value)"
 .br
+.RI "\fIWrites the specified value to the buffer\&. The buffer is automaticlly resized when the specified value does not fit into the buffer\&. \fP"
 .ti -1c
 .RI "void \fBWrite\fP (short value)"
 .br
+.RI "\fIWrites the specified value to the buffer\&. The buffer is automaticlly resized when the specified value does not fit into the buffer\&. \fP"
 .ti -1c
 .RI "void \fBWrite\fP (unsigned short value)"
 .br
+.RI "\fIWrites the specified value to the buffer\&. The buffer is automaticlly resized when the specified value does not fit into the buffer\&. \fP"
 .ti -1c
 .RI "bool \fBRead\fP (char *buffer, int size)"
 .br
@@ -108,9 +113,11 @@ A dynamiclly sized buffer for binary data\&. Resizes the underlying buffer when 
 .ti -1c
 .RI "bool \fBReadRemaining\fP (char *buffer, int max_size)"
 .br
+.RI "\fIReads all remaining bytes from the buffer\&. \fP"
 .ti -1c
 .RI "bool \fBReadRemaining\fP (char *buffer, unsigned int max_size)"
 .br
+.RI "\fIReads all remaining bytes from the buffer\&. \fP"
 .ti -1c
 .RI "int \fBReadInt\fP ()"
 .br
@@ -135,6 +142,10 @@ A dynamiclly sized buffer for binary data\&. Resizes the underlying buffer when 
 .RI "unsigned short \fBReadUnsignedShort\fP ()"
 .br
 .RI "\fIReads an unsigned short from the buffer\&. \fP"
+.ti -1c
+.RI "std::string \fBReadString\fP (unsigned int max_length=0)"
+.br
+.RI "\fIAttempts to read a string for the buffer until a string termination character, or the end of the buffer is encountered\&. \fP"
 .ti -1c
 .RI "std::string \fBReadAll\fP ()"
 .br
@@ -272,7 +283,7 @@ The contents of the buffer as a string\&.
 .PP
 
 .PP
-Definition at line 221 of file bytebuffer\&.cpp\&.
+Definition at line 237 of file bytebuffer\&.cpp\&.
 .SS "char Senergy::ByteBuffer::ReadChar ()"
 
 .PP
@@ -301,7 +312,39 @@ The integer that was read from the buffer\&. -1 is returned when reading failed\
 Definition at line 191 of file bytebuffer\&.cpp\&.
 .SS "bool Senergy::ByteBuffer::ReadRemaining (char *buffer, intmax_size)"
 
+.PP
+Reads all remaining bytes from the buffer\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to write the acquired data to, make sure the buffer is at least the size of of the specified maximum size\&. 
+.br
+\fImax_size\fP The maximum amount of bytes to copy into the specified buffer, the size of the specified buffer\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether writing the remainging bytes to the specified buffer was a success\&. 
+.RE
+.PP
+
 .SS "bool Senergy::ByteBuffer::ReadRemaining (char *buffer, unsigned intmax_size)"
+
+.PP
+Reads all remaining bytes from the buffer\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to write the acquired data to, make sure the buffer is at least the size of of the specified maximum size\&. 
+.br
+\fImax_size\fP The maximum amount of bytes to copy into the specified buffer, the size of the specified buffer\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether writing the remainging bytes to the specified buffer was a success\&. 
+.RE
+.PP
 
 .SS "short Senergy::ByteBuffer::ReadShort ()"
 
@@ -316,6 +359,24 @@ The short that was read from the buffer\&. -1 is returned when reading failed\&.
 
 .PP
 Definition at line 211 of file bytebuffer\&.cpp\&.
+.SS "std::string Senergy::ByteBuffer::ReadString (unsigned intmax_length = \fC0\fP)"
+
+.PP
+Attempts to read a string for the buffer until a string termination character, or the end of the buffer is encountered\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImax_length\fP Specifies the maximum length of the string being returned\&. Specifying zero disables this functionality\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The string that was read, if something went wrong, or the end of the buffer was reached, everything that was read so far will be returned\&. If the buffer is empty, or there are no more bytes left to read, an empty string will be returned\&. 
+.RE
+.PP
+
+.PP
+Definition at line 221 of file bytebuffer\&.cpp\&.
 .SS "unsigned char Senergy::ByteBuffer::ReadUnsignedChar ()"
 
 .PP
@@ -517,7 +578,9 @@ Writes the specified string to the buffer\&. The buffer is automaticlly resized 
 .PP
 \fBNote:\fP
 .RS 4
-Increases the position by the size of the specified string\&.
+Increases the position by the size of the specified string\&. 
+.PP
+Accounts for the string termination character (\\0)\&.
 .RE
 .PP
 \fBParameters:\fP
@@ -549,20 +612,90 @@ Definition at line 141 of file bytebuffer\&.cpp\&.
 .SS "void Senergy::ByteBuffer::Write (unsigned intvalue)"
 
 .PP
+Writes the specified value to the buffer\&. The buffer is automaticlly resized when the specified value does not fit into the buffer\&. 
+.PP
+\fBNote:\fP
+.RS 4
+Increases the position by the size of the specified value\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The value to write to the buffer\&. 
+.RE
+.PP
+
+.PP
 Definition at line 146 of file bytebuffer\&.cpp\&.
 .SS "void Senergy::ByteBuffer::Write (charvalue)"
+
+.PP
+Writes the specified value to the buffer\&. The buffer is automaticlly resized when the specified value does not fit into the buffer\&. 
+.PP
+\fBNote:\fP
+.RS 4
+Increases the position by the size of the specified value\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The value to write to the buffer\&. 
+.RE
+.PP
 
 .PP
 Definition at line 151 of file bytebuffer\&.cpp\&.
 .SS "void Senergy::ByteBuffer::Write (unsigned charvalue)"
 
 .PP
+Writes the specified value to the buffer\&. The buffer is automaticlly resized when the specified value does not fit into the buffer\&. 
+.PP
+\fBNote:\fP
+.RS 4
+Increases the position by the size of the specified value\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The value to write to the buffer\&. 
+.RE
+.PP
+
+.PP
 Definition at line 156 of file bytebuffer\&.cpp\&.
 .SS "void Senergy::ByteBuffer::Write (shortvalue)"
 
 .PP
+Writes the specified value to the buffer\&. The buffer is automaticlly resized when the specified value does not fit into the buffer\&. 
+.PP
+\fBNote:\fP
+.RS 4
+Increases the position by the size of the specified value\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The value to write to the buffer\&. 
+.RE
+.PP
+
+.PP
 Definition at line 161 of file bytebuffer\&.cpp\&.
 .SS "void Senergy::ByteBuffer::Write (unsigned shortvalue)"
+
+.PP
+Writes the specified value to the buffer\&. The buffer is automaticlly resized when the specified value does not fit into the buffer\&. 
+.PP
+\fBNote:\fP
+.RS 4
+Increases the position by the size of the specified value\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The value to write to the buffer\&. 
+.RE
+.PP
 
 .PP
 Definition at line 166 of file bytebuffer\&.cpp\&.

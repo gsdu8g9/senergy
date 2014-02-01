@@ -6,7 +6,9 @@
     <innerclass refid="struct_senergy_1_1_dns_1_1_message_header_fields" prot="public">Senergy::Dns::MessageHeaderFields</innerclass>
     <innerclass refid="class_senergy_1_1_dns_1_1_message_header" prot="public">Senergy::Dns::MessageHeader</innerclass>
     <innerclass refid="class_senergy_1_1_dns_1_1_message_question" prot="public">Senergy::Dns::MessageQuestion</innerclass>
+    <innerclass refid="class_senergy_1_1_dns_1_1_resource_record" prot="public">Senergy::Dns::ResourceRecord</innerclass>
     <innerclass refid="class_senergy_1_1_dns_1_1_root_name_server" prot="public">Senergy::Dns::RootNameServer</innerclass>
+    <innerclass refid="class_senergy_1_1_dns_1_1_utils" prot="public">Senergy::Dns::Utils</innerclass>
       <sectiondef kind="enum">
       <memberdef kind="enum" id="namespace_senergy_1_1_dns_1a953f153bc411213d621d00c1e1b3eb9d" prot="public" static="no">
         <name>ResourceRecordClass</name>
@@ -725,7 +727,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="179" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="179" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="167" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="167" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespace_senergy_1_1_dns_1a76982150ca0b86c08d888f3e3e805747" prot="public" static="no">
         <type>std::vector&lt; <ref refid="namespace_senergy_1_1_dns_1a425a2a6f3b5c18973c524a99bdfa4ef0" kindref="member">MessageQuestionPtr</ref> &gt;</type>
@@ -738,7 +740,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="184" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="184" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="172" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="172" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

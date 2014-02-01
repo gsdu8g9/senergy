@@ -1,5 +1,10 @@
 var searchData=
 [
+  ['m_5fclass',['m_class',['../class_senergy_1_1_dns_1_1_resource_record.html#a8eea45baed16ff1c408682d9da59b7c6',1,'Senergy::Dns::ResourceRecord']]],
+  ['m_5fhostname',['m_hostname',['../class_senergy_1_1_dns_1_1_resource_record.html#a3992d42302c4bc939f39c58546aaacaf',1,'Senergy::Dns::ResourceRecord']]],
+  ['m_5frd_5flength',['m_rd_length',['../class_senergy_1_1_dns_1_1_resource_record.html#a598323d2f75156a289df1152e30b563b',1,'Senergy::Dns::ResourceRecord']]],
+  ['m_5fttl',['m_ttl',['../class_senergy_1_1_dns_1_1_resource_record.html#ac30e456e4945e8bb9abd3d55fa168ff5',1,'Senergy::Dns::ResourceRecord']]],
+  ['m_5ftype',['m_type',['../class_senergy_1_1_dns_1_1_resource_record.html#a443ff133b10a314058bc6174558415a8',1,'Senergy::Dns::ResourceRecord']]],
   ['maila',['MAILA',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a59fe37d7dd88b5a7c76146d14db1331f',1,'Senergy::Dns']]],
   ['mailb',['MAILB',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ae599722792c31154f99048e56b9cf384',1,'Senergy::Dns']]],
   ['main',['main',['../main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.cpp']]],

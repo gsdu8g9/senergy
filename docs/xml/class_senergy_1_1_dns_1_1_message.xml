@@ -57,7 +57,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" line="68" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message.cpp" bodystart="33" bodyend="54"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" line="68" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message.cpp" bodystart="33" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_1a2e7978e799fadaa4f03fc881e5c8e0f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -83,7 +83,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" line="78" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message.cpp" bodystart="56" bodyend="78"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" line="78" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message.cpp" bodystart="58" bodyend="80"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_1a60d242fef8b20993f9cd9b4591453e1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" line="84" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message.cpp" bodystart="80" bodyend="83"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" line="84" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message.cpp" bodystart="82" bodyend="85"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_1a5d5219532098cf60e2395764e7f61aca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -110,7 +110,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" line="91" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message.cpp" bodystart="85" bodyend="88"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message.h" line="91" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message.cpp" bodystart="87" bodyend="90"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

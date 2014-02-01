@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['deserialize',['Deserialize',['../class_senergy_1_1_dns_1_1_message.html#a3857764a799ab123405420345f9b03ee',1,'Senergy::Dns::Message::Deserialize()'],['../class_senergy_1_1_dns_1_1_message_header.html#aa54f3864838fe22a4406e0c52a90a010',1,'Senergy::Dns::MessageHeader::Deserialize()'],['../class_senergy_1_1_dns_1_1_message_question.html#a1c66b45b448f262a4f2cf1317c89b5b3',1,'Senergy::Dns::MessageQuestion::Deserialize()']]],
+  ['decodehostname',['DecodeHostname',['../class_senergy_1_1_dns_1_1_utils.html#ad621e66ca0463aaa21c9b74b489f09f3',1,'Senergy::Dns::Utils']]],
+  ['deserialize',['Deserialize',['../class_senergy_1_1_dns_1_1_message.html#a3857764a799ab123405420345f9b03ee',1,'Senergy::Dns::Message::Deserialize()'],['../class_senergy_1_1_dns_1_1_message_header.html#aa54f3864838fe22a4406e0c52a90a010',1,'Senergy::Dns::MessageHeader::Deserialize()'],['../class_senergy_1_1_dns_1_1_message_question.html#a1c66b45b448f262a4f2cf1317c89b5b3',1,'Senergy::Dns::MessageQuestion::Deserialize()'],['../class_senergy_1_1_dns_1_1_resource_record.html#a4426ad69fd06a352835b00d18fd726a7',1,'Senergy::Dns::ResourceRecord::Deserialize()']]],
   ['dhcid',['DHCID',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a6e70731664048d83678c263374c8dd35',1,'Senergy::Dns']]],
   ['dlv',['DLV',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aede320f6102f02f5903553674ed8a3f5',1,'Senergy::Dns']]],
   ['dname',['DNAME',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a78e5dce13f93104bcc1c380f63d7ac17',1,'Senergy::Dns']]],

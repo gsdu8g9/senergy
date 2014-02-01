@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_senergy_1_1_dns_1_1_utils" kind="class" prot="public">
+    <compoundname>Senergy::Dns::Utils</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_utils_1a68f1ebf9810ecb225a4f73c4200778bf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Senergy::Dns::Utils::EncodeHostname</definition>
+        <argsstring>(const std::string &amp;hostname)</argsstring>
+        <name>EncodeHostname</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>hostname</declname>
+        </param>
+        <briefdescription>
+<para>Encodes the specified hostname and returns the result. Encoding a hostname means, replacing all dots, with single bytes, that tell how many characters one needs to count further to get to the next dot. </para>        </briefdescription>
+        <detaileddescription>
+<para>www.google.com -&gt; 3www6google3com</para><para>The dots that are being replaced with numbers are NOT ASCII. They are just single bytes. So, 3, is really 0x03.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hostname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hostname to encode.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The encoded hostname. If the specified hostname was empty, an empty string is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="62" column="1" bodyfile="/home/photonios/Documents/Senergy/src/utils.cpp" bodystart="29" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_utils_1ad621e66ca0463aaa21c9b74b489f09f3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Senergy::Dns::Utils::DecodeHostname</definition>
+        <argsstring>(const std::string &amp;hostname)</argsstring>
+        <name>DecodeHostname</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>hostname</declname>
+        </param>
+        <briefdescription>
+<para>Decodes the specified hostname and returns the result, reverse the result of encoding a hostname. Encoding a hostname means, replacing all dots, with single bytes, that tell how many characters one needs to count further to get to the next dot. </para>        </briefdescription>
+        <detaileddescription>
+<para>www.google.com -&gt; 3www6google3com</para><para>The dots that are being replaced with numbers are NOT ASCII. They are just single bytes. So, 3, is really 0x03.</para><para>So, this function reverse the above example:</para><para>3www6google3com -&gt; www.google.com</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hostname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hostname to decode.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The decoded hostname, if the specified hostname was empty, an empty string is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="84" column="1" bodyfile="/home/photonios/Documents/Senergy/src/utils.cpp" bodystart="67" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_utils_1a26ed8e47210810c24f8ab5a2588bf276" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short Senergy::Dns::Utils::HostToNetworkByteOrder</definition>
+        <argsstring>(unsigned short value)</argsstring>
+        <name>HostToNetworkByteOrder</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Converts the specified unsigned short value from host to network byte order. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to convert from host to network byte order.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The input value, in network byte order. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="94" column="1" bodyfile="/home/photonios/Documents/Senergy/src/utils.cpp" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_utils_1aa4e117a17add157b5e9bcb5fada4ac49" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short Senergy::Dns::Utils::NetworkToHostByteOrder</definition>
+        <argsstring>(unsigned short value)</argsstring>
+        <name>NetworkToHostByteOrder</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Converts the specified unsigned short value from network to host byte order. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to convert from network to host byte order.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The input value, in host byte order. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="104" column="1" bodyfile="/home/photonios/Documents/Senergy/src/utils.cpp" bodystart="102" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_utils_1a952d70b6ddc617c92819eb2ad7e37f0d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char Senergy::Dns::Utils::HostToNetworkByteOrder</definition>
+        <argsstring>(unsigned char value)</argsstring>
+        <name>HostToNetworkByteOrder</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Converts the specified unsigned character value from host to network byte order. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to convert from host to network byte order.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The input value, in network byte order. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="114" column="1" bodyfile="/home/photonios/Documents/Senergy/src/utils.cpp" bodystart="107" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_utils_1ac34288e7acfa54f6faaa775ab5654192" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char Senergy::Dns::Utils::NetworkToHostByteOrder</definition>
+        <argsstring>(unsigned char value)</argsstring>
+        <name>NetworkToHostByteOrder</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Converts the specified unsigned character value from network to host byte order. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to convert from network to host byte order.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The input value, in host byte order. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="124" column="1" bodyfile="/home/photonios/Documents/Senergy/src/utils.cpp" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_utils_1a7a521aadbb12776e2127abe8028411dc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Senergy::Dns::Utils::HostToNetworkByteOrder</definition>
+        <argsstring>(unsigned int value)</argsstring>
+        <name>HostToNetworkByteOrder</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Converts the specified unsigned integer value from host to network byte order. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to convert from host to network byte order.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The input value, in network byte order. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="134" column="1" bodyfile="/home/photonios/Documents/Senergy/src/utils.cpp" bodystart="117" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_utils_1ad4711275abcbc1d332f3c0208e74c4b8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Senergy::Dns::Utils::NetworkToHostByteOrder</definition>
+        <argsstring>(unsigned int value)</argsstring>
+        <name>NetworkToHostByteOrder</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Converts the specified unsigned integer value from network to host byte order. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to convert from network to host byte order.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The input value, in host byte order. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="144" column="1" bodyfile="/home/photonios/Documents/Senergy/src/utils.cpp" bodystart="122" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_utils_1a96aa042aaec1c2608a13a6ba83792336" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::Dns::Utils::IsDomainPointer</definition>
+        <argsstring>(const std::string &amp;hostname)</argsstring>
+        <name>IsDomainPointer</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>hostname</declname>
+        </param>
+        <briefdescription>
+<para>Determines whether the specified hostname/domain name is a pointer to an earlier occurence of the same domain name. </para>        </briefdescription>
+        <detaileddescription>
+<para>If it&apos;s a pointer, the first two bytes will be 0x01.</para><para><simplesect kind="see"><para>Section 4.1.4 of RFC-1025 (<ref refid="class_senergy_1_1_dns_1_1_message" kindref="compound">Message</ref> compression).</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hostname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hostname/domain name to check if it&apos;s a pointer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean indicating whether the specified hostname/domain name is a pointer. True is returned when it is a pointer and false is returned when it is not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="160" column="1" bodyfile="/home/photonios/Documents/Senergy/src/utils.cpp" bodystart="127" bodyend="134"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains various utilities related to the DNS protocol. This are mostly functions that are used throughout the application. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="44" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" bodystart="43" bodyend="161"/>
+    <listofallmembers>
+      <member refid="class_senergy_1_1_dns_1_1_utils_1ad621e66ca0463aaa21c9b74b489f09f3" prot="public" virt="non-virtual"><scope>Senergy::Dns::Utils</scope><name>DecodeHostname</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_utils_1a68f1ebf9810ecb225a4f73c4200778bf" prot="public" virt="non-virtual"><scope>Senergy::Dns::Utils</scope><name>EncodeHostname</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_utils_1a26ed8e47210810c24f8ab5a2588bf276" prot="public" virt="non-virtual"><scope>Senergy::Dns::Utils</scope><name>HostToNetworkByteOrder</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_utils_1a952d70b6ddc617c92819eb2ad7e37f0d" prot="public" virt="non-virtual"><scope>Senergy::Dns::Utils</scope><name>HostToNetworkByteOrder</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_utils_1a7a521aadbb12776e2127abe8028411dc" prot="public" virt="non-virtual"><scope>Senergy::Dns::Utils</scope><name>HostToNetworkByteOrder</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_utils_1a96aa042aaec1c2608a13a6ba83792336" prot="public" virt="non-virtual"><scope>Senergy::Dns::Utils</scope><name>IsDomainPointer</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_utils_1aa4e117a17add157b5e9bcb5fada4ac49" prot="public" virt="non-virtual"><scope>Senergy::Dns::Utils</scope><name>NetworkToHostByteOrder</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_utils_1ac34288e7acfa54f6faaa775ab5654192" prot="public" virt="non-virtual"><scope>Senergy::Dns::Utils</scope><name>NetworkToHostByteOrder</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_utils_1ad4711275abcbc1d332f3c0208e74c4b8" prot="public" virt="non-virtual"><scope>Senergy::Dns::Utils</scope><name>NetworkToHostByteOrder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

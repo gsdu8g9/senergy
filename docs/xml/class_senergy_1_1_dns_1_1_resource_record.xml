@@ -1,0 +1,328 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_senergy_1_1_dns_1_1_resource_record" kind="class" prot="public">
+    <compoundname>Senergy::Dns::ResourceRecord</compoundname>
+    <includes refid="resource__record_8h" local="no">resource_record.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_resource_record_1a3992d42302c4bc939f39c58546aaacaf" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Senergy::Dns::ResourceRecord::m_hostname</definition>
+        <argsstring></argsstring>
+        <name>m_hostname</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" line="175" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_resource_record_1a443ff133b10a314058bc6174558415a8" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0" kindref="member">ResourceRecordType</ref></type>
+        <definition>ResourceRecordType Senergy::Dns::ResourceRecord::m_type</definition>
+        <argsstring></argsstring>
+        <name>m_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" line="178" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_resource_record_1a8eea45baed16ff1c408682d9da59b7c6" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespace_senergy_1_1_dns_1a953f153bc411213d621d00c1e1b3eb9d" kindref="member">ResourceRecordClass</ref></type>
+        <definition>ResourceRecordClass Senergy::Dns::ResourceRecord::m_class</definition>
+        <argsstring></argsstring>
+        <name>m_class</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" line="181" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_resource_record_1ac30e456e4945e8bb9abd3d55fa168ff5" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Senergy::Dns::ResourceRecord::m_ttl</definition>
+        <argsstring></argsstring>
+        <name>m_ttl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" line="184" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_resource_record_1a598323d2f75156a289df1152e30b563b" prot="protected" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short Senergy::Dns::ResourceRecord::m_rd_length</definition>
+        <argsstring></argsstring>
+        <name>m_rd_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" line="187" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_1a5031132589becf3c4e8e4ecbd6ab4e5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Senergy::Dns::ResourceRecord::ResourceRecord</definition>
+        <argsstring>()</argsstring>
+        <name>ResourceRecord</name>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_senergy_1_1_dns_1_1_resource_record" kindref="compound">ResourceRecord</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" line="56" column="1" bodyfile="/home/photonios/Documents/Senergy/src/resource_record.cpp" bodystart="29" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_1a4426ad69fd06a352835b00d18fd726a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Senergy::Dns::ResourceRecord::Deserialize</definition>
+        <argsstring>(ByteBuffer &amp;buffer)</argsstring>
+        <name>Deserialize</name>
+        <param>
+          <type><ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Deserializes a resource record from the specified buffer into this instance. </para>        </briefdescription>
+        <detaileddescription>
+<para>The specified buffer must have at least 4 bytes left to read. However, the size of a resource record is variable, because of the name field.</para><para>When we can not read the entire resource record from the specified buffer, false is returned.</para><para><simplesect kind="note"><para>This will advance the buffer&apos;s position with the size of the record.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to read the resource record from.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean indicating whether deserialization was succesful. True is returned when deseriliazation was succesful and false when it was not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" line="77" column="1" bodyfile="/home/photonios/Documents/Senergy/src/resource_record.cpp" bodystart="38" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_1ad76b4f450fc1d7f0bd0bbf72c3f68a11" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Senergy::Dns::ResourceRecord::Serialize</definition>
+        <argsstring>(ByteBuffer &amp;buffer)</argsstring>
+        <name>Serialize</name>
+        <param>
+          <type><ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Serializes this instance into the specified buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para>The size of a resource record is variable, because of the name field.</para><para>If we cannot, for whatever reason, serialize this record, false is returned.</para><para><simplesect kind="note"><para>This will advance the buffer&apos;s position with the size of the record.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to write the serialized record to.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean indicating whether serialization was successful. True is returned when serialization was successful, and false is returned when it was not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" line="96" column="1" bodyfile="/home/photonios/Documents/Senergy/src/resource_record.cpp" bodystart="69" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_1a98a7d65be5a756f190247e18a5433661" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Senergy::Dns::ResourceRecord::GetHostname</definition>
+        <argsstring>()</argsstring>
+        <name>GetHostname</name>
+        <briefdescription>
+<para>Gets the hostname that was configued in this answer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The hostname configured in this answer. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" line="103" column="1" bodyfile="/home/photonios/Documents/Senergy/src/resource_record.cpp" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_1a571a18bfcdcc2e5ac0faa2e9cfac57fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::Dns::ResourceRecord::SetHostname</definition>
+        <argsstring>(const std::string hostname)</argsstring>
+        <name>SetHostname</name>
+        <param>
+          <type>const std::string</type>
+          <declname>hostname</declname>
+        </param>
+        <briefdescription>
+<para>Sets the hostname for this answer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hostname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hostname to set. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" line="110" column="1" bodyfile="/home/photonios/Documents/Senergy/src/resource_record.cpp" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_1a53ff0c81f7f0b79ac69df28a513242e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0" kindref="member">ResourceRecordType</ref></type>
+        <definition>ResourceRecordType Senergy::Dns::ResourceRecord::GetType</definition>
+        <argsstring>()</argsstring>
+        <name>GetType</name>
+        <briefdescription>
+<para>Gets the resource record type, the type of resource this record contains. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A value from the ResourceRecordType enumuration, which indicates what kind of resource this record contains. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" line="119" column="1" bodyfile="/home/photonios/Documents/Senergy/src/resource_record.cpp" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_1ac339b08bf936f1971de6b24b46dd5813" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::Dns::ResourceRecord::SetType</definition>
+        <argsstring>(ResourceRecordType type)</argsstring>
+        <name>SetType</name>
+        <param>
+          <type><ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0" kindref="member">ResourceRecordType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Sets the resource record type, the type of resource this record contains. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A value from the ResourceRecordType enumuration, which indicates what kind of resource this record contains. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" line="127" column="1" bodyfile="/home/photonios/Documents/Senergy/src/resource_record.cpp" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_1a5b26da86b8ba4d6c0899dc56a9fee7c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespace_senergy_1_1_dns_1a953f153bc411213d621d00c1e1b3eb9d" kindref="member">ResourceRecordClass</ref></type>
+        <definition>ResourceRecordClass Senergy::Dns::ResourceRecord::GetClass</definition>
+        <argsstring>()</argsstring>
+        <name>GetClass</name>
+        <briefdescription>
+<para>Gets the resource record class that was configured for this record. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A value from the ResourceRecordClass enumuration, which indicates what class the resource is of. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" line="136" column="1" bodyfile="/home/photonios/Documents/Senergy/src/resource_record.cpp" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_1a4fca01c4e494f21c574e5c2bc382f3a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::Dns::ResourceRecord::SetClass</definition>
+        <argsstring>(ResourceRecordClass clas)</argsstring>
+        <name>SetClass</name>
+        <param>
+          <type><ref refid="namespace_senergy_1_1_dns_1a953f153bc411213d621d00c1e1b3eb9d" kindref="member">ResourceRecordClass</ref></type>
+          <declname>clas</declname>
+        </param>
+        <briefdescription>
+<para>Sets the resource record class, the class of resource this record contains. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>clas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A value from the ResourceRecordClass enumuration, which indicates what class the resource is of. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" line="145" column="1" bodyfile="/home/photonios/Documents/Senergy/src/resource_record.cpp" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_1ab90850f8b050337867261a55a2e43284" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::Dns::ResourceRecord::NeedsCaching</definition>
+        <argsstring>()</argsstring>
+        <name>NeedsCaching</name>
+        <briefdescription>
+<para>Determines whether the resource in this record should be cached. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True when this record needs to be cached, and false when it should not be cached. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" line="153" column="1" bodyfile="/home/photonios/Documents/Senergy/src/resource_record.cpp" bodystart="114" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_1ab391deab6827e4e772809a3d025abb31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Senergy::Dns::ResourceRecord::GetMaxCachingTime</definition>
+        <argsstring>()</argsstring>
+        <name>GetMaxCachingTime</name>
+        <briefdescription>
+<para>Gets the maximum amount of seconds the resource in this record should be cached. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The maximum amount of seconds the resource in this record should be cached. If zero is returned, the resource should be cached at all. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" line="163" column="1" bodyfile="/home/photonios/Documents/Senergy/src/resource_record.cpp" bodystart="119" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_1affea007cc6d81a8a2dd80148c3386c62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Senergy::Dns::ResourceRecord::GetResourceSize</definition>
+        <argsstring>()</argsstring>
+        <name>GetResourceSize</name>
+        <briefdescription>
+<para>Gets the size of the resource this record contains. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The size of the resource in this record (amount of bytes). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" line="170" column="1" bodyfile="/home/photonios/Documents/Senergy/src/resource_record.cpp" bodystart="124" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines a DNS Resource Record, as defined in RFC 1035, section 4.1.3. A DNS Recource record can appear both in the answer, authority and additional section of a DNS packet/message. </para>    </briefdescription>
+    <detaileddescription>
+<para>All fields in a resource record are the same, regardless of whether it is an answer, authority or additional record. The only difference is the format of the last field, the resource data field. The format of this field depends on the resource record type. <verbatim>This class does NOT implement the resource data field, and does not serialize/deserilize it.
+</verbatim> Instead, new classes should be created per resource record type, which do implement the resource data field, and inherit from this class.</para><para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" line="51" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record.h" bodystart="50" bodyend="188"/>
+    <listofallmembers>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_1a4426ad69fd06a352835b00d18fd726a7" prot="public" virt="virtual"><scope>Senergy::Dns::ResourceRecord</scope><name>Deserialize</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_1a5b26da86b8ba4d6c0899dc56a9fee7c1" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecord</scope><name>GetClass</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_1a98a7d65be5a756f190247e18a5433661" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecord</scope><name>GetHostname</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_1ab391deab6827e4e772809a3d025abb31" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecord</scope><name>GetMaxCachingTime</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_1affea007cc6d81a8a2dd80148c3386c62" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecord</scope><name>GetResourceSize</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_1a53ff0c81f7f0b79ac69df28a513242e2" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecord</scope><name>GetType</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_1a8eea45baed16ff1c408682d9da59b7c6" prot="protected" virt="non-virtual"><scope>Senergy::Dns::ResourceRecord</scope><name>m_class</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_1a3992d42302c4bc939f39c58546aaacaf" prot="protected" virt="non-virtual"><scope>Senergy::Dns::ResourceRecord</scope><name>m_hostname</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_1a598323d2f75156a289df1152e30b563b" prot="protected" virt="non-virtual"><scope>Senergy::Dns::ResourceRecord</scope><name>m_rd_length</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_1ac30e456e4945e8bb9abd3d55fa168ff5" prot="protected" virt="non-virtual"><scope>Senergy::Dns::ResourceRecord</scope><name>m_ttl</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_1a443ff133b10a314058bc6174558415a8" prot="protected" virt="non-virtual"><scope>Senergy::Dns::ResourceRecord</scope><name>m_type</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_1ab90850f8b050337867261a55a2e43284" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecord</scope><name>NeedsCaching</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_1a5031132589becf3c4e8e4ecbd6ab4e5d" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecord</scope><name>ResourceRecord</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_1ad76b4f450fc1d7f0bd0bbf72c3f68a11" prot="public" virt="virtual"><scope>Senergy::Dns::ResourceRecord</scope><name>Serialize</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_1a4fca01c4e494f21c574e5c2bc382f3a3" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecord</scope><name>SetClass</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_1a571a18bfcdcc2e5ac0faa2e9cfac57fb" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecord</scope><name>SetHostname</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_1ac339b08bf936f1971de6b24b46dd5813" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecord</scope><name>SetType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,361 @@
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record}{\section{Senergy\-:\-:Dns\-:\-:Resource\-Record Class Reference}
+\label{class_senergy_1_1_dns_1_1_resource_record}\index{Senergy\-::\-Dns\-::\-Resource\-Record@{Senergy\-::\-Dns\-::\-Resource\-Record}}
+}
+
+
+Defines a D\-N\-S Resource Record, as defined in R\-F\-C 1035, section 4.\-1.\-3. A D\-N\-S Recource record can appear both in the answer, authority and additional section of a D\-N\-S packet/message.  
+
+
+
+
+{\ttfamily \#include $<$resource\-\_\-record.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_senergy_1_1_dns_1_1_resource_record_a5031132589becf3c4e8e4ecbd6ab4e5d}{Resource\-Record} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record}{Resource\-Record} class. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_senergy_1_1_dns_1_1_resource_record_a4426ad69fd06a352835b00d18fd726a7}{Deserialize} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
+\begin{DoxyCompactList}\small\item\em Deserializes a resource record from the specified buffer into this instance. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_senergy_1_1_dns_1_1_resource_record_ad76b4f450fc1d7f0bd0bbf72c3f68a11}{Serialize} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
+\begin{DoxyCompactList}\small\item\em Serializes this instance into the specified buffer. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_senergy_1_1_dns_1_1_resource_record_a98a7d65be5a756f190247e18a5433661}{Get\-Hostname} ()
+\begin{DoxyCompactList}\small\item\em Gets the hostname that was configued in this answer. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_dns_1_1_resource_record_a571a18bfcdcc2e5ac0faa2e9cfac57fb}{Set\-Hostname} (const std\-::string hostname)
+\begin{DoxyCompactList}\small\item\em Sets the hostname for this answer. \end{DoxyCompactList}\item 
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0}{Resource\-Record\-Type} \hyperlink{class_senergy_1_1_dns_1_1_resource_record_a53ff0c81f7f0b79ac69df28a513242e2}{Get\-Type} ()
+\begin{DoxyCompactList}\small\item\em Gets the resource record type, the type of resource this record contains. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_dns_1_1_resource_record_ac339b08bf936f1971de6b24b46dd5813}{Set\-Type} (\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0}{Resource\-Record\-Type} type)
+\begin{DoxyCompactList}\small\item\em Sets the resource record type, the type of resource this record contains. \end{DoxyCompactList}\item 
+\hyperlink{namespace_senergy_1_1_dns_a953f153bc411213d621d00c1e1b3eb9d}{Resource\-Record\-Class} \hyperlink{class_senergy_1_1_dns_1_1_resource_record_a5b26da86b8ba4d6c0899dc56a9fee7c1}{Get\-Class} ()
+\begin{DoxyCompactList}\small\item\em Gets the resource record class that was configured for this record. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_dns_1_1_resource_record_a4fca01c4e494f21c574e5c2bc382f3a3}{Set\-Class} (\hyperlink{namespace_senergy_1_1_dns_a953f153bc411213d621d00c1e1b3eb9d}{Resource\-Record\-Class} clas)
+\begin{DoxyCompactList}\small\item\em Sets the resource record class, the class of resource this record contains. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_dns_1_1_resource_record_ab90850f8b050337867261a55a2e43284}{Needs\-Caching} ()
+\begin{DoxyCompactList}\small\item\em Determines whether the resource in this record should be cached. \end{DoxyCompactList}\item 
+int \hyperlink{class_senergy_1_1_dns_1_1_resource_record_ab391deab6827e4e772809a3d025abb31}{Get\-Max\-Caching\-Time} ()
+\begin{DoxyCompactList}\small\item\em Gets the maximum amount of seconds the resource in this record should be cached. \end{DoxyCompactList}\item 
+int \hyperlink{class_senergy_1_1_dns_1_1_resource_record_affea007cc6d81a8a2dd80148c3386c62}{Get\-Resource\-Size} ()
+\begin{DoxyCompactList}\small\item\em Gets the size of the resource this record contains. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{class_senergy_1_1_dns_1_1_resource_record_a3992d42302c4bc939f39c58546aaacaf}{m\-\_\-hostname}
+\item 
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0}{Resource\-Record\-Type} \hyperlink{class_senergy_1_1_dns_1_1_resource_record_a443ff133b10a314058bc6174558415a8}{m\-\_\-type}
+\item 
+\hyperlink{namespace_senergy_1_1_dns_a953f153bc411213d621d00c1e1b3eb9d}{Resource\-Record\-Class} \hyperlink{class_senergy_1_1_dns_1_1_resource_record_a8eea45baed16ff1c408682d9da59b7c6}{m\-\_\-class}
+\item 
+unsigned int \hyperlink{class_senergy_1_1_dns_1_1_resource_record_ac30e456e4945e8bb9abd3d55fa168ff5}{m\-\_\-ttl}
+\item 
+unsigned short \hyperlink{class_senergy_1_1_dns_1_1_resource_record_a598323d2f75156a289df1152e30b563b}{m\-\_\-rd\-\_\-length}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines a D\-N\-S Resource Record, as defined in R\-F\-C 1035, section 4.\-1.\-3. A D\-N\-S Recource record can appear both in the answer, authority and additional section of a D\-N\-S packet/message. 
+
+All fields in a resource record are the same, regardless of whether it is an answer, authority or additional record. The only difference is the format of the last field, the resource data field. The format of this field depends on the resource record type. \begin{DoxyVerb}This class does NOT implement the resource data field, and does not serialize/deserilize it.
+\end{DoxyVerb}
+ Instead, new classes should be created per resource record type, which do implement the resource data field, and inherit from this class.
+
+\begin{DoxyAuthor}{Author}
+Swen Kooij (Photonios) 
+\end{DoxyAuthor}
+
+
+Definition at line 50 of file resource\-\_\-record.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_a5031132589becf3c4e8e4ecbd6ab4e5d}{\index{Senergy\-::\-Dns\-::\-Resource\-Record@{Senergy\-::\-Dns\-::\-Resource\-Record}!Resource\-Record@{Resource\-Record}}
+\index{Resource\-Record@{Resource\-Record}!Senergy::Dns::ResourceRecord@{Senergy\-::\-Dns\-::\-Resource\-Record}}
+\subsubsection[{Resource\-Record}]{\setlength{\rightskip}{0pt plus 5cm}Senergy\-::\-Dns\-::\-Resource\-Record\-::\-Resource\-Record (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_resource_record_a5031132589becf3c4e8e4ecbd6ab4e5d}
+
+
+Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record}{Resource\-Record} class. 
+
+
+
+Definition at line 29 of file resource\-\_\-record.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_a4426ad69fd06a352835b00d18fd726a7}{\index{Senergy\-::\-Dns\-::\-Resource\-Record@{Senergy\-::\-Dns\-::\-Resource\-Record}!Deserialize@{Deserialize}}
+\index{Deserialize@{Deserialize}!Senergy::Dns::ResourceRecord@{Senergy\-::\-Dns\-::\-Resource\-Record}}
+\subsubsection[{Deserialize}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Resource\-Record\-::\-Deserialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Byte\-Buffer} \&}]{buffer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_senergy_1_1_dns_1_1_resource_record_a4426ad69fd06a352835b00d18fd726a7}
+
+
+Deserializes a resource record from the specified buffer into this instance. 
+
+The specified buffer must have at least 4 bytes left to read. However, the size of a resource record is variable, because of the name field.
+
+When we can not read the entire resource record from the specified buffer, false is returned.
+
+\begin{DoxyNote}{Note}
+This will advance the buffer's position with the size of the record.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to read the resource record from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether deserialization was succesful. True is returned when deseriliazation was succesful and false when it was not. 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file resource\-\_\-record.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_a5b26da86b8ba4d6c0899dc56a9fee7c1}{\index{Senergy\-::\-Dns\-::\-Resource\-Record@{Senergy\-::\-Dns\-::\-Resource\-Record}!Get\-Class@{Get\-Class}}
+\index{Get\-Class@{Get\-Class}!Senergy::Dns::ResourceRecord@{Senergy\-::\-Dns\-::\-Resource\-Record}}
+\subsubsection[{Get\-Class}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\-Record\-Class} Senergy\-::\-Dns\-::\-Resource\-Record\-::\-Get\-Class (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_resource_record_a5b26da86b8ba4d6c0899dc56a9fee7c1}
+
+
+Gets the resource record class that was configured for this record. 
+
+\begin{DoxyReturn}{Returns}
+A value from the Resource\-Record\-Class enumuration, which indicates what class the resource is of. 
+\end{DoxyReturn}
+
+
+Definition at line 104 of file resource\-\_\-record.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_a98a7d65be5a756f190247e18a5433661}{\index{Senergy\-::\-Dns\-::\-Resource\-Record@{Senergy\-::\-Dns\-::\-Resource\-Record}!Get\-Hostname@{Get\-Hostname}}
+\index{Get\-Hostname@{Get\-Hostname}!Senergy::Dns::ResourceRecord@{Senergy\-::\-Dns\-::\-Resource\-Record}}
+\subsubsection[{Get\-Hostname}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Senergy\-::\-Dns\-::\-Resource\-Record\-::\-Get\-Hostname (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_resource_record_a98a7d65be5a756f190247e18a5433661}
+
+
+Gets the hostname that was configued in this answer. 
+
+\begin{DoxyReturn}{Returns}
+The hostname configured in this answer. 
+\end{DoxyReturn}
+
+
+Definition at line 84 of file resource\-\_\-record.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_ab391deab6827e4e772809a3d025abb31}{\index{Senergy\-::\-Dns\-::\-Resource\-Record@{Senergy\-::\-Dns\-::\-Resource\-Record}!Get\-Max\-Caching\-Time@{Get\-Max\-Caching\-Time}}
+\index{Get\-Max\-Caching\-Time@{Get\-Max\-Caching\-Time}!Senergy::Dns::ResourceRecord@{Senergy\-::\-Dns\-::\-Resource\-Record}}
+\subsubsection[{Get\-Max\-Caching\-Time}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Dns\-::\-Resource\-Record\-::\-Get\-Max\-Caching\-Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_resource_record_ab391deab6827e4e772809a3d025abb31}
+
+
+Gets the maximum amount of seconds the resource in this record should be cached. 
+
+\begin{DoxyReturn}{Returns}
+The maximum amount of seconds the resource in this record should be cached. If zero is returned, the resource should be cached at all. 
+\end{DoxyReturn}
+
+
+Definition at line 119 of file resource\-\_\-record.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_affea007cc6d81a8a2dd80148c3386c62}{\index{Senergy\-::\-Dns\-::\-Resource\-Record@{Senergy\-::\-Dns\-::\-Resource\-Record}!Get\-Resource\-Size@{Get\-Resource\-Size}}
+\index{Get\-Resource\-Size@{Get\-Resource\-Size}!Senergy::Dns::ResourceRecord@{Senergy\-::\-Dns\-::\-Resource\-Record}}
+\subsubsection[{Get\-Resource\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Dns\-::\-Resource\-Record\-::\-Get\-Resource\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_resource_record_affea007cc6d81a8a2dd80148c3386c62}
+
+
+Gets the size of the resource this record contains. 
+
+\begin{DoxyReturn}{Returns}
+The size of the resource in this record (amount of bytes). 
+\end{DoxyReturn}
+
+
+Definition at line 124 of file resource\-\_\-record.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_a53ff0c81f7f0b79ac69df28a513242e2}{\index{Senergy\-::\-Dns\-::\-Resource\-Record@{Senergy\-::\-Dns\-::\-Resource\-Record}!Get\-Type@{Get\-Type}}
+\index{Get\-Type@{Get\-Type}!Senergy::Dns::ResourceRecord@{Senergy\-::\-Dns\-::\-Resource\-Record}}
+\subsubsection[{Get\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\-Record\-Type} Senergy\-::\-Dns\-::\-Resource\-Record\-::\-Get\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_resource_record_a53ff0c81f7f0b79ac69df28a513242e2}
+
+
+Gets the resource record type, the type of resource this record contains. 
+
+\begin{DoxyReturn}{Returns}
+A value from the Resource\-Record\-Type enumuration, which indicates what kind of resource this record contains. 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file resource\-\_\-record.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_ab90850f8b050337867261a55a2e43284}{\index{Senergy\-::\-Dns\-::\-Resource\-Record@{Senergy\-::\-Dns\-::\-Resource\-Record}!Needs\-Caching@{Needs\-Caching}}
+\index{Needs\-Caching@{Needs\-Caching}!Senergy::Dns::ResourceRecord@{Senergy\-::\-Dns\-::\-Resource\-Record}}
+\subsubsection[{Needs\-Caching}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Resource\-Record\-::\-Needs\-Caching (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_resource_record_ab90850f8b050337867261a55a2e43284}
+
+
+Determines whether the resource in this record should be cached. 
+
+\begin{DoxyReturn}{Returns}
+True when this record needs to be cached, and false when it should not be cached. 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file resource\-\_\-record.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_ad76b4f450fc1d7f0bd0bbf72c3f68a11}{\index{Senergy\-::\-Dns\-::\-Resource\-Record@{Senergy\-::\-Dns\-::\-Resource\-Record}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Senergy::Dns::ResourceRecord@{Senergy\-::\-Dns\-::\-Resource\-Record}}
+\subsubsection[{Serialize}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Resource\-Record\-::\-Serialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Byte\-Buffer} \&}]{buffer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_senergy_1_1_dns_1_1_resource_record_ad76b4f450fc1d7f0bd0bbf72c3f68a11}
+
+
+Serializes this instance into the specified buffer. 
+
+The size of a resource record is variable, because of the name field.
+
+If we cannot, for whatever reason, serialize this record, false is returned.
+
+\begin{DoxyNote}{Note}
+This will advance the buffer's position with the size of the record.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to write the serialized record to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether serialization was successful. True is returned when serialization was successful, and false is returned when it was not. 
+\end{DoxyReturn}
+
+
+Definition at line 69 of file resource\-\_\-record.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_a4fca01c4e494f21c574e5c2bc382f3a3}{\index{Senergy\-::\-Dns\-::\-Resource\-Record@{Senergy\-::\-Dns\-::\-Resource\-Record}!Set\-Class@{Set\-Class}}
+\index{Set\-Class@{Set\-Class}!Senergy::Dns::ResourceRecord@{Senergy\-::\-Dns\-::\-Resource\-Record}}
+\subsubsection[{Set\-Class}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Dns\-::\-Resource\-Record\-::\-Set\-Class (
+\begin{DoxyParamCaption}
+\item[{{\bf Resource\-Record\-Class}}]{clas}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_resource_record_a4fca01c4e494f21c574e5c2bc382f3a3}
+
+
+Sets the resource record class, the class of resource this record contains. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clas} & A value from the Resource\-Record\-Class enumuration, which indicates what class the resource is of. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 109 of file resource\-\_\-record.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_a571a18bfcdcc2e5ac0faa2e9cfac57fb}{\index{Senergy\-::\-Dns\-::\-Resource\-Record@{Senergy\-::\-Dns\-::\-Resource\-Record}!Set\-Hostname@{Set\-Hostname}}
+\index{Set\-Hostname@{Set\-Hostname}!Senergy::Dns::ResourceRecord@{Senergy\-::\-Dns\-::\-Resource\-Record}}
+\subsubsection[{Set\-Hostname}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Dns\-::\-Resource\-Record\-::\-Set\-Hostname (
+\begin{DoxyParamCaption}
+\item[{const std\-::string}]{hostname}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_resource_record_a571a18bfcdcc2e5ac0faa2e9cfac57fb}
+
+
+Sets the hostname for this answer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & The hostname to set. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 89 of file resource\-\_\-record.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_ac339b08bf936f1971de6b24b46dd5813}{\index{Senergy\-::\-Dns\-::\-Resource\-Record@{Senergy\-::\-Dns\-::\-Resource\-Record}!Set\-Type@{Set\-Type}}
+\index{Set\-Type@{Set\-Type}!Senergy::Dns::ResourceRecord@{Senergy\-::\-Dns\-::\-Resource\-Record}}
+\subsubsection[{Set\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Dns\-::\-Resource\-Record\-::\-Set\-Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Resource\-Record\-Type}}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_resource_record_ac339b08bf936f1971de6b24b46dd5813}
+
+
+Sets the resource record type, the type of resource this record contains. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & A value from the Resource\-Record\-Type enumuration, which indicates what kind of resource this record contains. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 99 of file resource\-\_\-record.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_a8eea45baed16ff1c408682d9da59b7c6}{\index{Senergy\-::\-Dns\-::\-Resource\-Record@{Senergy\-::\-Dns\-::\-Resource\-Record}!m\-\_\-class@{m\-\_\-class}}
+\index{m\-\_\-class@{m\-\_\-class}!Senergy::Dns::ResourceRecord@{Senergy\-::\-Dns\-::\-Resource\-Record}}
+\subsubsection[{m\-\_\-class}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\-Record\-Class} Senergy\-::\-Dns\-::\-Resource\-Record\-::m\-\_\-class\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_senergy_1_1_dns_1_1_resource_record_a8eea45baed16ff1c408682d9da59b7c6}
+
+
+Definition at line 181 of file resource\-\_\-record.\-h.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_a3992d42302c4bc939f39c58546aaacaf}{\index{Senergy\-::\-Dns\-::\-Resource\-Record@{Senergy\-::\-Dns\-::\-Resource\-Record}!m\-\_\-hostname@{m\-\_\-hostname}}
+\index{m\-\_\-hostname@{m\-\_\-hostname}!Senergy::Dns::ResourceRecord@{Senergy\-::\-Dns\-::\-Resource\-Record}}
+\subsubsection[{m\-\_\-hostname}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Senergy\-::\-Dns\-::\-Resource\-Record\-::m\-\_\-hostname\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_senergy_1_1_dns_1_1_resource_record_a3992d42302c4bc939f39c58546aaacaf}
+
+
+Definition at line 175 of file resource\-\_\-record.\-h.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_a598323d2f75156a289df1152e30b563b}{\index{Senergy\-::\-Dns\-::\-Resource\-Record@{Senergy\-::\-Dns\-::\-Resource\-Record}!m\-\_\-rd\-\_\-length@{m\-\_\-rd\-\_\-length}}
+\index{m\-\_\-rd\-\_\-length@{m\-\_\-rd\-\_\-length}!Senergy::Dns::ResourceRecord@{Senergy\-::\-Dns\-::\-Resource\-Record}}
+\subsubsection[{m\-\_\-rd\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short Senergy\-::\-Dns\-::\-Resource\-Record\-::m\-\_\-rd\-\_\-length\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_senergy_1_1_dns_1_1_resource_record_a598323d2f75156a289df1152e30b563b}
+
+
+Definition at line 187 of file resource\-\_\-record.\-h.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_ac30e456e4945e8bb9abd3d55fa168ff5}{\index{Senergy\-::\-Dns\-::\-Resource\-Record@{Senergy\-::\-Dns\-::\-Resource\-Record}!m\-\_\-ttl@{m\-\_\-ttl}}
+\index{m\-\_\-ttl@{m\-\_\-ttl}!Senergy::Dns::ResourceRecord@{Senergy\-::\-Dns\-::\-Resource\-Record}}
+\subsubsection[{m\-\_\-ttl}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Senergy\-::\-Dns\-::\-Resource\-Record\-::m\-\_\-ttl\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_senergy_1_1_dns_1_1_resource_record_ac30e456e4945e8bb9abd3d55fa168ff5}
+
+
+Definition at line 184 of file resource\-\_\-record.\-h.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_a443ff133b10a314058bc6174558415a8}{\index{Senergy\-::\-Dns\-::\-Resource\-Record@{Senergy\-::\-Dns\-::\-Resource\-Record}!m\-\_\-type@{m\-\_\-type}}
+\index{m\-\_\-type@{m\-\_\-type}!Senergy::Dns::ResourceRecord@{Senergy\-::\-Dns\-::\-Resource\-Record}}
+\subsubsection[{m\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\-Record\-Type} Senergy\-::\-Dns\-::\-Resource\-Record\-::m\-\_\-type\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_senergy_1_1_dns_1_1_resource_record_a443ff133b10a314058bc6174558415a8}
+
+
+Definition at line 178 of file resource\-\_\-record.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/senergy/dns/\hyperlink{resource__record_8h}{resource\-\_\-record.\-h}\item 
+src/\hyperlink{resource__record_8cpp}{resource\-\_\-record.\-cpp}\end{DoxyCompactItemize}
