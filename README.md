@@ -13,5 +13,6 @@ For for more information on building and running Senergy, see the 'Building' pag
 
 Currently Senergy is under initial development. When version 1.0 is finished new goals will be set. The current goals, requirements and definition of done can be found in the project proposal document (see Documents page).
 
-HTML Documentation:
-https://rawgithub.com/Photonios/senergy/master/docs/html/index.html
+<hr>
+<strong>Documentation: </strong>https://rawgithub.com/Photonios/senergy/master/docs/html/index.html
+<hr>
