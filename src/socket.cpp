@@ -154,7 +154,7 @@ bool Socket::Close(CloseType close_type /* = CloseType::StopAll */)
 	return (shutdown_result >= 0);
 }
 
-int Socket::Send(const char *data, size_t data_size)
+int Socket::Send(void *data, size_t data_size)
 {
 	if(data == NULL || data_size <= 0 || !IsConnected())
 		return -1;
@@ -178,12 +178,17 @@ int Socket::Send(const char *data, size_t data_size)
 	return send_result;
 }
 
+int Socket::Send(char *data, size_t data_size)
+{
+	return Send((void*)data, data_size);
+}
+
 int Socket::Send(const std::string &data, size_t data_size)
 {	
 	if(data.empty() || data_size <= 0)
 		return -1;
 		
-	return Send(data.c_str(), data_size);
+	return Send((char *)data.c_str(), data_size);
 }
 
 int	Socket::Send(const std::string &data)
@@ -193,7 +198,7 @@ int	Socket::Send(const std::string &data)
 
 int	Socket::Send(ByteBuffer &send_buffer)
 {	
-	return Send((const char *)send_buffer.m_data, (size_t)send_buffer.m_current_size);
+	return Send(send_buffer.m_data, (size_t)send_buffer.m_current_size);
 }
 
 int	Socket::Receive(const char *receive_buffer, size_t size)

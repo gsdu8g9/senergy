@@ -281,7 +281,23 @@ public:
 	 * \returns	The amount of bytes that were succesfuly transmitted to the remote host.
 	 *			If the operation failed, zero will be returned.
 	 */
-	int				Send(const char *data, size_t data_size);
+	int				Send(void *data, size_t data_size);
+
+	/*!
+ 	 * \brief Sends the specified data, with the specified size to the remote host.
+ 	 *
+ 	 * \note This operation will fail when there is no active connection with the remote host.
+	 *
+	 * \param data 		The data to send to the remote host. If NULL is specified, the operation
+	 *			   		will immediately fail.
+	 * \param data_size The size of the data that was specified, the size of the data to send
+	 *					to the remote host. If zero or less is specified, the operation will
+	 *					fail immediately.
+	 *	
+	 * \returns	The amount of bytes that were succesfuly transmitted to the remote host.
+	 *			If the operation failed, zero will be returned.
+	 */
+	int				Send(char *data, size_t data_size);
 
 	/*!
  	 * \brief Sends the specified data, with the specified size to the remote host.

@@ -246,8 +246,12 @@ void ByteBuffer::__set_size(unsigned int new_size)
 {	
 	if(m_current_size >= new_size)
 		return;
-		
+
+	unsigned int size_increment = new_size - m_current_size;
+
 	m_data = (char*) realloc(m_data, sizeof(char) * new_size);
+	memset(m_data + m_current_size, 0, size_increment);
+
 	m_current_size = new_size;
 }
 

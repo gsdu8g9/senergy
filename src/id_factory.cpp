@@ -40,7 +40,7 @@ unsigned short IdFactory::GenerateId()
 
 	std::random_device rd;
     std::mt19937 eng(rd()); 
-    std::uniform_int_distribution<unsigned short> distr(0, 65535);
+    std::uniform_int_distribution<unsigned short> distr(0, 65535); // 65535 = maximum value for unsigned short
 
 	int attempts = 0;
 	while(attempts <= 20)
