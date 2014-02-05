@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('message__question_8h.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -111,13 +111,14 @@ $(document).ready(function(){initNavTree('message__question_8h.html','');});
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">message_question.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="bytebuffer_8h_source.html">senergy/bytebuffer.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="convert_8h_source.html">senergy/convert.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="vectorx_8h_source.html">senergy/vectorx.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="resource__record__types_8h_source.html">senergy/dns/resource_record_types.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="resource__record__classes_8h_source.html">senergy/dns/resource_record_classes.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="utils_8h_source.html">senergy/dns/utils.h</a>&gt;</code><br/>
@@ -143,24 +144,49 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespace_senergy_1_1_dns"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_senergy_1_1_dns.html">Senergy::Dns</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a425a2a6f3b5c18973c524a99bdfa4ef0"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr<br class="typebreak"/>
-&lt; MessageQuestion &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_senergy_1_1_dns.html#a425a2a6f3b5c18973c524a99bdfa4ef0">Senergy::Dns::MessageQuestionPtr</a></td></tr>
-<tr class="memdesc:a425a2a6f3b5c18973c524a99bdfa4ef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple typedef for a shared pointer to a <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html" title="Represents a DNS question, as defined in section 4.1.2 of RFC-1035. A DNS question is usually transmi...">MessageQuestion</a>.  <a href="#a425a2a6f3b5c18973c524a99bdfa4ef0">More...</a><br/></td></tr>
-<tr class="separator:a425a2a6f3b5c18973c524a99bdfa4ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76982150ca0b86c08d888f3e3e805747"><td class="memItemLeft" align="right" valign="top">typedef std::vector<br class="typebreak"/>
-&lt; MessageQuestionPtr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_senergy_1_1_dns.html#a76982150ca0b86c08d888f3e3e805747">Senergy::Dns::MessageQuestionPtrVector</a></td></tr>
-<tr class="memdesc:a76982150ca0b86c08d888f3e3e805747"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple typedef for a vector of <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html" title="Represents a DNS question, as defined in section 4.1.2 of RFC-1035. A DNS question is usually transmi...">MessageQuestion</a> smart pointers.  <a href="#a76982150ca0b86c08d888f3e3e805747">More...</a><br/></td></tr>
-<tr class="separator:a76982150ca0b86c08d888f3e3e805747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a4b780ef30c07c3c31b79d838bc443687"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="message__question_8h.html#a4b780ef30c07c3c31b79d838bc443687">MessageQuestionPtr</a>&#160;&#160;&#160;std::shared_ptr&lt;MessageQuestion&gt;</td></tr>
+<tr class="separator:a4b780ef30c07c3c31b79d838bc443687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa505746d3e0a330ca99da6969d9d1c5a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="message__question_8h.html#aa505746d3e0a330ca99da6969d9d1c5a">MessageQuestionPtrVector</a>&#160;&#160;&#160;VectorX&lt;<a class="el" href="message__question_8h.html#a4b780ef30c07c3c31b79d838bc443687">MessageQuestionPtr</a>&gt;</td></tr>
+<tr class="separator:aa505746d3e0a330ca99da6969d9d1c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a4b780ef30c07c3c31b79d838bc443687"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MessageQuestionPtr&#160;&#160;&#160;std::shared_ptr&lt;MessageQuestion&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="message__question_8h_source.html#l00043">43</a> of file <a class="el" href="message__question_8h_source.html">message_question.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa505746d3e0a330ca99da6969d9d1c5a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MessageQuestionPtrVector&#160;&#160;&#160;VectorX&lt;<a class="el" href="message__question_8h.html#a4b780ef30c07c3c31b79d838bc443687">MessageQuestionPtr</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="message__question_8h_source.html#l00044">44</a> of file <a class="el" href="message__question_8h_source.html">message_question.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_43fe9c611a9fdc7364335d381ea28669.html">senergy</a></li><li class="navelem"><a class="el" href="dir_12060af884c4747a1bab5c3df0820300.html">dns</a></li><li class="navelem"><a class="el" href="message__question_8h.html">message_question.h</a></li>
-    <li class="footer">Generated on Sat Feb 1 2014 19:47:17 for Senergy by
+    <li class="footer">Generated on Tue Feb 4 2014 21:08:08 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -1,0 +1,75 @@
+.TH "Senergy::Dns::IdFactory" 3 "Tue Feb 4 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::Dns::IdFactory \- 
+.PP
+Static global factory that is used to generate random identifiers for DNS messages/packets\&. This is to ensure, each ID that is generated is unique\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <id_factory\&.h>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static unsigned short \fBGenerateId\fP ()"
+.br
+.RI "\fIGenerates a new random identifier to be used as the unique identifier for a DNS message/packet\&. \fP"
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fBMaximumBufferSize\fP = 20"
+.br
+.RI "\fIDefines the maximum number of generated ID's that we keep in our buffer, before we throw them out\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Static global factory that is used to generate random identifiers for DNS messages/packets\&. This is to ensure, each ID that is generated is unique\&. 
+
+
+.PP
+\fBNote:\fP
+.RS 4
+This static class is thread-safe\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.PP
+Definition at line 44 of file id_factory\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "unsigned short Senergy::Dns::IdFactory::GenerateId ()\fC [static]\fP"
+
+.PP
+Generates a new random identifier to be used as the unique identifier for a DNS message/packet\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A unique, random identifier for a DNS message/packet\&. 
+.RE
+.PP
+
+.PP
+Definition at line 37 of file id_factory\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int Senergy::Dns::IdFactory::MaximumBufferSize = 20\fC [static]\fP"
+
+.PP
+Defines the maximum number of generated ID's that we keep in our buffer, before we throw them out\&. 
+.PP
+Definition at line 51 of file id_factory\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

@@ -4,6 +4,7 @@ var searchData=
   ['a6',['A6',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a0b3d5609ee81e50809b7351e848e4698',1,'Senergy::Dns']]],
   ['aaaa',['AAAA',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a098890dde069e9abad63f19a0d9e1f32',1,'Senergy::Dns']]],
   ['accept',['Accept',['../class_senergy_1_1_socket.html#abefda24a1a73b49e108a54342be0457e',1,'Senergy::Socket']]],
+  ['add',['Add',['../class_senergy_1_1_vector_x.html#acce23da783e4fa6d98a57bc4d3a48b2c',1,'Senergy::VectorX']]],
   ['additionalcount',['AdditionalCount',['../struct_senergy_1_1_dns_1_1_message_header_fields.html#aae6ba21a1c8baa30f0aafe90d165420f',1,'Senergy::Dns::MessageHeaderFields']]],
   ['afsdb',['AFSDB',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ab9e4ee544eaa7fe99267355742f7a03e',1,'Senergy::Dns']]],
   ['all_5frecords',['ALL_RECORDS',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a8261d4e71736b8ae72eae60ff8e18191',1,'Senergy::Dns']]],

@@ -76,6 +76,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -99,7 +100,7 @@ $(document).ready(function(){initNavTree('class_senergy_1_1_dns_1_1_message_ques
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -111,6 +112,7 @@ $(document).ready(function(){initNavTree('class_senergy_1_1_dns_1_1_message_ques
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_senergy_1_1_dns_1_1_message_question-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Senergy::Dns::MessageQuestion Class Reference</div>  </div>
@@ -127,6 +129,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a956458fba0c9b96fbd78408250095148"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a956458fba0c9b96fbd78408250095148">MessageQuestion</a> ()</td></tr>
 <tr class="memdesc:a956458fba0c9b96fbd78408250095148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html" title="Represents a DNS question, as defined in section 4.1.2 of RFC-1035. A DNS question is usually transmi...">MessageQuestion</a> class with default values.  <a href="#a956458fba0c9b96fbd78408250095148">More...</a><br/></td></tr>
 <tr class="separator:a956458fba0c9b96fbd78408250095148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a974c091de6a0f0d46aa82125db2f4517"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a974c091de6a0f0d46aa82125db2f4517">MessageQuestion</a> (const std::string &amp;hostname, <a class="el" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0">ResourceRecordType</a> type=<a class="el" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29">ResourceRecordType::A</a>, <a class="el" href="namespace_senergy_1_1_dns.html#a953f153bc411213d621d00c1e1b3eb9d">ResourceRecordClass</a> clas=<a class="el" href="namespace_senergy_1_1_dns.html#a953f153bc411213d621d00c1e1b3eb9dac8205c7636e728d448c2774e6a4a944b">ResourceRecordClass::Internet</a>)</td></tr>
+<tr class="memdesc:a974c091de6a0f0d46aa82125db2f4517"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html" title="Represents a DNS question, as defined in section 4.1.2 of RFC-1035. A DNS question is usually transmi...">MessageQuestion</a> class with the specifed hostname, and optionally the specified resource record type and class.  <a href="#a974c091de6a0f0d46aa82125db2f4517">More...</a><br/></td></tr>
+<tr class="separator:a974c091de6a0f0d46aa82125db2f4517"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fa467b516be4914f865bc5d053e98be"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a5fa467b516be4914f865bc5d053e98be">GetHostname</a> ()</td></tr>
 <tr class="memdesc:a5fa467b516be4914f865bc5d053e98be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the host name from the fields.  <a href="#a5fa467b516be4914f865bc5d053e98be">More...</a><br/></td></tr>
 <tr class="separator:a5fa467b516be4914f865bc5d053e98be"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,12 +162,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8676f25315240afe4473154f3708d3e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a8676f25315240afe4473154f3708d3e5">SetClass</a> (<a class="el" href="namespace_senergy_1_1_dns.html#a953f153bc411213d621d00c1e1b3eb9d">ResourceRecordClass</a> clas)</td></tr>
 <tr class="memdesc:a8676f25315240afe4473154f3708d3e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the class of this question, the class denotes the format of the question. We only support IN (Internet) classes (1).  <a href="#a8676f25315240afe4473154f3708d3e5">More...</a><br/></td></tr>
 <tr class="separator:a8676f25315240afe4473154f3708d3e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ae8237696d15da3b4b67f96fbd3d1d3e3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="message__question_8h.html#a4b780ef30c07c3c31b79d838bc443687">MessageQuestionPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#ae8237696d15da3b4b67f96fbd3d1d3e3">Create</a> (const std::string &amp;hostname, <a class="el" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0">ResourceRecordType</a> type=<a class="el" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29">ResourceRecordType::A</a>, <a class="el" href="namespace_senergy_1_1_dns.html#a953f153bc411213d621d00c1e1b3eb9d">ResourceRecordClass</a> clas=<a class="el" href="namespace_senergy_1_1_dns.html#a953f153bc411213d621d00c1e1b3eb9dac8205c7636e728d448c2774e6a4a944b">ResourceRecordClass::Internet</a>)</td></tr>
+<tr class="memdesc:ae8237696d15da3b4b67f96fbd3d1d3e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html" title="Represents a DNS question, as defined in section 4.1.2 of RFC-1035. A DNS question is usually transmi...">MessageQuestion</a> class as a shared pointer with the specifed hostname, and optionally the specified resource record type and class.  <a href="#ae8237696d15da3b4b67f96fbd3d1d3e3">More...</a><br/></td></tr>
+<tr class="separator:ae8237696d15da3b4b67f96fbd3d1d3e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a DNS question, as defined in section 4.1.2 of RFC-1035. A DNS question is usually transmitted by a DNS client, asking to lookup the IP address of a host name. </p>
 <dl class="section author"><dt>Author</dt><dd>Swen Kooij (Photonios) </dd></dl>
 
-<p>Definition at line <a class="el" href="message__question_8h_source.html#l00053">53</a> of file <a class="el" href="message__question_8h_source.html">message_question.h</a>.</p>
+<p>Definition at line <a class="el" href="message__question_8h_source.html#l00057">57</a> of file <a class="el" href="message__question_8h_source.html">message_question.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a956458fba0c9b96fbd78408250095148"></a>
 <div class="memitem">
@@ -183,7 +194,103 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a974c091de6a0f0d46aa82125db2f4517"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Senergy::Dns::MessageQuestion::MessageQuestion </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>hostname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0">ResourceRecordType</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29">ResourceRecordType::A</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_senergy_1_1_dns.html#a953f153bc411213d621d00c1e1b3eb9d">ResourceRecordClass</a>&#160;</td>
+          <td class="paramname"><em>clas</em> = <code><a class="el" href="namespace_senergy_1_1_dns.html#a953f153bc411213d621d00c1e1b3eb9dac8205c7636e728d448c2774e6a4a944b">ResourceRecordClass::Internet</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes a new instance of the <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html" title="Represents a DNS question, as defined in section 4.1.2 of RFC-1035. A DNS question is usually transmi...">MessageQuestion</a> class with the specifed hostname, and optionally the specified resource record type and class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hostname</td><td>The hostname/domain name that the question is being asked for. </td></tr>
+    <tr><td class="paramname">type</td><td>The type of record that is expected in the reply. </td></tr>
+    <tr><td class="paramname">clas</td><td>The class of the record that is expected in the reply. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00036">36</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae8237696d15da3b4b67f96fbd3d1d3e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="message__question_8h.html#a4b780ef30c07c3c31b79d838bc443687">MessageQuestionPtr</a> Senergy::Dns::MessageQuestion::Create </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>hostname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0">ResourceRecordType</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29">ResourceRecordType::A</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_senergy_1_1_dns.html#a953f153bc411213d621d00c1e1b3eb9d">ResourceRecordClass</a>&#160;</td>
+          <td class="paramname"><em>clas</em> = <code><a class="el" href="namespace_senergy_1_1_dns.html#a953f153bc411213d621d00c1e1b3eb9dac8205c7636e728d448c2774e6a4a944b">ResourceRecordClass::Internet</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes a new instance of the <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html" title="Represents a DNS question, as defined in section 4.1.2 of RFC-1035. A DNS question is usually transmi...">MessageQuestion</a> class as a shared pointer with the specifed hostname, and optionally the specified resource record type and class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hostname</td><td>The hostname/domain name that the question is being asked for. </td></tr>
+    <tr><td class="paramname">type</td><td>The type of record that is expected in the reply. </td></tr>
+    <tr><td class="paramname">clas</td><td>The class of the record that is expected in the reply. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00043">43</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a1c66b45b448f262a4f2cf1317c89b5b3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -210,7 +317,7 @@ This will advance the position of the buffer with the size of the message.</dd><
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A boolean indicating whether deserilization was successful. True is returned when it was a success and false is returned when it failed. </dd></dl>
 
-<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00049">49</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00064">64</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
 
 </div>
 </div>
@@ -229,7 +336,7 @@ This will advance the position of the buffer with the size of the message.</dd><
 
 <p>Dumps all fields to the standard output, with their values. In the following format: </p>
 
-<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00084">84</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00099">99</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
 
 </div>
 </div>
@@ -249,7 +356,7 @@ This will advance the position of the buffer with the size of the message.</dd><
 <p>Gets the class of this question, the class denotes the format of the question. We only support IN (Internet) classes (1). </p>
 <dl class="section return"><dt>Returns</dt><dd>A value from the ResourceRecordClass enumuration. </dd></dl>
 
-<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00101">101</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00116">116</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
 
 </div>
 </div>
@@ -269,7 +376,7 @@ This will advance the position of the buffer with the size of the message.</dd><
 <p>Gets the host name from the fields. </p>
 <dl class="section return"><dt>Returns</dt><dd>The host name that is being requested (resolved). </dd></dl>
 
-<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00033">33</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00048">48</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
 
 </div>
 </div>
@@ -289,7 +396,7 @@ This will advance the position of the buffer with the size of the message.</dd><
 <p>Gets the current size of this message, this is variable, depending on the length of the host name. </p>
 <dl class="section return"><dt>Returns</dt><dd>The current size of this message. </dd></dl>
 
-<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00043">43</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00058">58</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
 
 </div>
 </div>
@@ -309,7 +416,7 @@ This will advance the position of the buffer with the size of the message.</dd><
 <p>Gets the type of question this is, what actually is meant, is the type or resource record that is expected when asking this question. </p>
 <dl class="section return"><dt>Returns</dt><dd>A value from the ResourceRecordType enumuration. </dd></dl>
 
-<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00091">91</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00106">106</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
 
 </div>
 </div>
@@ -339,7 +446,7 @@ Serilization will fail when no hostname is set.</dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A boolean indicating whether serilization was successful. True is returned when it was a success and false is returned when it failed. </dd></dl>
 
-<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00068">68</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00083">83</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
 
 </div>
 </div>
@@ -365,7 +472,7 @@ Serilization will fail when no hostname is set.</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00106">106</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00121">121</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
 
 </div>
 </div>
@@ -391,7 +498,7 @@ Serilization will fail when no hostname is set.</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00038">38</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00053">53</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
 
 </div>
 </div>
@@ -417,7 +524,7 @@ Serilization will fail when no hostname is set.</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00096">96</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
+<p>Definition at line <a class="el" href="message__question_8cpp_source.html#l00111">111</a> of file <a class="el" href="message__question_8cpp_source.html">message_question.cpp</a>.</p>
 
 </div>
 </div>
@@ -431,7 +538,7 @@ Serilization will fail when no hostname is set.</dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_senergy.html">Senergy</a></li><li class="navelem"><a class="el" href="namespace_senergy_1_1_dns.html">Dns</a></li><li class="navelem"><a class="el" href="class_senergy_1_1_dns_1_1_message_question.html">MessageQuestion</a></li>
-    <li class="footer">Generated on Sat Feb 1 2014 19:47:17 for Senergy by
+    <li class="footer">Generated on Tue Feb 4 2014 21:08:09 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -33,5 +33,6 @@ var class_senergy_1_1_byte_buffer =
     [ "Write", "class_senergy_1_1_byte_buffer.html#add80584faab29bcadcb437b45ad97a87", null ],
     [ "Write", "class_senergy_1_1_byte_buffer.html#a061fe3c4158ba940e68bf4545639561e", null ],
     [ "Write", "class_senergy_1_1_byte_buffer.html#ae0e9d53b9afa8b098eed7b517a60b938", null ],
-    [ "Write", "class_senergy_1_1_byte_buffer.html#a9286d05c71ce66859098778f11be9c51", null ]
+    [ "Write", "class_senergy_1_1_byte_buffer.html#a9286d05c71ce66859098778f11be9c51", null ],
+    [ "Socket", "class_senergy_1_1_byte_buffer.html#ab510887d735ee73ab1cb598c66260e87", null ]
 ];

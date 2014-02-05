@@ -49,12 +49,16 @@ bool \hyperlink{class_senergy_1_1_socket_a9f2cfa080e3a5f365b52cc5fff94eb74}{List
 \begin{DoxyCompactList}\small\item\em Starts listening for incoming connections on the specified port. Binds itself to the specified port. Incoming connections can be accepted using the 'Accept(..)' method. \end{DoxyCompactList}\item 
 bool \hyperlink{class_senergy_1_1_socket_a859e2c4eec6792215f04363404658b0a}{Close} (\hyperlink{class_senergy_1_1_socket_a88ed1eb1a5c47ea1b395715aabd37ab4}{Close\-Type} close\-\_\-type=\hyperlink{class_senergy_1_1_socket_a88ed1eb1a5c47ea1b395715aabd37ab4a40b522922220c34afd8e1d4a3ba02208}{Close\-Type\-::\-Stop\-All})
 \begin{DoxyCompactList}\small\item\em Closes the current connection with the remote host. The method of closing the connection can be specified. \end{DoxyCompactList}\item 
-int \hyperlink{class_senergy_1_1_socket_a1407e054edc1fd012d8c85e563683947}{Send} (const char $\ast$data, size\-\_\-t data\-\_\-size)
+int \hyperlink{class_senergy_1_1_socket_aa475d6aa0daf4d73ce627bce6ee04849}{Send} (void $\ast$data, size\-\_\-t data\-\_\-size)
+\begin{DoxyCompactList}\small\item\em Sends the specified data, with the specified size to the remote host. \end{DoxyCompactList}\item 
+int \hyperlink{class_senergy_1_1_socket_a71531342844744a24298fecc25497671}{Send} (char $\ast$data, size\-\_\-t data\-\_\-size)
 \begin{DoxyCompactList}\small\item\em Sends the specified data, with the specified size to the remote host. \end{DoxyCompactList}\item 
 int \hyperlink{class_senergy_1_1_socket_a9ca07e0de8c6f74f27963f17c8b1398d}{Send} (const std\-::string \&data, size\-\_\-t data\-\_\-size)
 \begin{DoxyCompactList}\small\item\em Sends the specified data, with the specified size to the remote host. \end{DoxyCompactList}\item 
 int \hyperlink{class_senergy_1_1_socket_a72e1de4e0e3ef63bb020c62bea989fa6}{Send} (const std\-::string \&data)
 \begin{DoxyCompactList}\small\item\em Sends the specified data, the size (length) of the specified string is the size of the data that will be transmitted. \end{DoxyCompactList}\item 
+int \hyperlink{class_senergy_1_1_socket_a14fe1f1cc811d3f8bb437c4158840928}{Send} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&send\-\_\-buffer)
+\begin{DoxyCompactList}\small\item\em Sends the contents of the specified buffer. The entire buffer will be transmitted, regardless of the current position of the buffer. \end{DoxyCompactList}\item 
 int \hyperlink{class_senergy_1_1_socket_a7045f756d3c542ee1187a92ca13fa232}{Receive} (const char $\ast$receive\-\_\-buffer, size\-\_\-t size)
 \begin{DoxyCompactList}\small\item\em Attempts to receive the specified amount of data into the specified buffer. \end{DoxyCompactList}\item 
 std\-::string \hyperlink{class_senergy_1_1_socket_a0c1510be39bef49de15e8647b64dbb5e}{Receive} (size\-\_\-t size)
@@ -80,7 +84,7 @@ Swen Kooij / Photonios
 \end{DoxyAuthor}
 
 
-Definition at line 70 of file socket.\-h.
+Definition at line 71 of file socket.\-h.
 
 
 
@@ -97,7 +101,7 @@ This is defined outside the class definition as well to make it usuable for libr
 \end{DoxyNote}
 
 
-Definition at line 129 of file socket.\-h.
+Definition at line 130 of file socket.\-h.
 
 
 
@@ -122,7 +126,7 @@ Defines possible ways/means of closing/disconnecting an active socket connection
 \end{Desc}
 
 
-Definition at line 77 of file socket.\-h.
+Definition at line 78 of file socket.\-h.
 
 \hypertarget{class_senergy_1_1_socket_ad400245278746ac26e261bdda171c178}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Socket\-Protocol@{Socket\-Protocol}}
 \index{Socket\-Protocol@{Socket\-Protocol}!Senergy::Socket@{Senergy\-::\-Socket}}
@@ -142,7 +146,7 @@ Defines the possible socket protocols that this class supports.
 \end{Desc}
 
 
-Definition at line 117 of file socket.\-h.
+Definition at line 118 of file socket.\-h.
 
 \hypertarget{class_senergy_1_1_socket_ad82ad4c4412684091e687b92641bfbe9}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Socket\-Role@{Socket\-Role}}
 \index{Socket\-Role@{Socket\-Role}!Senergy::Socket@{Senergy\-::\-Socket}}
@@ -162,7 +166,7 @@ Defines the possible socket roles we can have. An instance of the \hyperlink{cla
 \end{Desc}
 
 
-Definition at line 99 of file socket.\-h.
+Definition at line 100 of file socket.\-h.
 
 
 
@@ -264,7 +268,7 @@ A shared pointer to an instance of the \hyperlink{class_senergy_1_1_socket}{Sock
 \end{DoxyReturn}
 
 
-Definition at line 270 of file socket.\-cpp.
+Definition at line 291 of file socket.\-cpp.
 
 \hypertarget{class_senergy_1_1_socket_a859e2c4eec6792215f04363404658b0a}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Close@{Close}}
 \index{Close@{Close}!Senergy::Socket@{Senergy\-::\-Socket}}
@@ -287,7 +291,7 @@ A boolean indiciating whether the operation succeseeded and false when the opera
 \end{DoxyReturn}
 
 
-Definition at line 135 of file socket.\-cpp.
+Definition at line 146 of file socket.\-cpp.
 
 \hypertarget{class_senergy_1_1_socket_a75946ce55f263abb105a22611819e11e}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Connect@{Connect}}
 \index{Connect@{Connect}!Senergy::Socket@{Senergy\-::\-Socket}}
@@ -334,7 +338,7 @@ The last error code that was set during a socket operation. If a negative number
 \end{DoxyReturn}
 
 
-Definition at line 292 of file socket.\-cpp.
+Definition at line 313 of file socket.\-cpp.
 
 \hypertarget{class_senergy_1_1_socket_aaab6b46c9e2733982df87eefb0fc77a2}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Get\-Remote\-Host@{Get\-Remote\-Host}}
 \index{Get\-Remote\-Host@{Get\-Remote\-Host}!Senergy::Socket@{Senergy\-::\-Socket}}
@@ -401,7 +405,7 @@ A boolean indiciating whether the operation succeseeded. True is returned when t
 \end{DoxyReturn}
 
 
-Definition at line 108 of file socket.\-cpp.
+Definition at line 119 of file socket.\-cpp.
 
 \hypertarget{class_senergy_1_1_socket_a7045f756d3c542ee1187a92ca13fa232}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Receive@{Receive}}
 \index{Receive@{Receive}!Senergy::Socket@{Senergy\-::\-Socket}}
@@ -430,7 +434,7 @@ The amount of bytes that were actually received and stored into the specified re
 \end{DoxyReturn}
 
 
-Definition at line 183 of file socket.\-cpp.
+Definition at line 204 of file socket.\-cpp.
 
 \hypertarget{class_senergy_1_1_socket_a0c1510be39bef49de15e8647b64dbb5e}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Receive@{Receive}}
 \index{Receive@{Receive}!Senergy::Socket@{Senergy\-::\-Socket}}
@@ -456,7 +460,7 @@ A string containing the received data. The length (size) of the returned string 
 \end{DoxyReturn}
 
 
-Definition at line 228 of file socket.\-cpp.
+Definition at line 249 of file socket.\-cpp.
 
 \hypertarget{class_senergy_1_1_socket_aad6b0a1a9f7ac380b11b9ef814ada58b}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Receive@{Receive}}
 \index{Receive@{Receive}!Senergy::Socket@{Senergy\-::\-Socket}}
@@ -485,16 +489,16 @@ The amount of bytes that were received. This number can be equal or less then th
 \end{DoxyReturn}
 
 
-Definition at line 249 of file socket.\-cpp.
+Definition at line 270 of file socket.\-cpp.
 
-\hypertarget{class_senergy_1_1_socket_a1407e054edc1fd012d8c85e563683947}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Send@{Send}}
+\hypertarget{class_senergy_1_1_socket_aa475d6aa0daf4d73ce627bce6ee04849}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Send@{Send}}
 \index{Send@{Send}!Senergy::Socket@{Senergy\-::\-Socket}}
 \subsubsection[{Send}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Socket\-::\-Send (
 \begin{DoxyParamCaption}
-\item[{const char $\ast$}]{data, }
+\item[{void $\ast$}]{data, }
 \item[{size\-\_\-t}]{data\-\_\-size}
 \end{DoxyParamCaption}
-)}}\label{class_senergy_1_1_socket_a1407e054edc1fd012d8c85e563683947}
+)}}\label{class_senergy_1_1_socket_aa475d6aa0daf4d73ce627bce6ee04849}
 
 
 Sends the specified data, with the specified size to the remote host. 
@@ -514,7 +518,36 @@ The amount of bytes that were succesfuly transmitted to the remote host. If the 
 \end{DoxyReturn}
 
 
-Definition at line 146 of file socket.\-cpp.
+Definition at line 157 of file socket.\-cpp.
+
+\hypertarget{class_senergy_1_1_socket_a71531342844744a24298fecc25497671}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Send@{Send}}
+\index{Send@{Send}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Send}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Socket\-::\-Send (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{data, }
+\item[{size\-\_\-t}]{data\-\_\-size}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_socket_a71531342844744a24298fecc25497671}
+
+
+Sends the specified data, with the specified size to the remote host. 
+
+\begin{DoxyNote}{Note}
+This operation will fail when there is no active connection with the remote host.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to send to the remote host. If N\-U\-L\-L is specified, the operation will immediately fail. \\
+\hline
+{\em data\-\_\-size} & The size of the data that was specified, the size of the data to send to the remote host. If zero or less is specified, the operation will fail immediately.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The amount of bytes that were succesfuly transmitted to the remote host. If the operation failed, zero will be returned. 
+\end{DoxyReturn}
+
+
+Definition at line 181 of file socket.\-cpp.
 
 \hypertarget{class_senergy_1_1_socket_a9ca07e0de8c6f74f27963f17c8b1398d}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Send@{Send}}
 \index{Send@{Send}!Senergy::Socket@{Senergy\-::\-Socket}}
@@ -543,7 +576,7 @@ The amount of bytes that were succesfuly transmitted to the remote host. If the 
 \end{DoxyReturn}
 
 
-Definition at line 170 of file socket.\-cpp.
+Definition at line 186 of file socket.\-cpp.
 
 \hypertarget{class_senergy_1_1_socket_a72e1de4e0e3ef63bb020c62bea989fa6}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Send@{Send}}
 \index{Send@{Send}!Senergy::Socket@{Senergy\-::\-Socket}}
@@ -569,7 +602,33 @@ The amount of bytes that were succesfuly transmitted to the remote host. If the 
 \end{DoxyReturn}
 
 
-Definition at line 178 of file socket.\-cpp.
+Definition at line 194 of file socket.\-cpp.
+
+\hypertarget{class_senergy_1_1_socket_a14fe1f1cc811d3f8bb437c4158840928}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Send@{Send}}
+\index{Send@{Send}!Senergy::Socket@{Senergy\-::\-Socket}}
+\subsubsection[{Send}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Socket\-::\-Send (
+\begin{DoxyParamCaption}
+\item[{{\bf Byte\-Buffer} \&}]{send\-\_\-buffer}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_socket_a14fe1f1cc811d3f8bb437c4158840928}
+
+
+Sends the contents of the specified buffer. The entire buffer will be transmitted, regardless of the current position of the buffer. 
+
+\begin{DoxyNote}{Note}
+This operation will fail when there is no active connection with the remote host.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em send\-\_\-buffer} & The buffer to read the data to transmit from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The amount of bytes that were succesfuly transmitted to the remote host. If the operation failed, zero will be returned. 
+\end{DoxyReturn}
+
+
+Definition at line 199 of file socket.\-cpp.
 
 \hypertarget{class_senergy_1_1_socket_a7ca3e4fb2e2f216773498e6f29e9ea14}{\index{Senergy\-::\-Socket@{Senergy\-::\-Socket}!Set\-Timeout@{Set\-Timeout}}
 \index{Set\-Timeout@{Set\-Timeout}!Senergy::Socket@{Senergy\-::\-Socket}}

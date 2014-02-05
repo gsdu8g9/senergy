@@ -3,9 +3,11 @@
   <compounddef id="namespace_senergy" kind="namespace">
     <compoundname>Senergy</compoundname>
     <innerclass refid="class_senergy_1_1_byte_buffer" prot="public">Senergy::ByteBuffer</innerclass>
+    <innerclass refid="class_senergy_1_1_circular_buffer" prot="public">Senergy::CircularBuffer</innerclass>
     <innerclass refid="class_senergy_1_1_convert" prot="public">Senergy::Convert</innerclass>
     <innerclass refid="class_senergy_1_1_print" prot="public">Senergy::Print</innerclass>
     <innerclass refid="class_senergy_1_1_socket" prot="public">Senergy::Socket</innerclass>
+    <innerclass refid="class_senergy_1_1_vector_x" prot="public">Senergy::VectorX</innerclass>
     <innernamespace refid="namespace_senergy_1_1_dns">Senergy::Dns</innernamespace>
     <innernamespace refid="namespace_senergy_1_1_socket_error">Senergy::SocketError</innernamespace>
       <sectiondef kind="typedef">
@@ -20,7 +22,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="434" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" bodystart="434" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="440" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" bodystart="440" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespace_senergy_1a9014e48a368555ba932efd8d17eb2d23" prot="public" static="no">
         <type>std::shared_ptr&lt; <ref refid="class_senergy_1_1_socket" kindref="compound">Socket</ref> &gt;</type>
@@ -33,7 +35,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="450" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="450" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="480" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="480" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespace_senergy_1a09aea2e19671645414361ca8388aebfe" prot="public" static="no">
+        <type><ref refid="class_senergy_1_1_vector_x" kindref="compound">VectorX</ref>&lt; std::string &gt;</type>
+        <definition>typedef VectorX&lt;std::string&gt; Senergy::StringVector</definition>
+        <argsstring></argsstring>
+        <name>StringVector</name>
+        <briefdescription>
+<para>A std::vector of std::string objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/types.h" line="35" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/types.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

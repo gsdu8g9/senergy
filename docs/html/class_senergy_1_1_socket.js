@@ -27,8 +27,10 @@ var class_senergy_1_1_socket =
     [ "Receive", "class_senergy_1_1_socket.html#a7045f756d3c542ee1187a92ca13fa232", null ],
     [ "Receive", "class_senergy_1_1_socket.html#a0c1510be39bef49de15e8647b64dbb5e", null ],
     [ "Receive", "class_senergy_1_1_socket.html#aad6b0a1a9f7ac380b11b9ef814ada58b", null ],
-    [ "Send", "class_senergy_1_1_socket.html#a1407e054edc1fd012d8c85e563683947", null ],
+    [ "Send", "class_senergy_1_1_socket.html#aa475d6aa0daf4d73ce627bce6ee04849", null ],
+    [ "Send", "class_senergy_1_1_socket.html#a71531342844744a24298fecc25497671", null ],
     [ "Send", "class_senergy_1_1_socket.html#a9ca07e0de8c6f74f27963f17c8b1398d", null ],
     [ "Send", "class_senergy_1_1_socket.html#a72e1de4e0e3ef63bb020c62bea989fa6", null ],
+    [ "Send", "class_senergy_1_1_socket.html#a14fe1f1cc811d3f8bb437c4158840928", null ],
     [ "SetTimeout", "class_senergy_1_1_socket.html#a7ca3e4fb2e2f216773498e6f29e9ea14", null ]
 ];

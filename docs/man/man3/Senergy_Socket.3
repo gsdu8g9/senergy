@@ -1,4 +1,4 @@
-.TH "Senergy::Socket" 3 "Sat Feb 1 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::Socket" 3 "Tue Feb 4 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -71,7 +71,11 @@ Provides an object-oriented interface for Berkely (BSD) sockets\&. Can act both 
 .br
 .RI "\fICloses the current connection with the remote host\&. The method of closing the connection can be specified\&. \fP"
 .ti -1c
-.RI "int \fBSend\fP (const char *data, size_t data_size)"
+.RI "int \fBSend\fP (void *data, size_t data_size)"
+.br
+.RI "\fISends the specified data, with the specified size to the remote host\&. \fP"
+.ti -1c
+.RI "int \fBSend\fP (char *data, size_t data_size)"
 .br
 .RI "\fISends the specified data, with the specified size to the remote host\&. \fP"
 .ti -1c
@@ -82,6 +86,10 @@ Provides an object-oriented interface for Berkely (BSD) sockets\&. Can act both 
 .RI "int \fBSend\fP (const std::string &data)"
 .br
 .RI "\fISends the specified data, the size (length) of the specified string is the size of the data that will be transmitted\&. \fP"
+.ti -1c
+.RI "int \fBSend\fP (\fBByteBuffer\fP &send_buffer)"
+.br
+.RI "\fISends the contents of the specified buffer\&. The entire buffer will be transmitted, regardless of the current position of the buffer\&. \fP"
 .ti -1c
 .RI "int \fBReceive\fP (const char *receive_buffer, size_t size)"
 .br
@@ -121,7 +129,7 @@ Swen Kooij / Photonios
 .PP
 
 .PP
-Definition at line 70 of file socket\&.h\&.
+Definition at line 71 of file socket\&.h\&.
 .SH "Member Typedef Documentation"
 .PP 
 .SS "typedef std::shared_ptr<\fBSocket\fP> \fBSenergy::Socket::SocketPtr\fP"
@@ -136,7 +144,7 @@ This is defined outside the class definition as well to make it usuable for libr
 .PP
 
 .PP
-Definition at line 129 of file socket\&.h\&.
+Definition at line 130 of file socket\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBSenergy::Socket::CloseType\fP : int\fC [strong]\fP"
@@ -156,7 +164,7 @@ Stop sending data, but receive all remaining data\&.
 \fB\fIStopAll \fP\fP
 Stop sending and receiving data immeditially\&./\&. 
 .PP
-Definition at line 77 of file socket\&.h\&.
+Definition at line 78 of file socket\&.h\&.
 .SS "enum \fBSenergy::Socket::SocketProtocol\fP : int\fC [strong]\fP"
 
 .PP
@@ -169,7 +177,7 @@ Defines the possible socket protocols that this class supports\&.
 .TP
 \fB\fIUDP \fP\fP
 .PP
-Definition at line 117 of file socket\&.h\&.
+Definition at line 118 of file socket\&.h\&.
 .SS "enum \fBSenergy::Socket::SocketRole\fP : int\fC [strong]\fP"
 
 .PP
@@ -184,7 +192,7 @@ The instance is behaving as a client socket, which is connected to a server\&.
 \fB\fIServer \fP\fP
 The instance is behaving as a server and is binded on a specific port, and listens for incoming connections\&. 
 .PP
-Definition at line 99 of file socket\&.h\&.
+Definition at line 100 of file socket\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Senergy::Socket::Socket (\fBSocketProtocol\fPprotocol)"
@@ -256,7 +264,7 @@ A shared pointer to an instance of the \fBSocket\fP class, which represents the 
 .PP
 
 .PP
-Definition at line 270 of file socket\&.cpp\&.
+Definition at line 291 of file socket\&.cpp\&.
 .SS "bool Senergy::Socket::Close (\fBCloseType\fPclose_type = \fC\fBCloseType::StopAll\fP\fP)"
 
 .PP
@@ -274,7 +282,7 @@ A boolean indiciating whether the operation succeseeded and false when the opera
 .PP
 
 .PP
-Definition at line 135 of file socket\&.cpp\&.
+Definition at line 146 of file socket\&.cpp\&.
 .SS "bool Senergy::Socket::Connect (const std::string &remote_ip, unsigned intremote_port)"
 
 .PP
@@ -312,7 +320,7 @@ The last error code that was set during a socket operation\&. If a negative numb
 .PP
 
 .PP
-Definition at line 292 of file socket\&.cpp\&.
+Definition at line 313 of file socket\&.cpp\&.
 .SS "std::string Senergy::Socket::GetRemoteHost ()"
 
 .PP
@@ -366,7 +374,7 @@ A boolean indiciating whether the operation succeseeded\&. True is returned when
 .PP
 
 .PP
-Definition at line 108 of file socket\&.cpp\&.
+Definition at line 119 of file socket\&.cpp\&.
 .SS "int Senergy::Socket::Receive (const char *receive_buffer, size_tsize)"
 
 .PP
@@ -391,7 +399,7 @@ The amount of bytes that were actually received and stored into the specified re
 .PP
 
 .PP
-Definition at line 183 of file socket\&.cpp\&.
+Definition at line 204 of file socket\&.cpp\&.
 .SS "std::string Senergy::Socket::Receive (size_tsize)"
 
 .PP
@@ -414,7 +422,7 @@ A string containing the received data\&. The length (size) of the returned strin
 .PP
 
 .PP
-Definition at line 228 of file socket\&.cpp\&.
+Definition at line 249 of file socket\&.cpp\&.
 .SS "int Senergy::Socket::Receive (\fBByteBuffer\fP &receive_buffer, size_tsize)"
 
 .PP
@@ -439,8 +447,8 @@ The amount of bytes that were received\&. This number can be equal or less then 
 .PP
 
 .PP
-Definition at line 249 of file socket\&.cpp\&.
-.SS "int Senergy::Socket::Send (const char *data, size_tdata_size)"
+Definition at line 270 of file socket\&.cpp\&.
+.SS "int Senergy::Socket::Send (void *data, size_tdata_size)"
 
 .PP
 Sends the specified data, with the specified size to the remote host\&. 
@@ -464,7 +472,32 @@ The amount of bytes that were succesfuly transmitted to the remote host\&. If th
 .PP
 
 .PP
-Definition at line 146 of file socket\&.cpp\&.
+Definition at line 157 of file socket\&.cpp\&.
+.SS "int Senergy::Socket::Send (char *data, size_tdata_size)"
+
+.PP
+Sends the specified data, with the specified size to the remote host\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This operation will fail when there is no active connection with the remote host\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP The data to send to the remote host\&. If NULL is specified, the operation will immediately fail\&. 
+.br
+\fIdata_size\fP The size of the data that was specified, the size of the data to send to the remote host\&. If zero or less is specified, the operation will fail immediately\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The amount of bytes that were succesfuly transmitted to the remote host\&. If the operation failed, zero will be returned\&. 
+.RE
+.PP
+
+.PP
+Definition at line 181 of file socket\&.cpp\&.
 .SS "int Senergy::Socket::Send (const std::string &data, size_tdata_size)"
 
 .PP
@@ -489,7 +522,7 @@ The amount of bytes that were succesfuly transmitted to the remote host\&. If th
 .PP
 
 .PP
-Definition at line 170 of file socket\&.cpp\&.
+Definition at line 186 of file socket\&.cpp\&.
 .SS "int Senergy::Socket::Send (const std::string &data)"
 
 .PP
@@ -512,7 +545,30 @@ The amount of bytes that were succesfuly transmitted to the remote host\&. If th
 .PP
 
 .PP
-Definition at line 178 of file socket\&.cpp\&.
+Definition at line 194 of file socket\&.cpp\&.
+.SS "int Senergy::Socket::Send (\fBByteBuffer\fP &send_buffer)"
+
+.PP
+Sends the contents of the specified buffer\&. The entire buffer will be transmitted, regardless of the current position of the buffer\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This operation will fail when there is no active connection with the remote host\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsend_buffer\fP The buffer to read the data to transmit from\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The amount of bytes that were succesfuly transmitted to the remote host\&. If the operation failed, zero will be returned\&. 
+.RE
+.PP
+
+.PP
+Definition at line 199 of file socket\&.cpp\&.
 .SS "bool Senergy::Socket::SetTimeout (unsigned intmilliseconds)"
 
 .PP

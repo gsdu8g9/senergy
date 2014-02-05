@@ -4,66 +4,100 @@
     <compoundname>resource_record_classes.h</compoundname>
     <includedby refid="resource__record__classes_8cpp" local="no">src/resource_record_classes.cpp</includedby>
     <includedby refid="message__question_8h" local="no">src/senergy/dns/message_question.h</includedby>
+    <includedby refid="record__ipv4address_8h" local="no">src/senergy/dns/record_ipv4address.h</includedby>
     <includedby refid="resource__record_8h" local="no">src/senergy/dns/resource_record.h</includedby>
+    <includedby refid="senergy_8h" local="no">src/senergy/senergy.h</includedby>
     <invincdepgraph>
-      <node id="253">
+      <node id="454">
         <label>src/resource_record.cpp</label>
         <link refid="resource__record_8cpp"/>
       </node>
-      <node id="247">
+      <node id="444">
         <label>src/message_question.cpp</label>
         <link refid="message__question_8cpp"/>
       </node>
-      <node id="251">
+      <node id="450">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="244">
+      <node id="441">
         <label>src/senergy/dns/resource_record_classes.h</label>
         <link refid="resource_record_classes.h"/>
-        <childnode refid="245" relation="include">
+        <childnode refid="442" relation="include">
         </childnode>
-        <childnode refid="246" relation="include">
+        <childnode refid="443" relation="include">
         </childnode>
-        <childnode refid="252" relation="include">
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="453" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
         </childnode>
       </node>
-      <node id="249">
+      <node id="446">
         <label>src/message.cpp</label>
         <link refid="message_8cpp"/>
       </node>
-      <node id="245">
+      <node id="442">
         <label>src/resource_record_classes.cpp</label>
         <link refid="resource__record__classes_8cpp"/>
       </node>
-      <node id="248">
+      <node id="445">
         <label>src/senergy/dns/message.h</label>
         <link refid="message_8h"/>
-        <childnode refid="249" relation="include">
+        <childnode refid="446" relation="include">
         </childnode>
-        <childnode refid="250" relation="include">
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
         </childnode>
       </node>
-      <node id="252">
+      <node id="448">
+        <label>src/requester.cpp</label>
+        <link refid="requester_8cpp"/>
+      </node>
+      <node id="453">
         <label>src/senergy/dns/resource_record.h</label>
         <link refid="resource__record_8h"/>
-        <childnode refid="253" relation="include">
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
         </childnode>
       </node>
-      <node id="250">
+      <node id="452">
+        <label>src/record_ipv4address.cpp</label>
+        <link refid="record__ipv4address_8cpp"/>
+      </node>
+      <node id="449">
         <label>src/senergy/senergy.h</label>
         <link refid="senergy_8h"/>
-        <childnode refid="251" relation="include">
+        <childnode refid="450" relation="include">
         </childnode>
       </node>
-      <node id="246">
+      <node id="451">
+        <label>src/senergy/dns/record_ipv4address.h</label>
+        <link refid="record__ipv4address_8h"/>
+        <childnode refid="452" relation="include">
+        </childnode>
+      </node>
+      <node id="447">
+        <label>src/senergy/dns/requester.h</label>
+        <link refid="requester_8h"/>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+      </node>
+      <node id="443">
         <label>src/senergy/dns/message_question.h</label>
         <link refid="message__question_8h"/>
-        <childnode refid="247" relation="include">
+        <childnode refid="444" relation="include">
         </childnode>
-        <childnode refid="248" relation="include">
+        <childnode refid="445" relation="include">
         </childnode>
-        <childnode refid="250" relation="include">
+        <childnode refid="449" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

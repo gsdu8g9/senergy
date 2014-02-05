@@ -1,0 +1,80 @@
+.TH "Senergy::Dns::Requester" 3 "Tue Feb 4 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::Dns::Requester \- 
+.PP
+Allows querying remote DNS servers, wraps sending and receiving DNS messages\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <requester\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRequester\fP (const std::string &dns_server)"
+.br
+.RI "\fIInitializes a new instance of the \fBRequester\fP class with the specified DNS server address\&. \fP"
+.ti -1c
+.RI "\fBStringVector\fP \fBLookup\fP (\fBResourceRecordType\fP record_type, const std::string &hostname)"
+.br
+.RI "\fIPerforms a lookup for the specified domain name, and requests the specified record from the remote DNS server\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Allows querying remote DNS servers, wraps sending and receiving DNS messages\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file requester\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Senergy::Dns::Requester::Requester (const std::string &dns_server)"
+
+.PP
+Initializes a new instance of the \fBRequester\fP class with the specified DNS server address\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdns_server\fP The IP address of a DNS server that this class will communicate with when requests are executed\&. 
+.RE
+.PP
+
+.PP
+Definition at line 29 of file requester\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBStringVector\fP Senergy::Dns::Requester::Lookup (\fBResourceRecordType\fPrecord_type, const std::string &hostname)"
+
+.PP
+Performs a lookup for the specified domain name, and requests the specified record from the remote DNS server\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrecord_type\fP A value from the ResourceRecordType enumuration, which indicates what kind of records should be returned\&. 
+.br
+\fIhostname\fP The domain name to look up the IP address(es) for\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A vector of strings, where each string is an IP address\&. 
+.RE
+.PP
+
+.PP
+Definition at line 35 of file requester\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

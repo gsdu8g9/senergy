@@ -1,0 +1,89 @@
+\hypertarget{class_senergy_1_1_dns_1_1_requester}{\section{Senergy\-:\-:Dns\-:\-:Requester Class Reference}
+\label{class_senergy_1_1_dns_1_1_requester}\index{Senergy\-::\-Dns\-::\-Requester@{Senergy\-::\-Dns\-::\-Requester}}
+}
+
+
+Allows querying remote D\-N\-S servers, wraps sending and receiving D\-N\-S messages.  
+
+
+
+
+{\ttfamily \#include $<$requester.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_senergy_1_1_dns_1_1_requester_a1b5fbbb5b5b115bdee9da48ce1466be0}{Requester} (const std\-::string \&dns\-\_\-server)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_requester}{Requester} class with the specified D\-N\-S server address. \end{DoxyCompactList}\item 
+\hyperlink{namespace_senergy_a09aea2e19671645414361ca8388aebfe}{String\-Vector} \hyperlink{class_senergy_1_1_dns_1_1_requester_a9221196d35728ad295d542c6f5342475}{Lookup} (\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0}{Resource\-Record\-Type} record\-\_\-type, const std\-::string \&hostname)
+\begin{DoxyCompactList}\small\item\em Performs a lookup for the specified domain name, and requests the specified record from the remote D\-N\-S server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Allows querying remote D\-N\-S servers, wraps sending and receiving D\-N\-S messages. 
+
+\begin{DoxyAuthor}{Author}
+Swen Kooij (Photonios) 
+\end{DoxyAuthor}
+
+
+Definition at line 42 of file requester.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_requester_a1b5fbbb5b5b115bdee9da48ce1466be0}{\index{Senergy\-::\-Dns\-::\-Requester@{Senergy\-::\-Dns\-::\-Requester}!Requester@{Requester}}
+\index{Requester@{Requester}!Senergy::Dns::Requester@{Senergy\-::\-Dns\-::\-Requester}}
+\subsubsection[{Requester}]{\setlength{\rightskip}{0pt plus 5cm}Senergy\-::\-Dns\-::\-Requester\-::\-Requester (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{dns\-\_\-server}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_requester_a1b5fbbb5b5b115bdee9da48ce1466be0}
+
+
+Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_requester}{Requester} class with the specified D\-N\-S server address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dns\-\_\-server} & The I\-P address of a D\-N\-S server that this class will communicate with when requests are executed. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file requester.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_requester_a9221196d35728ad295d542c6f5342475}{\index{Senergy\-::\-Dns\-::\-Requester@{Senergy\-::\-Dns\-::\-Requester}!Lookup@{Lookup}}
+\index{Lookup@{Lookup}!Senergy::Dns::Requester@{Senergy\-::\-Dns\-::\-Requester}}
+\subsubsection[{Lookup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf String\-Vector} Senergy\-::\-Dns\-::\-Requester\-::\-Lookup (
+\begin{DoxyParamCaption}
+\item[{{\bf Resource\-Record\-Type}}]{record\-\_\-type, }
+\item[{const std\-::string \&}]{hostname}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_requester_a9221196d35728ad295d542c6f5342475}
+
+
+Performs a lookup for the specified domain name, and requests the specified record from the remote D\-N\-S server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em record\-\_\-type} & A value from the Resource\-Record\-Type enumuration, which indicates what kind of records should be returned. \\
+\hline
+{\em hostname} & The domain name to look up the I\-P address(es) for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of strings, where each string is an I\-P address. 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file requester.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/senergy/dns/\hyperlink{requester_8h}{requester.\-h}\item 
+src/\hyperlink{requester_8cpp}{requester.\-cpp}\end{DoxyCompactItemize}

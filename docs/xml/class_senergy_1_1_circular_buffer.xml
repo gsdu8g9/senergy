@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_senergy_1_1_circular_buffer" kind="class" prot="public">
+    <compoundname>Senergy::CircularBuffer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::vector&lt; T &gt;</basecompoundref>
+    <includes refid="circular__buffer_8h" local="no">circular_buffer.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_senergy_1_1_circular_buffer_1add184a29367274b1b9b9f1897861b8a7" prot="private" static="no">
+        <type>std::vector&lt; T &gt;</type>
+        <definition>typedef std::vector&lt;T&gt; Senergy::CircularBuffer&lt; T &gt;::BaseClass</definition>
+        <argsstring></argsstring>
+        <name>BaseClass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/circular_buffer.h" line="74" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/circular_buffer.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_senergy_1_1_circular_buffer_1abc2510bcbfb86e8b06672fb5f83b9f1f" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Senergy::CircularBuffer&lt; T &gt;::m_size</definition>
+        <argsstring></argsstring>
+        <name>m_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/circular_buffer.h" line="78" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/circular_buffer.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_senergy_1_1_circular_buffer_1afbfd5d6b8b26136055c7ca379a532477" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Senergy::CircularBuffer&lt; T &gt;::m_offset</definition>
+        <argsstring></argsstring>
+        <name>m_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/circular_buffer.h" line="81" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/circular_buffer.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_senergy_1_1_circular_buffer_1abc3a5a67343d46ce83e2bbf678e83393" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Senergy::CircularBuffer&lt; T &gt;::CircularBuffer</definition>
+        <argsstring>(unsigned int size)</argsstring>
+        <name>CircularBuffer</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_senergy_1_1_circular_buffer" kindref="compound">CircularBuffer</ref> class with the specified size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/circular_buffer.h" line="49" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/circular_buffer.h" bodystart="49" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_circular_buffer_1a26e52b6923a05022fcac2f825aa907cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::CircularBuffer&lt; T &gt;::push_back</definition>
+        <argsstring>(T value)</argsstring>
+        <name>push_back</name>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Overrides the vector&apos;s push_back function, but makes sure no new entries are inserted. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to insert into the circular buffer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/circular_buffer.h" line="62" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/circular_buffer.h" bodystart="62" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Simple circular buffer which uses a vector, simple circular buffer which should not be used in situations that require efficiency and power. </para>    </briefdescription>
+    <detaileddescription>
+<para>T The type of data the circular buffer should hold.</para><para><simplesect kind="note"><para>The documentation does not explain how a circular buffer works. Please use Google for that.</para></simplesect>
+<simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>std::vector&lt; T &gt;</label>
+      </node>
+      <node id="2">
+        <label>Senergy::CircularBuffer&lt; T &gt;</label>
+        <link refid="class_senergy_1_1_circular_buffer"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>std::vector&lt; T &gt;</label>
+      </node>
+      <node id="4">
+        <label>Senergy::CircularBuffer&lt; T &gt;</label>
+        <link refid="class_senergy_1_1_circular_buffer"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/circular_buffer.h" line="43" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/circular_buffer.h" bodystart="42" bodyend="82"/>
+    <listofallmembers>
+      <member refid="class_senergy_1_1_circular_buffer_1add184a29367274b1b9b9f1897861b8a7" prot="private" virt="non-virtual"><scope>Senergy::CircularBuffer</scope><name>BaseClass</name></member>
+      <member refid="class_senergy_1_1_circular_buffer_1abc3a5a67343d46ce83e2bbf678e83393" prot="public" virt="non-virtual"><scope>Senergy::CircularBuffer</scope><name>CircularBuffer</name></member>
+      <member refid="class_senergy_1_1_circular_buffer_1afbfd5d6b8b26136055c7ca379a532477" prot="private" virt="non-virtual"><scope>Senergy::CircularBuffer</scope><name>m_offset</name></member>
+      <member refid="class_senergy_1_1_circular_buffer_1abc2510bcbfb86e8b06672fb5f83b9f1f" prot="private" virt="non-virtual"><scope>Senergy::CircularBuffer</scope><name>m_size</name></member>
+      <member refid="class_senergy_1_1_circular_buffer_1a26e52b6923a05022fcac2f825aa907cb" prot="public" virt="non-virtual"><scope>Senergy::CircularBuffer</scope><name>push_back</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

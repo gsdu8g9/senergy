@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('bytebuffer_8cpp_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -360,13 +360,17 @@ $(document).ready(function(){initNavTree('bytebuffer_8cpp_source.html','');});
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;{   </div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordflow">if</span>(m_current_size &gt;= new_size)</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        </div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    m_data = (<span class="keywordtype">char</span>*) realloc(m_data, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>) * new_size);</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    m_current_size = new_size;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;} <span class="comment">// namespace Senergy</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size_increment = new_size - m_current_size;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    m_data = (<span class="keywordtype">char</span>*) realloc(m_data, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>) * new_size);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    memset(m_data + m_current_size, 0, size_increment);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    m_current_size = new_size;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;}</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;} <span class="comment">// namespace Senergy</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
 <div class="ttc" id="class_senergy_1_1_byte_buffer_html_a13dd8a2eec8b93ac224f0da614c7f6f8"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a13dd8a2eec8b93ac224f0da614c7f6f8">Senergy::ByteBuffer::SetPosition</a></div><div class="ttdeci">bool SetPosition(int position)</div><div class="ttdoc">Sets the current position within the byte buffer. The position is the offset within the buffer that w...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00072">bytebuffer.cpp:72</a></div></div>
 <div class="ttc" id="class_senergy_1_1_byte_buffer_html_aa6b6bfdb398a75b92c79bcdfc1986821"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#aa6b6bfdb398a75b92c79bcdfc1986821">Senergy::ByteBuffer::ReadUnsignedShort</a></div><div class="ttdeci">unsigned short ReadUnsignedShort()</div><div class="ttdoc">Reads an unsigned short from the buffer. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00216">bytebuffer.cpp:216</a></div></div>
 <div class="ttc" id="class_senergy_1_1_byte_buffer_html_a989443842e20c2feba4268e968911fe8"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a989443842e20c2feba4268e968911fe8">Senergy::ByteBuffer::ReadShort</a></div><div class="ttdeci">short ReadShort()</div><div class="ttdoc">Reads a short from the buffer. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00211">bytebuffer.cpp:211</a></div></div>
@@ -392,7 +396,7 @@ $(document).ready(function(){initNavTree('bytebuffer_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="bytebuffer_8cpp.html">bytebuffer.cpp</a></li>
-    <li class="footer">Generated on Sat Feb 1 2014 19:47:16 for Senergy by
+    <li class="footer">Generated on Tue Feb 4 2014 21:08:08 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

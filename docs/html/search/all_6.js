@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['generateid',['GenerateId',['../class_senergy_1_1_dns_1_1_id_factory.html#aac705471a570313494ca2661a5888b3d',1,'Senergy::Dns::IdFactory']]],
   ['getclass',['GetClass',['../class_senergy_1_1_dns_1_1_message_question.html#ae86936e1268d7abf0a2210df9caa0840',1,'Senergy::Dns::MessageQuestion::GetClass()'],['../class_senergy_1_1_dns_1_1_resource_record.html#a5b26da86b8ba4d6c0899dc56a9fee7c1',1,'Senergy::Dns::ResourceRecord::GetClass()']]],
   ['geterrorcode',['GetErrorCode',['../class_senergy_1_1_socket.html#a403f7a2f6c5a94d4b14f73f0965da061',1,'Senergy::Socket']]],
   ['gethostname',['GetHostname',['../class_senergy_1_1_dns_1_1_message_question.html#a5fa467b516be4914f865bc5d053e98be',1,'Senergy::Dns::MessageQuestion::GetHostname()'],['../class_senergy_1_1_dns_1_1_resource_record.html#a98a7d65be5a756f190247e18a5433661',1,'Senergy::Dns::ResourceRecord::GetHostname()']]],

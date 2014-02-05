@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('namespace_senergy.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -130,6 +130,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_byte_buffer.html">ByteBuffer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A dynamiclly sized buffer for binary data. Resizes the underlying buffer when new data is written. Makes it easier to write to buffers that already contain data.  <a href="class_senergy_1_1_byte_buffer.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_circular_buffer.html">CircularBuffer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple circular buffer which uses a vector, simple circular buffer which should not be used in situations that require efficiency and power.  <a href="class_senergy_1_1_circular_buffer.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_convert.html">Convert</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple conversion class, which simplifies conversion between various native data types. Based on the idea of the '<a class="el" href="class_senergy_1_1_convert.html" title="A simple conversion class, which simplifies conversion between various native data types...">Convert</a>' class in the .NET framework.  <a href="class_senergy_1_1_convert.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,6 +141,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_socket.html">Socket</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides an object-oriented interface for Berkely (BSD) sockets. Can act both as a server as well as a client. The main purpose of this class class is to provide a more C++ like interface for TCP sockets.  <a href="class_senergy_1_1_socket.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_vector_x.html">VectorX</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An improvemend upon the standard vector (std::vector), but it's interface is more like the rest of <a class="el" href="namespace_senergy.html">Senergy</a> (naming). All normal functionality is still available, and switching between <a class="el" href="class_senergy_1_1_vector_x.html" title="An improvemend upon the standard vector (std::vector), but it&#39;s interface is more like the rest of Se...">VectorX</a> and std::vector should be painless.  <a href="class_senergy_1_1_vector_x.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -149,6 +155,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a9014e48a368555ba932efd8d17eb2d23"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="class_senergy_1_1_socket.html">Socket</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_senergy.html#a9014e48a368555ba932efd8d17eb2d23">SocketPtr</a></td></tr>
 <tr class="memdesc:a9014e48a368555ba932efd8d17eb2d23"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple typedef for the shared pointer of a TcpSocket instance.  <a href="#a9014e48a368555ba932efd8d17eb2d23">More...</a><br/></td></tr>
 <tr class="separator:a9014e48a368555ba932efd8d17eb2d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09aea2e19671645414361ca8388aebfe"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_senergy_1_1_vector_x.html">VectorX</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_senergy.html#a09aea2e19671645414361ca8388aebfe">StringVector</a></td></tr>
+<tr class="memdesc:a09aea2e19671645414361ca8388aebfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">A std::vector of std::string objects.  <a href="#a09aea2e19671645414361ca8388aebfe">More...</a><br/></td></tr>
+<tr class="separator:a09aea2e19671645414361ca8388aebfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="a30f5cfaeb333ffdf2c3332cc590a57ea"></a>
@@ -163,7 +172,7 @@ Typedefs</h2></td></tr>
 
 <p>A simple typedef for a shared pointer to a <a class="el" href="class_senergy_1_1_byte_buffer.html" title="A dynamiclly sized buffer for binary data. Resizes the underlying buffer when new data is written...">ByteBuffer</a> instance. </p>
 
-<p>Definition at line <a class="el" href="bytebuffer_8h_source.html#l00434">434</a> of file <a class="el" href="bytebuffer_8h_source.html">bytebuffer.h</a>.</p>
+<p>Definition at line <a class="el" href="bytebuffer_8h_source.html#l00440">440</a> of file <a class="el" href="bytebuffer_8h_source.html">bytebuffer.h</a>.</p>
 
 </div>
 </div>
@@ -179,7 +188,23 @@ Typedefs</h2></td></tr>
 
 <p>A simple typedef for the shared pointer of a TcpSocket instance. </p>
 
-<p>Definition at line <a class="el" href="socket_8h_source.html#l00450">450</a> of file <a class="el" href="socket_8h_source.html">socket.h</a>.</p>
+<p>Definition at line <a class="el" href="socket_8h_source.html#l00480">480</a> of file <a class="el" href="socket_8h_source.html">socket.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a09aea2e19671645414361ca8388aebfe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_senergy_1_1_vector_x.html">VectorX</a>&lt;std::string&gt; <a class="el" href="namespace_senergy.html#a09aea2e19671645414361ca8388aebfe">Senergy::StringVector</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A std::vector of std::string objects. </p>
+
+<p>Definition at line <a class="el" href="types_8h_source.html#l00035">35</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -189,7 +214,7 @@ Typedefs</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_senergy.html">Senergy</a></li>
-    <li class="footer">Generated on Sat Feb 1 2014 19:47:17 for Senergy by
+    <li class="footer">Generated on Tue Feb 4 2014 21:08:08 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

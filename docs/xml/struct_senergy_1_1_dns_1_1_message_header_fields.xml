@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="59" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="59" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="61" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_senergy_1_1_dns_1_1_message_header_fields_1ab5d7c8933016bb7288462b4a0ac131a5" prot="public" static="no" mutable="no">
         <type>unsigned char</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="67" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="67" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="69" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="69" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_senergy_1_1_dns_1_1_message_header_fields_1a15d1ee99bf788c080001c3216c88274c" prot="public" static="no" mutable="no">
         <type>unsigned char</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="74" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="74" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="76" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="76" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_senergy_1_1_dns_1_1_message_header_fields_1a706fe34b459a6aaacc28f0249213b013" prot="public" static="no" mutable="no">
         <type>unsigned char</type>
@@ -58,7 +58,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="86" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="86" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="88" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="88" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_senergy_1_1_dns_1_1_message_header_fields_1ac2d7ba4468405e5693f07d4321058be0" prot="public" static="no" mutable="no">
         <type>unsigned char</type>
@@ -72,7 +72,7 @@
 <para>0 a standard query (QUERY)</para><para>1 an inverse query (IQUERY)</para><para>2 a server status request (STATUS)</para><para>3-15 reserved for future use </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="101" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="101" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="103" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="103" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_senergy_1_1_dns_1_1_message_header_fields_1a0d0ac4fa85684c3d66a84e3392f3ef99" prot="public" static="no" mutable="no">
         <type>unsigned char</type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="107" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="107" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="109" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="109" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_senergy_1_1_dns_1_1_message_header_fields_1a2f42c94d4e50dd7a63b11c8b374597c4" prot="public" static="no" mutable="no">
         <type>unsigned char</type>
@@ -100,7 +100,7 @@
 <para>0 No error condition</para><para>1 Format error - The name server was unable to interpret the query.</para><para>2 Server failure - The name server was unable to process this query due to a problem with the name server.</para><para>3 Name Error - Meaningful only for responses from an authoritative name server, this code signifies that the domain name referenced in the query does not exist.</para><para>4 Not Implemented - The name server does not support the requested kind of query.</para><para>5 Refused - The name server refuses to perform the specified operation for policy reasons. For example, a name server may not wish to provide the information to the particular requester, or a name server may not wish to perform a particular operation (e.g., zone transfer) for particular data.</para><para>6-15 Reserved for future use. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="143" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="143" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="145" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="145" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_senergy_1_1_dns_1_1_message_header_fields_1a2c846064b4582f46a94bd90b32ef1cd9" prot="public" static="no" mutable="no">
         <type>unsigned char</type>
@@ -116,7 +116,7 @@
       1               Checking is enabled on the DNS resolver.</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="152" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="152" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="154" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="154" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_senergy_1_1_dns_1_1_message_header_fields_1a3788cbe9e2663b3be0cad8cbca8dc985" prot="public" static="no" mutable="no">
         <type>unsigned char</type>
@@ -130,7 +130,7 @@
 <para>0 The DNS data is not authenticated.</para><para>1 The DNS data is authenticated. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="162" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="162" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="164" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="164" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_senergy_1_1_dns_1_1_message_header_fields_1afb988d15085d4f740df367d1792440c7" prot="public" static="no" mutable="no">
         <type>unsigned char</type>
@@ -145,7 +145,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="171" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="171" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="173" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="173" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_senergy_1_1_dns_1_1_message_header_fields_1afbb68b60a28f855e64eb13615fc2633e" prot="public" static="no" mutable="no">
         <type>unsigned char</type>
@@ -159,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="178" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="178" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="180" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="180" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_senergy_1_1_dns_1_1_message_header_fields_1a8af9bbfa134c9e0d4fc846103f7b72ad" prot="public" static="no" mutable="no">
         <type>unsigned short</type>
@@ -172,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="184" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="184" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="186" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="186" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_senergy_1_1_dns_1_1_message_header_fields_1a38e5101ec862c400628d66192c5b9878" prot="public" static="no" mutable="no">
         <type>unsigned short</type>
@@ -185,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="190" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="190" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="192" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="192" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_senergy_1_1_dns_1_1_message_header_fields_1a963b92841b3f7fc5fc9268c963d32d8d" prot="public" static="no" mutable="no">
         <type>unsigned short</type>
@@ -198,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="197" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="197" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="199" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="199" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_senergy_1_1_dns_1_1_message_header_fields_1aae6ba21a1c8baa30f0aafe90d165420f" prot="public" static="no" mutable="no">
         <type>unsigned short</type>
@@ -211,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="202" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="202" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="204" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="204" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -221,7 +221,7 @@
 <simplesect kind="see"><para><ulink url="http://msdn.microsoft.com/en-us/library/windows/desktop/ms682059(v=vs.85).aspx">http://msdn.microsoft.com/en-us/library/windows/desktop/ms682059(v=vs.85).aspx</ulink> </para><simplesectsep/><para><ulink url="http://www.ietf.org/rfc/rfc1035.txt">http://www.ietf.org/rfc/rfc1035.txt</ulink></para></simplesect>
 <simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="52" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="51" bodyend="203"/>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" line="54" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_header.h" bodystart="53" bodyend="205"/>
     <listofallmembers>
       <member refid="struct_senergy_1_1_dns_1_1_message_header_fields_1aae6ba21a1c8baa30f0aafe90d165420f" prot="public" virt="non-virtual"><scope>Senergy::Dns::MessageHeaderFields</scope><name>AdditionalCount</name></member>
       <member refid="struct_senergy_1_1_dns_1_1_message_header_fields_1a38e5101ec862c400628d66192c5b9878" prot="public" virt="non-virtual"><scope>Senergy::Dns::MessageHeaderFields</scope><name>AnswerCount</name></member>

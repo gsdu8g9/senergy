@@ -3,6 +3,7 @@
 }
 {\ttfamily \#include $<$senergy/bytebuffer.\-h$>$}\\*
 {\ttfamily \#include $<$senergy/convert.\-h$>$}\\*
+{\ttfamily \#include $<$senergy/vectorx.\-h$>$}\\*
 {\ttfamily \#include $<$senergy/dns/resource\-\_\-record\-\_\-types.\-h$>$}\\*
 {\ttfamily \#include $<$senergy/dns/resource\-\_\-record\-\_\-classes.\-h$>$}\\*
 {\ttfamily \#include $<$senergy/dns/utils.\-h$>$}\\*
@@ -24,12 +25,27 @@ class \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Senergy\-::\-Dns\-:
 \item 
 \hyperlink{namespace_senergy_1_1_dns}{Senergy\-::\-Dns}
 \end{DoxyCompactItemize}
-\subsection*{Typedefs}
+\subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-typedef std\-::shared\-\_\-ptr\\*
-$<$ Message\-Question $>$ \hyperlink{namespace_senergy_1_1_dns_a425a2a6f3b5c18973c524a99bdfa4ef0}{Senergy\-::\-Dns\-::\-Message\-Question\-Ptr}
-\begin{DoxyCompactList}\small\item\em Simple typedef for a shared pointer to a \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question}. \end{DoxyCompactList}\item 
-typedef std\-::vector\\*
-$<$ Message\-Question\-Ptr $>$ \hyperlink{namespace_senergy_1_1_dns_a76982150ca0b86c08d888f3e3e805747}{Senergy\-::\-Dns\-::\-Message\-Question\-Ptr\-Vector}
-\begin{DoxyCompactList}\small\item\em Simple typedef for a vector of \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} smart pointers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\#define \hyperlink{message__question_8h_a4b780ef30c07c3c31b79d838bc443687}{Message\-Question\-Ptr}~std\-::shared\-\_\-ptr$<$Message\-Question$>$
+\item 
+\#define \hyperlink{message__question_8h_aa505746d3e0a330ca99da6969d9d1c5a}{Message\-Question\-Ptr\-Vector}~Vector\-X$<$\hyperlink{message__question_8h_a4b780ef30c07c3c31b79d838bc443687}{Message\-Question\-Ptr}$>$
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{message__question_8h_a4b780ef30c07c3c31b79d838bc443687}{\index{message\-\_\-question.\-h@{message\-\_\-question.\-h}!Message\-Question\-Ptr@{Message\-Question\-Ptr}}
+\index{Message\-Question\-Ptr@{Message\-Question\-Ptr}!message_question.h@{message\-\_\-question.\-h}}
+\subsubsection[{Message\-Question\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}\#define Message\-Question\-Ptr~std\-::shared\-\_\-ptr$<$Message\-Question$>$}}\label{message__question_8h_a4b780ef30c07c3c31b79d838bc443687}
+
+
+Definition at line 43 of file message\-\_\-question.\-h.
+
+\hypertarget{message__question_8h_aa505746d3e0a330ca99da6969d9d1c5a}{\index{message\-\_\-question.\-h@{message\-\_\-question.\-h}!Message\-Question\-Ptr\-Vector@{Message\-Question\-Ptr\-Vector}}
+\index{Message\-Question\-Ptr\-Vector@{Message\-Question\-Ptr\-Vector}!message_question.h@{message\-\_\-question.\-h}}
+\subsubsection[{Message\-Question\-Ptr\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}\#define Message\-Question\-Ptr\-Vector~Vector\-X$<${\bf Message\-Question\-Ptr}$>$}}\label{message__question_8h_aa505746d3e0a330ca99da6969d9d1c5a}
+
+
+Definition at line 44 of file message\-\_\-question.\-h.
+

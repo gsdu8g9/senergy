@@ -22,11 +22,13 @@ bool \hyperlink{class_senergy_1_1_dns_1_1_message_a2e7978e799fadaa4f03fc881e5c8e
 void \hyperlink{class_senergy_1_1_dns_1_1_message_a60d242fef8b20993f9cd9b4591453e1b}{Reset} ()
 \begin{DoxyCompactList}\small\item\em Resets this message so that all vectors/collections will be cleared, and default values restored. \end{DoxyCompactList}\item 
 int \hyperlink{class_senergy_1_1_dns_1_1_message_a5d5219532098cf60e2395764e7f61aca}{Get\-Question\-Count} ()
-\begin{DoxyCompactList}\small\item\em Gets the amount of questions this D\-N\-S message currently holds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets the amount of questions this D\-N\-S message currently holds. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_dns_1_1_message_ab4ce784232a2b68d7fe27512913447a0}{Dump} ()
+\begin{DoxyCompactList}\small\item\em Dumps all information currently in this message to the standard output. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{namespace_senergy_1_1_dns_a76982150ca0b86c08d888f3e3e805747}{Message\-Question\-Ptr\-Vector} \hyperlink{class_senergy_1_1_dns_1_1_message_a1e72009ea8004f0e8cc1ce0ea07f4ad1}{Questions}
+\hyperlink{message__question_8h_aa505746d3e0a330ca99da6969d9d1c5a}{Message\-Question\-Ptr\-Vector} \hyperlink{class_senergy_1_1_dns_1_1_message_a1e72009ea8004f0e8cc1ce0ea07f4ad1}{Questions}
 \begin{DoxyCompactList}\small\item\em Holds all the 'question messages' that are part of this D\-N\-S message. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -38,7 +40,7 @@ Swen Kooij (Photonios)
 \end{DoxyAuthor}
 
 
-Definition at line 41 of file message.\-h.
+Definition at line 42 of file message.\-h.
 
 
 
@@ -91,6 +93,21 @@ A boolean indicating whether deserialization was succesfull. True is returned wh
 
 Definition at line 33 of file message.\-cpp.
 
+\hypertarget{class_senergy_1_1_dns_1_1_message_ab4ce784232a2b68d7fe27512913447a0}{\index{Senergy\-::\-Dns\-::\-Message@{Senergy\-::\-Dns\-::\-Message}!Dump@{Dump}}
+\index{Dump@{Dump}!Senergy::Dns::Message@{Senergy\-::\-Dns\-::\-Message}}
+\subsubsection[{Dump}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Dns\-::\-Message\-::\-Dump (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_message_ab4ce784232a2b68d7fe27512913447a0}
+
+
+Dumps all information currently in this message to the standard output. 
+
+
+
+Definition at line 87 of file message.\-cpp.
+
 \hypertarget{class_senergy_1_1_dns_1_1_message_a5d5219532098cf60e2395764e7f61aca}{\index{Senergy\-::\-Dns\-::\-Message@{Senergy\-::\-Dns\-::\-Message}!Get\-Question\-Count@{Get\-Question\-Count}}
 \index{Get\-Question\-Count@{Get\-Question\-Count}!Senergy::Dns::Message@{Senergy\-::\-Dns\-::\-Message}}
 \subsubsection[{Get\-Question\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Dns\-::\-Message\-::\-Get\-Question\-Count (
@@ -107,7 +124,7 @@ The amount of questions this D\-N\-S message currently holds.
 \end{DoxyReturn}
 
 
-Definition at line 87 of file message.\-cpp.
+Definition at line 82 of file message.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_message_a60d242fef8b20993f9cd9b4591453e1b}{\index{Senergy\-::\-Dns\-::\-Message@{Senergy\-::\-Dns\-::\-Message}!Reset@{Reset}}
 \index{Reset@{Reset}!Senergy::Dns::Message@{Senergy\-::\-Dns\-::\-Message}}
@@ -122,7 +139,7 @@ Resets this message so that all vectors/collections will be cleared, and default
 
 
 
-Definition at line 82 of file message.\-cpp.
+Definition at line 77 of file message.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_message_a2e7978e799fadaa4f03fc881e5c8e0f6}{\index{Senergy\-::\-Dns\-::\-Message@{Senergy\-::\-Dns\-::\-Message}!Serialize@{Serialize}}
 \index{Serialize@{Serialize}!Senergy::Dns::Message@{Senergy\-::\-Dns\-::\-Message}}
@@ -145,7 +162,7 @@ A boolean indicating whether serialization was succesfull. True is returned when
 \end{DoxyReturn}
 
 
-Definition at line 58 of file message.\-cpp.
+Definition at line 54 of file message.\-cpp.
 
 
 
@@ -159,7 +176,7 @@ Holds all the 'question messages' that are part of this D\-N\-S message.
 
 
 
-Definition at line 97 of file message.\-h.
+Definition at line 104 of file message.\-h.
 
 
 

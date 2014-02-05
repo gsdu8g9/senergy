@@ -1,0 +1,118 @@
+.TH "Senergy::Dns::Records::IPV4Address" 3 "Tue Feb 4 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::Dns::Records::IPV4Address \- 
+.PP
+An address record, contains the answer to a lookup\&. Contains a IPV4 IP address, the response to a question, to lookup a hostname/domain name\&. This is part of a resource record, and the actual data is stored in the last field of a recource record (RDATE)\&. See the ResourceClass and section 3\&.4\&.1 of RFC 1035 for more information\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <record_ipv4address\&.h>\fP
+.PP
+Inherits \fBSenergy::Dns::ResourceRecord\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIPV4Address\fP ()"
+.br
+.RI "\fIInitializes a new instance of the \fBIPV4Address\fP class\&. \fP"
+.ti -1c
+.RI "virtual bool \fBDeserialize\fP (\fBByteBuffer\fP &buffer)"
+.br
+.RI "\fIDeserializes a resource record from the specified buffer into this instance\&. \fP"
+.ti -1c
+.RI "virtual bool \fBSerialize\fP (\fBByteBuffer\fP &buffer)"
+.br
+.RI "\fISerializes this instance into the specified buffer\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+An address record, contains the answer to a lookup\&. Contains a IPV4 IP address, the response to a question, to lookup a hostname/domain name\&. This is part of a resource record, and the actual data is stored in the last field of a recource record (RDATE)\&. See the ResourceClass and section 3\&.4\&.1 of RFC 1035 for more information\&. 
+
+
+.PP
+\fBNote:\fP
+.RS 4
+This is coupled with the \fBResourceRecordType::A\fP type\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.PP
+Definition at line 47 of file record_ipv4address\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Senergy::Dns::Records::IPV4Address::IPV4Address ()"
+
+.PP
+Initializes a new instance of the \fBIPV4Address\fP class\&. 
+.PP
+Definition at line 31 of file record_ipv4address\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Senergy::Dns::Records::IPV4Address::Deserialize (\fBByteBuffer\fP &buffer)\fC [virtual]\fP"
+
+.PP
+Deserializes a resource record from the specified buffer into this instance\&. The specified buffer must have at least 4 bytes left to read\&. However, the size of a resource record is variable, because of the name field\&.
+.PP
+When we can not read the entire resource record from the specified buffer, false is returned\&.
+.PP
+\fBNote:\fP
+.RS 4
+This will advance the buffer's position with the size of the record\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to read the resource record from\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether deserialization was succesful\&. True is returned when deseriliazation was succesful and false when it was not\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBSenergy::Dns::ResourceRecord\fP\&.
+.PP
+Definition at line 35 of file record_ipv4address\&.cpp\&.
+.SS "bool Senergy::Dns::Records::IPV4Address::Serialize (\fBByteBuffer\fP &buffer)\fC [virtual]\fP"
+
+.PP
+Serializes this instance into the specified buffer\&. The size of a resource record is variable, because of the name field\&.
+.PP
+If we cannot, for whatever reason, serialize this record, false is returned\&.
+.PP
+\fBNote:\fP
+.RS 4
+This will advance the buffer's position with the size of the record\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to write the serialized record to\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether serialization was successful\&. True is returned when serialization was successful, and false is returned when it was not\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBSenergy::Dns::ResourceRecord\fP\&.
+.PP
+Definition at line 49 of file record_ipv4address\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

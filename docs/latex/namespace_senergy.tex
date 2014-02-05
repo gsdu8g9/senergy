@@ -13,12 +13,16 @@
 \item 
 class \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer}
 \begin{DoxyCompactList}\small\item\em A dynamiclly sized buffer for binary data. Resizes the underlying buffer when new data is written. Makes it easier to write to buffers that already contain data. \end{DoxyCompactList}\item 
+class \hyperlink{class_senergy_1_1_circular_buffer}{Circular\-Buffer}
+\begin{DoxyCompactList}\small\item\em Simple circular buffer which uses a vector, simple circular buffer which should not be used in situations that require efficiency and power. \end{DoxyCompactList}\item 
 class \hyperlink{class_senergy_1_1_convert}{Convert}
 \begin{DoxyCompactList}\small\item\em A simple conversion class, which simplifies conversion between various native data types. Based on the idea of the '\hyperlink{class_senergy_1_1_convert}{Convert}' class in the .N\-E\-T framework. \end{DoxyCompactList}\item 
 class \hyperlink{class_senergy_1_1_print}{Print}
 \begin{DoxyCompactList}\small\item\em Contains simple utilities that facilitate printing various data types or data structures to the screen. \end{DoxyCompactList}\item 
 class \hyperlink{class_senergy_1_1_socket}{Socket}
-\begin{DoxyCompactList}\small\item\em Provides an object-\/oriented interface for Berkely (B\-S\-D) sockets. Can act both as a server as well as a client. The main purpose of this class class is to provide a more C++ like interface for T\-C\-P sockets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Provides an object-\/oriented interface for Berkely (B\-S\-D) sockets. Can act both as a server as well as a client. The main purpose of this class class is to provide a more C++ like interface for T\-C\-P sockets. \end{DoxyCompactList}\item 
+class \hyperlink{class_senergy_1_1_vector_x}{Vector\-X}
+\begin{DoxyCompactList}\small\item\em An improvemend upon the standard vector (std\-::vector), but it's interface is more like the rest of \hyperlink{namespace_senergy}{Senergy} (naming). All normal functionality is still available, and switching between \hyperlink{class_senergy_1_1_vector_x}{Vector\-X} and std\-::vector should be painless. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
@@ -26,7 +30,9 @@ typedef std\-::shared\-\_\-ptr\\*
 $<$ \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} $>$ \hyperlink{namespace_senergy_a30f5cfaeb333ffdf2c3332cc590a57ea}{Byte\-Buffer\-Ptr}
 \begin{DoxyCompactList}\small\item\em A simple typedef for a shared pointer to a \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} instance. \end{DoxyCompactList}\item 
 typedef std\-::shared\-\_\-ptr$<$ \hyperlink{class_senergy_1_1_socket}{Socket} $>$ \hyperlink{namespace_senergy_a9014e48a368555ba932efd8d17eb2d23}{Socket\-Ptr}
-\begin{DoxyCompactList}\small\item\em A simple typedef for the shared pointer of a Tcp\-Socket instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A simple typedef for the shared pointer of a Tcp\-Socket instance. \end{DoxyCompactList}\item 
+typedef \hyperlink{class_senergy_1_1_vector_x}{Vector\-X}$<$ std\-::string $>$ \hyperlink{namespace_senergy_a09aea2e19671645414361ca8388aebfe}{String\-Vector}
+\begin{DoxyCompactList}\small\item\em A std\-::vector of std\-::string objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Typedef Documentation}
@@ -39,7 +45,7 @@ A simple typedef for a shared pointer to a \hyperlink{class_senergy_1_1_byte_buf
 
 
 
-Definition at line 434 of file bytebuffer.\-h.
+Definition at line 440 of file bytebuffer.\-h.
 
 \hypertarget{namespace_senergy_a9014e48a368555ba932efd8d17eb2d23}{\index{Senergy@{Senergy}!Socket\-Ptr@{Socket\-Ptr}}
 \index{Socket\-Ptr@{Socket\-Ptr}!Senergy@{Senergy}}
@@ -50,5 +56,16 @@ A simple typedef for the shared pointer of a Tcp\-Socket instance.
 
 
 
-Definition at line 450 of file socket.\-h.
+Definition at line 480 of file socket.\-h.
+
+\hypertarget{namespace_senergy_a09aea2e19671645414361ca8388aebfe}{\index{Senergy@{Senergy}!String\-Vector@{String\-Vector}}
+\index{String\-Vector@{String\-Vector}!Senergy@{Senergy}}
+\subsubsection[{String\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Vector\-X}$<$std\-::string$>$ {\bf Senergy\-::\-String\-Vector}}}\label{namespace_senergy_a09aea2e19671645414361ca8388aebfe}
+
+
+A std\-::vector of std\-::string objects. 
+
+
+
+Definition at line 35 of file types.\-h.
 

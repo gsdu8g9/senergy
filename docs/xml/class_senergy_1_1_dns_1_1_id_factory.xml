@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_senergy_1_1_dns_1_1_id_factory" kind="class" prot="public">
+    <compoundname>Senergy::Dns::IdFactory</compoundname>
+    <includes refid="id__factory_8h" local="no">id_factory.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_senergy_1_1_dns_1_1_id_factory_1aca7e42a14931f428485d01279bfa09eb" prot="private" static="no">
+        <type><ref refid="class_senergy_1_1_circular_buffer" kindref="compound">CircularBuffer</ref>&lt; unsigned short &gt;</type>
+        <definition>typedef CircularBuffer&lt;unsigned short&gt; Senergy::Dns::IdFactory::GeneratedIdBuffer</definition>
+        <argsstring></argsstring>
+        <name>GeneratedIdBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/id_factory.h" line="68" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/id_factory.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_id_factory_1ae3169f3201faed02512868b1f128bbcb" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Senergy::Dns::IdFactory::MaximumBufferSize</definition>
+        <argsstring></argsstring>
+        <name>MaximumBufferSize</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+<para>Defines the maximum number of generated ID&apos;s that we keep in our buffer, before we throw them out. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/id_factory.h" line="51" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/id_factory.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_id_factory_1a042f6bee846018620e25c6ac47efbd0e" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_senergy_1_1_circular_buffer" kindref="compound">GeneratedIdBuffer</ref></type>
+        <definition>IdFactory::GeneratedIdBuffer Senergy::Dns::IdFactory::s_generated_numbers</definition>
+        <argsstring></argsstring>
+        <name>s_generated_numbers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/id_factory.h" line="72" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/id_factory.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_id_factory_1a24a6d7f51af3559a55b77be323aa9b74" prot="private" static="yes" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex Senergy::Dns::IdFactory::s_generate_id_lock</definition>
+        <argsstring></argsstring>
+        <name>s_generate_id_lock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/id_factory.h" line="75" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/id_factory.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_id_factory_1aac705471a570313494ca2661a5888b3d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short Senergy::Dns::IdFactory::GenerateId</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateId</name>
+        <briefdescription>
+<para>Generates a new random identifier to be used as the unique identifier for a DNS message/packet. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A unique, random identifier for a DNS message/packet. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/id_factory.h" line="60" column="1" bodyfile="/home/photonios/Documents/Senergy/src/id_factory.cpp" bodystart="37" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_id_factory_1ab622ad4e7bc3c90ced3f743a48ae7377" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::Dns::IdFactory::__exists</definition>
+        <argsstring>(unsigned short id)</argsstring>
+        <name>__exists</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/id_factory.h" line="64" column="1" bodyfile="/home/photonios/Documents/Senergy/src/id_factory.cpp" bodystart="61" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Static global factory that is used to generate random identifiers for DNS messages/packets. This is to ensure, each ID that is generated is unique. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>This static class is thread-safe.</para></simplesect>
+<simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/id_factory.h" line="45" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/id_factory.h" bodystart="44" bodyend="76"/>
+    <listofallmembers>
+      <member refid="class_senergy_1_1_dns_1_1_id_factory_1ab622ad4e7bc3c90ced3f743a48ae7377" prot="private" virt="non-virtual"><scope>Senergy::Dns::IdFactory</scope><name>__exists</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_id_factory_1aca7e42a14931f428485d01279bfa09eb" prot="private" virt="non-virtual"><scope>Senergy::Dns::IdFactory</scope><name>GeneratedIdBuffer</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_id_factory_1aac705471a570313494ca2661a5888b3d" prot="public" virt="non-virtual"><scope>Senergy::Dns::IdFactory</scope><name>GenerateId</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_id_factory_1ae3169f3201faed02512868b1f128bbcb" prot="public" virt="non-virtual"><scope>Senergy::Dns::IdFactory</scope><name>MaximumBufferSize</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_id_factory_1a24a6d7f51af3559a55b77be323aa9b74" prot="private" virt="non-virtual"><scope>Senergy::Dns::IdFactory</scope><name>s_generate_id_lock</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_id_factory_1a042f6bee846018620e25c6ac47efbd0e" prot="private" virt="non-virtual"><scope>Senergy::Dns::IdFactory</scope><name>s_generated_numbers</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,4 +1,4 @@
-.TH "Senergy::ByteBuffer" 3 "Sat Feb 1 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::ByteBuffer" 3 "Tue Feb 4 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -150,6 +150,13 @@ A dynamiclly sized buffer for binary data\&. Resizes the underlying buffer when 
 .RI "std::string \fBReadAll\fP ()"
 .br
 .RI "\fIReads the contents of the buffer from start to end and returns the contents as a string\&. \fP"
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBSocket\fP"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -699,6 +706,12 @@ Increases the position by the size of the specified value\&.
 
 .PP
 Definition at line 166 of file bytebuffer\&.cpp\&.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend class \fBSocket\fP\fC [friend]\fP"
+
+.PP
+Definition at line 46 of file bytebuffer\&.h\&.
 
 .SH "Author"
 .PP 

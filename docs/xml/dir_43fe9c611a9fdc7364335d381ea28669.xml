@@ -4,10 +4,13 @@
     <compoundname>src/senergy</compoundname>
     <innerdir refid="dir_12060af884c4747a1bab5c3df0820300">src/senergy/dns</innerdir>
     <innerfile refid="bytebuffer_8h">bytebuffer.h</innerfile>
+    <innerfile refid="circular__buffer_8h">circular_buffer.h</innerfile>
     <innerfile refid="convert_8h">convert.h</innerfile>
     <innerfile refid="print_8h">print.h</innerfile>
     <innerfile refid="senergy_8h">senergy.h</innerfile>
     <innerfile refid="socket_8h">socket.h</innerfile>
+    <innerfile refid="types_8h">types.h</innerfile>
+    <innerfile refid="vectorx_8h">vectorx.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

@@ -1,6 +1,8 @@
 var class_senergy_1_1_dns_1_1_message_question =
 [
     [ "MessageQuestion", "class_senergy_1_1_dns_1_1_message_question.html#a956458fba0c9b96fbd78408250095148", null ],
+    [ "MessageQuestion", "class_senergy_1_1_dns_1_1_message_question.html#a974c091de6a0f0d46aa82125db2f4517", null ],
+    [ "Create", "class_senergy_1_1_dns_1_1_message_question.html#ae8237696d15da3b4b67f96fbd3d1d3e3", null ],
     [ "Deserialize", "class_senergy_1_1_dns_1_1_message_question.html#a1c66b45b448f262a4f2cf1317c89b5b3", null ],
     [ "Dump", "class_senergy_1_1_dns_1_1_message_question.html#a7ac084601ff3285c6e47e7ce7ccc09cf", null ],
     [ "GetClass", "class_senergy_1_1_dns_1_1_message_question.html#ae86936e1268d7abf0a2210df9caa0840", null ],

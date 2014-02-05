@@ -1,0 +1,90 @@
+\hypertarget{class_senergy_1_1_circular_buffer}{\section{Senergy\-:\-:Circular\-Buffer$<$ T $>$ Class Template Reference}
+\label{class_senergy_1_1_circular_buffer}\index{Senergy\-::\-Circular\-Buffer$<$ T $>$@{Senergy\-::\-Circular\-Buffer$<$ T $>$}}
+}
+
+
+Simple circular buffer which uses a vector, simple circular buffer which should not be used in situations that require efficiency and power.  
+
+
+
+
+{\ttfamily \#include $<$circular\-\_\-buffer.\-h$>$}
+
+Inheritance diagram for Senergy\-:\-:Circular\-Buffer$<$ T $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_senergy_1_1_circular_buffer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_senergy_1_1_circular_buffer_abc3a5a67343d46ce83e2bbf678e83393}{Circular\-Buffer} (unsigned int size)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_circular_buffer}{Circular\-Buffer} class with the specified size. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_circular_buffer_a26e52b6923a05022fcac2f825aa907cb}{push\-\_\-back} (T value)
+\begin{DoxyCompactList}\small\item\em Overrides the vector's push\-\_\-back function, but makes sure no new entries are inserted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class Senergy\-::\-Circular\-Buffer$<$ T $>$}
+
+Simple circular buffer which uses a vector, simple circular buffer which should not be used in situations that require efficiency and power. 
+
+T The type of data the circular buffer should hold.
+
+\begin{DoxyNote}{Note}
+The documentation does not explain how a circular buffer works. Please use Google for that.
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Swen Kooij (Photonios) 
+\end{DoxyAuthor}
+
+
+Definition at line 42 of file circular\-\_\-buffer.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_senergy_1_1_circular_buffer_abc3a5a67343d46ce83e2bbf678e83393}{\index{Senergy\-::\-Circular\-Buffer@{Senergy\-::\-Circular\-Buffer}!Circular\-Buffer@{Circular\-Buffer}}
+\index{Circular\-Buffer@{Circular\-Buffer}!Senergy::CircularBuffer@{Senergy\-::\-Circular\-Buffer}}
+\subsubsection[{Circular\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Senergy\-::\-Circular\-Buffer}$<$ T $>$\-::{\bf Circular\-Buffer} (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_senergy_1_1_circular_buffer_abc3a5a67343d46ce83e2bbf678e83393}
+
+
+Initializes a new instance of the \hyperlink{class_senergy_1_1_circular_buffer}{Circular\-Buffer} class with the specified size. 
+
+
+
+Definition at line 49 of file circular\-\_\-buffer.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_circular_buffer_a26e52b6923a05022fcac2f825aa907cb}{\index{Senergy\-::\-Circular\-Buffer@{Senergy\-::\-Circular\-Buffer}!push\-\_\-back@{push\-\_\-back}}
+\index{push\-\_\-back@{push\-\_\-back}!Senergy::CircularBuffer@{Senergy\-::\-Circular\-Buffer}}
+\subsubsection[{push\-\_\-back}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Senergy\-::\-Circular\-Buffer}$<$ T $>$\-::push\-\_\-back (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_senergy_1_1_circular_buffer_a26e52b6923a05022fcac2f825aa907cb}
+
+
+Overrides the vector's push\-\_\-back function, but makes sure no new entries are inserted. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to insert into the circular buffer. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 62 of file circular\-\_\-buffer.\-h.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/senergy/\hyperlink{circular__buffer_8h}{circular\-\_\-buffer.\-h}\end{DoxyCompactItemize}

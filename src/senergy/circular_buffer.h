@@ -70,7 +70,7 @@ public:
 	}
 
 private:
-	// Simple typedef to access the base class.
+	// Simple typedef to make accessing the base class esier.
 	typedef std::vector<T> BaseClass;
 
 private:

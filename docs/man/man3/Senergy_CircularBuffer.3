@@ -1,0 +1,75 @@
+.TH "Senergy::CircularBuffer< T >" 3 "Tue Feb 4 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::CircularBuffer< T > \- 
+.PP
+Simple circular buffer which uses a vector, simple circular buffer which should not be used in situations that require efficiency and power\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <circular_buffer\&.h>\fP
+.PP
+Inherits vector< T >\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCircularBuffer\fP (unsigned int size)"
+.br
+.RI "\fIInitializes a new instance of the \fBCircularBuffer\fP class with the specified size\&. \fP"
+.ti -1c
+.RI "void \fBpush_back\fP (T value)"
+.br
+.RI "\fIOverrides the vector's push_back function, but makes sure no new entries are inserted\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class T>class Senergy::CircularBuffer< T >"
+Simple circular buffer which uses a vector, simple circular buffer which should not be used in situations that require efficiency and power\&. 
+
+T The type of data the circular buffer should hold\&.
+.PP
+\fBNote:\fP
+.RS 4
+The documentation does not explain how a circular buffer works\&. Please use Google for that\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file circular_buffer\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<class T > \fBSenergy::CircularBuffer\fP< T >::\fBCircularBuffer\fP (unsigned intsize)\fC [inline]\fP"
+
+.PP
+Initializes a new instance of the \fBCircularBuffer\fP class with the specified size\&. 
+.PP
+Definition at line 49 of file circular_buffer\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class T > void \fBSenergy::CircularBuffer\fP< T >::push_back (Tvalue)\fC [inline]\fP"
+
+.PP
+Overrides the vector's push_back function, but makes sure no new entries are inserted\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The value to insert into the circular buffer\&. 
+.RE
+.PP
+
+.PP
+Definition at line 62 of file circular_buffer\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

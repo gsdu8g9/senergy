@@ -4,18 +4,23 @@
     <compoundname>src</compoundname>
     <innerdir refid="dir_43fe9c611a9fdc7364335d381ea28669">src/senergy</innerdir>
     <innerfile refid="bytebuffer_8cpp">bytebuffer.cpp</innerfile>
+    <innerfile refid="circular__buffer_8cpp">circular_buffer.cpp</innerfile>
     <innerfile refid="convert_8cpp">convert.cpp</innerfile>
+    <innerfile refid="id__factory_8cpp">id_factory.cpp</innerfile>
     <innerfile refid="main_8cpp">main.cpp</innerfile>
     <innerfile refid="message_8cpp">message.cpp</innerfile>
     <innerfile refid="message__header_8cpp">message_header.cpp</innerfile>
     <innerfile refid="message__question_8cpp">message_question.cpp</innerfile>
     <innerfile refid="print_8cpp">print.cpp</innerfile>
+    <innerfile refid="record__ipv4address_8cpp">record_ipv4address.cpp</innerfile>
+    <innerfile refid="requester_8cpp">requester.cpp</innerfile>
     <innerfile refid="resource__record_8cpp">resource_record.cpp</innerfile>
     <innerfile refid="resource__record__classes_8cpp">resource_record_classes.cpp</innerfile>
     <innerfile refid="resource__record__types_8cpp">resource_record_types.cpp</innerfile>
     <innerfile refid="rootnameserver_8cpp">rootnameserver.cpp</innerfile>
     <innerfile refid="socket_8cpp">socket.cpp</innerfile>
     <innerfile refid="utils_8cpp">utils.cpp</innerfile>
+    <innerfile refid="vectorx_8cpp">vectorx.cpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

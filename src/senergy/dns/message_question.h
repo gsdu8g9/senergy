@@ -40,9 +40,6 @@
 	#include <arpa/inet.h>
 #endif
 
-#define MessageQuestionPtr std::shared_ptr<MessageQuestion>
-#define MessageQuestionPtrVector VectorX<MessageQuestionPtr>
-
 namespace Senergy
 {
 namespace Dns
@@ -56,6 +53,11 @@ namespace Dns
  */
 class MessageQuestion
 {
+private:
+	// Simple typedef for a shared pointer to a MessageQuestion instance.
+	// Warning: This is redefined at the bottom of this file for public access.
+	typedef std::shared_ptr<MessageQuestion> MessageQuestionPtr;
+
 public:
 	/*!
 	 * \brief Initializes a new instance of the MessageQuestion class with default values.
@@ -184,6 +186,16 @@ private:
 	// Holds the question class
 	unsigned short 	m_class;
 };
+
+/*! 
+ * \brief Simple shared pointer to a MessageQuestionPtr instance.
+ */
+typedef std::shared_ptr<MessageQuestion> MessageQuestionPtr;
+
+/*!
+ * \brief A vector of shared pointers to MessageQuestion instances.
+ */
+typedef VectorX<MessageQuestionPtr> MessageQuestionPtrVector;
 
 } // namespace Dns
 } // namespace Senergy

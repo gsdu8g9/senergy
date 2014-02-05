@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7ebytebuffer',['~ByteBuffer',['../class_senergy_1_1_byte_buffer.html#aef390f867878292a797065c21cec6afe',1,'Senergy::ByteBuffer']]]
+  ['x25',['X25',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ab9f72c6f03e2177e0ea0f3f31ba05da1',1,'Senergy::Dns']]]
 ];

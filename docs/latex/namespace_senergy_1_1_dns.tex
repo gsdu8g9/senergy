@@ -1,9 +1,16 @@
 \hypertarget{namespace_senergy_1_1_dns}{\section{Senergy\-:\-:Dns Namespace Reference}
 \label{namespace_senergy_1_1_dns}\index{Senergy\-::\-Dns@{Senergy\-::\-Dns}}
 }
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_senergy_1_1_dns_1_1_records}{Records}
+\end{DoxyCompactItemize}
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+class \hyperlink{class_senergy_1_1_dns_1_1_id_factory}{Id\-Factory}
+\begin{DoxyCompactList}\small\item\em Static global factory that is used to generate random identifiers for D\-N\-S messages/packets. This is to ensure, each I\-D that is generated is unique. \end{DoxyCompactList}\item 
 class \hyperlink{class_senergy_1_1_dns_1_1_message}{Message}
 \begin{DoxyCompactList}\small\item\em Represents a D\-N\-S packet as described in section 4 of R\-F\-C-\/1035. A D\-N\-S packet is the standard message format that is transmitted and received by D\-N\-S clients and hosts. \end{DoxyCompactList}\item 
 struct \hyperlink{struct_senergy_1_1_dns_1_1_message_header_fields}{Message\-Header\-Fields}
@@ -12,21 +19,14 @@ class \hyperlink{class_senergy_1_1_dns_1_1_message_header}{Message\-Header}
 \begin{DoxyCompactList}\small\item\em Defines the header of a D\-N\-S packet, as described in section 4.\-1 of R\-F\-C-\/1035. All D\-N\-S messages start with this header. \end{DoxyCompactList}\item 
 class \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question}
 \begin{DoxyCompactList}\small\item\em Represents a D\-N\-S question, as defined in section 4.\-1.\-2 of R\-F\-C-\/1035. A D\-N\-S question is usually transmitted by a D\-N\-S client, asking to lookup the I\-P address of a host name. \end{DoxyCompactList}\item 
+class \hyperlink{class_senergy_1_1_dns_1_1_requester}{Requester}
+\begin{DoxyCompactList}\small\item\em Allows querying remote D\-N\-S servers, wraps sending and receiving D\-N\-S messages. \end{DoxyCompactList}\item 
 class \hyperlink{class_senergy_1_1_dns_1_1_resource_record}{Resource\-Record}
 \begin{DoxyCompactList}\small\item\em Defines a D\-N\-S Resource Record, as defined in R\-F\-C 1035, section 4.\-1.\-3. A D\-N\-S Recource record can appear both in the answer, authority and additional section of a D\-N\-S packet/message. \end{DoxyCompactList}\item 
 class \hyperlink{class_senergy_1_1_dns_1_1_root_name_server}{Root\-Name\-Server}
 \begin{DoxyCompactList}\small\item\em Represents one of the 13 Root Name Servers (D\-N\-S) that are currently operating around the world. Provides access to the functionalities that root name servers offer. \end{DoxyCompactList}\item 
 class \hyperlink{class_senergy_1_1_dns_1_1_utils}{Utils}
 \begin{DoxyCompactList}\small\item\em Contains various utilities related to the D\-N\-S protocol. This are mostly functions that are used throughout the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Typedefs}
-\begin{DoxyCompactItemize}
-\item 
-typedef std\-::shared\-\_\-ptr\\*
-$<$ \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} $>$ \hyperlink{namespace_senergy_1_1_dns_a425a2a6f3b5c18973c524a99bdfa4ef0}{Message\-Question\-Ptr}
-\begin{DoxyCompactList}\small\item\em Simple typedef for a shared pointer to a \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question}. \end{DoxyCompactList}\item 
-typedef std\-::vector\\*
-$<$ \hyperlink{namespace_senergy_1_1_dns_a425a2a6f3b5c18973c524a99bdfa4ef0}{Message\-Question\-Ptr} $>$ \hyperlink{namespace_senergy_1_1_dns_a76982150ca0b86c08d888f3e3e805747}{Message\-Question\-Ptr\-Vector}
-\begin{DoxyCompactList}\small\item\em Simple typedef for a vector of \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} smart pointers. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -141,31 +141,6 @@ enum \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0}{Res
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0aede320f6102f02f5903553674ed8a3f5}{Resource\-Record\-Type\-::\-D\-L\-V} = 32769
  \}
 \begin{DoxyCompactList}\small\item\em An enumuration of all possible resource record types (R\-R), as defined by I\-A\-N\-A. \end{DoxyCompactList}\end{DoxyCompactItemize}
-
-
-\subsection{Typedef Documentation}
-\hypertarget{namespace_senergy_1_1_dns_a425a2a6f3b5c18973c524a99bdfa4ef0}{\index{Senergy\-::\-Dns@{Senergy\-::\-Dns}!Message\-Question\-Ptr@{Message\-Question\-Ptr}}
-\index{Message\-Question\-Ptr@{Message\-Question\-Ptr}!Senergy::Dns@{Senergy\-::\-Dns}}
-\subsubsection[{Message\-Question\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::shared\-\_\-ptr$<${\bf Message\-Question}$>$ {\bf Senergy\-::\-Dns\-::\-Message\-Question\-Ptr}}}\label{namespace_senergy_1_1_dns_a425a2a6f3b5c18973c524a99bdfa4ef0}
-
-
-Simple typedef for a shared pointer to a \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question}. 
-
-
-
-Definition at line 167 of file message\-\_\-question.\-h.
-
-\hypertarget{namespace_senergy_1_1_dns_a76982150ca0b86c08d888f3e3e805747}{\index{Senergy\-::\-Dns@{Senergy\-::\-Dns}!Message\-Question\-Ptr\-Vector@{Message\-Question\-Ptr\-Vector}}
-\index{Message\-Question\-Ptr\-Vector@{Message\-Question\-Ptr\-Vector}!Senergy::Dns@{Senergy\-::\-Dns}}
-\subsubsection[{Message\-Question\-Ptr\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::vector$<${\bf Message\-Question\-Ptr}$>$ {\bf Senergy\-::\-Dns\-::\-Message\-Question\-Ptr\-Vector}}}\label{namespace_senergy_1_1_dns_a76982150ca0b86c08d888f3e3e805747}
-
-
-Simple typedef for a vector of \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} smart pointers. 
-
-
-
-Definition at line 172 of file message\-\_\-question.\-h.
-
 
 
 \subsection{Enumeration Type Documentation}

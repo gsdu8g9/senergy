@@ -15,6 +15,8 @@ Represents a D\-N\-S question, as defined in section 4.\-1.\-2 of R\-F\-C-\/1035
 \item 
 \hyperlink{class_senergy_1_1_dns_1_1_message_question_a956458fba0c9b96fbd78408250095148}{Message\-Question} ()
 \begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} class with default values. \end{DoxyCompactList}\item 
+\hyperlink{class_senergy_1_1_dns_1_1_message_question_a974c091de6a0f0d46aa82125db2f4517}{Message\-Question} (const std\-::string \&hostname, \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0}{Resource\-Record\-Type} type=\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29}{Resource\-Record\-Type\-::\-A}, \hyperlink{namespace_senergy_1_1_dns_a953f153bc411213d621d00c1e1b3eb9d}{Resource\-Record\-Class} clas=\hyperlink{namespace_senergy_1_1_dns_a953f153bc411213d621d00c1e1b3eb9dac8205c7636e728d448c2774e6a4a944b}{Resource\-Record\-Class\-::\-Internet})
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} class with the specifed hostname, and optionally the specified resource record type and class. \end{DoxyCompactList}\item 
 std\-::string \hyperlink{class_senergy_1_1_dns_1_1_message_question_a5fa467b516be4914f865bc5d053e98be}{Get\-Hostname} ()
 \begin{DoxyCompactList}\small\item\em Gets the host name from the fields. \end{DoxyCompactList}\item 
 void \hyperlink{class_senergy_1_1_dns_1_1_message_question_a239d21d940aa38b8d953ff29b400b9cf}{Set\-Hostname} (const std\-::string \&hostname)
@@ -35,6 +37,11 @@ void \hyperlink{class_senergy_1_1_dns_1_1_message_question_a3fbcbad88592bf5cde58
 \begin{DoxyCompactList}\small\item\em Gets the class of this question, the class denotes the format of the question. We only support I\-N (Internet) classes (1). \end{DoxyCompactList}\item 
 void \hyperlink{class_senergy_1_1_dns_1_1_message_question_a8676f25315240afe4473154f3708d3e5}{Set\-Class} (\hyperlink{namespace_senergy_1_1_dns_a953f153bc411213d621d00c1e1b3eb9d}{Resource\-Record\-Class} clas)
 \begin{DoxyCompactList}\small\item\em Set the class of this question, the class denotes the format of the question. We only support I\-N (Internet) classes (1). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{message__question_8h_a4b780ef30c07c3c31b79d838bc443687}{Message\-Question\-Ptr} \hyperlink{class_senergy_1_1_dns_1_1_message_question_ae8237696d15da3b4b67f96fbd3d1d3e3}{Create} (const std\-::string \&hostname, \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0}{Resource\-Record\-Type} type=\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29}{Resource\-Record\-Type\-::\-A}, \hyperlink{namespace_senergy_1_1_dns_a953f153bc411213d621d00c1e1b3eb9d}{Resource\-Record\-Class} clas=\hyperlink{namespace_senergy_1_1_dns_a953f153bc411213d621d00c1e1b3eb9dac8205c7636e728d448c2774e6a4a944b}{Resource\-Record\-Class\-::\-Internet})
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} class as a shared pointer with the specifed hostname, and optionally the specified resource record type and class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -45,7 +52,7 @@ Swen Kooij (Photonios)
 \end{DoxyAuthor}
 
 
-Definition at line 53 of file message\-\_\-question.\-h.
+Definition at line 57 of file message\-\_\-question.\-h.
 
 
 
@@ -65,9 +72,61 @@ Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_message_q
 
 Definition at line 29 of file message\-\_\-question.\-cpp.
 
+\hypertarget{class_senergy_1_1_dns_1_1_message_question_a974c091de6a0f0d46aa82125db2f4517}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Message\-Question@{Message\-Question}}
+\index{Message\-Question@{Message\-Question}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
+\subsubsection[{Message\-Question}]{\setlength{\rightskip}{0pt plus 5cm}Senergy\-::\-Dns\-::\-Message\-Question\-::\-Message\-Question (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{hostname, }
+\item[{{\bf Resource\-Record\-Type}}]{type = {\ttfamily {\bf Resource\-Record\-Type\-::\-A}}, }
+\item[{{\bf Resource\-Record\-Class}}]{clas = {\ttfamily {\bf Resource\-Record\-Class\-::\-Internet}}}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_message_question_a974c091de6a0f0d46aa82125db2f4517}
+
+
+Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} class with the specifed hostname, and optionally the specified resource record type and class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & The hostname/domain name that the question is being asked for. \\
+\hline
+{\em type} & The type of record that is expected in the reply. \\
+\hline
+{\em clas} & The class of the record that is expected in the reply. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file message\-\_\-question.\-cpp.
+
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_message_question_ae8237696d15da3b4b67f96fbd3d1d3e3}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Create@{Create}}
+\index{Create@{Create}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
+\subsubsection[{Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message\-Question\-Ptr} Senergy\-::\-Dns\-::\-Message\-Question\-::\-Create (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{hostname, }
+\item[{{\bf Resource\-Record\-Type}}]{type = {\ttfamily {\bf Resource\-Record\-Type\-::\-A}}, }
+\item[{{\bf Resource\-Record\-Class}}]{clas = {\ttfamily {\bf Resource\-Record\-Class\-::\-Internet}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_message_question_ae8237696d15da3b4b67f96fbd3d1d3e3}
+
+
+Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} class as a shared pointer with the specifed hostname, and optionally the specified resource record type and class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & The hostname/domain name that the question is being asked for. \\
+\hline
+{\em type} & The type of record that is expected in the reply. \\
+\hline
+{\em clas} & The class of the record that is expected in the reply. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 43 of file message\-\_\-question.\-cpp.
+
 \hypertarget{class_senergy_1_1_dns_1_1_message_question_a1c66b45b448f262a4f2cf1317c89b5b3}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Deserialize@{Deserialize}}
 \index{Deserialize@{Deserialize}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
 \subsubsection[{Deserialize}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Message\-Question\-::\-Deserialize (
@@ -94,7 +153,7 @@ A boolean indicating whether deserilization was successful. True is returned whe
 \end{DoxyReturn}
 
 
-Definition at line 49 of file message\-\_\-question.\-cpp.
+Definition at line 64 of file message\-\_\-question.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_message_question_a7ac084601ff3285c6e47e7ce7ccc09cf}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Dump@{Dump}}
 \index{Dump@{Dump}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
@@ -109,7 +168,7 @@ Dumps all fields to the standard output, with their values. In the following for
 
 
 
-Definition at line 84 of file message\-\_\-question.\-cpp.
+Definition at line 99 of file message\-\_\-question.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_message_question_ae86936e1268d7abf0a2210df9caa0840}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Get\-Class@{Get\-Class}}
 \index{Get\-Class@{Get\-Class}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
@@ -127,7 +186,7 @@ A value from the Resource\-Record\-Class enumuration.
 \end{DoxyReturn}
 
 
-Definition at line 101 of file message\-\_\-question.\-cpp.
+Definition at line 116 of file message\-\_\-question.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_message_question_a5fa467b516be4914f865bc5d053e98be}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Get\-Hostname@{Get\-Hostname}}
 \index{Get\-Hostname@{Get\-Hostname}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
@@ -145,7 +204,7 @@ The host name that is being requested (resolved).
 \end{DoxyReturn}
 
 
-Definition at line 33 of file message\-\_\-question.\-cpp.
+Definition at line 48 of file message\-\_\-question.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_message_question_a0a007a1d002a37189ce0f8c943335216}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Get\-Size@{Get\-Size}}
 \index{Get\-Size@{Get\-Size}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
@@ -163,7 +222,7 @@ The current size of this message.
 \end{DoxyReturn}
 
 
-Definition at line 43 of file message\-\_\-question.\-cpp.
+Definition at line 58 of file message\-\_\-question.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_message_question_a66d9d051672d30c1f4b5663d25430ec8}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Get\-Type@{Get\-Type}}
 \index{Get\-Type@{Get\-Type}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
@@ -181,7 +240,7 @@ A value from the Resource\-Record\-Type enumuration.
 \end{DoxyReturn}
 
 
-Definition at line 91 of file message\-\_\-question.\-cpp.
+Definition at line 106 of file message\-\_\-question.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_message_question_a60772687d382e1d376852e1b5ff59968}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Serialize@{Serialize}}
 \index{Serialize@{Serialize}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
@@ -209,7 +268,7 @@ A boolean indicating whether serilization was successful. True is returned when 
 \end{DoxyReturn}
 
 
-Definition at line 68 of file message\-\_\-question.\-cpp.
+Definition at line 83 of file message\-\_\-question.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_message_question_a8676f25315240afe4473154f3708d3e5}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Set\-Class@{Set\-Class}}
 \index{Set\-Class@{Set\-Class}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
@@ -229,7 +288,7 @@ Set the class of this question, the class denotes the format of the question. We
 \end{DoxyParams}
 
 
-Definition at line 106 of file message\-\_\-question.\-cpp.
+Definition at line 121 of file message\-\_\-question.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_message_question_a239d21d940aa38b8d953ff29b400b9cf}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Set\-Hostname@{Set\-Hostname}}
 \index{Set\-Hostname@{Set\-Hostname}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
@@ -249,7 +308,7 @@ Sets the host name that needs to be requested (resolved).
 \end{DoxyParams}
 
 
-Definition at line 38 of file message\-\_\-question.\-cpp.
+Definition at line 53 of file message\-\_\-question.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_message_question_a3fbcbad88592bf5cde58c7b22119cc4f}{\index{Senergy\-::\-Dns\-::\-Message\-Question@{Senergy\-::\-Dns\-::\-Message\-Question}!Set\-Type@{Set\-Type}}
 \index{Set\-Type@{Set\-Type}!Senergy::Dns::MessageQuestion@{Senergy\-::\-Dns\-::\-Message\-Question}}
@@ -269,7 +328,7 @@ Sets the type of question this is, what actually is meant is the type of resourc
 \end{DoxyParams}
 
 
-Definition at line 96 of file message\-\_\-question.\-cpp.
+Definition at line 111 of file message\-\_\-question.\-cpp.
 
 
 

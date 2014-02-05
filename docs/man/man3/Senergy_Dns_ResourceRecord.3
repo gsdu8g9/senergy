@@ -1,4 +1,4 @@
-.TH "Senergy::Dns::ResourceRecord" 3 "Sat Feb 1 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::Dns::ResourceRecord" 3 "Tue Feb 4 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -11,6 +11,8 @@ Defines a DNS Resource Record, as defined in RFC 1035, section 4\&.1\&.3\&. A DN
 .PP
 .PP
 \fC#include <resource_record\&.h>\fP
+.PP
+Inherited by \fBSenergy::Dns::Records::IPV4Address\fP\fC [private]\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
@@ -137,6 +139,8 @@ A boolean indicating whether deserialization was succesful\&. True is returned w
 .PP
 
 .PP
+Reimplemented in \fBSenergy::Dns::Records::IPV4Address\fP\&.
+.PP
 Definition at line 38 of file resource_record\&.cpp\&.
 .SS "\fBResourceRecordClass\fP Senergy::Dns::ResourceRecord::GetClass ()"
 
@@ -239,6 +243,8 @@ A boolean indicating whether serialization was successful\&. True is returned wh
 .RE
 .PP
 
+.PP
+Reimplemented in \fBSenergy::Dns::Records::IPV4Address\fP\&.
 .PP
 Definition at line 69 of file resource_record\&.cpp\&.
 .SS "void Senergy::Dns::ResourceRecord::SetClass (\fBResourceRecordClass\fPclas)"

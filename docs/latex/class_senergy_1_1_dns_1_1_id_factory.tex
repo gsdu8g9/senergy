@@ -1,0 +1,78 @@
+\hypertarget{class_senergy_1_1_dns_1_1_id_factory}{\section{Senergy\-:\-:Dns\-:\-:Id\-Factory Class Reference}
+\label{class_senergy_1_1_dns_1_1_id_factory}\index{Senergy\-::\-Dns\-::\-Id\-Factory@{Senergy\-::\-Dns\-::\-Id\-Factory}}
+}
+
+
+Static global factory that is used to generate random identifiers for D\-N\-S messages/packets. This is to ensure, each I\-D that is generated is unique.  
+
+
+
+
+{\ttfamily \#include $<$id\-\_\-factory.\-h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned short \hyperlink{class_senergy_1_1_dns_1_1_id_factory_aac705471a570313494ca2661a5888b3d}{Generate\-Id} ()
+\begin{DoxyCompactList}\small\item\em Generates a new random identifier to be used as the unique identifier for a D\-N\-S message/packet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{class_senergy_1_1_dns_1_1_id_factory_ae3169f3201faed02512868b1f128bbcb}{Maximum\-Buffer\-Size} = 20
+\begin{DoxyCompactList}\small\item\em Defines the maximum number of generated I\-D's that we keep in our buffer, before we throw them out. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Static global factory that is used to generate random identifiers for D\-N\-S messages/packets. This is to ensure, each I\-D that is generated is unique. 
+
+\begin{DoxyNote}{Note}
+This static class is thread-\/safe.
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Swen Kooij (Photonios) 
+\end{DoxyAuthor}
+
+
+Definition at line 44 of file id\-\_\-factory.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_id_factory_aac705471a570313494ca2661a5888b3d}{\index{Senergy\-::\-Dns\-::\-Id\-Factory@{Senergy\-::\-Dns\-::\-Id\-Factory}!Generate\-Id@{Generate\-Id}}
+\index{Generate\-Id@{Generate\-Id}!Senergy::Dns::IdFactory@{Senergy\-::\-Dns\-::\-Id\-Factory}}
+\subsubsection[{Generate\-Id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short Senergy\-::\-Dns\-::\-Id\-Factory\-::\-Generate\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_id_factory_aac705471a570313494ca2661a5888b3d}
+
+
+Generates a new random identifier to be used as the unique identifier for a D\-N\-S message/packet. 
+
+\begin{DoxyReturn}{Returns}
+A unique, random identifier for a D\-N\-S message/packet. 
+\end{DoxyReturn}
+
+
+Definition at line 37 of file id\-\_\-factory.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_id_factory_ae3169f3201faed02512868b1f128bbcb}{\index{Senergy\-::\-Dns\-::\-Id\-Factory@{Senergy\-::\-Dns\-::\-Id\-Factory}!Maximum\-Buffer\-Size@{Maximum\-Buffer\-Size}}
+\index{Maximum\-Buffer\-Size@{Maximum\-Buffer\-Size}!Senergy::Dns::IdFactory@{Senergy\-::\-Dns\-::\-Id\-Factory}}
+\subsubsection[{Maximum\-Buffer\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Dns\-::\-Id\-Factory\-::\-Maximum\-Buffer\-Size = 20\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_id_factory_ae3169f3201faed02512868b1f128bbcb}
+
+
+Defines the maximum number of generated I\-D's that we keep in our buffer, before we throw them out. 
+
+
+
+Definition at line 51 of file id\-\_\-factory.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/senergy/dns/\hyperlink{id__factory_8h}{id\-\_\-factory.\-h}\item 
+src/\hyperlink{id__factory_8cpp}{id\-\_\-factory.\-cpp}\end{DoxyCompactItemize}

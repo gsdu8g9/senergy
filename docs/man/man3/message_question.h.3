@@ -1,4 +1,4 @@
-.TH "src/senergy/dns/message_question.h" 3 "Sat Feb 1 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "src/senergy/dns/message_question.h" 3 "Tue Feb 4 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -9,6 +9,8 @@ src/senergy/dns/message_question.h \-
 \fC#include <senergy/bytebuffer\&.h>\fP
 .br
 \fC#include <senergy/convert\&.h>\fP
+.br
+\fC#include <senergy/vectorx\&.h>\fP
 .br
 \fC#include <senergy/dns/resource_record_types\&.h>\fP
 .br
@@ -47,22 +49,26 @@ src/senergy/dns/message_question.h \-
 .RI "\fBSenergy::Dns\fP"
 .br
 .in -1c
-.SS "Typedefs"
+.SS "Macros"
 
 .in +1c
 .ti -1c
-.RI "typedef std::shared_ptr
+.RI "#define \fBMessageQuestionPtr\fP   std::shared_ptr<MessageQuestion>"
 .br
-< MessageQuestion > \fBSenergy::Dns::MessageQuestionPtr\fP"
-.br
-.RI "\fISimple typedef for a shared pointer to a \fBMessageQuestion\fP\&. \fP"
 .ti -1c
-.RI "typedef std::vector
+.RI "#define \fBMessageQuestionPtrVector\fP   VectorX<\fBMessageQuestionPtr\fP>"
 .br
-< MessageQuestionPtr > \fBSenergy::Dns::MessageQuestionPtrVector\fP"
-.br
-.RI "\fISimple typedef for a vector of \fBMessageQuestion\fP smart pointers\&. \fP"
 .in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define MessageQuestionPtr   std::shared_ptr<MessageQuestion>"
+
+.PP
+Definition at line 43 of file message_question\&.h\&.
+.SS "#define MessageQuestionPtrVector   VectorX<\fBMessageQuestionPtr\fP>"
+
+.PP
+Definition at line 44 of file message_question\&.h\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Senergy from the source code\&.

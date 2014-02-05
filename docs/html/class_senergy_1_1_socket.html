@@ -76,6 +76,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -99,7 +100,7 @@ $(document).ready(function(){initNavTree('class_senergy_1_1_socket.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -174,15 +175,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a859e2c4eec6792215f04363404658b0a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_socket.html#a859e2c4eec6792215f04363404658b0a">Close</a> (<a class="el" href="class_senergy_1_1_socket.html#a88ed1eb1a5c47ea1b395715aabd37ab4">CloseType</a> close_type=<a class="el" href="class_senergy_1_1_socket.html#a88ed1eb1a5c47ea1b395715aabd37ab4a40b522922220c34afd8e1d4a3ba02208">CloseType::StopAll</a>)</td></tr>
 <tr class="memdesc:a859e2c4eec6792215f04363404658b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the current connection with the remote host. The method of closing the connection can be specified.  <a href="#a859e2c4eec6792215f04363404658b0a">More...</a><br/></td></tr>
 <tr class="separator:a859e2c4eec6792215f04363404658b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1407e054edc1fd012d8c85e563683947"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_socket.html#a1407e054edc1fd012d8c85e563683947">Send</a> (const char *data, size_t data_size)</td></tr>
-<tr class="memdesc:a1407e054edc1fd012d8c85e563683947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the specified data, with the specified size to the remote host.  <a href="#a1407e054edc1fd012d8c85e563683947">More...</a><br/></td></tr>
-<tr class="separator:a1407e054edc1fd012d8c85e563683947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa475d6aa0daf4d73ce627bce6ee04849"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_socket.html#aa475d6aa0daf4d73ce627bce6ee04849">Send</a> (void *data, size_t data_size)</td></tr>
+<tr class="memdesc:aa475d6aa0daf4d73ce627bce6ee04849"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the specified data, with the specified size to the remote host.  <a href="#aa475d6aa0daf4d73ce627bce6ee04849">More...</a><br/></td></tr>
+<tr class="separator:aa475d6aa0daf4d73ce627bce6ee04849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71531342844744a24298fecc25497671"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_socket.html#a71531342844744a24298fecc25497671">Send</a> (char *data, size_t data_size)</td></tr>
+<tr class="memdesc:a71531342844744a24298fecc25497671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the specified data, with the specified size to the remote host.  <a href="#a71531342844744a24298fecc25497671">More...</a><br/></td></tr>
+<tr class="separator:a71531342844744a24298fecc25497671"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ca07e0de8c6f74f27963f17c8b1398d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_socket.html#a9ca07e0de8c6f74f27963f17c8b1398d">Send</a> (const std::string &amp;data, size_t data_size)</td></tr>
 <tr class="memdesc:a9ca07e0de8c6f74f27963f17c8b1398d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the specified data, with the specified size to the remote host.  <a href="#a9ca07e0de8c6f74f27963f17c8b1398d">More...</a><br/></td></tr>
 <tr class="separator:a9ca07e0de8c6f74f27963f17c8b1398d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72e1de4e0e3ef63bb020c62bea989fa6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_socket.html#a72e1de4e0e3ef63bb020c62bea989fa6">Send</a> (const std::string &amp;data)</td></tr>
 <tr class="memdesc:a72e1de4e0e3ef63bb020c62bea989fa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the specified data, the size (length) of the specified string is the size of the data that will be transmitted.  <a href="#a72e1de4e0e3ef63bb020c62bea989fa6">More...</a><br/></td></tr>
 <tr class="separator:a72e1de4e0e3ef63bb020c62bea989fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14fe1f1cc811d3f8bb437c4158840928"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_socket.html#a14fe1f1cc811d3f8bb437c4158840928">Send</a> (<a class="el" href="class_senergy_1_1_byte_buffer.html">ByteBuffer</a> &amp;send_buffer)</td></tr>
+<tr class="memdesc:a14fe1f1cc811d3f8bb437c4158840928"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the contents of the specified buffer. The entire buffer will be transmitted, regardless of the current position of the buffer.  <a href="#a14fe1f1cc811d3f8bb437c4158840928">More...</a><br/></td></tr>
+<tr class="separator:a14fe1f1cc811d3f8bb437c4158840928"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7045f756d3c542ee1187a92ca13fa232"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_socket.html#a7045f756d3c542ee1187a92ca13fa232">Receive</a> (const char *receive_buffer, size_t size)</td></tr>
 <tr class="memdesc:a7045f756d3c542ee1187a92ca13fa232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to receive the specified amount of data into the specified buffer.  <a href="#a7045f756d3c542ee1187a92ca13fa232">More...</a><br/></td></tr>
 <tr class="separator:a7045f756d3c542ee1187a92ca13fa232"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -205,7 +212,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>This class does not use exceptions. Error handeling is done the same way as in the Berkely Sockets interface. Call GetErrorCode(..) for the latest BSD error code.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Swen Kooij / Photonios </dd></dl>
 
-<p>Definition at line <a class="el" href="socket_8h_source.html#l00070">70</a> of file <a class="el" href="socket_8h_source.html">socket.h</a>.</p>
+<p>Definition at line <a class="el" href="socket_8h_source.html#l00071">71</a> of file <a class="el" href="socket_8h_source.html">socket.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="ac9ff20ce80df2d0c2900cd0940ffe860"></a>
 <div class="memitem">
@@ -220,7 +227,7 @@ Public Member Functions</h2></td></tr>
 <p>A shared pointer typedef for the <a class="el" href="class_senergy_1_1_socket.html" title="Provides an object-oriented interface for Berkely (BSD) sockets. Can act both as a server as well as ...">Socket</a> class. </p>
 <dl class="section note"><dt>Note</dt><dd>This is defined outside the class definition as well to make it usuable for library users. </dd></dl>
 
-<p>Definition at line <a class="el" href="socket_8h_source.html#l00129">129</a> of file <a class="el" href="socket_8h_source.html">socket.h</a>.</p>
+<p>Definition at line <a class="el" href="socket_8h_source.html#l00130">130</a> of file <a class="el" href="socket_8h_source.html">socket.h</a>.</p>
 
 </div>
 </div>
@@ -256,7 +263,7 @@ Public Member Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="socket_8h_source.html#l00077">77</a> of file <a class="el" href="socket_8h_source.html">socket.h</a>.</p>
+<p>Definition at line <a class="el" href="socket_8h_source.html#l00078">78</a> of file <a class="el" href="socket_8h_source.html">socket.h</a>.</p>
 
 </div>
 </div>
@@ -286,7 +293,7 @@ Public Member Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="socket_8h_source.html#l00117">117</a> of file <a class="el" href="socket_8h_source.html">socket.h</a>.</p>
+<p>Definition at line <a class="el" href="socket_8h_source.html#l00118">118</a> of file <a class="el" href="socket_8h_source.html">socket.h</a>.</p>
 
 </div>
 </div>
@@ -318,7 +325,7 @@ Public Member Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="socket_8h_source.html#l00099">99</a> of file <a class="el" href="socket_8h_source.html">socket.h</a>.</p>
+<p>Definition at line <a class="el" href="socket_8h_source.html#l00100">100</a> of file <a class="el" href="socket_8h_source.html">socket.h</a>.</p>
 
 </div>
 </div>
@@ -441,7 +448,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>This does not work when this instance is not listening for incoming connections.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>A shared pointer to an instance of the <a class="el" href="class_senergy_1_1_socket.html" title="Provides an object-oriented interface for Berkely (BSD) sockets. Can act both as a server as well as ...">Socket</a> class, which represents the accepted remote connection. When the operation failed, an invalid shared pointer is returned. </dd></dl>
 
-<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00270">270</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00291">291</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
 
 </div>
 </div>
@@ -468,7 +475,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A boolean indiciating whether the operation succeseeded and false when the operation failed. The operation can fail when there is no active connection with a remote host. </dd></dl>
 
-<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00135">135</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00146">146</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
 
 </div>
 </div>
@@ -527,7 +534,7 @@ Public Member Functions</h2></td></tr>
 <p>Gets the last error code that was set by a socket operation. The error code that is returned are normal Berkely sockets error codes. Performing another socket operation overwrites the last error code that was set. </p>
 <dl class="section return"><dt>Returns</dt><dd>The last error code that was set during a socket operation. If a negative number or zero is returned, the last operation did not cause an error and was sucessful. </dd></dl>
 
-<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00292">292</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00313">313</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
 
 </div>
 </div>
@@ -597,7 +604,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A boolean indiciating whether the operation succeseeded. True is returned when the operationg succeseeded and false when it failed. Reason for failure can be, that another TCP server is already binded/listening on the specified port. </dd></dl>
 
-<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00108">108</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00119">119</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
 
 </div>
 </div>
@@ -636,7 +643,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The amount of bytes that were actually received and stored into the specified receive buffer. This can be less then the specified size, but never greater. If a number below zero is returned, the operation failed. The reason of failure can be retrieved using the <a class="el" href="class_senergy_1_1_socket.html#a403f7a2f6c5a94d4b14f73f0965da061" title="Gets the last error code that was set by a socket operation. The error code that is returned are norm...">GetErrorCode()</a> method. </dd></dl>
 
-<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00183">183</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00204">204</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
 
 </div>
 </div>
@@ -664,7 +671,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A string containing the received data. The length (size) of the returned string can be equal or less then the specified size, but never greater. If the operatin failed, an empty string is returned. </dd></dl>
 
-<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00228">228</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00249">249</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
 
 </div>
 </div>
@@ -703,18 +710,18 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The amount of bytes that were received. This number can be equal or less then the specified desired amount of bytes. If a number below zero (negative) is returned, the operation failed. The reason of failure can be retrieved using the <a class="el" href="class_senergy_1_1_socket.html#a403f7a2f6c5a94d4b14f73f0965da061" title="Gets the last error code that was set by a socket operation. The error code that is returned are norm...">GetErrorCode()</a> method. </dd></dl>
 
-<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00249">249</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00270">270</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a1407e054edc1fd012d8c85e563683947"></a>
+<a class="anchor" id="aa475d6aa0daf4d73ce627bce6ee04849"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">int Senergy::Socket::Send </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
@@ -742,7 +749,46 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The amount of bytes that were succesfuly transmitted to the remote host. If the operation failed, zero will be returned. </dd></dl>
 
-<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00146">146</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00157">157</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a71531342844744a24298fecc25497671"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Senergy::Socket::Send </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>data_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sends the specified data, with the specified size to the remote host. </p>
+<dl class="section note"><dt>Note</dt><dd>This operation will fail when there is no active connection with the remote host.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The data to send to the remote host. If NULL is specified, the operation will immediately fail. </td></tr>
+    <tr><td class="paramname">data_size</td><td>The size of the data that was specified, the size of the data to send to the remote host. If zero or less is specified, the operation will fail immediately.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The amount of bytes that were succesfuly transmitted to the remote host. If the operation failed, zero will be returned. </dd></dl>
+
+<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00181">181</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
 
 </div>
 </div>
@@ -781,7 +827,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The amount of bytes that were succesfuly transmitted to the remote host. If the operation failed, zero will be returned. </dd></dl>
 
-<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00170">170</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00186">186</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
 
 </div>
 </div>
@@ -809,7 +855,35 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The amount of bytes that were succesfuly transmitted to the remote host. If the operation failed, zero will be returned. </dd></dl>
 
-<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00178">178</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00194">194</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a14fe1f1cc811d3f8bb437c4158840928"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Senergy::Socket::Send </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_senergy_1_1_byte_buffer.html">ByteBuffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>send_buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sends the contents of the specified buffer. The entire buffer will be transmitted, regardless of the current position of the buffer. </p>
+<dl class="section note"><dt>Note</dt><dd>This operation will fail when there is no active connection with the remote host.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">send_buffer</td><td>The buffer to read the data to transmit from.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The amount of bytes that were succesfuly transmitted to the remote host. If the operation failed, zero will be returned. </dd></dl>
+
+<p>Definition at line <a class="el" href="socket_8cpp_source.html#l00199">199</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
 
 </div>
 </div>
@@ -850,7 +924,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_senergy.html">Senergy</a></li><li class="navelem"><a class="el" href="class_senergy_1_1_socket.html">Socket</a></li>
-    <li class="footer">Generated on Sat Feb 1 2014 19:47:17 for Senergy by
+    <li class="footer">Generated on Tue Feb 4 2014 21:08:08 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

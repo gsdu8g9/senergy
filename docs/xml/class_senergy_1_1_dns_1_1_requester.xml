@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_senergy_1_1_dns_1_1_requester" kind="class" prot="public">
+    <compoundname>Senergy::Dns::Requester</compoundname>
+    <includes refid="requester_8h" local="no">requester.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_requester_1aad631f9cd1865d836c42b659a49c0ec7" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Senergy::Dns::Requester::m_dns_server</definition>
+        <argsstring></argsstring>
+        <name>m_dns_server</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/requester.h" line="69" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/requester.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_requester_1a1b5fbbb5b5b115bdee9da48ce1466be0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Senergy::Dns::Requester::Requester</definition>
+        <argsstring>(const std::string &amp;dns_server)</argsstring>
+        <name>Requester</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>dns_server</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_senergy_1_1_dns_1_1_requester" kindref="compound">Requester</ref> class with the specified DNS server address. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dns_server</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The IP address of a DNS server that this class will communicate with when requests are executed. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/requester.h" line="53" column="1" bodyfile="/home/photonios/Documents/Senergy/src/requester.cpp" bodystart="29" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_requester_1a9221196d35728ad295d542c6f5342475" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespace_senergy_1a09aea2e19671645414361ca8388aebfe" kindref="member">StringVector</ref></type>
+        <definition>StringVector Senergy::Dns::Requester::Lookup</definition>
+        <argsstring>(ResourceRecordType record_type, const std::string &amp;hostname)</argsstring>
+        <name>Lookup</name>
+        <param>
+          <type><ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0" kindref="member">ResourceRecordType</ref></type>
+          <declname>record_type</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>hostname</declname>
+        </param>
+        <briefdescription>
+<para>Performs a lookup for the specified domain name, and requests the specified record from the remote DNS server. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>record_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A value from the ResourceRecordType enumuration, which indicates what kind of records should be returned. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hostname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The domain name to look up the IP address(es) for.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of strings, where each string is an IP address. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/requester.h" line="65" column="1" bodyfile="/home/photonios/Documents/Senergy/src/requester.cpp" bodystart="35" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Allows querying remote DNS servers, wraps sending and receiving DNS messages. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/requester.h" line="43" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/requester.h" bodystart="42" bodyend="70"/>
+    <listofallmembers>
+      <member refid="class_senergy_1_1_dns_1_1_requester_1a9221196d35728ad295d542c6f5342475" prot="public" virt="non-virtual"><scope>Senergy::Dns::Requester</scope><name>Lookup</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_requester_1aad631f9cd1865d836c42b659a49c0ec7" prot="private" virt="non-virtual"><scope>Senergy::Dns::Requester</scope><name>m_dns_server</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_requester_1a1b5fbbb5b5b115bdee9da48ce1466be0" prot="public" virt="non-virtual"><scope>Senergy::Dns::Requester</scope><name>Requester</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

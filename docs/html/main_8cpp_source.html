@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -138,81 +138,81 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html','');});
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">   25</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv)</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{   </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_senergy_1_1_socket.html">Senergy::Socket</a> socket(<a class="code" href="class_senergy_1_1_socket.html#ad400245278746ac26e261bdda171c178af5ef036b4d8b630721e51fe23489fbc9">Senergy::Socket::SocketProtocol::UDP</a>);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    socket.<a class="code" href="class_senergy_1_1_socket.html#a7ca3e4fb2e2f216773498e6f29e9ea14">SetTimeout</a>(2000);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span>(!socket.<a class="code" href="class_senergy_1_1_socket.html#a9f2cfa080e3a5f365b52cc5fff94eb74">Listen</a>(53))</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        printf(<span class="stringliteral">&quot;Error: Unable to start listening on port 53\n&quot;</span>);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    printf(<span class="stringliteral">&quot;Info: Listening on port 53\n&quot;</span>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="class_senergy_1_1_byte_buffer.html">Senergy::ByteBuffer</a> receive_buffer;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">int</span> bytes_received = socket.<a class="code" href="class_senergy_1_1_socket.html#a7045f756d3c542ee1187a92ca13fa232">Receive</a>(receive_buffer, 1024);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span>(bytes_received &lt;= 0)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">if</span>(socket.<a class="code" href="class_senergy_1_1_socket.html#a403f7a2f6c5a94d4b14f73f0965da061">GetErrorCode</a>() != <a class="code" href="namespace_senergy_1_1_socket_error.html#aa78be48fe668e1748c69b145a3c3fe16">Senergy::SocketError::Timeout</a>)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                printf(<span class="stringliteral">&quot;Error: During receiving a socket error occured: %i\n\n&quot;</span>, socket.<a class="code" href="class_senergy_1_1_socket.html#a403f7a2f6c5a94d4b14f73f0965da061">GetErrorCode</a>());</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        receive_buffer.<a class="code" href="class_senergy_1_1_byte_buffer.html#a13dd8a2eec8b93ac224f0da614c7f6f8">SetPosition</a>(0);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        printf(<span class="stringliteral">&quot;Info: received message from: %s\n&quot;</span>, socket.<a class="code" href="class_senergy_1_1_socket.html#aaab6b46c9e2733982df87eefb0fc77a2">GetRemoteHost</a>().c_str());</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="class_senergy_1_1_dns_1_1_message.html">Senergy::Dns::Message</a> dns_message;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">if</span>(!dns_message.Deserialize(receive_buffer))</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            printf(<span class="stringliteral">&quot;Error: unable to deserialize message\n\n&quot;</span>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">int</span> question_count = dns_message.GetQuestionCount();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span>(question_count &lt;= 0)</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            printf(<span class="stringliteral">&quot;Error: did not receive any questions\n\n&quot;</span>);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        printf(<span class="stringliteral">&quot;Info: received %i questions\n&quot;</span>, question_count);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; question_count; i++)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            std::string requested_hostname = dns_message.Questions[i]-&gt;GetHostname();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            printf(<span class="stringliteral">&quot;Info: received question for %s\n&quot;</span>, requested_hostname.c_str());</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            printf(<span class="stringliteral">&quot;Info: question is of type %hu\n&quot;</span>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>)dns_message.Questions[i]-&gt;GetType());</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            printf(<span class="stringliteral">&quot;Info: question has class %hu\n&quot;</span>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>)dns_message.Questions[i]-&gt;GetClass());</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
-<div class="ttc" id="class_senergy_1_1_byte_buffer_html_a13dd8a2eec8b93ac224f0da614c7f6f8"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a13dd8a2eec8b93ac224f0da614c7f6f8">Senergy::ByteBuffer::SetPosition</a></div><div class="ttdeci">bool SetPosition(int position)</div><div class="ttdoc">Sets the current position within the byte buffer. The position is the offset within the buffer that w...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00072">bytebuffer.cpp:72</a></div></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 5; i++)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="class_senergy_1_1_dns_1_1_requester.html">Senergy::Dns::Requester</a> request(<span class="stringliteral">&quot;8.8.8.8&quot;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="class_senergy_1_1_vector_x.html">Senergy::StringVector</a> result = request.<a class="code" href="class_senergy_1_1_dns_1_1_requester.html#a9221196d35728ad295d542c6f5342475">Lookup</a>(<a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29">Senergy::Dns::ResourceRecordType::A</a>, <span class="stringliteral">&quot;www.google.com&quot;</span>);   </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">/*Senergy::Socket socket(Senergy::Socket::SocketProtocol::UDP);</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">    socket.SetTimeout(2000);</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">    if(!socket.Listen(53))</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">    {</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">        printf(&quot;Error: Unable to start listening on port 53\n&quot;);</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">        return 1;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    printf(&quot;Info: Listening on port 53\n&quot;);</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    while(true)</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    {</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">        Senergy::ByteBuffer receive_buffer;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">        </span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">        int bytes_received = socket.Receive(receive_buffer, 1024);</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">        if(bytes_received &lt;= 0)</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">        {</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">            if(socket.GetErrorCode() != Senergy::SocketError::Timeout)</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">                printf(&quot;Error: During receiving a socket error occured: %i\n\n&quot;, socket.GetErrorCode());</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">            continue;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">        }</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">        receive_buffer.SetPosition(0);</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">        printf(&quot;Info: received message from: %s\n&quot;, socket.GetRemoteHost().c_str());</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">        Senergy::Dns::Message dns_message;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">        if(!dns_message.Deserialize(receive_buffer))</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">        {</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">            printf(&quot;Error: unable to deserialize message\n\n&quot;);</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">            continue;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">        }</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">        int question_count = dns_message.GetQuestionCount();</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">        if(question_count &lt;= 0)</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">        {</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">            printf(&quot;Error: did not receive any questions\n\n&quot;);</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">            continue;</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">        }</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">        printf(&quot;Info: received %i questions\n&quot;, question_count);</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">        for(int i = 0; i &lt; question_count; i++)</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">        {</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">            std::string requested_hostname = dns_message.Questions[i]-&gt;GetHostname();</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">            printf(&quot;Info: received question for %s\n&quot;, requested_hostname.c_str());</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">            printf(&quot;Info: question is of type %hu\n&quot;, (unsigned short)dns_message.Questions[i]-&gt;GetType());</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">            printf(&quot;Info: question has class %hu\n&quot;, (unsigned short)dns_message.Questions[i]-&gt;GetClass());</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">        }</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">        printf(&quot;\n&quot;);</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">    }*/</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="ttc" id="class_senergy_1_1_dns_1_1_requester_html"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_requester.html">Senergy::Dns::Requester</a></div><div class="ttdoc">Allows querying remote DNS servers, wraps sending and receiving DNS messages. </div><div class="ttdef"><b>Definition:</b> <a href="requester_8h_source.html#l00042">requester.h:42</a></div></div>
 <div class="ttc" id="main_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00025">main.cpp:25</a></div></div>
-<div class="ttc" id="class_senergy_1_1_socket_html_ad400245278746ac26e261bdda171c178af5ef036b4d8b630721e51fe23489fbc9"><div class="ttname"><a href="class_senergy_1_1_socket.html#ad400245278746ac26e261bdda171c178af5ef036b4d8b630721e51fe23489fbc9">Senergy::Socket::SocketProtocol::UDP</a></div></div>
-<div class="ttc" id="class_senergy_1_1_socket_html_aaab6b46c9e2733982df87eefb0fc77a2"><div class="ttname"><a href="class_senergy_1_1_socket.html#aaab6b46c9e2733982df87eefb0fc77a2">Senergy::Socket::GetRemoteHost</a></div><div class="ttdeci">std::string GetRemoteHost()</div><div class="ttdoc">Gets the textual representation of the remote host that this socket is currently connected to...</div><div class="ttdef"><b>Definition:</b> <a href="socket_8cpp_source.html#l00066">socket.cpp:66</a></div></div>
-<div class="ttc" id="class_senergy_1_1_socket_html_a7ca3e4fb2e2f216773498e6f29e9ea14"><div class="ttname"><a href="class_senergy_1_1_socket.html#a7ca3e4fb2e2f216773498e6f29e9ea14">Senergy::Socket::SetTimeout</a></div><div class="ttdeci">bool SetTimeout(unsigned int milliseconds)</div><div class="ttdoc">Sets the timeout time that is used for socket operations, such as sending, receiving, and connecting. A timeout specifies the maximum time to wait for an operation to complete. </div><div class="ttdef"><b>Definition:</b> <a href="socket_8cpp_source.html#l00082">socket.cpp:82</a></div></div>
-<div class="ttc" id="class_senergy_1_1_byte_buffer_html"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html">Senergy::ByteBuffer</a></div><div class="ttdoc">A dynamiclly sized buffer for binary data. Resizes the underlying buffer when new data is written...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8h_source.html#l00040">bytebuffer.h:40</a></div></div>
-<div class="ttc" id="namespace_senergy_1_1_socket_error_html_aa78be48fe668e1748c69b145a3c3fe16"><div class="ttname"><a href="namespace_senergy_1_1_socket_error.html#aa78be48fe668e1748c69b145a3c3fe16">Senergy::SocketError::Timeout</a></div><div class="ttdeci">static const int Timeout</div><div class="ttdoc">Thrown when a socket operation (receing/binding/sending/connecting) times out. </div><div class="ttdef"><b>Definition:</b> <a href="socket_8h_source.html#l00053">socket.h:53</a></div></div>
-<div class="ttc" id="class_senergy_1_1_socket_html_a403f7a2f6c5a94d4b14f73f0965da061"><div class="ttname"><a href="class_senergy_1_1_socket.html#a403f7a2f6c5a94d4b14f73f0965da061">Senergy::Socket::GetErrorCode</a></div><div class="ttdeci">int GetErrorCode()</div><div class="ttdoc">Gets the last error code that was set by a socket operation. The error code that is returned are norm...</div><div class="ttdef"><b>Definition:</b> <a href="socket_8cpp_source.html#l00292">socket.cpp:292</a></div></div>
-<div class="ttc" id="class_senergy_1_1_socket_html_a7045f756d3c542ee1187a92ca13fa232"><div class="ttname"><a href="class_senergy_1_1_socket.html#a7045f756d3c542ee1187a92ca13fa232">Senergy::Socket::Receive</a></div><div class="ttdeci">int Receive(const char *receive_buffer, size_t size)</div><div class="ttdoc">Attempts to receive the specified amount of data into the specified buffer. </div><div class="ttdef"><b>Definition:</b> <a href="socket_8cpp_source.html#l00183">socket.cpp:183</a></div></div>
+<div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29">Senergy::Dns::ResourceRecordType::A</a></div><div class="ttdoc">A host address. </div></div>
+<div class="ttc" id="class_senergy_1_1_dns_1_1_requester_html_a9221196d35728ad295d542c6f5342475"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_requester.html#a9221196d35728ad295d542c6f5342475">Senergy::Dns::Requester::Lookup</a></div><div class="ttdeci">StringVector Lookup(ResourceRecordType record_type, const std::string &amp;hostname)</div><div class="ttdoc">Performs a lookup for the specified domain name, and requests the specified record from the remote DN...</div><div class="ttdef"><b>Definition:</b> <a href="requester_8cpp_source.html#l00035">requester.cpp:35</a></div></div>
+<div class="ttc" id="class_senergy_1_1_vector_x_html"><div class="ttname"><a href="class_senergy_1_1_vector_x.html">Senergy::VectorX</a></div><div class="ttdoc">An improvemend upon the standard vector (std::vector), but it&#39;s interface is more like the rest of Se...</div><div class="ttdef"><b>Definition:</b> <a href="vectorx_8h_source.html#l00040">vectorx.h:40</a></div></div>
 <div class="ttc" id="senergy_8h_html"><div class="ttname"><a href="senergy_8h.html">senergy.h</a></div></div>
-<div class="ttc" id="class_senergy_1_1_socket_html_a9f2cfa080e3a5f365b52cc5fff94eb74"><div class="ttname"><a href="class_senergy_1_1_socket.html#a9f2cfa080e3a5f365b52cc5fff94eb74">Senergy::Socket::Listen</a></div><div class="ttdeci">bool Listen(unsigned int port)</div><div class="ttdoc">Starts listening for incoming connections on the specified port. Binds itself to the specified port...</div><div class="ttdef"><b>Definition:</b> <a href="socket_8cpp_source.html#l00108">socket.cpp:108</a></div></div>
-<div class="ttc" id="class_senergy_1_1_dns_1_1_message_html"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_message.html">Senergy::Dns::Message</a></div><div class="ttdoc">Represents a DNS packet as described in section 4 of RFC-1035. A DNS packet is the standard message f...</div><div class="ttdef"><b>Definition:</b> <a href="message_8h_source.html#l00041">message.h:41</a></div></div>
-<div class="ttc" id="class_senergy_1_1_socket_html"><div class="ttname"><a href="class_senergy_1_1_socket.html">Senergy::Socket</a></div><div class="ttdoc">Provides an object-oriented interface for Berkely (BSD) sockets. Can act both as a server as well as ...</div><div class="ttdef"><b>Definition:</b> <a href="socket_8h_source.html#l00070">socket.h:70</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generated on Sat Feb 1 2014 19:47:16 for Senergy by
+    <li class="footer">Generated on Tue Feb 4 2014 21:08:08 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
