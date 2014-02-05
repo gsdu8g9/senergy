@@ -45,6 +45,7 @@ ByteBuffer::~ByteBuffer()
 	if(m_data != NULL)
 	{
 		free(m_data);
+		m_data = NULL;
 		m_current_size = 0;
 	}
 }
@@ -71,10 +72,11 @@ int ByteBuffer::GetRemainingSize()
 
 bool ByteBuffer::SetPosition(int position)
 {
-	if(position < 0 || position > m_current_size)
+	if(position < 0 || position > (int) m_current_size)
 		return false;
 
-	m_position = position;	
+	m_position = position;
+	return true;
 }
 
 bool ByteBuffer::SetPosition(unsigned int position)
@@ -174,7 +176,7 @@ bool ByteBuffer::Read(char *buffer, int size)
 		return false;
 
 	int buffer_end_offset = m_position + size;
-	if(buffer_end_offset > m_current_size)
+	if(buffer_end_offset > (int) m_current_size)
 		return false;
 
 	memcpy(buffer, m_data + m_position, size);

@@ -21,6 +21,10 @@
 
 #include <senergy/socket.h>
 
+#ifdef _WIN32
+	#pragma comment(lib, "Ws2_32.lib")
+#endif
+
 namespace Senergy
 {
 
@@ -34,6 +38,7 @@ Socket::Socket(SocketProtocol protocol) :
 	m_socket_role			(SocketRole::Client),
 	m_timeout_milliseconds	(0)
 {
+	__init_winsock();
 }
 
 Socket::Socket(const Socket &socket)
@@ -61,6 +66,7 @@ Socket::Socket(SocketProtocol protocol, int native_socket, struct sockaddr_in re
 	m_timeout_milliseconds	(0),
 	m_remote_address		(remote_address)
 {	
+	__init_winsock();
 }
 
 std::string Socket::GetRemoteHost()
@@ -88,10 +94,7 @@ bool Socket::SetTimeout(unsigned int milliseconds)
 bool Socket::Connect(const std::string &remote_address, unsigned int remote_port)
 {
 	if(IsConnected())
-	{
-		printf("connection\n");
 		return false;
-	}
 		
 	m_remote_host 		= remote_address;
 	m_remote_port 		= remote_port;
@@ -99,20 +102,12 @@ bool Socket::Connect(const std::string &remote_address, unsigned int remote_port
 	m_socket_role = SocketRole::Client;
 	
 	if(!__set_address_struct())
-	{
-		printf("address\n");
 		return false;
-	}
 		
 	if(!__create_native_socket())
-	{
-		printf("create\n");
 		return false;
-	}
 		
 	m_connected = __native_connect();
-	if(!m_connected)
-		printf("m_connected\n");
 	return m_connected;
 }
 
@@ -163,12 +158,20 @@ int Socket::Send(void *data, size_t data_size)
 
 	switch(m_protocol)
 	{	
-		case SocketProtocol::TCP:	
-			send_result = send(m_native_socket, (void*)data, data_size, 0);		
+		case SocketProtocol::TCP:
+			#ifdef _WIN32
+				send_result = send(m_native_socket, (const char *)data, data_size, 0);		
+			#else
+				send_result = send(m_native_socket, (void*)data, data_size, 0);		
+			#endif
 		break;
 
 		case SocketProtocol::UDP:
-			send_result = sendto(m_native_socket, (void*)data, data_size, 0, (struct sockaddr *)&m_remote_address, sizeof(m_remote_address));
+			#ifdef _WIN32
+				send_result = sendto(m_native_socket, (const char*)data, data_size, 0, (struct sockaddr *)&m_remote_address, sizeof(m_remote_address));
+			#else
+				send_result = sendto(m_native_socket, (void*)data, data_size, 0, (struct sockaddr *)&m_remote_address, sizeof(m_remote_address));
+			#endif
 		break;
 	}
 
@@ -232,11 +235,19 @@ int	Socket::Receive(const char *receive_buffer, size_t size)
 	switch(m_protocol)
 	{
 		case SocketProtocol::TCP:
-			bytes_received = recv(m_native_socket, (void*)receive_buffer, size, 0);
+			#ifdef _WIN32
+				bytes_received = recv(m_native_socket, (char *)receive_buffer, size, 0);
+			#else
+				bytes_received = recv(m_native_socket, (void*)receive_buffer, size, 0);
+			#endif
 		break;
 
 		case SocketProtocol::UDP:
-			bytes_received = recvfrom(m_native_socket, (void*)receive_buffer, size, 0, (struct sockaddr *)&m_remote_address, &address_size);
+			#ifdef _WIN32
+				bytes_received = recvfrom(m_native_socket, (char *)receive_buffer, size, 0, (struct sockaddr *)&m_remote_address, (int *)&address_size);
+			#else
+				bytes_received = recvfrom(m_native_socket, (void*)receive_buffer, size, 0, (struct sockaddr *)&m_remote_address, &address_size);
+			#endif
 		break;
 	}
 
@@ -296,7 +307,11 @@ SocketPtr Socket::Accept()
 	struct sockaddr_in remote_address;
 	unsigned int address_length = sizeof(remote_address);
 
-	int new_client_socket = accept(m_native_socket, (struct sockaddr*) &remote_address, &address_length);
+	#ifdef _WIN32
+		int new_client_socket = accept(m_native_socket, (struct sockaddr*) &remote_address, (int *)&address_length);
+	#else
+		int new_client_socket = accept(m_native_socket, (struct sockaddr*) &remote_address, &address_length);
+	#endif 
 	__update_last_error();
 
 	if(new_client_socket < 0)
@@ -344,12 +359,12 @@ bool Socket::__set_address_struct()
 
 	int result = 0;
 
+	struct addrinfo *host_info = NULL;
+
 	switch(m_socket_role)
 	{
 		case SocketRole::Client:
 			__enfore_timeout();
-
-			struct addrinfo *host_info;
 			result = getaddrinfo(m_remote_host.c_str(), Convert::ToString(m_remote_port).c_str(), NULL, &host_info);
 		
 			__update_last_error();
@@ -357,7 +372,10 @@ bool Socket::__set_address_struct()
 			if(host_info == NULL || result < 0)
 				return false;
 
-			m_remote_address = *(struct sockaddr_in *) host_info->ai_addr;
+			if (host_info->ai_addr == NULL)
+				return false;
+
+			m_remote_address = (*((struct sockaddr_in *)host_info->ai_addr));
 		break;
 	
 		case SocketRole::Server:
@@ -425,7 +443,7 @@ bool Socket::__enfore_timeout()
 	int timeout_result = setsockopt(m_native_socket, SOL_SOCKET, SO_RCVTIMEO, (char *)&m_timeout, sizeof(m_timeout));
 	timeout_result = setsockopt(m_native_socket, SOL_SOCKET, SO_SNDTIMEO, (char *)&m_timeout, sizeof(m_timeout));
 
-	return timeout_result;
+	return (timeout_result > 0);
 }
 
 void Socket::__update_remote_host()
@@ -435,6 +453,14 @@ void Socket::__update_remote_host()
 		return;
 
 	m_remote_host = std::string(current_remote_host);
+}
+
+void Socket::__init_winsock()
+{
+	#ifdef _WIN32
+		WSAData wsa_data;
+		int winsock_init_result = WSAStartup(MAKEWORD(2, 2), &wsa_data);
+	#endif
 }
 
 } // namespace Senergy

@@ -29,6 +29,8 @@ int main(int argc, char **argv)
 		Senergy::Dns::Requester request("8.8.8.8");
 		Senergy::StringVector result = request.Lookup(Senergy::Dns::ResourceRecordType::A, "www.google.com");	
 	}
+
+	system("pause >nul");
 	return 0;
 
 	/*Senergy::Socket socket(Senergy::Socket::SocketProtocol::UDP);

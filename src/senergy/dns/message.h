@@ -22,11 +22,16 @@
 #ifndef SY_DNS_MESSAGE_H
 #define SY_DNS_MESSAGE_H
 
+#ifdef _WIN32
+	#define NOMINMAX
+#endif
+
 #include <senergy/dns/message_header.h>
 #include <senergy/dns/message_question.h>
 #include <senergy/bytebuffer.h>
 #include <senergy/vectorx.h>
 #include <algorithm>
+#include <string>
 
 namespace Senergy
 {

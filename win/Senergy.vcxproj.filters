@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\src\bytebuffer.cpp" />
+    <ClCompile Include="..\src\circular_buffer.cpp" />
+    <ClCompile Include="..\src\convert.cpp" />
+    <ClCompile Include="..\src\id_factory.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\message.cpp" />
+    <ClCompile Include="..\src\message_header.cpp" />
+    <ClCompile Include="..\src\message_question.cpp" />
+    <ClCompile Include="..\src\print.cpp" />
+    <ClCompile Include="..\src\record_ipv4address.cpp" />
+    <ClCompile Include="..\src\requester.cpp" />
+    <ClCompile Include="..\src\resource_record.cpp" />
+    <ClCompile Include="..\src\resource_record_classes.cpp" />
+    <ClCompile Include="..\src\resource_record_collection.cpp" />
+    <ClCompile Include="..\src\resource_record_types.cpp" />
+    <ClCompile Include="..\src\rootnameserver.cpp" />
+    <ClCompile Include="..\src\socket.cpp" />
+    <ClCompile Include="..\src\utils.cpp" />
+    <ClCompile Include="..\src\vectorx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="senergy">
+      <UniqueIdentifier>{b79c23aa-20a5-4d73-ba6a-7d54cd211120}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="senergy\dns">
+      <UniqueIdentifier>{ac8be1ff-6087-42ec-af03-78bcca65d2ff}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\senergy\bytebuffer.h">
+      <Filter>senergy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\senergy\circular_buffer.h">
+      <Filter>senergy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\senergy\convert.h">
+      <Filter>senergy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\senergy\print.h">
+      <Filter>senergy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\senergy\senergy.h">
+      <Filter>senergy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\senergy\socket.h">
+      <Filter>senergy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\senergy\types.h">
+      <Filter>senergy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\senergy\vectorx.h">
+      <Filter>senergy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\senergy\dns\id_factory.h">
+      <Filter>senergy\dns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\senergy\dns\message.h">
+      <Filter>senergy\dns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\senergy\dns\message_header.h">
+      <Filter>senergy\dns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\senergy\dns\message_question.h">
+      <Filter>senergy\dns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\senergy\dns\record_ipv4address.h">
+      <Filter>senergy\dns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\senergy\dns\requester.h">
+      <Filter>senergy\dns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\senergy\dns\resource_record.h">
+      <Filter>senergy\dns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\senergy\dns\resource_record_classes.h">
+      <Filter>senergy\dns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\senergy\dns\resource_record_collection.h">
+      <Filter>senergy\dns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\senergy\dns\resource_record_types.h">
+      <Filter>senergy\dns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\senergy\dns\rootnameserver.h">
+      <Filter>senergy\dns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\senergy\dns\utils.h">
+      <Filter>senergy\dns</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

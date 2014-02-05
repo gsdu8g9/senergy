@@ -48,33 +48,34 @@ public:
 	 * \brief Serializes all records in this collection into the specified buffer.
 	 *
 	 * \param buffer The buffer to write the serialized data to.
+	 * \param header The header to write to how many resource records
+	 *				 we serialized.
 	 *
 	 * \returns A boolean indicating whether this operation was a success.
 	 */
-	bool Serialize(ByteBuffer &buffer);
+	bool Serialize(MessageHeader &header, ByteBuffer &buffer);
 
 	/*!
 	 * \brief Deserializes the content of the specified buffer into this collection.
 	 *
 	 * \param buffer The buffer to read from.
-	 * 
+	 * \param header The header to use as the information source during deserialization.
+	 *				 The header contains information on how many resource records
+	 *				 have been returned.
 	 *
 	 * \returns A boolean indicating whether this operation was a success.
 	 */
-	bool Deserialize(ByteBuffer &buffer);
+	bool Deserialize(MessageHeader &header, ByteBuffer &buffer);
 
 public:
 	/*!
 	 * \brief All 'A' records in this collection. See the IPV4Address class for more information..
 	 */
-	IPV4AddressPtrVector ARecords;
+	Records::IPV4AddressPtrVector ARecords;
 
 private:
-	// Serializes all 'A' records, in the ARecords vector to the specified buffer.
-	void __serialize_a_records(ByteBuffer &buffer);
-
-	// Deserializes all 'A' records from the specified buffer into the 'ARecords' vector.
-	void __deserialize_a_records(ByteBuffer &buffer);
+	// Clears all internal collections
+	void __clear_collections();
 }; 
 
 } // namespace Dns

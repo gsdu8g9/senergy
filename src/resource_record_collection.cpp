@@ -30,5 +30,27 @@ ResourceRecordCollection::ResourceRecordCollection()
 {
 }
 
+bool ResourceRecordCollection::Serialize(MessageHeader &header, ByteBuffer &buffer)
+{
+	
+}
+
+bool ResourceRecordCollection::Deserialize(MessageHeader &header, ByteBuffer &buffer)
+{
+	__clear_collections();
+
+	int resource_records_count = (int) header.Fields.AnswerCount;
+
+	for (int i = 0; i < resource_records_count; ++i)
+	{
+
+	}
+}
+
+void ResourceRecordCollection::__clear_collections()
+{
+	this->ARecords.clear();
+}
+
 } // namespace Dns
 } // namespace Senergy

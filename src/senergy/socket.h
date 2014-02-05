@@ -26,12 +26,15 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <cstring>
 #include <senergy/bytebuffer.h>
 #include <senergy/convert.h>
 
 #ifdef _WIN32
-	#include <windows.h>
 	#include <winsock2.h>
+	#include <ws2tcpip.h>
+	#include <windows.h>
+	#include <stdio.h>
 #else
 	#include <arpa/inet.h>
 	#include <sys/socket.h>
@@ -439,6 +442,9 @@ private:
 
 	// Updates the value of 'm_remote_host' with the host name in m_remote_address.
 	void		__update_remote_host();
+
+	// Only does something wen compiling for windows, makes sure winsock is initialized.
+	void		__init_winsock();
 
 private:
 	// Holds the host name or IP address of the remote host that this socket

@@ -409,7 +409,7 @@ private:
 		int type_size = sizeof(T);
 		char *read_buffer = (char *)malloc(type_size);
 
-		T return_value;
+		T return_value{};
 
 		if(!Read(read_buffer, type_size))
 		{

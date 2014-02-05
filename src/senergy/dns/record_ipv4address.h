@@ -25,6 +25,7 @@
 #include <string>
 #include <senergy/dns/resource_record_types.h>
 #include <senergy/dns/resource_record_classes.h>
+#include <senergy/dns/message_header.h>
 #include <senergy/dns/resource_record.h>
 #include <senergy/vectorx.h>
 

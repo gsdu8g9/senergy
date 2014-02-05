@@ -26,13 +26,13 @@ namespace Senergy
 
 std::string Convert::ToString(int value)
 {
-	int digits = floor(log10(abs(value))) + 1;
+	int digits = floor((double)log10(abs(value))) + 1;
 	if(value == 0)
 		digits = 1;
 
-	char raw_result[digits];
+	char *raw_result = (char *) malloc(digits);
 	sprintf(raw_result, "%d", value); 
-	
+
 	return std::string(raw_result);
 }
 
