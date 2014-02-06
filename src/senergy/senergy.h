@@ -34,6 +34,8 @@
 #include <senergy/dns/message_header.h>
 #include <senergy/dns/message_question.h>
 #include <senergy/dns/resource_record.h>
+#include <senergy/dns/record_ipv4address.h>
+#include <senergy/dns/resource_record_collection.h>
 #include <senergy/dns/message.h>
 #include <senergy/dns/requester.h>
 

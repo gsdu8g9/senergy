@@ -23,8 +23,10 @@
 #define SYS_DNS_RESOURCE_RECORD_H
 
 #include <string>
+#include <memory>
 #include <senergy/dns/resource_record_types.h>
 #include <senergy/dns/resource_record_classes.h>
+#include <senergy/vectorx.h>
 #include <senergy/dns/utils.h>
 #include <senergy/bytebuffer.h>
 
@@ -49,11 +51,24 @@ namespace Dns
  */
 class ResourceRecord
 {
+protected:
+	// A simple typedef for a shared pointer to a ResourceRecord instance.
+	// Warning: this is re-declared at the bottom of this file.
+	typedef std::shared_ptr<ResourceRecord> ResourceRecordPtr;
+
 public:
 	/*!
 	 * \brief Initializes a new instance of the ResourceRecord class.
 	 */
 	ResourceRecord();
+	
+	/*!
+	 * \brief Creates a new instance of the ResourceRecord class as a shared
+	 *		  pointer.
+	 *
+	 * \returns A shared pointer to the newly initiated instance of the ResourceRecord class.
+	 */
+	static ResourceRecordPtr Create();
 
 	/*!
 	 * \brief Deserializes a resource record from the specified buffer into
@@ -169,6 +184,14 @@ public:
 	 */
 	int GetResourceSize();
 
+	/*!
+	 * \brief Dumps all fields to the standard output, with
+	 *		  their values. In the following format:
+	 *
+	 * 		  [field name]: [field_value]\n
+	 */
+	virtual void Dump();
+
 protected:
 	// The domain name that was returned, this is either a DNS label (3www6google3com) or a pointer
 	// If the first two bits are 1's then, it's a pointer
@@ -186,6 +209,16 @@ protected:
 	// The length of the remaining data (actual resource data)
 	unsigned short			m_rd_length;
 };
+
+/*!
+ * \brief A shared pointer to an instance of the ResourceRecord class.
+ */
+typedef std::shared_ptr<ResourceRecord> ResourceRecordPtr;
+
+/*!
+ * \brief A vector of shared pointers to ResourceRecord class instances
+ */
+typedef VectorX<ResourceRecordPtr> ResourceRecordPtrVector;
 
 } // namespace Dns
 } // namespace Senergy

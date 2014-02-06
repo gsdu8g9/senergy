@@ -52,9 +52,10 @@ public:
 	 *
 	 * \param value The object/value to add to the vector.
  	 */
-	void Add(T value)
+	T Add(T value)
 	{
 		BaseClass::push_back(value);
+		return BaseClass::at(BaseClass::size() - 1);
 	}
 
 private:	

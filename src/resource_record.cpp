@@ -35,21 +35,20 @@ ResourceRecord::ResourceRecord() :
 {
 }
 
+ResourceRecordPtr ResourceRecord::Create()
+{
+	return ResourceRecordPtr(new ResourceRecord());
+}
+
 bool ResourceRecord::Deserialize(ByteBuffer &buffer)
 {
 	if(buffer.GetRemainingSize() < 4)
 		return false;
 
-	m_hostname = buffer.ReadString(256);
+	m_hostname = Utils::ReadHostnameFromBuffer(buffer);
 
-	if(m_hostname.size() < 2)
+	if(m_hostname.size() <= 0)
 		return false;
-
-	// we do not support pointers..
-	if(Utils::IsDomainPointer(m_hostname))
-		return false;
-
-	m_hostname = Utils::DecodeHostname(m_hostname);
 
 	if(buffer.GetRemainingSize() < 4)
 		return false;
@@ -63,6 +62,7 @@ bool ResourceRecord::Deserialize(ByteBuffer &buffer)
 	m_class 	= (ResourceRecordClass) Utils::NetworkToHostByteOrder((unsigned short)m_class);
 	m_ttl 		= Utils::NetworkToHostByteOrder(m_ttl);
 	m_rd_length = Utils::NetworkToHostByteOrder(m_rd_length);
+
 	return true;
 }
 
@@ -124,6 +124,15 @@ int ResourceRecord::GetMaxCachingTime()
 int ResourceRecord::GetResourceSize()
 {
 	return (int)m_rd_length;
+}
+
+void ResourceRecord::Dump()
+{
+	printf("Name: %s\n", m_hostname.c_str());
+	printf("Type: %hu\n", (unsigned short)m_type);
+	printf("Class: %hu\n", (unsigned short)m_class);
+	printf("TTL: %u\n", m_ttl);
+	printf("RDLength: %hu\n", m_rd_length);
 }
 
 } // namespace Dns

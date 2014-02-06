@@ -23,6 +23,8 @@
 #define SY_DNS_UTILS_H
 
 #include <string>
+#include <senergy/bytebuffer.h>
+
 #ifdef _WIN32
 	#include <winsock2.h>
 #else
@@ -144,20 +146,27 @@ public:
 	static unsigned int NetworkToHostByteOrder(unsigned int value);
 
 	/*!
-	 * \brief Determines whether the specified hostname/domain name is a pointer
-	 *		  to an earlier occurence of the same domain name.
+	 * \brief Reads a domain name from the specified buffer, also known as a 'QNAME'.
 	 *
-	 * 		  If it's a pointer, the first two bytes will be 0x01.
+	 * 	 	  A domain name in a DNS message is basiclly a string 
+	 *		  (but, see Utils::EncodeHostname and Utils::DecodeHostname),
+	 *		  however, in a answer (resource record) the domain name
+	 *		  could also be a 'pointer'. A pointer in a DNS message means
+	 *		  a offset in the buffer where the domain name can be read.
+	 *		  This is also known as 'message compression', this is defined
+	 *		  in section 4.1.4 of RFC 1035. 
+	 *		
+	 *		  This function detects whether it is a pointer or just a domain name,
+	 *		  and reads both and returns the domain name.
 	 *
 	 * \see Section 4.1.4 of RFC-1025 (Message compression).
- 	 *
-	 * \param hostname The hostname/domain name to check if it's a pointer.
 	 *
-	 * \returns A boolean indicating whether the specified hostname/domain name
-	 *			is a pointer. True is returned when it is a pointer and false
-	 *			is returned when it is not.	
+	 * \param buffer The buffer to read the domain name from.
+	 *
+	 * \returns The domain name that was read from the buffer, or an empty
+	 *			string if something went wrong.
 	 */
-	static bool IsDomainPointer(const std::string &hostname);
+	static std::string ReadHostnameFromBuffer(ByteBuffer &buffer);
 };
 
 } // namespace Dns

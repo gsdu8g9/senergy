@@ -23,6 +23,10 @@
 #define SY_DNS_RESOURCE_RECORD_COLLECTION_H
 
 #include <string>
+#include <memory>
+#include <senergy/dns/resource_record_types.h>
+#include <senergy/dns/resource_record_classes.h>
+#include <senergy/dns/resource_record.h>
 #include <senergy/dns/record_ipv4address.h>
 
 namespace Senergy
@@ -67,11 +71,23 @@ public:
 	 */
 	bool Deserialize(MessageHeader &header, ByteBuffer &buffer);
 
+	/*!
+	 * \brief Calls the 'Dump()' method of all records, and thus dumping the fields
+	 *		  of each record to standard output.	
+	 */
+	void Dump();
+
 public:
 	/*!
 	 * \brief All 'A' records in this collection. See the IPV4Address class for more information..
 	 */
-	Records::IPV4AddressPtrVector ARecords;
+	Records::IPV4AddressPtrVector IPV4Answers;
+
+	/*!
+	 * \brief All resource records that could not be parsed because we do not 
+	 *		  support their type.
+	 */
+	ResourceRecordPtrVector		  UnknownRecords;
 
 private:
 	// Clears all internal collections

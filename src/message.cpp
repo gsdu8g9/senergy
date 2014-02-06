@@ -46,7 +46,8 @@ bool Message::Deserialize(ByteBuffer &buffer)
 		this->Questions.push_back(new_message);
 	}
 
-	// \todo implement deserialization of rest of packet
+	if(!this->ResourceRecords.Deserialize(m_header, buffer))
+		return false;
 
 	return true;
 }
@@ -70,7 +71,9 @@ bool Message::Serialize(ByteBuffer &buffer)
 			return false;
 	}
 
-	// \todo implement serialization of rest of packet
+	if(!this->ResourceRecords.Serialize(m_header, buffer))
+		return false;
+
 	return true;
 }
 

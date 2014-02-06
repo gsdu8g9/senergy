@@ -34,27 +34,26 @@ IPV4Address::IPV4Address()
 
 bool IPV4Address::Deserialize(ByteBuffer &buffer)
 {
-	bool result = BaseClass::Deserialize(buffer);
-	if(!result)
-		return false;	
-
 	if(buffer.GetRemainingSize() < BaseClass::m_rd_length)
+	{
+		printf("JJJJJ: %i - %i\n", (int)buffer.GetRemainingSize(), (int) BaseClass::m_rd_length);
 		return false;
+	}
 
-	m_address = buffer.ReadString(BaseClass::m_rd_length);
-	printf("Info: read ip! -> %s\n", m_address.c_str());
 	return true;
 }
 
 bool IPV4Address::Serialize(ByteBuffer &buffer)
 {
-	bool result = BaseClass::Serialize(buffer);
-	if(!result)
-		return false;
-
  	// \todo implement serialization of address here
 
 	return true;
+}
+
+void IPV4Address::Dump()
+{
+	BaseClass::Dump();
+	printf("IP: -\n");
 }
 
 } // namespace Records

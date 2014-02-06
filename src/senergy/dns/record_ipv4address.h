@@ -46,7 +46,7 @@ namespace Records
  *
  * \author Swen Kooij (Photonios)
  */
-class IPV4Address : ResourceRecord
+class IPV4Address : public ResourceRecord
 {
 private:
 	// Simple typedef for a shared pointer to this class, warning
@@ -63,46 +63,44 @@ public:
 	 * \brief Initializes a new instance of the IPV4Address class as a shared pointer.
      */
 	static IPV4AddressPtr Create();
-
+	
 	/*!
-	 * \brief Deserializes a resource record from the specified buffer into
-	 *		  this instance.
+	 * \brief Deserializes the RDATA part of this resource record, and does NOT
+	 *		  deserialize the first part of the resource record.
 	 *
-	 * 		  The specified buffer must have at least 4 bytes left to read.
-	 *		  However, the size of a resource record is variable, because
-	 *		  of the name field.
+	 *		  Use 'DeserializeBase' or 'DeserializeAll' to deserialize either
+	 *	 	  the first path of the resource record, or the entire resource record.
 	 *
-	 *		  When we can not read the entire resource record from the specified
-	 *		  buffer, false is returned.
-	 *
-	 * \note This will advance the buffer's position with the size of the record.
-	 *
-	 * \param buffer The buffer to read the resource record from.
-	 *
-	 * \returns A boolean indicating whether deserialization was succesful. True
-	 *			is returned when deseriliazation was succesful and false when
-	 *			it was not.
+	 * \param buffer The buffer to read from.	
+ 	 *
+	 * \returns A boolean indicating whether this operation was a success. If the operation
+	 *		    failed, false is returned. When the operation was a success, true is
+	 *			returned.
 	 */
 	virtual bool Deserialize(ByteBuffer &buffer);
 
 	/*!
-	 * \brief Serializes this instance into the specified buffer.
+	 * \brief Serializes the RDATA part of this resource record, and does NOT
+	 *		  serialize the first part of the resource record.
 	 *
-	 * 		  The size of a resource record is variable, because of
-	 *		  the name field.
+	 *		  Use 'SerializeBase' or 'SerializeAll' to serialize either
+	 *	 	  the first path of the resource record, or the entire resource record.
 	 *
-	 *	 	  If we cannot, for whatever reason, serialize this record,
-	 *		  false is returned.
-	 *
-	 * \note This will advance the buffer's position with the size of the record.
-	 *
-	 * \param buffer The buffer to write the serialized record to.
-	 * 
-	 * \returns A boolean indicating whether serialization was successful. True is
-	 *			returned when serialization was successful, and false is returned
-	 *			when it was not.
+	 * \param buffer The buffer to write to.
+ 	 *
+	 * \returns A boolean indicating whether this operation was a success. If the operation
+	 *		    failed, false is returned. When the operation was a success, true is
+	 *			returned.
 	 */
 	virtual bool Serialize(ByteBuffer &buffer);
+
+	/*!
+	 * \brief Dumps all fields to the standard output, with
+	 *		  their values. In the following format:
+	 *
+	 * 		  [field name]: [field_value]\n
+	 */
+	virtual void Dump();
 
 private:
 	// Simple typedef to make the code more readble and clear..

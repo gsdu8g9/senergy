@@ -124,13 +124,36 @@ unsigned int Utils::NetworkToHostByteOrder(unsigned int value)
 	return ntohs(value);
 }
 
-bool Utils::IsDomainPointer(const std::string &hostname)
+std::string Utils::ReadHostnameFromBuffer(ByteBuffer &buffer)
 {
-	if(hostname.size() < 2)
-		return false;
+	if(buffer.GetRemainingSize() < 1)
+		return "";
+		
+	unsigned char first_byte = buffer.ReadUnsignedChar();
+	if(first_byte >= 192) // 192 = 11 = pointer
+	{
+		int offset = (int) buffer.ReadUnsignedChar();
 
-	bool is_pointer = (hostname[0] == 0x01 && hostname[1] == 0x01);
-	return is_pointer;
+		int current_buffer_position = buffer.GetPosition();
+		buffer.SetPosition(offset);
+		
+		std::string hostname = buffer.ReadString(256);
+		hostname = DecodeHostname(hostname);
+
+		buffer.SetPosition(current_buffer_position);
+		return hostname;
+	}
+	else
+	{
+		buffer.DecreasePosition();
+
+		std::string hostname = buffer.ReadString(256);
+		hostname = DecodeHostname(hostname);
+
+		return hostname;
+	}
+
+	return "";
 }
 
 } // namespace Dns

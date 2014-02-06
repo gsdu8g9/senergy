@@ -108,6 +108,30 @@ public:
 	bool SetPosition(int position);
 
 	/*!
+	 * \brief Increases the position by the specified amount of bytes.
+	 *
+	 * \param amount The amount of bytes to increase the position with,
+	 *				 by default this is 1.
+	 *
+ 	 * \returns A boolean indicating whether setting the position to the 
+	 *			requested offset succeseeded. True is returned when the operation
+	 *			succeseeded and false is returned when the operation failed.
+	 */
+	bool IncreasePosition(int amount = 1);
+
+	/*!
+	 * \brief Decreases the position by the specified amount of bytes.
+	 *
+	 * \param amount The amount of bytes to decrease the position with,
+	 *				 by default this is 1.
+	 *
+ 	 * \returns A boolean indicating whether setting the position to the 
+	 *			requested offset succeseeded. True is returned when the operation
+	 *			succeseeded and false is returned when the operation failed.
+	 */
+	bool DecreasePosition(int amount = 1);
+
+	/*!
 	 * \brief Sets the current position within the byte buffer. The position
 	 *		  is the offset within the buffer that writing/reading starts at.
 	 *
@@ -383,6 +407,13 @@ public:
 	 * \returns The contents of the buffer as a string.
 	 */
 	std::string ReadAll();
+
+	/*!
+  	 * \brief Dump everything from the current position to the standard output, where
+	 *		  each byte in the buffer is dumped in it's hexadecimal representation. Each
+	 *		  byte will be separated by a space and after 35 bytes, a new line is created.
+	 */
+	void DumpHexadecimal();
 	
 private:
 	// Sets the size of the buffer, by reallocating memory but checks

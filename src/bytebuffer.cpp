@@ -84,6 +84,16 @@ bool ByteBuffer::SetPosition(unsigned int position)
 	return SetPosition((int)position);
 }
 
+bool ByteBuffer::IncreasePosition(int amount /* = 1 */)
+{
+	return SetPosition((int)GetPosition() + amount);
+}
+
+bool ByteBuffer::DecreasePosition(int amount /* = 1 */)
+{
+	return SetPosition((int)GetPosition() - amount);
+}
+
 void ByteBuffer::Reserve(unsigned int size)
 {
 	if(m_data == NULL)
@@ -255,6 +265,31 @@ void ByteBuffer::__set_size(unsigned int new_size)
 	memset(m_data + m_current_size, 0, size_increment);
 
 	m_current_size = new_size;
+}
+
+void ByteBuffer::DumpHexadecimal()
+{
+	int current_position = GetPosition();
+	int current_remaining_bytes = GetRemainingSize();
+
+	if(current_remaining_bytes <= 0)
+		return;
+
+	int line_count = 0;
+
+	for(int i = 0; i < current_remaining_bytes; ++i)
+	{
+		printf("%02x ", ReadChar());
+		line_count++;
+
+		if(line_count >= 35)
+		{
+			printf("\n");
+			line_count = 0;
+		}
+	} 
+
+	SetPosition(current_position);
 }
 
 } // namespace Senergy
