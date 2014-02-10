@@ -60,7 +60,7 @@ public:
 	 *					  indicates what kind of records should be returned.
  	 * \param hostname 	  The domain name to look up the IP address(es) for.
 	 *
-	 * \returns A vector of strings, where each string is an IP address.
+	 * \returns The message that was received from the remote server.
 	 */
 	Dns::Message Lookup(ResourceRecordType record_type, const std::string &hostname);
 
