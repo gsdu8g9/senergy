@@ -71,6 +71,12 @@ public:
 	 * \param value The integer value to print to the screen.
 	 */
 	static void Integer(int value);
+
+	/*!
+	 * \brief Prints a new-line character to the standard output (\n), and thus causing
+	 *		  all content that is coming next to be on a new line.
+	 */
+	static void NewLine();
 };
 
 } // namespace Senergy

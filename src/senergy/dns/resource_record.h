@@ -45,13 +45,13 @@ namespace Dns
  *
  * 		  This class does NOT implement the resource data field, and does not serialize/deserilize it.
  *		  Instead, new classes should be created per resource record type, which do implement
- *		  the resource data field, and inherit from this class.
+ *		  the resource data field, and need an instance of this class to serialize/deserialize.
  *
  * \author Swen Kooij (Photonios)
  */
 class ResourceRecord
 {
-protected:
+private:
 	// A simple typedef for a shared pointer to a ResourceRecord instance.
 	// Warning: this is re-declared at the bottom of this file.
 	typedef std::shared_ptr<ResourceRecord> ResourceRecordPtr;
@@ -89,7 +89,7 @@ public:
 	 *			is returned when deseriliazation was succesful and false when
 	 *			it was not.
 	 */
-	virtual bool Deserialize(ByteBuffer &buffer);
+	bool Deserialize(ByteBuffer &buffer);
 
 	/*!
 	 * \brief Serializes this instance into the specified buffer.
@@ -108,7 +108,7 @@ public:
 	 *			returned when serialization was successful, and false is returned
 	 *			when it was not.
 	 */
-	virtual bool Serialize(ByteBuffer &buffer);
+ 	bool Serialize(ByteBuffer &buffer);
 
 	/*!
 	 * \brief Gets the hostname that was configued in this answer.
@@ -190,9 +190,9 @@ public:
 	 *
 	 * 		  [field name]: [field_value]\n
 	 */
-	virtual void Dump();
+	void Dump();
 
-protected:
+private:
 	// The domain name that was returned, this is either a DNS label (3www6google3com) or a pointer
 	// If the first two bits are 1's then, it's a pointer
 	std::string 			m_hostname;

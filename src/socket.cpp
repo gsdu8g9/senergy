@@ -463,4 +463,27 @@ void Socket::__init_winsock()
 	#endif
 }
 
+std::string Socket::IPV4AddressFromBinary(unsigned int binary)
+{
+	struct in_addr addr = { binary };
+	char *textual = inet_ntoa(addr);
+
+	if(textual == NULL)
+		return "";
+
+	return std::string(textual);
+}
+
+unsigned int Socket::IPV4AddressToBinary(std::string ip)
+{	
+	if(ip.empty())
+		return 0;
+
+	unsigned long binary = inet_addr(ip.c_str());
+	if(binary == 0xffffffff)
+		return 0xffffffff;
+
+	return (unsigned int) binary;
+}
+
 } // namespace Senergy

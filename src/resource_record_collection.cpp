@@ -45,39 +45,32 @@ bool ResourceRecordCollection::Deserialize(MessageHeader &header, ByteBuffer &bu
 
 	for (int i = 0; i < answer_count; ++i)
 	{
-		//ResourceRecordPtr resource_record = ResourceRecord::Create();
-		std::shared_ptr<ResourceRecord> resource_record = std::shared_ptr<ResourceRecord>(new ResourceRecord);
+		ResourceRecordPtr resource_record = ResourceRecord::Create();
 		if(!resource_record->Deserialize(buffer))
-		{
-			printf("HERE(%i)!\n", i);
 			return false;
-		}
-	
-		resource_record->Dump();
 
 		bool deserialization_result = true;
 
 		if(resource_record->GetType() == ResourceRecordType::A)
 		{
-			std::shared_ptr<Records::IPV4Address> converted_rr = std::static_pointer_cast<Records::IPV4Address>(resource_record);
-			converted_rr->Deserialize(buffer);		
-			buffer.IncreasePosition(resource_record->GetResourceSize());
-			printf("%i\n", resource_record->GetResourceSize());
+			Records::IPV4AddressPtr converted_rr = Records::IPV4Address::Create(resource_record);
+			deserialization_result = converted_rr->Deserialize(buffer);		
+
 			this->IPV4Answers.Add(converted_rr);
 		}
 		else
 		{
 			this->UnknownRecords.Add(resource_record);
 			buffer.IncreasePosition(resource_record->GetResourceSize());
+
 			deserialization_result = true;
 		}
 
 		if(!deserialization_result)
-		{
-			printf("HERE?\n");
 			return false;
-		}
 	}
+
+	Dump();
 
 	return true;
 }
@@ -93,17 +86,19 @@ void ResourceRecordCollection::Dump()
 	int ipv4_count = (int) this->IPV4Answers.size();
 	int unknown_count = (int) this->UnknownRecords.size();
 	
-	printf("\n");
+	Print::NewLine();
 
 	for(int i = 0; i < ipv4_count; i++)
+	{
 		this->IPV4Answers[i]->Dump();	
-
-	printf("\n");
+		Print::NewLine();
+	}
 
 	for(int i = 0; i < unknown_count; i++)
+	{
 		this->UnknownRecords[i]->Dump();		
-
-	printf("\n");
+		Print::NewLine();
+	}
 }
 
 } // namespace Dns

@@ -413,6 +413,33 @@ public:
 	 */
 	int 			GetErrorCode();
 
+	/*!
+	 * \brief Converts a 32-bit unsigned integer, which contains a IPV4 address to it's
+	 *		  textual representation, where each 8 bit chunk is separated by a dot.
+	 *
+	 * \param binary The binary value of the IPV4 address to convert to it's textual
+	 *				 representation.
+	 *
+	 * \returns The textual representation of the specified binary IPV4 address.
+	 *			An empty string is returned when something went wrong.
+	 */
+	static std::string IPV4AddressFromBinary(unsigned int binary);
+
+	/*!
+	 * \brief Converts the textual representation of a IPV4 address to it's binary form.
+	 *	
+	 * 		  In it's textual representation, each 8 bit chunk is separated by a dot.
+	 *		  During conversion, these 8 bit chunks are parsed out and converted to
+	 *		  to fit in a 32 bit integer (8 * 4 = 32).
+	 *
+	 * \param ip The textual representation of an IPV4 address to convert to it's binary
+	 *			 form.
+	 *
+	 * \returns The binary form of the specified IPV4 address. Zero is returned when something
+	 *		 	went wrong.
+	 */
+	static unsigned int IPV4AddressToBinary(std::string ip);
+
 private:
 	// Creates the native socket (BSD socket) and stores it into the 'm_native_socket' member.
 	bool		__create_native_socket();

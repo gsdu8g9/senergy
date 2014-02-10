@@ -25,18 +25,11 @@
 
 int main(int argc, char **argv)
 {	
-	/*for(int i = 0; i < 1; i++)
+	for(int i = 0; i < 1; i++)
 	{
 		Senergy::Dns::Requester request("8.8.8.8");
 		Senergy::StringVector result = request.Lookup(Senergy::Dns::ResourceRecordType::A, "www.google.com");	
-	}*/
-
-	int henk1 = 2;
-	int henk2 = 4;
-	int *henk1_ptr = &henk1;
-	int *henk2_ptr = ++henk1_ptr;
-
-	printf("%i\n", *henk2_ptr);
+	}
 
 	//system("pause >nul");
 	return 0;

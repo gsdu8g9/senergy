@@ -28,17 +28,32 @@ namespace Dns
 namespace Records
 {
 
-IPV4Address::IPV4Address()
+IPV4Address::IPV4Address(ResourceRecordPtr resource_record) :
+	m_resource_record(resource_record)
 {
+}
+
+IPV4AddressPtr IPV4Address::Create(ResourceRecordPtr resource_record)
+{
+	return IPV4AddressPtr(new IPV4Address(resource_record)); 
 }
 
 bool IPV4Address::Deserialize(ByteBuffer &buffer)
 {
-	if(buffer.GetRemainingSize() < BaseClass::m_rd_length)
-	{
-		printf("JJJJJ: %i - %i\n", (int)buffer.GetRemainingSize(), (int) BaseClass::m_rd_length);
+	if(buffer.GetRemainingSize() < sizeof(unsigned int))
 		return false;
-	}
+
+	if(!m_resource_record)
+		return false;
+
+	if(m_resource_record->GetResourceSize() < sizeof(unsigned int))
+		return false;
+
+	unsigned int binary = buffer.ReadUnsignedInt();
+	m_address = Socket::IPV4AddressFromBinary(binary);
+
+	if(m_address.empty())
+		return false;
 
 	return true;
 }
@@ -52,8 +67,10 @@ bool IPV4Address::Serialize(ByteBuffer &buffer)
 
 void IPV4Address::Dump()
 {
-	BaseClass::Dump();
-	printf("IP: -\n");
+	if(!(!m_resource_record))
+		m_resource_record->Dump();
+
+	printf("IP: %s\n", m_address.c_str());
 }
 
 } // namespace Records

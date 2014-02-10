@@ -51,4 +51,9 @@ void Print::Integer(int value)
 	printf("%i\n", value);
 }
 
+void Print::NewLine()
+{
+	printf("\n");
+}
+
 } // namespace Senergy

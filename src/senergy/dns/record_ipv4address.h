@@ -27,6 +27,7 @@
 #include <senergy/dns/resource_record_classes.h>
 #include <senergy/dns/message_header.h>
 #include <senergy/dns/resource_record.h>
+#include <senergy/socket.h>
 #include <senergy/vectorx.h>
 
 namespace Senergy
@@ -46,7 +47,7 @@ namespace Records
  *
  * \author Swen Kooij (Photonios)
  */
-class IPV4Address : public ResourceRecord
+class IPV4Address
 {
 private:
 	// Simple typedef for a shared pointer to this class, warning
@@ -55,44 +56,45 @@ private:
 
 public:
 	/*!
-	 * \brief Initializes a new instance of the IPV4Address class.
+	 * \brief Initializes a new instance of the IPV4Address class with the specified
+	 *		  resource record.
+	 *
+	 * \param resource_record The resource record to use as a base for this instance.
  	 */
-	IPV4Address();
+	IPV4Address(ResourceRecordPtr resource_record);
 
 	/*!
 	 * \brief Initializes a new instance of the IPV4Address class as a shared pointer.
+	 *
+	 * \param resource_record The resource record to use as a base for this instance.
      */
-	static IPV4AddressPtr Create();
+	static IPV4AddressPtr Create(ResourceRecordPtr resource_record);
 	
 	/*!
 	 * \brief Deserializes the RDATA part of this resource record, and does NOT
 	 *		  deserialize the first part of the resource record.
 	 *
-	 *		  Use 'DeserializeBase' or 'DeserializeAll' to deserialize either
-	 *	 	  the first path of the resource record, or the entire resource record.
-	 *
-	 * \param buffer The buffer to read from.	
+ 	 * \param resource_record 	The resource record to use as the base.
+	 * \param buffer 			The buffer to read from.	
  	 *
 	 * \returns A boolean indicating whether this operation was a success. If the operation
 	 *		    failed, false is returned. When the operation was a success, true is
 	 *			returned.
 	 */
-	virtual bool Deserialize(ByteBuffer &buffer);
+	bool Deserialize(ByteBuffer &buffer);
 
 	/*!
 	 * \brief Serializes the RDATA part of this resource record, and does NOT
 	 *		  serialize the first part of the resource record.
 	 *
-	 *		  Use 'SerializeBase' or 'SerializeAll' to serialize either
-	 *	 	  the first path of the resource record, or the entire resource record.
-	 *
-	 * \param buffer The buffer to write to.
+ 	 * \param resource_record 	The resource record to use as the base.
+	 * \param buffer 			The buffer to write to.
  	 *
 	 * \returns A boolean indicating whether this operation was a success. If the operation
 	 *		    failed, false is returned. When the operation was a success, true is
 	 *			returned.
 	 */
-	virtual bool Serialize(ByteBuffer &buffer);
+	bool Serialize(ByteBuffer &buffer);
 
 	/*!
 	 * \brief Dumps all fields to the standard output, with
@@ -100,15 +102,14 @@ public:
 	 *
 	 * 		  [field name]: [field_value]\n
 	 */
-	virtual void Dump();
-
-private:
-	// Simple typedef to make the code more readble and clear..
-	typedef ResourceRecord BaseClass;
+	void Dump();
 
 private:
 	// Contains the address that is going to be serialized, or the address that was deserialized.
 	std::string m_address;
+	
+	// The resource record that was specified during construction.
+	ResourceRecordPtr m_resource_record;
 };
 
 /*!
