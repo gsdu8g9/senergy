@@ -62,7 +62,7 @@ public:
 	 *
 	 * \returns A vector of strings, where each string is an IP address.
 	 */
-	StringVector Lookup(ResourceRecordType record_type, const std::string &hostname);
+	Dns::Message Lookup(ResourceRecordType record_type, const std::string &hostname);
 
 private:
 	// Holds the ip of the remote dns server as specified in the constructor

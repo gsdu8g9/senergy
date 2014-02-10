@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 	for(int i = 0; i < 1; i++)
 	{
 		Senergy::Dns::Requester request("8.8.8.8");
-		Senergy::StringVector result = request.Lookup(Senergy::Dns::ResourceRecordType::A, "www.google.com");	
+		request.Lookup(Senergy::Dns::ResourceRecordType::A, "www.google.com");	
 	}
 
 	//system("pause >nul");
