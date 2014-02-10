@@ -29,14 +29,16 @@ namespace Senergy
 {
 
 Socket::Socket(SocketProtocol protocol) :
-	m_protocol				(protocol),
-	m_connected				(false),
 	m_remote_host			(""),
 	m_remote_port			(80),
-	m_native_socket			(-1),
+	m_connected				(false),
 	m_last_error			(-1),
+	m_native_socket			(-1),
+	m_remote_address		(),
+	m_timeout				(),
+	m_timeout_milliseconds	(0),
 	m_socket_role			(SocketRole::Client),
-	m_timeout_milliseconds	(0)
+	m_protocol				(protocol)
 {
 	__init_winsock();
 }
@@ -56,15 +58,16 @@ Socket::Socket(const Socket &socket)
 }
 
 Socket::Socket(SocketProtocol protocol, int native_socket, struct sockaddr_in remote_address) :
-	m_protocol				(protocol),
-	m_connected				(true),
 	m_remote_host			(""),
 	m_remote_port			(80),
-	m_native_socket			(native_socket),
+	m_connected				(false),
 	m_last_error			(-1),
-	m_socket_role			(SocketRole::Client),
+	m_native_socket			(native_socket),
+	m_remote_address		(remote_address),
+	m_timeout				(),
 	m_timeout_milliseconds	(0),
-	m_remote_address		(remote_address)
+	m_socket_role			(SocketRole::Client),
+	m_protocol				(protocol)
 {	
 	__init_winsock();
 }

@@ -87,8 +87,6 @@ bool MessageQuestion::Serialize(ByteBuffer &buffer)
 	
 	std::string encoded_hostname = Utils::EncodeHostname(m_hostname);
 
-	int encoded_hostname_len = (int) encoded_hostname.size();
-
 	buffer.Write(encoded_hostname);
 	buffer.Write(Utils::HostToNetworkByteOrder(m_type));
 	buffer.Write(Utils::HostToNetworkByteOrder(m_class));

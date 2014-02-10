@@ -40,8 +40,8 @@ bool ResourceRecordCollection::Deserialize(MessageHeader &header, ByteBuffer &bu
 	__clear_collections();
 
 	int answer_count 		= (int) header.Fields.AnswerCount;
-	int nameserver_count 	= (int) header.Fields.NameServerCount;
-	int additional_count 	= (int) header.Fields.AdditionalCount;
+	//int nameserver_count 	= (int) header.Fields.NameServerCount;
+	//int additional_count 	= (int) header.Fields.AdditionalCount;
 
 	for (int i = 0; i < answer_count; ++i)
 	{

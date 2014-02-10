@@ -40,13 +40,13 @@ IPV4AddressPtr IPV4Address::Create(ResourceRecordPtr resource_record)
 
 bool IPV4Address::Deserialize(ByteBuffer &buffer)
 {
-	if(buffer.GetRemainingSize() < sizeof(unsigned int))
+	if(buffer.GetRemainingSize() < (int)sizeof(unsigned int))
 		return false;
 
 	if(!m_resource_record)
 		return false;
 
-	if(m_resource_record->GetResourceSize() < sizeof(unsigned int))
+	if(m_resource_record->GetResourceSize() < (int)sizeof(unsigned int))
 		return false;
 
 	unsigned int binary = buffer.ReadUnsignedInt();
