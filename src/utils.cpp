@@ -82,7 +82,11 @@ std::string Utils::DecodeHostname(const std::string &hostname)
 		int segment_length = hostname[i];
 
 		for(int y = 0; y < segment_length; ++y)
-		{
+		{	
+			int index = i + 1;
+			if(index > hostname_len - 1)
+				return new_hostname;
+
 			new_hostname += hostname[i + 1];
 			i++;
 		}
