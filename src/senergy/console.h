@@ -28,6 +28,13 @@
 namespace Senergy
 {
 
+/*!
+ * \brief Contains replacements for 'printf' that use C++11 features, such as variadic templates.
+ *		  The printf replacement in this class is more C++ like, and for example supports standard
+ *		  strings, as oppossed to printf, which only supports C99 data types.
+ *
+ * \author Swen Kooij (Photonios)
+ */
 class Console
 {
 public:

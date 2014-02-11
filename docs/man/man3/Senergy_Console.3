@@ -3,6 +3,9 @@
 .nh
 .SH NAME
 Senergy::Console \- 
+.PP
+Contains replacements for 'printf' that use C++11 features, such as variadic templates\&. The printf replacement in this class is more C++ like, and for example supports standard strings, as oppossed to printf, which only supports C99 data types\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -22,7 +25,18 @@ Senergy::Console \-
 .in -1c
 .SH "Detailed Description"
 .PP 
-Definition at line 31 of file console\&.h\&.
+Contains replacements for 'printf' that use C++11 features, such as variadic templates\&. The printf replacement in this class is more C++ like, and for example supports standard strings, as oppossed to printf, which only supports C99 data types\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.PP
+Definition at line 38 of file console\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "static void Senergy::Console::Print (const std::string &fmt)\fC [inline]\fP, \fC [static]\fP"
@@ -37,7 +51,7 @@ Overload to handle prints without any format identifiers, simply prints the spec
 .PP
 
 .PP
-Definition at line 40 of file console\&.h\&.
+Definition at line 47 of file console\&.h\&.
 .SS "template<class\&.\&.\&. R> static void Senergy::Console::Print (const std::string &fmt, const R &\&.\&.\&.rest)\fC [inline]\fP, \fC [static]\fP"
 
 .PP
@@ -61,7 +75,7 @@ T The type of the first element\&.  R The type of the current element (recursion
 .PP
 
 .PP
-Definition at line 63 of file console\&.h\&.
+Definition at line 70 of file console\&.h\&.
 
 .SH "Author"
 .PP 
