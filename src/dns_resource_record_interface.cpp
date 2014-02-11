@@ -26,7 +26,20 @@ namespace Senergy
 namespace Dns
 {
 
+ResourceRecordInterface::ResourceRecordInterface(ResourceRecordBase &base) :
+	m_base	(base)
+{
+}
 
+ResourceRecordBase & ResourceRecordInterface::Base() const
+{
+	return m_base;
+}
+
+ResourceRecordClass ResourceRecordInterface::GetClass()
+{
+	return ResourceRecordClass::Internet;
+}
 
 } // namespace Dns
 } // namespace Senergy
