@@ -33,8 +33,7 @@ var NAVTREE =
       [ "File List", "files.html", "files" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
-        [ "Macros", "globals_defs.html", null ]
+        [ "Functions", "globals_func.html", null ]
       ] ]
     ] ]
   ] ]
@@ -43,7 +42,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"resource__record__types_8h.html#a590bfd748c955364770f5ce358d9dfe0"
+"message__question_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

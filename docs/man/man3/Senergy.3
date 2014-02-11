@@ -1,4 +1,4 @@
-.TH "Senergy" 3 "Tue Feb 4 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -29,9 +29,16 @@ Senergy \-
 .br
 .RI "\fISimple circular buffer which uses a vector, simple circular buffer which should not be used in situations that require efficiency and power\&. \fP"
 .ti -1c
+.RI "class \fBConsole\fP"
+.br
+.ti -1c
 .RI "class \fBConvert\fP"
 .br
 .RI "\fIA simple conversion class, which simplifies conversion between various native data types\&. Based on the idea of the '\fBConvert\fP' class in the \&.NET framework\&. \fP"
+.ti -1c
+.RI "class \fBLogger\fP"
+.br
+.RI "\fISimple logger with support for variadic arguments and various log levels\&. \fP"
 .ti -1c
 .RI "class \fBPrint\fP"
 .br
@@ -63,6 +70,14 @@ Senergy \-
 .br
 .RI "\fIA std::vector of std::string objects\&. \fP"
 .in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBLogLevel\fP { \fBLogLevel::Info\fP, \fBLogLevel::Error\fP, \fBLogLevel::Warning\fP, \fBLogLevel::Debug\fP }"
+.br
+.RI "\fIAn enumuration of all possible log levels, log levels will result in prefixes in log entries\&. \fP"
+.in -1c
 .SH "Typedef Documentation"
 .PP 
 .SS "typedef std::shared_ptr<\fBByteBuffer\fP> \fBSenergy::ByteBufferPtr\fP"
@@ -70,19 +85,38 @@ Senergy \-
 .PP
 A simple typedef for a shared pointer to a \fBByteBuffer\fP instance\&. 
 .PP
-Definition at line 440 of file bytebuffer\&.h\&.
+Definition at line 471 of file bytebuffer\&.h\&.
 .SS "typedef std::shared_ptr<\fBSocket\fP> \fBSenergy::SocketPtr\fP"
 
 .PP
 A simple typedef for the shared pointer of a TcpSocket instance\&. 
 .PP
-Definition at line 480 of file socket\&.h\&.
+Definition at line 513 of file socket\&.h\&.
 .SS "typedef \fBVectorX\fP<std::string> \fBSenergy::StringVector\fP"
 
 .PP
 A std::vector of std::string objects\&. 
 .PP
 Definition at line 35 of file types\&.h\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBSenergy::LogLevel\fP\fC [strong]\fP"
+
+.PP
+An enumuration of all possible log levels, log levels will result in prefixes in log entries\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIInfo \fP\fP
+.TP
+\fB\fIError \fP\fP
+.TP
+\fB\fIWarning \fP\fP
+.TP
+\fB\fIDebug \fP\fP
+.PP
+Definition at line 40 of file logger\&.h\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Senergy from the source code\&.

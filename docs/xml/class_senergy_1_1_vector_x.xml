@@ -6,7 +6,9 @@
     <includes refid="vectorx_8h" local="no">vectorx.h</includes>
     <templateparamlist>
       <param>
-        <type>class T</type>
+        <type>class</type>
+        <declname>T</declname>
+        <defname>T</defname>
       </param>
     </templateparamlist>
       <sectiondef kind="private-type">
@@ -21,7 +23,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" line="64" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" bodystart="64" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" line="65" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" bodystart="65" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -38,9 +40,9 @@
         </inbodydescription>
         <location file="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" line="46" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" bodystart="46" bodyend="48"/>
       </memberdef>
-      <memberdef kind="function" id="class_senergy_1_1_vector_x_1acce23da783e4fa6d98a57bc4d3a48b2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Senergy::VectorX&lt; T &gt;::Add</definition>
+      <memberdef kind="function" id="class_senergy_1_1_vector_x_1a4df34dceed944ef14df649a538d9c1b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T Senergy::VectorX&lt; T &gt;::Add</definition>
         <argsstring>(T value)</argsstring>
         <name>Add</name>
         <param>
@@ -61,7 +63,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" line="55" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" bodystart="55" bodyend="58"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" line="55" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" bodystart="55" bodyend="59"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -70,30 +72,30 @@
 <para>T The type that the vector will contain.</para><para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="37">
+      <node id="51">
         <label>std::vector&lt; T &gt;</label>
       </node>
-      <node id="36">
+      <node id="50">
         <label>Senergy::VectorX&lt; T &gt;</label>
         <link refid="class_senergy_1_1_vector_x"/>
-        <childnode refid="37" relation="public-inheritance">
+        <childnode refid="51" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="39">
+      <node id="53">
         <label>std::vector&lt; T &gt;</label>
       </node>
-      <node id="38">
+      <node id="52">
         <label>Senergy::VectorX&lt; T &gt;</label>
         <link refid="class_senergy_1_1_vector_x"/>
-        <childnode refid="39" relation="public-inheritance">
+        <childnode refid="53" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" line="41" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" bodystart="40" bodyend="65"/>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" line="41" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" bodystart="40" bodyend="66"/>
     <listofallmembers>
-      <member refid="class_senergy_1_1_vector_x_1acce23da783e4fa6d98a57bc4d3a48b2c" prot="public" virt="non-virtual"><scope>Senergy::VectorX</scope><name>Add</name></member>
+      <member refid="class_senergy_1_1_vector_x_1a4df34dceed944ef14df649a538d9c1b1" prot="public" virt="non-virtual"><scope>Senergy::VectorX</scope><name>Add</name></member>
       <member refid="class_senergy_1_1_vector_x_1aaeb6919f76131faa4965a8e6f671b2d6" prot="private" virt="non-virtual"><scope>Senergy::VectorX</scope><name>BaseClass</name></member>
       <member refid="class_senergy_1_1_vector_x_1a99bed6d49a3a93e6a133837330218ee7" prot="public" virt="non-virtual"><scope>Senergy::VectorX</scope><name>VectorX</name></member>
     </listofallmembers>

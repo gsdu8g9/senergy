@@ -1,0 +1,134 @@
+.TH "Senergy::Logger" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::Logger \- 
+.PP
+Simple logger with support for variadic arguments and various log levels\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <logger\&.h>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<class\&.\&.\&. R> static void \fBInfo\fP (const std::string &message, const R &\&.\&.\&.rest)"
+.br
+.RI "\fIWrites a info log message with the specified log message and the current date and and time\&. \fP"
+.ti -1c
+.RI "template<class\&.\&.\&. R> static void \fBError\fP (const std::string &message, const R &\&.\&.\&.rest)"
+.br
+.RI "\fIWrites a error log message with the specified log message and the current date and and time\&. \fP"
+.ti -1c
+.RI "template<class\&.\&.\&. R> static void \fBWarning\fP (const std::string &message, const R &\&.\&.\&.rest)"
+.br
+.RI "\fIWrites a warning log message with the specified log message and the current date and and time\&. \fP"
+.ti -1c
+.RI "template<class\&.\&.\&. R> static void \fBDebug\fP (const std::string &message, const R &\&.\&.\&.rest)"
+.br
+.RI "\fIWrites a debug log message with the specified log message and the current date and and time\&. \fP"
+.ti -1c
+.RI "template<class\&.\&.\&. R> static void \fBLog\fP (\fBLogLevel\fP level, const std::string &message, const R &\&.\&.\&.rest)"
+.br
+.RI "\fIWrites a log message with the specified log message and the current date and and time\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Simple logger with support for variadic arguments and various log levels\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.PP
+Definition at line 53 of file logger\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class\&.\&.\&. R> static void Senergy::Logger::Debug (const std::string &message, const R &\&.\&.\&.rest)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Writes a debug log message with the specified log message and the current date and and time\&. R Any type, it's variadic :D
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP The message to log\&. 
+.br
+\fIrest\fP All arguments, can be of any type, but should have a format identifier in the 'message' argument\&. 
+.RE
+.PP
+
+.PP
+Definition at line 119 of file logger\&.h\&.
+.SS "template<class\&.\&.\&. R> static void Senergy::Logger::Error (const std::string &message, const R &\&.\&.\&.rest)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Writes a error log message with the specified log message and the current date and and time\&. R Any type, it's variadic :D
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP The message to log\&. 
+.br
+\fIrest\fP All arguments, can be of any type, but should have a format identifier in the 'message' argument\&. 
+.RE
+.PP
+
+.PP
+Definition at line 85 of file logger\&.h\&.
+.SS "template<class\&.\&.\&. R> static void Senergy::Logger::Info (const std::string &message, const R &\&.\&.\&.rest)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Writes a info log message with the specified log message and the current date and and time\&. R Any type, it's variadic :D
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP The message to log\&. 
+.br
+\fIrest\fP All arguments, can be of any type, but should have a format identifier in the 'message' argument\&. 
+.RE
+.PP
+
+.PP
+Definition at line 68 of file logger\&.h\&.
+.SS "template<class\&.\&.\&. R> static void Senergy::Logger::Log (\fBLogLevel\fPlevel, const std::string &message, const R &\&.\&.\&.rest)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Writes a log message with the specified log message and the current date and and time\&. R Any type, it's variadic :D
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlevel\fP The level this log message needs to be stored under\&. 
+.br
+\fImessage\fP The message to log\&. 
+.br
+\fIrest\fP All arguments, can be of any type, but should have a format identifier in the 'message' argument\&. 
+.RE
+.PP
+
+.PP
+Definition at line 137 of file logger\&.h\&.
+.SS "template<class\&.\&.\&. R> static void Senergy::Logger::Warning (const std::string &message, const R &\&.\&.\&.rest)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Writes a warning log message with the specified log message and the current date and and time\&. R Any type, it's variadic :D
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP The message to log\&. 
+.br
+\fIrest\fP All arguments, can be of any type, but should have a format identifier in the 'message' argument\&. 
+.RE
+.PP
+
+.PP
+Definition at line 102 of file logger\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

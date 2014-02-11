@@ -10,6 +10,7 @@
     <innerfile refid="requester_8h">requester.h</innerfile>
     <innerfile refid="resource__record_8h">resource_record.h</innerfile>
     <innerfile refid="resource__record__classes_8h">resource_record_classes.h</innerfile>
+    <innerfile refid="resource__record__collection_8h">resource_record_collection.h</innerfile>
     <innerfile refid="resource__record__types_8h">resource_record_types.h</innerfile>
     <innerfile refid="rootnameserver_8h">rootnameserver.h</innerfile>
     <innerfile refid="utils_8h">utils.h</innerfile>

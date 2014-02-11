@@ -1,4 +1,4 @@
-.TH "src/senergy/dns/resource_record.h" 3 "Tue Feb 4 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "src/senergy/dns/resource_record.h" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,9 +8,13 @@ src/senergy/dns/resource_record.h \-
 .PP
 \fC#include <string>\fP
 .br
+\fC#include <memory>\fP
+.br
 \fC#include <senergy/dns/resource_record_types\&.h>\fP
 .br
 \fC#include <senergy/dns/resource_record_classes\&.h>\fP
+.br
+\fC#include <senergy/vectorx\&.h>\fP
 .br
 \fC#include <senergy/dns/utils\&.h>\fP
 .br
@@ -34,6 +38,22 @@ src/senergy/dns/resource_record.h \-
 .ti -1c
 .RI "\fBSenergy::Dns\fP"
 .br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::shared_ptr
+.br
+< ResourceRecord > \fBSenergy::Dns::ResourceRecordPtr\fP"
+.br
+.RI "\fIA shared pointer to an instance of the \fBResourceRecord\fP class\&. \fP"
+.ti -1c
+.RI "typedef VectorX
+.br
+< ResourceRecordPtr > \fBSenergy::Dns::ResourceRecordPtrVector\fP"
+.br
+.RI "\fIA vector of shared pointers to \fBResourceRecord\fP class instances\&. \fP"
 .in -1c
 .SH "Author"
 .PP 

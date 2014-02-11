@@ -2,17 +2,17 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
   <compounddef id="rootnameserver_8h" kind="file">
     <compoundname>rootnameserver.h</compoundname>
-    <includedby refid="rootnameserver_8cpp" local="no">src/rootnameserver.cpp</includedby>
+    <includedby refid="dns__rootnameserver_8cpp" local="no">src/dns_rootnameserver.cpp</includedby>
     <invincdepgraph>
-      <node id="472">
-        <label>src/rootnameserver.cpp</label>
-        <link refid="rootnameserver_8cpp"/>
-      </node>
-      <node id="471">
+      <node id="681">
         <label>src/senergy/dns/rootnameserver.h</label>
         <link refid="rootnameserver.h"/>
-        <childnode refid="472" relation="include">
+        <childnode refid="682" relation="include">
         </childnode>
+      </node>
+      <node id="682">
+        <label>src/dns_rootnameserver.cpp</label>
+        <link refid="dns__rootnameserver_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_senergy_1_1_dns_1_1_root_name_server" prot="public">Senergy::Dns::RootNameServer</innerclass>

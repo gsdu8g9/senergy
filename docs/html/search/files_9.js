@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['vectorx_2ecpp',['vectorx.cpp',['../vectorx_8cpp.html',1,'']]],
-  ['vectorx_2eh',['vectorx.h',['../vectorx_8h.html',1,'']]]
+  ['terminology_2edox',['terminology.dox',['../terminology_8dox.html',1,'']]],
+  ['types_2eh',['types.h',['../types_8h.html',1,'']]]
 ];

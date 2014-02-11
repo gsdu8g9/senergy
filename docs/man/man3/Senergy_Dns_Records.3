@@ -1,4 +1,4 @@
-.TH "Senergy::Dns::Records" 3 "Tue Feb 4 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::Dns::Records" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,6 +14,34 @@ Senergy::Dns::Records \-
 .br
 .RI "\fIAn address record, contains the answer to a lookup\&. Contains a IPV4 IP address, the response to a question, to lookup a hostname/domain name\&. This is part of a resource record, and the actual data is stored in the last field of a recource record (RDATE)\&. See the ResourceClass and section 3\&.4\&.1 of RFC 1035 for more information\&. \fP"
 .in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::shared_ptr
+.br
+< \fBIPV4Address\fP > \fBIPV4AddressPtr\fP"
+.br
+.RI "\fIA shared pointer to a \fBIPV4Address\fP instance\&. \fP"
+.ti -1c
+.RI "typedef \fBVectorX\fP< \fBIPV4AddressPtr\fP > \fBIPV4AddressPtrVector\fP"
+.br
+.RI "\fIA vector of shared pointers to \fBIPV4Address\fP instances\&. \fP"
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef std::shared_ptr<\fBIPV4Address\fP> \fBSenergy::Dns::Records::IPV4AddressPtr\fP"
+
+.PP
+A shared pointer to a \fBIPV4Address\fP instance\&. 
+.PP
+Definition at line 118 of file record_ipv4address\&.h\&.
+.SS "typedef \fBVectorX\fP<\fBIPV4AddressPtr\fP> \fBSenergy::Dns::Records::IPV4AddressPtrVector\fP"
+
+.PP
+A vector of shared pointers to \fBIPV4Address\fP instances\&. 
+.PP
+Definition at line 123 of file record_ipv4address\&.h\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Senergy from the source code\&.

@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_senergy_1_1_console" kind="class" prot="public">
+    <compoundname>Senergy::Console</compoundname>
+    <includes refid="console_8h" local="no">console.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_senergy_1_1_console_1aa4830ba54c4a255bd4bca8b685322dc8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Senergy::Console::Print</definition>
+        <argsstring>(const std::string &amp;fmt)</argsstring>
+        <name>Print</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fmt</declname>
+        </param>
+        <briefdescription>
+<para>Overload to handle prints without any format identifiers, simply prints the specified string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to print to the standard output stream. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/console.h" line="40" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/console.h" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_console_1adbdfcc53b64c164bdad1aa6fc739c252" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void Senergy::Console::Print</definition>
+        <argsstring>(const std::string &amp;fmt, const R &amp;...rest)</argsstring>
+        <name>Print</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>const R &amp;...</type>
+          <declname>rest</declname>
+        </param>
+        <briefdescription>
+<para>Does the actual printing of a whole format string with a variable number of elements/format identifiers. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This uses variadic templates, and uses recursion to iterate over all specified elements.</para></simplesect>
+T The type of the first element.  R The type of the current element (recursion).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The format string. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first element to print, should correspong with the first format identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variadic templates, the rest of the elements to print. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/console.h" line="63" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/console.h" bodystart="63" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_senergy_1_1_console_1a569189f89d6a1a5e7c2b996de4e1991c" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>static const std::string Senergy::Console::__print</definition>
+        <argsstring>(const std::string &amp;fmt)</argsstring>
+        <name>__print</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fmt</declname>
+        </param>
+        <briefdescription>
+<para>This overloads our variadic version, but handles calls without extra parameters, just prints the specified string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to to be printed to the standard output stream.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An empty string, can&apos;t return void here because this is an overload. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/console.h" line="80" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/console.h" bodystart="80" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_console_1a4e7ab8391c20d29adbae2b55fc317b75" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>const std::string</type>
+        <definition>static const std::string Senergy::Console::__print</definition>
+        <argsstring>(const std::string &amp;fmt, const T &amp;element)</argsstring>
+        <name>__print</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+<para>Prints the specified format string, where the format identifier is replaced with the specified element of type T. </para>        </briefdescription>
+        <detaileddescription>
+<para>T The type of the element/variable to print.</para><para><simplesect kind="note"><para>This function only takes one element, this is because variadic templates require recursion to iterate over all elements (See overloads).</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The format string to print. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The element to replace the format identifier with.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An empty string, can&apos;t return void here, because this is an overload. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/console.h" line="101" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/console.h" bodystart="101" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_console_1a321f0293bd2c0b3ac3d3a6a4f747e3f5" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>class...</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+        </templateparamlist>
+        <type>const std::string</type>
+        <definition>static const std::string Senergy::Console::__print</definition>
+        <argsstring>(const std::string &amp;fmt, const T &amp;element, const R &amp;...rest)</argsstring>
+        <name>__print</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>const R &amp;...</type>
+          <declname>rest</declname>
+        </param>
+        <briefdescription>
+<para>Does the actual printing of a whole format string with a variable number of elements/format identifiers. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This uses variadic templates, and uses recursion to iterate over all specified elements.</para></simplesect>
+T The type of the first element.  R The type of the current element (recursion).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The format string. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first element to print, should correspong with the first format identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variadic templates, the rest of the elements to print.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function is called recursively, and returns an empty string when the recursion was stopped, and the whole string was printed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/console.h" line="152" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/console.h" bodystart="152" bodyend="159"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/console.h" line="32" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/console.h" bodystart="31" bodyend="160"/>
+    <listofallmembers>
+      <member refid="class_senergy_1_1_console_1a569189f89d6a1a5e7c2b996de4e1991c" prot="private" virt="non-virtual"><scope>Senergy::Console</scope><name>__print</name></member>
+      <member refid="class_senergy_1_1_console_1a4e7ab8391c20d29adbae2b55fc317b75" prot="private" virt="non-virtual"><scope>Senergy::Console</scope><name>__print</name></member>
+      <member refid="class_senergy_1_1_console_1a321f0293bd2c0b3ac3d3a6a4f747e3f5" prot="private" virt="non-virtual"><scope>Senergy::Console</scope><name>__print</name></member>
+      <member refid="class_senergy_1_1_console_1aa4830ba54c4a255bd4bca8b685322dc8" prot="public" virt="non-virtual"><scope>Senergy::Console</scope><name>Print</name></member>
+      <member refid="class_senergy_1_1_console_1adbdfcc53b64c164bdad1aa6fc739c252" prot="public" virt="non-virtual"><scope>Senergy::Console</scope><name>Print</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,79 @@
+\hypertarget{class_senergy_1_1_console}{\section{Senergy\-:\-:Console Class Reference}
+\label{class_senergy_1_1_console}\index{Senergy\-::\-Console@{Senergy\-::\-Console}}
+}
+
+
+{\ttfamily \#include $<$console.\-h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_senergy_1_1_console_aa4830ba54c4a255bd4bca8b685322dc8}{Print} (const std\-::string \&fmt)
+\begin{DoxyCompactList}\small\item\em Overload to handle prints without any format identifiers, simply prints the specified string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class... R$>$ }\\static void \hyperlink{class_senergy_1_1_console_adbdfcc53b64c164bdad1aa6fc739c252}{Print} (const std\-::string \&fmt, const R \&...rest)
+\begin{DoxyCompactList}\small\item\em Does the actual printing of a whole format string with a variable number of elements/format identifiers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 31 of file console.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_console_aa4830ba54c4a255bd4bca8b685322dc8}{\index{Senergy\-::\-Console@{Senergy\-::\-Console}!Print@{Print}}
+\index{Print@{Print}!Senergy::Console@{Senergy\-::\-Console}}
+\subsubsection[{Print}]{\setlength{\rightskip}{0pt plus 5cm}static void Senergy\-::\-Console\-::\-Print (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{fmt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_senergy_1_1_console_aa4830ba54c4a255bd4bca8b685322dc8}
+
+
+Overload to handle prints without any format identifiers, simply prints the specified string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fmt} & The string to print to the standard output stream. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file console.\-h.
+
+\hypertarget{class_senergy_1_1_console_adbdfcc53b64c164bdad1aa6fc739c252}{\index{Senergy\-::\-Console@{Senergy\-::\-Console}!Print@{Print}}
+\index{Print@{Print}!Senergy::Console@{Senergy\-::\-Console}}
+\subsubsection[{Print}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class... R$>$ static void Senergy\-::\-Console\-::\-Print (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{fmt, }
+\item[{const R \&...}]{rest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_senergy_1_1_console_adbdfcc53b64c164bdad1aa6fc739c252}
+
+
+Does the actual printing of a whole format string with a variable number of elements/format identifiers. 
+
+\begin{DoxyNote}{Note}
+This uses variadic templates, and uses recursion to iterate over all specified elements.
+\end{DoxyNote}
+T The type of the first element.  R The type of the current element (recursion).
+
+
+\begin{DoxyParams}{Parameters}
+{\em fmt} & The format string. \\
+\hline
+{\em element} & The first element to print, should correspong with the first format identifier. \\
+\hline
+{\em rest} & Variadic templates, the rest of the elements to print. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 63 of file console.\-h.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/senergy/\hyperlink{console_8h}{console.\-h}\end{DoxyCompactItemize}

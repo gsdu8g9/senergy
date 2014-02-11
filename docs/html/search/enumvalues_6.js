@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['info',['Info',['../namespace_senergy.html#a8a440a300c8ecafb12b81c1853a5c66da4059b0251f66a18cb56f544728796875',1,'Senergy']]],
   ['internet',['Internet',['../namespace_senergy_1_1_dns.html#a953f153bc411213d621d00c1e1b3eb9dac8205c7636e728d448c2774e6a4a944b',1,'Senergy::Dns']]],
   ['ipseckey',['IPSECKEY',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a2b356a14948fa1c2a2ef3c14355c83ea',1,'Senergy::Dns']]],
   ['isdn',['ISDN',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a6b76a4f6461388db72ddf5cc41979c4b',1,'Senergy::Dns']]],

@@ -23,10 +23,27 @@ class \hyperlink{class_senergy_1_1_dns_1_1_requester}{Requester}
 \begin{DoxyCompactList}\small\item\em Allows querying remote D\-N\-S servers, wraps sending and receiving D\-N\-S messages. \end{DoxyCompactList}\item 
 class \hyperlink{class_senergy_1_1_dns_1_1_resource_record}{Resource\-Record}
 \begin{DoxyCompactList}\small\item\em Defines a D\-N\-S Resource Record, as defined in R\-F\-C 1035, section 4.\-1.\-3. A D\-N\-S Recource record can appear both in the answer, authority and additional section of a D\-N\-S packet/message. \end{DoxyCompactList}\item 
+class \hyperlink{class_senergy_1_1_dns_1_1_resource_record_collection}{Resource\-Record\-Collection}
+\begin{DoxyCompactList}\small\item\em Simple container for all types of resource records we support. This is to prevent creating hundreds of separate containers in the \hyperlink{class_senergy_1_1_dns_1_1_message}{Message} class. \end{DoxyCompactList}\item 
 class \hyperlink{class_senergy_1_1_dns_1_1_root_name_server}{Root\-Name\-Server}
 \begin{DoxyCompactList}\small\item\em Represents one of the 13 Root Name Servers (D\-N\-S) that are currently operating around the world. Provides access to the functionalities that root name servers offer. \end{DoxyCompactList}\item 
 class \hyperlink{class_senergy_1_1_dns_1_1_utils}{Utils}
 \begin{DoxyCompactList}\small\item\em Contains various utilities related to the D\-N\-S protocol. This are mostly functions that are used throughout the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} $>$ \hyperlink{namespace_senergy_1_1_dns_a425a2a6f3b5c18973c524a99bdfa4ef0}{Message\-Question\-Ptr}
+\begin{DoxyCompactList}\small\item\em Simple shared pointer to a Message\-Question\-Ptr instance. \end{DoxyCompactList}\item 
+typedef \hyperlink{class_senergy_1_1_vector_x}{Vector\-X}\\*
+$<$ \hyperlink{namespace_senergy_1_1_dns_a425a2a6f3b5c18973c524a99bdfa4ef0}{Message\-Question\-Ptr} $>$ \hyperlink{namespace_senergy_1_1_dns_a6983ff2422cfa510ca61831ae5cf1ffc}{Message\-Question\-Ptr\-Vector}
+\begin{DoxyCompactList}\small\item\em A vector of shared pointers to \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} instances. \end{DoxyCompactList}\item 
+typedef std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_senergy_1_1_dns_1_1_resource_record}{Resource\-Record} $>$ \hyperlink{namespace_senergy_1_1_dns_a1fa04259a07ce7a270e09288aa456ffd}{Resource\-Record\-Ptr}
+\begin{DoxyCompactList}\small\item\em A shared pointer to an instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record}{Resource\-Record} class. \end{DoxyCompactList}\item 
+typedef \hyperlink{class_senergy_1_1_vector_x}{Vector\-X}\\*
+$<$ \hyperlink{namespace_senergy_1_1_dns_a1fa04259a07ce7a270e09288aa456ffd}{Resource\-Record\-Ptr} $>$ \hyperlink{namespace_senergy_1_1_dns_ad5ef448b2b508ce86c6ed91dccc10d3e}{Resource\-Record\-Ptr\-Vector}
+\begin{DoxyCompactList}\small\item\em A vector of shared pointers to \hyperlink{class_senergy_1_1_dns_1_1_resource_record}{Resource\-Record} class instances. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -141,6 +158,53 @@ enum \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0}{Res
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0aede320f6102f02f5903553674ed8a3f5}{Resource\-Record\-Type\-::\-D\-L\-V} = 32769
  \}
 \begin{DoxyCompactList}\small\item\em An enumuration of all possible resource record types (R\-R), as defined by I\-A\-N\-A. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespace_senergy_1_1_dns_a425a2a6f3b5c18973c524a99bdfa4ef0}{\index{Senergy\-::\-Dns@{Senergy\-::\-Dns}!Message\-Question\-Ptr@{Message\-Question\-Ptr}}
+\index{Message\-Question\-Ptr@{Message\-Question\-Ptr}!Senergy::Dns@{Senergy\-::\-Dns}}
+\subsubsection[{Message\-Question\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::shared\-\_\-ptr$<${\bf Message\-Question}$>$ {\bf Senergy\-::\-Dns\-::\-Message\-Question\-Ptr}}}\label{namespace_senergy_1_1_dns_a425a2a6f3b5c18973c524a99bdfa4ef0}
+
+
+Simple shared pointer to a Message\-Question\-Ptr instance. 
+
+
+
+Definition at line 193 of file message\-\_\-question.\-h.
+
+\hypertarget{namespace_senergy_1_1_dns_a6983ff2422cfa510ca61831ae5cf1ffc}{\index{Senergy\-::\-Dns@{Senergy\-::\-Dns}!Message\-Question\-Ptr\-Vector@{Message\-Question\-Ptr\-Vector}}
+\index{Message\-Question\-Ptr\-Vector@{Message\-Question\-Ptr\-Vector}!Senergy::Dns@{Senergy\-::\-Dns}}
+\subsubsection[{Message\-Question\-Ptr\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Vector\-X}$<${\bf Message\-Question\-Ptr}$>$ {\bf Senergy\-::\-Dns\-::\-Message\-Question\-Ptr\-Vector}}}\label{namespace_senergy_1_1_dns_a6983ff2422cfa510ca61831ae5cf1ffc}
+
+
+A vector of shared pointers to \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} instances. 
+
+
+
+Definition at line 198 of file message\-\_\-question.\-h.
+
+\hypertarget{namespace_senergy_1_1_dns_a1fa04259a07ce7a270e09288aa456ffd}{\index{Senergy\-::\-Dns@{Senergy\-::\-Dns}!Resource\-Record\-Ptr@{Resource\-Record\-Ptr}}
+\index{Resource\-Record\-Ptr@{Resource\-Record\-Ptr}!Senergy::Dns@{Senergy\-::\-Dns}}
+\subsubsection[{Resource\-Record\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::shared\-\_\-ptr$<${\bf Resource\-Record}$>$ {\bf Senergy\-::\-Dns\-::\-Resource\-Record\-Ptr}}}\label{namespace_senergy_1_1_dns_a1fa04259a07ce7a270e09288aa456ffd}
+
+
+A shared pointer to an instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record}{Resource\-Record} class. 
+
+
+
+Definition at line 216 of file resource\-\_\-record.\-h.
+
+\hypertarget{namespace_senergy_1_1_dns_ad5ef448b2b508ce86c6ed91dccc10d3e}{\index{Senergy\-::\-Dns@{Senergy\-::\-Dns}!Resource\-Record\-Ptr\-Vector@{Resource\-Record\-Ptr\-Vector}}
+\index{Resource\-Record\-Ptr\-Vector@{Resource\-Record\-Ptr\-Vector}!Senergy::Dns@{Senergy\-::\-Dns}}
+\subsubsection[{Resource\-Record\-Ptr\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Vector\-X}$<${\bf Resource\-Record\-Ptr}$>$ {\bf Senergy\-::\-Dns\-::\-Resource\-Record\-Ptr\-Vector}}}\label{namespace_senergy_1_1_dns_ad5ef448b2b508ce86c6ed91dccc10d3e}
+
+
+A vector of shared pointers to \hyperlink{class_senergy_1_1_dns_1_1_resource_record}{Resource\-Record} class instances. 
+
+
+
+Definition at line 221 of file resource\-\_\-record.\-h.
+
 
 
 \subsection{Enumeration Type Documentation}

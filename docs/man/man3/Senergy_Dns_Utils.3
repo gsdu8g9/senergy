@@ -1,4 +1,4 @@
-.TH "Senergy::Dns::Utils" 3 "Tue Feb 4 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::Dns::Utils" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -47,9 +47,9 @@ Contains various utilities related to the DNS protocol\&. This are mostly functi
 .br
 .RI "\fIConverts the specified unsigned integer value from network to host byte order\&. \fP"
 .ti -1c
-.RI "static bool \fBIsDomainPointer\fP (const std::string &hostname)"
+.RI "static std::string \fBReadHostnameFromBuffer\fP (\fBByteBuffer\fP &buffer)"
 .br
-.RI "\fIDetermines whether the specified hostname/domain name is a pointer to an earlier occurence of the same domain name\&. \fP"
+.RI "\fIReads a domain name from the specified buffer, also known as a 'QNAME'\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -64,7 +64,7 @@ Swen Kooij (Photonios)
 .PP
 
 .PP
-Definition at line 43 of file utils\&.h\&.
+Definition at line 45 of file utils\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "std::string Senergy::Dns::Utils::DecodeHostname (const std::string &hostname)\fC [static]\fP"
@@ -90,7 +90,7 @@ The decoded hostname, if the specified hostname was empty, an empty string is re
 .PP
 
 .PP
-Definition at line 67 of file utils\&.cpp\&.
+Definition at line 67 of file dns_utils\&.cpp\&.
 .SS "std::string Senergy::Dns::Utils::EncodeHostname (const std::string &hostname)\fC [static]\fP"
 
 .PP
@@ -110,7 +110,7 @@ The encoded hostname\&. If the specified hostname was empty, an empty string is 
 .PP
 
 .PP
-Definition at line 29 of file utils\&.cpp\&.
+Definition at line 29 of file dns_utils\&.cpp\&.
 .SS "unsigned short Senergy::Dns::Utils::HostToNetworkByteOrder (unsigned shortvalue)\fC [static]\fP"
 
 .PP
@@ -128,7 +128,7 @@ The input value, in network byte order\&.
 .PP
 
 .PP
-Definition at line 97 of file utils\&.cpp\&.
+Definition at line 101 of file dns_utils\&.cpp\&.
 .SS "unsigned char Senergy::Dns::Utils::HostToNetworkByteOrder (unsigned charvalue)\fC [static]\fP"
 
 .PP
@@ -146,7 +146,7 @@ The input value, in network byte order\&.
 .PP
 
 .PP
-Definition at line 107 of file utils\&.cpp\&.
+Definition at line 111 of file dns_utils\&.cpp\&.
 .SS "unsigned int Senergy::Dns::Utils::HostToNetworkByteOrder (unsigned intvalue)\fC [static]\fP"
 
 .PP
@@ -164,30 +164,7 @@ The input value, in network byte order\&.
 .PP
 
 .PP
-Definition at line 117 of file utils\&.cpp\&.
-.SS "bool Senergy::Dns::Utils::IsDomainPointer (const std::string &hostname)\fC [static]\fP"
-
-.PP
-Determines whether the specified hostname/domain name is a pointer to an earlier occurence of the same domain name\&. If it's a pointer, the first two bytes will be 0x01\&.
-.PP
-\fBSee Also:\fP
-.RS 4
-Section 4\&.1\&.4 of RFC-1025 (\fBMessage\fP compression)\&.
-.RE
-.PP
-\fBParameters:\fP
-.RS 4
-\fIhostname\fP The hostname/domain name to check if it's a pointer\&.
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-A boolean indicating whether the specified hostname/domain name is a pointer\&. True is returned when it is a pointer and false is returned when it is not\&. 
-.RE
-.PP
-
-.PP
-Definition at line 127 of file utils\&.cpp\&.
+Definition at line 121 of file dns_utils\&.cpp\&.
 .SS "unsigned short Senergy::Dns::Utils::NetworkToHostByteOrder (unsigned shortvalue)\fC [static]\fP"
 
 .PP
@@ -205,7 +182,7 @@ The input value, in host byte order\&.
 .PP
 
 .PP
-Definition at line 102 of file utils\&.cpp\&.
+Definition at line 106 of file dns_utils\&.cpp\&.
 .SS "unsigned char Senergy::Dns::Utils::NetworkToHostByteOrder (unsigned charvalue)\fC [static]\fP"
 
 .PP
@@ -223,7 +200,7 @@ The input value, in host byte order\&.
 .PP
 
 .PP
-Definition at line 112 of file utils\&.cpp\&.
+Definition at line 116 of file dns_utils\&.cpp\&.
 .SS "unsigned int Senergy::Dns::Utils::NetworkToHostByteOrder (unsigned intvalue)\fC [static]\fP"
 
 .PP
@@ -241,7 +218,32 @@ The input value, in host byte order\&.
 .PP
 
 .PP
-Definition at line 122 of file utils\&.cpp\&.
+Definition at line 126 of file dns_utils\&.cpp\&.
+.SS "std::string Senergy::Dns::Utils::ReadHostnameFromBuffer (\fBByteBuffer\fP &buffer)\fC [static]\fP"
+
+.PP
+Reads a domain name from the specified buffer, also known as a 'QNAME'\&. A domain name in a DNS message is basiclly a string (but, see \fBUtils::EncodeHostname\fP and \fBUtils::DecodeHostname\fP), however, in a answer (resource record) the domain name could also be a 'pointer'\&. A pointer in a DNS message means a offset in the buffer where the domain name can be read\&. This is also known as 'message compression', this is defined in section 4\&.1\&.4 of RFC 1035\&.
+.PP
+This function detects whether it is a pointer or just a domain name, and reads both and returns the domain name\&.
+.PP
+\fBSee Also:\fP
+.RS 4
+Section 4\&.1\&.4 of RFC-1025 (\fBMessage\fP compression)\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to read the domain name from\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The domain name that was read from the buffer, or an empty string if something went wrong\&. 
+.RE
+.PP
+
+.PP
+Definition at line 131 of file dns_utils\&.cpp\&.
 
 .SH "Author"
 .PP 

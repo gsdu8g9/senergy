@@ -1,4 +1,4 @@
-.TH "Senergy::Print" 3 "Tue Feb 4 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::Print" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -34,6 +34,12 @@ Contains simple utilities that facilitate printing various data types or data st
 .RI "static void \fBInteger\fP (int value)"
 .br
 .RI "\fIPrints the specified integer value to the screen, followed by a new-line character\&. \fP"
+.ti -1c
+.RI "static void \fBNewLine\fP ()"
+.br
+.RI "\fIPrints a new-line character to the standard output (
+.br
+), and thus causing all content that is coming next to be on a new line\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -109,6 +115,14 @@ Prints the specified integer value to the screen, followed by a new-line charact
 
 .PP
 Definition at line 49 of file print\&.cpp\&.
+.SS "void Senergy::Print::NewLine ()\fC [static]\fP"
+
+.PP
+Prints a new-line character to the standard output (
+.br
+), and thus causing all content that is coming next to be on a new line\&. 
+.PP
+Definition at line 54 of file print\&.cpp\&.
 
 .SH "Author"
 .PP 

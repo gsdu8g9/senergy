@@ -2,8 +2,10 @@
 \label{resource__record_8h}\index{src/senergy/dns/resource\-\_\-record.\-h@{src/senergy/dns/resource\-\_\-record.\-h}}
 }
 {\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
 {\ttfamily \#include $<$senergy/dns/resource\-\_\-record\-\_\-types.\-h$>$}\\*
 {\ttfamily \#include $<$senergy/dns/resource\-\_\-record\-\_\-classes.\-h$>$}\\*
+{\ttfamily \#include $<$senergy/vectorx.\-h$>$}\\*
 {\ttfamily \#include $<$senergy/dns/utils.\-h$>$}\\*
 {\ttfamily \#include $<$senergy/bytebuffer.\-h$>$}\\*
 \subsection*{Classes}
@@ -18,3 +20,12 @@ class \hyperlink{class_senergy_1_1_dns_1_1_resource_record}{Senergy\-::\-Dns\-::
 \item 
 \hyperlink{namespace_senergy_1_1_dns}{Senergy\-::\-Dns}
 \end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::shared\-\_\-ptr\\*
+$<$ Resource\-Record $>$ \hyperlink{namespace_senergy_1_1_dns_a1fa04259a07ce7a270e09288aa456ffd}{Senergy\-::\-Dns\-::\-Resource\-Record\-Ptr}
+\begin{DoxyCompactList}\small\item\em A shared pointer to an instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record}{Resource\-Record} class. \end{DoxyCompactList}\item 
+typedef Vector\-X\\*
+$<$ Resource\-Record\-Ptr $>$ \hyperlink{namespace_senergy_1_1_dns_ad5ef448b2b508ce86c6ed91dccc10d3e}{Senergy\-::\-Dns\-::\-Resource\-Record\-Ptr\-Vector}
+\begin{DoxyCompactList}\small\item\em A vector of shared pointers to \hyperlink{class_senergy_1_1_dns_1_1_resource_record}{Resource\-Record} class instances. \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
-.TH "src/senergy/dns/record_ipv4address.h" 3 "Tue Feb 4 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "src/senergy/dns/record_ipv4address.h" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,7 +12,13 @@ src/senergy/dns/record_ipv4address.h \-
 .br
 \fC#include <senergy/dns/resource_record_classes\&.h>\fP
 .br
+\fC#include <senergy/dns/message_header\&.h>\fP
+.br
 \fC#include <senergy/dns/resource_record\&.h>\fP
+.br
+\fC#include <senergy/socket\&.h>\fP
+.br
+\fC#include <senergy/vectorx\&.h>\fP
 .br
 
 .SS "Classes"
@@ -35,6 +41,20 @@ src/senergy/dns/record_ipv4address.h \-
 .ti -1c
 .RI "\fBSenergy::Dns::Records\fP"
 .br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::shared_ptr
+.br
+< IPV4Address > \fBSenergy::Dns::Records::IPV4AddressPtr\fP"
+.br
+.RI "\fIA shared pointer to a \fBIPV4Address\fP instance\&. \fP"
+.ti -1c
+.RI "typedef VectorX< IPV4AddressPtr > \fBSenergy::Dns::Records::IPV4AddressPtrVector\fP"
+.br
+.RI "\fIA vector of shared pointers to \fBIPV4Address\fP instances\&. \fP"
 .in -1c
 .SH "Author"
 .PP 

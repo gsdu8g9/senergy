@@ -3,6 +3,21 @@
   <compounddef id="class_senergy_1_1_dns_1_1_message_question" kind="class" prot="public">
     <compoundname>Senergy::Dns::MessageQuestion</compoundname>
     <includes refid="message__question_8h" local="no">message_question.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_senergy_1_1_dns_1_1_message_question_1abb8b572b24e1f2b02b09cbc8ee7fbee4" prot="private" static="no">
+        <type>std::shared_ptr&lt; <ref refid="class_senergy_1_1_dns_1_1_message_question" kindref="compound">MessageQuestion</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;MessageQuestion&gt; Senergy::Dns::MessageQuestion::MessageQuestionPtr</definition>
+        <argsstring></argsstring>
+        <name>MessageQuestionPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="59" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_message_question_1add4b04cade47309c42a4d8ddded7337a" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -15,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="179" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="179" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="181" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="181" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_message_question_1a9f20e620ce8f02ac734c82267e9a4ba5" prot="private" static="no" mutable="no">
         <type>unsigned short</type>
@@ -28,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="182" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="182" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="184" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="184" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_message_question_1a2505302e18325570a3eba9988ddd3977" prot="private" static="no" mutable="no">
         <type>unsigned short</type>
@@ -41,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="185" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="185" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="187" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="187" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -56,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="63" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_question.cpp" bodystart="29" bodyend="34"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="65" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_message_question.cpp" bodystart="29" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_question_1a974c091de6a0f0d46aa82125db2f4517" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -105,7 +120,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="73" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_question.cpp" bodystart="36" bodyend="41"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="75" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_message_question.cpp" bodystart="36" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_question_1a5fa467b516be4914f865bc5d053e98be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -119,7 +134,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="90" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_question.cpp" bodystart="48" bodyend="51"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="92" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_message_question.cpp" bodystart="48" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_question_1a239d21d940aa38b8d953ff29b400b9cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -144,7 +159,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="98" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_question.cpp" bodystart="53" bodyend="56"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="100" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_message_question.cpp" bodystart="53" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_question_1a0a007a1d002a37189ce0f8c943335216" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -158,7 +173,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="106" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_question.cpp" bodystart="58" bodyend="62"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="108" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_message_question.cpp" bodystart="58" bodyend="62"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_question_1a1c66b45b448f262a4f2cf1317c89b5b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -185,7 +200,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="121" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_question.cpp" bodystart="64" bodyend="81"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="123" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_message_question.cpp" bodystart="64" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_question_1a60772687d382e1d376852e1b5ff59968" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -212,7 +227,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="135" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_question.cpp" bodystart="83" bodyend="97"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="137" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_message_question.cpp" bodystart="83" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_question_1a7ac084601ff3285c6e47e7ce7ccc09cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -225,7 +240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="143" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_question.cpp" bodystart="99" bodyend="104"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="145" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_message_question.cpp" bodystart="97" bodyend="102"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_question_1a66d9d051672d30c1f4b5663d25430ec8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0" kindref="member">ResourceRecordType</ref></type>
@@ -239,7 +254,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="151" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_question.cpp" bodystart="106" bodyend="109"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="153" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_message_question.cpp" bodystart="104" bodyend="107"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_question_1a3fbcbad88592bf5cde58c7b22119cc4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -264,7 +279,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="159" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_question.cpp" bodystart="111" bodyend="114"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="161" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_message_question.cpp" bodystart="109" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_question_1ae86936e1268d7abf0a2210df9caa0840" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespace_senergy_1_1_dns_1a953f153bc411213d621d00c1e1b3eb9d" kindref="member">ResourceRecordClass</ref></type>
@@ -278,7 +293,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="167" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_question.cpp" bodystart="116" bodyend="119"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="169" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_message_question.cpp" bodystart="114" bodyend="117"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_question_1a8676f25315240afe4473154f3708d3e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -303,12 +318,12 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="175" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_question.cpp" bodystart="121" bodyend="124"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="177" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_message_question.cpp" bodystart="119" bodyend="122"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_message_question_1ae8237696d15da3b4b67f96fbd3d1d3e3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="message__question_8h_1a4b780ef30c07c3c31b79d838bc443687" kindref="member">MessageQuestionPtr</ref></type>
+        <type>MessageQuestionPtr</type>
         <definition>MessageQuestionPtr Senergy::Dns::MessageQuestion::Create</definition>
         <argsstring>(const std::string &amp;hostname, ResourceRecordType type=ResourceRecordType::A, ResourceRecordClass clas=ResourceRecordClass::Internet)</argsstring>
         <name>Create</name>
@@ -354,7 +369,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="83" column="1" bodyfile="/home/photonios/Documents/Senergy/src/message_question.cpp" bodystart="43" bodyend="46"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="85" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_message_question.cpp" bodystart="43" bodyend="46"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -362,7 +377,7 @@
     <detaileddescription>
 <para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="58" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="57" bodyend="186"/>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="55" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="54" bodyend="188"/>
     <listofallmembers>
       <member refid="class_senergy_1_1_dns_1_1_message_question_1ae8237696d15da3b4b67f96fbd3d1d3e3" prot="public" virt="non-virtual"><scope>Senergy::Dns::MessageQuestion</scope><name>Create</name></member>
       <member refid="class_senergy_1_1_dns_1_1_message_question_1a1c66b45b448f262a4f2cf1317c89b5b3" prot="public" virt="non-virtual"><scope>Senergy::Dns::MessageQuestion</scope><name>Deserialize</name></member>
@@ -376,6 +391,7 @@
       <member refid="class_senergy_1_1_dns_1_1_message_question_1a9f20e620ce8f02ac734c82267e9a4ba5" prot="private" virt="non-virtual"><scope>Senergy::Dns::MessageQuestion</scope><name>m_type</name></member>
       <member refid="class_senergy_1_1_dns_1_1_message_question_1a956458fba0c9b96fbd78408250095148" prot="public" virt="non-virtual"><scope>Senergy::Dns::MessageQuestion</scope><name>MessageQuestion</name></member>
       <member refid="class_senergy_1_1_dns_1_1_message_question_1a974c091de6a0f0d46aa82125db2f4517" prot="public" virt="non-virtual"><scope>Senergy::Dns::MessageQuestion</scope><name>MessageQuestion</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_message_question_1abb8b572b24e1f2b02b09cbc8ee7fbee4" prot="private" virt="non-virtual"><scope>Senergy::Dns::MessageQuestion</scope><name>MessageQuestionPtr</name></member>
       <member refid="class_senergy_1_1_dns_1_1_message_question_1a60772687d382e1d376852e1b5ff59968" prot="public" virt="non-virtual"><scope>Senergy::Dns::MessageQuestion</scope><name>Serialize</name></member>
       <member refid="class_senergy_1_1_dns_1_1_message_question_1a8676f25315240afe4473154f3708d3e5" prot="public" virt="non-virtual"><scope>Senergy::Dns::MessageQuestion</scope><name>SetClass</name></member>
       <member refid="class_senergy_1_1_dns_1_1_message_question_1a239d21d940aa38b8d953ff29b400b9cf" prot="public" virt="non-virtual"><scope>Senergy::Dns::MessageQuestion</scope><name>SetHostname</name></member>

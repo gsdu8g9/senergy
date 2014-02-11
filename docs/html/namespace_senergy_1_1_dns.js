@@ -8,6 +8,7 @@ var namespace_senergy_1_1_dns =
     [ "MessageQuestion", "class_senergy_1_1_dns_1_1_message_question.html", "class_senergy_1_1_dns_1_1_message_question" ],
     [ "Requester", "class_senergy_1_1_dns_1_1_requester.html", "class_senergy_1_1_dns_1_1_requester" ],
     [ "ResourceRecord", "class_senergy_1_1_dns_1_1_resource_record.html", "class_senergy_1_1_dns_1_1_resource_record" ],
+    [ "ResourceRecordCollection", "class_senergy_1_1_dns_1_1_resource_record_collection.html", "class_senergy_1_1_dns_1_1_resource_record_collection" ],
     [ "RootNameServer", "class_senergy_1_1_dns_1_1_root_name_server.html", null ],
     [ "Utils", "class_senergy_1_1_dns_1_1_utils.html", "class_senergy_1_1_dns_1_1_utils" ]
 ];

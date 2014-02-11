@@ -22,6 +22,8 @@ var class_senergy_1_1_socket =
     [ "Connect", "class_senergy_1_1_socket.html#a75946ce55f263abb105a22611819e11e", null ],
     [ "GetErrorCode", "class_senergy_1_1_socket.html#a403f7a2f6c5a94d4b14f73f0965da061", null ],
     [ "GetRemoteHost", "class_senergy_1_1_socket.html#aaab6b46c9e2733982df87eefb0fc77a2", null ],
+    [ "IPV4AddressFromBinary", "class_senergy_1_1_socket.html#a824cf26338b12e1591b78d23abf6032a", null ],
+    [ "IPV4AddressToBinary", "class_senergy_1_1_socket.html#a74c62f0fb79be1192eed5f2fd092dd50", null ],
     [ "IsConnected", "class_senergy_1_1_socket.html#a6d22575e6fc0d6ab4a61097d60b6e773", null ],
     [ "Listen", "class_senergy_1_1_socket.html#a9f2cfa080e3a5f365b52cc5fff94eb74", null ],
     [ "Receive", "class_senergy_1_1_socket.html#a7045f756d3c542ee1187a92ca13fa232", null ],

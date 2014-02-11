@@ -1,0 +1,161 @@
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_collection}{\section{Senergy\-:\-:Dns\-:\-:Resource\-Record\-Collection Class Reference}
+\label{class_senergy_1_1_dns_1_1_resource_record_collection}\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection@{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection}}
+}
+
+
+Simple container for all types of resource records we support. This is to prevent creating hundreds of separate containers in the \hyperlink{class_senergy_1_1_dns_1_1_message}{Message} class.  
+
+
+
+
+{\ttfamily \#include $<$resource\-\_\-record\-\_\-collection.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_senergy_1_1_dns_1_1_resource_record_collection_a66f740bd63a874374e471973ee236d78}{Resource\-Record\-Collection} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_collection}{Resource\-Record\-Collection} class. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_dns_1_1_resource_record_collection_affa4da32b82b69f712c2383ab4f9ee8c}{Serialize} (\hyperlink{class_senergy_1_1_dns_1_1_message_header}{Message\-Header} \&header, \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
+\begin{DoxyCompactList}\small\item\em Serializes all records in this collection into the specified buffer. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_dns_1_1_resource_record_collection_ae228f7ec1cf020033f64f68a3f5ea4e1}{Deserialize} (\hyperlink{class_senergy_1_1_dns_1_1_message_header}{Message\-Header} \&header, \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
+\begin{DoxyCompactList}\small\item\em Deserializes the content of the specified buffer into this collection. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_dns_1_1_resource_record_collection_a62ac608c82f209ec4b0c2ed5bc155a73}{Dump} ()
+\begin{DoxyCompactList}\small\item\em Calls the '\hyperlink{class_senergy_1_1_dns_1_1_resource_record_collection_a62ac608c82f209ec4b0c2ed5bc155a73}{Dump()}' method of all records, and thus dumping the fields of each record to standard output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_senergy_1_1_dns_1_1_records_a5b9115e6124c4999bbb000e69cfe5d2c}{Records\-::\-I\-P\-V4\-Address\-Ptr\-Vector} \hyperlink{class_senergy_1_1_dns_1_1_resource_record_collection_a0ca3a73fcaabee1703b18c9c8ca453f9}{I\-P\-V4\-Answers}
+\begin{DoxyCompactList}\small\item\em All 'A' records in this collection. See the I\-P\-V4\-Address class for more information.. \end{DoxyCompactList}\item 
+\hyperlink{namespace_senergy_1_1_dns_ad5ef448b2b508ce86c6ed91dccc10d3e}{Resource\-Record\-Ptr\-Vector} \hyperlink{class_senergy_1_1_dns_1_1_resource_record_collection_a1ad19da9ca3420c4aa1ad865099e387d}{Unknown\-Records}
+\begin{DoxyCompactList}\small\item\em All resource records that could not be parsed because we do not support their type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple container for all types of resource records we support. This is to prevent creating hundreds of separate containers in the \hyperlink{class_senergy_1_1_dns_1_1_message}{Message} class. 
+
+\begin{DoxyAuthor}{Author}
+Swen Kooij (Photonios) 
+\end{DoxyAuthor}
+
+
+Definition at line 43 of file resource\-\_\-record\-\_\-collection.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_collection_a66f740bd63a874374e471973ee236d78}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection@{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection}!Resource\-Record\-Collection@{Resource\-Record\-Collection}}
+\index{Resource\-Record\-Collection@{Resource\-Record\-Collection}!Senergy::Dns::ResourceRecordCollection@{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection}}
+\subsubsection[{Resource\-Record\-Collection}]{\setlength{\rightskip}{0pt plus 5cm}Senergy\-::\-Dns\-::\-Resource\-Record\-Collection\-::\-Resource\-Record\-Collection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_resource_record_collection_a66f740bd63a874374e471973ee236d78}
+
+
+Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_collection}{Resource\-Record\-Collection} class. 
+
+
+
+Definition at line 29 of file dns\-\_\-resource\-\_\-record\-\_\-collection.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_collection_ae228f7ec1cf020033f64f68a3f5ea4e1}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection@{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection}!Deserialize@{Deserialize}}
+\index{Deserialize@{Deserialize}!Senergy::Dns::ResourceRecordCollection@{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection}}
+\subsubsection[{Deserialize}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Resource\-Record\-Collection\-::\-Deserialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Message\-Header} \&}]{header, }
+\item[{{\bf Byte\-Buffer} \&}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_resource_record_collection_ae228f7ec1cf020033f64f68a3f5ea4e1}
+
+
+Deserializes the content of the specified buffer into this collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to read from. \\
+\hline
+{\em header} & The header to use as the information source during deserialization. The header contains information on how many resource records have been returned.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether this operation was a success. 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file dns\-\_\-resource\-\_\-record\-\_\-collection.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_collection_a62ac608c82f209ec4b0c2ed5bc155a73}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection@{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection}!Dump@{Dump}}
+\index{Dump@{Dump}!Senergy::Dns::ResourceRecordCollection@{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection}}
+\subsubsection[{Dump}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Dns\-::\-Resource\-Record\-Collection\-::\-Dump (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_resource_record_collection_a62ac608c82f209ec4b0c2ed5bc155a73}
+
+
+Calls the '\hyperlink{class_senergy_1_1_dns_1_1_resource_record_collection_a62ac608c82f209ec4b0c2ed5bc155a73}{Dump()}' method of all records, and thus dumping the fields of each record to standard output. 
+
+
+
+Definition at line 84 of file dns\-\_\-resource\-\_\-record\-\_\-collection.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_collection_affa4da32b82b69f712c2383ab4f9ee8c}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection@{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Senergy::Dns::ResourceRecordCollection@{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection}}
+\subsubsection[{Serialize}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Resource\-Record\-Collection\-::\-Serialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Message\-Header} \&}]{header, }
+\item[{{\bf Byte\-Buffer} \&}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_resource_record_collection_affa4da32b82b69f712c2383ab4f9ee8c}
+
+
+Serializes all records in this collection into the specified buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to write the serialized data to. \\
+\hline
+{\em header} & The header to write to how many resource records we serialized.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether this operation was a success. 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file dns\-\_\-resource\-\_\-record\-\_\-collection.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_collection_a0ca3a73fcaabee1703b18c9c8ca453f9}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection@{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection}!I\-P\-V4\-Answers@{I\-P\-V4\-Answers}}
+\index{I\-P\-V4\-Answers@{I\-P\-V4\-Answers}!Senergy::Dns::ResourceRecordCollection@{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection}}
+\subsubsection[{I\-P\-V4\-Answers}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Records\-::\-I\-P\-V4\-Address\-Ptr\-Vector} Senergy\-::\-Dns\-::\-Resource\-Record\-Collection\-::\-I\-P\-V4\-Answers}}\label{class_senergy_1_1_dns_1_1_resource_record_collection_a0ca3a73fcaabee1703b18c9c8ca453f9}
+
+
+All 'A' records in this collection. See the I\-P\-V4\-Address class for more information.. 
+
+
+
+Definition at line 84 of file resource\-\_\-record\-\_\-collection.\-h.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_collection_a1ad19da9ca3420c4aa1ad865099e387d}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection@{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection}!Unknown\-Records@{Unknown\-Records}}
+\index{Unknown\-Records@{Unknown\-Records}!Senergy::Dns::ResourceRecordCollection@{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection}}
+\subsubsection[{Unknown\-Records}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\-Record\-Ptr\-Vector} Senergy\-::\-Dns\-::\-Resource\-Record\-Collection\-::\-Unknown\-Records}}\label{class_senergy_1_1_dns_1_1_resource_record_collection_a1ad19da9ca3420c4aa1ad865099e387d}
+
+
+All resource records that could not be parsed because we do not support their type. 
+
+
+
+Definition at line 90 of file resource\-\_\-record\-\_\-collection.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/senergy/dns/\hyperlink{resource__record__collection_8h}{resource\-\_\-record\-\_\-collection.\-h}\item 
+src/\hyperlink{dns__resource__record__collection_8cpp}{dns\-\_\-resource\-\_\-record\-\_\-collection.\-cpp}\end{DoxyCompactItemize}

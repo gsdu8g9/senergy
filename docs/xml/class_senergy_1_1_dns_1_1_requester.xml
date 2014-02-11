@@ -42,11 +42,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/requester.h" line="53" column="1" bodyfile="/home/photonios/Documents/Senergy/src/requester.cpp" bodystart="29" bodyend="33"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/requester.h" line="53" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_requester.cpp" bodystart="29" bodyend="33"/>
       </memberdef>
-      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_requester_1a9221196d35728ad295d542c6f5342475" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="namespace_senergy_1a09aea2e19671645414361ca8388aebfe" kindref="member">StringVector</ref></type>
-        <definition>StringVector Senergy::Dns::Requester::Lookup</definition>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_requester_1abcd4348e956e6d21eef3ecc7a1f3cc0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_senergy_1_1_dns_1_1_message" kindref="compound">Dns::Message</ref></type>
+        <definition>Dns::Message Senergy::Dns::Requester::Lookup</definition>
         <argsstring>(ResourceRecordType record_type, const std::string &amp;hostname)</argsstring>
         <name>Lookup</name>
         <param>
@@ -75,11 +75,11 @@
 <para>The domain name to look up the IP address(es) for.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>A vector of strings, where each string is an IP address. </para></simplesect>
+<simplesect kind="return"><para>The message that was received from the remote server. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/requester.h" line="65" column="1" bodyfile="/home/photonios/Documents/Senergy/src/requester.cpp" bodystart="35" bodyend="82"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/requester.h" line="65" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_requester.cpp" bodystart="35" bodyend="81"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -89,7 +89,7 @@
 </para>    </detaileddescription>
     <location file="/home/photonios/Documents/Senergy/src/senergy/dns/requester.h" line="43" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/requester.h" bodystart="42" bodyend="70"/>
     <listofallmembers>
-      <member refid="class_senergy_1_1_dns_1_1_requester_1a9221196d35728ad295d542c6f5342475" prot="public" virt="non-virtual"><scope>Senergy::Dns::Requester</scope><name>Lookup</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_requester_1abcd4348e956e6d21eef3ecc7a1f3cc0e" prot="public" virt="non-virtual"><scope>Senergy::Dns::Requester</scope><name>Lookup</name></member>
       <member refid="class_senergy_1_1_dns_1_1_requester_1aad631f9cd1865d836c42b659a49c0ec7" prot="private" virt="non-virtual"><scope>Senergy::Dns::Requester</scope><name>m_dns_server</name></member>
       <member refid="class_senergy_1_1_dns_1_1_requester_1a1b5fbbb5b5b115bdee9da48ce1466be0" prot="public" virt="non-virtual"><scope>Senergy::Dns::Requester</scope><name>Requester</name></member>
     </listofallmembers>

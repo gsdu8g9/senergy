@@ -1,0 +1,49 @@
+.TH "src/senergy/logger.h" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/senergy/logger.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <string>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <chrono>\fP
+.br
+\fC#include <ctime>\fP
+.br
+\fC#include <sstream>\fP
+.br
+\fC#include <senergy/print\&.h>\fP
+.br
+\fC#include <senergy/console\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBSenergy::Logger\fP"
+.br
+.RI "\fISimple logger with support for variadic arguments and various log levels\&. \fP"
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "\fBSenergy\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSenergy::LogLevel\fP { \fBSenergy::LogLevel::Info\fP, \fBSenergy::LogLevel::Error\fP, \fBSenergy::LogLevel::Warning\fP, \fBSenergy::LogLevel::Debug\fP }"
+.br
+.RI "\fIAn enumuration of all possible log levels, log levels will result in prefixes in log entries\&. \fP"
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

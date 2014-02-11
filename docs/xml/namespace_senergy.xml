@@ -4,12 +4,54 @@
     <compoundname>Senergy</compoundname>
     <innerclass refid="class_senergy_1_1_byte_buffer" prot="public">Senergy::ByteBuffer</innerclass>
     <innerclass refid="class_senergy_1_1_circular_buffer" prot="public">Senergy::CircularBuffer</innerclass>
+    <innerclass refid="class_senergy_1_1_console" prot="public">Senergy::Console</innerclass>
     <innerclass refid="class_senergy_1_1_convert" prot="public">Senergy::Convert</innerclass>
+    <innerclass refid="class_senergy_1_1_logger" prot="public">Senergy::Logger</innerclass>
     <innerclass refid="class_senergy_1_1_print" prot="public">Senergy::Print</innerclass>
     <innerclass refid="class_senergy_1_1_socket" prot="public">Senergy::Socket</innerclass>
     <innerclass refid="class_senergy_1_1_vector_x" prot="public">Senergy::VectorX</innerclass>
     <innernamespace refid="namespace_senergy_1_1_dns">Senergy::Dns</innernamespace>
     <innernamespace refid="namespace_senergy_1_1_socket_error">Senergy::SocketError</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_senergy_1a8a440a300c8ecafb12b81c1853a5c66d" prot="public" static="no">
+        <name>LogLevel</name>
+        <enumvalue id="namespace_senergy_1a8a440a300c8ecafb12b81c1853a5c66da4059b0251f66a18cb56f544728796875" prot="public">
+          <name>Info</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1a8a440a300c8ecafb12b81c1853a5c66da902b0d55fddef6f8d651fe1035b7d4bd" prot="public">
+          <name>Error</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1a8a440a300c8ecafb12b81c1853a5c66da0eaadb4fcb48a0a0ed7bc9868be9fbaa" prot="public">
+          <name>Warning</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_senergy_1a8a440a300c8ecafb12b81c1853a5c66daa603905470e2a5b8c13e96b579ef0dba" prot="public">
+          <name>Debug</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>An enumuration of all possible log levels, log levels will result in prefixes in log entries. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/logger.h" line="41" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/logger.h" bodystart="40" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="typedef">
       <memberdef kind="typedef" id="namespace_senergy_1a30f5cfaeb333ffdf2c3332cc590a57ea" prot="public" static="no">
         <type>std::shared_ptr&lt; <ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> &gt;</type>
@@ -22,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="440" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" bodystart="440" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" line="471" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h" bodystart="471" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespace_senergy_1a9014e48a368555ba932efd8d17eb2d23" prot="public" static="no">
         <type>std::shared_ptr&lt; <ref refid="class_senergy_1_1_socket" kindref="compound">Socket</ref> &gt;</type>
@@ -35,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="480" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="480" bodyend="-1"/>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/socket.h" line="513" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/socket.h" bodystart="513" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespace_senergy_1a09aea2e19671645414361ca8388aebfe" prot="public" static="no">
         <type><ref refid="class_senergy_1_1_vector_x" kindref="compound">VectorX</ref>&lt; std::string &gt;</type>

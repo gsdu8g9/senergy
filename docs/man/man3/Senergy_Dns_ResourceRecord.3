@@ -1,4 +1,4 @@
-.TH "Senergy::Dns::ResourceRecord" 3 "Tue Feb 4 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::Dns::ResourceRecord" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -11,8 +11,6 @@ Defines a DNS Resource Record, as defined in RFC 1035, section 4\&.1\&.3\&. A DN
 .PP
 .PP
 \fC#include <resource_record\&.h>\fP
-.PP
-Inherited by \fBSenergy::Dns::Records::IPV4Address\fP\fC [private]\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
@@ -21,11 +19,11 @@ Inherited by \fBSenergy::Dns::Records::IPV4Address\fP\fC [private]\fP\&.
 .br
 .RI "\fIInitializes a new instance of the \fBResourceRecord\fP class\&. \fP"
 .ti -1c
-.RI "virtual bool \fBDeserialize\fP (\fBByteBuffer\fP &buffer)"
+.RI "bool \fBDeserialize\fP (\fBByteBuffer\fP &buffer)"
 .br
 .RI "\fIDeserializes a resource record from the specified buffer into this instance\&. \fP"
 .ti -1c
-.RI "virtual bool \fBSerialize\fP (\fBByteBuffer\fP &buffer)"
+.RI "bool \fBSerialize\fP (\fBByteBuffer\fP &buffer)"
 .br
 .RI "\fISerializes this instance into the specified buffer\&. \fP"
 .ti -1c
@@ -64,25 +62,18 @@ Inherited by \fBSenergy::Dns::Records::IPV4Address\fP\fC [private]\fP\&.
 .RI "int \fBGetResourceSize\fP ()"
 .br
 .RI "\fIGets the size of the resource this record contains\&. \fP"
+.ti -1c
+.RI "void \fBDump\fP ()"
+.br
+.RI "\fIDumps all fields to the standard output, with their values\&. In the following format: \fP"
 .in -1c
-.SS "Protected Attributes"
+.SS "Static Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "std::string \fBm_hostname\fP"
+.RI "static ResourceRecordPtr \fBCreate\fP ()"
 .br
-.ti -1c
-.RI "\fBResourceRecordType\fP \fBm_type\fP"
-.br
-.ti -1c
-.RI "\fBResourceRecordClass\fP \fBm_class\fP"
-.br
-.ti -1c
-.RI "unsigned int \fBm_ttl\fP"
-.br
-.ti -1c
-.RI "unsigned short \fBm_rd_length\fP"
-.br
+.RI "\fICreates a new instance of the \fBResourceRecord\fP class as a shared pointer\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -95,7 +86,7 @@ This class does NOT implement the resource data field, and does not serialize/de
 
 .fi
 .PP
- Instead, new classes should be created per resource record type, which do implement the resource data field, and inherit from this class\&.
+ Instead, new classes should be created per resource record type, which do implement the resource data field, and need an instance of this class to serialize/deserialize\&.
 .PP
 \fBAuthor:\fP
 .RS 4
@@ -104,7 +95,7 @@ Swen Kooij (Photonios)
 .PP
 
 .PP
-Definition at line 50 of file resource_record\&.h\&.
+Definition at line 52 of file resource_record\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Senergy::Dns::ResourceRecord::ResourceRecord ()"
@@ -112,10 +103,23 @@ Definition at line 50 of file resource_record\&.h\&.
 .PP
 Initializes a new instance of the \fBResourceRecord\fP class\&. 
 .PP
-Definition at line 29 of file resource_record\&.cpp\&.
+Definition at line 29 of file dns_resource_record\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "bool Senergy::Dns::ResourceRecord::Deserialize (\fBByteBuffer\fP &buffer)\fC [virtual]\fP"
+.SS "ResourceRecordPtr Senergy::Dns::ResourceRecord::Create ()\fC [static]\fP"
+
+.PP
+Creates a new instance of the \fBResourceRecord\fP class as a shared pointer\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A shared pointer to the newly initiated instance of the \fBResourceRecord\fP class\&. 
+.RE
+.PP
+
+.PP
+Definition at line 38 of file dns_resource_record\&.cpp\&.
+.SS "bool Senergy::Dns::ResourceRecord::Deserialize (\fBByteBuffer\fP &buffer)"
 
 .PP
 Deserializes a resource record from the specified buffer into this instance\&. The specified buffer must have at least 4 bytes left to read\&. However, the size of a resource record is variable, because of the name field\&.
@@ -139,9 +143,13 @@ A boolean indicating whether deserialization was succesful\&. True is returned w
 .PP
 
 .PP
-Reimplemented in \fBSenergy::Dns::Records::IPV4Address\fP\&.
+Definition at line 43 of file dns_resource_record\&.cpp\&.
+.SS "void Senergy::Dns::ResourceRecord::Dump ()"
+
 .PP
-Definition at line 38 of file resource_record\&.cpp\&.
+Dumps all fields to the standard output, with their values\&. In the following format: 
+.PP
+Definition at line 129 of file dns_resource_record\&.cpp\&.
 .SS "\fBResourceRecordClass\fP Senergy::Dns::ResourceRecord::GetClass ()"
 
 .PP
@@ -154,7 +162,7 @@ A value from the ResourceRecordClass enumuration, which indicates what class the
 .PP
 
 .PP
-Definition at line 104 of file resource_record\&.cpp\&.
+Definition at line 104 of file dns_resource_record\&.cpp\&.
 .SS "std::string Senergy::Dns::ResourceRecord::GetHostname ()"
 
 .PP
@@ -167,7 +175,7 @@ The hostname configured in this answer\&.
 .PP
 
 .PP
-Definition at line 84 of file resource_record\&.cpp\&.
+Definition at line 84 of file dns_resource_record\&.cpp\&.
 .SS "int Senergy::Dns::ResourceRecord::GetMaxCachingTime ()"
 
 .PP
@@ -180,7 +188,7 @@ The maximum amount of seconds the resource in this record should be cached\&. If
 .PP
 
 .PP
-Definition at line 119 of file resource_record\&.cpp\&.
+Definition at line 119 of file dns_resource_record\&.cpp\&.
 .SS "int Senergy::Dns::ResourceRecord::GetResourceSize ()"
 
 .PP
@@ -193,7 +201,7 @@ The size of the resource in this record (amount of bytes)\&.
 .PP
 
 .PP
-Definition at line 124 of file resource_record\&.cpp\&.
+Definition at line 124 of file dns_resource_record\&.cpp\&.
 .SS "\fBResourceRecordType\fP Senergy::Dns::ResourceRecord::GetType ()"
 
 .PP
@@ -206,7 +214,7 @@ A value from the ResourceRecordType enumuration, which indicates what kind of re
 .PP
 
 .PP
-Definition at line 94 of file resource_record\&.cpp\&.
+Definition at line 94 of file dns_resource_record\&.cpp\&.
 .SS "bool Senergy::Dns::ResourceRecord::NeedsCaching ()"
 
 .PP
@@ -219,8 +227,8 @@ True when this record needs to be cached, and false when it should not be cached
 .PP
 
 .PP
-Definition at line 114 of file resource_record\&.cpp\&.
-.SS "bool Senergy::Dns::ResourceRecord::Serialize (\fBByteBuffer\fP &buffer)\fC [virtual]\fP"
+Definition at line 114 of file dns_resource_record\&.cpp\&.
+.SS "bool Senergy::Dns::ResourceRecord::Serialize (\fBByteBuffer\fP &buffer)"
 
 .PP
 Serializes this instance into the specified buffer\&. The size of a resource record is variable, because of the name field\&.
@@ -244,9 +252,7 @@ A boolean indicating whether serialization was successful\&. True is returned wh
 .PP
 
 .PP
-Reimplemented in \fBSenergy::Dns::Records::IPV4Address\fP\&.
-.PP
-Definition at line 69 of file resource_record\&.cpp\&.
+Definition at line 69 of file dns_resource_record\&.cpp\&.
 .SS "void Senergy::Dns::ResourceRecord::SetClass (\fBResourceRecordClass\fPclas)"
 
 .PP
@@ -259,7 +265,7 @@ Sets the resource record class, the class of resource this record contains\&.
 .PP
 
 .PP
-Definition at line 109 of file resource_record\&.cpp\&.
+Definition at line 109 of file dns_resource_record\&.cpp\&.
 .SS "void Senergy::Dns::ResourceRecord::SetHostname (const std::stringhostname)"
 
 .PP
@@ -272,7 +278,7 @@ Sets the hostname for this answer\&.
 .PP
 
 .PP
-Definition at line 89 of file resource_record\&.cpp\&.
+Definition at line 89 of file dns_resource_record\&.cpp\&.
 .SS "void Senergy::Dns::ResourceRecord::SetType (\fBResourceRecordType\fPtype)"
 
 .PP
@@ -285,29 +291,7 @@ Sets the resource record type, the type of resource this record contains\&.
 .PP
 
 .PP
-Definition at line 99 of file resource_record\&.cpp\&.
-.SH "Member Data Documentation"
-.PP 
-.SS "\fBResourceRecordClass\fP Senergy::Dns::ResourceRecord::m_class\fC [protected]\fP"
-
-.PP
-Definition at line 181 of file resource_record\&.h\&.
-.SS "std::string Senergy::Dns::ResourceRecord::m_hostname\fC [protected]\fP"
-
-.PP
-Definition at line 175 of file resource_record\&.h\&.
-.SS "unsigned short Senergy::Dns::ResourceRecord::m_rd_length\fC [protected]\fP"
-
-.PP
-Definition at line 187 of file resource_record\&.h\&.
-.SS "unsigned int Senergy::Dns::ResourceRecord::m_ttl\fC [protected]\fP"
-
-.PP
-Definition at line 184 of file resource_record\&.h\&.
-.SS "\fBResourceRecordType\fP Senergy::Dns::ResourceRecord::m_type\fC [protected]\fP"
-
-.PP
-Definition at line 178 of file resource_record\&.h\&.
+Definition at line 99 of file dns_resource_record\&.cpp\&.
 
 .SH "Author"
 .PP 

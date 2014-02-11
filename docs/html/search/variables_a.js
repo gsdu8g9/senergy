@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['z',['z',['../struct_d_n_s___h_e_a_d_e_r.html#a4a09d9fe1ea80fcc992af0e4a90b0e6c',1,'DNS_HEADER']]]
+  ['unknownrecords',['UnknownRecords',['../class_senergy_1_1_dns_1_1_resource_record_collection.html#a1ad19da9ca3420c4aa1ad865099e387d',1,'Senergy::Dns::ResourceRecordCollection']]]
 ];

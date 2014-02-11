@@ -5,8 +5,8 @@ var class_senergy_1_1_dns_1_1_utils =
     [ "HostToNetworkByteOrder", "class_senergy_1_1_dns_1_1_utils.html#a26ed8e47210810c24f8ab5a2588bf276", null ],
     [ "HostToNetworkByteOrder", "class_senergy_1_1_dns_1_1_utils.html#a952d70b6ddc617c92819eb2ad7e37f0d", null ],
     [ "HostToNetworkByteOrder", "class_senergy_1_1_dns_1_1_utils.html#a7a521aadbb12776e2127abe8028411dc", null ],
-    [ "IsDomainPointer", "class_senergy_1_1_dns_1_1_utils.html#a96aa042aaec1c2608a13a6ba83792336", null ],
     [ "NetworkToHostByteOrder", "class_senergy_1_1_dns_1_1_utils.html#aa4e117a17add157b5e9bcb5fada4ac49", null ],
     [ "NetworkToHostByteOrder", "class_senergy_1_1_dns_1_1_utils.html#ac34288e7acfa54f6faaa775ab5654192", null ],
-    [ "NetworkToHostByteOrder", "class_senergy_1_1_dns_1_1_utils.html#ad4711275abcbc1d332f3c0208e74c4b8", null ]
+    [ "NetworkToHostByteOrder", "class_senergy_1_1_dns_1_1_utils.html#ad4711275abcbc1d332f3c0208e74c4b8", null ],
+    [ "ReadHostnameFromBuffer", "class_senergy_1_1_dns_1_1_utils.html#a6b995d31d85ef39a5e8ac57928fa35ed", null ]
 ];

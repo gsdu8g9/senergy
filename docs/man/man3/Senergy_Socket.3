@@ -1,4 +1,4 @@
-.TH "Senergy::Socket" 3 "Tue Feb 4 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::Socket" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -111,6 +111,18 @@ Provides an object-oriented interface for Berkely (BSD) sockets\&. Can act both 
 .br
 .RI "\fIGets the last error code that was set by a socket operation\&. The error code that is returned are normal Berkely sockets error codes\&. Performing another socket operation overwrites the last error code that was set\&. \fP"
 .in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static std::string \fBIPV4AddressFromBinary\fP (unsigned int binary)"
+.br
+.RI "\fIConverts a 32-bit unsigned integer, which contains a IPV4 address to it's textual representation, where each 8 bit chunk is separated by a dot\&. \fP"
+.ti -1c
+.RI "static unsigned int \fBIPV4AddressToBinary\fP (std::string ip)"
+.br
+.RI "\fIConverts the textual representation of a IPV4 address to it's binary form\&. \fP"
+.in -1c
 .SH "Detailed Description"
 .PP 
 Provides an object-oriented interface for Berkely (BSD) sockets\&. Can act both as a server as well as a client\&. The main purpose of this class class is to provide a more C++ like interface for TCP sockets\&. 
@@ -129,7 +141,7 @@ Swen Kooij / Photonios
 .PP
 
 .PP
-Definition at line 71 of file socket\&.h\&.
+Definition at line 74 of file socket\&.h\&.
 .SH "Member Typedef Documentation"
 .PP 
 .SS "typedef std::shared_ptr<\fBSocket\fP> \fBSenergy::Socket::SocketPtr\fP"
@@ -144,7 +156,7 @@ This is defined outside the class definition as well to make it usuable for libr
 .PP
 
 .PP
-Definition at line 130 of file socket\&.h\&.
+Definition at line 133 of file socket\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBSenergy::Socket::CloseType\fP : int\fC [strong]\fP"
@@ -164,7 +176,7 @@ Stop sending data, but receive all remaining data\&.
 \fB\fIStopAll \fP\fP
 Stop sending and receiving data immeditially\&./\&. 
 .PP
-Definition at line 78 of file socket\&.h\&.
+Definition at line 81 of file socket\&.h\&.
 .SS "enum \fBSenergy::Socket::SocketProtocol\fP : int\fC [strong]\fP"
 
 .PP
@@ -177,7 +189,7 @@ Defines the possible socket protocols that this class supports\&.
 .TP
 \fB\fIUDP \fP\fP
 .PP
-Definition at line 118 of file socket\&.h\&.
+Definition at line 121 of file socket\&.h\&.
 .SS "enum \fBSenergy::Socket::SocketRole\fP : int\fC [strong]\fP"
 
 .PP
@@ -192,7 +204,7 @@ The instance is behaving as a client socket, which is connected to a server\&.
 \fB\fIServer \fP\fP
 The instance is behaving as a server and is binded on a specific port, and listens for incoming connections\&. 
 .PP
-Definition at line 100 of file socket\&.h\&.
+Definition at line 103 of file socket\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Senergy::Socket::Socket (\fBSocketProtocol\fPprotocol)"
@@ -207,7 +219,7 @@ Initializes a new instance of the TSocket class that is not connected to a remot
 .PP
 
 .PP
-Definition at line 27 of file socket\&.cpp\&.
+Definition at line 31 of file socket\&.cpp\&.
 .SS "Senergy::Socket::Socket (const \fBSocket\fP &socket)"
 
 .PP
@@ -225,7 +237,7 @@ This copy constructor is defined to allow the \fBSocket\fP class to be used in S
 .PP
 
 .PP
-Definition at line 39 of file socket\&.cpp\&.
+Definition at line 46 of file socket\&.cpp\&.
 .SS "Senergy::Socket::Socket (\fBSocketProtocol\fPprotocol, intnative_socket, struct sockaddr_inremote_address)"
 
 .PP
@@ -244,7 +256,7 @@ This constructor is also used when an incoming remote connection is accepted\&.
 .PP
 
 .PP
-Definition at line 53 of file socket\&.cpp\&.
+Definition at line 60 of file socket\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "\fBSocketPtr\fP Senergy::Socket::Accept ()"
@@ -264,7 +276,7 @@ A shared pointer to an instance of the \fBSocket\fP class, which represents the 
 .PP
 
 .PP
-Definition at line 291 of file socket\&.cpp\&.
+Definition at line 305 of file socket\&.cpp\&.
 .SS "bool Senergy::Socket::Close (\fBCloseType\fPclose_type = \fC\fBCloseType::StopAll\fP\fP)"
 
 .PP
@@ -282,7 +294,7 @@ A boolean indiciating whether the operation succeseeded and false when the opera
 .PP
 
 .PP
-Definition at line 146 of file socket\&.cpp\&.
+Definition at line 144 of file socket\&.cpp\&.
 .SS "bool Senergy::Socket::Connect (const std::string &remote_ip, unsigned intremote_port)"
 
 .PP
@@ -307,7 +319,7 @@ A boolean indicating whether setting up a connection with the specified remote h
 .PP
 
 .PP
-Definition at line 88 of file socket\&.cpp\&.
+Definition at line 97 of file socket\&.cpp\&.
 .SS "int Senergy::Socket::GetErrorCode ()"
 
 .PP
@@ -320,7 +332,7 @@ The last error code that was set during a socket operation\&. If a negative numb
 .PP
 
 .PP
-Definition at line 313 of file socket\&.cpp\&.
+Definition at line 331 of file socket\&.cpp\&.
 .SS "std::string Senergy::Socket::GetRemoteHost ()"
 
 .PP
@@ -333,7 +345,43 @@ The textual representation of the remote host, can return an empty string when t
 .PP
 
 .PP
-Definition at line 66 of file socket\&.cpp\&.
+Definition at line 75 of file socket\&.cpp\&.
+.SS "std::string Senergy::Socket::IPV4AddressFromBinary (unsigned intbinary)\fC [static]\fP"
+
+.PP
+Converts a 32-bit unsigned integer, which contains a IPV4 address to it's textual representation, where each 8 bit chunk is separated by a dot\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbinary\fP The binary value of the IPV4 address to convert to it's textual representation\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The textual representation of the specified binary IPV4 address\&. An empty string is returned when something went wrong\&. 
+.RE
+.PP
+
+.PP
+Definition at line 469 of file socket\&.cpp\&.
+.SS "unsigned int Senergy::Socket::IPV4AddressToBinary (std::stringip)\fC [static]\fP"
+
+.PP
+Converts the textual representation of a IPV4 address to it's binary form\&. In it's textual representation, each 8 bit chunk is separated by a dot\&. During conversion, these 8 bit chunks are parsed out and converted to to fit in a 32 bit integer (8 * 4 = 32)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIip\fP The textual representation of an IPV4 address to convert to it's binary form\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The binary form of the specified IPV4 address\&. Zero is returned when something went wrong\&. 
+.RE
+.PP
+
+.PP
+Definition at line 480 of file socket\&.cpp\&.
 .SS "bool Senergy::Socket::IsConnected ()"
 
 .PP
@@ -351,7 +399,7 @@ A boolean indicating whether there's an active connection with the remote host\&
 .PP
 
 .PP
-Definition at line 71 of file socket\&.cpp\&.
+Definition at line 80 of file socket\&.cpp\&.
 .SS "bool Senergy::Socket::Listen (unsigned intport)"
 
 .PP
@@ -374,7 +422,7 @@ A boolean indiciating whether the operation succeseeded\&. True is returned when
 .PP
 
 .PP
-Definition at line 119 of file socket\&.cpp\&.
+Definition at line 117 of file socket\&.cpp\&.
 .SS "int Senergy::Socket::Receive (const char *receive_buffer, size_tsize)"
 
 .PP
@@ -399,7 +447,7 @@ The amount of bytes that were actually received and stored into the specified re
 .PP
 
 .PP
-Definition at line 204 of file socket\&.cpp\&.
+Definition at line 210 of file socket\&.cpp\&.
 .SS "std::string Senergy::Socket::Receive (size_tsize)"
 
 .PP
@@ -422,7 +470,7 @@ A string containing the received data\&. The length (size) of the returned strin
 .PP
 
 .PP
-Definition at line 249 of file socket\&.cpp\&.
+Definition at line 263 of file socket\&.cpp\&.
 .SS "int Senergy::Socket::Receive (\fBByteBuffer\fP &receive_buffer, size_tsize)"
 
 .PP
@@ -447,7 +495,7 @@ The amount of bytes that were received\&. This number can be equal or less then 
 .PP
 
 .PP
-Definition at line 270 of file socket\&.cpp\&.
+Definition at line 284 of file socket\&.cpp\&.
 .SS "int Senergy::Socket::Send (void *data, size_tdata_size)"
 
 .PP
@@ -472,7 +520,7 @@ The amount of bytes that were succesfuly transmitted to the remote host\&. If th
 .PP
 
 .PP
-Definition at line 157 of file socket\&.cpp\&.
+Definition at line 155 of file socket\&.cpp\&.
 .SS "int Senergy::Socket::Send (char *data, size_tdata_size)"
 
 .PP
@@ -497,7 +545,7 @@ The amount of bytes that were succesfuly transmitted to the remote host\&. If th
 .PP
 
 .PP
-Definition at line 181 of file socket\&.cpp\&.
+Definition at line 187 of file socket\&.cpp\&.
 .SS "int Senergy::Socket::Send (const std::string &data, size_tdata_size)"
 
 .PP
@@ -522,7 +570,7 @@ The amount of bytes that were succesfuly transmitted to the remote host\&. If th
 .PP
 
 .PP
-Definition at line 186 of file socket\&.cpp\&.
+Definition at line 192 of file socket\&.cpp\&.
 .SS "int Senergy::Socket::Send (const std::string &data)"
 
 .PP
@@ -545,7 +593,7 @@ The amount of bytes that were succesfuly transmitted to the remote host\&. If th
 .PP
 
 .PP
-Definition at line 194 of file socket\&.cpp\&.
+Definition at line 200 of file socket\&.cpp\&.
 .SS "int Senergy::Socket::Send (\fBByteBuffer\fP &send_buffer)"
 
 .PP
@@ -568,7 +616,7 @@ The amount of bytes that were succesfuly transmitted to the remote host\&. If th
 .PP
 
 .PP
-Definition at line 199 of file socket\&.cpp\&.
+Definition at line 205 of file socket\&.cpp\&.
 .SS "bool Senergy::Socket::SetTimeout (unsigned intmilliseconds)"
 
 .PP
@@ -586,7 +634,7 @@ A boolean indiciating whether setting the timeout succeseeded\&. True is returne
 .PP
 
 .PP
-Definition at line 82 of file socket\&.cpp\&.
+Definition at line 91 of file socket\&.cpp\&.
 
 .SH "Author"
 .PP 

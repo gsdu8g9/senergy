@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_senergy_1_1_logger" kind="class" prot="public">
+    <compoundname>Senergy::Logger</compoundname>
+    <includes refid="logger_8h" local="no">logger.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_senergy_1_1_logger_1a917107d9c7bee19a3347dac8afc983f0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void Senergy::Logger::Info</definition>
+        <argsstring>(const std::string &amp;message, const R &amp;...rest)</argsstring>
+        <name>Info</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const R &amp;...</type>
+          <declname>rest</declname>
+        </param>
+        <briefdescription>
+<para>Writes a info log message with the specified log message and the current date and and time. </para>        </briefdescription>
+        <detaileddescription>
+<para>R Any type, it&apos;s variadic :D</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to log. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>All arguments, can be of any type, but should have a format identifier in the &apos;message&apos; argument. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/logger.h" line="68" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/logger.h" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_logger_1a2d5b9ef97d8c0de884254562395a01a7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void Senergy::Logger::Error</definition>
+        <argsstring>(const std::string &amp;message, const R &amp;...rest)</argsstring>
+        <name>Error</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const R &amp;...</type>
+          <declname>rest</declname>
+        </param>
+        <briefdescription>
+<para>Writes a error log message with the specified log message and the current date and and time. </para>        </briefdescription>
+        <detaileddescription>
+<para>R Any type, it&apos;s variadic :D</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to log. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>All arguments, can be of any type, but should have a format identifier in the &apos;message&apos; argument. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/logger.h" line="85" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/logger.h" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_logger_1ac68f5e14b8fe1bb3004d66289ff95150" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void Senergy::Logger::Warning</definition>
+        <argsstring>(const std::string &amp;message, const R &amp;...rest)</argsstring>
+        <name>Warning</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const R &amp;...</type>
+          <declname>rest</declname>
+        </param>
+        <briefdescription>
+<para>Writes a warning log message with the specified log message and the current date and and time. </para>        </briefdescription>
+        <detaileddescription>
+<para>R Any type, it&apos;s variadic :D</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to log. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>All arguments, can be of any type, but should have a format identifier in the &apos;message&apos; argument. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/logger.h" line="102" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/logger.h" bodystart="102" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_logger_1a2595f879ddfbbb8f8ef6f08d4a9d18f3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void Senergy::Logger::Debug</definition>
+        <argsstring>(const std::string &amp;message, const R &amp;...rest)</argsstring>
+        <name>Debug</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const R &amp;...</type>
+          <declname>rest</declname>
+        </param>
+        <briefdescription>
+<para>Writes a debug log message with the specified log message and the current date and and time. </para>        </briefdescription>
+        <detaileddescription>
+<para>R Any type, it&apos;s variadic :D</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to log. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>All arguments, can be of any type, but should have a format identifier in the &apos;message&apos; argument. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/logger.h" line="119" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/logger.h" bodystart="119" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_logger_1ab1d3d33750896e5605bd1cf7947d762d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void Senergy::Logger::Log</definition>
+        <argsstring>(LogLevel level, const std::string &amp;message, const R &amp;...rest)</argsstring>
+        <name>Log</name>
+        <param>
+          <type><ref refid="namespace_senergy_1a8a440a300c8ecafb12b81c1853a5c66d" kindref="member">LogLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const R &amp;...</type>
+          <declname>rest</declname>
+        </param>
+        <briefdescription>
+<para>Writes a log message with the specified log message and the current date and and time. </para>        </briefdescription>
+        <detaileddescription>
+<para>R Any type, it&apos;s variadic :D</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The level this log message needs to be stored under. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to log. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>All arguments, can be of any type, but should have a format identifier in the &apos;message&apos; argument. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/logger.h" line="137" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/logger.h" bodystart="137" bodyend="166"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_senergy_1_1_logger_1a15ec68bfa46a3574baf32d735d435177" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string Senergy::Logger::__get_time_string</definition>
+        <argsstring>()</argsstring>
+        <name>__get_time_string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/logger.h" line="170" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/logger.h" bodystart="170" bodyend="191"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Simple logger with support for variadic arguments and various log levels. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/logger.h" line="54" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/logger.h" bodystart="53" bodyend="192"/>
+    <listofallmembers>
+      <member refid="class_senergy_1_1_logger_1a15ec68bfa46a3574baf32d735d435177" prot="private" virt="non-virtual"><scope>Senergy::Logger</scope><name>__get_time_string</name></member>
+      <member refid="class_senergy_1_1_logger_1a2595f879ddfbbb8f8ef6f08d4a9d18f3" prot="public" virt="non-virtual"><scope>Senergy::Logger</scope><name>Debug</name></member>
+      <member refid="class_senergy_1_1_logger_1a2d5b9ef97d8c0de884254562395a01a7" prot="public" virt="non-virtual"><scope>Senergy::Logger</scope><name>Error</name></member>
+      <member refid="class_senergy_1_1_logger_1a917107d9c7bee19a3347dac8afc983f0" prot="public" virt="non-virtual"><scope>Senergy::Logger</scope><name>Info</name></member>
+      <member refid="class_senergy_1_1_logger_1ab1d3d33750896e5605bd1cf7947d762d" prot="public" virt="non-virtual"><scope>Senergy::Logger</scope><name>Log</name></member>
+      <member refid="class_senergy_1_1_logger_1ac68f5e14b8fe1bb3004d66289ff95150" prot="public" virt="non-virtual"><scope>Senergy::Logger</scope><name>Warning</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

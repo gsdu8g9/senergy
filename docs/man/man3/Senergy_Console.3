@@ -1,0 +1,68 @@
+.TH "Senergy::Console" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::Console \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <console\&.h>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBPrint\fP (const std::string &fmt)"
+.br
+.RI "\fIOverload to handle prints without any format identifiers, simply prints the specified string\&. \fP"
+.ti -1c
+.RI "template<class\&.\&.\&. R> static void \fBPrint\fP (const std::string &fmt, const R &\&.\&.\&.rest)"
+.br
+.RI "\fIDoes the actual printing of a whole format string with a variable number of elements/format identifiers\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 31 of file console\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static void Senergy::Console::Print (const std::string &fmt)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Overload to handle prints without any format identifiers, simply prints the specified string\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfmt\fP The string to print to the standard output stream\&. 
+.RE
+.PP
+
+.PP
+Definition at line 40 of file console\&.h\&.
+.SS "template<class\&.\&.\&. R> static void Senergy::Console::Print (const std::string &fmt, const R &\&.\&.\&.rest)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Does the actual printing of a whole format string with a variable number of elements/format identifiers\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This uses variadic templates, and uses recursion to iterate over all specified elements\&.
+.RE
+.PP
+T The type of the first element\&.  R The type of the current element (recursion)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfmt\fP The format string\&. 
+.br
+\fIelement\fP The first element to print, should correspong with the first format identifier\&. 
+.br
+\fIrest\fP Variadic templates, the rest of the elements to print\&. 
+.RE
+.PP
+
+.PP
+Definition at line 63 of file console\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

@@ -1,4 +1,4 @@
-.TH "Senergy::Dns::Requester" 3 "Tue Feb 4 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::Dns::Requester" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -19,7 +19,7 @@ Allows querying remote DNS servers, wraps sending and receiving DNS messages\&.
 .br
 .RI "\fIInitializes a new instance of the \fBRequester\fP class with the specified DNS server address\&. \fP"
 .ti -1c
-.RI "\fBStringVector\fP \fBLookup\fP (\fBResourceRecordType\fP record_type, const std::string &hostname)"
+.RI "\fBDns::Message\fP \fBLookup\fP (\fBResourceRecordType\fP record_type, const std::string &hostname)"
 .br
 .RI "\fIPerforms a lookup for the specified domain name, and requests the specified record from the remote DNS server\&. \fP"
 .in -1c
@@ -51,10 +51,10 @@ Initializes a new instance of the \fBRequester\fP class with the specified DNS s
 .PP
 
 .PP
-Definition at line 29 of file requester\&.cpp\&.
+Definition at line 29 of file dns_requester\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "\fBStringVector\fP Senergy::Dns::Requester::Lookup (\fBResourceRecordType\fPrecord_type, const std::string &hostname)"
+.SS "\fBDns::Message\fP Senergy::Dns::Requester::Lookup (\fBResourceRecordType\fPrecord_type, const std::string &hostname)"
 
 .PP
 Performs a lookup for the specified domain name, and requests the specified record from the remote DNS server\&. 
@@ -68,12 +68,12 @@ Performs a lookup for the specified domain name, and requests the specified reco
 .PP
 \fBReturns:\fP
 .RS 4
-A vector of strings, where each string is an IP address\&. 
+The message that was received from the remote server\&. 
 .RE
 .PP
 
 .PP
-Definition at line 35 of file requester\&.cpp\&.
+Definition at line 35 of file dns_requester\&.cpp\&.
 
 .SH "Author"
 .PP 

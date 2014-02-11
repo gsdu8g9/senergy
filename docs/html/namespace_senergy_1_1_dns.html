@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('namespace_senergy_1_1_dns.html','');})
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -111,6 +111,7 @@ $(document).ready(function(){initNavTree('namespace_senergy_1_1_dns.html','');})
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">Senergy::Dns Namespace Reference</div>  </div>
@@ -145,12 +146,34 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html">ResourceRecord</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a DNS Resource Record, as defined in RFC 1035, section 4.1.3. A DNS Recource record can appear both in the answer, authority and additional section of a DNS packet/message.  <a href="class_senergy_1_1_dns_1_1_resource_record.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_collection.html">ResourceRecordCollection</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple container for all types of resource records we support. This is to prevent creating hundreds of separate containers in the <a class="el" href="class_senergy_1_1_dns_1_1_message.html" title="Represents a DNS packet as described in section 4 of RFC-1035. A DNS packet is the standard message f...">Message</a> class.  <a href="class_senergy_1_1_dns_1_1_resource_record_collection.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_root_name_server.html">RootNameServer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents one of the 13 Root Name Servers (DNS) that are currently operating around the world. Provides access to the functionalities that root name servers offer.  <a href="class_senergy_1_1_dns_1_1_root_name_server.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_utils.html">Utils</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains various utilities related to the DNS protocol. This are mostly functions that are used throughout the application.  <a href="class_senergy_1_1_dns_1_1_utils.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a425a2a6f3b5c18973c524a99bdfa4ef0"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html">MessageQuestion</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_senergy_1_1_dns.html#a425a2a6f3b5c18973c524a99bdfa4ef0">MessageQuestionPtr</a></td></tr>
+<tr class="memdesc:a425a2a6f3b5c18973c524a99bdfa4ef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple shared pointer to a MessageQuestionPtr instance.  <a href="#a425a2a6f3b5c18973c524a99bdfa4ef0">More...</a><br/></td></tr>
+<tr class="separator:a425a2a6f3b5c18973c524a99bdfa4ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6983ff2422cfa510ca61831ae5cf1ffc"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_senergy_1_1_vector_x.html">VectorX</a><br class="typebreak"/>
+&lt; <a class="el" href="namespace_senergy_1_1_dns.html#a425a2a6f3b5c18973c524a99bdfa4ef0">MessageQuestionPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_senergy_1_1_dns.html#a6983ff2422cfa510ca61831ae5cf1ffc">MessageQuestionPtrVector</a></td></tr>
+<tr class="memdesc:a6983ff2422cfa510ca61831ae5cf1ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector of shared pointers to <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html" title="Represents a DNS question, as defined in section 4.1.2 of RFC-1035. A DNS question is usually transmi...">MessageQuestion</a> instances.  <a href="#a6983ff2422cfa510ca61831ae5cf1ffc">More...</a><br/></td></tr>
+<tr class="separator:a6983ff2422cfa510ca61831ae5cf1ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa04259a07ce7a270e09288aa456ffd"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html">ResourceRecord</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_senergy_1_1_dns.html#a1fa04259a07ce7a270e09288aa456ffd">ResourceRecordPtr</a></td></tr>
+<tr class="memdesc:a1fa04259a07ce7a270e09288aa456ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A shared pointer to an instance of the <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html" title="Defines a DNS Resource Record, as defined in RFC 1035, section 4.1.3. A DNS Recource record can appea...">ResourceRecord</a> class.  <a href="#a1fa04259a07ce7a270e09288aa456ffd">More...</a><br/></td></tr>
+<tr class="separator:a1fa04259a07ce7a270e09288aa456ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5ef448b2b508ce86c6ed91dccc10d3e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_senergy_1_1_vector_x.html">VectorX</a><br class="typebreak"/>
+&lt; <a class="el" href="namespace_senergy_1_1_dns.html#a1fa04259a07ce7a270e09288aa456ffd">ResourceRecordPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_senergy_1_1_dns.html#ad5ef448b2b508ce86c6ed91dccc10d3e">ResourceRecordPtrVector</a></td></tr>
+<tr class="memdesc:ad5ef448b2b508ce86c6ed91dccc10d3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector of shared pointers to <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html" title="Defines a DNS Resource Record, as defined in RFC 1035, section 4.1.3. A DNS Recource record can appea...">ResourceRecord</a> class instances.  <a href="#ad5ef448b2b508ce86c6ed91dccc10d3e">More...</a><br/></td></tr>
+<tr class="separator:ad5ef448b2b508ce86c6ed91dccc10d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -270,6 +293,71 @@ Enumerations</h2></td></tr>
 <tr class="memdesc:a590bfd748c955364770f5ce358d9dfe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">An enumuration of all possible resource record types (RR), as defined by IANA.  <a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0">More...</a><br/></td></tr>
 <tr class="separator:a590bfd748c955364770f5ce358d9dfe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a425a2a6f3b5c18973c524a99bdfa4ef0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="class_senergy_1_1_dns_1_1_message_question.html">MessageQuestion</a>&gt; <a class="el" href="namespace_senergy_1_1_dns.html#a425a2a6f3b5c18973c524a99bdfa4ef0">Senergy::Dns::MessageQuestionPtr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Simple shared pointer to a MessageQuestionPtr instance. </p>
+
+<p>Definition at line <a class="el" href="message__question_8h_source.html#l00193">193</a> of file <a class="el" href="message__question_8h_source.html">message_question.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6983ff2422cfa510ca61831ae5cf1ffc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_senergy_1_1_vector_x.html">VectorX</a>&lt;<a class="el" href="namespace_senergy_1_1_dns.html#a425a2a6f3b5c18973c524a99bdfa4ef0">MessageQuestionPtr</a>&gt; <a class="el" href="namespace_senergy_1_1_dns.html#a6983ff2422cfa510ca61831ae5cf1ffc">Senergy::Dns::MessageQuestionPtrVector</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A vector of shared pointers to <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html" title="Represents a DNS question, as defined in section 4.1.2 of RFC-1035. A DNS question is usually transmi...">MessageQuestion</a> instances. </p>
+
+<p>Definition at line <a class="el" href="message__question_8h_source.html#l00198">198</a> of file <a class="el" href="message__question_8h_source.html">message_question.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1fa04259a07ce7a270e09288aa456ffd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html">ResourceRecord</a>&gt; <a class="el" href="namespace_senergy_1_1_dns.html#a1fa04259a07ce7a270e09288aa456ffd">Senergy::Dns::ResourceRecordPtr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A shared pointer to an instance of the <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html" title="Defines a DNS Resource Record, as defined in RFC 1035, section 4.1.3. A DNS Recource record can appea...">ResourceRecord</a> class. </p>
+
+<p>Definition at line <a class="el" href="resource__record_8h_source.html#l00216">216</a> of file <a class="el" href="resource__record_8h_source.html">resource_record.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad5ef448b2b508ce86c6ed91dccc10d3e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_senergy_1_1_vector_x.html">VectorX</a>&lt;<a class="el" href="namespace_senergy_1_1_dns.html#a1fa04259a07ce7a270e09288aa456ffd">ResourceRecordPtr</a>&gt; <a class="el" href="namespace_senergy_1_1_dns.html#ad5ef448b2b508ce86c6ed91dccc10d3e">Senergy::Dns::ResourceRecordPtrVector</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A vector of shared pointers to <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html" title="Defines a DNS Resource Record, as defined in RFC 1035, section 4.1.3. A DNS Recource record can appea...">ResourceRecord</a> class instances. </p>
+
+<p>Definition at line <a class="el" href="resource__record_8h_source.html#l00221">221</a> of file <a class="el" href="resource__record_8h_source.html">resource_record.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="a953f153bc411213d621d00c1e1b3eb9d"></a>
 <div class="memitem">
@@ -582,7 +670,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_senergy.html">Senergy</a></li><li class="navelem"><a class="el" href="namespace_senergy_1_1_dns.html">Dns</a></li>
-    <li class="footer">Generated on Tue Feb 4 2014 21:08:09 for Senergy by
+    <li class="footer">Generated on Tue Feb 11 2014 01:33:49 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

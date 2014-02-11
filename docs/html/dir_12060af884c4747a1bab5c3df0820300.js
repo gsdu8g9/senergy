@@ -11,16 +11,15 @@ var dir_12060af884c4747a1bab5c3df0820300 =
       [ "MessageHeader", "class_senergy_1_1_dns_1_1_message_header.html", "class_senergy_1_1_dns_1_1_message_header" ]
     ] ],
     [ "message_question.h", "message__question_8h.html", "message__question_8h" ],
-    [ "record_ipv4address.h", "record__ipv4address_8h.html", [
-      [ "IPV4Address", "class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address.html", "class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address" ]
-    ] ],
+    [ "record_ipv4address.h", "record__ipv4address_8h.html", "record__ipv4address_8h" ],
     [ "requester.h", "requester_8h.html", [
       [ "Requester", "class_senergy_1_1_dns_1_1_requester.html", "class_senergy_1_1_dns_1_1_requester" ]
     ] ],
-    [ "resource_record.h", "resource__record_8h.html", [
-      [ "ResourceRecord", "class_senergy_1_1_dns_1_1_resource_record.html", "class_senergy_1_1_dns_1_1_resource_record" ]
-    ] ],
+    [ "resource_record.h", "resource__record_8h.html", "resource__record_8h" ],
     [ "resource_record_classes.h", "resource__record__classes_8h.html", "resource__record__classes_8h" ],
+    [ "resource_record_collection.h", "resource__record__collection_8h.html", [
+      [ "ResourceRecordCollection", "class_senergy_1_1_dns_1_1_resource_record_collection.html", "class_senergy_1_1_dns_1_1_resource_record_collection" ]
+    ] ],
     [ "resource_record_types.h", "resource__record__types_8h.html", "resource__record__types_8h" ],
     [ "rootnameserver.h", "rootnameserver_8h.html", [
       [ "RootNameServer", "class_senergy_1_1_dns_1_1_root_name_server.html", null ]

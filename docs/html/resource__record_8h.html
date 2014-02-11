@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('resource__record_8h.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -110,14 +110,17 @@ $(document).ready(function(){initNavTree('resource__record_8h.html','');});
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">resource_record.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;string&gt;</code><br/>
+<code>#include &lt;memory&gt;</code><br/>
 <code>#include &lt;<a class="el" href="resource__record__types_8h_source.html">senergy/dns/resource_record_types.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="resource__record__classes_8h_source.html">senergy/dns/resource_record_classes.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="vectorx_8h_source.html">senergy/vectorx.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="utils_8h_source.html">senergy/dns/utils.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="bytebuffer_8h_source.html">senergy/bytebuffer.h</a>&gt;</code><br/>
 </div>
@@ -135,6 +138,17 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespace_senergy_1_1_dns"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_senergy_1_1_dns.html">Senergy::Dns</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a1fa04259a07ce7a270e09288aa456ffd"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr<br class="typebreak"/>
+&lt; ResourceRecord &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_senergy_1_1_dns.html#a1fa04259a07ce7a270e09288aa456ffd">Senergy::Dns::ResourceRecordPtr</a></td></tr>
+<tr class="memdesc:a1fa04259a07ce7a270e09288aa456ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A shared pointer to an instance of the <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html" title="Defines a DNS Resource Record, as defined in RFC 1035, section 4.1.3. A DNS Recource record can appea...">ResourceRecord</a> class.  <a href="#a1fa04259a07ce7a270e09288aa456ffd">More...</a><br/></td></tr>
+<tr class="separator:a1fa04259a07ce7a270e09288aa456ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5ef448b2b508ce86c6ed91dccc10d3e"><td class="memItemLeft" align="right" valign="top">typedef VectorX<br class="typebreak"/>
+&lt; ResourceRecordPtr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_senergy_1_1_dns.html#ad5ef448b2b508ce86c6ed91dccc10d3e">Senergy::Dns::ResourceRecordPtrVector</a></td></tr>
+<tr class="memdesc:ad5ef448b2b508ce86c6ed91dccc10d3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector of shared pointers to <a class="el" href="class_senergy_1_1_dns_1_1_resource_record.html" title="Defines a DNS Resource Record, as defined in RFC 1035, section 4.1.3. A DNS Recource record can appea...">ResourceRecord</a> class instances.  <a href="#ad5ef448b2b508ce86c6ed91dccc10d3e">More...</a><br/></td></tr>
+<tr class="separator:ad5ef448b2b508ce86c6ed91dccc10d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -142,7 +156,7 @@ Namespaces</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_43fe9c611a9fdc7364335d381ea28669.html">senergy</a></li><li class="navelem"><a class="el" href="dir_12060af884c4747a1bab5c3df0820300.html">dns</a></li><li class="navelem"><a class="el" href="resource__record_8h.html">resource_record.h</a></li>
-    <li class="footer">Generated on Tue Feb 4 2014 21:08:08 for Senergy by
+    <li class="footer">Generated on Tue Feb 11 2014 01:33:48 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

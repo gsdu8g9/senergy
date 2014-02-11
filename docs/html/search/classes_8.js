@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vectorx',['VectorX',['../class_senergy_1_1_vector_x.html',1,'Senergy']]]
+  ['utils',['Utils',['../class_senergy_1_1_dns_1_1_utils.html',1,'Senergy::Dns']]]
 ];

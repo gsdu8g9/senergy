@@ -1,0 +1,173 @@
+\hypertarget{class_senergy_1_1_logger}{\section{Senergy\-:\-:Logger Class Reference}
+\label{class_senergy_1_1_logger}\index{Senergy\-::\-Logger@{Senergy\-::\-Logger}}
+}
+
+
+Simple logger with support for variadic arguments and various log levels.  
+
+
+
+
+{\ttfamily \#include $<$logger.\-h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class... R$>$ }\\static void \hyperlink{class_senergy_1_1_logger_a917107d9c7bee19a3347dac8afc983f0}{Info} (const std\-::string \&message, const R \&...rest)
+\begin{DoxyCompactList}\small\item\em Writes a info log message with the specified log message and the current date and and time. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class... R$>$ }\\static void \hyperlink{class_senergy_1_1_logger_a2d5b9ef97d8c0de884254562395a01a7}{Error} (const std\-::string \&message, const R \&...rest)
+\begin{DoxyCompactList}\small\item\em Writes a error log message with the specified log message and the current date and and time. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class... R$>$ }\\static void \hyperlink{class_senergy_1_1_logger_ac68f5e14b8fe1bb3004d66289ff95150}{Warning} (const std\-::string \&message, const R \&...rest)
+\begin{DoxyCompactList}\small\item\em Writes a warning log message with the specified log message and the current date and and time. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class... R$>$ }\\static void \hyperlink{class_senergy_1_1_logger_a2595f879ddfbbb8f8ef6f08d4a9d18f3}{Debug} (const std\-::string \&message, const R \&...rest)
+\begin{DoxyCompactList}\small\item\em Writes a debug log message with the specified log message and the current date and and time. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class... R$>$ }\\static void \hyperlink{class_senergy_1_1_logger_ab1d3d33750896e5605bd1cf7947d762d}{Log} (\hyperlink{namespace_senergy_a8a440a300c8ecafb12b81c1853a5c66d}{Log\-Level} level, const std\-::string \&message, const R \&...rest)
+\begin{DoxyCompactList}\small\item\em Writes a log message with the specified log message and the current date and and time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple logger with support for variadic arguments and various log levels. 
+
+\begin{DoxyAuthor}{Author}
+Swen Kooij (Photonios) 
+\end{DoxyAuthor}
+
+
+Definition at line 53 of file logger.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_logger_a2595f879ddfbbb8f8ef6f08d4a9d18f3}{\index{Senergy\-::\-Logger@{Senergy\-::\-Logger}!Debug@{Debug}}
+\index{Debug@{Debug}!Senergy::Logger@{Senergy\-::\-Logger}}
+\subsubsection[{Debug}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class... R$>$ static void Senergy\-::\-Logger\-::\-Debug (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{message, }
+\item[{const R \&...}]{rest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_senergy_1_1_logger_a2595f879ddfbbb8f8ef6f08d4a9d18f3}
+
+
+Writes a debug log message with the specified log message and the current date and and time. 
+
+R Any type, it's variadic \-:D
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to log. \\
+\hline
+{\em rest} & All arguments, can be of any type, but should have a format identifier in the 'message' argument. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 119 of file logger.\-h.
+
+\hypertarget{class_senergy_1_1_logger_a2d5b9ef97d8c0de884254562395a01a7}{\index{Senergy\-::\-Logger@{Senergy\-::\-Logger}!Error@{Error}}
+\index{Error@{Error}!Senergy::Logger@{Senergy\-::\-Logger}}
+\subsubsection[{Error}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class... R$>$ static void Senergy\-::\-Logger\-::\-Error (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{message, }
+\item[{const R \&...}]{rest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_senergy_1_1_logger_a2d5b9ef97d8c0de884254562395a01a7}
+
+
+Writes a error log message with the specified log message and the current date and and time. 
+
+R Any type, it's variadic \-:D
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to log. \\
+\hline
+{\em rest} & All arguments, can be of any type, but should have a format identifier in the 'message' argument. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 85 of file logger.\-h.
+
+\hypertarget{class_senergy_1_1_logger_a917107d9c7bee19a3347dac8afc983f0}{\index{Senergy\-::\-Logger@{Senergy\-::\-Logger}!Info@{Info}}
+\index{Info@{Info}!Senergy::Logger@{Senergy\-::\-Logger}}
+\subsubsection[{Info}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class... R$>$ static void Senergy\-::\-Logger\-::\-Info (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{message, }
+\item[{const R \&...}]{rest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_senergy_1_1_logger_a917107d9c7bee19a3347dac8afc983f0}
+
+
+Writes a info log message with the specified log message and the current date and and time. 
+
+R Any type, it's variadic \-:D
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to log. \\
+\hline
+{\em rest} & All arguments, can be of any type, but should have a format identifier in the 'message' argument. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 68 of file logger.\-h.
+
+\hypertarget{class_senergy_1_1_logger_ab1d3d33750896e5605bd1cf7947d762d}{\index{Senergy\-::\-Logger@{Senergy\-::\-Logger}!Log@{Log}}
+\index{Log@{Log}!Senergy::Logger@{Senergy\-::\-Logger}}
+\subsubsection[{Log}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class... R$>$ static void Senergy\-::\-Logger\-::\-Log (
+\begin{DoxyParamCaption}
+\item[{{\bf Log\-Level}}]{level, }
+\item[{const std\-::string \&}]{message, }
+\item[{const R \&...}]{rest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_senergy_1_1_logger_ab1d3d33750896e5605bd1cf7947d762d}
+
+
+Writes a log message with the specified log message and the current date and and time. 
+
+R Any type, it's variadic \-:D
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & The level this log message needs to be stored under. \\
+\hline
+{\em message} & The message to log. \\
+\hline
+{\em rest} & All arguments, can be of any type, but should have a format identifier in the 'message' argument. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 137 of file logger.\-h.
+
+\hypertarget{class_senergy_1_1_logger_ac68f5e14b8fe1bb3004d66289ff95150}{\index{Senergy\-::\-Logger@{Senergy\-::\-Logger}!Warning@{Warning}}
+\index{Warning@{Warning}!Senergy::Logger@{Senergy\-::\-Logger}}
+\subsubsection[{Warning}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class... R$>$ static void Senergy\-::\-Logger\-::\-Warning (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{message, }
+\item[{const R \&...}]{rest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_senergy_1_1_logger_ac68f5e14b8fe1bb3004d66289ff95150}
+
+
+Writes a warning log message with the specified log message and the current date and and time. 
+
+R Any type, it's variadic \-:D
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to log. \\
+\hline
+{\em rest} & All arguments, can be of any type, but should have a format identifier in the 'message' argument. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 102 of file logger.\-h.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/senergy/\hyperlink{logger_8h}{logger.\-h}\end{DoxyCompactItemize}

@@ -5,9 +5,13 @@ var dir_43fe9c611a9fdc7364335d381ea28669 =
     [ "circular_buffer.h", "circular__buffer_8h.html", [
       [ "CircularBuffer", "class_senergy_1_1_circular_buffer.html", "class_senergy_1_1_circular_buffer" ]
     ] ],
+    [ "console.h", "console_8h.html", [
+      [ "Console", "class_senergy_1_1_console.html", "class_senergy_1_1_console" ]
+    ] ],
     [ "convert.h", "convert_8h.html", [
       [ "Convert", "class_senergy_1_1_convert.html", "class_senergy_1_1_convert" ]
     ] ],
+    [ "logger.h", "logger_8h.html", "logger_8h" ],
     [ "print.h", "print_8h.html", [
       [ "Print", "class_senergy_1_1_print.html", "class_senergy_1_1_print" ]
     ] ],

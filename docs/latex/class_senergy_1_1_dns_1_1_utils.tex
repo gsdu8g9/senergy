@@ -29,8 +29,8 @@ static unsigned int \hyperlink{class_senergy_1_1_dns_1_1_utils_a7a521aadbb12776e
 \begin{DoxyCompactList}\small\item\em Converts the specified unsigned integer value from host to network byte order. \end{DoxyCompactList}\item 
 static unsigned int \hyperlink{class_senergy_1_1_dns_1_1_utils_ad4711275abcbc1d332f3c0208e74c4b8}{Network\-To\-Host\-Byte\-Order} (unsigned int value)
 \begin{DoxyCompactList}\small\item\em Converts the specified unsigned integer value from network to host byte order. \end{DoxyCompactList}\item 
-static bool \hyperlink{class_senergy_1_1_dns_1_1_utils_a96aa042aaec1c2608a13a6ba83792336}{Is\-Domain\-Pointer} (const std\-::string \&hostname)
-\begin{DoxyCompactList}\small\item\em Determines whether the specified hostname/domain name is a pointer to an earlier occurence of the same domain name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static std\-::string \hyperlink{class_senergy_1_1_dns_1_1_utils_a6b995d31d85ef39a5e8ac57928fa35ed}{Read\-Hostname\-From\-Buffer} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
+\begin{DoxyCompactList}\small\item\em Reads a domain name from the specified buffer, also known as a 'Q\-N\-A\-M\-E'. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -41,7 +41,7 @@ Swen Kooij (Photonios)
 \end{DoxyAuthor}
 
 
-Definition at line 43 of file utils.\-h.
+Definition at line 45 of file utils.\-h.
 
 
 
@@ -75,7 +75,7 @@ The decoded hostname, if the specified hostname was empty, an empty string is re
 \end{DoxyReturn}
 
 
-Definition at line 67 of file utils.\-cpp.
+Definition at line 67 of file dns\-\_\-utils.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_utils_a68f1ebf9810ecb225a4f73c4200778bf}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Encode\-Hostname@{Encode\-Hostname}}
 \index{Encode\-Hostname@{Encode\-Hostname}!Senergy::Dns::Utils@{Senergy\-::\-Dns\-::\-Utils}}
@@ -102,7 +102,7 @@ The encoded hostname. If the specified hostname was empty, an empty string is re
 \end{DoxyReturn}
 
 
-Definition at line 29 of file utils.\-cpp.
+Definition at line 29 of file dns\-\_\-utils.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_utils_a26ed8e47210810c24f8ab5a2588bf276}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Host\-To\-Network\-Byte\-Order@{Host\-To\-Network\-Byte\-Order}}
 \index{Host\-To\-Network\-Byte\-Order@{Host\-To\-Network\-Byte\-Order}!Senergy::Dns::Utils@{Senergy\-::\-Dns\-::\-Utils}}
@@ -125,7 +125,7 @@ The input value, in network byte order.
 \end{DoxyReturn}
 
 
-Definition at line 97 of file utils.\-cpp.
+Definition at line 101 of file dns\-\_\-utils.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_utils_a952d70b6ddc617c92819eb2ad7e37f0d}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Host\-To\-Network\-Byte\-Order@{Host\-To\-Network\-Byte\-Order}}
 \index{Host\-To\-Network\-Byte\-Order@{Host\-To\-Network\-Byte\-Order}!Senergy::Dns::Utils@{Senergy\-::\-Dns\-::\-Utils}}
@@ -148,7 +148,7 @@ The input value, in network byte order.
 \end{DoxyReturn}
 
 
-Definition at line 107 of file utils.\-cpp.
+Definition at line 111 of file dns\-\_\-utils.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_utils_a7a521aadbb12776e2127abe8028411dc}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Host\-To\-Network\-Byte\-Order@{Host\-To\-Network\-Byte\-Order}}
 \index{Host\-To\-Network\-Byte\-Order@{Host\-To\-Network\-Byte\-Order}!Senergy::Dns::Utils@{Senergy\-::\-Dns\-::\-Utils}}
@@ -171,35 +171,7 @@ The input value, in network byte order.
 \end{DoxyReturn}
 
 
-Definition at line 117 of file utils.\-cpp.
-
-\hypertarget{class_senergy_1_1_dns_1_1_utils_a96aa042aaec1c2608a13a6ba83792336}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Is\-Domain\-Pointer@{Is\-Domain\-Pointer}}
-\index{Is\-Domain\-Pointer@{Is\-Domain\-Pointer}!Senergy::Dns::Utils@{Senergy\-::\-Dns\-::\-Utils}}
-\subsubsection[{Is\-Domain\-Pointer}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Utils\-::\-Is\-Domain\-Pointer (
-\begin{DoxyParamCaption}
-\item[{const std\-::string \&}]{hostname}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_utils_a96aa042aaec1c2608a13a6ba83792336}
-
-
-Determines whether the specified hostname/domain name is a pointer to an earlier occurence of the same domain name. 
-
-If it's a pointer, the first two bytes will be 0x01.
-
-\begin{DoxySeeAlso}{See Also}
-Section 4.\-1.\-4 of R\-F\-C-\/1025 (\hyperlink{class_senergy_1_1_dns_1_1_message}{Message} compression).
-\end{DoxySeeAlso}
-
-\begin{DoxyParams}{Parameters}
-{\em hostname} & The hostname/domain name to check if it's a pointer.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-A boolean indicating whether the specified hostname/domain name is a pointer. True is returned when it is a pointer and false is returned when it is not. 
-\end{DoxyReturn}
-
-
-Definition at line 127 of file utils.\-cpp.
+Definition at line 121 of file dns\-\_\-utils.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_utils_aa4e117a17add157b5e9bcb5fada4ac49}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Network\-To\-Host\-Byte\-Order@{Network\-To\-Host\-Byte\-Order}}
 \index{Network\-To\-Host\-Byte\-Order@{Network\-To\-Host\-Byte\-Order}!Senergy::Dns::Utils@{Senergy\-::\-Dns\-::\-Utils}}
@@ -222,7 +194,7 @@ The input value, in host byte order.
 \end{DoxyReturn}
 
 
-Definition at line 102 of file utils.\-cpp.
+Definition at line 106 of file dns\-\_\-utils.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_utils_ac34288e7acfa54f6faaa775ab5654192}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Network\-To\-Host\-Byte\-Order@{Network\-To\-Host\-Byte\-Order}}
 \index{Network\-To\-Host\-Byte\-Order@{Network\-To\-Host\-Byte\-Order}!Senergy::Dns::Utils@{Senergy\-::\-Dns\-::\-Utils}}
@@ -245,7 +217,7 @@ The input value, in host byte order.
 \end{DoxyReturn}
 
 
-Definition at line 112 of file utils.\-cpp.
+Definition at line 116 of file dns\-\_\-utils.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_utils_ad4711275abcbc1d332f3c0208e74c4b8}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Network\-To\-Host\-Byte\-Order@{Network\-To\-Host\-Byte\-Order}}
 \index{Network\-To\-Host\-Byte\-Order@{Network\-To\-Host\-Byte\-Order}!Senergy::Dns::Utils@{Senergy\-::\-Dns\-::\-Utils}}
@@ -268,11 +240,41 @@ The input value, in host byte order.
 \end{DoxyReturn}
 
 
-Definition at line 122 of file utils.\-cpp.
+Definition at line 126 of file dns\-\_\-utils.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_utils_a6b995d31d85ef39a5e8ac57928fa35ed}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Read\-Hostname\-From\-Buffer@{Read\-Hostname\-From\-Buffer}}
+\index{Read\-Hostname\-From\-Buffer@{Read\-Hostname\-From\-Buffer}!Senergy::Dns::Utils@{Senergy\-::\-Dns\-::\-Utils}}
+\subsubsection[{Read\-Hostname\-From\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Senergy\-::\-Dns\-::\-Utils\-::\-Read\-Hostname\-From\-Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Byte\-Buffer} \&}]{buffer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_utils_a6b995d31d85ef39a5e8ac57928fa35ed}
+
+
+Reads a domain name from the specified buffer, also known as a 'Q\-N\-A\-M\-E'. 
+
+A domain name in a D\-N\-S message is basiclly a string (but, see \hyperlink{class_senergy_1_1_dns_1_1_utils_a68f1ebf9810ecb225a4f73c4200778bf}{Utils\-::\-Encode\-Hostname} and \hyperlink{class_senergy_1_1_dns_1_1_utils_ad621e66ca0463aaa21c9b74b489f09f3}{Utils\-::\-Decode\-Hostname}), however, in a answer (resource record) the domain name could also be a 'pointer'. A pointer in a D\-N\-S message means a offset in the buffer where the domain name can be read. This is also known as 'message compression', this is defined in section 4.\-1.\-4 of R\-F\-C 1035.
+
+This function detects whether it is a pointer or just a domain name, and reads both and returns the domain name.
+
+\begin{DoxySeeAlso}{See Also}
+Section 4.\-1.\-4 of R\-F\-C-\/1025 (\hyperlink{class_senergy_1_1_dns_1_1_message}{Message} compression).
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to read the domain name from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The domain name that was read from the buffer, or an empty string if something went wrong. 
+\end{DoxyReturn}
+
+
+Definition at line 131 of file dns\-\_\-utils.\-cpp.
 
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
 src/senergy/dns/\hyperlink{utils_8h}{utils.\-h}\item 
-src/\hyperlink{utils_8cpp}{utils.\-cpp}\end{DoxyCompactItemize}
+src/\hyperlink{dns__utils_8cpp}{dns\-\_\-utils.\-cpp}\end{DoxyCompactItemize}

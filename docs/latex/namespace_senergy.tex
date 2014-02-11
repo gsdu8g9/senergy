@@ -15,8 +15,12 @@ class \hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer}
 \begin{DoxyCompactList}\small\item\em A dynamiclly sized buffer for binary data. Resizes the underlying buffer when new data is written. Makes it easier to write to buffers that already contain data. \end{DoxyCompactList}\item 
 class \hyperlink{class_senergy_1_1_circular_buffer}{Circular\-Buffer}
 \begin{DoxyCompactList}\small\item\em Simple circular buffer which uses a vector, simple circular buffer which should not be used in situations that require efficiency and power. \end{DoxyCompactList}\item 
+class \hyperlink{class_senergy_1_1_console}{Console}
+\item 
 class \hyperlink{class_senergy_1_1_convert}{Convert}
 \begin{DoxyCompactList}\small\item\em A simple conversion class, which simplifies conversion between various native data types. Based on the idea of the '\hyperlink{class_senergy_1_1_convert}{Convert}' class in the .N\-E\-T framework. \end{DoxyCompactList}\item 
+class \hyperlink{class_senergy_1_1_logger}{Logger}
+\begin{DoxyCompactList}\small\item\em Simple logger with support for variadic arguments and various log levels. \end{DoxyCompactList}\item 
 class \hyperlink{class_senergy_1_1_print}{Print}
 \begin{DoxyCompactList}\small\item\em Contains simple utilities that facilitate printing various data types or data structures to the screen. \end{DoxyCompactList}\item 
 class \hyperlink{class_senergy_1_1_socket}{Socket}
@@ -33,6 +37,15 @@ typedef std\-::shared\-\_\-ptr$<$ \hyperlink{class_senergy_1_1_socket}{Socket} $
 \begin{DoxyCompactList}\small\item\em A simple typedef for the shared pointer of a Tcp\-Socket instance. \end{DoxyCompactList}\item 
 typedef \hyperlink{class_senergy_1_1_vector_x}{Vector\-X}$<$ std\-::string $>$ \hyperlink{namespace_senergy_a09aea2e19671645414361ca8388aebfe}{String\-Vector}
 \begin{DoxyCompactList}\small\item\em A std\-::vector of std\-::string objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespace_senergy_a8a440a300c8ecafb12b81c1853a5c66d}{Log\-Level} \{ \hyperlink{namespace_senergy_a8a440a300c8ecafb12b81c1853a5c66da4059b0251f66a18cb56f544728796875}{Log\-Level\-::\-Info}, 
+\hyperlink{namespace_senergy_a8a440a300c8ecafb12b81c1853a5c66da902b0d55fddef6f8d651fe1035b7d4bd}{Log\-Level\-::\-Error}, 
+\hyperlink{namespace_senergy_a8a440a300c8ecafb12b81c1853a5c66da0eaadb4fcb48a0a0ed7bc9868be9fbaa}{Log\-Level\-::\-Warning}, 
+\hyperlink{namespace_senergy_a8a440a300c8ecafb12b81c1853a5c66daa603905470e2a5b8c13e96b579ef0dba}{Log\-Level\-::\-Debug}
+ \}
+\begin{DoxyCompactList}\small\item\em An enumuration of all possible log levels, log levels will result in prefixes in log entries. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Typedef Documentation}
@@ -45,7 +58,7 @@ A simple typedef for a shared pointer to a \hyperlink{class_senergy_1_1_byte_buf
 
 
 
-Definition at line 440 of file bytebuffer.\-h.
+Definition at line 471 of file bytebuffer.\-h.
 
 \hypertarget{namespace_senergy_a9014e48a368555ba932efd8d17eb2d23}{\index{Senergy@{Senergy}!Socket\-Ptr@{Socket\-Ptr}}
 \index{Socket\-Ptr@{Socket\-Ptr}!Senergy@{Senergy}}
@@ -56,7 +69,7 @@ A simple typedef for the shared pointer of a Tcp\-Socket instance.
 
 
 
-Definition at line 480 of file socket.\-h.
+Definition at line 513 of file socket.\-h.
 
 \hypertarget{namespace_senergy_a09aea2e19671645414361ca8388aebfe}{\index{Senergy@{Senergy}!String\-Vector@{String\-Vector}}
 \index{String\-Vector@{String\-Vector}!Senergy@{Senergy}}
@@ -68,4 +81,31 @@ A std\-::vector of std\-::string objects.
 
 
 Definition at line 35 of file types.\-h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{namespace_senergy_a8a440a300c8ecafb12b81c1853a5c66d}{\index{Senergy@{Senergy}!Log\-Level@{Log\-Level}}
+\index{Log\-Level@{Log\-Level}!Senergy@{Senergy}}
+\subsubsection[{Log\-Level}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Senergy\-::\-Log\-Level}\hspace{0.3cm}{\ttfamily [strong]}}}\label{namespace_senergy_a8a440a300c8ecafb12b81c1853a5c66d}
+
+
+An enumuration of all possible log levels, log levels will result in prefixes in log entries. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Info@{Info}!Senergy@{Senergy}}\index{Senergy@{Senergy}!Info@{Info}}\item[{\em 
+\hypertarget{namespace_senergy_a8a440a300c8ecafb12b81c1853a5c66da4059b0251f66a18cb56f544728796875}{Info}\label{namespace_senergy_a8a440a300c8ecafb12b81c1853a5c66da4059b0251f66a18cb56f544728796875}
+}]\index{Error@{Error}!Senergy@{Senergy}}\index{Senergy@{Senergy}!Error@{Error}}\item[{\em 
+\hypertarget{namespace_senergy_a8a440a300c8ecafb12b81c1853a5c66da902b0d55fddef6f8d651fe1035b7d4bd}{Error}\label{namespace_senergy_a8a440a300c8ecafb12b81c1853a5c66da902b0d55fddef6f8d651fe1035b7d4bd}
+}]\index{Warning@{Warning}!Senergy@{Senergy}}\index{Senergy@{Senergy}!Warning@{Warning}}\item[{\em 
+\hypertarget{namespace_senergy_a8a440a300c8ecafb12b81c1853a5c66da0eaadb4fcb48a0a0ed7bc9868be9fbaa}{Warning}\label{namespace_senergy_a8a440a300c8ecafb12b81c1853a5c66da0eaadb4fcb48a0a0ed7bc9868be9fbaa}
+}]\index{Debug@{Debug}!Senergy@{Senergy}}\index{Senergy@{Senergy}!Debug@{Debug}}\item[{\em 
+\hypertarget{namespace_senergy_a8a440a300c8ecafb12b81c1853a5c66daa603905470e2a5b8c13e96b579ef0dba}{Debug}\label{namespace_senergy_a8a440a300c8ecafb12b81c1853a5c66daa603905470e2a5b8c13e96b579ef0dba}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 40 of file logger.\-h.
 

@@ -15,7 +15,7 @@ Allows querying remote D\-N\-S servers, wraps sending and receiving D\-N\-S mess
 \item 
 \hyperlink{class_senergy_1_1_dns_1_1_requester_a1b5fbbb5b5b115bdee9da48ce1466be0}{Requester} (const std\-::string \&dns\-\_\-server)
 \begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_requester}{Requester} class with the specified D\-N\-S server address. \end{DoxyCompactList}\item 
-\hyperlink{namespace_senergy_a09aea2e19671645414361ca8388aebfe}{String\-Vector} \hyperlink{class_senergy_1_1_dns_1_1_requester_a9221196d35728ad295d542c6f5342475}{Lookup} (\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0}{Resource\-Record\-Type} record\-\_\-type, const std\-::string \&hostname)
+\hyperlink{class_senergy_1_1_dns_1_1_message}{Dns\-::\-Message} \hyperlink{class_senergy_1_1_dns_1_1_requester_abcd4348e956e6d21eef3ecc7a1f3cc0e}{Lookup} (\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0}{Resource\-Record\-Type} record\-\_\-type, const std\-::string \&hostname)
 \begin{DoxyCompactList}\small\item\em Performs a lookup for the specified domain name, and requests the specified record from the remote D\-N\-S server. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -50,19 +50,19 @@ Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_requester
 \end{DoxyParams}
 
 
-Definition at line 29 of file requester.\-cpp.
+Definition at line 29 of file dns\-\_\-requester.\-cpp.
 
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_senergy_1_1_dns_1_1_requester_a9221196d35728ad295d542c6f5342475}{\index{Senergy\-::\-Dns\-::\-Requester@{Senergy\-::\-Dns\-::\-Requester}!Lookup@{Lookup}}
+\hypertarget{class_senergy_1_1_dns_1_1_requester_abcd4348e956e6d21eef3ecc7a1f3cc0e}{\index{Senergy\-::\-Dns\-::\-Requester@{Senergy\-::\-Dns\-::\-Requester}!Lookup@{Lookup}}
 \index{Lookup@{Lookup}!Senergy::Dns::Requester@{Senergy\-::\-Dns\-::\-Requester}}
-\subsubsection[{Lookup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf String\-Vector} Senergy\-::\-Dns\-::\-Requester\-::\-Lookup (
+\subsubsection[{Lookup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dns\-::\-Message} Senergy\-::\-Dns\-::\-Requester\-::\-Lookup (
 \begin{DoxyParamCaption}
 \item[{{\bf Resource\-Record\-Type}}]{record\-\_\-type, }
 \item[{const std\-::string \&}]{hostname}
 \end{DoxyParamCaption}
-)}}\label{class_senergy_1_1_dns_1_1_requester_a9221196d35728ad295d542c6f5342475}
+)}}\label{class_senergy_1_1_dns_1_1_requester_abcd4348e956e6d21eef3ecc7a1f3cc0e}
 
 
 Performs a lookup for the specified domain name, and requests the specified record from the remote D\-N\-S server. 
@@ -75,15 +75,15 @@ Performs a lookup for the specified domain name, and requests the specified reco
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A vector of strings, where each string is an I\-P address. 
+The message that was received from the remote server. 
 \end{DoxyReturn}
 
 
-Definition at line 35 of file requester.\-cpp.
+Definition at line 35 of file dns\-\_\-requester.\-cpp.
 
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
 src/senergy/dns/\hyperlink{requester_8h}{requester.\-h}\item 
-src/\hyperlink{requester_8cpp}{requester.\-cpp}\end{DoxyCompactItemize}
+src/\hyperlink{dns__requester_8cpp}{dns\-\_\-requester.\-cpp}\end{DoxyCompactItemize}

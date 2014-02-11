@@ -10,21 +10,22 @@ An address record, contains the answer to a lookup. Contains a I\-P\-V4 I\-P add
 
 {\ttfamily \#include $<$record\-\_\-ipv4address.\-h$>$}
 
-Inheritance diagram for Senergy\-:\-:Dns\-:\-:Records\-:\-:I\-P\-V4\-Address\-:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address}
-\end{center}
-\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_a9299fdb8bd0809dba6efbc1e28cec068}{I\-P\-V4\-Address} ()
-\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address}{I\-P\-V4\-Address} class. \end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_a8de88ac0b61886638f63dd4930b07b36}{Deserialize} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
-\begin{DoxyCompactList}\small\item\em Deserializes a resource record from the specified buffer into this instance. \end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_ab080902a8a40e1933d327ff95298a996}{Serialize} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
-\begin{DoxyCompactList}\small\item\em Serializes this instance into the specified buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_a71d523f7516849bf8e43981d5ec44ca8}{I\-P\-V4\-Address} (\hyperlink{namespace_senergy_1_1_dns_a1fa04259a07ce7a270e09288aa456ffd}{Resource\-Record\-Ptr} resource\-\_\-record)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address}{I\-P\-V4\-Address} class with the specified resource record. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_a8de88ac0b61886638f63dd4930b07b36}{Deserialize} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
+\begin{DoxyCompactList}\small\item\em Deserializes the R\-D\-A\-T\-A part of this resource record, and does N\-O\-T deserialize the first part of the resource record. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_ab080902a8a40e1933d327ff95298a996}{Serialize} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
+\begin{DoxyCompactList}\small\item\em Serializes the R\-D\-A\-T\-A part of this resource record, and does N\-O\-T serialize the first part of the resource record. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_a6d45ba035f7ff475f78a29593a6af0d5}{Dump} ()
+\begin{DoxyCompactList}\small\item\em Dumps all fields to the standard output, with their values. In the following format\-: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static I\-P\-V4\-Address\-Ptr \hyperlink{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_a6fefbdd798db0e2e33b66af9fde0c33f}{Create} (\hyperlink{namespace_senergy_1_1_dns_a1fa04259a07ce7a270e09288aa456ffd}{Resource\-Record\-Ptr} resource\-\_\-record)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address}{I\-P\-V4\-Address} class as a shared pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -38,62 +39,93 @@ Swen Kooij (Photonios)
 \end{DoxyAuthor}
 
 
-Definition at line 47 of file record\-\_\-ipv4address.\-h.
+Definition at line 50 of file record\-\_\-ipv4address.\-h.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_a9299fdb8bd0809dba6efbc1e28cec068}{\index{Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address@{Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address}!I\-P\-V4\-Address@{I\-P\-V4\-Address}}
+\hypertarget{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_a71d523f7516849bf8e43981d5ec44ca8}{\index{Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address@{Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address}!I\-P\-V4\-Address@{I\-P\-V4\-Address}}
 \index{I\-P\-V4\-Address@{I\-P\-V4\-Address}!Senergy::Dns::Records::IPV4Address@{Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address}}
 \subsubsection[{I\-P\-V4\-Address}]{\setlength{\rightskip}{0pt plus 5cm}Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address\-::\-I\-P\-V4\-Address (
 \begin{DoxyParamCaption}
-{}
+\item[{{\bf Resource\-Record\-Ptr}}]{resource\-\_\-record}
 \end{DoxyParamCaption}
-)}}\label{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_a9299fdb8bd0809dba6efbc1e28cec068}
+)}}\label{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_a71d523f7516849bf8e43981d5ec44ca8}
 
 
-Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address}{I\-P\-V4\-Address} class. 
+Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address}{I\-P\-V4\-Address} class with the specified resource record. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em resource\-\_\-record} & The resource record to use as a base for this instance. \\
+\hline
+\end{DoxyParams}
 
-Definition at line 31 of file record\-\_\-ipv4address.\-cpp.
+
+Definition at line 31 of file dns\-\_\-record\-\_\-ipv4address.\-cpp.
 
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_a6fefbdd798db0e2e33b66af9fde0c33f}{\index{Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address@{Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address}!Create@{Create}}
+\index{Create@{Create}!Senergy::Dns::Records::IPV4Address@{Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address}}
+\subsubsection[{Create}]{\setlength{\rightskip}{0pt plus 5cm}I\-P\-V4\-Address\-Ptr Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address\-::\-Create (
+\begin{DoxyParamCaption}
+\item[{{\bf Resource\-Record\-Ptr}}]{resource\-\_\-record}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_a6fefbdd798db0e2e33b66af9fde0c33f}
+
+
+Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address}{I\-P\-V4\-Address} class as a shared pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource\-\_\-record} & The resource record to use as a base for this instance. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file dns\-\_\-record\-\_\-ipv4address.\-cpp.
+
 \hypertarget{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_a8de88ac0b61886638f63dd4930b07b36}{\index{Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address@{Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address}!Deserialize@{Deserialize}}
 \index{Deserialize@{Deserialize}!Senergy::Dns::Records::IPV4Address@{Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address}}
 \subsubsection[{Deserialize}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address\-::\-Deserialize (
 \begin{DoxyParamCaption}
 \item[{{\bf Byte\-Buffer} \&}]{buffer}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_a8de88ac0b61886638f63dd4930b07b36}
+)}}\label{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_a8de88ac0b61886638f63dd4930b07b36}
 
 
-Deserializes a resource record from the specified buffer into this instance. 
+Deserializes the R\-D\-A\-T\-A part of this resource record, and does N\-O\-T deserialize the first part of the resource record. 
 
-The specified buffer must have at least 4 bytes left to read. However, the size of a resource record is variable, because of the name field.
-
-When we can not read the entire resource record from the specified buffer, false is returned.
-
-\begin{DoxyNote}{Note}
-This will advance the buffer's position with the size of the record.
-\end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
-{\em buffer} & The buffer to read the resource record from.\\
+{\em resource\-\_\-record} & The resource record to use as the base. \\
+\hline
+{\em buffer} & The buffer to read from.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A boolean indicating whether deserialization was succesful. True is returned when deseriliazation was succesful and false when it was not. 
+A boolean indicating whether this operation was a success. If the operation failed, false is returned. When the operation was a success, true is returned. 
 \end{DoxyReturn}
 
 
-Reimplemented from \hyperlink{class_senergy_1_1_dns_1_1_resource_record_a4426ad69fd06a352835b00d18fd726a7}{Senergy\-::\-Dns\-::\-Resource\-Record}.
+Definition at line 41 of file dns\-\_\-record\-\_\-ipv4address.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_a6d45ba035f7ff475f78a29593a6af0d5}{\index{Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address@{Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address}!Dump@{Dump}}
+\index{Dump@{Dump}!Senergy::Dns::Records::IPV4Address@{Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address}}
+\subsubsection[{Dump}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address\-::\-Dump (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_a6d45ba035f7ff475f78a29593a6af0d5}
+
+
+Dumps all fields to the standard output, with their values. In the following format\-: 
 
 
 
-Definition at line 35 of file record\-\_\-ipv4address.\-cpp.
+Definition at line 68 of file dns\-\_\-record\-\_\-ipv4address.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_ab080902a8a40e1933d327ff95298a996}{\index{Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address@{Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address}!Serialize@{Serialize}}
 \index{Serialize@{Serialize}!Senergy::Dns::Records::IPV4Address@{Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address}}
@@ -101,37 +133,28 @@ Definition at line 35 of file record\-\_\-ipv4address.\-cpp.
 \begin{DoxyParamCaption}
 \item[{{\bf Byte\-Buffer} \&}]{buffer}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_ab080902a8a40e1933d327ff95298a996}
+)}}\label{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_ab080902a8a40e1933d327ff95298a996}
 
 
-Serializes this instance into the specified buffer. 
+Serializes the R\-D\-A\-T\-A part of this resource record, and does N\-O\-T serialize the first part of the resource record. 
 
-The size of a resource record is variable, because of the name field.
-
-If we cannot, for whatever reason, serialize this record, false is returned.
-
-\begin{DoxyNote}{Note}
-This will advance the buffer's position with the size of the record.
-\end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
-{\em buffer} & The buffer to write the serialized record to.\\
+{\em resource\-\_\-record} & The resource record to use as the base. \\
+\hline
+{\em buffer} & The buffer to write to.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A boolean indicating whether serialization was successful. True is returned when serialization was successful, and false is returned when it was not. 
+A boolean indicating whether this operation was a success. If the operation failed, false is returned. When the operation was a success, true is returned. 
 \end{DoxyReturn}
 
 
-Reimplemented from \hyperlink{class_senergy_1_1_dns_1_1_resource_record_ad76b4f450fc1d7f0bd0bbf72c3f68a11}{Senergy\-::\-Dns\-::\-Resource\-Record}.
-
-
-
-Definition at line 49 of file record\-\_\-ipv4address.\-cpp.
+Definition at line 61 of file dns\-\_\-record\-\_\-ipv4address.\-cpp.
 
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
 src/senergy/dns/\hyperlink{record__ipv4address_8h}{record\-\_\-ipv4address.\-h}\item 
-src/\hyperlink{record__ipv4address_8cpp}{record\-\_\-ipv4address.\-cpp}\end{DoxyCompactItemize}
+src/\hyperlink{dns__record__ipv4address_8cpp}{dns\-\_\-record\-\_\-ipv4address.\-cpp}\end{DoxyCompactItemize}

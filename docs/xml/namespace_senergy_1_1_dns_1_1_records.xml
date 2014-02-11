@@ -3,10 +3,38 @@
   <compounddef id="namespace_senergy_1_1_dns_1_1_records" kind="namespace">
     <compoundname>Senergy::Dns::Records</compoundname>
     <innerclass refid="class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address" prot="public">Senergy::Dns::Records::IPV4Address</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespace_senergy_1_1_dns_1_1_records_1a3f0d02fcd6381aee3fab67589ac0890c" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address" kindref="compound">IPV4Address</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;IPV4Address&gt; Senergy::Dns::Records::IPV4AddressPtr</definition>
+        <argsstring></argsstring>
+        <name>IPV4AddressPtr</name>
+        <briefdescription>
+<para>A shared pointer to a <ref refid="class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address" kindref="compound">IPV4Address</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/record_ipv4address.h" line="118" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/record_ipv4address.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespace_senergy_1_1_dns_1_1_records_1a5b9115e6124c4999bbb000e69cfe5d2c" prot="public" static="no">
+        <type><ref refid="class_senergy_1_1_vector_x" kindref="compound">VectorX</ref>&lt; <ref refid="namespace_senergy_1_1_dns_1_1_records_1a3f0d02fcd6381aee3fab67589ac0890c" kindref="member">IPV4AddressPtr</ref> &gt;</type>
+        <definition>typedef VectorX&lt;IPV4AddressPtr&gt; Senergy::Dns::Records::IPV4AddressPtrVector</definition>
+        <argsstring></argsstring>
+        <name>IPV4AddressPtrVector</name>
+        <briefdescription>
+<para>A vector of shared pointers to <ref refid="class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address" kindref="compound">IPV4Address</ref> instances. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/record_ipv4address.h" line="123" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/record_ipv4address.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/photonios/Documents/Senergy/src/record_ipv4address.cpp" line="29" column="1"/>
+    <location file="/home/photonios/Documents/Senergy/src/dns_record_ipv4address.cpp" line="29" column="1"/>
   </compounddef>
 </doxygen>

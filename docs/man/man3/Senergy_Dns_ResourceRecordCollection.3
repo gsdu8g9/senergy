@@ -1,0 +1,133 @@
+.TH "Senergy::Dns::ResourceRecordCollection" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::Dns::ResourceRecordCollection \- 
+.PP
+Simple container for all types of resource records we support\&. This is to prevent creating hundreds of separate containers in the \fBMessage\fP class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <resource_record_collection\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBResourceRecordCollection\fP ()"
+.br
+.RI "\fIInitializes a new instance of the \fBResourceRecordCollection\fP class\&. \fP"
+.ti -1c
+.RI "bool \fBSerialize\fP (\fBMessageHeader\fP &header, \fBByteBuffer\fP &buffer)"
+.br
+.RI "\fISerializes all records in this collection into the specified buffer\&. \fP"
+.ti -1c
+.RI "bool \fBDeserialize\fP (\fBMessageHeader\fP &header, \fBByteBuffer\fP &buffer)"
+.br
+.RI "\fIDeserializes the content of the specified buffer into this collection\&. \fP"
+.ti -1c
+.RI "void \fBDump\fP ()"
+.br
+.RI "\fICalls the '\fBDump()\fP' method of all records, and thus dumping the fields of each record to standard output\&. \fP"
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBRecords::IPV4AddressPtrVector\fP \fBIPV4Answers\fP"
+.br
+.RI "\fIAll 'A' records in this collection\&. See the IPV4Address class for more information\&.\&. \fP"
+.ti -1c
+.RI "\fBResourceRecordPtrVector\fP \fBUnknownRecords\fP"
+.br
+.RI "\fIAll resource records that could not be parsed because we do not support their type\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Simple container for all types of resource records we support\&. This is to prevent creating hundreds of separate containers in the \fBMessage\fP class\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.PP
+Definition at line 43 of file resource_record_collection\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Senergy::Dns::ResourceRecordCollection::ResourceRecordCollection ()"
+
+.PP
+Initializes a new instance of the \fBResourceRecordCollection\fP class\&. 
+.PP
+Definition at line 29 of file dns_resource_record_collection\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Senergy::Dns::ResourceRecordCollection::Deserialize (\fBMessageHeader\fP &header, \fBByteBuffer\fP &buffer)"
+
+.PP
+Deserializes the content of the specified buffer into this collection\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to read from\&. 
+.br
+\fIheader\fP The header to use as the information source during deserialization\&. The header contains information on how many resource records have been returned\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether this operation was a success\&. 
+.RE
+.PP
+
+.PP
+Definition at line 38 of file dns_resource_record_collection\&.cpp\&.
+.SS "void Senergy::Dns::ResourceRecordCollection::Dump ()"
+
+.PP
+Calls the '\fBDump()\fP' method of all records, and thus dumping the fields of each record to standard output\&. 
+.PP
+Definition at line 84 of file dns_resource_record_collection\&.cpp\&.
+.SS "bool Senergy::Dns::ResourceRecordCollection::Serialize (\fBMessageHeader\fP &header, \fBByteBuffer\fP &buffer)"
+
+.PP
+Serializes all records in this collection into the specified buffer\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to write the serialized data to\&. 
+.br
+\fIheader\fP The header to write to how many resource records we serialized\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether this operation was a success\&. 
+.RE
+.PP
+
+.PP
+Definition at line 33 of file dns_resource_record_collection\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBRecords::IPV4AddressPtrVector\fP Senergy::Dns::ResourceRecordCollection::IPV4Answers"
+
+.PP
+All 'A' records in this collection\&. See the IPV4Address class for more information\&.\&. 
+.PP
+Definition at line 84 of file resource_record_collection\&.h\&.
+.SS "\fBResourceRecordPtrVector\fP Senergy::Dns::ResourceRecordCollection::UnknownRecords"
+
+.PP
+All resource records that could not be parsed because we do not support their type\&. 
+.PP
+Definition at line 90 of file resource_record_collection\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

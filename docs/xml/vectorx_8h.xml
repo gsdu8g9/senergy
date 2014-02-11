@@ -5,98 +5,148 @@
     <includes local="no">vector</includes>
     <includedby refid="message_8h" local="no">src/senergy/dns/message.h</includedby>
     <includedby refid="message__question_8h" local="no">src/senergy/dns/message_question.h</includedby>
+    <includedby refid="record__ipv4address_8h" local="no">src/senergy/dns/record_ipv4address.h</includedby>
     <includedby refid="requester_8h" local="no">src/senergy/dns/requester.h</includedby>
+    <includedby refid="resource__record_8h" local="no">src/senergy/dns/resource_record.h</includedby>
     <includedby refid="senergy_8h" local="no">src/senergy/senergy.h</includedby>
     <includedby refid="types_8h" local="no">src/senergy/types.h</includedby>
     <includedby refid="vectorx_8cpp" local="no">src/vectorx.cpp</includedby>
     <incdepgraph>
-      <node id="583">
+      <node id="834">
         <label>vector</label>
       </node>
-      <node id="582">
+      <node id="833">
         <label>src/senergy/vectorx.h</label>
         <link refid="vectorx.h"/>
-        <childnode refid="583" relation="include">
+        <childnode refid="834" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="592">
-        <label>src/message_question.cpp</label>
-        <link refid="message__question_8cpp"/>
-      </node>
-      <node id="594">
+      <node id="851">
         <label>src/vectorx.cpp</label>
         <link refid="vectorx_8cpp"/>
       </node>
-      <node id="590">
+      <node id="841">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="586">
-        <label>src/message.cpp</label>
-        <link refid="message_8cpp"/>
+      <node id="849">
+        <label>src/dns_resource_record.cpp</label>
+        <link refid="dns__resource__record_8cpp"/>
       </node>
-      <node id="585">
+      <node id="839">
+        <label>src/dns_requester.cpp</label>
+        <link refid="dns__requester_8cpp"/>
+      </node>
+      <node id="836">
         <label>src/senergy/dns/message.h</label>
         <link refid="message_8h"/>
-        <childnode refid="586" relation="include">
+        <childnode refid="837" relation="include">
         </childnode>
-        <childnode refid="587" relation="include">
+        <childnode refid="838" relation="include">
         </childnode>
-        <childnode refid="589" relation="include">
+        <childnode refid="840" relation="include">
         </childnode>
       </node>
-      <node id="588">
-        <label>src/requester.cpp</label>
-        <link refid="requester_8cpp"/>
+      <node id="845">
+        <label>src/dns_record_ipv4address.cpp</label>
+        <link refid="dns__record__ipv4address_8cpp"/>
       </node>
-      <node id="589">
+      <node id="837">
+        <label>src/dns_message.cpp</label>
+        <link refid="dns__message_8cpp"/>
+      </node>
+      <node id="847">
+        <label>src/dns_resource_record_collection.cpp</label>
+        <link refid="dns__resource__record__collection_8cpp"/>
+      </node>
+      <node id="848">
+        <label>src/senergy/dns/resource_record.h</label>
+        <link refid="resource__record_8h"/>
+        <childnode refid="849" relation="include">
+        </childnode>
+        <childnode refid="844" relation="include">
+        </childnode>
+        <childnode refid="846" relation="include">
+        </childnode>
+        <childnode refid="840" relation="include">
+        </childnode>
+      </node>
+      <node id="840">
         <label>src/senergy/senergy.h</label>
         <link refid="senergy_8h"/>
-        <childnode refid="590" relation="include">
+        <childnode refid="841" relation="include">
         </childnode>
       </node>
-      <node id="584">
+      <node id="846">
+        <label>src/senergy/dns/resource_record_collection.h</label>
+        <link refid="resource__record__collection_8h"/>
+        <childnode refid="847" relation="include">
+        </childnode>
+        <childnode refid="836" relation="include">
+        </childnode>
+        <childnode refid="840" relation="include">
+        </childnode>
+      </node>
+      <node id="835">
         <label>src/senergy/vectorx.h</label>
         <link refid="vectorx.h"/>
-        <childnode refid="585" relation="include">
+        <childnode refid="836" relation="include">
         </childnode>
-        <childnode refid="591" relation="include">
+        <childnode refid="842" relation="include">
         </childnode>
-        <childnode refid="587" relation="include">
+        <childnode refid="844" relation="include">
         </childnode>
-        <childnode refid="589" relation="include">
+        <childnode refid="838" relation="include">
         </childnode>
-        <childnode refid="593" relation="include">
+        <childnode refid="848" relation="include">
         </childnode>
-        <childnode refid="594" relation="include">
+        <childnode refid="840" relation="include">
+        </childnode>
+        <childnode refid="850" relation="include">
+        </childnode>
+        <childnode refid="851" relation="include">
         </childnode>
       </node>
-      <node id="587">
+      <node id="844">
+        <label>src/senergy/dns/record_ipv4address.h</label>
+        <link refid="record__ipv4address_8h"/>
+        <childnode refid="845" relation="include">
+        </childnode>
+        <childnode refid="846" relation="include">
+        </childnode>
+        <childnode refid="840" relation="include">
+        </childnode>
+      </node>
+      <node id="838">
         <label>src/senergy/dns/requester.h</label>
         <link refid="requester_8h"/>
-        <childnode refid="588" relation="include">
+        <childnode refid="839" relation="include">
         </childnode>
-        <childnode refid="589" relation="include">
+        <childnode refid="840" relation="include">
         </childnode>
       </node>
-      <node id="593">
+      <node id="843">
+        <label>src/dns_message_question.cpp</label>
+        <link refid="dns__message__question_8cpp"/>
+      </node>
+      <node id="850">
         <label>src/senergy/types.h</label>
         <link refid="types_8h"/>
-        <childnode refid="587" relation="include">
+        <childnode refid="838" relation="include">
         </childnode>
-        <childnode refid="589" relation="include">
+        <childnode refid="840" relation="include">
         </childnode>
       </node>
-      <node id="591">
+      <node id="842">
         <label>src/senergy/dns/message_question.h</label>
         <link refid="message__question_8h"/>
-        <childnode refid="592" relation="include">
+        <childnode refid="843" relation="include">
         </childnode>
-        <childnode refid="585" relation="include">
+        <childnode refid="836" relation="include">
         </childnode>
-        <childnode refid="589" relation="include">
+        <childnode refid="840" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -144,18 +194,19 @@
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55" refid="class_senergy_1_1_vector_x_1acce23da783e4fa6d98a57bc4d3a48b2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_vector_x_1acce23da783e4fa6d98a57bc4d3a48b2c" kindref="member">Add</ref>(T<sp/>value)</highlight></codeline>
+<codeline lineno="55" refid="class_senergy_1_1_vector_x_1a4df34dceed944ef14df649a538d9c1b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="class_senergy_1_1_vector_x_1a4df34dceed944ef14df649a538d9c1b1" kindref="member">Add</ref>(T<sp/>value)</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BaseClass::push_back(value);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;T&gt;<sp/>BaseClass;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SY_VECTOR_X_H</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>BaseClass::at(BaseClass::size()<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;T&gt;<sp/>BaseClass;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SY_VECTOR_X_H</highlight></codeline>
     </programlisting>
     <location file="/home/photonios/Documents/Senergy/src/senergy/vectorx.h"/>
   </compounddef>

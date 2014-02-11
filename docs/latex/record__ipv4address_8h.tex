@@ -4,7 +4,10 @@
 {\ttfamily \#include $<$string$>$}\\*
 {\ttfamily \#include $<$senergy/dns/resource\-\_\-record\-\_\-types.\-h$>$}\\*
 {\ttfamily \#include $<$senergy/dns/resource\-\_\-record\-\_\-classes.\-h$>$}\\*
+{\ttfamily \#include $<$senergy/dns/message\-\_\-header.\-h$>$}\\*
 {\ttfamily \#include $<$senergy/dns/resource\-\_\-record.\-h$>$}\\*
+{\ttfamily \#include $<$senergy/socket.\-h$>$}\\*
+{\ttfamily \#include $<$senergy/vectorx.\-h$>$}\\*
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -19,3 +22,11 @@ class \hyperlink{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address}{Senergy\-
 \item 
 \hyperlink{namespace_senergy_1_1_dns_1_1_records}{Senergy\-::\-Dns\-::\-Records}
 \end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::shared\-\_\-ptr\\*
+$<$ I\-P\-V4\-Address $>$ \hyperlink{namespace_senergy_1_1_dns_1_1_records_a3f0d02fcd6381aee3fab67589ac0890c}{Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address\-Ptr}
+\begin{DoxyCompactList}\small\item\em A shared pointer to a \hyperlink{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address}{I\-P\-V4\-Address} instance. \end{DoxyCompactList}\item 
+typedef Vector\-X$<$ I\-P\-V4\-Address\-Ptr $>$ \hyperlink{namespace_senergy_1_1_dns_1_1_records_a5b9115e6124c4999bbb000e69cfe5d2c}{Senergy\-::\-Dns\-::\-Records\-::\-I\-P\-V4\-Address\-Ptr\-Vector}
+\begin{DoxyCompactList}\small\item\em A vector of shared pointers to \hyperlink{class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address}{I\-P\-V4\-Address} instances. \end{DoxyCompactList}\end{DoxyCompactItemize}
