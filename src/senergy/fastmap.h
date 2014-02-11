@@ -64,15 +64,15 @@ private:
 
 public:
 	/*!
- 	 * \brief Gets the value of the specified key, uses the [] operator.
+	 * \brief Provides access to the base class's at method.
 	 *
-	 * \param key The key of the item/pair you want to retrieve.
-	 *
-	 * \returns The value of that is associated with the specified pair.
+	 * \param index The index of the item you want to acquire.
+ 	 *
+	 * \returns The fast map item at the specified index.
 	 */
-	TValue & at(TKey value)
+	FastMapItem<TKey, TValue> & at(int index)
 	{
-		return *this[value];
+		return FastMapBase::at(index);
 	}
 
 	/*!

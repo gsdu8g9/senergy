@@ -116,10 +116,16 @@ public:
 	 * \returns An instance of the ResourceRecordBase class, which represents
 	 *			the first part in this resource record.
 	 */
-	ResourceRecordBase & Base() const;
+	ResourceRecordBase & GetBase() const;
 
 protected:
-	ResourceRecordBase &m_base;
+	/*!
+	 * \brief More logical way to allow access to the base class.
+	 */
+	typedef ResourceRecordBase Base;
+
+protected:
+	ResourceRecordBase & m_base;
 };
 
 /*!

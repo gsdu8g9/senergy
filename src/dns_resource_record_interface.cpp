@@ -31,7 +31,7 @@ ResourceRecordInterface::ResourceRecordInterface(ResourceRecordBase &base) :
 {
 }
 
-ResourceRecordBase & ResourceRecordInterface::Base() const
+ResourceRecordBase & ResourceRecordInterface::GetBase() const
 {
 	return m_base;
 }
