@@ -6,6 +6,5 @@ var class_senergy_1_1_dns_1_1_message =
     [ "GetQuestionCount", "class_senergy_1_1_dns_1_1_message.html#a5d5219532098cf60e2395764e7f61aca", null ],
     [ "Reset", "class_senergy_1_1_dns_1_1_message.html#a60d242fef8b20993f9cd9b4591453e1b", null ],
     [ "Serialize", "class_senergy_1_1_dns_1_1_message.html#a2e7978e799fadaa4f03fc881e5c8e0f6", null ],
-    [ "Questions", "class_senergy_1_1_dns_1_1_message.html#a1e72009ea8004f0e8cc1ce0ea07f4ad1", null ],
-    [ "ResourceRecords", "class_senergy_1_1_dns_1_1_message.html#a9c5d3af474d43d46dd1a6992567fc38b", null ]
+    [ "Questions", "class_senergy_1_1_dns_1_1_message.html#a1e72009ea8004f0e8cc1ce0ea07f4ad1", null ]
 ];

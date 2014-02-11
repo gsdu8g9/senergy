@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['unknownrecords',['UnknownRecords',['../class_senergy_1_1_dns_1_1_resource_record_collection.html#a1ad19da9ca3420c4aa1ad865099e387d',1,'Senergy::Dns::ResourceRecordCollection']]]
+  ['timeout',['Timeout',['../namespace_senergy_1_1_socket_error.html#aa78be48fe668e1748c69b145a3c3fe16',1,'Senergy::SocketError']]],
+  ['truncation',['Truncation',['../struct_senergy_1_1_dns_1_1_message_header_fields.html#a15d1ee99bf788c080001c3216c88274c',1,'Senergy::Dns::MessageHeaderFields']]]
 ];

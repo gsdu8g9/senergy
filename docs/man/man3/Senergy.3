@@ -37,6 +37,14 @@ Senergy \-
 .br
 .RI "\fIA simple conversion class, which simplifies conversion between various native data types\&. Based on the idea of the '\fBConvert\fP' class in the \&.NET framework\&. \fP"
 .ti -1c
+.RI "struct \fBFastMapItem\fP"
+.br
+.RI "\fIThe structure that \fBFastMap\fP stores in it's vector, this emulates a std::map iterator\&. \fP"
+.ti -1c
+.RI "class \fBFastMap\fP"
+.br
+.RI "\fIThe fast map is an alternative to std::map\&. An std::map is relatively slow with a small number of items\&. \fBFastMap\fP uses a vector of structures instead, and outperforms std::map with collections with fewer items\&. The beauty of this class is that it can be used as a drop-in replacement for std::map, it uses the exact same values, simply replacing the declaration is enough\&. \fP"
+.ti -1c
 .RI "class \fBLogger\fP"
 .br
 .RI "\fISimple logger with support for variadic arguments and various log levels\&. \fP"

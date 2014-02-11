@@ -65,6 +65,15 @@
     <member refid="class_senergy_1_1_convert_1ac468bf5d893e3437883763d8457adc1c" kind="function"><name>ToString</name></member>
     <member refid="class_senergy_1_1_convert_1a66c09e2b461268212cc384e71a2f57c6" kind="function"><name>ToChar</name></member>
   </compound>
+  <compound refid="class_senergy_1_1_fast_map" kind="class"><name>Senergy::FastMap</name>
+    <member refid="class_senergy_1_1_fast_map_1a4becdc6892e192722b85e8a177d4518d" kind="typedef"><name>FastMapBase</name></member>
+    <member refid="class_senergy_1_1_fast_map_1a8eb4242224f5c1cd043e254aa12eacff" kind="function"><name>at</name></member>
+    <member refid="class_senergy_1_1_fast_map_1ac06929fda5af594e6ccf96198eac1819" kind="function"><name>operator[]</name></member>
+  </compound>
+  <compound refid="struct_senergy_1_1_fast_map_item" kind="struct"><name>Senergy::FastMapItem</name>
+    <member refid="struct_senergy_1_1_fast_map_item_1a99e39296732f934331d581936e2ddb26" kind="variable"><name>first</name></member>
+    <member refid="struct_senergy_1_1_fast_map_item_1a685a9e654410404e550d65acd951c7ca" kind="variable"><name>second</name></member>
+  </compound>
   <compound refid="class_senergy_1_1_dns_1_1_id_factory" kind="class"><name>Senergy::Dns::IdFactory</name>
     <member refid="class_senergy_1_1_dns_1_1_id_factory_1aca7e42a14931f428485d01279bfa09eb" kind="typedef"><name>GeneratedIdBuffer</name></member>
     <member refid="class_senergy_1_1_dns_1_1_id_factory_1ae3169f3201faed02512868b1f128bbcb" kind="variable"><name>MaximumBufferSize</name></member>
@@ -72,16 +81,6 @@
     <member refid="class_senergy_1_1_dns_1_1_id_factory_1a24a6d7f51af3559a55b77be323aa9b74" kind="variable"><name>s_generate_id_lock</name></member>
     <member refid="class_senergy_1_1_dns_1_1_id_factory_1aac705471a570313494ca2661a5888b3d" kind="function"><name>GenerateId</name></member>
     <member refid="class_senergy_1_1_dns_1_1_id_factory_1ab622ad4e7bc3c90ced3f743a48ae7377" kind="function"><name>__exists</name></member>
-  </compound>
-  <compound refid="class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address" kind="class"><name>Senergy::Dns::Records::IPV4Address</name>
-    <member refid="class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_1a24bd4c6933d322a365016c0b103b341b" kind="typedef"><name>IPV4AddressPtr</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_1a8078acdd79f1d2d9a78acc48c03ddc87" kind="variable"><name>m_address</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_1a25fa3497f4798947a8de592e68c626a6" kind="variable"><name>m_resource_record</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_1a71d523f7516849bf8e43981d5ec44ca8" kind="function"><name>IPV4Address</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_1a8de88ac0b61886638f63dd4930b07b36" kind="function"><name>Deserialize</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_1ab080902a8a40e1933d327ff95298a996" kind="function"><name>Serialize</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_1a6d45ba035f7ff475f78a29593a6af0d5" kind="function"><name>Dump</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_records_1_1_i_p_v4_address_1a6fefbdd798db0e2e33b66af9fde0c33f" kind="function"><name>Create</name></member>
   </compound>
   <compound refid="class_senergy_1_1_logger" kind="class"><name>Senergy::Logger</name>
     <member refid="class_senergy_1_1_logger_1a917107d9c7bee19a3347dac8afc983f0" kind="function"><name>Info</name></member>
@@ -93,7 +92,6 @@
   </compound>
   <compound refid="class_senergy_1_1_dns_1_1_message" kind="class"><name>Senergy::Dns::Message</name>
     <member refid="class_senergy_1_1_dns_1_1_message_1a1e72009ea8004f0e8cc1ce0ea07f4ad1" kind="variable"><name>Questions</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_message_1a9c5d3af474d43d46dd1a6992567fc38b" kind="variable"><name>ResourceRecords</name></member>
     <member refid="class_senergy_1_1_dns_1_1_message_1a68c6d4eeeddc465b01616e97a884be00" kind="variable"><name>m_header</name></member>
     <member refid="class_senergy_1_1_dns_1_1_message_1a3e7192f2293903a43e7d08960b08a8b1" kind="function"><name>Message</name></member>
     <member refid="class_senergy_1_1_dns_1_1_message_1a3857764a799ab123405420345f9b03ee" kind="function"><name>Deserialize</name></member>
@@ -160,37 +158,6 @@
     <member refid="class_senergy_1_1_dns_1_1_requester_1aad631f9cd1865d836c42b659a49c0ec7" kind="variable"><name>m_dns_server</name></member>
     <member refid="class_senergy_1_1_dns_1_1_requester_1a1b5fbbb5b5b115bdee9da48ce1466be0" kind="function"><name>Requester</name></member>
     <member refid="class_senergy_1_1_dns_1_1_requester_1abcd4348e956e6d21eef3ecc7a1f3cc0e" kind="function"><name>Lookup</name></member>
-  </compound>
-  <compound refid="class_senergy_1_1_dns_1_1_resource_record" kind="class"><name>Senergy::Dns::ResourceRecord</name>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1ae330a495e0c01ae421d9dd1bee0dc017" kind="typedef"><name>ResourceRecordPtr</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1a3992d42302c4bc939f39c58546aaacaf" kind="variable"><name>m_hostname</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1a443ff133b10a314058bc6174558415a8" kind="variable"><name>m_type</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1a8eea45baed16ff1c408682d9da59b7c6" kind="variable"><name>m_class</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1ac30e456e4945e8bb9abd3d55fa168ff5" kind="variable"><name>m_ttl</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1a598323d2f75156a289df1152e30b563b" kind="variable"><name>m_rd_length</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1a5031132589becf3c4e8e4ecbd6ab4e5d" kind="function"><name>ResourceRecord</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1a4426ad69fd06a352835b00d18fd726a7" kind="function"><name>Deserialize</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1ad76b4f450fc1d7f0bd0bbf72c3f68a11" kind="function"><name>Serialize</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1a98a7d65be5a756f190247e18a5433661" kind="function"><name>GetHostname</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1a571a18bfcdcc2e5ac0faa2e9cfac57fb" kind="function"><name>SetHostname</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1a53ff0c81f7f0b79ac69df28a513242e2" kind="function"><name>GetType</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1ac339b08bf936f1971de6b24b46dd5813" kind="function"><name>SetType</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1a5b26da86b8ba4d6c0899dc56a9fee7c1" kind="function"><name>GetClass</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1a4fca01c4e494f21c574e5c2bc382f3a3" kind="function"><name>SetClass</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1ab90850f8b050337867261a55a2e43284" kind="function"><name>NeedsCaching</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1ab391deab6827e4e772809a3d025abb31" kind="function"><name>GetMaxCachingTime</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1affea007cc6d81a8a2dd80148c3386c62" kind="function"><name>GetResourceSize</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1ac7dbce6e35f6141e09a7527c43d1de88" kind="function"><name>Dump</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_1a0658875f16b0810714e63e75b9e32a57" kind="function"><name>Create</name></member>
-  </compound>
-  <compound refid="class_senergy_1_1_dns_1_1_resource_record_collection" kind="class"><name>Senergy::Dns::ResourceRecordCollection</name>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1a0ca3a73fcaabee1703b18c9c8ca453f9" kind="variable"><name>IPV4Answers</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1a1ad19da9ca3420c4aa1ad865099e387d" kind="variable"><name>UnknownRecords</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1a66f740bd63a874374e471973ee236d78" kind="function"><name>ResourceRecordCollection</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1affa4da32b82b69f712c2383ab4f9ee8c" kind="function"><name>Serialize</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1ae228f7ec1cf020033f64f68a3f5ea4e1" kind="function"><name>Deserialize</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1a62ac608c82f209ec4b0c2ed5bc155a73" kind="function"><name>Dump</name></member>
-    <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1a9de3dcdf2eec61f25ee9f5c500f31637" kind="function"><name>__clear_collections</name></member>
   </compound>
   <compound refid="class_senergy_1_1_dns_1_1_root_name_server" kind="class"><name>Senergy::Dns::RootNameServer</name>
   </compound>
@@ -363,12 +330,6 @@
     <member refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0aede320f6102f02f5903553674ed8a3f5" kind="enumvalue"><name>DLV</name></member>
     <member refid="namespace_senergy_1_1_dns_1a425a2a6f3b5c18973c524a99bdfa4ef0" kind="typedef"><name>MessageQuestionPtr</name></member>
     <member refid="namespace_senergy_1_1_dns_1a6983ff2422cfa510ca61831ae5cf1ffc" kind="typedef"><name>MessageQuestionPtrVector</name></member>
-    <member refid="namespace_senergy_1_1_dns_1a1fa04259a07ce7a270e09288aa456ffd" kind="typedef"><name>ResourceRecordPtr</name></member>
-    <member refid="namespace_senergy_1_1_dns_1ad5ef448b2b508ce86c6ed91dccc10d3e" kind="typedef"><name>ResourceRecordPtrVector</name></member>
-  </compound>
-  <compound refid="namespace_senergy_1_1_dns_1_1_records" kind="namespace"><name>Senergy::Dns::Records</name>
-    <member refid="namespace_senergy_1_1_dns_1_1_records_1a3f0d02fcd6381aee3fab67589ac0890c" kind="typedef"><name>IPV4AddressPtr</name></member>
-    <member refid="namespace_senergy_1_1_dns_1_1_records_1a5b9115e6124c4999bbb000e69cfe5d2c" kind="typedef"><name>IPV4AddressPtrVector</name></member>
   </compound>
   <compound refid="namespace_senergy_1_1_socket_error" kind="namespace"><name>Senergy::SocketError</name>
     <member refid="namespace_senergy_1_1_socket_error_1aa78be48fe668e1748c69b145a3c3fe16" kind="variable"><name>Timeout</name></member>
@@ -397,21 +358,17 @@
   </compound>
   <compound refid="dns__message__question_8cpp" kind="file"><name>dns_message_question.cpp</name>
   </compound>
-  <compound refid="dns__record__ipv4address_8cpp" kind="file"><name>dns_record_ipv4address.cpp</name>
-  </compound>
   <compound refid="dns__requester_8cpp" kind="file"><name>dns_requester.cpp</name>
   </compound>
-  <compound refid="dns__resource__record_8cpp" kind="file"><name>dns_resource_record.cpp</name>
-  </compound>
   <compound refid="dns__resource__record__classes_8cpp" kind="file"><name>dns_resource_record_classes.cpp</name>
-  </compound>
-  <compound refid="dns__resource__record__collection_8cpp" kind="file"><name>dns_resource_record_collection.cpp</name>
   </compound>
   <compound refid="dns__resource__record__types_8cpp" kind="file"><name>dns_resource_record_types.cpp</name>
   </compound>
   <compound refid="dns__rootnameserver_8cpp" kind="file"><name>dns_rootnameserver.cpp</name>
   </compound>
   <compound refid="dns__utils_8cpp" kind="file"><name>dns_utils.cpp</name>
+  </compound>
+  <compound refid="fastmap_8cpp" kind="file"><name>fastmap.cpp</name>
   </compound>
   <compound refid="logger_8cpp" kind="file"><name>logger.cpp</name>
   </compound>
@@ -436,21 +393,17 @@
   </compound>
   <compound refid="message__question_8h" kind="file"><name>message_question.h</name>
   </compound>
-  <compound refid="record__ipv4address_8h" kind="file"><name>record_ipv4address.h</name>
-  </compound>
   <compound refid="requester_8h" kind="file"><name>requester.h</name>
   </compound>
-  <compound refid="resource__record_8h" kind="file"><name>resource_record.h</name>
-  </compound>
   <compound refid="resource__record__classes_8h" kind="file"><name>resource_record_classes.h</name>
-  </compound>
-  <compound refid="resource__record__collection_8h" kind="file"><name>resource_record_collection.h</name>
   </compound>
   <compound refid="resource__record__types_8h" kind="file"><name>resource_record_types.h</name>
   </compound>
   <compound refid="rootnameserver_8h" kind="file"><name>rootnameserver.h</name>
   </compound>
   <compound refid="utils_8h" kind="file"><name>utils.h</name>
+  </compound>
+  <compound refid="fastmap_8h" kind="file"><name>fastmap.h</name>
   </compound>
   <compound refid="logger_8h" kind="file"><name>logger.h</name>
   </compound>

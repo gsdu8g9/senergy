@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['vectorx',['VectorX',['../class_senergy_1_1_vector_x.html#a99bed6d49a3a93e6a133837330218ee7',1,'Senergy::VectorX']]]
+  ['tochar',['ToChar',['../class_senergy_1_1_convert.html#a66c09e2b461268212cc384e71a2f57c6',1,'Senergy::Convert']]],
+  ['tostring',['ToString',['../class_senergy_1_1_convert.html#a80cf7b84b0ff65171da68ca40cbf817f',1,'Senergy::Convert::ToString(int value)'],['../class_senergy_1_1_convert.html#ac468bf5d893e3437883763d8457adc1c',1,'Senergy::Convert::ToString(unsigned int value)']]]
 ];

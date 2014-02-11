@@ -4,62 +4,62 @@
     <compoundname>logger.cpp</compoundname>
     <includes refid="logger_8h" local="no">senergy/logger.h</includes>
     <incdepgraph>
-      <node id="251">
+      <node id="166">
         <label>src/logger.cpp</label>
         <link refid="logger.cpp"/>
-        <childnode refid="252" relation="include">
+        <childnode refid="167" relation="include">
         </childnode>
       </node>
-      <node id="253">
+      <node id="168">
         <label>string</label>
       </node>
-      <node id="260">
+      <node id="175">
         <label>senergy/console.h</label>
         <link refid="console_8h"/>
-        <childnode refid="253" relation="include">
+        <childnode refid="168" relation="include">
         </childnode>
-        <childnode refid="254" relation="include">
+        <childnode refid="169" relation="include">
         </childnode>
       </node>
-      <node id="259">
+      <node id="174">
         <label>cstdio</label>
       </node>
-      <node id="256">
+      <node id="171">
         <label>ctime</label>
       </node>
-      <node id="258">
+      <node id="173">
         <label>senergy/print.h</label>
         <link refid="print_8h"/>
-        <childnode refid="259" relation="include">
+        <childnode refid="174" relation="include">
         </childnode>
-        <childnode refid="253" relation="include">
+        <childnode refid="168" relation="include">
         </childnode>
       </node>
-      <node id="257">
+      <node id="172">
         <label>sstream</label>
       </node>
-      <node id="254">
+      <node id="169">
         <label>iostream</label>
       </node>
-      <node id="252">
+      <node id="167">
         <label>senergy/logger.h</label>
         <link refid="logger_8h"/>
-        <childnode refid="253" relation="include">
+        <childnode refid="168" relation="include">
         </childnode>
-        <childnode refid="254" relation="include">
+        <childnode refid="169" relation="include">
         </childnode>
-        <childnode refid="255" relation="include">
+        <childnode refid="170" relation="include">
         </childnode>
-        <childnode refid="256" relation="include">
+        <childnode refid="171" relation="include">
         </childnode>
-        <childnode refid="257" relation="include">
+        <childnode refid="172" relation="include">
         </childnode>
-        <childnode refid="258" relation="include">
+        <childnode refid="173" relation="include">
         </childnode>
-        <childnode refid="260" relation="include">
+        <childnode refid="175" relation="include">
         </childnode>
       </node>
-      <node id="255">
+      <node id="170">
         <label>chrono</label>
       </node>
     </incdepgraph>

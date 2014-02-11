@@ -46,10 +46,6 @@ Represents a DNS packet as described in section 4 of RFC-1035\&. A DNS packet is
 .RI "\fBMessageQuestionPtrVector\fP \fBQuestions\fP"
 .br
 .RI "\fIHolds all the 'question messages' that are part of this DNS message\&. \fP"
-.ti -1c
-.RI "\fBResourceRecordCollection\fP \fBResourceRecords\fP"
-.br
-.RI "\fIHolds all resource records that are part of this DNS message\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -64,7 +60,7 @@ Swen Kooij (Photonios)
 .PP
 
 .PP
-Definition at line 49 of file message\&.h\&.
+Definition at line 48 of file message\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Senergy::Dns::Message::Message ()"
@@ -107,7 +103,7 @@ Definition at line 33 of file dns_message\&.cpp\&.
 .PP
 Dumps all information currently in this message to the standard output\&. 
 .PP
-Definition at line 90 of file dns_message\&.cpp\&.
+Definition at line 84 of file dns_message\&.cpp\&.
 .SS "int Senergy::Dns::Message::GetQuestionCount ()"
 
 .PP
@@ -120,13 +116,13 @@ The amount of questions this DNS message currently holds\&.
 .PP
 
 .PP
-Definition at line 85 of file dns_message\&.cpp\&.
+Definition at line 79 of file dns_message\&.cpp\&.
 .SS "void Senergy::Dns::Message::Reset ()"
 
 .PP
 Resets this message so that all vectors/collections will be cleared, and default values restored\&. 
 .PP
-Definition at line 80 of file dns_message\&.cpp\&.
+Definition at line 74 of file dns_message\&.cpp\&.
 .SS "bool Senergy::Dns::Message::Serialize (\fBByteBuffer\fP &buffer)"
 
 .PP
@@ -144,7 +140,7 @@ A boolean indicating whether serialization was succesfull\&. True is returned wh
 .PP
 
 .PP
-Definition at line 55 of file dns_message\&.cpp\&.
+Definition at line 52 of file dns_message\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "\fBMessageQuestionPtrVector\fP Senergy::Dns::Message::Questions"
@@ -152,13 +148,7 @@ Definition at line 55 of file dns_message\&.cpp\&.
 .PP
 Holds all the 'question messages' that are part of this DNS message\&. 
 .PP
-Definition at line 111 of file message\&.h\&.
-.SS "\fBResourceRecordCollection\fP Senergy::Dns::Message::ResourceRecords"
-
-.PP
-Holds all resource records that are part of this DNS message\&. 
-.PP
-Definition at line 116 of file message\&.h\&.
+Definition at line 110 of file message\&.h\&.
 
 .SH "Author"
 .PP 

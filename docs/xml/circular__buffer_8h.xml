@@ -6,119 +6,89 @@
     <includedby refid="circular__buffer_8cpp" local="no">src/circular_buffer.cpp</includedby>
     <includedby refid="id__factory_8h" local="no">src/senergy/dns/id_factory.h</includedby>
     <incdepgraph>
-      <node id="342">
+      <node id="250">
         <label>src/senergy/circular_buffer.h</label>
         <link refid="circular_buffer.h"/>
-        <childnode refid="343" relation="include">
+        <childnode refid="251" relation="include">
         </childnode>
       </node>
-      <node id="343">
+      <node id="251">
         <label>vector</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="347">
+      <node id="255">
         <label>src/dns_id_factory.cpp</label>
         <link refid="dns__id__factory_8cpp"/>
       </node>
-      <node id="344">
+      <node id="252">
         <label>src/senergy/circular_buffer.h</label>
         <link refid="circular_buffer.h"/>
-        <childnode refid="345" relation="include">
+        <childnode refid="253" relation="include">
         </childnode>
-        <childnode refid="346" relation="include">
+        <childnode refid="254" relation="include">
         </childnode>
       </node>
-      <node id="355">
+      <node id="263">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="345">
+      <node id="253">
         <label>src/circular_buffer.cpp</label>
         <link refid="circular__buffer_8cpp"/>
       </node>
-      <node id="353">
+      <node id="261">
         <label>src/dns_requester.cpp</label>
         <link refid="dns__requester_8cpp"/>
       </node>
-      <node id="349">
+      <node id="257">
         <label>src/dns_message_header.cpp</label>
         <link refid="dns__message__header_8cpp"/>
       </node>
-      <node id="350">
+      <node id="258">
         <label>src/senergy/dns/message.h</label>
         <link refid="message_8h"/>
-        <childnode refid="351" relation="include">
+        <childnode refid="259" relation="include">
         </childnode>
-        <childnode refid="352" relation="include">
+        <childnode refid="260" relation="include">
         </childnode>
-        <childnode refid="354" relation="include">
+        <childnode refid="262" relation="include">
         </childnode>
       </node>
-      <node id="346">
+      <node id="254">
         <label>src/senergy/dns/id_factory.h</label>
         <link refid="id__factory_8h"/>
-        <childnode refid="347" relation="include">
+        <childnode refid="255" relation="include">
         </childnode>
-        <childnode refid="348" relation="include">
+        <childnode refid="256" relation="include">
         </childnode>
       </node>
-      <node id="357">
-        <label>src/dns_record_ipv4address.cpp</label>
-        <link refid="dns__record__ipv4address_8cpp"/>
-      </node>
-      <node id="351">
+      <node id="259">
         <label>src/dns_message.cpp</label>
         <link refid="dns__message_8cpp"/>
       </node>
-      <node id="359">
-        <label>src/dns_resource_record_collection.cpp</label>
-        <link refid="dns__resource__record__collection_8cpp"/>
-      </node>
-      <node id="354">
+      <node id="262">
         <label>src/senergy/senergy.h</label>
         <link refid="senergy_8h"/>
-        <childnode refid="355" relation="include">
+        <childnode refid="263" relation="include">
         </childnode>
       </node>
-      <node id="358">
-        <label>src/senergy/dns/resource_record_collection.h</label>
-        <link refid="resource__record__collection_8h"/>
-        <childnode refid="359" relation="include">
-        </childnode>
-        <childnode refid="350" relation="include">
-        </childnode>
-        <childnode refid="354" relation="include">
-        </childnode>
-      </node>
-      <node id="356">
-        <label>src/senergy/dns/record_ipv4address.h</label>
-        <link refid="record__ipv4address_8h"/>
-        <childnode refid="357" relation="include">
-        </childnode>
-        <childnode refid="358" relation="include">
-        </childnode>
-        <childnode refid="354" relation="include">
-        </childnode>
-      </node>
-      <node id="352">
+      <node id="260">
         <label>src/senergy/dns/requester.h</label>
         <link refid="requester_8h"/>
-        <childnode refid="353" relation="include">
+        <childnode refid="261" relation="include">
         </childnode>
-        <childnode refid="354" relation="include">
+        <childnode refid="262" relation="include">
         </childnode>
       </node>
-      <node id="348">
+      <node id="256">
         <label>src/senergy/dns/message_header.h</label>
         <link refid="message__header_8h"/>
-        <childnode refid="349" relation="include">
+        <childnode refid="257" relation="include">
         </childnode>
-        <childnode refid="350" relation="include">
+        <childnode refid="258" relation="include">
         </childnode>
-        <childnode refid="356" relation="include">
-        </childnode>
-        <childnode refid="354" relation="include">
+        <childnode refid="262" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

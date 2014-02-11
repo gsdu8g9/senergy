@@ -6,6 +6,8 @@
     <innerclass refid="class_senergy_1_1_circular_buffer" prot="public">Senergy::CircularBuffer</innerclass>
     <innerclass refid="class_senergy_1_1_console" prot="public">Senergy::Console</innerclass>
     <innerclass refid="class_senergy_1_1_convert" prot="public">Senergy::Convert</innerclass>
+    <innerclass refid="struct_senergy_1_1_fast_map_item" prot="public">Senergy::FastMapItem</innerclass>
+    <innerclass refid="class_senergy_1_1_fast_map" prot="public">Senergy::FastMap</innerclass>
     <innerclass refid="class_senergy_1_1_logger" prot="public">Senergy::Logger</innerclass>
     <innerclass refid="class_senergy_1_1_print" prot="public">Senergy::Print</innerclass>
     <innerclass refid="class_senergy_1_1_socket" prot="public">Senergy::Socket</innerclass>
