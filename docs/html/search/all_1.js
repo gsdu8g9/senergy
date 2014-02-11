@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['base',['Base',['../class_senergy_1_1_dns_1_1_resource_record_interface.html#a59bcfc62cfc3a68464245b13ad3785e6',1,'Senergy::Dns::ResourceRecordInterface']]],
   ['building',['Building',['../building.html',1,'']]],
   ['building_2edox',['building.dox',['../building_8dox.html',1,'']]],
   ['bytebuffer',['ByteBuffer',['../class_senergy_1_1_byte_buffer.html',1,'Senergy']]],

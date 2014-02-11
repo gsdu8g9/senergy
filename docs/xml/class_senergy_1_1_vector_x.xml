@@ -72,24 +72,24 @@
 <para>T The type that the vector will contain.</para><para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="42">
+      <node id="51">
         <label>std::vector&lt; T &gt;</label>
       </node>
-      <node id="41">
+      <node id="50">
         <label>Senergy::VectorX&lt; T &gt;</label>
         <link refid="class_senergy_1_1_vector_x"/>
-        <childnode refid="42" relation="public-inheritance">
+        <childnode refid="51" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="44">
+      <node id="53">
         <label>std::vector&lt; T &gt;</label>
       </node>
-      <node id="43">
+      <node id="52">
         <label>Senergy::VectorX&lt; T &gt;</label>
         <link refid="class_senergy_1_1_vector_x"/>
-        <childnode refid="44" relation="public-inheritance">
+        <childnode refid="53" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

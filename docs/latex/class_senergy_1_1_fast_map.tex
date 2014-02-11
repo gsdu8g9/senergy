@@ -1,0 +1,97 @@
+\hypertarget{class_senergy_1_1_fast_map}{\section{Senergy\-:\-:Fast\-Map$<$ T\-Key, T\-Value $>$ Class Template Reference}
+\label{class_senergy_1_1_fast_map}\index{Senergy\-::\-Fast\-Map$<$ T\-Key, T\-Value $>$@{Senergy\-::\-Fast\-Map$<$ T\-Key, T\-Value $>$}}
+}
+
+
+The fast map is an alternative to std\-::map. An std\-::map is relatively slow with a small number of items. \hyperlink{class_senergy_1_1_fast_map}{Fast\-Map} uses a vector of structures instead, and outperforms std\-::map with collections with fewer items. The beauty of this class is that it can be used as a drop-\/in replacement for std\-::map, it uses the exact same values, simply replacing the declaration is enough.  
+
+
+
+
+{\ttfamily \#include $<$fastmap.\-h$>$}
+
+Inheritance diagram for Senergy\-:\-:Fast\-Map$<$ T\-Key, T\-Value $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_senergy_1_1_fast_map}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_senergy_1_1_fast_map_item}{Fast\-Map\-Item}$<$ T\-Key, T\-Value $>$ \& \hyperlink{class_senergy_1_1_fast_map_a869e057da1eeb6d54f510e1302a8b7a1}{at} (int index)
+\begin{DoxyCompactList}\small\item\em Provides access to the base class's at method. \end{DoxyCompactList}\item 
+T\-Value \& \hyperlink{class_senergy_1_1_fast_map_ac06929fda5af594e6ccf96198eac1819}{operator\mbox{[}$\,$\mbox{]}} (T\-Key key)
+\begin{DoxyCompactList}\small\item\em Allows access to the pairs stored inside this map, one specifies the key of the item to retrieve, and the value is returned as a reference. If the specified key does not exists yet, it will be created, and the specified value will be set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\-Key, class T\-Value$>$class Senergy\-::\-Fast\-Map$<$ T\-Key, T\-Value $>$}
+
+The fast map is an alternative to std\-::map. An std\-::map is relatively slow with a small number of items. \hyperlink{class_senergy_1_1_fast_map}{Fast\-Map} uses a vector of structures instead, and outperforms std\-::map with collections with fewer items. The beauty of this class is that it can be used as a drop-\/in replacement for std\-::map, it uses the exact same values, simply replacing the declaration is enough. 
+
+T\-Key The data type of the key that is stored in the map.  T\-Value The data type of the value that is stored in the map.
+
+\begin{DoxyAuthor}{Author}
+Swen Kooij (Photonios) 
+\end{DoxyAuthor}
+
+
+Definition at line 59 of file fastmap.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_fast_map_a869e057da1eeb6d54f510e1302a8b7a1}{\index{Senergy\-::\-Fast\-Map@{Senergy\-::\-Fast\-Map}!at@{at}}
+\index{at@{at}!Senergy::FastMap@{Senergy\-::\-Fast\-Map}}
+\subsubsection[{at}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T\-Key , class T\-Value $>$ {\bf Fast\-Map\-Item}$<$T\-Key, T\-Value$>$\& {\bf Senergy\-::\-Fast\-Map}$<$ T\-Key, T\-Value $>$\-::at (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_senergy_1_1_fast_map_a869e057da1eeb6d54f510e1302a8b7a1}
+
+
+Provides access to the base class's at method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the item you want to acquire.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The fast map item at the specified index. 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file fastmap.\-h.
+
+\hypertarget{class_senergy_1_1_fast_map_ac06929fda5af594e6ccf96198eac1819}{\index{Senergy\-::\-Fast\-Map@{Senergy\-::\-Fast\-Map}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Senergy::FastMap@{Senergy\-::\-Fast\-Map}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T\-Key , class T\-Value $>$ T\-Value\& {\bf Senergy\-::\-Fast\-Map}$<$ T\-Key, T\-Value $>$\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{T\-Key}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_senergy_1_1_fast_map_ac06929fda5af594e6ccf96198eac1819}
+
+
+Allows access to the pairs stored inside this map, one specifies the key of the item to retrieve, and the value is returned as a reference. If the specified key does not exists yet, it will be created, and the specified value will be set. 
+
+If the specified key is already set, then the value will be set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key of the item/pair you want to retrieve.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of that is associated with the specified pair. 
+\end{DoxyReturn}
+
+
+Definition at line 89 of file fastmap.\-h.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/senergy/\hyperlink{fastmap_8h}{fastmap.\-h}\end{DoxyCompactItemize}

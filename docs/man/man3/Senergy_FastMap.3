@@ -1,0 +1,85 @@
+.TH "Senergy::FastMap< TKey, TValue >" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::FastMap< TKey, TValue > \- 
+.PP
+The fast map is an alternative to std::map\&. An std::map is relatively slow with a small number of items\&. \fBFastMap\fP uses a vector of structures instead, and outperforms std::map with collections with fewer items\&. The beauty of this class is that it can be used as a drop-in replacement for std::map, it uses the exact same values, simply replacing the declaration is enough\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <fastmap\&.h>\fP
+.PP
+Inherits vector< FastMapItem< TKey, TValue > >\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFastMapItem\fP< TKey, TValue > & \fBat\fP (int index)"
+.br
+.RI "\fIProvides access to the base class's at method\&. \fP"
+.ti -1c
+.RI "TValue & \fBoperator[]\fP (TKey key)"
+.br
+.RI "\fIAllows access to the pairs stored inside this map, one specifies the key of the item to retrieve, and the value is returned as a reference\&. If the specified key does not exists yet, it will be created, and the specified value will be set\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class TKey, class TValue>class Senergy::FastMap< TKey, TValue >"
+The fast map is an alternative to std::map\&. An std::map is relatively slow with a small number of items\&. \fBFastMap\fP uses a vector of structures instead, and outperforms std::map with collections with fewer items\&. The beauty of this class is that it can be used as a drop-in replacement for std::map, it uses the exact same values, simply replacing the declaration is enough\&. 
+
+TKey The data type of the key that is stored in the map\&.  TValue The data type of the value that is stored in the map\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.PP
+Definition at line 59 of file fastmap\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class TKey , class TValue > \fBFastMapItem\fP<TKey, TValue>& \fBSenergy::FastMap\fP< TKey, TValue >::at (intindex)\fC [inline]\fP"
+
+.PP
+Provides access to the base class's at method\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIindex\fP The index of the item you want to acquire\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The fast map item at the specified index\&. 
+.RE
+.PP
+
+.PP
+Definition at line 73 of file fastmap\&.h\&.
+.SS "template<class TKey , class TValue > TValue& \fBSenergy::FastMap\fP< TKey, TValue >::operator[] (TKeykey)\fC [inline]\fP"
+
+.PP
+Allows access to the pairs stored inside this map, one specifies the key of the item to retrieve, and the value is returned as a reference\&. If the specified key does not exists yet, it will be created, and the specified value will be set\&. If the specified key is already set, then the value will be set\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIkey\fP The key of the item/pair you want to retrieve\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The value of that is associated with the specified pair\&. 
+.RE
+.PP
+
+.PP
+Definition at line 89 of file fastmap\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

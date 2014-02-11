@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_senergy_1_1_fast_map" kind="class" prot="public">
+    <compoundname>Senergy::FastMap</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::vector&lt; FastMapItem&lt; TKey, TValue &gt; &gt;</basecompoundref>
+    <includes refid="fastmap_8h" local="no">fastmap.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class TKey</type>
+      </param>
+      <param>
+        <type>class TValue</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_senergy_1_1_fast_map_1a4becdc6892e192722b85e8a177d4518d" prot="private" static="no">
+        <type>std::vector&lt; <ref refid="struct_senergy_1_1_fast_map_item" kindref="compound">FastMapItem</ref>&lt; TKey, TValue &gt; &gt;</type>
+        <definition>typedef std::vector&lt;FastMapItem&lt;TKey, TValue&gt; &gt; Senergy::FastMap&lt; TKey, TValue &gt;::FastMapBase</definition>
+        <argsstring></argsstring>
+        <name>FastMapBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" line="63" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_senergy_1_1_fast_map_1a869e057da1eeb6d54f510e1302a8b7a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_senergy_1_1_fast_map_item" kindref="compound">FastMapItem</ref>&lt; TKey, TValue &gt; &amp;</type>
+        <definition>FastMapItem&lt;TKey, TValue&gt;&amp; Senergy::FastMap&lt; TKey, TValue &gt;::at</definition>
+        <argsstring>(int index)</argsstring>
+        <name>at</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Provides access to the base class&apos;s at method. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the item you want to acquire.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The fast map item at the specified index. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" line="73" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_fast_map_1ac06929fda5af594e6ccf96198eac1819" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TValue &amp;</type>
+        <definition>TValue&amp; Senergy::FastMap&lt; TKey, TValue &gt;::operator[]</definition>
+        <argsstring>(TKey key)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>TKey</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Allows access to the pairs stored inside this map, one specifies the key of the item to retrieve, and the value is returned as a reference. If the specified key does not exists yet, it will be created, and the specified value will be set. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the specified key is already set, then the value will be set.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key of the item/pair you want to retrieve.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value of that is associated with the specified pair. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" line="89" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" bodystart="89" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The fast map is an alternative to std::map. An std::map is relatively slow with a small number of items. <ref refid="class_senergy_1_1_fast_map" kindref="compound">FastMap</ref> uses a vector of structures instead, and outperforms std::map with collections with fewer items. The beauty of this class is that it can be used as a drop-in replacement for std::map, it uses the exact same values, simply replacing the declaration is enough. </para>    </briefdescription>
+    <detaileddescription>
+<para>TKey The data type of the key that is stored in the map.  TValue The data type of the value that is stored in the map.</para><para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="11">
+        <label>std::vector&lt; FastMapItem&lt; TKey, TValue &gt; &gt;</label>
+      </node>
+      <node id="10">
+        <label>Senergy::FastMap&lt; TKey, TValue &gt;</label>
+        <link refid="class_senergy_1_1_fast_map"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="13">
+        <label>std::vector&lt; FastMapItem&lt; TKey, TValue &gt; &gt;</label>
+      </node>
+      <node id="12">
+        <label>Senergy::FastMap&lt; TKey, TValue &gt;</label>
+        <link refid="class_senergy_1_1_fast_map"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" line="60" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" bodystart="59" bodyend="103"/>
+    <listofallmembers>
+      <member refid="class_senergy_1_1_fast_map_1a869e057da1eeb6d54f510e1302a8b7a1" prot="public" virt="non-virtual"><scope>Senergy::FastMap</scope><name>at</name></member>
+      <member refid="class_senergy_1_1_fast_map_1a4becdc6892e192722b85e8a177d4518d" prot="private" virt="non-virtual"><scope>Senergy::FastMap</scope><name>FastMapBase</name></member>
+      <member refid="class_senergy_1_1_fast_map_1ac06929fda5af594e6ccf96198eac1819" prot="public" virt="non-virtual"><scope>Senergy::FastMap</scope><name>operator[]</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

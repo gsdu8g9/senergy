@@ -1,0 +1,35 @@
+.TH "src/senergy/fastmap.h" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/senergy/fastmap.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <vector>\fP
+.br
+\fC#include <stddef\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSenergy::FastMapItem< TKey, TValue >\fP"
+.br
+.RI "\fIThe structure that \fBFastMap\fP stores in it's vector, this emulates a std::map iterator\&. \fP"
+.ti -1c
+.RI "class \fBSenergy::FastMap< TKey, TValue >\fP"
+.br
+.RI "\fIThe fast map is an alternative to std::map\&. An std::map is relatively slow with a small number of items\&. \fBFastMap\fP uses a vector of structures instead, and outperforms std::map with collections with fewer items\&. The beauty of this class is that it can be used as a drop-in replacement for std::map, it uses the exact same values, simply replacing the declaration is enough\&. \fP"
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "\fBSenergy\fP"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

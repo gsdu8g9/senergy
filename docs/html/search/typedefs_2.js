@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['socketptr',['SocketPtr',['../class_senergy_1_1_socket.html#ac9ff20ce80df2d0c2900cd0940ffe860',1,'Senergy::Socket::SocketPtr()'],['../namespace_senergy.html#a9014e48a368555ba932efd8d17eb2d23',1,'Senergy::SocketPtr()']]],
-  ['stringvector',['StringVector',['../namespace_senergy.html#a09aea2e19671645414361ca8388aebfe',1,'Senergy']]]
+  ['resourcerecordbaseptr',['ResourceRecordBasePtr',['../namespace_senergy_1_1_dns.html#a72915c893fbf242018e79d8f92e1646b',1,'Senergy::Dns']]],
+  ['resourcerecordinterfaceptr',['ResourceRecordInterfacePtr',['../namespace_senergy_1_1_dns.html#a425b37e088cb64a1bda6205581ade5c8',1,'Senergy::Dns']]]
 ];

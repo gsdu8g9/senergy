@@ -12,7 +12,10 @@
     <innerfile refid="dns__message__header_8cpp">dns_message_header.cpp</innerfile>
     <innerfile refid="dns__message__question_8cpp">dns_message_question.cpp</innerfile>
     <innerfile refid="dns__requester_8cpp">dns_requester.cpp</innerfile>
+    <innerfile refid="dns__resource__record__base_8cpp">dns_resource_record_base.cpp</innerfile>
     <innerfile refid="dns__resource__record__classes_8cpp">dns_resource_record_classes.cpp</innerfile>
+    <innerfile refid="dns__resource__record__interface_8cpp">dns_resource_record_interface.cpp</innerfile>
+    <innerfile refid="dns__resource__record__mapper_8cpp">dns_resource_record_mapper.cpp</innerfile>
     <innerfile refid="dns__resource__record__types_8cpp">dns_resource_record_types.cpp</innerfile>
     <innerfile refid="dns__rootnameserver_8cpp">dns_rootnameserver.cpp</innerfile>
     <innerfile refid="dns__utils_8cpp">dns_utils.cpp</innerfile>

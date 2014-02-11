@@ -1,0 +1,48 @@
+.TH "src/senergy/dns/resource_record_mapper.h" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/senergy/dns/resource_record_mapper.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <memory>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <type_traits>\fP
+.br
+\fC#include <map>\fP
+.br
+\fC#include <senergy/fastmap\&.h>\fP
+.br
+\fC#include <senergy/dns/resource_record_types\&.h>\fP
+.br
+\fC#include <senergy/dns/resource_record_classes\&.h>\fP
+.br
+\fC#include <senergy/dns/resource_record_base\&.h>\fP
+.br
+\fC#include <senergy/dns/resource_record_interface\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBSenergy::Dns::ResourceRecordMapper\fP"
+.br
+.RI "\fIHelps in mapping values from the ResourceRecordType enumuration to classes that derive from the \fBResourceRecordInterface\fP class\&. This is to prevent huge switches or blocks of if statements\&. This is a little bit complex, but it gives us way more flexibility and makes the code a bit easier to maintain\&. \fP"
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "\fBSenergy\fP"
+.br
+.ti -1c
+.RI "\fBSenergy::Dns\fP"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

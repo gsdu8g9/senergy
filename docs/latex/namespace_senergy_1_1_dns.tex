@@ -16,6 +16,12 @@ class \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question}
 \begin{DoxyCompactList}\small\item\em Represents a D\-N\-S question, as defined in section 4.\-1.\-2 of R\-F\-C-\/1035. A D\-N\-S question is usually transmitted by a D\-N\-S client, asking to lookup the I\-P address of a host name. \end{DoxyCompactList}\item 
 class \hyperlink{class_senergy_1_1_dns_1_1_requester}{Requester}
 \begin{DoxyCompactList}\small\item\em Allows querying remote D\-N\-S servers, wraps sending and receiving D\-N\-S messages. \end{DoxyCompactList}\item 
+class \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Resource\-Record\-Base}
+\begin{DoxyCompactList}\small\item\em Represents the first part of a resource record. A resource record is defined in section 4.\-1.\-3 of R\-F\-C 1035. However, a resource record can be of different types. The last part of a resource record is different depending of what type of resource record we're dealing with. This class handles the serializing and deserializing of the first part of a resource record, the part that is always the same. Classes that implement the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class take care of the serialization and deserialization of the rest of the type-\/specific part. \end{DoxyCompactList}\item 
+class \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface}
+\begin{DoxyCompactList}\small\item\em Defines an interface using pure virtuals for classes that wish to implement a specic resource record type. \end{DoxyCompactList}\item 
+class \hyperlink{class_senergy_1_1_dns_1_1_resource_record_mapper}{Resource\-Record\-Mapper}
+\begin{DoxyCompactList}\small\item\em Helps in mapping values from the Resource\-Record\-Type enumuration to classes that derive from the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class. This is to prevent huge switches or blocks of if statements. This is a little bit complex, but it gives us way more flexibility and makes the code a bit easier to maintain. \end{DoxyCompactList}\item 
 class \hyperlink{class_senergy_1_1_dns_1_1_root_name_server}{Root\-Name\-Server}
 \begin{DoxyCompactList}\small\item\em Represents one of the 13 Root Name Servers (D\-N\-S) that are currently operating around the world. Provides access to the functionalities that root name servers offer. \end{DoxyCompactList}\item 
 class \hyperlink{class_senergy_1_1_dns_1_1_utils}{Utils}
@@ -28,7 +34,13 @@ $<$ \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} $>
 \begin{DoxyCompactList}\small\item\em Simple shared pointer to a Message\-Question\-Ptr instance. \end{DoxyCompactList}\item 
 typedef \hyperlink{class_senergy_1_1_vector_x}{Vector\-X}\\*
 $<$ \hyperlink{namespace_senergy_1_1_dns_a425a2a6f3b5c18973c524a99bdfa4ef0}{Message\-Question\-Ptr} $>$ \hyperlink{namespace_senergy_1_1_dns_a6983ff2422cfa510ca61831ae5cf1ffc}{Message\-Question\-Ptr\-Vector}
-\begin{DoxyCompactList}\small\item\em A vector of shared pointers to \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} instances. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A vector of shared pointers to \hyperlink{class_senergy_1_1_dns_1_1_message_question}{Message\-Question} instances. \end{DoxyCompactList}\item 
+typedef std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Resource\-Record\-Base} $>$ \hyperlink{namespace_senergy_1_1_dns_a72915c893fbf242018e79d8f92e1646b}{Resource\-Record\-Base\-Ptr}
+\item 
+typedef std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} $>$ \hyperlink{namespace_senergy_1_1_dns_a425b37e088cb64a1bda6205581ade5c8}{Resource\-Record\-Interface\-Ptr}
+\begin{DoxyCompactList}\small\item\em Typedef for a shared pointer to an instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -167,6 +179,24 @@ A vector of shared pointers to \hyperlink{class_senergy_1_1_dns_1_1_message_ques
 
 
 Definition at line 198 of file message\-\_\-question.\-h.
+
+\hypertarget{namespace_senergy_1_1_dns_a72915c893fbf242018e79d8f92e1646b}{\index{Senergy\-::\-Dns@{Senergy\-::\-Dns}!Resource\-Record\-Base\-Ptr@{Resource\-Record\-Base\-Ptr}}
+\index{Resource\-Record\-Base\-Ptr@{Resource\-Record\-Base\-Ptr}!Senergy::Dns@{Senergy\-::\-Dns}}
+\subsubsection[{Resource\-Record\-Base\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::shared\-\_\-ptr$<${\bf Resource\-Record\-Base}$>$ {\bf Senergy\-::\-Dns\-::\-Resource\-Record\-Base\-Ptr}}}\label{namespace_senergy_1_1_dns_a72915c893fbf242018e79d8f92e1646b}
+
+
+Definition at line 209 of file resource\-\_\-record\-\_\-base.\-h.
+
+\hypertarget{namespace_senergy_1_1_dns_a425b37e088cb64a1bda6205581ade5c8}{\index{Senergy\-::\-Dns@{Senergy\-::\-Dns}!Resource\-Record\-Interface\-Ptr@{Resource\-Record\-Interface\-Ptr}}
+\index{Resource\-Record\-Interface\-Ptr@{Resource\-Record\-Interface\-Ptr}!Senergy::Dns@{Senergy\-::\-Dns}}
+\subsubsection[{Resource\-Record\-Interface\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::shared\-\_\-ptr$<${\bf Resource\-Record\-Interface}$>$ {\bf Senergy\-::\-Dns\-::\-Resource\-Record\-Interface\-Ptr}}}\label{namespace_senergy_1_1_dns_a425b37e088cb64a1bda6205581ade5c8}
+
+
+Typedef for a shared pointer to an instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class. 
+
+
+
+Definition at line 134 of file resource\-\_\-record\-\_\-interface.\-h.
 
 
 

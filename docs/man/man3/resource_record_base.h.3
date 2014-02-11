@@ -1,0 +1,51 @@
+.TH "src/senergy/dns/resource_record_base.h" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/senergy/dns/resource_record_base.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <string>\fP
+.br
+\fC#include <memory>\fP
+.br
+\fC#include <senergy/dns/resource_record_types\&.h>\fP
+.br
+\fC#include <senergy/dns/resource_record_classes\&.h>\fP
+.br
+\fC#include <senergy/dns/utils\&.h>\fP
+.br
+\fC#include <senergy/bytebuffer\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBSenergy::Dns::ResourceRecordBase\fP"
+.br
+.RI "\fIRepresents the first part of a resource record\&. A resource record is defined in section 4\&.1\&.3 of RFC 1035\&. However, a resource record can be of different types\&. The last part of a resource record is different depending of what type of resource record we're dealing with\&. This class handles the serializing and deserializing of the first part of a resource record, the part that is always the same\&. Classes that implement the \fBResourceRecordInterface\fP class take care of the serialization and deserialization of the rest of the type-specific part\&. \fP"
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "\fBSenergy\fP"
+.br
+.ti -1c
+.RI "\fBSenergy::Dns\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::shared_ptr
+.br
+< ResourceRecordBase > \fBSenergy::Dns::ResourceRecordBasePtr\fP"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

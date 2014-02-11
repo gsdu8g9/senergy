@@ -1,0 +1,27 @@
+\hypertarget{resource__record__base_8h}{\section{src/senergy/dns/resource\-\_\-record\-\_\-base.h File Reference}
+\label{resource__record__base_8h}\index{src/senergy/dns/resource\-\_\-record\-\_\-base.\-h@{src/senergy/dns/resource\-\_\-record\-\_\-base.\-h}}
+}
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$senergy/dns/resource\-\_\-record\-\_\-types.\-h$>$}\\*
+{\ttfamily \#include $<$senergy/dns/resource\-\_\-record\-\_\-classes.\-h$>$}\\*
+{\ttfamily \#include $<$senergy/dns/utils.\-h$>$}\\*
+{\ttfamily \#include $<$senergy/bytebuffer.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}
+\begin{DoxyCompactList}\small\item\em Represents the first part of a resource record. A resource record is defined in section 4.\-1.\-3 of R\-F\-C 1035. However, a resource record can be of different types. The last part of a resource record is different depending of what type of resource record we're dealing with. This class handles the serializing and deserializing of the first part of a resource record, the part that is always the same. Classes that implement the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class take care of the serialization and deserialization of the rest of the type-\/specific part. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_senergy}{Senergy}
+\item 
+\hyperlink{namespace_senergy_1_1_dns}{Senergy\-::\-Dns}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::shared\-\_\-ptr\\*
+$<$ Resource\-Record\-Base $>$ \hyperlink{namespace_senergy_1_1_dns_a72915c893fbf242018e79d8f92e1646b}{Senergy\-::\-Dns\-::\-Resource\-Record\-Base\-Ptr}
+\end{DoxyCompactItemize}

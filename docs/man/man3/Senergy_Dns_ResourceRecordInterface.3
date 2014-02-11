@@ -1,0 +1,189 @@
+.TH "Senergy::Dns::ResourceRecordInterface" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::Dns::ResourceRecordInterface \- 
+.PP
+Defines an interface using pure virtuals for classes that wish to implement a specic resource record type\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <resource_record_interface\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBResourceRecordInterface\fP (\fBResourceRecordBase\fP &base)"
+.br
+.RI "\fIInitializes a new instance of of the ResourceRecordInterfacePtr class with a reference to an instance of the \fBResourceRecordBase\fP class\&. \fP"
+.ti -1c
+.RI "virtual bool \fBSerialize\fP (\fBByteBuffer\fP &buffer)=0"
+.br
+.RI "\fISerializes this record into the specified buffer\&. This does not handle the serialization of the first (base) part of the resource record\&. Call SerializeBase for that\&. \fP"
+.ti -1c
+.RI "virtual bool \fBDeserialize\fP (\fBByteBuffer\fP &buffer)=0"
+.br
+.RI "\fIDeserializes the record from the specified buffer\&. This does not handle deserialization of the first (base) part of the resource record\&. Call DeserializeBase for that\&. \fP"
+.ti -1c
+.RI "virtual ResourceRecordInterfacePtr \fBCreate\fP (\fBResourceRecordBase\fP &base)=0"
+.br
+.RI "\fICreates a new instance of this class, and returns it as a shared pointer to an instance of the \fBResourceRecordInterface\fP class\&. \fP"
+.ti -1c
+.RI "virtual \fBResourceRecordType\fP \fBGetType\fP ()=0"
+.br
+.RI "\fIGets the type of of this record (derived), wich is a value from the ResourceRecordType enumuration\&. \fP"
+.ti -1c
+.RI "virtual \fBResourceRecordClass\fP \fBGetClass\fP ()"
+.br
+.RI "\fIGets the class of this record\&. This will almost always be the same and does not have to be implemented by the derived class\&. \fP"
+.ti -1c
+.RI "\fBResourceRecordBase\fP & \fBGetBase\fP () const "
+.br
+.RI "\fIReturns the underlying base resource record for this record\&. \fP"
+.in -1c
+.SS "Protected Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBResourceRecordBase\fP \fBBase\fP"
+.br
+.RI "\fIMore logical way to allow access to the base class\&. \fP"
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBResourceRecordBase\fP & \fBm_base\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Defines an interface using pure virtuals for classes that wish to implement a specic resource record type\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file resource_record_interface\&.h\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef \fBResourceRecordBase\fP \fBSenergy::Dns::ResourceRecordInterface::Base\fP\fC [protected]\fP"
+
+.PP
+More logical way to allow access to the base class\&. 
+.PP
+Definition at line 125 of file resource_record_interface\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Senergy::Dns::ResourceRecordInterface::ResourceRecordInterface (\fBResourceRecordBase\fP &base)"
+
+.PP
+Initializes a new instance of of the ResourceRecordInterfacePtr class with a reference to an instance of the \fBResourceRecordBase\fP class\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbase\fP A resource record can have multiple types, a class that implents this interface handles the serialization and deserialization of the type-specific part\&.
+.RE
+.PP
+The first part of a resource record is always the same\&. This is why we need an instance of the base class here\&. 
+.PP
+Definition at line 29 of file dns_resource_record_interface\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual ResourceRecordInterfacePtr Senergy::Dns::ResourceRecordInterface::Create (\fBResourceRecordBase\fP &base)\fC [pure virtual]\fP"
+
+.PP
+Creates a new instance of this class, and returns it as a shared pointer to an instance of the \fBResourceRecordInterface\fP class\&. The derived class should create an instance of itself and return the polymorphic form (as it's base)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbase\fP The \fBResourceRecordBase\fP class to pass to the constructor\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A shared pointer to an instance of the \fBResourceRecordInterface\fP class, which is just the polymorphic form of the derived class\&. 
+.RE
+.PP
+
+.SS "virtual bool Senergy::Dns::ResourceRecordInterface::Deserialize (\fBByteBuffer\fP &buffer)\fC [pure virtual]\fP"
+
+.PP
+Deserializes the record from the specified buffer\&. This does not handle deserialization of the first (base) part of the resource record\&. Call DeserializeBase for that\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to deserialize from\&. 
+.RE
+.PP
+
+.SS "\fBResourceRecordBase\fP & Senergy::Dns::ResourceRecordInterface::GetBase () const"
+
+.PP
+Returns the underlying base resource record for this record\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+An instance of the \fBResourceRecordBase\fP class, which represents the first part in this resource record\&. 
+.RE
+.PP
+
+.PP
+Definition at line 34 of file dns_resource_record_interface\&.cpp\&.
+.SS "\fBResourceRecordClass\fP Senergy::Dns::ResourceRecordInterface::GetClass ()\fC [virtual]\fP"
+
+.PP
+Gets the class of this record\&. This will almost always be the same and does not have to be implemented by the derived class\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A value from the ResourceRecordClass enumuration which denotes the class of this record\&. 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file dns_resource_record_interface\&.cpp\&.
+.SS "virtual \fBResourceRecordType\fP Senergy::Dns::ResourceRecordInterface::GetType ()\fC [pure virtual]\fP"
+
+.PP
+Gets the type of of this record (derived), wich is a value from the ResourceRecordType enumuration\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A value from the ResourceRecordType enumuration which denotes the type of this record\&. 
+.RE
+.PP
+
+.SS "virtual bool Senergy::Dns::ResourceRecordInterface::Serialize (\fBByteBuffer\fP &buffer)\fC [pure virtual]\fP"
+
+.PP
+Serializes this record into the specified buffer\&. This does not handle the serialization of the first (base) part of the resource record\&. Call SerializeBase for that\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to serialize to\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether the serialization was successful\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBResourceRecordBase\fP& Senergy::Dns::ResourceRecordInterface::m_base\fC [protected]\fP"
+
+.PP
+Definition at line 128 of file resource_record_interface\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

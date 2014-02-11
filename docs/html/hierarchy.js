@@ -6,12 +6,17 @@ var hierarchy =
     [ "Senergy::FastMapItem< TKey, TValue >", "struct_senergy_1_1_fast_map_item.html", null ],
     [ "Senergy::Dns::IdFactory", "class_senergy_1_1_dns_1_1_id_factory.html", null ],
     [ "Senergy::Logger", "class_senergy_1_1_logger.html", null ],
+    [ "map", null, [
+      [ "Senergy::Dns::ResourceRecordMapper", "class_senergy_1_1_dns_1_1_resource_record_mapper.html", null ]
+    ] ],
     [ "Senergy::Dns::Message", "class_senergy_1_1_dns_1_1_message.html", null ],
     [ "Senergy::Dns::MessageHeader", "class_senergy_1_1_dns_1_1_message_header.html", null ],
     [ "Senergy::Dns::MessageHeaderFields", "struct_senergy_1_1_dns_1_1_message_header_fields.html", null ],
     [ "Senergy::Dns::MessageQuestion", "class_senergy_1_1_dns_1_1_message_question.html", null ],
     [ "Senergy::Print", "class_senergy_1_1_print.html", null ],
     [ "Senergy::Dns::Requester", "class_senergy_1_1_dns_1_1_requester.html", null ],
+    [ "Senergy::Dns::ResourceRecordBase", "class_senergy_1_1_dns_1_1_resource_record_base.html", null ],
+    [ "Senergy::Dns::ResourceRecordInterface", "class_senergy_1_1_dns_1_1_resource_record_interface.html", null ],
     [ "Senergy::Dns::RootNameServer", "class_senergy_1_1_dns_1_1_root_name_server.html", null ],
     [ "Senergy::Socket", "class_senergy_1_1_socket.html", null ],
     [ "Senergy::Dns::Utils", "class_senergy_1_1_dns_1_1_utils.html", null ],

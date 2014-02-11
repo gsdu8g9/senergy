@@ -137,6 +137,15 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_requester.html">Requester</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows querying remote DNS servers, wraps sending and receiving DNS messages.  <a href="class_senergy_1_1_dns_1_1_requester.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html">ResourceRecordBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the first part of a resource record. A resource record is defined in section 4.1.3 of RFC 1035. However, a resource record can be of different types. The last part of a resource record is different depending of what type of resource record we're dealing with. This class handles the serializing and deserializing of the first part of a resource record, the part that is always the same. Classes that implement the <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html" title="Defines an interface using pure virtuals for classes that wish to implement a specic resource record ...">ResourceRecordInterface</a> class take care of the serialization and deserialization of the rest of the type-specific part.  <a href="class_senergy_1_1_dns_1_1_resource_record_base.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html">ResourceRecordInterface</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines an interface using pure virtuals for classes that wish to implement a specic resource record type.  <a href="class_senergy_1_1_dns_1_1_resource_record_interface.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_mapper.html">ResourceRecordMapper</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helps in mapping values from the ResourceRecordType enumuration to classes that derive from the <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html" title="Defines an interface using pure virtuals for classes that wish to implement a specic resource record ...">ResourceRecordInterface</a> class. This is to prevent huge switches or blocks of if statements. This is a little bit complex, but it gives us way more flexibility and makes the code a bit easier to maintain.  <a href="class_senergy_1_1_dns_1_1_resource_record_mapper.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_root_name_server.html">RootNameServer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents one of the 13 Root Name Servers (DNS) that are currently operating around the world. Provides access to the functionalities that root name servers offer.  <a href="class_senergy_1_1_dns_1_1_root_name_server.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,6 +163,13 @@ Typedefs</h2></td></tr>
 &lt; <a class="el" href="namespace_senergy_1_1_dns.html#a425a2a6f3b5c18973c524a99bdfa4ef0">MessageQuestionPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_senergy_1_1_dns.html#a6983ff2422cfa510ca61831ae5cf1ffc">MessageQuestionPtrVector</a></td></tr>
 <tr class="memdesc:a6983ff2422cfa510ca61831ae5cf1ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector of shared pointers to <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html" title="Represents a DNS question, as defined in section 4.1.2 of RFC-1035. A DNS question is usually transmi...">MessageQuestion</a> instances.  <a href="#a6983ff2422cfa510ca61831ae5cf1ffc">More...</a><br/></td></tr>
 <tr class="separator:a6983ff2422cfa510ca61831ae5cf1ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72915c893fbf242018e79d8f92e1646b"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html">ResourceRecordBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_senergy_1_1_dns.html#a72915c893fbf242018e79d8f92e1646b">ResourceRecordBasePtr</a></td></tr>
+<tr class="separator:a72915c893fbf242018e79d8f92e1646b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a425b37e088cb64a1bda6205581ade5c8"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html">ResourceRecordInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_senergy_1_1_dns.html#a425b37e088cb64a1bda6205581ade5c8">ResourceRecordInterfacePtr</a></td></tr>
+<tr class="memdesc:a425b37e088cb64a1bda6205581ade5c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Typedef for a shared pointer to an instance of the <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html" title="Defines an interface using pure virtuals for classes that wish to implement a specic resource record ...">ResourceRecordInterface</a> class.  <a href="#a425b37e088cb64a1bda6205581ade5c8">More...</a><br/></td></tr>
+<tr class="separator:a425b37e088cb64a1bda6205581ade5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -303,6 +319,36 @@ Enumerations</h2></td></tr>
 <p>A vector of shared pointers to <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html" title="Represents a DNS question, as defined in section 4.1.2 of RFC-1035. A DNS question is usually transmi...">MessageQuestion</a> instances. </p>
 
 <p>Definition at line <a class="el" href="message__question_8h_source.html#l00198">198</a> of file <a class="el" href="message__question_8h_source.html">message_question.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a72915c893fbf242018e79d8f92e1646b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html">ResourceRecordBase</a>&gt; <a class="el" href="namespace_senergy_1_1_dns.html#a72915c893fbf242018e79d8f92e1646b">Senergy::Dns::ResourceRecordBasePtr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="resource__record__base_8h_source.html#l00209">209</a> of file <a class="el" href="resource__record__base_8h_source.html">resource_record_base.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a425b37e088cb64a1bda6205581ade5c8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html">ResourceRecordInterface</a>&gt; <a class="el" href="namespace_senergy_1_1_dns.html#a425b37e088cb64a1bda6205581ade5c8">Senergy::Dns::ResourceRecordInterfacePtr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Typedef for a shared pointer to an instance of the <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html" title="Defines an interface using pure virtuals for classes that wish to implement a specic resource record ...">ResourceRecordInterface</a> class. </p>
+
+<p>Definition at line <a class="el" href="resource__record__interface_8h_source.html#l00134">134</a> of file <a class="el" href="resource__record__interface_8h_source.html">resource_record_interface.h</a>.</p>
 
 </div>
 </div>
@@ -618,7 +664,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_senergy.html">Senergy</a></li><li class="navelem"><a class="el" href="namespace_senergy_1_1_dns.html">Dns</a></li>
-    <li class="footer">Generated on Tue Feb 11 2014 18:05:18 for Senergy by
+    <li class="footer">Generated on Tue Feb 11 2014 21:56:44 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

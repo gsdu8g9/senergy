@@ -34,6 +34,18 @@ Senergy::Dns \-
 .br
 .RI "\fIAllows querying remote DNS servers, wraps sending and receiving DNS messages\&. \fP"
 .ti -1c
+.RI "class \fBResourceRecordBase\fP"
+.br
+.RI "\fIRepresents the first part of a resource record\&. A resource record is defined in section 4\&.1\&.3 of RFC 1035\&. However, a resource record can be of different types\&. The last part of a resource record is different depending of what type of resource record we're dealing with\&. This class handles the serializing and deserializing of the first part of a resource record, the part that is always the same\&. Classes that implement the \fBResourceRecordInterface\fP class take care of the serialization and deserialization of the rest of the type-specific part\&. \fP"
+.ti -1c
+.RI "class \fBResourceRecordInterface\fP"
+.br
+.RI "\fIDefines an interface using pure virtuals for classes that wish to implement a specic resource record type\&. \fP"
+.ti -1c
+.RI "class \fBResourceRecordMapper\fP"
+.br
+.RI "\fIHelps in mapping values from the ResourceRecordType enumuration to classes that derive from the \fBResourceRecordInterface\fP class\&. This is to prevent huge switches or blocks of if statements\&. This is a little bit complex, but it gives us way more flexibility and makes the code a bit easier to maintain\&. \fP"
+.ti -1c
 .RI "class \fBRootNameServer\fP"
 .br
 .RI "\fIRepresents one of the 13 Root Name Servers (DNS) that are currently operating around the world\&. Provides access to the functionalities that root name servers offer\&. \fP"
@@ -57,6 +69,17 @@ Senergy::Dns \-
 < \fBMessageQuestionPtr\fP > \fBMessageQuestionPtrVector\fP"
 .br
 .RI "\fIA vector of shared pointers to \fBMessageQuestion\fP instances\&. \fP"
+.ti -1c
+.RI "typedef std::shared_ptr
+.br
+< \fBResourceRecordBase\fP > \fBResourceRecordBasePtr\fP"
+.br
+.ti -1c
+.RI "typedef std::shared_ptr
+.br
+< \fBResourceRecordInterface\fP > \fBResourceRecordInterfacePtr\fP"
+.br
+.RI "\fITypedef for a shared pointer to an instance of the \fBResourceRecordInterface\fP class\&. \fP"
 .in -1c
 .SS "Enumerations"
 
@@ -84,6 +107,16 @@ Definition at line 193 of file message_question\&.h\&.
 A vector of shared pointers to \fBMessageQuestion\fP instances\&. 
 .PP
 Definition at line 198 of file message_question\&.h\&.
+.SS "typedef std::shared_ptr<\fBResourceRecordBase\fP> \fBSenergy::Dns::ResourceRecordBasePtr\fP"
+
+.PP
+Definition at line 209 of file resource_record_base\&.h\&.
+.SS "typedef std::shared_ptr<\fBResourceRecordInterface\fP> \fBSenergy::Dns::ResourceRecordInterfacePtr\fP"
+
+.PP
+Typedef for a shared pointer to an instance of the \fBResourceRecordInterface\fP class\&. 
+.PP
+Definition at line 134 of file resource_record_interface\&.h\&.
 .SH "Enumeration Type Documentation"
 .PP 
 .SS "enum \fBSenergy::Dns::ResourceRecordClass\fP : unsigned short\fC [strong]\fP"

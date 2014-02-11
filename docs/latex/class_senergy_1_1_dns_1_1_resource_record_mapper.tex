@@ -1,0 +1,140 @@
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_mapper}{\section{Senergy\-:\-:Dns\-:\-:Resource\-Record\-Mapper Class Reference}
+\label{class_senergy_1_1_dns_1_1_resource_record_mapper}\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Mapper@{Senergy\-::\-Dns\-::\-Resource\-Record\-Mapper}}
+}
+
+
+Helps in mapping values from the Resource\-Record\-Type enumuration to classes that derive from the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class. This is to prevent huge switches or blocks of if statements. This is a little bit complex, but it gives us way more flexibility and makes the code a bit easier to maintain.  
+
+
+
+
+{\ttfamily \#include $<$resource\-\_\-record\-\_\-mapper.\-h$>$}
+
+Inheritance diagram for Senergy\-:\-:Dns\-:\-:Resource\-Record\-Mapper\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_senergy_1_1_dns_1_1_resource_record_mapper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_senergy_1_1_dns_1_1_resource_record_mapper_a2442004b11c8561651561074f12cc3c9}{Resource\-Record\-Mapper} ()
+\begin{DoxyCompactList}\small\item\em Initialiazes a new empty instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_mapper}{Resource\-Record\-Mapper} class. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{class_senergy_1_1_dns_1_1_resource_record_mapper_a27870caab159dc28b03592fba162ddb0}{Regsister\-Mapping} ()
+\begin{DoxyCompactList}\small\item\em Maps the specified type, which M\-U\-S\-T inherit from \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface}. This will create a dummy instance of T, using a dummy instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Resource\-Record\-Base} class, extract the type (-\/$>$Get\-Type), which is a member of the Resource\-Record\-Type enumuration, and then add this mapping to the underlying map. \end{DoxyCompactList}\item 
+\hyperlink{namespace_senergy_1_1_dns_a425b37e088cb64a1bda6205581ade5c8}{Resource\-Record\-Interface\-Ptr} \hyperlink{class_senergy_1_1_dns_1_1_resource_record_mapper_a28d49f50fa6c0703b060ef56f93c5341}{Apply\-Mapping} (\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0}{Resource\-Record\-Type} type, \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Resource\-Record\-Base} \&base)
+\begin{DoxyCompactList}\small\item\em Applies the mapping between the specified value from the Resource\-Record\-Type enumuration and the correct derived class form \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0}{Resource\-Record\-Type} \hyperlink{class_senergy_1_1_dns_1_1_resource_record_mapper_a4a12162b6962aa857c2075ab17ef4375}{Apply\-Reverse\-Mapping} ()
+\begin{DoxyCompactList}\small\item\em Applies reverse mapping, mapping the specified type to the right value from the Resource\-Record\-Type enumuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helps in mapping values from the Resource\-Record\-Type enumuration to classes that derive from the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class. This is to prevent huge switches or blocks of if statements. This is a little bit complex, but it gives us way more flexibility and makes the code a bit easier to maintain. 
+
+\begin{DoxyNote}{Note}
+This implements the abstract factory pattern. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See Also}
+\href{http://en.wikipedia.org/wiki/Abstract_factory_pattern}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Abstract\-\_\-factory\-\_\-pattern}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Swen Kooij (Photonios) 
+\end{DoxyAuthor}
+
+
+Definition at line 50 of file resource\-\_\-record\-\_\-mapper.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_mapper_a2442004b11c8561651561074f12cc3c9}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Mapper@{Senergy\-::\-Dns\-::\-Resource\-Record\-Mapper}!Resource\-Record\-Mapper@{Resource\-Record\-Mapper}}
+\index{Resource\-Record\-Mapper@{Resource\-Record\-Mapper}!Senergy::Dns::ResourceRecordMapper@{Senergy\-::\-Dns\-::\-Resource\-Record\-Mapper}}
+\subsubsection[{Resource\-Record\-Mapper}]{\setlength{\rightskip}{0pt plus 5cm}Senergy\-::\-Dns\-::\-Resource\-Record\-Mapper\-::\-Resource\-Record\-Mapper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_senergy_1_1_dns_1_1_resource_record_mapper_a2442004b11c8561651561074f12cc3c9}
+
+
+Initialiazes a new empty instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_mapper}{Resource\-Record\-Mapper} class. 
+
+
+
+Definition at line 56 of file resource\-\_\-record\-\_\-mapper.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_mapper_a28d49f50fa6c0703b060ef56f93c5341}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Mapper@{Senergy\-::\-Dns\-::\-Resource\-Record\-Mapper}!Apply\-Mapping@{Apply\-Mapping}}
+\index{Apply\-Mapping@{Apply\-Mapping}!Senergy::Dns::ResourceRecordMapper@{Senergy\-::\-Dns\-::\-Resource\-Record\-Mapper}}
+\subsubsection[{Apply\-Mapping}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\-Record\-Interface\-Ptr} Senergy\-::\-Dns\-::\-Resource\-Record\-Mapper\-::\-Apply\-Mapping (
+\begin{DoxyParamCaption}
+\item[{{\bf Resource\-Record\-Type}}]{type, }
+\item[{{\bf Resource\-Record\-Base} \&}]{base}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_senergy_1_1_dns_1_1_resource_record_mapper_a28d49f50fa6c0703b060ef56f93c5341}
+
+
+Applies the mapping between the specified value from the Resource\-Record\-Type enumuration and the correct derived class form \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface}. 
+
+If a correct mapping is found, a new instance of the found class is created as a shared pointer, and the specified \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Resource\-Record\-Base} class instance is based in the constructor.
+
+When no mapping could be found, an invalid pointer (null ptr) is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The value from the Resource\-Record\-Type enumuration to find a mapping for. \\
+\hline
+{\em base} & The instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Resource\-Record\-Base} class to pass to the constructor of the found type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to a new instance of the found the type, but the newly created instance is returned as a shared pointer to a \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class instance, however, polymorphism will come into play and the actual type that is returned is the type that is found (a type that derives from the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface}) class. 
+\end{DoxyReturn}
+
+
+Definition at line 106 of file resource\-\_\-record\-\_\-mapper.\-h.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_mapper_a4a12162b6962aa857c2075ab17ef4375}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Mapper@{Senergy\-::\-Dns\-::\-Resource\-Record\-Mapper}!Apply\-Reverse\-Mapping@{Apply\-Reverse\-Mapping}}
+\index{Apply\-Reverse\-Mapping@{Apply\-Reverse\-Mapping}!Senergy::Dns::ResourceRecordMapper@{Senergy\-::\-Dns\-::\-Resource\-Record\-Mapper}}
+\subsubsection[{Apply\-Reverse\-Mapping}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Resource\-Record\-Type} Senergy\-::\-Dns\-::\-Resource\-Record\-Mapper\-::\-Apply\-Reverse\-Mapping (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_senergy_1_1_dns_1_1_resource_record_mapper_a4a12162b6962aa857c2075ab17ef4375}
+
+
+Applies reverse mapping, mapping the specified type to the right value from the Resource\-Record\-Type enumuration. 
+
+T The type to find the mapped value from the Resource\-Record\-Type enumuration. This must inherit from the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class.
+
+\begin{DoxyReturn}{Returns}
+A value from the Resource\-Record\-Type enumuration that is mapped to the specified type. 
+\end{DoxyReturn}
+
+
+Definition at line 125 of file resource\-\_\-record\-\_\-mapper.\-h.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_mapper_a27870caab159dc28b03592fba162ddb0}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Mapper@{Senergy\-::\-Dns\-::\-Resource\-Record\-Mapper}!Regsister\-Mapping@{Regsister\-Mapping}}
+\index{Regsister\-Mapping@{Regsister\-Mapping}!Senergy::Dns::ResourceRecordMapper@{Senergy\-::\-Dns\-::\-Resource\-Record\-Mapper}}
+\subsubsection[{Regsister\-Mapping}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void Senergy\-::\-Dns\-::\-Resource\-Record\-Mapper\-::\-Regsister\-Mapping (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_senergy_1_1_dns_1_1_resource_record_mapper_a27870caab159dc28b03592fba162ddb0}
+
+
+Maps the specified type, which M\-U\-S\-T inherit from \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface}. This will create a dummy instance of T, using a dummy instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Resource\-Record\-Base} class, extract the type (-\/$>$Get\-Type), which is a member of the Resource\-Record\-Type enumuration, and then add this mapping to the underlying map. 
+
+To clarify\-: this\mbox{[}resource\-\_\-record\-\_\-type\mbox{]} = dummy\-\_\-instance;
+
+T A type that inherits from \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface}. 
+
+Definition at line 73 of file resource\-\_\-record\-\_\-mapper.\-h.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/senergy/dns/\hyperlink{resource__record__mapper_8h}{resource\-\_\-record\-\_\-mapper.\-h}\end{DoxyCompactItemize}

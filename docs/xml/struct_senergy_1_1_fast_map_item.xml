@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct_senergy_1_1_fast_map_item" kind="struct" prot="public">
+    <compoundname>Senergy::FastMapItem</compoundname>
+    <includes refid="fastmap_8h" local="no">fastmap.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>TKey</declname>
+        <defname>TKey</defname>
+      </param>
+      <param>
+        <type>class</type>
+        <declname>TValue</declname>
+        <defname>TValue</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_senergy_1_1_fast_map_item_1a99e39296732f934331d581936e2ddb26" prot="public" static="no" mutable="no">
+        <type>TKey</type>
+        <definition>TKey Senergy::FastMapItem&lt; TKey, TValue &gt;::first</definition>
+        <argsstring></argsstring>
+        <name>first</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" line="43" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_senergy_1_1_fast_map_item_1a685a9e654410404e550d65acd951c7ca" prot="public" static="no" mutable="no">
+        <type>TValue</type>
+        <definition>TValue Senergy::FastMapItem&lt; TKey, TValue &gt;::second</definition>
+        <argsstring></argsstring>
+        <name>second</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" line="44" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The structure that <ref refid="class_senergy_1_1_fast_map" kindref="compound">FastMap</ref> stores in it&apos;s vector, this emulates a std::map iterator. </para>    </briefdescription>
+    <detaileddescription>
+<para>TKey The data type of the key that is stored in the map.  TValue The data type of the value that is stored in the map.</para><para><simplesect kind="author"><para>Swen Kooij (Photonio) </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" line="42" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" bodystart="41" bodyend="45"/>
+    <listofallmembers>
+      <member refid="struct_senergy_1_1_fast_map_item_1a99e39296732f934331d581936e2ddb26" prot="public" virt="non-virtual"><scope>Senergy::FastMapItem</scope><name>first</name></member>
+      <member refid="struct_senergy_1_1_fast_map_item_1a685a9e654410404e550d65acd951c7ca" prot="public" virt="non-virtual"><scope>Senergy::FastMapItem</scope><name>second</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

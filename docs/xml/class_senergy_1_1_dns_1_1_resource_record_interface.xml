@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_senergy_1_1_dns_1_1_resource_record_interface" kind="class" prot="public" abstract="yes">
+    <compoundname>Senergy::Dns::ResourceRecordInterface</compoundname>
+    <includes refid="resource__record__interface_8h" local="no">resource_record_interface.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_senergy_1_1_dns_1_1_resource_record_interface_1abf5eec20c95f05b57c5c02eaed349e16" prot="private" static="no">
+        <type>std::shared_ptr&lt; <ref refid="class_senergy_1_1_dns_1_1_resource_record_interface" kindref="compound">ResourceRecordInterface</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;ResourceRecordInterface&gt; Senergy::Dns::ResourceRecordInterface::ResourceRecordInterfacePtr</definition>
+        <argsstring></argsstring>
+        <name>ResourceRecordInterfacePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_interface.h" line="47" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_interface.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="class_senergy_1_1_dns_1_1_resource_record_interface_1a59bcfc62cfc3a68464245b13ad3785e6" prot="protected" static="no">
+        <type><ref refid="class_senergy_1_1_dns_1_1_resource_record_base" kindref="compound">ResourceRecordBase</ref></type>
+        <definition>typedef ResourceRecordBase Senergy::Dns::ResourceRecordInterface::Base</definition>
+        <argsstring></argsstring>
+        <name>Base</name>
+        <briefdescription>
+<para>More logical way to allow access to the base class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_interface.h" line="125" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_interface.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_resource_record_interface_1a8342949ee3626a2b02021343de3be8a0" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_senergy_1_1_dns_1_1_resource_record_base" kindref="compound">ResourceRecordBase</ref> &amp;</type>
+        <definition>ResourceRecordBase&amp; Senergy::Dns::ResourceRecordInterface::m_base</definition>
+        <argsstring></argsstring>
+        <name>m_base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_interface.h" line="128" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_interface.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_interface_1a512292e35ab101cc53bafe4c21edac4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Senergy::Dns::ResourceRecordInterface::ResourceRecordInterface</definition>
+        <argsstring>(ResourceRecordBase &amp;base)</argsstring>
+        <name>ResourceRecordInterface</name>
+        <param>
+          <type><ref refid="class_senergy_1_1_dns_1_1_resource_record_base" kindref="compound">ResourceRecordBase</ref> &amp;</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of of the ResourceRecordInterfacePtr class with a reference to an instance of the <ref refid="class_senergy_1_1_dns_1_1_resource_record_base" kindref="compound">ResourceRecordBase</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A resource record can have multiple types, a class that implents this interface handles the serialization and deserialization of the type-specific part.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The first part of a resource record is always the same. This is why we need an instance of the base class here. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_interface.h" line="61" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_resource_record_interface.cpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_interface_1ab81e0a7ea292513c5c34a3be0c7a6dca" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool Senergy::Dns::ResourceRecordInterface::Serialize</definition>
+        <argsstring>(ByteBuffer &amp;buffer)=0</argsstring>
+        <name>Serialize</name>
+        <param>
+          <type><ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Serializes this record into the specified buffer. This does not handle the serialization of the first (base) part of the resource record. Call SerializeBase for that. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to serialize to.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean indicating whether the serialization was successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_interface.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_interface_1ade2e0b9817476ea2161b694efd3e02db" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool Senergy::Dns::ResourceRecordInterface::Deserialize</definition>
+        <argsstring>(ByteBuffer &amp;buffer)=0</argsstring>
+        <name>Deserialize</name>
+        <param>
+          <type><ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Deserializes the record from the specified buffer. This does not handle deserialization of the first (base) part of the resource record. Call DeserializeBase for that. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to deserialize from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_interface.h" line="79" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_interface_1acac5440b40f3904f889f1ee59a3b9786" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>ResourceRecordInterfacePtr</type>
+        <definition>virtual ResourceRecordInterfacePtr Senergy::Dns::ResourceRecordInterface::Create</definition>
+        <argsstring>(ResourceRecordBase &amp;base)=0</argsstring>
+        <name>Create</name>
+        <param>
+          <type><ref refid="class_senergy_1_1_dns_1_1_resource_record_base" kindref="compound">ResourceRecordBase</ref> &amp;</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new instance of this class, and returns it as a shared pointer to an instance of the <ref refid="class_senergy_1_1_dns_1_1_resource_record_interface" kindref="compound">ResourceRecordInterface</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+<para>The derived class should create an instance of itself and return the polymorphic form (as it&apos;s base).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_senergy_1_1_dns_1_1_resource_record_base" kindref="compound">ResourceRecordBase</ref> class to pass to the constructor.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A shared pointer to an instance of the <ref refid="class_senergy_1_1_dns_1_1_resource_record_interface" kindref="compound">ResourceRecordInterface</ref> class, which is just the polymorphic form of the derived class. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_interface.h" line="93" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_interface_1af895ba199749599d42f8e6a737eb9118" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0" kindref="member">ResourceRecordType</ref></type>
+        <definition>virtual ResourceRecordType Senergy::Dns::ResourceRecordInterface::GetType</definition>
+        <argsstring>()=0</argsstring>
+        <name>GetType</name>
+        <briefdescription>
+<para>Gets the type of of this record (derived), wich is a value from the ResourceRecordType enumuration. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A value from the ResourceRecordType enumuration which denotes the type of this record. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_interface.h" line="102" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_interface_1a4332e80632928d846abe9a58f912c217" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespace_senergy_1_1_dns_1a953f153bc411213d621d00c1e1b3eb9d" kindref="member">ResourceRecordClass</ref></type>
+        <definition>ResourceRecordClass Senergy::Dns::ResourceRecordInterface::GetClass</definition>
+        <argsstring>()</argsstring>
+        <name>GetClass</name>
+        <briefdescription>
+<para>Gets the class of this record. This will almost always be the same and does not have to be implemented by the derived class. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A value from the ResourceRecordClass enumuration which denotes the class of this record. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_interface.h" line="111" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_resource_record_interface.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_interface_1a2d83a278096ff51e7c8fb9a5e77f70a5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_senergy_1_1_dns_1_1_resource_record_base" kindref="compound">ResourceRecordBase</ref> &amp;</type>
+        <definition>ResourceRecordBase &amp; Senergy::Dns::ResourceRecordInterface::GetBase</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBase</name>
+        <briefdescription>
+<para>Returns the underlying base resource record for this record. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>An instance of the <ref refid="class_senergy_1_1_dns_1_1_resource_record_base" kindref="compound">ResourceRecordBase</ref> class, which represents the first part in this resource record. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_interface.h" line="119" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_resource_record_interface.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines an interface using pure virtuals for classes that wish to implement a specic resource record type. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Swen Kooij (Photonios). </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="39">
+        <label>Senergy::Dns::ResourceRecordBase</label>
+        <link refid="class_senergy_1_1_dns_1_1_resource_record_base"/>
+      </node>
+      <node id="38">
+        <label>Senergy::Dns::ResourceRecordInterface</label>
+        <link refid="class_senergy_1_1_dns_1_1_resource_record_interface"/>
+        <childnode refid="39" relation="usage">
+          <edgelabel>m_base</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_interface.h" line="43" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_interface.h" bodystart="42" bodyend="129"/>
+    <listofallmembers>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_interface_1a59bcfc62cfc3a68464245b13ad3785e6" prot="protected" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordInterface</scope><name>Base</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_interface_1acac5440b40f3904f889f1ee59a3b9786" prot="public" virt="pure-virtual"><scope>Senergy::Dns::ResourceRecordInterface</scope><name>Create</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_interface_1ade2e0b9817476ea2161b694efd3e02db" prot="public" virt="pure-virtual"><scope>Senergy::Dns::ResourceRecordInterface</scope><name>Deserialize</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_interface_1a2d83a278096ff51e7c8fb9a5e77f70a5" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordInterface</scope><name>GetBase</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_interface_1a4332e80632928d846abe9a58f912c217" prot="public" virt="virtual"><scope>Senergy::Dns::ResourceRecordInterface</scope><name>GetClass</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_interface_1af895ba199749599d42f8e6a737eb9118" prot="public" virt="pure-virtual"><scope>Senergy::Dns::ResourceRecordInterface</scope><name>GetType</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_interface_1a8342949ee3626a2b02021343de3be8a0" prot="protected" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordInterface</scope><name>m_base</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_interface_1a512292e35ab101cc53bafe4c21edac4c" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordInterface</scope><name>ResourceRecordInterface</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_interface_1abf5eec20c95f05b57c5c02eaed349e16" prot="private" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordInterface</scope><name>ResourceRecordInterfacePtr</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_interface_1ab81e0a7ea292513c5c34a3be0c7a6dca" prot="public" virt="pure-virtual"><scope>Senergy::Dns::ResourceRecordInterface</scope><name>Serialize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

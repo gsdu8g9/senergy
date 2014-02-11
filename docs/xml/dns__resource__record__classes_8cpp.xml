@@ -4,13 +4,13 @@
     <compoundname>dns_resource_record_classes.cpp</compoundname>
     <includes refid="resource__record__classes_8h" local="no">senergy/dns/resource_record_classes.h</includes>
     <incdepgraph>
-      <node id="141">
+      <node id="155">
         <label>src/dns_resource_record_classes.cpp</label>
         <link refid="dns_resource_record_classes.cpp"/>
-        <childnode refid="142" relation="include">
+        <childnode refid="156" relation="include">
         </childnode>
       </node>
-      <node id="142">
+      <node id="156">
         <label>senergy/dns/resource_record_classes.h</label>
         <link refid="resource__record__classes_8h"/>
       </node>

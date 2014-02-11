@@ -1,0 +1,17 @@
+\hypertarget{fastmap_8h}{\section{src/senergy/fastmap.h File Reference}
+\label{fastmap_8h}\index{src/senergy/fastmap.\-h@{src/senergy/fastmap.\-h}}
+}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$stddef.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_senergy_1_1_fast_map_item}{Senergy\-::\-Fast\-Map\-Item$<$ T\-Key, T\-Value $>$}
+\begin{DoxyCompactList}\small\item\em The structure that \hyperlink{class_senergy_1_1_fast_map}{Fast\-Map} stores in it's vector, this emulates a std\-::map iterator. \end{DoxyCompactList}\item 
+class \hyperlink{class_senergy_1_1_fast_map}{Senergy\-::\-Fast\-Map$<$ T\-Key, T\-Value $>$}
+\begin{DoxyCompactList}\small\item\em The fast map is an alternative to std\-::map. An std\-::map is relatively slow with a small number of items. \hyperlink{class_senergy_1_1_fast_map}{Fast\-Map} uses a vector of structures instead, and outperforms std\-::map with collections with fewer items. The beauty of this class is that it can be used as a drop-\/in replacement for std\-::map, it uses the exact same values, simply replacing the declaration is enough. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_senergy}{Senergy}
+\end{DoxyCompactItemize}

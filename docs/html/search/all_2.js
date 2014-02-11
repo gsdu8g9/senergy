@@ -20,5 +20,5 @@ var searchData=
   ['convert',['Convert',['../class_senergy_1_1_convert.html',1,'Senergy']]],
   ['convert_2ecpp',['convert.cpp',['../convert_8cpp.html',1,'']]],
   ['convert_2eh',['convert.h',['../convert_8h.html',1,'']]],
-  ['create',['Create',['../class_senergy_1_1_dns_1_1_message_question.html#ae8237696d15da3b4b67f96fbd3d1d3e3',1,'Senergy::Dns::MessageQuestion']]]
+  ['create',['Create',['../class_senergy_1_1_dns_1_1_message_question.html#ae8237696d15da3b4b67f96fbd3d1d3e3',1,'Senergy::Dns::MessageQuestion::Create()'],['../class_senergy_1_1_dns_1_1_resource_record_base.html#a21ea1d5b7a354e2025c01248c019f6a1',1,'Senergy::Dns::ResourceRecordBase::Create()'],['../class_senergy_1_1_dns_1_1_resource_record_interface.html#acac5440b40f3904f889f1ee59a3b9786',1,'Senergy::Dns::ResourceRecordInterface::Create()']]]
 ];

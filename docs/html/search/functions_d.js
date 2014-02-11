@@ -12,7 +12,11 @@ var searchData=
   ['readunsignedint',['ReadUnsignedInt',['../class_senergy_1_1_byte_buffer.html#a7abe5475b2a9adcad384d3125640aba2',1,'Senergy::ByteBuffer']]],
   ['readunsignedshort',['ReadUnsignedShort',['../class_senergy_1_1_byte_buffer.html#aa6b6bfdb398a75b92c79bcdfc1986821',1,'Senergy::ByteBuffer']]],
   ['receive',['Receive',['../class_senergy_1_1_socket.html#a7045f756d3c542ee1187a92ca13fa232',1,'Senergy::Socket::Receive(const char *receive_buffer, size_t size)'],['../class_senergy_1_1_socket.html#a0c1510be39bef49de15e8647b64dbb5e',1,'Senergy::Socket::Receive(size_t size)'],['../class_senergy_1_1_socket.html#aad6b0a1a9f7ac380b11b9ef814ada58b',1,'Senergy::Socket::Receive(ByteBuffer &amp;receive_buffer, size_t size)']]],
+  ['regsistermapping',['RegsisterMapping',['../class_senergy_1_1_dns_1_1_resource_record_mapper.html#a27870caab159dc28b03592fba162ddb0',1,'Senergy::Dns::ResourceRecordMapper']]],
   ['requester',['Requester',['../class_senergy_1_1_dns_1_1_requester.html#a1b5fbbb5b5b115bdee9da48ce1466be0',1,'Senergy::Dns::Requester']]],
   ['reserve',['Reserve',['../class_senergy_1_1_byte_buffer.html#a25b96a3aed3e617362dbaee66915c33a',1,'Senergy::ByteBuffer::Reserve(unsigned int size)'],['../class_senergy_1_1_byte_buffer.html#aa650965d24700a696af31aa9cc20fa68',1,'Senergy::ByteBuffer::Reserve(int size)']]],
-  ['reset',['Reset',['../class_senergy_1_1_dns_1_1_message.html#a60d242fef8b20993f9cd9b4591453e1b',1,'Senergy::Dns::Message']]]
+  ['reset',['Reset',['../class_senergy_1_1_dns_1_1_message.html#a60d242fef8b20993f9cd9b4591453e1b',1,'Senergy::Dns::Message']]],
+  ['resourcerecordbase',['ResourceRecordBase',['../class_senergy_1_1_dns_1_1_resource_record_base.html#add24f5a9168db8b1c3db85ae37715f4c',1,'Senergy::Dns::ResourceRecordBase']]],
+  ['resourcerecordinterface',['ResourceRecordInterface',['../class_senergy_1_1_dns_1_1_resource_record_interface.html#a512292e35ab101cc53bafe4c21edac4c',1,'Senergy::Dns::ResourceRecordInterface']]],
+  ['resourcerecordmapper',['ResourceRecordMapper',['../class_senergy_1_1_dns_1_1_resource_record_mapper.html#a2442004b11c8561651561074f12cc3c9',1,'Senergy::Dns::ResourceRecordMapper']]]
 ];

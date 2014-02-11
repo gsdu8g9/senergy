@@ -14,7 +14,12 @@ var dir_12060af884c4747a1bab5c3df0820300 =
     [ "requester.h", "requester_8h.html", [
       [ "Requester", "class_senergy_1_1_dns_1_1_requester.html", "class_senergy_1_1_dns_1_1_requester" ]
     ] ],
+    [ "resource_record_base.h", "resource__record__base_8h.html", "resource__record__base_8h" ],
     [ "resource_record_classes.h", "resource__record__classes_8h.html", "resource__record__classes_8h" ],
+    [ "resource_record_interface.h", "resource__record__interface_8h.html", "resource__record__interface_8h" ],
+    [ "resource_record_mapper.h", "resource__record__mapper_8h.html", [
+      [ "ResourceRecordMapper", "class_senergy_1_1_dns_1_1_resource_record_mapper.html", "class_senergy_1_1_dns_1_1_resource_record_mapper" ]
+    ] ],
     [ "resource_record_types.h", "resource__record__types_8h.html", "resource__record__types_8h" ],
     [ "rootnameserver.h", "rootnameserver_8h.html", [
       [ "RootNameServer", "class_senergy_1_1_dns_1_1_root_name_server.html", null ]
