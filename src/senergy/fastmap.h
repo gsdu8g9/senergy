@@ -28,6 +28,15 @@
 namespace Senergy
 {
 
+/*!
+ * \brief The structure that FastMap stores in it's vector, this emulates
+ *		  a std::map iterator.
+ *
+ * \typeparam TKey   The data type of the key that is stored in the map.
+ * \typeparam TValue The data type of the value that is stored in the map.
+ *
+ * \author Swen Kooij (Photonio)
+ */
 template <class TKey, class TValue>
 struct FastMapItem
 {
@@ -35,18 +44,48 @@ struct FastMapItem
 	TValue second;
 };
 
+/*!
+ * \brief The fast map is an alternative to std::map. An std::map is relatively slow with a small number
+ * 		  of items. FastMap uses a vector of structures instead, and outperforms std::map with collections
+ *		  with fewer items. The beauty of this class is that it can be used as a drop-in replacement
+ *		  for std::map, it uses the exact same values, simply replacing the declaration is enough.
+ *
+ * \typeparam TKey The data type of the key that is stored in the map.
+ * \typeparam TValue The data type of the value that is stored in the map. 
+ *
+ * \author Swen Kooij (Photonios)
+ */
 template <class TKey, class TValue>
 class FastMap : public std::vector<FastMapItem<TKey, TValue>>
 {
 private:
+	// Simple typedef to make accessing the base class easier..
 	typedef std::vector<FastMapItem<TKey, TValue>> FastMapBase;
 
 public:
+	/*!
+ 	 * \brief Gets the value of the specified key, uses the [] operator.
+	 *
+	 * \param key The key of the item/pair you want to retrieve.
+	 *
+	 * \returns The value of that is associated with the specified pair.
+	 */
 	TValue & at(TKey value)
 	{
 		return *this[value];
 	}
 
+	/*!
+ 	 * \brief Allows access to the pairs stored inside this map, one specifies the key of the item
+ 	 *		  to retrieve, and the value is returned as a reference. If the specified key does
+	 *		  not exists yet, it will be created, and the specified value will be set.
+	 *
+	 *		  If the specified key is already set, then the value will be set.
+	 *
+	 * \param key The key of the item/pair you want to retrieve.
+	 *
+	 * \returns The value of that is associated with the specified pair.
+	 */
 	TValue & operator[] (TKey key)
 	{
 		for(size_t i = 0; i < FastMapBase::size(); i++)
