@@ -28,7 +28,6 @@
 
 #include <senergy/dns/message_header.h>
 #include <senergy/dns/message_question.h>
-#include <senergy/dns/resource_record_collection.h>
 
 #include <senergy/bytebuffer.h>
 #include <senergy/vectorx.h>
@@ -109,11 +108,6 @@ public:
 	 * \brief Holds all the 'question messages' that are part of this DNS message.
 	 */
 	MessageQuestionPtrVector Questions;
-
-	/*!
-	 * \brief Holds all resource records that are part of this DNS message.
-	 */
-	ResourceRecordCollection ResourceRecords;
 
 private:
 	// Holds the header we're going to write...
