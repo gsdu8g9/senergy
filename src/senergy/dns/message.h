@@ -26,13 +26,14 @@
 	#define NOMINMAX
 #endif
 
-#include <senergy/dns/message_header.h>
-#include <senergy/dns/message_question.h>
-
-#include <senergy/bytebuffer.h>
-#include <senergy/vectorx.h>
 #include <algorithm>
 #include <string>
+#include <senergy/bytebuffer.h>
+#include <senergy/vectorx.h>
+#include <senergy/dns/message_header.h>
+#include <senergy/dns/message_question.h>
+#include <senergy/dns/resource_record_mapper.h>
+#include <senergy/dns/record_ipv4_address.h>
 
 namespace Senergy
 {
@@ -103,6 +104,10 @@ public:
 	 */
 	void Dump();
 
+private:
+	// Adds all the mappings for resource records..
+	void __init_mappings();
+
 public:	
 	/*!
 	 * \brief Holds all the 'question messages' that are part of this DNS message.
@@ -110,6 +115,9 @@ public:
 	MessageQuestionPtrVector Questions;
 
 private:
+	// Helps mapping incoming resource records to the right class...
+	ResourceRecordMapper m_rr_mapper;
+
 	// Holds the header we're going to write...
 	MessageHeader m_header;
 };

@@ -26,7 +26,9 @@ namespace Senergy
 namespace Dns
 {
 
-Message::Message()
+Message::Message() : 
+	m_rr_mapper	(),
+	m_header	()
 {
 }
 
@@ -84,6 +86,11 @@ int Message::GetQuestionCount()
 void Message::Dump()
 {
 	m_header.Dump();
+}
+
+void Message::__init_mappings()
+{
+	m_rr_mapper.RegisterMapping<IPV4Record>();
 }
 
 } // namespace Dns

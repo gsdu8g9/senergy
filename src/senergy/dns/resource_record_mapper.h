@@ -70,7 +70,7 @@ public:
  	 * \typeparam T A type that inherits from ResourceRecordInterface.
 	 */
 	template<class T>
-	void RegsisterMapping()
+	void RegisterMapping()
 	{
 		static_assert(std::is_base_of<ResourceRecordInterface, T>::value, "T does not derive from ResourceRecordInterface");
 
