@@ -30,7 +30,7 @@ OUTPUT_PATH=$(OUTPUT_DIR)$(OUTPUT_FILE)
 CXX=g++
 
 CXXPATHS=-I/usr/include -I$(SOURCE_DIR)
-CXXFLAGS=-std=c++11 -g -Wall -Wextra
+CXXFLAGS=-std=c++11 -g 
 
 LDPATHS=
 LDFLAGS=

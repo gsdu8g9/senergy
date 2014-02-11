@@ -19,20 +19,5 @@
  *
  *******************************************************************************/
 
-#include <iostream>
-#include <map>
-#include <string>
-#include <senergy/senergy.h>
-
-int main(int argc, char **argv)
-{	
-	/*for(int i = 0; i < 1; i++)
-	{
-		Senergy::Dns::Requester request("8.8.8.8");
-		request.Lookup(Senergy::Dns::ResourceRecordType::A, "www.google.com");	
-	}*/
-
-	Senergy::Logger::Info("%s awesomeness %s", "henk", "henk2");
-
-	return 0;
-}
+// Implementation is in header file because of templates..
+#include <senergy/logger.h>

@@ -26,6 +26,8 @@
 #include <senergy/bytebuffer.h>
 #include <senergy/convert.h>
 #include <senergy/print.h>
+#include <senergy/console.h>
+#include <senergy/logger.h>
 #include <senergy/dns/resource_record_types.h>
 #include <senergy/dns/resource_record_classes.h>
 #include <senergy/dns/utils.h>
