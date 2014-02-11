@@ -19,25 +19,50 @@
  *
  *******************************************************************************/
 
-#ifndef SENERY_H
-#define SENERY_H
+#ifndef SY_FAST_MAP_H
+#define SY_FAST_MAP_H
 
-#include <senergy/socket.h>
-#include <senergy/fastmap.h>
-#include <senergy/bytebuffer.h>
-#include <senergy/convert.h>
-#include <senergy/print.h>
-#include <senergy/console.h>
-#include <senergy/logger.h>
-#include <senergy/dns/resource_record_types.h>
-#include <senergy/dns/resource_record_classes.h>
-#include <senergy/dns/utils.h>
-#include <senergy/vectorx.h>
-#include <senergy/types.h>
-#include <senergy/dns/message_header.h>
-#include <senergy/dns/message_question.h>
-#include <senergy/dns/message.h>
-#include <senergy/dns/requester.h>
+#include <vector>
+#include <stddef.h>
 
-#endif // SENERY_H
+namespace Senergy
+{
 
+template <class TKey, class TValue>
+struct FastMapItem
+{
+	TKey first;
+	TValue second;
+};
+
+template <class TKey, class TValue>
+class FastMap : public std::vector<FastMapItem<TKey, TValue>>
+{
+private:
+	typedef std::vector<FastMapItem<TKey, TValue>> FastMapBase;
+
+public:
+	TValue & at(TKey value)
+	{
+		return *this[value];
+	}
+
+	TValue & operator[] (TKey key)
+	{
+		for(size_t i = 0; i < FastMapBase::size(); i++)
+		{
+			if(FastMapBase::at(i).first == key)
+				return FastMapBase::at(i).second;
+		}
+
+		FastMapItem<TKey, TValue> fast_map_item;
+		fast_map_item.first = key;
+		FastMapBase::push_back(fast_map_item);
+
+		return FastMapBase::at(FastMapBase::size() - 1).first;
+	}
+};
+
+} // namespace Senergy
+
+#endif // SY_FAST_MAP_H
