@@ -37,6 +37,11 @@ namespace Dns
 enum class ResourceRecordType : unsigned short
 {
 	/*!
+	 * \brief Unknown.
+	 */
+	Unknown = 0,
+
+	/*!
 	 * \brief A host address.
 	 */
 	A = 1,

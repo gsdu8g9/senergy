@@ -22,15 +22,17 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <memory>
 #include <senergy/senergy.h>
+
 
 int main(int argc, char **argv)
 {	
-	/*for(int i = 0; i < 1; i++)
+	for(int i = 0; i < 1; i++)
 	{
 		Senergy::Dns::Requester request("8.8.8.8");
 		request.Lookup(Senergy::Dns::ResourceRecordType::A, "www.google.com");	
-	}*/
+	}
 
 	return 0;
 }

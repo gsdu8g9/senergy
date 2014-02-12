@@ -76,6 +76,14 @@ public:
 	}
 
 	/*!
+	 * \brief Clears the map of any existing records.
+	 */
+	void Clear()
+	{
+		FastMapBase::clear();
+	}
+
+	/*!
  	 * \brief Allows access to the pairs stored inside this map, one specifies the key of the item
  	 *		  to retrieve, and the value is returned as a reference. If the specified key does
 	 *		  not exists yet, it will be created, and the specified value will be set.
@@ -98,7 +106,7 @@ public:
 		fast_map_item.first = key;
 		FastMapBase::push_back(fast_map_item);
 
-		return FastMapBase::at(FastMapBase::size() - 1).first;
+		return FastMapBase::at(FastMapBase::size() - 1).second;
 	}
 };
 

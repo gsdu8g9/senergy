@@ -60,7 +60,7 @@ ResourceRecordInterfacePtr IPV4Record::Create(ResourceRecordBase &base)
 
 ResourceRecordType IPV4Record::GetType()
 {
-	ResourceRecordType::A;
+	return ResourceRecordType::A;
 }
 
 void IPV4Record::SetAddress(const std::string &address)

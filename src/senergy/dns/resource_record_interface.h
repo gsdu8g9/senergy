@@ -41,7 +41,7 @@ namespace Dns
  */
 class ResourceRecordInterface
 {
-public:
+protected:
 	// Simple typedef for a shared pointer to an instance of the ResoureceRecordInterface
 	// class. Warning, this is redefined at the bottom of this file for public access.
 	typedef std::shared_ptr<ResourceRecordInterface> ResourceRecordInterfacePtr; 

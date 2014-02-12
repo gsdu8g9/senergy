@@ -187,6 +187,14 @@ public:
 	 */
 	void Dump();
 
+	/*!
+	 * \brief Gets the minimal size of a resource record, the size that is required to contain all fiels
+	 *		  except the resource data.	 
+ 	 *
+	 * \returns The amount of bytes that the minimal size of a resource record is.
+	 */
+	static int GetMinimalSize();
+
 private:
 	// The domain name that was returned, this is either a DNS label (3www6google3com) or a pointer
 	// If the first two bits are 1's then, it's a pointer

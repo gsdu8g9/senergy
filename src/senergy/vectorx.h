@@ -58,6 +58,14 @@ public:
 		return BaseClass::at(BaseClass::size() - 1);
 	}
 
+	/*!
+	 * \brief Clears the map of any existing records.
+	 */
+	void Clear()
+	{
+		BaseClass::clear();
+	}
+
 private:	
 	/*!
  	 * \brief Simple typedef to access the base class.

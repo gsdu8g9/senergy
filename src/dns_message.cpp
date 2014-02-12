@@ -27,7 +27,6 @@ namespace Dns
 {
 
 Message::Message() : 
-	m_rr_mapper	(),
 	m_header	()
 {
 }
@@ -47,6 +46,11 @@ bool Message::Deserialize(ByteBuffer &buffer)
 
 		this->Questions.push_back(new_message);
 	}
+
+	if(!this->ResourceRecords.Deserialize(m_header, buffer))
+		return false;
+
+	this->ResourceRecords.Dump();
 
 	return true;
 }
@@ -86,11 +90,6 @@ int Message::GetQuestionCount()
 void Message::Dump()
 {
 	m_header.Dump();
-}
-
-void Message::__init_mappings()
-{
-	m_rr_mapper.RegisterMapping<IPV4Record>();
 }
 
 } // namespace Dns

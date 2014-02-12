@@ -62,7 +62,6 @@ bool ResourceRecordBase::Deserialize(ByteBuffer &buffer)
 	m_class 	= (ResourceRecordClass) Utils::NetworkToHostByteOrder((unsigned short)m_class);
 	m_ttl 		= Utils::NetworkToHostByteOrder(m_ttl);
 	m_rd_length = Utils::NetworkToHostByteOrder(m_rd_length);
-
 	return true;
 }
 
@@ -135,6 +134,10 @@ void ResourceRecordBase::Dump()
 	printf("RDLength: %hu\n", m_rd_length);
 }
 
+int ResourceRecordBase::GetMinimalSize()
+{
+	return 3; // 3 bytes = 96 bits
+}
 
 } // namespace Dns
 } // namespace Senergy

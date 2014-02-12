@@ -32,8 +32,7 @@
 #include <senergy/vectorx.h>
 #include <senergy/dns/message_header.h>
 #include <senergy/dns/message_question.h>
-#include <senergy/dns/resource_record_mapper.h>
-#include <senergy/dns/record_ipv4_address.h>
+#include <senergy/dns/resource_record_collection.h>
 
 namespace Senergy
 {
@@ -104,20 +103,19 @@ public:
 	 */
 	void Dump();
 
-private:
-	// Adds all the mappings for resource records..
-	void __init_mappings();
-
 public:	
 	/*!
 	 * \brief Holds all the 'question messages' that are part of this DNS message.
 	 */
 	MessageQuestionPtrVector Questions;
 
-private:
-	// Helps mapping incoming resource records to the right class...
-	ResourceRecordMapper m_rr_mapper;
+	/*!
+	 * \brief Holds all the resource records that are part of this DNS message.
+	 *		  Resource records can appear in all three last sections in a DNS message/packet.
+	 */
+	ResourceRecordCollection ResourceRecords;
 
+private:
 	// Holds the header we're going to write...
 	MessageHeader m_header;
 };
