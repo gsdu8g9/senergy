@@ -45,13 +45,6 @@ std::string Convert::ToString(int value)
 	return std::string(raw_result);
 }
 
-/*!
- * \brief Converts the specified integer value to a string.
- *
- * \param value The integer value to convert to a string.
- *
- * \returns The specified integer value as a string.
- */
 std::string Convert::ToString(unsigned int value)
 {
 	return ToString((int)value);
