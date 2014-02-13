@@ -5,3 +5,6 @@ Release
 *.d
 *~*
 backup.txt
+*.suo
+*.sdf
+*.opensdf
