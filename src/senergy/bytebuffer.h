@@ -440,12 +440,12 @@ private:
 		int type_size = sizeof(T);
 		char *read_buffer = (char *)malloc(type_size);
 
-		T return_value{};
+		T return_value {};
 
 		if(!Read(read_buffer, type_size))
 		{
 			free(read_buffer);
-			return return_value;
+			return reHturn_value;
 		}
 
 		return_value = *(reinterpret_cast<T *>(read_buffer));

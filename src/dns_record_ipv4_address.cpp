@@ -26,6 +26,12 @@ namespace Senergy
 namespace Dns
 {
 
+IPV4Record::IPV4Record(ResourceRecordBasePtr base) :
+	ResourceRecordInterface(base)
+{
+
+}
+
 bool IPV4Record::Serialize(ByteBuffer &buffer)
 {
 	unsigned int serialized_address = Socket::IPV4AddressToBinary(m_address);
@@ -41,7 +47,7 @@ bool IPV4Record::Deserialize(ByteBuffer &buffer)
 	if(buffer.GetRemainingSize() < (int)sizeof(unsigned int))
 		return false;
 
-	if(GetBase().GetResourceSize() < (int)sizeof(unsigned int))
+	if(GetBase()->GetResourceSize() < (int)sizeof(unsigned int))
 		return false;
 
 	unsigned int binary = buffer.ReadUnsignedInt();
@@ -53,7 +59,7 @@ bool IPV4Record::Deserialize(ByteBuffer &buffer)
 	return true;
 }
 
-ResourceRecordInterfacePtr IPV4Record::Create(ResourceRecordBase &base)
+ResourceRecordInterfacePtr IPV4Record::Create(ResourceRecordBasePtr base)
 {
 	return std::dynamic_pointer_cast<ResourceRecordInterface>(std::shared_ptr<IPV4Record>(new IPV4Record(base)));
 }

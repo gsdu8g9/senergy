@@ -50,22 +50,22 @@ bool ResourceRecordCollection::Deserialize(MessageHeader &header, ByteBuffer &bu
 		if(buffer.GetRemainingSize() < ResourceRecordBase::GetMinimalSize())
 			return false;
 
-		ResourceRecordBase base_record;
-		if(!base_record.Deserialize(buffer))
+		ResourceRecordBasePtr base_record = ResourceRecordBase::Create();
+		if(!base_record->Deserialize(buffer))
 			return false;
 
-		if(buffer.GetRemainingSize() < base_record.GetResourceSize())
+		if(buffer.GetRemainingSize() < base_record->GetResourceSize())
 			return false;
 			
-		ResourceRecordInterfacePtr record = m_mapper.ApplyMapping(base_record.GetType(), base_record);
+		ResourceRecordInterfacePtr record = m_mapper.ApplyMapping(base_record->GetType(), base_record);
 		if(!record)
 		{
 			printf("HACK\n");
-			printf("%hu\n", (unsigned short)base_record.GetType());
+			printf("%hu\n", (unsigned short)base_record->GetType());
 	
 			// \todo create a class that handles unknown records and holds the resource data
 	 		//		 an internal byte buffer, for now just skip the data
-			buffer.IncreasePosition(base_record.GetResourceSize());
+			buffer.IncreasePosition(base_record->GetResourceSize());
 			//m_records[ResourceRecordType::Unkown].Add(base_record);
 			continue;
 		}
@@ -91,7 +91,7 @@ void ResourceRecordCollection::Dump()
 		size_t amount_records = m_records.at(i).second.size();
 		for(size_t y = 0; y < amount_records; y++)
 		{
-			m_records.at(i).second[y]->GetBase().Dump();
+			m_records.at(i).second[y]->GetBase()->Dump();
 		}
 	}
 }

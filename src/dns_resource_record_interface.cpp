@@ -26,12 +26,12 @@ namespace Senergy
 namespace Dns
 {
 
-ResourceRecordInterface::ResourceRecordInterface(ResourceRecordBase &base) :
+ResourceRecordInterface::ResourceRecordInterface(ResourceRecordBasePtr base) :
 	m_base	(base)
 {
 }
 
-ResourceRecordBase & ResourceRecordInterface::GetBase() const
+ResourceRecordBasePtr ResourceRecordInterface::GetBase() const
 {
 	return m_base;
 }

@@ -58,7 +58,7 @@ public:
 	 *			   The first part of a resource record is always the same. This is why
 	 *			   we need an instance of the base class here.
 	 */
-	ResourceRecordInterface(ResourceRecordBase &base);
+	ResourceRecordInterface(ResourceRecordBasePtr base);
 					
 	/*!
 	 * \brief Serializes this record into the specified buffer. This does not handle the serialization
@@ -90,7 +90,7 @@ public:
 	 * \returns A shared pointer to an instance of the ResourceRecordInterface class,
 	 *			which is just the polymorphic form of the derived class.
 	 */
-	virtual ResourceRecordInterfacePtr Create(ResourceRecordBase &base) = 0;
+	virtual ResourceRecordInterfacePtr Create(ResourceRecordBasePtr base) = 0;
 
 	/*!
 	 * \brief Gets the type of of this record (derived), wich is a value from
@@ -116,7 +116,7 @@ public:
 	 * \returns An instance of the ResourceRecordBase class, which represents
 	 *			the first part in this resource record.
 	 */
-	ResourceRecordBase & GetBase() const;
+	ResourceRecordBasePtr GetBase() const;
 
 protected:
 	/*!
@@ -125,7 +125,8 @@ protected:
 	typedef ResourceRecordBase Base;
 
 protected:
-	ResourceRecordBase & m_base;
+	// Holds the underlying base class.
+	ResourceRecordBasePtr m_base;
 };
 
 /*!

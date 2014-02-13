@@ -54,7 +54,7 @@ public:
 	 * \brief Initialiazes a new empty instance of the ResourceRecordMapper class.
 	 */
 	ResourceRecordMapper() :
-		m_dummy_resource_record()
+		m_dummy_resource_record(ResourceRecordBase::Create())
 	{
 	}
 
@@ -103,7 +103,7 @@ public:
 	 *			is the type that is found (a type that derives from the ResourceRecordInterface)
 	 *			class.
 	 */
-	ResourceRecordInterfacePtr ApplyMapping(ResourceRecordType type, ResourceRecordBase &base)
+	ResourceRecordInterfacePtr ApplyMapping(ResourceRecordType type, ResourceRecordBasePtr base)
 	{
 		auto it = this->find(type);
 		if(it != this->end())
@@ -138,7 +138,7 @@ public:
 private:
 	// Dummy object that we pass to the constructor of classes that derive from the ResourceRecordInterface
 	// class...
-	ResourceRecordBase m_dummy_resource_record;
+	ResourceRecordBasePtr m_dummy_resource_record;
 	
 }; 
 

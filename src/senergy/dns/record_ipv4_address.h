@@ -47,6 +47,13 @@ class IPV4Record : public ResourceRecordInterface
 
 public:
 	/*!
+	 * \brief Initializes a new instance of the IPV4Record class with the specified resource record base.
+	 *
+	 * \param base The base resource record instance to use for the IPV4 record.
+	 */
+	IPV4Record(ResourceRecordBasePtr base);
+
+	/*!
 	 * \brief Serializes this record into the specified buffer. This does not handle the serialization
 	 *		  of the first (base) part of the resource record. Call SerializeBase for that.
 	 *
@@ -76,7 +83,7 @@ public:
 	 * \returns A shared pointer to an instance of the ResourceRecordInterface class,
 	 *			which is just the polymorphic form of the derived class.
 	 */
-	ResourceRecordInterfacePtr Create(ResourceRecordBase &base);
+	ResourceRecordInterfacePtr Create(ResourceRecordBasePtr base);
 
 	/*!
 	 * \brief Gets the type of of this record (derived), wich is a value from

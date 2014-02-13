@@ -34,5 +34,6 @@ int main(int argc, char **argv)
 		request.Lookup(Senergy::Dns::ResourceRecordType::A, "www.google.com");	
 	}
 
+	system("pause >nul");
 	return 0;
 }
