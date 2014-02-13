@@ -10,6 +10,62 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\senergy\bytebuffer.h" />
+    <ClInclude Include="..\src\senergy\circular_buffer.h" />
+    <ClInclude Include="..\src\senergy\console.h" />
+    <ClInclude Include="..\src\senergy\convert.h" />
+    <ClInclude Include="..\src\senergy\dns\id_factory.h" />
+    <ClInclude Include="..\src\senergy\dns\message.h" />
+    <ClInclude Include="..\src\senergy\dns\message_header.h" />
+    <ClInclude Include="..\src\senergy\dns\message_question.h" />
+    <ClInclude Include="..\src\senergy\dns\record_ipv4_address.h" />
+    <ClInclude Include="..\src\senergy\dns\requester.h" />
+    <ClInclude Include="..\src\senergy\dns\resource_record_base.h" />
+    <ClInclude Include="..\src\senergy\dns\resource_record_classes.h" />
+    <ClInclude Include="..\src\senergy\dns\resource_record_collection.h" />
+    <ClInclude Include="..\src\senergy\dns\resource_record_interface.h" />
+    <ClInclude Include="..\src\senergy\dns\resource_record_mapper.h" />
+    <ClInclude Include="..\src\senergy\dns\resource_record_types.h" />
+    <ClInclude Include="..\src\senergy\dns\rootnameserver.h" />
+    <ClInclude Include="..\src\senergy\dns\utils.h" />
+    <ClInclude Include="..\src\senergy\fastmap.h" />
+    <ClInclude Include="..\src\senergy\logger.h" />
+    <ClInclude Include="..\src\senergy\print.h" />
+    <ClInclude Include="..\src\senergy\senergy.h" />
+    <ClInclude Include="..\src\senergy\socket.h" />
+    <ClInclude Include="..\src\senergy\types.h" />
+    <ClInclude Include="..\src\senergy\vectorx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\bytebuffer.cpp" />
+    <ClCompile Include="..\src\circular_buffer.cpp" />
+    <ClCompile Include="..\src\console.cpp" />
+    <ClCompile Include="..\src\convert.cpp" />
+    <ClCompile Include="..\src\dns_id_factory.cpp" />
+    <ClCompile Include="..\src\dns_message.cpp" />
+    <ClCompile Include="..\src\dns_message_header.cpp" />
+    <ClCompile Include="..\src\dns_message_question.cpp" />
+    <ClCompile Include="..\src\dns_record_ipv4_address.cpp" />
+    <ClCompile Include="..\src\dns_requester.cpp" />
+    <ClCompile Include="..\src\dns_resource_record_base.cpp" />
+    <ClCompile Include="..\src\dns_resource_record_classes.cpp" />
+    <ClCompile Include="..\src\dns_resource_record_collection.cpp" />
+    <ClCompile Include="..\src\dns_resource_record_interface.cpp" />
+    <ClCompile Include="..\src\dns_resource_record_mapper.cpp" />
+    <ClCompile Include="..\src\dns_resource_record_types.cpp" />
+    <ClCompile Include="..\src\dns_rootnameserver.cpp" />
+    <ClCompile Include="..\src\dns_utils.cpp" />
+    <ClCompile Include="..\src\fastmap.cpp" />
+    <ClCompile Include="..\src\logger.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\print.cpp" />
+    <ClCompile Include="..\src\socket.cpp" />
+    <ClCompile Include="..\src\vectorx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\Makefile" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B75F99E6-7D77-49F3-BBA0-BC8BEF704121}</ProjectGuid>
     <RootNamespace>Senergy</RootNamespace>
@@ -66,49 +122,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\src\bytebuffer.cpp" />
-    <ClCompile Include="..\src\circular_buffer.cpp" />
-    <ClCompile Include="..\src\convert.cpp" />
-    <ClCompile Include="..\src\id_factory.cpp" />
-    <ClCompile Include="..\src\main.cpp" />
-    <ClCompile Include="..\src\message.cpp" />
-    <ClCompile Include="..\src\message_header.cpp" />
-    <ClCompile Include="..\src\message_question.cpp" />
-    <ClCompile Include="..\src\print.cpp" />
-    <ClCompile Include="..\src\record_ipv4address.cpp" />
-    <ClCompile Include="..\src\requester.cpp" />
-    <ClCompile Include="..\src\resource_record.cpp" />
-    <ClCompile Include="..\src\resource_record_classes.cpp" />
-    <ClCompile Include="..\src\resource_record_collection.cpp" />
-    <ClCompile Include="..\src\resource_record_types.cpp" />
-    <ClCompile Include="..\src\rootnameserver.cpp" />
-    <ClCompile Include="..\src\socket.cpp" />
-    <ClCompile Include="..\src\utils.cpp" />
-    <ClCompile Include="..\src\vectorx.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\src\senergy\bytebuffer.h" />
-    <ClInclude Include="..\src\senergy\circular_buffer.h" />
-    <ClInclude Include="..\src\senergy\convert.h" />
-    <ClInclude Include="..\src\senergy\dns\id_factory.h" />
-    <ClInclude Include="..\src\senergy\dns\message.h" />
-    <ClInclude Include="..\src\senergy\dns\message_header.h" />
-    <ClInclude Include="..\src\senergy\dns\message_question.h" />
-    <ClInclude Include="..\src\senergy\dns\record_ipv4address.h" />
-    <ClInclude Include="..\src\senergy\dns\requester.h" />
-    <ClInclude Include="..\src\senergy\dns\resource_record.h" />
-    <ClInclude Include="..\src\senergy\dns\resource_record_classes.h" />
-    <ClInclude Include="..\src\senergy\dns\resource_record_collection.h" />
-    <ClInclude Include="..\src\senergy\dns\resource_record_types.h" />
-    <ClInclude Include="..\src\senergy\dns\rootnameserver.h" />
-    <ClInclude Include="..\src\senergy\dns\utils.h" />
-    <ClInclude Include="..\src\senergy\print.h" />
-    <ClInclude Include="..\src\senergy\senergy.h" />
-    <ClInclude Include="..\src\senergy\socket.h" />
-    <ClInclude Include="..\src\senergy\types.h" />
-    <ClInclude Include="..\src\senergy\vectorx.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
