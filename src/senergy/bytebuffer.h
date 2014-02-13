@@ -284,6 +284,14 @@ public:
 	void Write(unsigned short value);
 
 	/*!
+	 * \brief Writes a null byte (0) to the byte buffer. The buffer is automaticlly resized when
+	 *		  the specified value does not fit into the buffer.
+	 * 
+	 * \note Increases the position by 1.
+	 */
+	void WriteNop();
+
+	/*!
  	 * \brief Reads the specified amount of bytes from the buffer and copies
 	 *		  it into the specified buffer.
 	 *
@@ -358,7 +366,6 @@ public:
 	 *			when reading failed.
   	 */
 	char ReadChar();
-
 
 	/*!
  	 * \brief Reads an unsigned char from the buffer.
@@ -445,7 +452,7 @@ private:
 		if(!Read(read_buffer, type_size))
 		{
 			free(read_buffer);
-			return reHturn_value;
+			return return_value;
 		}
 
 		return_value = *(reinterpret_cast<T *>(read_buffer));

@@ -37,12 +37,6 @@ std::string Convert::ToString(int value)
 	#endif
 
 	sprintf(raw_result, "%d", value); 
-
-	#ifdef _WIN32
-		//if (raw_result != NULL)
-			//free(raw_result);
-	#endif
-
 	return std::string(raw_result);
 }
 

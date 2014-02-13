@@ -80,6 +80,18 @@ public:
 	bool Deserialize(MessageHeader &header, ByteBuffer &buffer);
 
 	/*!
+	* \brief Serializeds all resource records from the specified buffer, according
+	*		  to the information in the specified DNS message header.
+	*
+	* \param header The DNS message header to write the information on the amount
+	*				of resource records to.
+	* \param buffer The buffer to write the serialized records to.
+	*
+	* \returns A boolean indicating whether the serialization was succesful.
+	*/
+	bool Serialize(MessageHeader &header, ByteBuffer &buffer);
+
+	/*!
 	 * \brief Dumps the contents of this collection to the console.
 	 */
 	void Dump();

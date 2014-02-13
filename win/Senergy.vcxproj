@@ -20,6 +20,7 @@
     <ClInclude Include="..\src\senergy\dns\message_header.h" />
     <ClInclude Include="..\src\senergy\dns\message_question.h" />
     <ClInclude Include="..\src\senergy\dns\record_ipv4_address.h" />
+    <ClInclude Include="..\src\senergy\dns\record_unknown.h" />
     <ClInclude Include="..\src\senergy\dns\requester.h" />
     <ClInclude Include="..\src\senergy\dns\resource_record_base.h" />
     <ClInclude Include="..\src\senergy\dns\resource_record_classes.h" />
@@ -47,6 +48,7 @@
     <ClCompile Include="..\src\dns_message_header.cpp" />
     <ClCompile Include="..\src\dns_message_question.cpp" />
     <ClCompile Include="..\src\dns_record_ipv4_address.cpp" />
+    <ClCompile Include="..\src\dns_record_unknown.cpp" />
     <ClCompile Include="..\src\dns_requester.cpp" />
     <ClCompile Include="..\src\dns_resource_record_base.cpp" />
     <ClCompile Include="..\src\dns_resource_record_classes.cpp" />

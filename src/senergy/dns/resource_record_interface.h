@@ -23,6 +23,7 @@
 #define SY_RESOURCE_RECORD_INTERFACE_H
 
 #include <memory>
+#include <type_traits>
 #include <senergy/dns/resource_record_base.h>
 #include <senergy/dns/resource_record_types.h>
 #include <senergy/dns/resource_record_classes.h>
@@ -117,6 +118,23 @@ public:
 	 *			the first part in this resource record.
 	 */
 	ResourceRecordBasePtr GetBase() const;
+
+	/*!
+	 * \brief Creates a new instance of the specified type with the specified resource record base instance,
+	 *        and casts it to a shared ppinter to a ResourceRecordInterface class (polymorhpism).
+	 *		  The specified type must inherit from ResourceRecordInterface.
+	 *
+	 * \typeparam T The type to create and cast to ResourceRecordInterface shared pointer.
+	 * 
+	 * \returns An instance of the specified type but, casted to an instance of the ResourceRecordInterface class (shared pointer).
+	 */
+	template<class T>
+	static ResourceRecordInterfacePtr CreateCast(ResourceRecordBasePtr base)
+	{
+		static_assert(std::is_base_of<ResourceRecordInterface, T>::value, "T does not derive from ResourceRecordInterface");
+
+		return std::dynamic_pointer_cast<ResourceRecordInterface>(std::shared_ptr<T>(new T(base)));
+	}
 
 protected:
 	/*!

@@ -180,6 +180,11 @@ void ByteBuffer::Write(unsigned short value)
 	__write_native_type<unsigned short>(value);
 }
 
+void ByteBuffer::WriteNop()
+{
+	__write_native_type<char>(0);
+}
+
 bool ByteBuffer::Read(char *buffer, int size)
 {
 	if(buffer == NULL || size <= 0)

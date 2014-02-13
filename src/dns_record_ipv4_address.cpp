@@ -61,7 +61,7 @@ bool IPV4Record::Deserialize(ByteBuffer &buffer)
 
 ResourceRecordInterfacePtr IPV4Record::Create(ResourceRecordBasePtr base)
 {
-	return std::dynamic_pointer_cast<ResourceRecordInterface>(std::shared_ptr<IPV4Record>(new IPV4Record(base)));
+	return ResourceRecordInterface::CreateCast<IPV4Record>(base);
 }
 
 ResourceRecordType IPV4Record::GetType()

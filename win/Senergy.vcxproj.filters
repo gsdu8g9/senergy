@@ -84,6 +84,9 @@
     <ClInclude Include="..\src\senergy\vectorx.h">
       <Filter>senergy</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\senergy\dns\record_unknown.h">
+      <Filter>senergy\dns</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\bytebuffer.cpp" />
@@ -110,6 +113,7 @@
     <ClCompile Include="..\src\print.cpp" />
     <ClCompile Include="..\src\socket.cpp" />
     <ClCompile Include="..\src\vectorx.cpp" />
+    <ClCompile Include="..\src\dns_record_unknown.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\src\Makefile" />

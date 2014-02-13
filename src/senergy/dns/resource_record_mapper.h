@@ -74,13 +74,9 @@ public:
 	{
 		static_assert(std::is_base_of<ResourceRecordInterface, T>::value, "T does not derive from ResourceRecordInterface");
 
-		ResourceRecordInterfacePtr iam_t = std::dynamic_pointer_cast<ResourceRecordInterface>(
-			std::shared_ptr<T>(
-				new T(m_dummy_resource_record)
-			)
-		);
-
+		ResourceRecordInterfacePtr iam_t = ResourceRecordInterface::CreateCast<T>(m_dummy_resource_record);
 		ResourceRecordType type = iam_t->GetType();
+
 		(*this)[type] = iam_t;
 	}
 
@@ -125,12 +121,7 @@ public:
 	ResourceRecordType ApplyReverseMapping()
 	{
 		static_assert(std::is_base_of<ResourceRecordInterface, T>::value, "T does not derive from ResourceRecordInterface");
-
-		ResourceRecordInterfacePtr iam_t = std::dynamic_pointer_cast<ResourceRecordInterface>(
-			std::shared_ptr<T>(
-				new T(m_dummy_resource_record)
-			)
-		);
+		ResourceRecordInterfacePtr iam_t = ResourceRecordInterface::CreateCast<T>(m_dummy_resource_record);
 
 		return iam_t->GetType();
 	}
