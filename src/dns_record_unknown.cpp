@@ -26,7 +26,9 @@ namespace Senergy
 namespace Dns
 {
 
-UnknownRecord::UnknownRecord(ResourceRecordBasePtr base) : ResourceRecordInterface(base)
+UnknownRecord::UnknownRecord(ResourceRecordBasePtr base) : 
+	ResourceRecordInterface	(base),
+	m_resource_data			()
 {
 }
 
@@ -35,15 +37,22 @@ bool UnknownRecord::Deserialize(ByteBuffer &buffer)
 	if(buffer.GetRemainingSize() < GetBase()->GetResourceSize())
 		return false;
 
-	buffer.IncreasePosition(GetBase()->GetResourceSize());
+	m_resource_data.SetPosition(0);
+	
+	if(!buffer.CopyTo(m_resource_data, GetBase()->GetResourceSize()))
+		return false;
+
+	m_resource_data.SetPosition(0);
 	return true;
 }
 
 bool UnknownRecord::Serialize(ByteBuffer &buffer)
-{
-	int resource_size = GetBase()->GetResourceSize();
-	for(int i = 0; i < resource_size; ++i)
-		buffer.WriteNop();
+{	
+	int current_pos = m_resource_data.GetPosition();
+	m_resource_data.SetPosition(0);
+
+	m_resource_data.CopyTo(buffer, m_resource_data.Size());
+	m_resource_data.SetPosition(current_pos);
 
 	return true;
 }

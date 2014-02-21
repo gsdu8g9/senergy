@@ -138,6 +138,21 @@ public:
 
 protected:
 	/*!
+	 * \brief Sets the resource size in the base record.
+	 *
+	 * \param resource_size The size of the resource 
+	 */
+	void SetResourceSize(unsigned short resource_size);
+
+	/*!
+	 * \brief Sets the resource size in the base record.
+	 *
+	 * \param resource_size The size of the resource 
+	 */
+	bool SetResourceSize(unsigned int resource_size);
+
+protected:
+	/*!
 	 * \brief More logical way to allow access to the base class.
 	 */
 	typedef ResourceRecordBase Base;

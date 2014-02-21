@@ -297,5 +297,16 @@ void ByteBuffer::DumpHexadecimal()
 	SetPosition(current_position);
 }
 
+bool ByteBuffer::CopyTo(ByteBuffer &buffer, int amount)
+{
+	if(amount > this->GetRemainingSize())
+		return false;
+
+	for(int i = 0; i < amount; ++i)
+		buffer.Write(buffer.ReadChar());
+
+	return true;
+}
+
 } // namespace Senergy
 

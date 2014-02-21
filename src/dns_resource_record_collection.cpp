@@ -60,10 +60,7 @@ bool ResourceRecordCollection::Deserialize(MessageHeader &header, ByteBuffer &bu
 		ResourceRecordInterfacePtr record = m_mapper.ApplyMapping(base_record->GetType(), base_record);
 		if(!record)
 		{
-			// \todo create a class that handles unknown records and holds the resource data
-	 		//		 an internal byte buffer, for now just skip the data
 			buffer.IncreasePosition(base_record->GetResourceSize());
-			//m_records[ResourceRecordType::Unkown].Add(base_record);
 			continue;
 		}
 

@@ -27,7 +27,8 @@ namespace Dns
 {
 
 IPV4Record::IPV4Record(ResourceRecordBasePtr base) :
-	ResourceRecordInterface(base)
+	ResourceRecordInterface	(base),
+	m_address				()
 {
 
 }

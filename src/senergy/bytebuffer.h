@@ -421,6 +421,18 @@ public:
 	 *		  byte will be separated by a space and after 35 bytes, a new line is created.
 	 */
 	void DumpHexadecimal();
+
+	/*!
+	 * \brief Copies the specified amount of bytes from the current position into the specified buffer.
+	 *
+	 * \param buffer The buffer to copy the bytes to.
+	 * \param amount The amount of bytes to copy to the specified buffer.
+	 *
+	 * \returns A boolean indicating whether the copy operation was a success, false is returned
+	 *			 when the copy failed and true is returned when the copy was a success. Failure is usually
+	 *			 caused by specifiying an amount that is more then the remaining size.
+	 */
+	bool CopyTo(ByteBuffer &buffer, int amount);
 	
 private:
 	// Sets the size of the buffer, by reallocating memory but checks

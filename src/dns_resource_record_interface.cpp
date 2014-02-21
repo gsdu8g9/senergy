@@ -41,5 +41,15 @@ ResourceRecordClass ResourceRecordInterface::GetClass()
 	return ResourceRecordClass::Internet;
 }
 
+void ResourceRecordInterface::SetResourceSize(unsigned short resource_size)
+{
+	m_base->m_rd_length = resource_size;
+}
+
+bool ResourceRecordInterface::SetResourceSize(unsigned int resource_size)
+{
+	
+}
+
 } // namespace Dns
 } // namespace Senergy

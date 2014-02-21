@@ -46,6 +46,9 @@ namespace Dns
  */
 class ResourceRecordBase
 {
+	// This is so interface can write information to the base, it's like protected inheritance..
+	friend class ResourceRecordInterface;
+
 private:
 	// Simple typedef for a shared pointer for the ResourceRecordBase class.
  	// Warning: this is redefined at the bottom of this file for public usage.

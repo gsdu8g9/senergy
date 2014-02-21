@@ -93,6 +93,10 @@ public:
 	 *			the type of this record.
 	 */
 	ResourceRecordType GetType();
+
+private:
+	// Holds the resource data for this record..
+	ByteBuffer m_resource_data;		
 };
 
 } // namespace Dns

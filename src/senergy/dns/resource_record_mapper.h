@@ -31,6 +31,7 @@
 #include <senergy/dns/resource_record_classes.h>
 #include <senergy/dns/resource_record_base.h>
 #include <senergy/dns/resource_record_interface.h>
+#include <senergy/dns/record_unknown.h>
 
 namespace Senergy
 {
@@ -105,7 +106,7 @@ public:
 		if(it != this->end())
 			return it->second->Create(base);
 
-		return ResourceRecordInterfacePtr();
+		return ResourceRecordInterface::CreateCast<UnknownRecord>(base);
 	}
 	
 	/*!
