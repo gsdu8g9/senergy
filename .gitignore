@@ -8,3 +8,6 @@ backup.txt
 *.suo
 *.sdf
 *.opensdf
+nul
+*.userprefs
+mono/*.userprefs
