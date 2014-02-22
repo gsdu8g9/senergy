@@ -30,6 +30,7 @@ UnknownRecord::UnknownRecord(ResourceRecordBasePtr base) :
 	ResourceRecordInterface	(base),
 	m_resource_data			()
 {
+	printf("unknown record was created\n");
 }
 
 bool UnknownRecord::Deserialize(ByteBuffer &buffer)
@@ -41,8 +42,10 @@ bool UnknownRecord::Deserialize(ByteBuffer &buffer)
 	
 	if(!buffer.CopyTo(m_resource_data, GetBase()->GetResourceSize()))
 		return false;
-
+		
+	buffer.IncreasePosition(GetBase()->GetResourceSize());
 	m_resource_data.SetPosition(0);
+	
 	return true;
 }
 

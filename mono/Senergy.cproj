@@ -110,6 +110,9 @@
     <None Include="..\src\senergy\dns\utils.h">
       <Link>senergy\dns\utils.h</Link>
     </None>
+    <None Include="..\src\senergy\dns\record_nameserver.h">
+      <Link>senergy\dns\record_nameserver.h</Link>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\src\bytebuffer.cpp">
@@ -186,6 +189,9 @@
     </Compile>
     <Compile Include="..\src\vectorx.cpp">
       <Link>vectorx.cpp</Link>
+    </Compile>
+    <Compile Include="..\src\dns_record_nameserver.cpp">
+      <Link>dns_record_nameserver.cpp</Link>
     </Compile>
   </ItemGroup>
 </Project>

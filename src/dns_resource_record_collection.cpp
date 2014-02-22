@@ -68,8 +68,8 @@ bool ResourceRecordCollection::Deserialize(MessageHeader &header, ByteBuffer &bu
 			return false;
 
 		m_records[record->GetType()].Add(record);
-	}		
-
+	}	
+	
 	return true;
 }
 
@@ -81,6 +81,7 @@ bool ResourceRecordCollection::Serialize(MessageHeader &header, ByteBuffer &buff
 void ResourceRecordCollection::__register_mappings()
 {
 	m_mapper.RegisterMapping<IPV4Record>();
+	m_mapper.RegisterMapping<NameServerRecord>();
 }
 
 void ResourceRecordCollection::Dump()

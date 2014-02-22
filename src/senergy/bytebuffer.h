@@ -421,6 +421,16 @@ public:
 	 *		  byte will be separated by a space and after 35 bytes, a new line is created.
 	 */
 	void DumpHexadecimal();
+	
+	/*!
+  	 * \brief Dump everything from the current position to the standard output, where
+	 *		  each byte in the buffer is dumped in it's hexadecimal representation. Each
+	 *		  byte will be separated by a space and after 35 bytes, a new line is created.
+	 *
+	 * \param start  The offset/position at which we should start dumping
+	 * \param amount The amount of bytes to display from the specified offset/position.
+	 */
+	void DumpHexadecimal(int start, int amount);
 
 	/*!
 	 * \brief Copies the specified amount of bytes from the current position into the specified buffer.
@@ -433,6 +443,14 @@ public:
 	 *			 caused by specifiying an amount that is more then the remaining size.
 	 */
 	bool CopyTo(ByteBuffer &buffer, int amount);
+	
+	/*!
+	 * \brief Checks if the buffer's position is currently at the end of the buffer.
+	 *
+	 * \returns True when the end of the buffer was reached and false when it has not
+	 *			reached the end of the buffer.
+	 */
+	bool HasReachedEnd();
 	
 private:
 	// Sets the size of the buffer, by reallocating memory but checks

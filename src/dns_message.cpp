@@ -42,7 +42,7 @@ bool Message::Deserialize(ByteBuffer &buffer)
 	{
 		MessageQuestionPtr new_message = MessageQuestionPtr(new MessageQuestion());
 		if(!new_message->Deserialize(buffer))
-			return false;
+			return false;	
 
 		this->Questions.push_back(new_message);
 	}
@@ -51,7 +51,6 @@ bool Message::Deserialize(ByteBuffer &buffer)
 		return false;
 
 	this->ResourceRecords.Dump();
-
 	return true;
 }
 

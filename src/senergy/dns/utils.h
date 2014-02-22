@@ -162,11 +162,15 @@ public:
 	 * \see Section 4.1.4 of RFC-1025 (Message compression).
 	 *
 	 * \param buffer The buffer to read the domain name from.
+	 * \param decode An optional parameters that indicates whether the returned string should
+	 *				 be decoded using the Utils::DecodeHostname function or not. If set to
+	 *				 true the returned hostname will be decoded, if set to false it will
+	 *				 not be decoded. We use this parameter when reading a domain name pointer.
 	 *
 	 * \returns The domain name that was read from the buffer, or an empty
 	 *			string if something went wrong.
 	 */
-	static std::string ReadHostnameFromBuffer(ByteBuffer &buffer);
+	static std::string ReadHostnameFromBuffer(ByteBuffer &buffer, bool decode = true);
 };
 
 } // namespace Dns

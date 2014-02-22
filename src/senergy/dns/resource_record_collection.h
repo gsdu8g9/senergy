@@ -34,6 +34,7 @@
 #include <senergy/dns/resource_record_interface.h>
 #include <senergy/dns/resource_record_mapper.h>
 #include <senergy/dns/record_ipv4_address.h>
+#include <senergy/dns/record_nameserver.h>
 
 namespace Senergy
 {

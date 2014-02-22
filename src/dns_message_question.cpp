@@ -65,9 +65,8 @@ bool MessageQuestion::Deserialize(ByteBuffer &buffer)
 {
 	if(buffer.GetRemainingSize() < 3)
 		return false;
-
-	m_hostname = buffer.ReadString(256);
-	m_hostname = Utils::DecodeHostname(m_hostname);
+	
+	m_hostname = Utils::ReadHostnameFromBuffer(buffer);
 	
 	if(buffer.GetRemainingSize() < 2)
 		return false;

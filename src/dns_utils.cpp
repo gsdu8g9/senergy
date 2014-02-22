@@ -128,36 +128,42 @@ unsigned int Utils::NetworkToHostByteOrder(unsigned int value)
 	return ntohs(value);
 }
 
-std::string Utils::ReadHostnameFromBuffer(ByteBuffer &buffer)
+std::string Utils::ReadHostnameFromBuffer(ByteBuffer &buffer, bool decode)
 {
 	if(buffer.GetRemainingSize() < 1)
 		return "";
 		
-	unsigned char first_byte = buffer.ReadUnsignedChar();
-	if(first_byte >= 192) // 192 = 11 = pointer
-	{
-		int offset = (int) buffer.ReadUnsignedChar();
-
-		int current_buffer_position = buffer.GetPosition();
-		buffer.SetPosition(offset);
+	std::string read_hostname = "";
 		
-		std::string hostname = buffer.ReadString(256);
-		hostname = DecodeHostname(hostname);
-
-		buffer.SetPosition(current_buffer_position);
-		return hostname;
-	}
-	else
+	while(!buffer.HasReachedEnd())
 	{
-		buffer.DecreasePosition();
+		unsigned char current_char = buffer.ReadUnsignedChar();
+		
+		if(current_char == 0x0)
+			break;
+			
+		if(current_char == 0xFFFFFFEC || current_char >= 192)
+		{
+			int offset = (int) buffer.ReadUnsignedChar();
 
-		std::string hostname = buffer.ReadString(256);
-		hostname = DecodeHostname(hostname);
+			int current_buffer_position = buffer.GetPosition();
+			buffer.SetPosition(offset);
+			
+			std::string found = ReadHostnameFromBuffer(buffer, false);
+			read_hostname += found;
 
-		return hostname;
+			buffer.SetPosition(current_buffer_position);
+			break;
+		}
+		else
+		{
+			read_hostname += current_char;
+		}
 	}
 
-	return "";
+	if(decode)
+		return Utils::DecodeHostname(read_hostname);
+	return read_hostname;
 }
 
 } // namespace Dns
