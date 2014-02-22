@@ -57,6 +57,15 @@ public:
 	 * \returns The specified unsigned integer value as a string.
  	 */
 	static std::string ToString(unsigned int value);
+	
+	/*!
+	 * \brief Converts the specified unsigned short value to a string.
+	 *
+	 * \param value The unsigned short value to convert to a string.
+	 *
+	 * \returns The specified unsigned short value as a string.
+	 */
+	static std::string ToString(unsigned short value);
 
 	/*!
   	 * \brief Converts the specified integer value to a character.
@@ -66,6 +75,34 @@ public:
 	 * \returns The specified integer value as a character.
  	 */
 	static char ToChar(int value);
+	
+private:
+	/*!
+	 * \brief Converts the specified integer/number type to a string using the specified 'printf identifier'.
+	 *
+	 * \typeparam T The integer type to convert to a string.
+	 * 
+	 * \param value 			The integer/numeric value to convert to a string.
+	 * \param printf_identfier  The 'printf identifier' to use, for example, for an unsigned integer, '%u' is specified.
+	 *
+	 * \returns The specified integer/numeric value as a string.
+	 */
+	template<typename T>
+	static std::string __numeric_to_string(T value, const std::string &printf_identifier)
+	{
+		int digits = floor((double)log10(abs(value))) + 1;
+		if(value == 0)
+			digits = 1;
+
+		#ifdef _WIN32
+			char *raw_result = (char *) malloc(digits);
+		#else
+			char raw_result[digits];
+		#endif
+ 
+		sprintf(raw_result, printf_identifier.c_str(), value); 
+		return std::string(raw_result);
+	}
 };
 
 } // namespace Senergy

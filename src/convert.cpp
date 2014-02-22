@@ -26,23 +26,17 @@ namespace Senergy
 
 std::string Convert::ToString(int value)
 {
-	int digits = floor((double)log10(abs(value))) + 1;
-	if(value == 0)
-		digits = 1;
+	return __numeric_to_string<int>(value, "%i");
+}
 
-	#ifdef _WIN32
-		char *raw_result = (char *) malloc(digits);
-	#else
-		char raw_result[digits];
-	#endif
-
-	sprintf(raw_result, "%d", value); 
-	return std::string(raw_result);
+std::string Convert::ToString(unsigned short value)
+{
+	return __numeric_to_string<unsigned short>(value, "%hu");
 }
 
 std::string Convert::ToString(unsigned int value)
 {
-	return ToString((int)value);
+	return __numeric_to_string<unsigned int>(value, "%u");
 }
 
 char Convert::ToChar(int value)
