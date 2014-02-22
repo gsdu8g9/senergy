@@ -284,7 +284,7 @@ void ByteBuffer::DumpHexadecimal()
 
 	for(int i = 0; i < current_remaining_bytes; ++i)
 	{
-		printf("%02x ", ReadChar());
+		printf("%02X ", ReadChar());
 		line_count++;
 
 		if(line_count >= 35)
@@ -293,7 +293,39 @@ void ByteBuffer::DumpHexadecimal()
 			line_count = 0;
 		}
 	} 
+	
+	Print::NewLine();
+	SetPosition(current_position);
+}
 
+void ByteBuffer::DumpHexadecimal(int start, int amount)
+{
+	int current_position = GetPosition();
+	SetPosition(start);
+	
+	int current_remaining_bytes = GetRemainingSize();
+	
+	if(current_remaining_bytes > amount)
+		current_remaining_bytes = amount;
+
+	if(current_remaining_bytes <= 0)
+		return;
+
+	int line_count = 0;
+ 
+	for(int i = 0; i < current_remaining_bytes; ++i)
+	{
+		printf("%02X ", ReadChar());
+		line_count++;
+
+		if(line_count >= 35)
+		{
+			printf("\n");
+			line_count = 0;
+		}
+	} 
+	
+	Print::NewLine();
 	SetPosition(current_position);
 }
 
@@ -306,6 +338,14 @@ bool ByteBuffer::CopyTo(ByteBuffer &buffer, int amount)
 		buffer.Write(buffer.ReadChar());
 
 	return true;
+}
+
+bool ByteBuffer::HasReachedEnd()
+{
+	if(GetRemainingSize() <= 0)
+		return true;
+		
+	return false;
 }
 
 } // namespace Senergy
