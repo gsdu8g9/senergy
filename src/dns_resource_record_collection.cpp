@@ -91,7 +91,8 @@ void ResourceRecordCollection::Dump()
 		size_t amount_records = m_records.at(i).second.size();
 		for(size_t y = 0; y < amount_records; y++)
 		{
-			m_records.at(i).second[y]->GetBase()->Dump();
+			m_records.at(i).second[y]->Dump();
+			Print::NewLine();
 		}
 	}
 }

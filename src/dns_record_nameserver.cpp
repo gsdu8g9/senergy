@@ -72,5 +72,11 @@ std::string NameServerRecord::GetAddress()
 	return m_address;
 }
 
+void NameServerRecord::Dump()
+{
+	GetBase()->Dump();
+	printf("Address: %s\n", m_address.c_str());
+}
+
 } // namespace Dns
 } // namespace Senergy

@@ -95,6 +95,14 @@ ResourceRecordType ResourceRecordBase::GetType()
 	return m_type;
 }
 
+std::string ResourceRecordBase::GetTypeString()
+{
+	if(ResourceRecordTypeMap::Get(m_type).empty())	
+		return Convert::ToString((unsigned short)m_type);
+	
+	return ResourceRecordTypeMap::Get(m_type);
+}
+
 void ResourceRecordBase::SetType(ResourceRecordType type)
 {
 	m_type = type;
@@ -128,7 +136,7 @@ int ResourceRecordBase::GetResourceSize()
 void ResourceRecordBase::Dump()
 {
 	printf("Name: %s\n", m_hostname.c_str());
-	printf("Type: %hu\n", (unsigned short)m_type);
+	printf("Type: %s\n", GetTypeString().c_str());	
 	printf("Class: %hu\n", (unsigned short)m_class);
 	printf("TTL: %u\n", m_ttl);
 	printf("RDLength: %hu\n", m_rd_length);

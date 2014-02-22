@@ -113,6 +113,9 @@
     <None Include="..\src\senergy\dns\record_nameserver.h">
       <Link>senergy\dns\record_nameserver.h</Link>
     </None>
+    <None Include="..\src\senergy\enum_mapper.h">
+      <Link>senergy\enum_mapper.h</Link>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\src\bytebuffer.cpp">
@@ -192,6 +195,9 @@
     </Compile>
     <Compile Include="..\src\dns_record_nameserver.cpp">
       <Link>dns_record_nameserver.cpp</Link>
+    </Compile>
+    <Compile Include="..\src\enum_mapper.cpp">
+      <Link>enum_mapper.cpp</Link>
     </Compile>
   </ItemGroup>
 </Project>

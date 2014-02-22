@@ -51,5 +51,10 @@ bool ResourceRecordInterface::SetResourceSize(unsigned int resource_size)
 	
 }
 
+void ResourceRecordInterface::Dump()
+{
+	m_base->Dump();
+}
+
 } // namespace Dns
 } // namespace Senergy

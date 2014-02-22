@@ -80,5 +80,11 @@ std::string IPV4Record::GetAddress()
 	return m_address;
 }
 
+void IPV4Record::Dump()
+{
+	GetBase()->Dump();
+	printf("Address: %s\n", m_address.c_str());
+}
+
 } // namespace Dns
 } // namespace Senergy

@@ -107,6 +107,14 @@ public:
 	 * \returns The IP address that was deserialized.
 	 */
 	std::string GetAddress();
+	
+	/*!
+	 * \brief Dumps all fields to the standard output, with
+	 *		  their values. In the following format:
+	 *
+	 * 		  [field name]: [field_value]\n
+	 */
+	void Dump();
 
 private:
 	// Contains the address that is going to be serialized, or the address that was deserialized.

@@ -28,6 +28,7 @@
 #include <senergy/dns/resource_record_classes.h>
 #include <senergy/dns/utils.h>
 #include <senergy/bytebuffer.h>
+#include <senergy/convert.h>
 
 namespace Senergy
 {
@@ -130,6 +131,14 @@ public:
 	 *			what kind of resource this record contains.
 	 */
 	ResourceRecordType GetType();
+	
+	/*!
+	 * \brief Gets the resource record type of this record, as a string.
+	 *
+	 * \returns The type of this resource record as a string, which is basiclly
+	 *			the name of the configued ResourceRecordType enumuration value.
+	 */
+	std::string GetTypeString();
 
 	/*!
 	 * \brief Sets the resource record type, the type of resource this record contains.

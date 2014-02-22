@@ -118,6 +118,14 @@ public:
 	 *			the first part in this resource record.
 	 */
 	ResourceRecordBasePtr GetBase() const;
+	
+	/*!
+	 * \brief Dumps all fields to the standard output, with
+	 *		  their values. In the following format:
+	 *
+	 * 		  [field name]: [field_value]\n
+	 */
+	virtual void Dump();
 
 	/*!
 	 * \brief Creates a new instance of the specified type with the specified resource record base instance,
