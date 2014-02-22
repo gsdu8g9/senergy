@@ -22,6 +22,8 @@
 #ifndef SY_DNS_RESOURCE_RECORD_TYPES_H
 #define SY_DNS_RESOURCE_RECORD_TYPES_H
 
+#include <senergy/enum_mapper.h>
+
 namespace Senergy
 {
 namespace Dns
@@ -443,6 +445,38 @@ enum class ResourceRecordType : unsigned short
 	 * \brief DNSSEC Lookaside validation.
 	 */
 	DLV = 32769,
+};
+
+/*!
+ * \brief Statis class that helps mapping values from the ResourceRecordType enumuration
+ *		  to their textual representation.
+ *
+ * \author Swen Kooij (Photonios)
+ */
+class ResourceRecordTypeMap : public EnumMapper<ResourceRecordType>
+{
+public:
+	/*!
+	 * \brief Initializes a new instance of the ResourceRecordTypeMap class and
+	 *		  maps all the values from the ResourceRecordType enumuration.
+	 */
+	ResourceRecordTypeMap();
+	
+	/*!
+	 * \brief Gets the textual representation of the specified resource record type.
+	 *
+	 * \param type A value from the ResourceRecordType enumuration, the value to
+	 *			   get the textual represenation of.
+	 *
+	 * \returns The textual represenatation of the specified value from the ResourceRecordType
+	 *			enumuration. If no mapping for the specified value exists, an empty string is returned.
+	 */
+	static std::string Get(ResourceRecordType type);
+	
+private:
+	// The instance of this class, this is so we dont' have to create instances of this class over and
+	// over again...
+	static ResourceRecordTypeMap s_map;
 };
 
 } // namespace Dns

@@ -18,28 +18,5 @@
  *   Swen Kooij (Photonios) <swenkooij@gmail.com> <photonios@outlook.com>
  *
  *******************************************************************************/
-
-#include <senergy/dns/resource_record_types.h>
-
-namespace Senergy
-{
-namespace Dns
-{
-
-// Static field implementation
-ResourceRecordTypeMap ResourceRecordTypeMap::s_map;
-
-ResourceRecordTypeMap::ResourceRecordTypeMap()
-{
-	Map(ResourceRecordType::A, "A");
-	Map(ResourceRecordType::AAAA, "AAAA");
-	Map(ResourceRecordType::NS, "NS");
-}
-
-std::string ResourceRecordTypeMap::Get(ResourceRecordType type)
-{
-	return s_map.GetMapping(type);
-}
-
-} // namespace Dns
-} // namespace Senergy
+ 
+#include <senergy/enum_mapper.h>
