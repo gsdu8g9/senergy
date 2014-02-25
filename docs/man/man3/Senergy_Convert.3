@@ -1,4 +1,4 @@
-.TH "Senergy::Convert" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::Convert" 3 "Tue Feb 25 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -22,6 +22,10 @@ A simple conversion class, which simplifies conversion between various native da
 .RI "static std::string \fBToString\fP (unsigned int value)"
 .br
 .RI "\fIConverts the specified unsigned integer value to a string\&. \fP"
+.ti -1c
+.RI "static std::string \fBToString\fP (unsigned short value)"
+.br
+.RI "\fIConverts the specified unsigned short value to a string\&. \fP"
 .ti -1c
 .RI "static char \fBToChar\fP (int value)"
 .br
@@ -60,7 +64,7 @@ The specified integer value as a character\&.
 .PP
 
 .PP
-Definition at line 60 of file convert\&.cpp\&.
+Definition at line 42 of file convert\&.cpp\&.
 .SS "std::string Senergy::Convert::ToString (intvalue)\fC [static]\fP"
 
 .PP
@@ -82,7 +86,7 @@ Definition at line 27 of file convert\&.cpp\&.
 .SS "std::string Senergy::Convert::ToString (unsigned intvalue)\fC [static]\fP"
 
 .PP
-Converts the specified unsigned integer value to a string\&. Converts the specified integer value to a string\&.
+Converts the specified unsigned integer value to a string\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -91,22 +95,30 @@ Converts the specified unsigned integer value to a string\&. Converts the specif
 .PP
 \fBReturns:\fP
 .RS 4
-The specified unsigned integer value as a string\&.
-.RE
-.PP
-\fBParameters:\fP
-.RS 4
-\fIvalue\fP The integer value to convert to a string\&.
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-The specified integer value as a string\&. 
+The specified unsigned integer value as a string\&. 
 .RE
 .PP
 
 .PP
-Definition at line 55 of file convert\&.cpp\&.
+Definition at line 37 of file convert\&.cpp\&.
+.SS "std::string Senergy::Convert::ToString (unsigned shortvalue)\fC [static]\fP"
+
+.PP
+Converts the specified unsigned short value to a string\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The unsigned short value to convert to a string\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The specified unsigned short value as a string\&. 
+.RE
+.PP
+
+.PP
+Definition at line 32 of file convert\&.cpp\&.
 
 .SH "Author"
 .PP 

@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" line="43" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" bodystart="43" bodyend="-1"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/fastmap.h" line="43" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/fastmap.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_senergy_1_1_fast_map_item_1a685a9e654410404e550d65acd951c7ca" prot="public" static="no" mutable="no">
         <type>TValue</type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" line="44" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" bodystart="44" bodyend="-1"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/fastmap.h" line="44" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/fastmap.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -48,7 +48,7 @@
     <detaileddescription>
 <para>TKey The data type of the key that is stored in the map.  TValue The data type of the value that is stored in the map.</para><para><simplesect kind="author"><para>Swen Kooij (Photonio) </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" line="42" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" bodystart="41" bodyend="45"/>
+    <location file="/home/photonios/Documents/senergy/src/senergy/fastmap.h" line="42" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/fastmap.h" bodystart="41" bodyend="45"/>
     <listofallmembers>
       <member refid="struct_senergy_1_1_fast_map_item_1a99e39296732f934331d581936e2ddb26" prot="public" virt="non-virtual"><scope>Senergy::FastMapItem</scope><name>first</name></member>
       <member refid="struct_senergy_1_1_fast_map_item_1a685a9e654410404e550d65acd951c7ca" prot="public" virt="non-virtual"><scope>Senergy::FastMapItem</scope><name>second</name></member>

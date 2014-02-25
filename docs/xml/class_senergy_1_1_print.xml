@@ -39,7 +39,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/print.h" line="48" column="1" bodyfile="/home/photonios/Documents/Senergy/src/print.cpp" bodystart="27" bodyend="33"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/print.h" line="48" column="1" bodyfile="/home/photonios/Documents/senergy/src/print.cpp" bodystart="27" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_print_1a28060c00de905d945667cf606f7ad1d6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -65,7 +65,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/print.h" line="57" column="1" bodyfile="/home/photonios/Documents/Senergy/src/print.cpp" bodystart="35" bodyend="42"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/print.h" line="57" column="1" bodyfile="/home/photonios/Documents/senergy/src/print.cpp" bodystart="35" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_print_1ac85fea5b673455bfc796d48c56fac38d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -90,7 +90,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/print.h" line="65" column="1" bodyfile="/home/photonios/Documents/Senergy/src/print.cpp" bodystart="44" bodyend="47"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/print.h" line="65" column="1" bodyfile="/home/photonios/Documents/senergy/src/print.cpp" bodystart="44" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_print_1a7899dd50cdb0b0a6e7ed144d62ea227d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -115,7 +115,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/print.h" line="73" column="1" bodyfile="/home/photonios/Documents/Senergy/src/print.cpp" bodystart="49" bodyend="52"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/print.h" line="73" column="1" bodyfile="/home/photonios/Documents/senergy/src/print.cpp" bodystart="49" bodyend="52"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_print_1a39d34bc30221b803f96ec25d6cf7e86a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -129,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/print.h" line="79" column="1" bodyfile="/home/photonios/Documents/Senergy/src/print.cpp" bodystart="54" bodyend="57"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/print.h" line="79" column="1" bodyfile="/home/photonios/Documents/senergy/src/print.cpp" bodystart="54" bodyend="57"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -137,7 +137,7 @@
     <detaileddescription>
 <para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/print.h" line="38" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/print.h" bodystart="37" bodyend="80"/>
+    <location file="/home/photonios/Documents/senergy/src/senergy/print.h" line="38" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/print.h" bodystart="37" bodyend="80"/>
     <listofallmembers>
       <member refid="class_senergy_1_1_print_1a6c6b70bd91e56896058004bf82201010" prot="public" virt="non-virtual"><scope>Senergy::Print</scope><name>Hexadecimal</name></member>
       <member refid="class_senergy_1_1_print_1a28060c00de905d945667cf606f7ad1d6" prot="public" virt="non-virtual"><scope>Senergy::Print</scope><name>Hexadecimal</name></member>

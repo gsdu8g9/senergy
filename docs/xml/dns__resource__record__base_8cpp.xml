@@ -4,85 +4,129 @@
     <compoundname>dns_resource_record_base.cpp</compoundname>
     <includes refid="resource__record__base_8h" local="no">senergy/dns/resource_record_base.h</includes>
     <incdepgraph>
-      <node id="153">
+      <node id="271">
         <label>arpa/inet.h</label>
       </node>
-      <node id="142">
-        <label>senergy/dns/resource_record_base.h</label>
-        <link refid="resource__record__base_8h"/>
-        <childnode refid="143" relation="include">
+      <node id="260">
+        <label>senergy/enum_mapper.h</label>
+        <link refid="enum__mapper_8h"/>
+        <childnode refid="257" relation="include">
         </childnode>
-        <childnode refid="144" relation="include">
-        </childnode>
-        <childnode refid="145" relation="include">
-        </childnode>
-        <childnode refid="146" relation="include">
-        </childnode>
-        <childnode refid="147" relation="include">
-        </childnode>
-        <childnode refid="148" relation="include">
+        <childnode refid="261" relation="include">
         </childnode>
       </node>
-      <node id="146">
+      <node id="273">
+        <label>cmath</label>
+      </node>
+      <node id="266">
+        <label>senergy/bytebuffer.h</label>
+        <link refid="bytebuffer_8h"/>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="267" relation="include">
+        </childnode>
+        <childnode refid="268" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="269" relation="include">
+        </childnode>
+      </node>
+      <node id="257">
+        <label>string</label>
+      </node>
+      <node id="263">
+        <label>stddef.h</label>
+      </node>
+      <node id="261">
+        <label>senergy/fastmap.h</label>
+        <link refid="fastmap_8h"/>
+        <childnode refid="262" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+      </node>
+      <node id="259">
+        <label>senergy/dns/resource_record_types.h</label>
+        <link refid="resource__record__types_8h"/>
+        <childnode refid="260" relation="include">
+        </childnode>
+      </node>
+      <node id="264">
         <label>senergy/dns/resource_record_classes.h</label>
         <link refid="resource__record__classes_8h"/>
       </node>
-      <node id="143">
-        <label>string</label>
-      </node>
-      <node id="152">
-        <label>cstdio</label>
-      </node>
-      <node id="147">
-        <label>senergy/dns/utils.h</label>
-        <link refid="utils_8h"/>
-        <childnode refid="143" relation="include">
-        </childnode>
-        <childnode refid="148" relation="include">
-        </childnode>
-        <childnode refid="153" relation="include">
-        </childnode>
-      </node>
-      <node id="151">
+      <node id="269">
         <label>senergy/print.h</label>
         <link refid="print_8h"/>
-        <childnode refid="152" relation="include">
+        <childnode refid="270" relation="include">
         </childnode>
-        <childnode refid="143" relation="include">
+        <childnode refid="257" relation="include">
         </childnode>
       </node>
-      <node id="150">
+      <node id="270">
+        <label>cstdio</label>
+      </node>
+      <node id="262">
+        <label>vector</label>
+      </node>
+      <node id="274">
+        <label>ctgmath</label>
+      </node>
+      <node id="265">
+        <label>senergy/dns/utils.h</label>
+        <link refid="utils_8h"/>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="266" relation="include">
+        </childnode>
+        <childnode refid="271" relation="include">
+        </childnode>
+      </node>
+      <node id="268">
         <label>cstdlib</label>
       </node>
-      <node id="148">
-        <label>senergy/bytebuffer.h</label>
-        <link refid="bytebuffer_8h"/>
-        <childnode refid="143" relation="include">
+      <node id="272">
+        <label>senergy/convert.h</label>
+        <link refid="convert_8h"/>
+        <childnode refid="257" relation="include">
         </childnode>
-        <childnode refid="149" relation="include">
+        <childnode refid="270" relation="include">
         </childnode>
-        <childnode refid="150" relation="include">
+        <childnode refid="273" relation="include">
         </childnode>
-        <childnode refid="144" relation="include">
-        </childnode>
-        <childnode refid="151" relation="include">
+        <childnode refid="274" relation="include">
         </childnode>
       </node>
-      <node id="141">
-        <label>src/dns_resource_record_base.cpp</label>
-        <link refid="dns_resource_record_base.cpp"/>
-        <childnode refid="142" relation="include">
+      <node id="256">
+        <label>senergy/dns/resource_record_base.h</label>
+        <link refid="resource__record__base_8h"/>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="265" relation="include">
+        </childnode>
+        <childnode refid="266" relation="include">
+        </childnode>
+        <childnode refid="272" relation="include">
         </childnode>
       </node>
-      <node id="149">
+      <node id="267">
         <label>cstring</label>
       </node>
-      <node id="144">
-        <label>memory</label>
+      <node id="255">
+        <label>src/dns_resource_record_base.cpp</label>
+        <link refid="dns_resource_record_base.cpp"/>
+        <childnode refid="256" relation="include">
+        </childnode>
       </node>
-      <node id="145">
-        <label>senergy/dns/resource_record_types.h</label>
-        <link refid="resource__record__types_8h"/>
+      <node id="258">
+        <label>memory</label>
       </node>
     </incdepgraph>
     <innernamespace refid="namespace_senergy">Senergy</innernamespace>
@@ -139,7 +183,7 @@
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(buffer.<ref refid="class_senergy_1_1_byte_buffer_1ab938ed32f9f909145f93099f4620da69" kindref="member">GetRemainingSize</ref>()<sp/>&lt;<sp/>4)</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>m_hostname<sp/>=<sp/><ref refid="class_senergy_1_1_dns_1_1_utils_1a6b995d31d85ef39a5e8ac57928fa35ed" kindref="member">Utils::ReadHostnameFromBuffer</ref>(buffer);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>m_hostname<sp/>=<sp/><ref refid="class_senergy_1_1_dns_1_1_utils_1a81879edd7a9daec1d6dfbf952549c500" kindref="member">Utils::ReadHostnameFromBuffer</ref>(buffer);</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_hostname.size()<sp/>&lt;=<sp/>0)</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
@@ -156,83 +200,94 @@
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>m_class<sp/><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="namespace_senergy_1_1_dns_1a953f153bc411213d621d00c1e1b3eb9d" kindref="member">ResourceRecordClass</ref>)<sp/><ref refid="class_senergy_1_1_dns_1_1_utils_1aa4e117a17add157b5e9bcb5fada4ac49" kindref="member">Utils::NetworkToHostByteOrder</ref>((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)m_class);</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>m_ttl<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_senergy_1_1_dns_1_1_utils_1aa4e117a17add157b5e9bcb5fada4ac49" kindref="member">Utils::NetworkToHostByteOrder</ref>(m_ttl);</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>m_rd_length<sp/>=<sp/><ref refid="class_senergy_1_1_dns_1_1_utils_1aa4e117a17add157b5e9bcb5fada4ac49" kindref="member">Utils::NetworkToHostByteOrder</ref>(m_rd_length);</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69" refid="class_senergy_1_1_dns_1_1_resource_record_base_1a3a343750cf6e6a4455d25c064d4412f5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1a3a343750cf6e6a4455d25c064d4412f5" kindref="member">ResourceRecordBase::Serialize</ref>(<ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref><sp/>&amp;buffer)</highlight></codeline>
-<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_hostname.empty()<sp/>||<sp/>m_rd_length<sp/>&lt;=<sp/>0)</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>encoded_hostname<sp/>=<sp/><ref refid="class_senergy_1_1_dns_1_1_utils_1a68f1ebf9810ecb225a4f73c4200778bf" kindref="member">Utils::EncodeHostname</ref>(m_hostname);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a9a561b3dd8778ee68e75e5a62a38fa60" kindref="member">Write</ref>(encoded_hostname);</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a9a561b3dd8778ee68e75e5a62a38fa60" kindref="member">Write</ref>(<ref refid="class_senergy_1_1_dns_1_1_utils_1a26ed8e47210810c24f8ab5a2588bf276" kindref="member">Utils::HostToNetworkByteOrder</ref>((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)m_type));</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a9a561b3dd8778ee68e75e5a62a38fa60" kindref="member">Write</ref>(<ref refid="class_senergy_1_1_dns_1_1_utils_1a26ed8e47210810c24f8ab5a2588bf276" kindref="member">Utils::HostToNetworkByteOrder</ref>((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)m_class));</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a9a561b3dd8778ee68e75e5a62a38fa60" kindref="member">Write</ref>(<ref refid="class_senergy_1_1_dns_1_1_utils_1a26ed8e47210810c24f8ab5a2588bf276" kindref="member">Utils::HostToNetworkByteOrder</ref>(m_ttl));</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a9a561b3dd8778ee68e75e5a62a38fa60" kindref="member">Write</ref>(<ref refid="class_senergy_1_1_dns_1_1_utils_1a26ed8e47210810c24f8ab5a2588bf276" kindref="member">Utils::HostToNetworkByteOrder</ref>(m_rd_length));</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84" refid="class_senergy_1_1_dns_1_1_resource_record_base_1a486427180da21f76701001a5e411e369" refkind="member"><highlight class="normal">std::string<sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1a486427180da21f76701001a5e411e369" kindref="member">ResourceRecordBase::GetHostname</ref>()</highlight></codeline>
-<codeline lineno="85"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_hostname;</highlight></codeline>
-<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89" refid="class_senergy_1_1_dns_1_1_resource_record_base_1ad5f8a096ae61dcf0ddaac380f84bf052" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1ad5f8a096ae61dcf0ddaac380f84bf052" kindref="member">ResourceRecordBase::SetHostname</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>hostname)</highlight></codeline>
-<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>m_hostname<sp/>=<sp/>hostname;</highlight></codeline>
-<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94" refid="class_senergy_1_1_dns_1_1_resource_record_base_1acabfef62c1a3ef4332556bd312c42bdc" refkind="member"><highlight class="normal"><ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0" kindref="member">ResourceRecordType</ref><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1acabfef62c1a3ef4332556bd312c42bdc" kindref="member">ResourceRecordBase::GetType</ref>()</highlight></codeline>
-<codeline lineno="95"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_type;</highlight></codeline>
-<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99" refid="class_senergy_1_1_dns_1_1_resource_record_base_1affcaab56c3632a361a654ed5bc79b3c4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1affcaab56c3632a361a654ed5bc79b3c4" kindref="member">ResourceRecordBase::SetType</ref>(<ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0" kindref="member">ResourceRecordType</ref><sp/>type)</highlight></codeline>
-<codeline lineno="100"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>m_type<sp/>=<sp/>type;</highlight></codeline>
-<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104" refid="class_senergy_1_1_dns_1_1_resource_record_base_1a4abfe4f1eeb552494be535c271abe18f" refkind="member"><highlight class="normal"><ref refid="namespace_senergy_1_1_dns_1a953f153bc411213d621d00c1e1b3eb9d" kindref="member">ResourceRecordClass</ref><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1a4abfe4f1eeb552494be535c271abe18f" kindref="member">ResourceRecordBase::GetClass</ref>()</highlight></codeline>
-<codeline lineno="105"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_class;</highlight></codeline>
-<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109" refid="class_senergy_1_1_dns_1_1_resource_record_base_1a87d4a0202837700dbc6662d9aff8f385" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1a87d4a0202837700dbc6662d9aff8f385" kindref="member">ResourceRecordBase::SetClass</ref>(<ref refid="namespace_senergy_1_1_dns_1a953f153bc411213d621d00c1e1b3eb9d" kindref="member">ResourceRecordClass</ref><sp/>clas)</highlight></codeline>
-<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>m_class<sp/>=<sp/>clas;</highlight></codeline>
-<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114" refid="class_senergy_1_1_dns_1_1_resource_record_base_1a7b6733ccb332b22335e33e09ad7bddd0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1a7b6733ccb332b22335e33e09ad7bddd0" kindref="member">ResourceRecordBase::NeedsCaching</ref>()</highlight></codeline>
-<codeline lineno="115"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(m_ttl<sp/>&gt;<sp/>0);</highlight></codeline>
-<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119" refid="class_senergy_1_1_dns_1_1_resource_record_base_1a96094f0e13f517b6462cd193f9b82f80" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1a96094f0e13f517b6462cd193f9b82f80" kindref="member">ResourceRecordBase::GetMaxCachingTime</ref>()</highlight></codeline>
-<codeline lineno="120"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)m_ttl;</highlight></codeline>
-<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"></highlight></codeline>
-<codeline lineno="124" refid="class_senergy_1_1_dns_1_1_resource_record_base_1ad077545843d4565a39a4d6e1cffb8859" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1ad077545843d4565a39a4d6e1cffb8859" kindref="member">ResourceRecordBase::GetResourceSize</ref>()</highlight></codeline>
-<codeline lineno="125"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)m_rd_length;</highlight></codeline>
-<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"></highlight></codeline>
-<codeline lineno="129" refid="class_senergy_1_1_dns_1_1_resource_record_base_1ae4c4b80c9325c026eed376e28cd6ddc3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1ae4c4b80c9325c026eed376e28cd6ddc3" kindref="member">ResourceRecordBase::Dump</ref>()</highlight></codeline>
-<codeline lineno="130"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Name:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>m_hostname.c_str());</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Type:<sp/>%hu\n&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)m_type);</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Class:<sp/>%hu\n&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)m_class);</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;TTL:<sp/>%u\n&quot;</highlight><highlight class="normal">,<sp/>m_ttl);</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;RDLength:<sp/>%hu\n&quot;</highlight><highlight class="normal">,<sp/>m_rd_length);</highlight></codeline>
-<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"></highlight></codeline>
-<codeline lineno="138"><highlight class="normal"></highlight></codeline>
-<codeline lineno="139"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Dns</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="140"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="class_senergy_1_1_dns_1_1_resource_record_base_1a3a343750cf6e6a4455d25c064d4412f5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1a3a343750cf6e6a4455d25c064d4412f5" kindref="member">ResourceRecordBase::Serialize</ref>(<ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref><sp/>&amp;buffer)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_hostname.empty()<sp/>||<sp/>m_rd_length<sp/>&lt;=<sp/>0)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>encoded_hostname<sp/>=<sp/><ref refid="class_senergy_1_1_dns_1_1_utils_1a68f1ebf9810ecb225a4f73c4200778bf" kindref="member">Utils::EncodeHostname</ref>(m_hostname);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a9a561b3dd8778ee68e75e5a62a38fa60" kindref="member">Write</ref>(encoded_hostname);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a9a561b3dd8778ee68e75e5a62a38fa60" kindref="member">Write</ref>(<ref refid="class_senergy_1_1_dns_1_1_utils_1a26ed8e47210810c24f8ab5a2588bf276" kindref="member">Utils::HostToNetworkByteOrder</ref>((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)m_type));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a9a561b3dd8778ee68e75e5a62a38fa60" kindref="member">Write</ref>(<ref refid="class_senergy_1_1_dns_1_1_utils_1a26ed8e47210810c24f8ab5a2588bf276" kindref="member">Utils::HostToNetworkByteOrder</ref>((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)m_class));</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a9a561b3dd8778ee68e75e5a62a38fa60" kindref="member">Write</ref>(<ref refid="class_senergy_1_1_dns_1_1_utils_1a26ed8e47210810c24f8ab5a2588bf276" kindref="member">Utils::HostToNetworkByteOrder</ref>(m_ttl));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a9a561b3dd8778ee68e75e5a62a38fa60" kindref="member">Write</ref>(<ref refid="class_senergy_1_1_dns_1_1_utils_1a26ed8e47210810c24f8ab5a2588bf276" kindref="member">Utils::HostToNetworkByteOrder</ref>(m_rd_length));</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="class_senergy_1_1_dns_1_1_resource_record_base_1a486427180da21f76701001a5e411e369" refkind="member"><highlight class="normal">std::string<sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1a486427180da21f76701001a5e411e369" kindref="member">ResourceRecordBase::GetHostname</ref>()</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_hostname;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="class_senergy_1_1_dns_1_1_resource_record_base_1ad5f8a096ae61dcf0ddaac380f84bf052" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1ad5f8a096ae61dcf0ddaac380f84bf052" kindref="member">ResourceRecordBase::SetHostname</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>hostname)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>m_hostname<sp/>=<sp/>hostname;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="class_senergy_1_1_dns_1_1_resource_record_base_1acabfef62c1a3ef4332556bd312c42bdc" refkind="member"><highlight class="normal"><ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0" kindref="member">ResourceRecordType</ref><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1acabfef62c1a3ef4332556bd312c42bdc" kindref="member">ResourceRecordBase::GetType</ref>()</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_type;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="class_senergy_1_1_dns_1_1_resource_record_base_1a2410ada2a69ff9d2f5b6599c5cda8dc1" refkind="member"><highlight class="normal">std::string<sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1a2410ada2a69ff9d2f5b6599c5cda8dc1" kindref="member">ResourceRecordBase::GetTypeString</ref>()</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_senergy_1_1_dns_1_1_resource_record_type_map_1a3099645859209cf5c05d1f95ed2a4be0" kindref="member">ResourceRecordTypeMap::Get</ref>(m_type).empty())<sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_convert_1a80cf7b84b0ff65171da68ca40cbf817f" kindref="member">Convert::ToString</ref>((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)m_type);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_type_map_1a3099645859209cf5c05d1f95ed2a4be0" kindref="member">ResourceRecordTypeMap::Get</ref>(m_type);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="class_senergy_1_1_dns_1_1_resource_record_base_1affcaab56c3632a361a654ed5bc79b3c4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1affcaab56c3632a361a654ed5bc79b3c4" kindref="member">ResourceRecordBase::SetType</ref>(<ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0" kindref="member">ResourceRecordType</ref><sp/>type)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>m_type<sp/>=<sp/>type;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="class_senergy_1_1_dns_1_1_resource_record_base_1a4abfe4f1eeb552494be535c271abe18f" refkind="member"><highlight class="normal"><ref refid="namespace_senergy_1_1_dns_1a953f153bc411213d621d00c1e1b3eb9d" kindref="member">ResourceRecordClass</ref><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1a4abfe4f1eeb552494be535c271abe18f" kindref="member">ResourceRecordBase::GetClass</ref>()</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_class;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="class_senergy_1_1_dns_1_1_resource_record_base_1a87d4a0202837700dbc6662d9aff8f385" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1a87d4a0202837700dbc6662d9aff8f385" kindref="member">ResourceRecordBase::SetClass</ref>(<ref refid="namespace_senergy_1_1_dns_1a953f153bc411213d621d00c1e1b3eb9d" kindref="member">ResourceRecordClass</ref><sp/>clas)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>m_class<sp/>=<sp/>clas;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="class_senergy_1_1_dns_1_1_resource_record_base_1a7b6733ccb332b22335e33e09ad7bddd0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1a7b6733ccb332b22335e33e09ad7bddd0" kindref="member">ResourceRecordBase::NeedsCaching</ref>()</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(m_ttl<sp/>&gt;<sp/>0);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="class_senergy_1_1_dns_1_1_resource_record_base_1a96094f0e13f517b6462cd193f9b82f80" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1a96094f0e13f517b6462cd193f9b82f80" kindref="member">ResourceRecordBase::GetMaxCachingTime</ref>()</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)m_ttl;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="class_senergy_1_1_dns_1_1_resource_record_base_1ad077545843d4565a39a4d6e1cffb8859" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1ad077545843d4565a39a4d6e1cffb8859" kindref="member">ResourceRecordBase::GetResourceSize</ref>()</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)m_rd_length;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="class_senergy_1_1_dns_1_1_resource_record_base_1ae4c4b80c9325c026eed376e28cd6ddc3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1ae4c4b80c9325c026eed376e28cd6ddc3" kindref="member">ResourceRecordBase::Dump</ref>()</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Name:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>m_hostname.c_str());</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Type:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1a2410ada2a69ff9d2f5b6599c5cda8dc1" kindref="member">GetTypeString</ref>().c_str());<sp/><sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Class:<sp/>%hu\n&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)m_class);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;TTL:<sp/>%u\n&quot;</highlight><highlight class="normal">,<sp/>m_ttl);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;RDLength:<sp/>%hu\n&quot;</highlight><highlight class="normal">,<sp/>m_rd_length);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="class_senergy_1_1_dns_1_1_resource_record_base_1a2b4f8d43e9a21fd1aff168e4aa88cc9a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_base_1a2b4f8d43e9a21fd1aff168e4aa88cc9a" kindref="member">ResourceRecordBase::GetMinimalSize</ref>()</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>3;<sp/></highlight><highlight class="comment">//<sp/>3<sp/>bytes<sp/>=<sp/>96<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Dns</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/photonios/Documents/Senergy/src/dns_resource_record_base.cpp"/>
+    <location file="/home/photonios/Documents/senergy/src/dns_resource_record_base.cpp"/>
   </compounddef>
 </doxygen>

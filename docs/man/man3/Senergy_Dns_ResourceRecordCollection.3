@@ -1,10 +1,10 @@
-.TH "Senergy::Dns::ResourceRecordCollection" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::Dns::ResourceRecordCollection" 3 "Tue Feb 25 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 Senergy::Dns::ResourceRecordCollection \- 
 .PP
-Simple container for all types of resource records we support\&. This is to prevent creating hundreds of separate containers in the \fBMessage\fP class\&.  
+A collection of resource record\&. We have many types of resource record\&. \fBSenergy\fP DNS has a flexbile desing to simplify the implementation of additional records\&. This container is part of that design\&. It has the ability to contain all kinds of resource records\&. It also helps in serialization and deserialization\&.  
 
 .SH SYNOPSIS
 .br
@@ -19,33 +19,31 @@ Simple container for all types of resource records we support\&. This is to prev
 .br
 .RI "\fIInitializes a new instance of the \fBResourceRecordCollection\fP class\&. \fP"
 .ti -1c
-.RI "bool \fBSerialize\fP (\fBMessageHeader\fP &header, \fBByteBuffer\fP &buffer)"
+.RI "void \fBClear\fP ()"
 .br
-.RI "\fISerializes all records in this collection into the specified buffer\&. \fP"
+.RI "\fIClears the collection of any existing records\&. \fP"
 .ti -1c
 .RI "bool \fBDeserialize\fP (\fBMessageHeader\fP &header, \fBByteBuffer\fP &buffer)"
 .br
-.RI "\fIDeserializes the content of the specified buffer into this collection\&. \fP"
+.RI "\fIDeserializes all resource records from the specified buffer, according to the information in the specified DNS message header\&. \fP"
+.ti -1c
+.RI "bool \fBSerialize\fP (\fBMessageHeader\fP &header, \fBByteBuffer\fP &buffer)"
+.br
+.RI "\fISerializeds all resource records from the specified buffer, according to the information in the specified DNS message header\&. \fP"
 .ti -1c
 .RI "void \fBDump\fP ()"
 .br
-.RI "\fICalls the '\fBDump()\fP' method of all records, and thus dumping the fields of each record to standard output\&. \fP"
-.in -1c
-.SS "Public Attributes"
-
-.in +1c
+.RI "\fIDumps the contents of this collection to the console\&. \fP"
 .ti -1c
-.RI "\fBRecords::IPV4AddressPtrVector\fP \fBIPV4Answers\fP"
+.RI "\fBVectorX\fP
 .br
-.RI "\fIAll 'A' records in this collection\&. See the IPV4Address class for more information\&.\&. \fP"
-.ti -1c
-.RI "\fBResourceRecordPtrVector\fP \fBUnknownRecords\fP"
+< \fBResourceRecordInterfacePtr\fP > & \fBoperator[]\fP (\fBResourceRecordType\fP resource_record_type)"
 .br
-.RI "\fIAll resource records that could not be parsed because we do not support their type\&. \fP"
+.RI "\fIProvides access the resource records in this collection based on the specified resource record type\&. Returns all the resource records of the specified type\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
-Simple container for all types of resource records we support\&. This is to prevent creating hundreds of separate containers in the \fBMessage\fP class\&. 
+A collection of resource record\&. We have many types of resource record\&. \fBSenergy\fP DNS has a flexbile desing to simplify the implementation of additional records\&. This container is part of that design\&. It has the ability to contain all kinds of resource records\&. It also helps in serialization and deserialization\&. 
 
 
 .PP
@@ -56,7 +54,7 @@ Swen Kooij (Photonios)
 .PP
 
 .PP
-Definition at line 43 of file resource_record_collection\&.h\&.
+Definition at line 52 of file resource_record_collection\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Senergy::Dns::ResourceRecordCollection::ResourceRecordCollection ()"
@@ -67,66 +65,81 @@ Initializes a new instance of the \fBResourceRecordCollection\fP class\&.
 Definition at line 29 of file dns_resource_record_collection\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
+.SS "void Senergy::Dns::ResourceRecordCollection::Clear ()"
+
+.PP
+Clears the collection of any existing records\&. 
+.PP
+Definition at line 36 of file dns_resource_record_collection\&.cpp\&.
 .SS "bool Senergy::Dns::ResourceRecordCollection::Deserialize (\fBMessageHeader\fP &header, \fBByteBuffer\fP &buffer)"
 
 .PP
-Deserializes the content of the specified buffer into this collection\&. 
+Deserializes all resource records from the specified buffer, according to the information in the specified DNS message header\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This clears this collection of all existing records\&.
+.RE
 .PP
 \fBParameters:\fP
 .RS 4
-\fIbuffer\fP The buffer to read from\&. 
+\fIheader\fP The DNS message header to read the information on the amount of resource records from\&. 
 .br
-\fIheader\fP The header to use as the information source during deserialization\&. The header contains information on how many resource records have been returned\&.
+\fIbuffer\fP The buffer to read/deserialize the records from\&.
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-A boolean indicating whether this operation was a success\&. 
+A boolean indicating whether the deserialization was succesful\&. 
 .RE
 .PP
 
 .PP
-Definition at line 38 of file dns_resource_record_collection\&.cpp\&.
+Definition at line 41 of file dns_resource_record_collection\&.cpp\&.
 .SS "void Senergy::Dns::ResourceRecordCollection::Dump ()"
 
 .PP
-Calls the '\fBDump()\fP' method of all records, and thus dumping the fields of each record to standard output\&. 
+Dumps the contents of this collection to the console\&. 
 .PP
-Definition at line 84 of file dns_resource_record_collection\&.cpp\&.
-.SS "bool Senergy::Dns::ResourceRecordCollection::Serialize (\fBMessageHeader\fP &header, \fBByteBuffer\fP &buffer)"
+Definition at line 88 of file dns_resource_record_collection\&.cpp\&.
+.SS "\fBVectorX\fP<\fBResourceRecordInterfacePtr\fP>& Senergy::Dns::ResourceRecordCollection::operator[] (\fBResourceRecordType\fPresource_record_type)\fC [inline]\fP"
 
 .PP
-Serializes all records in this collection into the specified buffer\&. 
+Provides access the resource records in this collection based on the specified resource record type\&. Returns all the resource records of the specified type\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIbuffer\fP The buffer to write the serialized data to\&. 
-.br
-\fIheader\fP The header to write to how many resource records we serialized\&.
+\fIresource_record_type\fP A value from the ResourceRecordType enumuration which indicates which type of resource records to return\&.
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-A boolean indicating whether this operation was a success\&. 
+A vector of resource records of the specified type, they are returned in their polymorphic form\&. 
 .RE
 .PP
 
 .PP
-Definition at line 33 of file dns_resource_record_collection\&.cpp\&.
-.SH "Member Data Documentation"
-.PP 
-.SS "\fBRecords::IPV4AddressPtrVector\fP Senergy::Dns::ResourceRecordCollection::IPV4Answers"
+Definition at line 110 of file resource_record_collection\&.h\&.
+.SS "bool Senergy::Dns::ResourceRecordCollection::Serialize (\fBMessageHeader\fP &header, \fBByteBuffer\fP &buffer)"
 
 .PP
-All 'A' records in this collection\&. See the IPV4Address class for more information\&.\&. 
+Serializeds all resource records from the specified buffer, according to the information in the specified DNS message header\&. 
 .PP
-Definition at line 84 of file resource_record_collection\&.h\&.
-.SS "\fBResourceRecordPtrVector\fP Senergy::Dns::ResourceRecordCollection::UnknownRecords"
+\fBParameters:\fP
+.RS 4
+\fIheader\fP The DNS message header to write the information on the amount of resource records to\&. 
+.br
+\fIbuffer\fP The buffer to write the serialized records to\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether the serialization was succesful\&. 
+.RE
+.PP
 
 .PP
-All resource records that could not be parsed because we do not support their type\&. 
-.PP
-Definition at line 90 of file resource_record_collection\&.h\&.
+Definition at line 76 of file dns_resource_record_collection\&.cpp\&.
 
 .SH "Author"
 .PP 

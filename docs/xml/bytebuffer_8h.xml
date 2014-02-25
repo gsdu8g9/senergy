@@ -11,209 +11,293 @@
     <includedby refid="message_8h" local="no">src/senergy/dns/message.h</includedby>
     <includedby refid="message__header_8h" local="no">src/senergy/dns/message_header.h</includedby>
     <includedby refid="message__question_8h" local="no">src/senergy/dns/message_question.h</includedby>
+    <includedby refid="record__ipv4__address_8h" local="no">src/senergy/dns/record_ipv4_address.h</includedby>
+    <includedby refid="record__nameserver_8h" local="no">src/senergy/dns/record_nameserver.h</includedby>
+    <includedby refid="record__unknown_8h" local="no">src/senergy/dns/record_unknown.h</includedby>
     <includedby refid="requester_8h" local="no">src/senergy/dns/requester.h</includedby>
     <includedby refid="resource__record__base_8h" local="no">src/senergy/dns/resource_record_base.h</includedby>
+    <includedby refid="resource__record__collection_8h" local="no">src/senergy/dns/resource_record_collection.h</includedby>
     <includedby refid="resource__record__interface_8h" local="no">src/senergy/dns/resource_record_interface.h</includedby>
     <includedby refid="utils_8h" local="no">src/senergy/dns/utils.h</includedby>
     <includedby refid="senergy_8h" local="no">src/senergy/senergy.h</includedby>
     <includedby refid="socket_8h" local="no">src/senergy/socket.h</includedby>
     <incdepgraph>
-      <node id="278">
-        <label>string</label>
-      </node>
-      <node id="283">
-        <label>cstdio</label>
-      </node>
-      <node id="282">
-        <label>senergy/print.h</label>
-        <link refid="print_8h"/>
-        <childnode refid="283" relation="include">
-        </childnode>
-        <childnode refid="278" relation="include">
-        </childnode>
-      </node>
-      <node id="280">
-        <label>cstdlib</label>
-      </node>
-      <node id="277">
+      <node id="473">
         <label>src/senergy/bytebuffer.h</label>
         <link refid="bytebuffer.h"/>
-        <childnode refid="278" relation="include">
+        <childnode refid="474" relation="include">
         </childnode>
-        <childnode refid="279" relation="include">
+        <childnode refid="475" relation="include">
         </childnode>
-        <childnode refid="280" relation="include">
+        <childnode refid="476" relation="include">
         </childnode>
-        <childnode refid="281" relation="include">
+        <childnode refid="477" relation="include">
         </childnode>
-        <childnode refid="282" relation="include">
+        <childnode refid="478" relation="include">
         </childnode>
       </node>
-      <node id="279">
+      <node id="474">
+        <label>string</label>
+      </node>
+      <node id="478">
+        <label>senergy/print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="479" relation="include">
+        </childnode>
+        <childnode refid="474" relation="include">
+        </childnode>
+      </node>
+      <node id="479">
+        <label>cstdio</label>
+      </node>
+      <node id="476">
+        <label>cstdlib</label>
+      </node>
+      <node id="475">
         <label>cstring</label>
       </node>
-      <node id="281">
+      <node id="477">
         <label>memory</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="296">
-        <label>src/senergy/dns/resource_record_base.h</label>
-        <link refid="resource__record__base_8h"/>
-        <childnode refid="297" relation="include">
+      <node id="492">
+        <label>src/senergy/dns/message_question.h</label>
+        <link refid="message__question_8h"/>
+        <childnode refid="493" relation="include">
         </childnode>
-        <childnode refid="298" relation="include">
+        <childnode refid="482" relation="include">
         </childnode>
-        <childnode refid="300" relation="include">
+        <childnode refid="486" relation="include">
         </childnode>
       </node>
-      <node id="291">
-        <label>src/main.cpp</label>
-        <link refid="main_8cpp"/>
-      </node>
-      <node id="301">
+      <node id="501">
         <label>src/dns_resource_record_mapper.cpp</label>
         <link refid="dns__resource__record__mapper_8cpp"/>
       </node>
-      <node id="304">
-        <label>src/senergy/socket.h</label>
-        <link refid="socket_8h"/>
-        <childnode refid="288" relation="include">
-        </childnode>
-        <childnode refid="290" relation="include">
-        </childnode>
-        <childnode refid="305" relation="include">
-        </childnode>
-      </node>
-      <node id="303">
-        <label>src/dns_utils.cpp</label>
-        <link refid="dns__utils_8cpp"/>
-      </node>
-      <node id="285">
-        <label>src/bytebuffer.cpp</label>
-        <link refid="bytebuffer_8cpp"/>
-      </node>
-      <node id="305">
-        <label>src/socket.cpp</label>
-        <link refid="socket_8cpp"/>
-      </node>
-      <node id="289">
+      <node id="485">
         <label>src/dns_requester.cpp</label>
         <link refid="dns__requester_8cpp"/>
       </node>
-      <node id="293">
-        <label>src/dns_message_header.cpp</label>
-        <link refid="dns__message__header_8cpp"/>
-      </node>
-      <node id="286">
-        <label>src/senergy/dns/message.h</label>
-        <link refid="message_8h"/>
-        <childnode refid="287" relation="include">
-        </childnode>
-        <childnode refid="288" relation="include">
-        </childnode>
-        <childnode refid="290" relation="include">
-        </childnode>
-      </node>
-      <node id="300">
-        <label>src/senergy/dns/resource_record_mapper.h</label>
-        <link refid="resource__record__mapper_8h"/>
-        <childnode refid="301" relation="include">
-        </childnode>
-      </node>
-      <node id="302">
-        <label>src/senergy/dns/utils.h</label>
-        <link refid="utils_8h"/>
-        <childnode refid="303" relation="include">
-        </childnode>
-        <childnode refid="294" relation="include">
-        </childnode>
-        <childnode refid="296" relation="include">
-        </childnode>
-        <childnode refid="290" relation="include">
-        </childnode>
-      </node>
-      <node id="287">
-        <label>src/dns_message.cpp</label>
-        <link refid="dns__message_8cpp"/>
-      </node>
-      <node id="298">
-        <label>src/senergy/dns/resource_record_interface.h</label>
-        <link refid="resource__record__interface_8h"/>
-        <childnode refid="299" relation="include">
-        </childnode>
-        <childnode refid="300" relation="include">
-        </childnode>
-      </node>
-      <node id="290">
-        <label>src/senergy/senergy.h</label>
-        <link refid="senergy_8h"/>
-        <childnode refid="291" relation="include">
-        </childnode>
-      </node>
-      <node id="284">
-        <label>src/senergy/bytebuffer.h</label>
-        <link refid="bytebuffer.h"/>
-        <childnode refid="285" relation="include">
-        </childnode>
-        <childnode refid="286" relation="include">
-        </childnode>
-        <childnode refid="292" relation="include">
-        </childnode>
-        <childnode refid="294" relation="include">
-        </childnode>
-        <childnode refid="288" relation="include">
-        </childnode>
-        <childnode refid="296" relation="include">
-        </childnode>
-        <childnode refid="298" relation="include">
-        </childnode>
-        <childnode refid="302" relation="include">
-        </childnode>
-        <childnode refid="290" relation="include">
-        </childnode>
-        <childnode refid="304" relation="include">
-        </childnode>
-      </node>
-      <node id="288">
-        <label>src/senergy/dns/requester.h</label>
-        <link refid="requester_8h"/>
-        <childnode refid="289" relation="include">
-        </childnode>
-        <childnode refid="290" relation="include">
-        </childnode>
-      </node>
-      <node id="297">
-        <label>src/dns_resource_record_base.cpp</label>
-        <link refid="dns__resource__record__base_8cpp"/>
-      </node>
-      <node id="295">
-        <label>src/dns_message_question.cpp</label>
-        <link refid="dns__message__question_8cpp"/>
-      </node>
-      <node id="292">
-        <label>src/senergy/dns/message_header.h</label>
-        <link refid="message__header_8h"/>
-        <childnode refid="293" relation="include">
-        </childnode>
-        <childnode refid="286" relation="include">
-        </childnode>
-        <childnode refid="290" relation="include">
-        </childnode>
-      </node>
-      <node id="299">
+      <node id="505">
         <label>src/dns_resource_record_interface.cpp</label>
         <link refid="dns__resource__record__interface_8cpp"/>
       </node>
-      <node id="294">
-        <label>src/senergy/dns/message_question.h</label>
-        <link refid="message__question_8h"/>
-        <childnode refid="295" relation="include">
+      <node id="498">
+        <label>src/senergy/dns/record_unknown.h</label>
+        <link refid="record__unknown_8h"/>
+        <childnode refid="499" relation="include">
         </childnode>
-        <childnode refid="286" relation="include">
+        <childnode refid="500" relation="include">
         </childnode>
-        <childnode refid="290" relation="include">
+      </node>
+      <node id="494">
+        <label>src/senergy/dns/record_ipv4_address.h</label>
+        <link refid="record__ipv4__address_8h"/>
+        <childnode refid="495" relation="include">
         </childnode>
+        <childnode refid="490" relation="include">
+        </childnode>
+      </node>
+      <node id="499">
+        <label>src/dns_record_unknown.cpp</label>
+        <link refid="dns__record__unknown_8cpp"/>
+      </node>
+      <node id="480">
+        <label>src/senergy/bytebuffer.h</label>
+        <link refid="bytebuffer.h"/>
+        <childnode refid="481" relation="include">
+        </childnode>
+        <childnode refid="482" relation="include">
+        </childnode>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="492" relation="include">
+        </childnode>
+        <childnode refid="494" relation="include">
+        </childnode>
+        <childnode refid="496" relation="include">
+        </childnode>
+        <childnode refid="498" relation="include">
+        </childnode>
+        <childnode refid="484" relation="include">
+        </childnode>
+        <childnode refid="502" relation="include">
+        </childnode>
+        <childnode refid="490" relation="include">
+        </childnode>
+        <childnode refid="504" relation="include">
+        </childnode>
+        <childnode refid="506" relation="include">
+        </childnode>
+        <childnode refid="486" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+      </node>
+      <node id="486">
+        <label>src/senergy/senergy.h</label>
+        <link refid="senergy_8h"/>
+        <childnode refid="487" relation="include">
+        </childnode>
+      </node>
+      <node id="507">
+        <label>src/dns_utils.cpp</label>
+        <link refid="dns__utils_8cpp"/>
+      </node>
+      <node id="490">
+        <label>src/senergy/dns/resource_record_collection.h</label>
+        <link refid="resource__record__collection_8h"/>
+        <childnode refid="491" relation="include">
+        </childnode>
+        <childnode refid="482" relation="include">
+        </childnode>
+      </node>
+      <node id="504">
+        <label>src/senergy/dns/resource_record_interface.h</label>
+        <link refid="resource__record__interface_8h"/>
+        <childnode refid="505" relation="include">
+        </childnode>
+        <childnode refid="494" relation="include">
+        </childnode>
+        <childnode refid="496" relation="include">
+        </childnode>
+        <childnode refid="498" relation="include">
+        </childnode>
+        <childnode refid="490" relation="include">
+        </childnode>
+        <childnode refid="500" relation="include">
+        </childnode>
+      </node>
+      <node id="496">
+        <label>src/senergy/dns/record_nameserver.h</label>
+        <link refid="record__nameserver_8h"/>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="490" relation="include">
+        </childnode>
+      </node>
+      <node id="508">
+        <label>src/senergy/socket.h</label>
+        <link refid="socket_8h"/>
+        <childnode refid="494" relation="include">
+        </childnode>
+        <childnode refid="496" relation="include">
+        </childnode>
+        <childnode refid="484" relation="include">
+        </childnode>
+        <childnode refid="486" relation="include">
+        </childnode>
+        <childnode refid="509" relation="include">
+        </childnode>
+      </node>
+      <node id="491">
+        <label>src/dns_resource_record_collection.cpp</label>
+        <link refid="dns__resource__record__collection_8cpp"/>
+      </node>
+      <node id="484">
+        <label>src/senergy/dns/requester.h</label>
+        <link refid="requester_8h"/>
+        <childnode refid="485" relation="include">
+        </childnode>
+        <childnode refid="486" relation="include">
+        </childnode>
+      </node>
+      <node id="483">
+        <label>src/dns_message.cpp</label>
+        <link refid="dns__message_8cpp"/>
+      </node>
+      <node id="497">
+        <label>src/dns_record_nameserver.cpp</label>
+        <link refid="dns__record__nameserver_8cpp"/>
+      </node>
+      <node id="487">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="509">
+        <label>src/socket.cpp</label>
+        <link refid="socket_8cpp"/>
+      </node>
+      <node id="489">
+        <label>src/dns_message_header.cpp</label>
+        <link refid="dns__message__header_8cpp"/>
+      </node>
+      <node id="506">
+        <label>src/senergy/dns/utils.h</label>
+        <link refid="utils_8h"/>
+        <childnode refid="507" relation="include">
+        </childnode>
+        <childnode refid="492" relation="include">
+        </childnode>
+        <childnode refid="502" relation="include">
+        </childnode>
+        <childnode refid="486" relation="include">
+        </childnode>
+      </node>
+      <node id="500">
+        <label>src/senergy/dns/resource_record_mapper.h</label>
+        <link refid="resource__record__mapper_8h"/>
+        <childnode refid="501" relation="include">
+        </childnode>
+        <childnode refid="490" relation="include">
+        </childnode>
+      </node>
+      <node id="488">
+        <label>src/senergy/dns/message_header.h</label>
+        <link refid="message__header_8h"/>
+        <childnode refid="489" relation="include">
+        </childnode>
+        <childnode refid="482" relation="include">
+        </childnode>
+        <childnode refid="490" relation="include">
+        </childnode>
+        <childnode refid="486" relation="include">
+        </childnode>
+      </node>
+      <node id="493">
+        <label>src/dns_message_question.cpp</label>
+        <link refid="dns__message__question_8cpp"/>
+      </node>
+      <node id="502">
+        <label>src/senergy/dns/resource_record_base.h</label>
+        <link refid="resource__record__base_8h"/>
+        <childnode refid="503" relation="include">
+        </childnode>
+        <childnode refid="494" relation="include">
+        </childnode>
+        <childnode refid="496" relation="include">
+        </childnode>
+        <childnode refid="498" relation="include">
+        </childnode>
+        <childnode refid="490" relation="include">
+        </childnode>
+        <childnode refid="504" relation="include">
+        </childnode>
+        <childnode refid="500" relation="include">
+        </childnode>
+      </node>
+      <node id="482">
+        <label>src/senergy/dns/message.h</label>
+        <link refid="message_8h"/>
+        <childnode refid="483" relation="include">
+        </childnode>
+        <childnode refid="484" relation="include">
+        </childnode>
+        <childnode refid="486" relation="include">
+        </childnode>
+      </node>
+      <node id="503">
+        <label>src/dns_resource_record_base.cpp</label>
+        <link refid="dns__resource__record__base_8cpp"/>
+      </node>
+      <node id="481">
+        <label>src/bytebuffer.cpp</label>
+        <link refid="bytebuffer_8cpp"/>
+      </node>
+      <node id="495">
+        <label>src/dns_record_ipv4_address.cpp</label>
+        <link refid="dns__record__ipv4__address_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_senergy_1_1_byte_buffer" prot="public">Senergy::ByteBuffer</innerclass>
@@ -313,89 +397,96 @@
 <codeline lineno="275"><highlight class="normal"></highlight></codeline>
 <codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a9a561b3dd8778ee68e75e5a62a38fa60" kindref="member">Write</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
 <codeline lineno="285"><highlight class="normal"></highlight></codeline>
-<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" kindref="member">Read</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
-<codeline lineno="297"><highlight class="normal"></highlight></codeline>
-<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" kindref="member">Read</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);<sp/></highlight></codeline>
-<codeline lineno="309"><highlight class="normal"></highlight></codeline>
-<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a391deafd9b6e3c4b4c2b92fe78358ebf" kindref="member">ReadRemaining</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_size);</highlight></codeline>
-<codeline lineno="323"><highlight class="normal"></highlight></codeline>
-<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a391deafd9b6e3c4b4c2b92fe78358ebf" kindref="member">ReadRemaining</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_size);</highlight></codeline>
-<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ab15f04d43dd82cebf6dc25254d210e4e" kindref="member">ReadInt</ref>();</highlight></codeline>
-<codeline lineno="345"><highlight class="normal"></highlight></codeline>
-<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a7abe5475b2a9adcad384d3125640aba2" kindref="member">ReadUnsignedInt</ref>();</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ad810aade775871238b82deb38629510e" kindref="member">WriteNop</ref>();</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" kindref="member">Read</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" kindref="member">Read</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);<sp/></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a391deafd9b6e3c4b4c2b92fe78358ebf" kindref="member">ReadRemaining</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_size);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a391deafd9b6e3c4b4c2b92fe78358ebf" kindref="member">ReadRemaining</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_size);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ab15f04d43dd82cebf6dc25254d210e4e" kindref="member">ReadInt</ref>();</highlight></codeline>
 <codeline lineno="353"><highlight class="normal"></highlight></codeline>
-<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a806db1b33ff86b572a0804879d181dc8" kindref="member">ReadChar</ref>();</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a7abe5475b2a9adcad384d3125640aba2" kindref="member">ReadUnsignedInt</ref>();</highlight></codeline>
 <codeline lineno="361"><highlight class="normal"></highlight></codeline>
-<codeline lineno="362"><highlight class="normal"></highlight></codeline>
-<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ad9a7a05b0285fe070cde3983458de5f6" kindref="member">ReadUnsignedChar</ref>();</highlight></codeline>
-<codeline lineno="370"><highlight class="normal"></highlight></codeline>
-<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a989443842e20c2feba4268e968911fe8" kindref="member">ReadShort</ref>();</highlight></codeline>
-<codeline lineno="378"><highlight class="normal"></highlight></codeline>
-<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1aa6b6bfdb398a75b92c79bcdfc1986821" kindref="member">ReadUnsignedShort</ref>();</highlight></codeline>
-<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_senergy_1_1_byte_buffer_1ab1f14bdb0b09b2144d1775fa2dff95a6" kindref="member">ReadString</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_length<sp/>=<sp/>0);</highlight></codeline>
-<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_senergy_1_1_byte_buffer_1a5c3f960422533abc898061be11b6f613" kindref="member">ReadAll</ref>();</highlight></codeline>
-<codeline lineno="410"><highlight class="normal"></highlight></codeline>
-<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a475f2133734cd74c4bce78bdf09950f3" kindref="member">DumpHexadecimal</ref>();</highlight></codeline>
-<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="418"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sets<sp/>the<sp/>size<sp/>of<sp/>the<sp/>buffer,<sp/>by<sp/>reallocating<sp/>memory<sp/>but<sp/>checks</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>the<sp/>reallocation<sp/>is<sp/>needed.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__set_size(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>new_size);</highlight></codeline>
-<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Used<sp/>to<sp/>write<sp/>native<sp/>data<sp/>types<sp/>to<sp/>the<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__write_native_type(T<sp/>value)</highlight></codeline>
-<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value_size<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T);</highlight></codeline>
-<codeline lineno="428"><highlight class="normal"></highlight></codeline>
-<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*temp_buffer<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>malloc(value_size);</highlight></codeline>
-<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(temp_buffer,<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)&amp;value,<sp/>value_size);</highlight></codeline>
-<codeline lineno="431"><highlight class="normal"></highlight></codeline>
-<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_byte_buffer_1a9a561b3dd8778ee68e75e5a62a38fa60" kindref="member">Write</ref>(temp_buffer,<sp/>value_size);</highlight></codeline>
-<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(temp_buffer);</highlight></codeline>
-<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="435"><highlight class="normal"></highlight></codeline>
-<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Used<sp/>to<sp/>read<sp/>native<sp/>data<sp/>types<sp/>from<sp/>the<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/>__read_native_type()</highlight></codeline>
-<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type_size<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T);</highlight></codeline>
-<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*read_buffer<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)malloc(type_size);</highlight></codeline>
-<codeline lineno="442"><highlight class="normal"></highlight></codeline>
-<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>return_value{};</highlight></codeline>
-<codeline lineno="444"><highlight class="normal"></highlight></codeline>
-<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" kindref="member">Read</ref>(read_buffer,<sp/>type_size))</highlight></codeline>
-<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(read_buffer);</highlight></codeline>
-<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>return_value;</highlight></codeline>
-<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="450"><highlight class="normal"></highlight></codeline>
-<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return_value<sp/>=<sp/>*(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal">T<sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(read_buffer));</highlight></codeline>
-<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(read_buffer);</highlight></codeline>
-<codeline lineno="453"><highlight class="normal"></highlight></codeline>
-<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>return_value;</highlight></codeline>
-<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="457"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>underlying<sp/>buffer,<sp/>holds<sp/>the<sp/>actual<sp/>data.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_data;</highlight></codeline>
-<codeline lineno="460"><highlight class="normal"></highlight></codeline>
-<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>current<sp/>size<sp/>of<sp/>the<sp/>underlying<sp/>buffer.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_current_size;</highlight></codeline>
-<codeline lineno="463"><highlight class="normal"></highlight></codeline>
-<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Denotes<sp/>the<sp/>current<sp/>position<sp/>within<sp/>the<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_position;</highlight></codeline>
-<codeline lineno="466"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="467"><highlight class="normal"></highlight></codeline>
-<codeline lineno="471" refid="namespace_senergy_1a30f5cfaeb333ffdf2c3332cc590a57ea" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;ByteBuffer&gt;<sp/><ref refid="namespace_senergy_1a30f5cfaeb333ffdf2c3332cc590a57ea" kindref="member">ByteBufferPtr</ref>;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a806db1b33ff86b572a0804879d181dc8" kindref="member">ReadChar</ref>();</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ad9a7a05b0285fe070cde3983458de5f6" kindref="member">ReadUnsignedChar</ref>();</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a989443842e20c2feba4268e968911fe8" kindref="member">ReadShort</ref>();</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1aa6b6bfdb398a75b92c79bcdfc1986821" kindref="member">ReadUnsignedShort</ref>();</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_senergy_1_1_byte_buffer_1ab1f14bdb0b09b2144d1775fa2dff95a6" kindref="member">ReadString</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_length<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_senergy_1_1_byte_buffer_1a5c3f960422533abc898061be11b6f613" kindref="member">ReadAll</ref>();</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"></highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a475f2133734cd74c4bce78bdf09950f3" kindref="member">DumpHexadecimal</ref>();</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a475f2133734cd74c4bce78bdf09950f3" kindref="member">DumpHexadecimal</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>amount);</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"></highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a2db9cbd7f2eadd1ecb561c72feaca7ad" kindref="member">CopyTo</ref>(<ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref><sp/>&amp;buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>amount);</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a2747633838b3fae217b90700ff737840" kindref="member">HasReachedEnd</ref>();</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="455"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sets<sp/>the<sp/>size<sp/>of<sp/>the<sp/>buffer,<sp/>by<sp/>reallocating<sp/>memory<sp/>but<sp/>checks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>the<sp/>reallocation<sp/>is<sp/>needed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__set_size(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>new_size);</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Used<sp/>to<sp/>write<sp/>native<sp/>data<sp/>types<sp/>to<sp/>the<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__write_native_type(T<sp/>value)</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value_size<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T);</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"></highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*temp_buffer<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>malloc(value_size);</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(temp_buffer,<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)&amp;value,<sp/>value_size);</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"></highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_byte_buffer_1a9a561b3dd8778ee68e75e5a62a38fa60" kindref="member">Write</ref>(temp_buffer,<sp/>value_size);</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(temp_buffer);</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="472"><highlight class="normal"></highlight></codeline>
-<codeline lineno="473"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="474"><highlight class="normal"></highlight></codeline>
-<codeline lineno="475"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SY_BYTE_BUFFER</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Used<sp/>to<sp/>read<sp/>native<sp/>data<sp/>types<sp/>from<sp/>the<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/>__read_native_type()</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type_size<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T);</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*read_buffer<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)malloc(type_size);</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"></highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>return_value<sp/>{};</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"></highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" kindref="member">Read</ref>(read_buffer,<sp/>type_size))</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(read_buffer);</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>return_value;</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"></highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return_value<sp/>=<sp/>*(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal">T<sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(read_buffer));</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(read_buffer);</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"></highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>return_value;</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="494"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>underlying<sp/>buffer,<sp/>holds<sp/>the<sp/>actual<sp/>data.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_data;</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"></highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>current<sp/>size<sp/>of<sp/>the<sp/>underlying<sp/>buffer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_current_size;</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"></highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Denotes<sp/>the<sp/>current<sp/>position<sp/>within<sp/>the<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_position;</highlight></codeline>
+<codeline lineno="503"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"></highlight></codeline>
+<codeline lineno="508" refid="namespace_senergy_1a30f5cfaeb333ffdf2c3332cc590a57ea" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;ByteBuffer&gt;<sp/><ref refid="namespace_senergy_1a30f5cfaeb333ffdf2c3332cc590a57ea" kindref="member">ByteBufferPtr</ref>;</highlight></codeline>
+<codeline lineno="509"><highlight class="normal"></highlight></codeline>
+<codeline lineno="510"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="511"><highlight class="normal"></highlight></codeline>
+<codeline lineno="512"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SY_BYTE_BUFFER</highlight></codeline>
     </programlisting>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/bytebuffer.h"/>
+    <location file="/home/photonios/Documents/senergy/src/senergy/bytebuffer.h"/>
   </compounddef>
 </doxygen>

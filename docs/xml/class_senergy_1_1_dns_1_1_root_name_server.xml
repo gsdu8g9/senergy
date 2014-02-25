@@ -8,7 +8,7 @@
     <detaileddescription>
 <para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/rootnameserver.h" line="37" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/rootnameserver.h" bodystart="36" bodyend="38"/>
+    <location file="/home/photonios/Documents/senergy/src/senergy/dns/rootnameserver.h" line="37" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/rootnameserver.h" bodystart="36" bodyend="38"/>
     <listofallmembers>
     </listofallmembers>
   </compounddef>

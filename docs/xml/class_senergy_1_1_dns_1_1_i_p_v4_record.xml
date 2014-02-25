@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_senergy_1_1_dns_1_1_i_p_v4_record" kind="class" prot="public">
+    <compoundname>Senergy::Dns::IPV4Record</compoundname>
+    <basecompoundref refid="class_senergy_1_1_dns_1_1_resource_record_interface" prot="public" virt="non-virtual">Senergy::Dns::ResourceRecordInterface</basecompoundref>
+    <includes refid="record__ipv4__address_8h" local="no">record_ipv4_address.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_i_p_v4_record_1ac9e65fa4e9834012ecab56eb5e53e540" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Senergy::Dns::IPV4Record::m_address</definition>
+        <argsstring></argsstring>
+        <name>m_address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/record_ipv4_address.h" line="121" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/record_ipv4_address.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_i_p_v4_record_1a9239e0aa9254080bb92ab1ba8352bd56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Senergy::Dns::IPV4Record::IPV4Record</definition>
+        <argsstring>(ResourceRecordBasePtr base)</argsstring>
+        <name>IPV4Record</name>
+        <param>
+          <type><ref refid="namespace_senergy_1_1_dns_1a72915c893fbf242018e79d8f92e1646b" kindref="member">ResourceRecordBasePtr</ref></type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_senergy_1_1_dns_1_1_i_p_v4_record" kindref="compound">IPV4Record</ref> class with the specified resource record base. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base resource record instance to use for the IPV4 record. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/record_ipv4_address.h" line="54" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_record_ipv4_address.cpp" bodystart="29" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_i_p_v4_record_1adc8bfc217949628f7b88fe69d065d630" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Senergy::Dns::IPV4Record::Serialize</definition>
+        <argsstring>(ByteBuffer &amp;buffer)</argsstring>
+        <name>Serialize</name>
+        <reimplements refid="class_senergy_1_1_dns_1_1_resource_record_interface_1ab81e0a7ea292513c5c34a3be0c7a6dca">Serialize</reimplements>
+        <param>
+          <type><ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Serializes this record into the specified buffer. This does not handle the serialization of the first (base) part of the resource record. Call SerializeBase for that. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to serialize to.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean indicating whether the serialization was successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/record_ipv4_address.h" line="64" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_record_ipv4_address.cpp" bodystart="36" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_i_p_v4_record_1a6fffdc2823b53f8f2fede5263e45b232" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Senergy::Dns::IPV4Record::Deserialize</definition>
+        <argsstring>(ByteBuffer &amp;buffer)</argsstring>
+        <name>Deserialize</name>
+        <reimplements refid="class_senergy_1_1_dns_1_1_resource_record_interface_1ade2e0b9817476ea2161b694efd3e02db">Deserialize</reimplements>
+        <param>
+          <type><ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Deserializes the record from the specified buffer. This does not handle deserialization of the first (base) part of the resource record. Call DeserializeBase for that. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to deserialize from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/record_ipv4_address.h" line="72" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_record_ipv4_address.cpp" bodystart="46" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_i_p_v4_record_1a4d31a8d3f562f8128c053071120d6dd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_senergy_1_1_dns_1_1_resource_record_interface_1abf5eec20c95f05b57c5c02eaed349e16" kindref="member">ResourceRecordInterfacePtr</ref></type>
+        <definition>ResourceRecordInterfacePtr Senergy::Dns::IPV4Record::Create</definition>
+        <argsstring>(ResourceRecordBasePtr base)</argsstring>
+        <name>Create</name>
+        <reimplements refid="class_senergy_1_1_dns_1_1_resource_record_interface_1abe37068b670f89481a145e1e9c2c8267">Create</reimplements>
+        <param>
+          <type><ref refid="namespace_senergy_1_1_dns_1a72915c893fbf242018e79d8f92e1646b" kindref="member">ResourceRecordBasePtr</ref></type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new instance of this class, and returns it as a shared pointer to an instance of the <ref refid="class_senergy_1_1_dns_1_1_resource_record_interface" kindref="compound">ResourceRecordInterface</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+<para>The derived class should create an instance of itself and return the polymorphic form (as it&apos;s base).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_senergy_1_1_dns_1_1_resource_record_base" kindref="compound">ResourceRecordBase</ref> class to pass to the constructor.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A shared pointer to an instance of the <ref refid="class_senergy_1_1_dns_1_1_resource_record_interface" kindref="compound">ResourceRecordInterface</ref> class, which is just the polymorphic form of the derived class. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/record_ipv4_address.h" line="86" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_record_ipv4_address.cpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_i_p_v4_record_1a7f67f0546dc2d93b04a264fabf871d78" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0" kindref="member">ResourceRecordType</ref></type>
+        <definition>ResourceRecordType Senergy::Dns::IPV4Record::GetType</definition>
+        <argsstring>()</argsstring>
+        <name>GetType</name>
+        <reimplements refid="class_senergy_1_1_dns_1_1_resource_record_interface_1af895ba199749599d42f8e6a737eb9118">GetType</reimplements>
+        <briefdescription>
+<para>Gets the type of of this record (derived), wich is a value from the ResourceRecordType enumuration. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A value from the ResourceRecordType enumuration which denotes the type of this record. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/record_ipv4_address.h" line="95" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_record_ipv4_address.cpp" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_i_p_v4_record_1a9bbb0fc972caec65cca5df46357c35e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::Dns::IPV4Record::SetAddress</definition>
+        <argsstring>(const std::string &amp;address)</argsstring>
+        <name>SetAddress</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+<para>Sets the IPV4 address that needs to be serialized. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The IPV4 address to be serialized. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/record_ipv4_address.h" line="102" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_record_ipv4_address.cpp" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_i_p_v4_record_1ab1417b773cb8281a8766ad092b559a1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Senergy::Dns::IPV4Record::GetAddress</definition>
+        <argsstring>()</argsstring>
+        <name>GetAddress</name>
+        <briefdescription>
+<para>Gets the IPV4 address that was deserialized. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The IP address that was deserialized. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/record_ipv4_address.h" line="109" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_record_ipv4_address.cpp" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_i_p_v4_record_1a5dc31b6ac003bf5b8897d1431e9eb0db" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Senergy::Dns::IPV4Record::Dump</definition>
+        <argsstring>()</argsstring>
+        <name>Dump</name>
+        <reimplements refid="class_senergy_1_1_dns_1_1_resource_record_interface_1aced6e4bc388ce3568d72d9670a2e9da5">Dump</reimplements>
+        <briefdescription>
+<para>Dumps all fields to the standard output, with their values. In the following format: </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/record_ipv4_address.h" line="117" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_record_ipv4_address.cpp" bodystart="83" bodyend="87"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a DNS &apos;A&apos; record, which is a resource record that contains an IPV4 address. It is the reply to a DNS &apos;A&apos; question. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="24">
+        <label>Senergy::Dns::IPV4Record</label>
+        <link refid="class_senergy_1_1_dns_1_1_i_p_v4_record"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>Senergy::Dns::ResourceRecordInterface</label>
+        <link refid="class_senergy_1_1_dns_1_1_resource_record_interface"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="26">
+        <label>Senergy::Dns::IPV4Record</label>
+        <link refid="class_senergy_1_1_dns_1_1_i_p_v4_record"/>
+        <childnode refid="27" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>Senergy::Dns::ResourceRecordInterface</label>
+        <link refid="class_senergy_1_1_dns_1_1_resource_record_interface"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/photonios/Documents/senergy/src/senergy/dns/record_ipv4_address.h" line="44" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/record_ipv4_address.h" bodystart="43" bodyend="122"/>
+    <listofallmembers>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_interface_1a59bcfc62cfc3a68464245b13ad3785e6" prot="protected" virt="non-virtual"><scope>Senergy::Dns::IPV4Record</scope><name>Base</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_i_p_v4_record_1a4d31a8d3f562f8128c053071120d6dd2" prot="public" virt="virtual"><scope>Senergy::Dns::IPV4Record</scope><name>Create</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_interface_1a342b71b9977f20ecb1dc7b3fd6ae0751" prot="public" virt="non-virtual"><scope>Senergy::Dns::IPV4Record</scope><name>CreateCast</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_i_p_v4_record_1a6fffdc2823b53f8f2fede5263e45b232" prot="public" virt="virtual"><scope>Senergy::Dns::IPV4Record</scope><name>Deserialize</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_i_p_v4_record_1a5dc31b6ac003bf5b8897d1431e9eb0db" prot="public" virt="virtual"><scope>Senergy::Dns::IPV4Record</scope><name>Dump</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_i_p_v4_record_1ab1417b773cb8281a8766ad092b559a1e" prot="public" virt="non-virtual"><scope>Senergy::Dns::IPV4Record</scope><name>GetAddress</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_interface_1a6f603d9d3ffe34e4376ea8b27fd0c72d" prot="public" virt="non-virtual"><scope>Senergy::Dns::IPV4Record</scope><name>GetBase</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_interface_1a4332e80632928d846abe9a58f912c217" prot="public" virt="virtual"><scope>Senergy::Dns::IPV4Record</scope><name>GetClass</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_i_p_v4_record_1a7f67f0546dc2d93b04a264fabf871d78" prot="public" virt="virtual"><scope>Senergy::Dns::IPV4Record</scope><name>GetType</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_i_p_v4_record_1a9239e0aa9254080bb92ab1ba8352bd56" prot="public" virt="non-virtual"><scope>Senergy::Dns::IPV4Record</scope><name>IPV4Record</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_i_p_v4_record_1ac9e65fa4e9834012ecab56eb5e53e540" prot="private" virt="non-virtual"><scope>Senergy::Dns::IPV4Record</scope><name>m_address</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_interface_1ae2ffc1e85320769af1eabe781fcfc412" prot="protected" virt="non-virtual"><scope>Senergy::Dns::IPV4Record</scope><name>m_base</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_interface_1a8e4eb71ac27838d547e48a171774142f" prot="public" virt="non-virtual"><scope>Senergy::Dns::IPV4Record</scope><name>ResourceRecordInterface</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_interface_1abf5eec20c95f05b57c5c02eaed349e16" prot="protected" virt="non-virtual"><scope>Senergy::Dns::IPV4Record</scope><name>ResourceRecordInterfacePtr</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_i_p_v4_record_1adc8bfc217949628f7b88fe69d065d630" prot="public" virt="virtual"><scope>Senergy::Dns::IPV4Record</scope><name>Serialize</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_i_p_v4_record_1a9bbb0fc972caec65cca5df46357c35e6" prot="public" virt="non-virtual"><scope>Senergy::Dns::IPV4Record</scope><name>SetAddress</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_interface_1aaebfbc52b464557ce9a3f36fbc08acd3" prot="protected" virt="non-virtual"><scope>Senergy::Dns::IPV4Record</scope><name>SetResourceSize</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_interface_1a54207eceee2ae035ae5293209b3e721c" prot="protected" virt="non-virtual"><scope>Senergy::Dns::IPV4Record</scope><name>SetResourceSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

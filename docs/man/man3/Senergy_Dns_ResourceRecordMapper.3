@@ -1,4 +1,4 @@
-.TH "Senergy::Dns::ResourceRecordMapper" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::Dns::ResourceRecordMapper" 3 "Tue Feb 25 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -21,11 +21,11 @@ Inherits map< ResourceRecordType, ResourceRecordInterfacePtr >\&.
 .br
 .RI "\fIInitialiazes a new empty instance of the \fBResourceRecordMapper\fP class\&. \fP"
 .ti -1c
-.RI "template<class T > void \fBRegsisterMapping\fP ()"
+.RI "template<class T > void \fBRegisterMapping\fP ()"
 .br
 .RI "\fIMaps the specified type, which MUST inherit from \fBResourceRecordInterface\fP\&. This will create a dummy instance of T, using a dummy instance of the \fBResourceRecordBase\fP class, extract the type (->GetType), which is a member of the ResourceRecordType enumuration, and then add this mapping to the underlying map\&. \fP"
 .ti -1c
-.RI "\fBResourceRecordInterfacePtr\fP \fBApplyMapping\fP (\fBResourceRecordType\fP type, \fBResourceRecordBase\fP &base)"
+.RI "\fBResourceRecordInterfacePtr\fP \fBApplyMapping\fP (\fBResourceRecordType\fP type, \fBResourceRecordBasePtr\fP base)"
 .br
 .RI "\fIApplies the mapping between the specified value from the ResourceRecordType enumuration and the correct derived class form \fBResourceRecordInterface\fP\&. \fP"
 .ti -1c
@@ -56,7 +56,7 @@ Swen Kooij (Photonios)
 .PP
 
 .PP
-Definition at line 50 of file resource_record_mapper\&.h\&.
+Definition at line 51 of file resource_record_mapper\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Senergy::Dns::ResourceRecordMapper::ResourceRecordMapper ()\fC [inline]\fP"
@@ -64,10 +64,10 @@ Definition at line 50 of file resource_record_mapper\&.h\&.
 .PP
 Initialiazes a new empty instance of the \fBResourceRecordMapper\fP class\&. 
 .PP
-Definition at line 56 of file resource_record_mapper\&.h\&.
+Definition at line 57 of file resource_record_mapper\&.h\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "\fBResourceRecordInterfacePtr\fP Senergy::Dns::ResourceRecordMapper::ApplyMapping (\fBResourceRecordType\fPtype, \fBResourceRecordBase\fP &base)\fC [inline]\fP"
+.SS "\fBResourceRecordInterfacePtr\fP Senergy::Dns::ResourceRecordMapper::ApplyMapping (\fBResourceRecordType\fPtype, \fBResourceRecordBasePtr\fPbase)\fC [inline]\fP"
 
 .PP
 Applies the mapping between the specified value from the ResourceRecordType enumuration and the correct derived class form \fBResourceRecordInterface\fP\&. If a correct mapping is found, a new instance of the found class is created as a shared pointer, and the specified \fBResourceRecordBase\fP class instance is based in the constructor\&.
@@ -88,7 +88,7 @@ A shared pointer to a new instance of the found the type, but the newly created 
 .PP
 
 .PP
-Definition at line 106 of file resource_record_mapper\&.h\&.
+Definition at line 103 of file resource_record_mapper\&.h\&.
 .SS "template<class T > \fBResourceRecordType\fP Senergy::Dns::ResourceRecordMapper::ApplyReverseMapping ()\fC [inline]\fP"
 
 .PP
@@ -101,15 +101,15 @@ A value from the ResourceRecordType enumuration that is mapped to the specified 
 .PP
 
 .PP
-Definition at line 125 of file resource_record_mapper\&.h\&.
-.SS "template<class T > void Senergy::Dns::ResourceRecordMapper::RegsisterMapping ()\fC [inline]\fP"
+Definition at line 122 of file resource_record_mapper\&.h\&.
+.SS "template<class T > void Senergy::Dns::ResourceRecordMapper::RegisterMapping ()\fC [inline]\fP"
 
 .PP
 Maps the specified type, which MUST inherit from \fBResourceRecordInterface\fP\&. This will create a dummy instance of T, using a dummy instance of the \fBResourceRecordBase\fP class, extract the type (->GetType), which is a member of the ResourceRecordType enumuration, and then add this mapping to the underlying map\&. To clarify: this[resource_record_type] = dummy_instance;
 .PP
 T A type that inherits from \fBResourceRecordInterface\fP\&. 
 .PP
-Definition at line 73 of file resource_record_mapper\&.h\&.
+Definition at line 74 of file resource_record_mapper\&.h\&.
 
 .SH "Author"
 .PP 

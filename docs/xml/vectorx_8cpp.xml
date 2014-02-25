@@ -4,19 +4,19 @@
     <compoundname>vectorx.cpp</compoundname>
     <includes refid="vectorx_8h" local="no">senergy/vectorx.h</includes>
     <incdepgraph>
-      <node id="757">
-        <label>src/vectorx.cpp</label>
-        <link refid="vectorx.cpp"/>
-        <childnode refid="758" relation="include">
-        </childnode>
-      </node>
-      <node id="759">
-        <label>vector</label>
-      </node>
-      <node id="758">
+      <node id="1335">
         <label>senergy/vectorx.h</label>
         <link refid="vectorx_8h"/>
-        <childnode refid="759" relation="include">
+        <childnode refid="1336" relation="include">
+        </childnode>
+      </node>
+      <node id="1336">
+        <label>vector</label>
+      </node>
+      <node id="1334">
+        <label>src/vectorx.cpp</label>
+        <link refid="vectorx.cpp"/>
+        <childnode refid="1335" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -50,6 +50,6 @@
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="vectorx_8h" kindref="compound">senergy/vectorx.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/photonios/Documents/Senergy/src/vectorx.cpp"/>
+    <location file="/home/photonios/Documents/senergy/src/vectorx.cpp"/>
   </compounddef>
 </doxygen>

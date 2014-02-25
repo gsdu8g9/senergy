@@ -29,7 +29,7 @@ static unsigned int \hyperlink{class_senergy_1_1_dns_1_1_utils_a7a521aadbb12776e
 \begin{DoxyCompactList}\small\item\em Converts the specified unsigned integer value from host to network byte order. \end{DoxyCompactList}\item 
 static unsigned int \hyperlink{class_senergy_1_1_dns_1_1_utils_ad4711275abcbc1d332f3c0208e74c4b8}{Network\-To\-Host\-Byte\-Order} (unsigned int value)
 \begin{DoxyCompactList}\small\item\em Converts the specified unsigned integer value from network to host byte order. \end{DoxyCompactList}\item 
-static std\-::string \hyperlink{class_senergy_1_1_dns_1_1_utils_a6b995d31d85ef39a5e8ac57928fa35ed}{Read\-Hostname\-From\-Buffer} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
+static std\-::string \hyperlink{class_senergy_1_1_dns_1_1_utils_a81879edd7a9daec1d6dfbf952549c500}{Read\-Hostname\-From\-Buffer} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer, bool decode=true)
 \begin{DoxyCompactList}\small\item\em Reads a domain name from the specified buffer, also known as a 'Q\-N\-A\-M\-E'. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -242,13 +242,14 @@ The input value, in host byte order.
 
 Definition at line 126 of file dns\-\_\-utils.\-cpp.
 
-\hypertarget{class_senergy_1_1_dns_1_1_utils_a6b995d31d85ef39a5e8ac57928fa35ed}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Read\-Hostname\-From\-Buffer@{Read\-Hostname\-From\-Buffer}}
+\hypertarget{class_senergy_1_1_dns_1_1_utils_a81879edd7a9daec1d6dfbf952549c500}{\index{Senergy\-::\-Dns\-::\-Utils@{Senergy\-::\-Dns\-::\-Utils}!Read\-Hostname\-From\-Buffer@{Read\-Hostname\-From\-Buffer}}
 \index{Read\-Hostname\-From\-Buffer@{Read\-Hostname\-From\-Buffer}!Senergy::Dns::Utils@{Senergy\-::\-Dns\-::\-Utils}}
 \subsubsection[{Read\-Hostname\-From\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Senergy\-::\-Dns\-::\-Utils\-::\-Read\-Hostname\-From\-Buffer (
 \begin{DoxyParamCaption}
-\item[{{\bf Byte\-Buffer} \&}]{buffer}
+\item[{{\bf Byte\-Buffer} \&}]{buffer, }
+\item[{bool}]{decode = {\ttfamily true}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_utils_a6b995d31d85ef39a5e8ac57928fa35ed}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_utils_a81879edd7a9daec1d6dfbf952549c500}
 
 
 Reads a domain name from the specified buffer, also known as a 'Q\-N\-A\-M\-E'. 
@@ -262,7 +263,9 @@ Section 4.\-1.\-4 of R\-F\-C-\/1025 (\hyperlink{class_senergy_1_1_dns_1_1_messag
 \end{DoxySeeAlso}
 
 \begin{DoxyParams}{Parameters}
-{\em buffer} & The buffer to read the domain name from.\\
+{\em buffer} & The buffer to read the domain name from. \\
+\hline
+{\em decode} & An optional parameters that indicates whether the returned string should be decoded using the \hyperlink{class_senergy_1_1_dns_1_1_utils_ad621e66ca0463aaa21c9b74b489f09f3}{Utils\-::\-Decode\-Hostname} function or not. If set to true the returned hostname will be decoded, if set to false it will not be decoded. We use this parameter when reading a domain name pointer.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

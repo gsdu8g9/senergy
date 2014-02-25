@@ -4,29 +4,6 @@
     <compoundname>bytebuffer.cpp</compoundname>
     <includes refid="bytebuffer_8h" local="no">senergy/bytebuffer.h</includes>
     <incdepgraph>
-      <node id="10">
-        <label>string</label>
-      </node>
-      <node id="8">
-        <label>src/bytebuffer.cpp</label>
-        <link refid="bytebuffer.cpp"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="15">
-        <label>cstdio</label>
-      </node>
-      <node id="14">
-        <label>senergy/print.h</label>
-        <link refid="print_8h"/>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
-        <label>cstdlib</label>
-      </node>
       <node id="9">
         <label>senergy/bytebuffer.h</label>
         <link refid="bytebuffer_8h"/>
@@ -41,8 +18,31 @@
         <childnode refid="14" relation="include">
         </childnode>
       </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="14">
+        <label>senergy/print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>cstdio</label>
+      </node>
+      <node id="12">
+        <label>cstdlib</label>
+      </node>
       <node id="11">
         <label>cstring</label>
+      </node>
+      <node id="8">
+        <label>src/bytebuffer.cpp</label>
+        <link refid="bytebuffer.cpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
       <node id="13">
         <label>memory</label>
@@ -236,121 +236,177 @@
 <codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>__write_native_type&lt;unsigned<sp/>short&gt;(value);</highlight></codeline>
 <codeline lineno="181"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="182"><highlight class="normal"></highlight></codeline>
-<codeline lineno="183" refid="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" kindref="member">ByteBuffer::Read</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="183" refid="class_senergy_1_1_byte_buffer_1ad810aade775871238b82deb38629510e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ad810aade775871238b82deb38629510e" kindref="member">ByteBuffer::WriteNop</ref>()</highlight></codeline>
 <codeline lineno="184"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(buffer<sp/>==<sp/>NULL<sp/>||<sp/>size<sp/>&lt;=<sp/>0)</highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>__write_native_type&lt;char&gt;(0);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="187"><highlight class="normal"></highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>buffer_end_offset<sp/>=<sp/>m_position<sp/>+<sp/>size;</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(buffer_end_offset<sp/>&gt;<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>m_current_size)</highlight></codeline>
-<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"></highlight></codeline>
-<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(buffer,<sp/>m_data<sp/>+<sp/>m_position,<sp/>size);</highlight></codeline>
-<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>m_position<sp/>+=<sp/>size;</highlight></codeline>
-<codeline lineno="194"><highlight class="normal"></highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight></codeline>
-<codeline lineno="196"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"></highlight></codeline>
-<codeline lineno="198" refid="class_senergy_1_1_byte_buffer_1ace3d04d38706d534a16e596ee291630b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" kindref="member">ByteBuffer::Read</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
-<codeline lineno="199"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" kindref="member">Read</ref>(buffer,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)size);</highlight></codeline>
+<codeline lineno="188" refid="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" kindref="member">ByteBuffer::Read</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(buffer<sp/>==<sp/>NULL<sp/>||<sp/>size<sp/>&lt;=<sp/>0)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>buffer_end_offset<sp/>=<sp/>m_position<sp/>+<sp/>size;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(buffer_end_offset<sp/>&gt;<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>m_current_size)</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(buffer,<sp/>m_data<sp/>+<sp/>m_position,<sp/>size);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>m_position<sp/>+=<sp/>size;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight></codeline>
 <codeline lineno="201"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="202"><highlight class="normal"></highlight></codeline>
-<codeline lineno="203" refid="class_senergy_1_1_byte_buffer_1ab15f04d43dd82cebf6dc25254d210e4e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ab15f04d43dd82cebf6dc25254d210e4e" kindref="member">ByteBuffer::ReadInt</ref>()</highlight></codeline>
+<codeline lineno="203" refid="class_senergy_1_1_byte_buffer_1ace3d04d38706d534a16e596ee291630b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" kindref="member">ByteBuffer::Read</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
 <codeline lineno="204"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__read_native_type&lt;int&gt;();</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ae4e73e6e193bec7b9f7df0919d1641d9" kindref="member">Read</ref>(buffer,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)size);</highlight></codeline>
 <codeline lineno="206"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="207"><highlight class="normal"></highlight></codeline>
-<codeline lineno="208" refid="class_senergy_1_1_byte_buffer_1a7abe5475b2a9adcad384d3125640aba2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a7abe5475b2a9adcad384d3125640aba2" kindref="member">ByteBuffer::ReadUnsignedInt</ref>()</highlight></codeline>
+<codeline lineno="208" refid="class_senergy_1_1_byte_buffer_1ab15f04d43dd82cebf6dc25254d210e4e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ab15f04d43dd82cebf6dc25254d210e4e" kindref="member">ByteBuffer::ReadInt</ref>()</highlight></codeline>
 <codeline lineno="209"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__read_native_type&lt;unsigned<sp/>int&gt;();</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__read_native_type&lt;int&gt;();</highlight></codeline>
 <codeline lineno="211"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="212"><highlight class="normal"></highlight></codeline>
-<codeline lineno="213" refid="class_senergy_1_1_byte_buffer_1a806db1b33ff86b572a0804879d181dc8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a806db1b33ff86b572a0804879d181dc8" kindref="member">ByteBuffer::ReadChar</ref>()</highlight></codeline>
+<codeline lineno="213" refid="class_senergy_1_1_byte_buffer_1a7abe5475b2a9adcad384d3125640aba2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a7abe5475b2a9adcad384d3125640aba2" kindref="member">ByteBuffer::ReadUnsignedInt</ref>()</highlight></codeline>
 <codeline lineno="214"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__read_native_type&lt;char&gt;();</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__read_native_type&lt;unsigned<sp/>int&gt;();</highlight></codeline>
 <codeline lineno="216"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="217"><highlight class="normal"></highlight></codeline>
-<codeline lineno="218" refid="class_senergy_1_1_byte_buffer_1ad9a7a05b0285fe070cde3983458de5f6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ad9a7a05b0285fe070cde3983458de5f6" kindref="member">ByteBuffer::ReadUnsignedChar</ref>()</highlight></codeline>
+<codeline lineno="218" refid="class_senergy_1_1_byte_buffer_1a806db1b33ff86b572a0804879d181dc8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a806db1b33ff86b572a0804879d181dc8" kindref="member">ByteBuffer::ReadChar</ref>()</highlight></codeline>
 <codeline lineno="219"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__read_native_type&lt;unsigned<sp/>char&gt;();</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__read_native_type&lt;char&gt;();</highlight></codeline>
 <codeline lineno="221"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="222"><highlight class="normal"></highlight></codeline>
-<codeline lineno="223" refid="class_senergy_1_1_byte_buffer_1a989443842e20c2feba4268e968911fe8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a989443842e20c2feba4268e968911fe8" kindref="member">ByteBuffer::ReadShort</ref>()</highlight></codeline>
+<codeline lineno="223" refid="class_senergy_1_1_byte_buffer_1ad9a7a05b0285fe070cde3983458de5f6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1ad9a7a05b0285fe070cde3983458de5f6" kindref="member">ByteBuffer::ReadUnsignedChar</ref>()</highlight></codeline>
 <codeline lineno="224"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__read_native_type&lt;short&gt;();</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__read_native_type&lt;unsigned<sp/>char&gt;();</highlight></codeline>
 <codeline lineno="226"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="227"><highlight class="normal"></highlight></codeline>
-<codeline lineno="228" refid="class_senergy_1_1_byte_buffer_1aa6b6bfdb398a75b92c79bcdfc1986821" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1aa6b6bfdb398a75b92c79bcdfc1986821" kindref="member">ByteBuffer::ReadUnsignedShort</ref>()</highlight></codeline>
+<codeline lineno="228" refid="class_senergy_1_1_byte_buffer_1a989443842e20c2feba4268e968911fe8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a989443842e20c2feba4268e968911fe8" kindref="member">ByteBuffer::ReadShort</ref>()</highlight></codeline>
 <codeline lineno="229"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__read_native_type&lt;unsigned<sp/>short&gt;();</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__read_native_type&lt;short&gt;();</highlight></codeline>
 <codeline lineno="231"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="232"><highlight class="normal"></highlight></codeline>
-<codeline lineno="233" refid="class_senergy_1_1_byte_buffer_1ab1f14bdb0b09b2144d1775fa2dff95a6" refkind="member"><highlight class="normal">std::string<sp/><ref refid="class_senergy_1_1_byte_buffer_1ab1f14bdb0b09b2144d1775fa2dff95a6" kindref="member">ByteBuffer::ReadString</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_length<sp/></highlight><highlight class="comment">/*<sp/>=<sp/>0<sp/>*/</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="233" refid="class_senergy_1_1_byte_buffer_1aa6b6bfdb398a75b92c79bcdfc1986821" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1aa6b6bfdb398a75b92c79bcdfc1986821" kindref="member">ByteBuffer::ReadUnsignedShort</ref>()</highlight></codeline>
 <codeline lineno="234"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>result_string<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;<sp/></highlight></codeline>
-<codeline lineno="236"><highlight class="normal"></highlight></codeline>
-<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<ref refid="class_senergy_1_1_byte_buffer_1ab938ed32f9f909145f93099f4620da69" kindref="member">GetRemainingSize</ref>()<sp/>&gt;<sp/>0)</highlight></codeline>
-<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>current_character<sp/>=<sp/><ref refid="class_senergy_1_1_byte_buffer_1a806db1b33ff86b572a0804879d181dc8" kindref="member">ReadChar</ref>();</highlight></codeline>
-<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(current_character<sp/>==<sp/>0<sp/>||<sp/>result_string.size()<sp/>&gt;=<sp/>max_length)</highlight></codeline>
-<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="242"><highlight class="normal"></highlight></codeline>
-<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result_string<sp/>+=<sp/>current_character;</highlight></codeline>
-<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="245"><highlight class="normal"></highlight></codeline>
-<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result_string;</highlight></codeline>
-<codeline lineno="247"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="248"><highlight class="normal"></highlight></codeline>
-<codeline lineno="249" refid="class_senergy_1_1_byte_buffer_1a5c3f960422533abc898061be11b6f613" refkind="member"><highlight class="normal">std::string<sp/><ref refid="class_senergy_1_1_byte_buffer_1a5c3f960422533abc898061be11b6f613" kindref="member">ByteBuffer::ReadAll</ref>()</highlight></codeline>
-<codeline lineno="250"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_current_size<sp/>&lt;=<sp/>0)</highlight></codeline>
-<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::string(m_data,<sp/>m_current_size);</highlight></codeline>
-<codeline lineno="255"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="256"><highlight class="normal"></highlight></codeline>
-<codeline lineno="257"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ByteBuffer::__set_size(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>new_size)</highlight></codeline>
-<codeline lineno="258"><highlight class="normal">{<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_current_size<sp/>&gt;=<sp/>new_size)</highlight></codeline>
-<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__read_native_type&lt;unsigned<sp/>short&gt;();</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="class_senergy_1_1_byte_buffer_1ab1f14bdb0b09b2144d1775fa2dff95a6" refkind="member"><highlight class="normal">std::string<sp/><ref refid="class_senergy_1_1_byte_buffer_1ab1f14bdb0b09b2144d1775fa2dff95a6" kindref="member">ByteBuffer::ReadString</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_length<sp/></highlight><highlight class="comment">/*<sp/>=<sp/>0<sp/>*/</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>result_string<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<ref refid="class_senergy_1_1_byte_buffer_1ab938ed32f9f909145f93099f4620da69" kindref="member">GetRemainingSize</ref>()<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>current_character<sp/>=<sp/><ref refid="class_senergy_1_1_byte_buffer_1a806db1b33ff86b572a0804879d181dc8" kindref="member">ReadChar</ref>();</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(current_character<sp/>==<sp/>0<sp/>||<sp/>result_string.size()<sp/>&gt;=<sp/>max_length)</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result_string<sp/>+=<sp/>current_character;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result_string;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254" refid="class_senergy_1_1_byte_buffer_1a5c3f960422533abc898061be11b6f613" refkind="member"><highlight class="normal">std::string<sp/><ref refid="class_senergy_1_1_byte_buffer_1a5c3f960422533abc898061be11b6f613" kindref="member">ByteBuffer::ReadAll</ref>()</highlight></codeline>
+<codeline lineno="255"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_current_size<sp/>&lt;=<sp/>0)</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::string(m_data,<sp/>m_current_size);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="261"><highlight class="normal"></highlight></codeline>
-<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size_increment<sp/>=<sp/>new_size<sp/>-<sp/>m_current_size;</highlight></codeline>
-<codeline lineno="263"><highlight class="normal"></highlight></codeline>
-<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>m_data<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>realloc(m_data,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)<sp/>*<sp/>new_size);</highlight></codeline>
-<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(m_data<sp/>+<sp/>m_current_size,<sp/>0,<sp/>size_increment);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ByteBuffer::__set_size(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>new_size)</highlight></codeline>
+<codeline lineno="263"><highlight class="normal">{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_current_size<sp/>&gt;=<sp/>new_size)</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="266"><highlight class="normal"></highlight></codeline>
-<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>m_current_size<sp/>=<sp/>new_size;</highlight></codeline>
-<codeline lineno="268"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="269"><highlight class="normal"></highlight></codeline>
-<codeline lineno="270" refid="class_senergy_1_1_byte_buffer_1a475f2133734cd74c4bce78bdf09950f3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a475f2133734cd74c4bce78bdf09950f3" kindref="member">ByteBuffer::DumpHexadecimal</ref>()</highlight></codeline>
-<codeline lineno="271"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>current_position<sp/>=<sp/><ref refid="class_senergy_1_1_byte_buffer_1a286e096451b62a14a8d645e1c9da62af" kindref="member">GetPosition</ref>();</highlight></codeline>
-<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>current_remaining_bytes<sp/>=<sp/><ref refid="class_senergy_1_1_byte_buffer_1ab938ed32f9f909145f93099f4620da69" kindref="member">GetRemainingSize</ref>();</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size_increment<sp/>=<sp/>new_size<sp/>-<sp/>m_current_size;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>m_data<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>realloc(m_data,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)<sp/>*<sp/>new_size);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(m_data<sp/>+<sp/>m_current_size,<sp/>0,<sp/>size_increment);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>m_current_size<sp/>=<sp/>new_size;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="274"><highlight class="normal"></highlight></codeline>
-<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(current_remaining_bytes<sp/>&lt;=<sp/>0)</highlight></codeline>
-<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="277"><highlight class="normal"></highlight></codeline>
-<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line_count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="275" refid="class_senergy_1_1_byte_buffer_1a475f2133734cd74c4bce78bdf09950f3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a475f2133734cd74c4bce78bdf09950f3" kindref="member">ByteBuffer::DumpHexadecimal</ref>()</highlight></codeline>
+<codeline lineno="276"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>current_position<sp/>=<sp/><ref refid="class_senergy_1_1_byte_buffer_1a286e096451b62a14a8d645e1c9da62af" kindref="member">GetPosition</ref>();</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>current_remaining_bytes<sp/>=<sp/><ref refid="class_senergy_1_1_byte_buffer_1ab938ed32f9f909145f93099f4620da69" kindref="member">GetRemainingSize</ref>();</highlight></codeline>
 <codeline lineno="279"><highlight class="normal"></highlight></codeline>
-<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>current_remaining_bytes;<sp/>++i)</highlight></codeline>
-<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%02x<sp/>&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_senergy_1_1_byte_buffer_1a806db1b33ff86b572a0804879d181dc8" kindref="member">ReadChar</ref>());</highlight></codeline>
-<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line_count++;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(current_remaining_bytes<sp/>&lt;=<sp/>0)</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line_count<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="284"><highlight class="normal"></highlight></codeline>
-<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(line_count<sp/>&gt;=<sp/>35)</highlight></codeline>
-<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line_count<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
-<codeline lineno="291"><highlight class="normal"></highlight></codeline>
-<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_byte_buffer_1a13dd8a2eec8b93ac224f0da614c7f6f8" kindref="member">SetPosition</ref>(current_position);</highlight></codeline>
-<codeline lineno="293"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="294"><highlight class="normal"></highlight></codeline>
-<codeline lineno="295"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>current_remaining_bytes;<sp/>++i)</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%02X<sp/>&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_senergy_1_1_byte_buffer_1a806db1b33ff86b572a0804879d181dc8" kindref="member">ReadChar</ref>());</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line_count++;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(line_count<sp/>&gt;=<sp/>35)</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line_count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_print_1a39d34bc30221b803f96ec25d6cf7e86a" kindref="member">Print::NewLine</ref>();</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_byte_buffer_1a13dd8a2eec8b93ac224f0da614c7f6f8" kindref="member">SetPosition</ref>(current_position);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301" refid="class_senergy_1_1_byte_buffer_1a4276f5ed69bd1d2fe9c26e05193715f2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a475f2133734cd74c4bce78bdf09950f3" kindref="member">ByteBuffer::DumpHexadecimal</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>amount)</highlight></codeline>
+<codeline lineno="302"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>current_position<sp/>=<sp/><ref refid="class_senergy_1_1_byte_buffer_1a286e096451b62a14a8d645e1c9da62af" kindref="member">GetPosition</ref>();</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_byte_buffer_1a13dd8a2eec8b93ac224f0da614c7f6f8" kindref="member">SetPosition</ref>(start);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>current_remaining_bytes<sp/>=<sp/><ref refid="class_senergy_1_1_byte_buffer_1ab938ed32f9f909145f93099f4620da69" kindref="member">GetRemainingSize</ref>();</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(current_remaining_bytes<sp/>&gt;<sp/>amount)</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current_remaining_bytes<sp/>=<sp/>amount;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(current_remaining_bytes<sp/>&lt;=<sp/>0)</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line_count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>current_remaining_bytes;<sp/>++i)</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%02X<sp/>&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_senergy_1_1_byte_buffer_1a806db1b33ff86b572a0804879d181dc8" kindref="member">ReadChar</ref>());</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line_count++;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(line_count<sp/>&gt;=<sp/>35)</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line_count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_print_1a39d34bc30221b803f96ec25d6cf7e86a" kindref="member">Print::NewLine</ref>();</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_byte_buffer_1a13dd8a2eec8b93ac224f0da614c7f6f8" kindref="member">SetPosition</ref>(current_position);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332" refid="class_senergy_1_1_byte_buffer_1a2db9cbd7f2eadd1ecb561c72feaca7ad" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a2db9cbd7f2eadd1ecb561c72feaca7ad" kindref="member">ByteBuffer::CopyTo</ref>(<ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref><sp/>&amp;buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>amount)</highlight></codeline>
+<codeline lineno="333"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(amount<sp/>&gt;<sp/>this-&gt;<ref refid="class_senergy_1_1_byte_buffer_1ab938ed32f9f909145f93099f4620da69" kindref="member">GetRemainingSize</ref>())</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>amount;<sp/>++i)</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a9a561b3dd8778ee68e75e5a62a38fa60" kindref="member">Write</ref>(buffer.<ref refid="class_senergy_1_1_byte_buffer_1a806db1b33ff86b572a0804879d181dc8" kindref="member">ReadChar</ref>());</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343" refid="class_senergy_1_1_byte_buffer_1a2747633838b3fae217b90700ff737840" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_byte_buffer_1a2747633838b3fae217b90700ff737840" kindref="member">ByteBuffer::HasReachedEnd</ref>()</highlight></codeline>
+<codeline lineno="344"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_senergy_1_1_byte_buffer_1ab938ed32f9f909145f93099f4620da69" kindref="member">GetRemainingSize</ref>()<sp/>&lt;=<sp/>0)</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/photonios/Documents/Senergy/src/bytebuffer.cpp"/>
+    <location file="/home/photonios/Documents/senergy/src/bytebuffer.cpp"/>
   </compounddef>
 </doxygen>

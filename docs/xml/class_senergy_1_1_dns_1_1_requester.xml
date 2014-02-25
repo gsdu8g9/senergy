@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/requester.h" line="69" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/requester.h" bodystart="69" bodyend="-1"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/requester.h" line="69" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/requester.h" bodystart="69" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -42,7 +42,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/requester.h" line="53" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_requester.cpp" bodystart="29" bodyend="33"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/requester.h" line="53" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_requester.cpp" bodystart="29" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_requester_1abcd4348e956e6d21eef3ecc7a1f3cc0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_senergy_1_1_dns_1_1_message" kindref="compound">Dns::Message</ref></type>
@@ -79,7 +79,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/requester.h" line="65" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_requester.cpp" bodystart="35" bodyend="81"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/requester.h" line="65" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_requester.cpp" bodystart="35" bodyend="81"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -87,7 +87,7 @@
     <detaileddescription>
 <para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/requester.h" line="43" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/requester.h" bodystart="42" bodyend="70"/>
+    <location file="/home/photonios/Documents/senergy/src/senergy/dns/requester.h" line="43" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/requester.h" bodystart="42" bodyend="70"/>
     <listofallmembers>
       <member refid="class_senergy_1_1_dns_1_1_requester_1abcd4348e956e6d21eef3ecc7a1f3cc0e" prot="public" virt="non-virtual"><scope>Senergy::Dns::Requester</scope><name>Lookup</name></member>
       <member refid="class_senergy_1_1_dns_1_1_requester_1aad631f9cd1865d836c42b659a49c0ec7" prot="private" virt="non-virtual"><scope>Senergy::Dns::Requester</scope><name>m_dns_server</name></member>

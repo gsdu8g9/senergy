@@ -4,17 +4,46 @@
     <compoundname>dns_resource_record_types.cpp</compoundname>
     <includes refid="resource__record__types_8h" local="no">senergy/dns/resource_record_types.h</includes>
     <incdepgraph>
-      <node id="194">
-        <label>src/dns_resource_record_types.cpp</label>
-        <link refid="dns_resource_record_types.cpp"/>
-        <childnode refid="195" relation="include">
+      <node id="371">
+        <label>senergy/enum_mapper.h</label>
+        <link refid="enum__mapper_8h"/>
+        <childnode refid="372" relation="include">
+        </childnode>
+        <childnode refid="373" relation="include">
         </childnode>
       </node>
-      <node id="195">
+      <node id="372">
+        <label>string</label>
+      </node>
+      <node id="375">
+        <label>stddef.h</label>
+      </node>
+      <node id="373">
+        <label>senergy/fastmap.h</label>
+        <link refid="fastmap_8h"/>
+        <childnode refid="374" relation="include">
+        </childnode>
+        <childnode refid="375" relation="include">
+        </childnode>
+      </node>
+      <node id="370">
         <label>senergy/dns/resource_record_types.h</label>
         <link refid="resource__record__types_8h"/>
+        <childnode refid="371" relation="include">
+        </childnode>
+      </node>
+      <node id="374">
+        <label>vector</label>
+      </node>
+      <node id="369">
+        <label>src/dns_resource_record_types.cpp</label>
+        <link refid="dns_resource_record_types.cpp"/>
+        <childnode refid="370" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
+    <innernamespace refid="namespace_senergy">Senergy</innernamespace>
+    <innernamespace refid="namespace_senergy_1_1_dns">Senergy::Dns</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -42,7 +71,30 @@
 <codeline lineno="20"><highlight class="comment"><sp/>*******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="resource__record__types_8h" kindref="compound">senergy/dns/resource_record_types.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Senergy</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Dns</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Static<sp/>field<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">ResourceRecordTypeMap<sp/>ResourceRecordTypeMap::s_map;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_senergy_1_1_dns_1_1_resource_record_type_map_1ae64533ac9d0639fcf887888cd0d975c7" refkind="member"><highlight class="normal"><ref refid="class_senergy_1_1_dns_1_1_resource_record_type_map_1ae64533ac9d0639fcf887888cd0d975c7" kindref="member">ResourceRecordTypeMap::ResourceRecordTypeMap</ref>()</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_enum_mapper_1a1bded4a48eb23c33dca633c7c59aba7e" kindref="member">Map</ref>(<ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29" kindref="member">ResourceRecordType::A</ref>,<sp/></highlight><highlight class="stringliteral">&quot;A&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_enum_mapper_1a1bded4a48eb23c33dca633c7c59aba7e" kindref="member">Map</ref>(<ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a098890dde069e9abad63f19a0d9e1f32" kindref="member">ResourceRecordType::AAAA</ref>,<sp/></highlight><highlight class="stringliteral">&quot;AAAA&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_enum_mapper_1a1bded4a48eb23c33dca633c7c59aba7e" kindref="member">Map</ref>(<ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a53c8d15a175221d2127083e66a8cc937" kindref="member">ResourceRecordType::NS</ref>,<sp/></highlight><highlight class="stringliteral">&quot;NS&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_senergy_1_1_dns_1_1_resource_record_type_map_1a3099645859209cf5c05d1f95ed2a4be0" refkind="member"><highlight class="normal">std::string<sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_type_map_1a3099645859209cf5c05d1f95ed2a4be0" kindref="member">ResourceRecordTypeMap::Get</ref>(<ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0" kindref="member">ResourceRecordType</ref><sp/>type)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s_map.<ref refid="class_senergy_1_1_enum_mapper_1a54d34e6d45397b9ec4d5d19ec5234b2c" kindref="member">GetMapping</ref>(type);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Dns</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight></codeline>
     </programlisting>
-    <location file="/home/photonios/Documents/Senergy/src/dns_resource_record_types.cpp"/>
+    <location file="/home/photonios/Documents/senergy/src/dns_resource_record_types.cpp"/>
   </compounddef>
 </doxygen>

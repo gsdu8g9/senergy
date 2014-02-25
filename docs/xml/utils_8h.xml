@@ -10,159 +10,225 @@
     <includedby refid="resource__record__base_8h" local="no">src/senergy/dns/resource_record_base.h</includedby>
     <includedby refid="senergy_8h" local="no">src/senergy/senergy.h</includedby>
     <incdepgraph>
-      <node id="581">
+      <node id="1069">
         <label>arpa/inet.h</label>
       </node>
-      <node id="574">
-        <label>string</label>
-      </node>
-      <node id="580">
-        <label>cstdio</label>
-      </node>
-      <node id="573">
-        <label>src/senergy/dns/utils.h</label>
-        <link refid="utils.h"/>
-        <childnode refid="574" relation="include">
-        </childnode>
-        <childnode refid="575" relation="include">
-        </childnode>
-        <childnode refid="581" relation="include">
-        </childnode>
-      </node>
-      <node id="579">
-        <label>senergy/print.h</label>
-        <link refid="print_8h"/>
-        <childnode refid="580" relation="include">
-        </childnode>
-        <childnode refid="574" relation="include">
-        </childnode>
-      </node>
-      <node id="577">
-        <label>cstdlib</label>
-      </node>
-      <node id="575">
+      <node id="1063">
         <label>senergy/bytebuffer.h</label>
         <link refid="bytebuffer_8h"/>
-        <childnode refid="574" relation="include">
+        <childnode refid="1062" relation="include">
         </childnode>
-        <childnode refid="576" relation="include">
+        <childnode refid="1064" relation="include">
         </childnode>
-        <childnode refid="577" relation="include">
+        <childnode refid="1065" relation="include">
         </childnode>
-        <childnode refid="578" relation="include">
+        <childnode refid="1066" relation="include">
         </childnode>
-        <childnode refid="579" relation="include">
+        <childnode refid="1067" relation="include">
         </childnode>
       </node>
-      <node id="576">
+      <node id="1062">
+        <label>string</label>
+      </node>
+      <node id="1067">
+        <label>senergy/print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="1068" relation="include">
+        </childnode>
+        <childnode refid="1062" relation="include">
+        </childnode>
+      </node>
+      <node id="1068">
+        <label>cstdio</label>
+      </node>
+      <node id="1061">
+        <label>src/senergy/dns/utils.h</label>
+        <link refid="utils.h"/>
+        <childnode refid="1062" relation="include">
+        </childnode>
+        <childnode refid="1063" relation="include">
+        </childnode>
+        <childnode refid="1069" relation="include">
+        </childnode>
+      </node>
+      <node id="1065">
+        <label>cstdlib</label>
+      </node>
+      <node id="1064">
         <label>cstring</label>
       </node>
-      <node id="578">
+      <node id="1066">
         <label>memory</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="592">
-        <label>src/senergy/dns/resource_record_base.h</label>
-        <link refid="resource__record__base_8h"/>
-        <childnode refid="593" relation="include">
+      <node id="1072">
+        <label>src/senergy/dns/message_question.h</label>
+        <link refid="message__question_8h"/>
+        <childnode refid="1073" relation="include">
         </childnode>
-        <childnode refid="594" relation="include">
+        <childnode refid="1074" relation="include">
         </childnode>
-        <childnode refid="596" relation="include">
+        <childnode refid="1078" relation="include">
         </childnode>
       </node>
-      <node id="591">
-        <label>src/main.cpp</label>
-        <link refid="main_8cpp"/>
-      </node>
-      <node id="597">
+      <node id="1091">
         <label>src/dns_resource_record_mapper.cpp</label>
         <link refid="dns__resource__record__mapper_8cpp"/>
       </node>
-      <node id="583">
-        <label>src/dns_utils.cpp</label>
-        <link refid="dns__utils_8cpp"/>
-      </node>
-      <node id="589">
+      <node id="1077">
         <label>src/dns_requester.cpp</label>
         <link refid="dns__requester_8cpp"/>
       </node>
-      <node id="586">
-        <label>src/senergy/dns/message.h</label>
-        <link refid="message_8h"/>
-        <childnode refid="587" relation="include">
-        </childnode>
-        <childnode refid="588" relation="include">
-        </childnode>
-        <childnode refid="590" relation="include">
-        </childnode>
-      </node>
-      <node id="596">
-        <label>src/senergy/dns/resource_record_mapper.h</label>
-        <link refid="resource__record__mapper_8h"/>
-        <childnode refid="597" relation="include">
-        </childnode>
-      </node>
-      <node id="582">
-        <label>src/senergy/dns/utils.h</label>
-        <link refid="utils.h"/>
-        <childnode refid="583" relation="include">
-        </childnode>
-        <childnode refid="584" relation="include">
-        </childnode>
-        <childnode refid="592" relation="include">
-        </childnode>
-        <childnode refid="590" relation="include">
-        </childnode>
-      </node>
-      <node id="587">
-        <label>src/dns_message.cpp</label>
-        <link refid="dns__message_8cpp"/>
-      </node>
-      <node id="594">
-        <label>src/senergy/dns/resource_record_interface.h</label>
-        <link refid="resource__record__interface_8h"/>
-        <childnode refid="595" relation="include">
-        </childnode>
-        <childnode refid="596" relation="include">
-        </childnode>
-      </node>
-      <node id="590">
-        <label>src/senergy/senergy.h</label>
-        <link refid="senergy_8h"/>
-        <childnode refid="591" relation="include">
-        </childnode>
-      </node>
-      <node id="588">
-        <label>src/senergy/dns/requester.h</label>
-        <link refid="requester_8h"/>
-        <childnode refid="589" relation="include">
-        </childnode>
-        <childnode refid="590" relation="include">
-        </childnode>
-      </node>
-      <node id="593">
-        <label>src/dns_resource_record_base.cpp</label>
-        <link refid="dns__resource__record__base_8cpp"/>
-      </node>
-      <node id="585">
-        <label>src/dns_message_question.cpp</label>
-        <link refid="dns__message__question_8cpp"/>
-      </node>
-      <node id="595">
+      <node id="1093">
         <label>src/dns_resource_record_interface.cpp</label>
         <link refid="dns__resource__record__interface_8cpp"/>
       </node>
-      <node id="584">
-        <label>src/senergy/dns/message_question.h</label>
-        <link refid="message__question_8h"/>
-        <childnode refid="585" relation="include">
+      <node id="1088">
+        <label>src/senergy/dns/record_unknown.h</label>
+        <link refid="record__unknown_8h"/>
+        <childnode refid="1089" relation="include">
         </childnode>
-        <childnode refid="586" relation="include">
+        <childnode refid="1090" relation="include">
         </childnode>
-        <childnode refid="590" relation="include">
+      </node>
+      <node id="1082">
+        <label>src/senergy/dns/record_ipv4_address.h</label>
+        <link refid="record__ipv4__address_8h"/>
+        <childnode refid="1083" relation="include">
         </childnode>
+        <childnode refid="1084" relation="include">
+        </childnode>
+      </node>
+      <node id="1089">
+        <label>src/dns_record_unknown.cpp</label>
+        <link refid="dns__record__unknown_8cpp"/>
+      </node>
+      <node id="1078">
+        <label>src/senergy/senergy.h</label>
+        <link refid="senergy_8h"/>
+        <childnode refid="1079" relation="include">
+        </childnode>
+      </node>
+      <node id="1071">
+        <label>src/dns_utils.cpp</label>
+        <link refid="dns__utils_8cpp"/>
+      </node>
+      <node id="1084">
+        <label>src/senergy/dns/resource_record_collection.h</label>
+        <link refid="resource__record__collection_8h"/>
+        <childnode refid="1085" relation="include">
+        </childnode>
+        <childnode refid="1074" relation="include">
+        </childnode>
+      </node>
+      <node id="1092">
+        <label>src/senergy/dns/resource_record_interface.h</label>
+        <link refid="resource__record__interface_8h"/>
+        <childnode refid="1093" relation="include">
+        </childnode>
+        <childnode refid="1082" relation="include">
+        </childnode>
+        <childnode refid="1086" relation="include">
+        </childnode>
+        <childnode refid="1088" relation="include">
+        </childnode>
+        <childnode refid="1084" relation="include">
+        </childnode>
+        <childnode refid="1090" relation="include">
+        </childnode>
+      </node>
+      <node id="1086">
+        <label>src/senergy/dns/record_nameserver.h</label>
+        <link refid="record__nameserver_8h"/>
+        <childnode refid="1087" relation="include">
+        </childnode>
+        <childnode refid="1084" relation="include">
+        </childnode>
+      </node>
+      <node id="1085">
+        <label>src/dns_resource_record_collection.cpp</label>
+        <link refid="dns__resource__record__collection_8cpp"/>
+      </node>
+      <node id="1076">
+        <label>src/senergy/dns/requester.h</label>
+        <link refid="requester_8h"/>
+        <childnode refid="1077" relation="include">
+        </childnode>
+        <childnode refid="1078" relation="include">
+        </childnode>
+      </node>
+      <node id="1075">
+        <label>src/dns_message.cpp</label>
+        <link refid="dns__message_8cpp"/>
+      </node>
+      <node id="1087">
+        <label>src/dns_record_nameserver.cpp</label>
+        <link refid="dns__record__nameserver_8cpp"/>
+      </node>
+      <node id="1079">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="1070">
+        <label>src/senergy/dns/utils.h</label>
+        <link refid="utils.h"/>
+        <childnode refid="1071" relation="include">
+        </childnode>
+        <childnode refid="1072" relation="include">
+        </childnode>
+        <childnode refid="1080" relation="include">
+        </childnode>
+        <childnode refid="1078" relation="include">
+        </childnode>
+      </node>
+      <node id="1090">
+        <label>src/senergy/dns/resource_record_mapper.h</label>
+        <link refid="resource__record__mapper_8h"/>
+        <childnode refid="1091" relation="include">
+        </childnode>
+        <childnode refid="1084" relation="include">
+        </childnode>
+      </node>
+      <node id="1073">
+        <label>src/dns_message_question.cpp</label>
+        <link refid="dns__message__question_8cpp"/>
+      </node>
+      <node id="1080">
+        <label>src/senergy/dns/resource_record_base.h</label>
+        <link refid="resource__record__base_8h"/>
+        <childnode refid="1081" relation="include">
+        </childnode>
+        <childnode refid="1082" relation="include">
+        </childnode>
+        <childnode refid="1086" relation="include">
+        </childnode>
+        <childnode refid="1088" relation="include">
+        </childnode>
+        <childnode refid="1084" relation="include">
+        </childnode>
+        <childnode refid="1092" relation="include">
+        </childnode>
+        <childnode refid="1090" relation="include">
+        </childnode>
+      </node>
+      <node id="1074">
+        <label>src/senergy/dns/message.h</label>
+        <link refid="message_8h"/>
+        <childnode refid="1075" relation="include">
+        </childnode>
+        <childnode refid="1076" relation="include">
+        </childnode>
+        <childnode refid="1078" relation="include">
+        </childnode>
+      </node>
+      <node id="1081">
+        <label>src/dns_resource_record_base.cpp</label>
+        <link refid="dns__resource__record__base_8cpp"/>
+      </node>
+      <node id="1083">
+        <label>src/dns_record_ipv4_address.cpp</label>
+        <link refid="dns__record__ipv4__address_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_senergy_1_1_dns_1_1_utils" prot="public">Senergy::Dns::Utils</innerclass>
@@ -230,14 +296,14 @@
 <codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_utils_1aa4e117a17add157b5e9bcb5fada4ac49" kindref="member">NetworkToHostByteOrder</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
 <codeline lineno="147"><highlight class="normal"></highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_senergy_1_1_dns_1_1_utils_1a6b995d31d85ef39a5e8ac57928fa35ed" kindref="member">ReadHostnameFromBuffer</ref>(<ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref><sp/>&amp;buffer);</highlight></codeline>
-<codeline lineno="170"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"></highlight></codeline>
-<codeline lineno="172"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Dns</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="173"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="174"><highlight class="normal"></highlight></codeline>
-<codeline lineno="175"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SY_DNS_UTILS_H</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_senergy_1_1_dns_1_1_utils_1a81879edd7a9daec1d6dfbf952549c500" kindref="member">ReadHostnameFromBuffer</ref>(<ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref><sp/>&amp;buffer,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>decode<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Dns</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SY_DNS_UTILS_H</highlight></codeline>
     </programlisting>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h"/>
+    <location file="/home/photonios/Documents/senergy/src/senergy/dns/utils.h"/>
   </compounddef>
 </doxygen>

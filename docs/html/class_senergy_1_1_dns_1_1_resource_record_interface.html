@@ -31,7 +31,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="senergy-dns.ico"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Senergy
    &#160;<span id="projectnumber">1.0</span>
@@ -112,7 +111,9 @@ $(document).ready(function(){initNavTree('class_senergy_1_1_dns_1_1_resource_rec
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-types">Protected Types</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_senergy_1_1_dns_1_1_resource_record_interface-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -124,47 +125,80 @@ $(document).ready(function(){initNavTree('class_senergy_1_1_dns_1_1_resource_rec
  <a href="class_senergy_1_1_dns_1_1_resource_record_interface.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="resource__record__interface_8h_source.html">resource_record_interface.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Senergy::Dns::ResourceRecordInterface:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_senergy_1_1_dns_1_1_resource_record_interface.png" usemap="#Senergy::Dns::ResourceRecordInterface_map" alt=""/>
+  <map id="Senergy::Dns::ResourceRecordInterface_map" name="Senergy::Dns::ResourceRecordInterface_map">
+<area href="class_senergy_1_1_dns_1_1_i_p_v4_record.html" title="Represents a DNS &#39;A&#39; record, which is a resource record that contains an IPV4 address. It is the reply to a DNS &#39;A&#39; question. " alt="Senergy::Dns::IPV4Record" shape="rect" coords="0,56,239,80"/>
+<area href="class_senergy_1_1_dns_1_1_name_server_record.html" title="Represents a DNS &#39;NS&#39; record, which is a resource record that contains an nameserver address..." alt="Senergy::Dns::NameServerRecord" shape="rect" coords="249,56,488,80"/>
+<area href="class_senergy_1_1_dns_1_1_unknown_record.html" title="Represents a record that could not be handled by one of the other classes that implement the Resource..." alt="Senergy::Dns::UnknownRecord" shape="rect" coords="498,56,737,80"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a512292e35ab101cc53bafe4c21edac4c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#a512292e35ab101cc53bafe4c21edac4c">ResourceRecordInterface</a> (<a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html">ResourceRecordBase</a> &amp;base)</td></tr>
-<tr class="memdesc:a512292e35ab101cc53bafe4c21edac4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of of the ResourceRecordInterfacePtr class with a reference to an instance of the <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html" title="Represents the first part of a resource record. A resource record is defined in section 4...">ResourceRecordBase</a> class.  <a href="#a512292e35ab101cc53bafe4c21edac4c">More...</a><br/></td></tr>
-<tr class="separator:a512292e35ab101cc53bafe4c21edac4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e4eb71ac27838d547e48a171774142f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#a8e4eb71ac27838d547e48a171774142f">ResourceRecordInterface</a> (<a class="el" href="namespace_senergy_1_1_dns.html#a72915c893fbf242018e79d8f92e1646b">ResourceRecordBasePtr</a> base)</td></tr>
+<tr class="memdesc:a8e4eb71ac27838d547e48a171774142f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of of the ResourceRecordInterfacePtr class with a reference to an instance of the <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html" title="Represents the first part of a resource record. A resource record is defined in section 4...">ResourceRecordBase</a> class.  <a href="#a8e4eb71ac27838d547e48a171774142f">More...</a><br/></td></tr>
+<tr class="separator:a8e4eb71ac27838d547e48a171774142f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab81e0a7ea292513c5c34a3be0c7a6dca"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#ab81e0a7ea292513c5c34a3be0c7a6dca">Serialize</a> (<a class="el" href="class_senergy_1_1_byte_buffer.html">ByteBuffer</a> &amp;buffer)=0</td></tr>
 <tr class="memdesc:ab81e0a7ea292513c5c34a3be0c7a6dca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes this record into the specified buffer. This does not handle the serialization of the first (base) part of the resource record. Call SerializeBase for that.  <a href="#ab81e0a7ea292513c5c34a3be0c7a6dca">More...</a><br/></td></tr>
 <tr class="separator:ab81e0a7ea292513c5c34a3be0c7a6dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade2e0b9817476ea2161b694efd3e02db"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#ade2e0b9817476ea2161b694efd3e02db">Deserialize</a> (<a class="el" href="class_senergy_1_1_byte_buffer.html">ByteBuffer</a> &amp;buffer)=0</td></tr>
 <tr class="memdesc:ade2e0b9817476ea2161b694efd3e02db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserializes the record from the specified buffer. This does not handle deserialization of the first (base) part of the resource record. Call DeserializeBase for that.  <a href="#ade2e0b9817476ea2161b694efd3e02db">More...</a><br/></td></tr>
 <tr class="separator:ade2e0b9817476ea2161b694efd3e02db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acac5440b40f3904f889f1ee59a3b9786"><td class="memItemLeft" align="right" valign="top">virtual ResourceRecordInterfacePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#acac5440b40f3904f889f1ee59a3b9786">Create</a> (<a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html">ResourceRecordBase</a> &amp;base)=0</td></tr>
-<tr class="memdesc:acac5440b40f3904f889f1ee59a3b9786"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance of this class, and returns it as a shared pointer to an instance of the <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html" title="Defines an interface using pure virtuals for classes that wish to implement a specic resource record ...">ResourceRecordInterface</a> class.  <a href="#acac5440b40f3904f889f1ee59a3b9786">More...</a><br/></td></tr>
-<tr class="separator:acac5440b40f3904f889f1ee59a3b9786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe37068b670f89481a145e1e9c2c8267"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#abf5eec20c95f05b57c5c02eaed349e16">ResourceRecordInterfacePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#abe37068b670f89481a145e1e9c2c8267">Create</a> (<a class="el" href="namespace_senergy_1_1_dns.html#a72915c893fbf242018e79d8f92e1646b">ResourceRecordBasePtr</a> base)=0</td></tr>
+<tr class="memdesc:abe37068b670f89481a145e1e9c2c8267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance of this class, and returns it as a shared pointer to an instance of the <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html" title="Defines an interface using pure virtuals for classes that wish to implement a specic resource record ...">ResourceRecordInterface</a> class.  <a href="#abe37068b670f89481a145e1e9c2c8267">More...</a><br/></td></tr>
+<tr class="separator:abe37068b670f89481a145e1e9c2c8267"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af895ba199749599d42f8e6a737eb9118"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0">ResourceRecordType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#af895ba199749599d42f8e6a737eb9118">GetType</a> ()=0</td></tr>
 <tr class="memdesc:af895ba199749599d42f8e6a737eb9118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the type of of this record (derived), wich is a value from the ResourceRecordType enumuration.  <a href="#af895ba199749599d42f8e6a737eb9118">More...</a><br/></td></tr>
 <tr class="separator:af895ba199749599d42f8e6a737eb9118"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4332e80632928d846abe9a58f912c217"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_senergy_1_1_dns.html#a953f153bc411213d621d00c1e1b3eb9d">ResourceRecordClass</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#a4332e80632928d846abe9a58f912c217">GetClass</a> ()</td></tr>
 <tr class="memdesc:a4332e80632928d846abe9a58f912c217"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the class of this record. This will almost always be the same and does not have to be implemented by the derived class.  <a href="#a4332e80632928d846abe9a58f912c217">More...</a><br/></td></tr>
 <tr class="separator:a4332e80632928d846abe9a58f912c217"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d83a278096ff51e7c8fb9a5e77f70a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html">ResourceRecordBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#a2d83a278096ff51e7c8fb9a5e77f70a5">GetBase</a> () const </td></tr>
-<tr class="memdesc:a2d83a278096ff51e7c8fb9a5e77f70a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the underlying base resource record for this record.  <a href="#a2d83a278096ff51e7c8fb9a5e77f70a5">More...</a><br/></td></tr>
-<tr class="separator:a2d83a278096ff51e7c8fb9a5e77f70a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f603d9d3ffe34e4376ea8b27fd0c72d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_senergy_1_1_dns.html#a72915c893fbf242018e79d8f92e1646b">ResourceRecordBasePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#a6f603d9d3ffe34e4376ea8b27fd0c72d">GetBase</a> () const </td></tr>
+<tr class="memdesc:a6f603d9d3ffe34e4376ea8b27fd0c72d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the underlying base resource record for this record.  <a href="#a6f603d9d3ffe34e4376ea8b27fd0c72d">More...</a><br/></td></tr>
+<tr class="separator:a6f603d9d3ffe34e4376ea8b27fd0c72d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aced6e4bc388ce3568d72d9670a2e9da5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#aced6e4bc388ce3568d72d9670a2e9da5">Dump</a> ()</td></tr>
+<tr class="memdesc:aced6e4bc388ce3568d72d9670a2e9da5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dumps all fields to the standard output, with their values. In the following format:  <a href="#aced6e4bc388ce3568d72d9670a2e9da5">More...</a><br/></td></tr>
+<tr class="separator:aced6e4bc388ce3568d72d9670a2e9da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a342b71b9977f20ecb1dc7b3fd6ae0751"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a342b71b9977f20ecb1dc7b3fd6ae0751"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#abf5eec20c95f05b57c5c02eaed349e16">ResourceRecordInterfacePtr</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#a342b71b9977f20ecb1dc7b3fd6ae0751">CreateCast</a> (<a class="el" href="namespace_senergy_1_1_dns.html#a72915c893fbf242018e79d8f92e1646b">ResourceRecordBasePtr</a> base)</td></tr>
+<tr class="memdesc:a342b71b9977f20ecb1dc7b3fd6ae0751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance of the specified type with the specified resource record base instance, and casts it to a shared ppinter to a <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html" title="Defines an interface using pure virtuals for classes that wish to implement a specic resource record ...">ResourceRecordInterface</a> class (polymorhpism). The specified type must inherit from <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html" title="Defines an interface using pure virtuals for classes that wish to implement a specic resource record ...">ResourceRecordInterface</a>.  <a href="#a342b71b9977f20ecb1dc7b3fd6ae0751">More...</a><br/></td></tr>
+<tr class="separator:a342b71b9977f20ecb1dc7b3fd6ae0751"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
 Protected Types</h2></td></tr>
+<tr class="memitem:abf5eec20c95f05b57c5c02eaed349e16"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html">ResourceRecordInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#abf5eec20c95f05b57c5c02eaed349e16">ResourceRecordInterfacePtr</a></td></tr>
+<tr class="separator:abf5eec20c95f05b57c5c02eaed349e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59bcfc62cfc3a68464245b13ad3785e6"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html">ResourceRecordBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#a59bcfc62cfc3a68464245b13ad3785e6">Base</a></td></tr>
 <tr class="memdesc:a59bcfc62cfc3a68464245b13ad3785e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">More logical way to allow access to the base class.  <a href="#a59bcfc62cfc3a68464245b13ad3785e6">More...</a><br/></td></tr>
 <tr class="separator:a59bcfc62cfc3a68464245b13ad3785e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aaebfbc52b464557ce9a3f36fbc08acd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#aaebfbc52b464557ce9a3f36fbc08acd3">SetResourceSize</a> (unsigned short resource_size)</td></tr>
+<tr class="memdesc:aaebfbc52b464557ce9a3f36fbc08acd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the resource size in the base record.  <a href="#aaebfbc52b464557ce9a3f36fbc08acd3">More...</a><br/></td></tr>
+<tr class="separator:aaebfbc52b464557ce9a3f36fbc08acd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54207eceee2ae035ae5293209b3e721c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#a54207eceee2ae035ae5293209b3e721c">SetResourceSize</a> (unsigned int resource_size)</td></tr>
+<tr class="memdesc:a54207eceee2ae035ae5293209b3e721c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the resource size in the base record.  <a href="#a54207eceee2ae035ae5293209b3e721c">More...</a><br/></td></tr>
+<tr class="separator:a54207eceee2ae035ae5293209b3e721c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a8342949ee3626a2b02021343de3be8a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html">ResourceRecordBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#a8342949ee3626a2b02021343de3be8a0">m_base</a></td></tr>
-<tr class="separator:a8342949ee3626a2b02021343de3be8a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2ffc1e85320769af1eabe781fcfc412"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_senergy_1_1_dns.html#a72915c893fbf242018e79d8f92e1646b">ResourceRecordBasePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#ae2ffc1e85320769af1eabe781fcfc412">m_base</a></td></tr>
+<tr class="separator:ae2ffc1e85320769af1eabe781fcfc412"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines an interface using pure virtuals for classes that wish to implement a specic resource record type. </p>
 <dl class="section author"><dt>Author</dt><dd>Swen Kooij (Photonios). </dd></dl>
 
-<p>Definition at line <a class="el" href="resource__record__interface_8h_source.html#l00042">42</a> of file <a class="el" href="resource__record__interface_8h_source.html">resource_record_interface.h</a>.</p>
+<p>Definition at line <a class="el" href="resource__record__interface_8h_source.html#l00043">43</a> of file <a class="el" href="resource__record__interface_8h_source.html">resource_record_interface.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a59bcfc62cfc3a68464245b13ad3785e6"></a>
 <div class="memitem">
@@ -186,19 +220,41 @@ Protected Attributes</h2></td></tr>
 
 <p>More logical way to allow access to the base class. </p>
 
-<p>Definition at line <a class="el" href="resource__record__interface_8h_source.html#l00125">125</a> of file <a class="el" href="resource__record__interface_8h_source.html">resource_record_interface.h</a>.</p>
+<p>Definition at line <a class="el" href="resource__record__interface_8h_source.html#l00166">166</a> of file <a class="el" href="resource__record__interface_8h_source.html">resource_record_interface.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abf5eec20c95f05b57c5c02eaed349e16"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html">ResourceRecordInterface</a>&gt; <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#abf5eec20c95f05b57c5c02eaed349e16">Senergy::Dns::ResourceRecordInterface::ResourceRecordInterfacePtr</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="resource__record__interface_8h_source.html#l00048">48</a> of file <a class="el" href="resource__record__interface_8h_source.html">resource_record_interface.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a512292e35ab101cc53bafe4c21edac4c"></a>
+<a class="anchor" id="a8e4eb71ac27838d547e48a171774142f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">Senergy::Dns::ResourceRecordInterface::ResourceRecordInterface </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html">ResourceRecordBase</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_senergy_1_1_dns.html#a72915c893fbf242018e79d8f92e1646b">ResourceRecordBasePtr</a>&#160;</td>
           <td class="paramname"><em>base</em></td><td>)</td>
           <td></td>
         </tr>
@@ -219,7 +275,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="acac5440b40f3904f889f1ee59a3b9786"></a>
+<a class="anchor" id="abe37068b670f89481a145e1e9c2c8267"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -227,9 +283,9 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual ResourceRecordInterfacePtr Senergy::Dns::ResourceRecordInterface::Create </td>
+          <td class="memname">virtual <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#abf5eec20c95f05b57c5c02eaed349e16">ResourceRecordInterfacePtr</a> Senergy::Dns::ResourceRecordInterface::Create </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html">ResourceRecordBase</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_senergy_1_1_dns.html#a72915c893fbf242018e79d8f92e1646b">ResourceRecordBasePtr</a>&#160;</td>
           <td class="paramname"><em>base</em></td><td>)</td>
           <td></td>
         </tr>
@@ -250,6 +306,40 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A shared pointer to an instance of the <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html" title="Defines an interface using pure virtuals for classes that wish to implement a specic resource record ...">ResourceRecordInterface</a> class, which is just the polymorphic form of the derived class. </dd></dl>
+
+<p>Implemented in <a class="el" href="class_senergy_1_1_dns_1_1_i_p_v4_record.html#a4d31a8d3f562f8128c053071120d6dd2">Senergy::Dns::IPV4Record</a>, <a class="el" href="class_senergy_1_1_dns_1_1_name_server_record.html#a006930a7fc6c7d736cfe5c0ee1d79b9d">Senergy::Dns::NameServerRecord</a>, and <a class="el" href="class_senergy_1_1_dns_1_1_unknown_record.html#a98f66426e8e89449eaac24e0ac4eeb60">Senergy::Dns::UnknownRecord</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a342b71b9977f20ecb1dc7b3fd6ae0751"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#abf5eec20c95f05b57c5c02eaed349e16">ResourceRecordInterfacePtr</a> Senergy::Dns::ResourceRecordInterface::CreateCast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_senergy_1_1_dns.html#a72915c893fbf242018e79d8f92e1646b">ResourceRecordBasePtr</a>&#160;</td>
+          <td class="paramname"><em>base</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new instance of the specified type with the specified resource record base instance, and casts it to a shared ppinter to a <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html" title="Defines an interface using pure virtuals for classes that wish to implement a specic resource record ...">ResourceRecordInterface</a> class (polymorhpism). The specified type must inherit from <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html" title="Defines an interface using pure virtuals for classes that wish to implement a specic resource record ...">ResourceRecordInterface</a>. </p>
+<p>T The type to create and cast to <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html" title="Defines an interface using pure virtuals for classes that wish to implement a specic resource record ...">ResourceRecordInterface</a> shared pointer.</p>
+<dl class="section return"><dt>Returns</dt><dd>An instance of the specified type but, casted to an instance of the <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html" title="Defines an interface using pure virtuals for classes that wish to implement a specic resource record ...">ResourceRecordInterface</a> class (shared pointer). </dd></dl>
+
+<p>Definition at line <a class="el" href="resource__record__interface_8h_source.html#l00140">140</a> of file <a class="el" href="resource__record__interface_8h_source.html">resource_record_interface.h</a>.</p>
 
 </div>
 </div>
@@ -283,14 +373,45 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p>Implemented in <a class="el" href="class_senergy_1_1_dns_1_1_i_p_v4_record.html#a6fffdc2823b53f8f2fede5263e45b232">Senergy::Dns::IPV4Record</a>, <a class="el" href="class_senergy_1_1_dns_1_1_name_server_record.html#a6e01ac3f215b4766cae9ccc7fa58987a">Senergy::Dns::NameServerRecord</a>, and <a class="el" href="class_senergy_1_1_dns_1_1_unknown_record.html#af58fb86354cd176aefaa0000a706d646">Senergy::Dns::UnknownRecord</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a2d83a278096ff51e7c8fb9a5e77f70a5"></a>
+<a class="anchor" id="aced6e4bc388ce3568d72d9670a2e9da5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Senergy::Dns::ResourceRecordInterface::Dump </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dumps all fields to the standard output, with their values. In the following format: </p>
+
+<p>Reimplemented in <a class="el" href="class_senergy_1_1_dns_1_1_i_p_v4_record.html#a5dc31b6ac003bf5b8897d1431e9eb0db">Senergy::Dns::IPV4Record</a>, and <a class="el" href="class_senergy_1_1_dns_1_1_name_server_record.html#a95047855d9e9fb77fbbfa8534c3ddb62">Senergy::Dns::NameServerRecord</a>.</p>
+
+<p>Definition at line <a class="el" href="dns__resource__record__interface_8cpp_source.html#l00054">54</a> of file <a class="el" href="dns__resource__record__interface_8cpp_source.html">dns_resource_record_interface.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6f603d9d3ffe34e4376ea8b27fd0c72d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html">ResourceRecordBase</a> &amp; Senergy::Dns::ResourceRecordInterface::GetBase </td>
+          <td class="memname"><a class="el" href="namespace_senergy_1_1_dns.html#a72915c893fbf242018e79d8f92e1646b">ResourceRecordBasePtr</a> Senergy::Dns::ResourceRecordInterface::GetBase </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -357,6 +478,8 @@ Protected Attributes</h2></td></tr>
 <p>Gets the type of of this record (derived), wich is a value from the ResourceRecordType enumuration. </p>
 <dl class="section return"><dt>Returns</dt><dd>A value from the ResourceRecordType enumuration which denotes the type of this record. </dd></dl>
 
+<p>Implemented in <a class="el" href="class_senergy_1_1_dns_1_1_i_p_v4_record.html#a7f67f0546dc2d93b04a264fabf871d78">Senergy::Dns::IPV4Record</a>, <a class="el" href="class_senergy_1_1_dns_1_1_name_server_record.html#a2ad5b053bceedbf8bf927a275d530431">Senergy::Dns::NameServerRecord</a>, and <a class="el" href="class_senergy_1_1_dns_1_1_unknown_record.html#a3b6e5feb0277646b2513432cede8ebbd">Senergy::Dns::UnknownRecord</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ab81e0a7ea292513c5c34a3be0c7a6dca"></a>
@@ -390,10 +513,11 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A boolean indicating whether the serialization was successful. </dd></dl>
 
+<p>Implemented in <a class="el" href="class_senergy_1_1_dns_1_1_i_p_v4_record.html#adc8bfc217949628f7b88fe69d065d630">Senergy::Dns::IPV4Record</a>, <a class="el" href="class_senergy_1_1_dns_1_1_name_server_record.html#a9e9b980a9c341cff47bb5840fc01ed06">Senergy::Dns::NameServerRecord</a>, and <a class="el" href="class_senergy_1_1_dns_1_1_unknown_record.html#aa792712816e5f177b554f1b7d6018563">Senergy::Dns::UnknownRecord</a>.</p>
+
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a8342949ee3626a2b02021343de3be8a0"></a>
+<a class="anchor" id="aaebfbc52b464557ce9a3f36fbc08acd3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -401,7 +525,11 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html">ResourceRecordBase</a>&amp; Senergy::Dns::ResourceRecordInterface::m_base</td>
+          <td class="memname">void Senergy::Dns::ResourceRecordInterface::SetResourceSize </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>resource_size</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -411,7 +539,72 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="resource__record__interface_8h_source.html#l00128">128</a> of file <a class="el" href="resource__record__interface_8h_source.html">resource_record_interface.h</a>.</p>
+<p>Sets the resource size in the base record. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource_size</td><td>The size of the resource </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="dns__resource__record__interface_8cpp_source.html#l00044">44</a> of file <a class="el" href="dns__resource__record__interface_8cpp_source.html">dns_resource_record_interface.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a54207eceee2ae035ae5293209b3e721c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Senergy::Dns::ResourceRecordInterface::SetResourceSize </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>resource_size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the resource size in the base record. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource_size</td><td>The size of the resource </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="dns__resource__record__interface_8cpp_source.html#l00049">49</a> of file <a class="el" href="dns__resource__record__interface_8cpp_source.html">dns_resource_record_interface.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ae2ffc1e85320769af1eabe781fcfc412"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_senergy_1_1_dns.html#a72915c893fbf242018e79d8f92e1646b">ResourceRecordBasePtr</a> Senergy::Dns::ResourceRecordInterface::m_base</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="resource__record__interface_8h_source.html#l00170">170</a> of file <a class="el" href="resource__record__interface_8h_source.html">resource_record_interface.h</a>.</p>
 
 </div>
 </div>
@@ -425,7 +618,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_senergy.html">Senergy</a></li><li class="navelem"><a class="el" href="namespace_senergy_1_1_dns.html">Dns</a></li><li class="navelem"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html">ResourceRecordInterface</a></li>
-    <li class="footer">Generated on Tue Feb 11 2014 21:56:45 for Senergy by
+    <li class="footer">Generated on Tue Feb 25 2014 22:51:27 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

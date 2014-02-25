@@ -31,7 +31,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="senergy-dns.ico"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Senergy
    &#160;<span id="projectnumber">1.0</span>
@@ -134,14 +133,45 @@ $(document).ready(function(){initNavTree('dns__resource__record__types_8cpp_sour
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *******************************************************************************/</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="resource__record__types_8h.html">senergy/dns/resource_record_types.h</a>&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span>Senergy</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>Dns</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// Static field implementation</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;ResourceRecordTypeMap ResourceRecordTypeMap::s_map;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_senergy_1_1_dns_1_1_resource_record_type_map.html#ae64533ac9d0639fcf887888cd0d975c7">   32</a></span>&#160;<a class="code" href="class_senergy_1_1_dns_1_1_resource_record_type_map.html#ae64533ac9d0639fcf887888cd0d975c7">ResourceRecordTypeMap::ResourceRecordTypeMap</a>()</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_senergy_1_1_enum_mapper.html#a1bded4a48eb23c33dca633c7c59aba7e">Map</a>(<a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29">ResourceRecordType::A</a>, <span class="stringliteral">&quot;A&quot;</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_senergy_1_1_enum_mapper.html#a1bded4a48eb23c33dca633c7c59aba7e">Map</a>(<a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a098890dde069e9abad63f19a0d9e1f32">ResourceRecordType::AAAA</a>, <span class="stringliteral">&quot;AAAA&quot;</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_senergy_1_1_enum_mapper.html#a1bded4a48eb23c33dca633c7c59aba7e">Map</a>(<a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a53c8d15a175221d2127083e66a8cc937">ResourceRecordType::NS</a>, <span class="stringliteral">&quot;NS&quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_senergy_1_1_dns_1_1_resource_record_type_map.html#a3099645859209cf5c05d1f95ed2a4be0">   39</a></span>&#160;std::string <a class="code" href="class_senergy_1_1_dns_1_1_resource_record_type_map.html#a3099645859209cf5c05d1f95ed2a4be0">ResourceRecordTypeMap::Get</a>(<a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0">ResourceRecordType</a> type)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> s_map.<a class="code" href="class_senergy_1_1_enum_mapper.html#a54d34e6d45397b9ec4d5d19ec5234b2c">GetMapping</a>(type);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;} <span class="comment">// namespace Dns</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;} <span class="comment">// namespace Senergy</span></div>
+<div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0a53c8d15a175221d2127083e66a8cc937"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a53c8d15a175221d2127083e66a8cc937">Senergy::Dns::ResourceRecordType::NS</a></div><div class="ttdoc">A authoritative name server. </div></div>
+<div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0">Senergy::Dns::ResourceRecordType</a></div><div class="ttdeci">ResourceRecordType</div><div class="ttdoc">An enumuration of all possible resource record types (RR), as defined by IANA. </div><div class="ttdef"><b>Definition:</b> <a href="resource__record__types_8h_source.html#l00039">resource_record_types.h:39</a></div></div>
+<div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29">Senergy::Dns::ResourceRecordType::A</a></div><div class="ttdoc">A host address. </div></div>
+<div class="ttc" id="class_senergy_1_1_dns_1_1_resource_record_type_map_html_ae64533ac9d0639fcf887888cd0d975c7"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_resource_record_type_map.html#ae64533ac9d0639fcf887888cd0d975c7">Senergy::Dns::ResourceRecordTypeMap::ResourceRecordTypeMap</a></div><div class="ttdeci">ResourceRecordTypeMap()</div><div class="ttdoc">Initializes a new instance of the ResourceRecordTypeMap class and maps all the values from the Resour...</div><div class="ttdef"><b>Definition:</b> <a href="dns__resource__record__types_8cpp_source.html#l00032">dns_resource_record_types.cpp:32</a></div></div>
 <div class="ttc" id="resource__record__types_8h_html"><div class="ttname"><a href="resource__record__types_8h.html">resource_record_types.h</a></div></div>
+<div class="ttc" id="class_senergy_1_1_dns_1_1_resource_record_type_map_html_a3099645859209cf5c05d1f95ed2a4be0"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_resource_record_type_map.html#a3099645859209cf5c05d1f95ed2a4be0">Senergy::Dns::ResourceRecordTypeMap::Get</a></div><div class="ttdeci">static std::string Get(ResourceRecordType type)</div><div class="ttdoc">Gets the textual representation of the specified resource record type. </div><div class="ttdef"><b>Definition:</b> <a href="dns__resource__record__types_8cpp_source.html#l00039">dns_resource_record_types.cpp:39</a></div></div>
+<div class="ttc" id="class_senergy_1_1_enum_mapper_html_a1bded4a48eb23c33dca633c7c59aba7e"><div class="ttname"><a href="class_senergy_1_1_enum_mapper.html#a1bded4a48eb23c33dca633c7c59aba7e">Senergy::EnumMapper&lt; ResourceRecordType &gt;::Map</a></div><div class="ttdeci">void Map(ResourceRecordTypeenum_value, const std::string &amp;enum_value_name)</div><div class="ttdoc">Maps the specified enumuration value to the specified textual representation. </div><div class="ttdef"><b>Definition:</b> <a href="enum__mapper_8h_source.html#l00046">enum_mapper.h:46</a></div></div>
+<div class="ttc" id="class_senergy_1_1_enum_mapper_html_a54d34e6d45397b9ec4d5d19ec5234b2c"><div class="ttname"><a href="class_senergy_1_1_enum_mapper.html#a54d34e6d45397b9ec4d5d19ec5234b2c">Senergy::EnumMapper::GetMapping</a></div><div class="ttdeci">std::string GetMapping(T enum_value)</div><div class="ttdoc">Finds the textual representation for the specified enumuration value. </div><div class="ttdef"><b>Definition:</b> <a href="enum__mapper_8h_source.html#l00059">enum_mapper.h:59</a></div></div>
+<div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0a098890dde069e9abad63f19a0d9e1f32"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a098890dde069e9abad63f19a0d9e1f32">Senergy::Dns::ResourceRecordType::AAAA</a></div><div class="ttdoc">IPV6 Address. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dns__resource__record__types_8cpp.html">dns_resource_record_types.cpp</a></li>
-    <li class="footer">Generated on Tue Feb 11 2014 21:56:42 for Senergy by
+    <li class="footer">Generated on Tue Feb 25 2014 22:51:26 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

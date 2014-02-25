@@ -23,7 +23,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" line="65" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" bodystart="65" bodyend="-1"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/vectorx.h" line="73" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/vectorx.h" bodystart="73" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" line="46" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" bodystart="46" bodyend="48"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/vectorx.h" line="46" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/vectorx.h" bodystart="46" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_vector_x_1a4df34dceed944ef14df649a538d9c1b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>T</type>
@@ -63,7 +63,20 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" line="55" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" bodystart="55" bodyend="59"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/vectorx.h" line="55" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/vectorx.h" bodystart="55" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_vector_x_1a2b84162c380303ed38e73d8d529c62dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::VectorX&lt; T &gt;::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <briefdescription>
+<para>Clears the map of any existing records. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/vectorx.h" line="64" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/vectorx.h" bodystart="64" bodyend="67"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -72,31 +85,32 @@
 <para>T The type that the vector will contain.</para><para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="51">
+      <node id="82">
         <label>std::vector&lt; T &gt;</label>
       </node>
-      <node id="50">
+      <node id="81">
         <label>Senergy::VectorX&lt; T &gt;</label>
         <link refid="class_senergy_1_1_vector_x"/>
-        <childnode refid="51" relation="public-inheritance">
+        <childnode refid="82" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="53">
+      <node id="84">
         <label>std::vector&lt; T &gt;</label>
       </node>
-      <node id="52">
+      <node id="83">
         <label>Senergy::VectorX&lt; T &gt;</label>
         <link refid="class_senergy_1_1_vector_x"/>
-        <childnode refid="53" relation="public-inheritance">
+        <childnode refid="84" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" line="41" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/vectorx.h" bodystart="40" bodyend="66"/>
+    <location file="/home/photonios/Documents/senergy/src/senergy/vectorx.h" line="41" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/vectorx.h" bodystart="40" bodyend="74"/>
     <listofallmembers>
       <member refid="class_senergy_1_1_vector_x_1a4df34dceed944ef14df649a538d9c1b1" prot="public" virt="non-virtual"><scope>Senergy::VectorX</scope><name>Add</name></member>
       <member refid="class_senergy_1_1_vector_x_1aaeb6919f76131faa4965a8e6f671b2d6" prot="private" virt="non-virtual"><scope>Senergy::VectorX</scope><name>BaseClass</name></member>
+      <member refid="class_senergy_1_1_vector_x_1a2b84162c380303ed38e73d8d529c62dd" prot="public" virt="non-virtual"><scope>Senergy::VectorX</scope><name>Clear</name></member>
       <member refid="class_senergy_1_1_vector_x_1a99bed6d49a3a93e6a133837330218ee7" prot="public" virt="non-virtual"><scope>Senergy::VectorX</scope><name>VectorX</name></member>
     </listofallmembers>
   </compounddef>

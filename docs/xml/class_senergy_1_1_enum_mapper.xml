@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_senergy_1_1_enum_mapper" kind="class" prot="public">
+    <compoundname>Senergy::EnumMapper</compoundname>
+    <basecompoundref refid="class_senergy_1_1_fast_map" prot="public" virt="non-virtual">Senergy::FastMap&lt; T, std::string &gt;</basecompoundref>
+    <includes refid="enum__mapper_8h" local="no">enum_mapper.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_senergy_1_1_enum_mapper_1a1bded4a48eb23c33dca633c7c59aba7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::EnumMapper&lt; T &gt;::Map</definition>
+        <argsstring>(T enum_value, const std::string &amp;enum_value_name)</argsstring>
+        <name>Map</name>
+        <param>
+          <type>T</type>
+          <declname>enum_value</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>enum_value_name</declname>
+        </param>
+        <briefdescription>
+<para>Maps the specified enumuration value to the specified textual representation. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enum_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A value from the enumuration to map to the specified textual representation. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enum_value_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The textual representation of the specified enum value. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/enum_mapper.h" line="46" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/enum_mapper.h" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_enum_mapper_1a54d34e6d45397b9ec4d5d19ec5234b2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Senergy::EnumMapper&lt; T &gt;::GetMapping</definition>
+        <argsstring>(T enum_value)</argsstring>
+        <name>GetMapping</name>
+        <param>
+          <type>T</type>
+          <declname>enum_value</declname>
+        </param>
+        <briefdescription>
+<para>Finds the textual representation for the specified enumuration value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enum_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A value from the enumuration to find the textual representation for.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The textual representation of the specified enumuration value. An empty string is returned when no mapping exists for the specified enumuration value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/enum_mapper.h" line="59" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/enum_mapper.h" bodystart="59" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Simple wrapper for a hash map that maps enum values to their textual value (name). </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Swen Kooij </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="11">
+        <label>Senergy::FastMap&lt; T, std::string &gt;</label>
+        <link refid="class_senergy_1_1_fast_map"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Senergy::EnumMapper&lt; T &gt;</label>
+        <link refid="class_senergy_1_1_enum_mapper"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>std::vector&lt; FastMapItem&lt; T, std::string &gt; &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="14">
+        <label>Senergy::FastMap&lt; T, std::string &gt;</label>
+        <link refid="class_senergy_1_1_fast_map"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Senergy::EnumMapper&lt; T &gt;</label>
+        <link refid="class_senergy_1_1_enum_mapper"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>std::vector&lt; FastMapItem&lt; T, std::string &gt; &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/photonios/Documents/senergy/src/senergy/enum_mapper.h" line="38" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/enum_mapper.h" bodystart="37" bodyend="63"/>
+    <listofallmembers>
+      <member refid="class_senergy_1_1_fast_map_1a869e057da1eeb6d54f510e1302a8b7a1" prot="public" virt="non-virtual"><scope>Senergy::EnumMapper</scope><name>at</name></member>
+      <member refid="class_senergy_1_1_fast_map_1a2391a47cf91bcc3561837800777ae91f" prot="public" virt="non-virtual"><scope>Senergy::EnumMapper</scope><name>Clear</name></member>
+      <member refid="class_senergy_1_1_enum_mapper_1a54d34e6d45397b9ec4d5d19ec5234b2c" prot="public" virt="non-virtual"><scope>Senergy::EnumMapper</scope><name>GetMapping</name></member>
+      <member refid="class_senergy_1_1_enum_mapper_1a1bded4a48eb23c33dca633c7c59aba7e" prot="public" virt="non-virtual"><scope>Senergy::EnumMapper</scope><name>Map</name></member>
+      <member refid="class_senergy_1_1_fast_map_1ac06929fda5af594e6ccf96198eac1819" prot="public" virt="non-virtual"><scope>Senergy::EnumMapper</scope><name>operator[]</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

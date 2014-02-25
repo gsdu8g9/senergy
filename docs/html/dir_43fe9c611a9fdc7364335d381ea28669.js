@@ -11,6 +11,9 @@ var dir_43fe9c611a9fdc7364335d381ea28669 =
     [ "convert.h", "convert_8h.html", [
       [ "Convert", "class_senergy_1_1_convert.html", "class_senergy_1_1_convert" ]
     ] ],
+    [ "enum_mapper.h", "enum__mapper_8h.html", [
+      [ "EnumMapper", "class_senergy_1_1_enum_mapper.html", "class_senergy_1_1_enum_mapper" ]
+    ] ],
     [ "fastmap.h", "fastmap_8h.html", [
       [ "FastMapItem", "struct_senergy_1_1_fast_map_item.html", "struct_senergy_1_1_fast_map_item" ],
       [ "FastMap", "class_senergy_1_1_fast_map.html", "class_senergy_1_1_fast_map" ]

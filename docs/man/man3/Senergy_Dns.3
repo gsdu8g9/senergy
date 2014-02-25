@@ -1,4 +1,4 @@
-.TH "Senergy::Dns" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::Dns" 3 "Tue Feb 25 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -30,6 +30,18 @@ Senergy::Dns \-
 .br
 .RI "\fIRepresents a DNS question, as defined in section 4\&.1\&.2 of RFC-1035\&. A DNS question is usually transmitted by a DNS client, asking to lookup the IP address of a host name\&. \fP"
 .ti -1c
+.RI "class \fBIPV4Record\fP"
+.br
+.RI "\fIRepresents a DNS 'A' record, which is a resource record that contains an IPV4 address\&. It is the reply to a DNS 'A' question\&. \fP"
+.ti -1c
+.RI "class \fBNameServerRecord\fP"
+.br
+.RI "\fIRepresents a DNS 'NS' record, which is a resource record that contains an nameserver address\&. It is what root DNS servers usually send back\&. This is defined in section 3\&.3\&.11 of RFC 1035\&. \fP"
+.ti -1c
+.RI "class \fBUnknownRecord\fP"
+.br
+.RI "\fIRepresents a record that could not be handled by one of the other classes that implement the \fBResourceRecordInterface\fP class\&. All records that are of a type that is not supported by the mapper are handled by this class\&. This class makes sure the resource record data is skipped when deserialization and serialization\&. \fP"
+.ti -1c
 .RI "class \fBRequester\fP"
 .br
 .RI "\fIAllows querying remote DNS servers, wraps sending and receiving DNS messages\&. \fP"
@@ -38,6 +50,10 @@ Senergy::Dns \-
 .br
 .RI "\fIRepresents the first part of a resource record\&. A resource record is defined in section 4\&.1\&.3 of RFC 1035\&. However, a resource record can be of different types\&. The last part of a resource record is different depending of what type of resource record we're dealing with\&. This class handles the serializing and deserializing of the first part of a resource record, the part that is always the same\&. Classes that implement the \fBResourceRecordInterface\fP class take care of the serialization and deserialization of the rest of the type-specific part\&. \fP"
 .ti -1c
+.RI "class \fBResourceRecordCollection\fP"
+.br
+.RI "\fIA collection of resource record\&. We have many types of resource record\&. \fBSenergy\fP DNS has a flexbile desing to simplify the implementation of additional records\&. This container is part of that design\&. It has the ability to contain all kinds of resource records\&. It also helps in serialization and deserialization\&. \fP"
+.ti -1c
 .RI "class \fBResourceRecordInterface\fP"
 .br
 .RI "\fIDefines an interface using pure virtuals for classes that wish to implement a specic resource record type\&. \fP"
@@ -45,6 +61,10 @@ Senergy::Dns \-
 .RI "class \fBResourceRecordMapper\fP"
 .br
 .RI "\fIHelps in mapping values from the ResourceRecordType enumuration to classes that derive from the \fBResourceRecordInterface\fP class\&. This is to prevent huge switches or blocks of if statements\&. This is a little bit complex, but it gives us way more flexibility and makes the code a bit easier to maintain\&. \fP"
+.ti -1c
+.RI "class \fBResourceRecordTypeMap\fP"
+.br
+.RI "\fIStatis class that helps mapping values from the ResourceRecordType enumuration to their textual representation\&. \fP"
 .ti -1c
 .RI "class \fBRootNameServer\fP"
 .br
@@ -89,7 +109,7 @@ Senergy::Dns \-
 .br
 .RI "\fIAn enumuration of all possible resource record classes (RR) as defined in RFC-1035\&. None of them except 'Internet' are really used\&. \fP"
 .ti -1c
-.RI "enum \fBResourceRecordType\fP : unsigned short { \fBResourceRecordType::A\fP = 1, \fBResourceRecordType::NS\fP = 2, \fBResourceRecordType::MD\fP = 3, \fBResourceRecordType::MF\fP = 4, \fBResourceRecordType::CNAME\fP = 5, \fBResourceRecordType::SOA\fP = 6, \fBResourceRecordType::MB\fP = 7, \fBResourceRecordType::MG\fP = 8, \fBResourceRecordType::MR\fP = 9, \fBResourceRecordType::NUL\fP = 10, \fBResourceRecordType::WKS\fP = 11, \fBResourceRecordType::PTR\fP = 12, \fBResourceRecordType::HINFO\fP = 13, \fBResourceRecordType::MINFO\fP = 14, \fBResourceRecordType::MX\fP = 15, \fBResourceRecordType::TXT\fP = 16, \fBResourceRecordType::RP\fP = 17, \fBResourceRecordType::AFSDB\fP = 18, \fBResourceRecordType::X25\fP = 19, \fBResourceRecordType::ISDN\fP = 20, \fBResourceRecordType::RT\fP = 21, \fBResourceRecordType::NSAP\fP = 22, \fBResourceRecordType::NSAP_PTR\fP = 23, \fBResourceRecordType::SIG\fP = 24, \fBResourceRecordType::KEY\fP = 25, \fBResourceRecordType::PX\fP = 26, \fBResourceRecordType::GPOS\fP = 27, \fBResourceRecordType::AAAA\fP = 28, \fBResourceRecordType::LOC\fP = 29, \fBResourceRecordType::NXT\fP = 30, \fBResourceRecordType::EID\fP = 31, \fBResourceRecordType::NIMLOC\fP = 32, \fBResourceRecordType::SRV\fP = 33, \fBResourceRecordType::ATMA\fP = 34, \fBResourceRecordType::NAPTR\fP = 35, \fBResourceRecordType::KX\fP = 36, \fBResourceRecordType::CERT\fP = 37, \fBResourceRecordType::A6\fP = 38, \fBResourceRecordType::DNAME\fP = 39, \fBResourceRecordType::SINK\fP = 40, \fBResourceRecordType::OPT\fP = 41, \fBResourceRecordType::APL\fP = 42, \fBResourceRecordType::DS\fP = 43, \fBResourceRecordType::SSHFP\fP = 44, \fBResourceRecordType::IPSECKEY\fP = 45, \fBResourceRecordType::RRSIG\fP = 46, \fBResourceRecordType::NSEC\fP = 47, \fBResourceRecordType::DNSKEY\fP = 48, \fBResourceRecordType::DHCID\fP = 49, \fBResourceRecordType::NSEC3\fP = 50, \fBResourceRecordType::NSEC3PARAM\fP = 51, \fBResourceRecordType::TLSA\fP = 52, \fBResourceRecordType::HIP\fP = 55, \fBResourceRecordType::NFINO\fP = 56, \fBResourceRecordType::RKEY\fP = 57, \fBResourceRecordType::TALINK\fP = 58, \fBResourceRecordType::CDS\fP = 59, \fBResourceRecordType::SPF\fP = 99, \fBResourceRecordType::UINFO\fP = 100, \fBResourceRecordType::UID\fP = 101, \fBResourceRecordType::GID\fP = 102, \fBResourceRecordType::UNSPEC\fP = 103, \fBResourceRecordType::NID\fP = 104, \fBResourceRecordType::L32\fP = 105, \fBResourceRecordType::L64\fP = 106, \fBResourceRecordType::LP\fP = 107, \fBResourceRecordType::EUI48\fP = 108, \fBResourceRecordType::EUI64\fP = 109, \fBResourceRecordType::TKEY\fP = 249, \fBResourceRecordType::TSIG\fP = 250, \fBResourceRecordType::IXFR\fP = 251, \fBResourceRecordType::AXFR\fP = 252, \fBResourceRecordType::MAILB\fP = 253, \fBResourceRecordType::MAILA\fP = 254, \fBResourceRecordType::ALL_RECORDS\fP = 255, \fBResourceRecordType::URI\fP = 256, \fBResourceRecordType::CAA\fP = 257, \fBResourceRecordType::TA\fP = 32768, \fBResourceRecordType::DLV\fP = 32769 }"
+.RI "enum \fBResourceRecordType\fP : unsigned short { \fBResourceRecordType::Unknown\fP = 0, \fBResourceRecordType::A\fP = 1, \fBResourceRecordType::NS\fP = 2, \fBResourceRecordType::MD\fP = 3, \fBResourceRecordType::MF\fP = 4, \fBResourceRecordType::CNAME\fP = 5, \fBResourceRecordType::SOA\fP = 6, \fBResourceRecordType::MB\fP = 7, \fBResourceRecordType::MG\fP = 8, \fBResourceRecordType::MR\fP = 9, \fBResourceRecordType::NUL\fP = 10, \fBResourceRecordType::WKS\fP = 11, \fBResourceRecordType::PTR\fP = 12, \fBResourceRecordType::HINFO\fP = 13, \fBResourceRecordType::MINFO\fP = 14, \fBResourceRecordType::MX\fP = 15, \fBResourceRecordType::TXT\fP = 16, \fBResourceRecordType::RP\fP = 17, \fBResourceRecordType::AFSDB\fP = 18, \fBResourceRecordType::X25\fP = 19, \fBResourceRecordType::ISDN\fP = 20, \fBResourceRecordType::RT\fP = 21, \fBResourceRecordType::NSAP\fP = 22, \fBResourceRecordType::NSAP_PTR\fP = 23, \fBResourceRecordType::SIG\fP = 24, \fBResourceRecordType::KEY\fP = 25, \fBResourceRecordType::PX\fP = 26, \fBResourceRecordType::GPOS\fP = 27, \fBResourceRecordType::AAAA\fP = 28, \fBResourceRecordType::LOC\fP = 29, \fBResourceRecordType::NXT\fP = 30, \fBResourceRecordType::EID\fP = 31, \fBResourceRecordType::NIMLOC\fP = 32, \fBResourceRecordType::SRV\fP = 33, \fBResourceRecordType::ATMA\fP = 34, \fBResourceRecordType::NAPTR\fP = 35, \fBResourceRecordType::KX\fP = 36, \fBResourceRecordType::CERT\fP = 37, \fBResourceRecordType::A6\fP = 38, \fBResourceRecordType::DNAME\fP = 39, \fBResourceRecordType::SINK\fP = 40, \fBResourceRecordType::OPT\fP = 41, \fBResourceRecordType::APL\fP = 42, \fBResourceRecordType::DS\fP = 43, \fBResourceRecordType::SSHFP\fP = 44, \fBResourceRecordType::IPSECKEY\fP = 45, \fBResourceRecordType::RRSIG\fP = 46, \fBResourceRecordType::NSEC\fP = 47, \fBResourceRecordType::DNSKEY\fP = 48, \fBResourceRecordType::DHCID\fP = 49, \fBResourceRecordType::NSEC3\fP = 50, \fBResourceRecordType::NSEC3PARAM\fP = 51, \fBResourceRecordType::TLSA\fP = 52, \fBResourceRecordType::HIP\fP = 55, \fBResourceRecordType::NFINO\fP = 56, \fBResourceRecordType::RKEY\fP = 57, \fBResourceRecordType::TALINK\fP = 58, \fBResourceRecordType::CDS\fP = 59, \fBResourceRecordType::SPF\fP = 99, \fBResourceRecordType::UINFO\fP = 100, \fBResourceRecordType::UID\fP = 101, \fBResourceRecordType::GID\fP = 102, \fBResourceRecordType::UNSPEC\fP = 103, \fBResourceRecordType::NID\fP = 104, \fBResourceRecordType::L32\fP = 105, \fBResourceRecordType::L64\fP = 106, \fBResourceRecordType::LP\fP = 107, \fBResourceRecordType::EUI48\fP = 108, \fBResourceRecordType::EUI64\fP = 109, \fBResourceRecordType::TKEY\fP = 249, \fBResourceRecordType::TSIG\fP = 250, \fBResourceRecordType::IXFR\fP = 251, \fBResourceRecordType::AXFR\fP = 252, \fBResourceRecordType::MAILB\fP = 253, \fBResourceRecordType::MAILA\fP = 254, \fBResourceRecordType::ALL_RECORDS\fP = 255, \fBResourceRecordType::URI\fP = 256, \fBResourceRecordType::CAA\fP = 257, \fBResourceRecordType::TA\fP = 32768, \fBResourceRecordType::DLV\fP = 32769 }"
 .br
 .RI "\fIAn enumuration of all possible resource record types (RR), as defined by IANA\&. \fP"
 .in -1c
@@ -110,13 +130,13 @@ Definition at line 198 of file message_question\&.h\&.
 .SS "typedef std::shared_ptr<\fBResourceRecordBase\fP> \fBSenergy::Dns::ResourceRecordBasePtr\fP"
 
 .PP
-Definition at line 209 of file resource_record_base\&.h\&.
+Definition at line 229 of file resource_record_base\&.h\&.
 .SS "typedef std::shared_ptr<\fBResourceRecordInterface\fP> \fBSenergy::Dns::ResourceRecordInterfacePtr\fP"
 
 .PP
 Typedef for a shared pointer to an instance of the \fBResourceRecordInterface\fP class\&. 
 .PP
-Definition at line 134 of file resource_record_interface\&.h\&.
+Definition at line 176 of file resource_record_interface\&.h\&.
 .SH "Enumeration Type Documentation"
 .PP 
 .SS "enum \fBSenergy::Dns::ResourceRecordClass\fP : unsigned short\fC [strong]\fP"
@@ -171,6 +191,9 @@ Swen Kooij (Photonios)\&.
 .PP
 \fBEnumerator\fP
 .in +1c
+.TP
+\fB\fIUnknown \fP\fP
+Unknown\&. 
 .TP
 \fB\fIA \fP\fP
 A host address\&. 
@@ -409,7 +432,7 @@ DNSSEC Trust authorities\&.
 \fB\fIDLV \fP\fP
 DNSSEC Lookaside validation\&. 
 .PP
-Definition at line 37 of file resource_record_types\&.h\&.
+Definition at line 39 of file resource_record_types\&.h\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Senergy from the source code\&.

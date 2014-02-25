@@ -31,7 +31,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="senergy-dns.ico"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Senergy
    &#160;<span id="projectnumber">1.0</span>
@@ -162,29 +161,35 @@ $(document).ready(function(){initNavTree('fastmap_8h_source.html','');});
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> FastMapBase::at(index);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_senergy_1_1_fast_map.html#ac06929fda5af594e6ccf96198eac1819">   89</a></span>&#160;    TValue &amp; <a class="code" href="class_senergy_1_1_fast_map.html#ac06929fda5af594e6ccf96198eac1819">operator[] </a>(TKey key)</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; FastMapBase::size(); i++)</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">if</span>(FastMapBase::at(i).first == key)</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keywordflow">return</span> FastMapBase::at(i).second;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="struct_senergy_1_1_fast_map_item.html">FastMapItem&lt;TKey, TValue&gt;</a> fast_map_item;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        fast_map_item.<a class="code" href="struct_senergy_1_1_fast_map_item.html#a99e39296732f934331d581936e2ddb26">first</a> = key;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        FastMapBase::push_back(fast_map_item);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> FastMapBase::at(FastMapBase::size() - 1).first;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_senergy_1_1_fast_map.html#a2391a47cf91bcc3561837800777ae91f">   81</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_senergy_1_1_fast_map.html#a2391a47cf91bcc3561837800777ae91f">Clear</a>()</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        FastMapBase::clear();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_senergy_1_1_fast_map.html#ac06929fda5af594e6ccf96198eac1819">   97</a></span>&#160;    TValue &amp; <a class="code" href="class_senergy_1_1_fast_map.html#ac06929fda5af594e6ccf96198eac1819">operator[] </a>(TKey key)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; FastMapBase::size(); i++)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">if</span>(FastMapBase::at(i).first == key)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="keywordflow">return</span> FastMapBase::at(i).second;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;} <span class="comment">// namespace Senergy</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif // SY_FAST_MAP_H</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="struct_senergy_1_1_fast_map_item.html">FastMapItem&lt;TKey, TValue&gt;</a> fast_map_item;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        fast_map_item.<a class="code" href="struct_senergy_1_1_fast_map_item.html#a99e39296732f934331d581936e2ddb26">first</a> = key;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        FastMapBase::push_back(fast_map_item);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">return</span> FastMapBase::at(FastMapBase::size() - 1).second;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;};</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;} <span class="comment">// namespace Senergy</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif // SY_FAST_MAP_H</span></div>
 <div class="ttc" id="class_senergy_1_1_fast_map_html_a869e057da1eeb6d54f510e1302a8b7a1"><div class="ttname"><a href="class_senergy_1_1_fast_map.html#a869e057da1eeb6d54f510e1302a8b7a1">Senergy::FastMap::at</a></div><div class="ttdeci">FastMapItem&lt; TKey, TValue &gt; &amp; at(int index)</div><div class="ttdoc">Provides access to the base class&#39;s at method. </div><div class="ttdef"><b>Definition:</b> <a href="fastmap_8h_source.html#l00073">fastmap.h:73</a></div></div>
 <div class="ttc" id="struct_senergy_1_1_fast_map_item_html_a99e39296732f934331d581936e2ddb26"><div class="ttname"><a href="struct_senergy_1_1_fast_map_item.html#a99e39296732f934331d581936e2ddb26">Senergy::FastMapItem::first</a></div><div class="ttdeci">TKey first</div><div class="ttdef"><b>Definition:</b> <a href="fastmap_8h_source.html#l00043">fastmap.h:43</a></div></div>
-<div class="ttc" id="class_senergy_1_1_fast_map_html_ac06929fda5af594e6ccf96198eac1819"><div class="ttname"><a href="class_senergy_1_1_fast_map.html#ac06929fda5af594e6ccf96198eac1819">Senergy::FastMap::operator[]</a></div><div class="ttdeci">TValue &amp; operator[](TKey key)</div><div class="ttdoc">Allows access to the pairs stored inside this map, one specifies the key of the item to retrieve...</div><div class="ttdef"><b>Definition:</b> <a href="fastmap_8h_source.html#l00089">fastmap.h:89</a></div></div>
+<div class="ttc" id="class_senergy_1_1_fast_map_html_ac06929fda5af594e6ccf96198eac1819"><div class="ttname"><a href="class_senergy_1_1_fast_map.html#ac06929fda5af594e6ccf96198eac1819">Senergy::FastMap::operator[]</a></div><div class="ttdeci">TValue &amp; operator[](TKey key)</div><div class="ttdoc">Allows access to the pairs stored inside this map, one specifies the key of the item to retrieve...</div><div class="ttdef"><b>Definition:</b> <a href="fastmap_8h_source.html#l00097">fastmap.h:97</a></div></div>
 <div class="ttc" id="struct_senergy_1_1_fast_map_item_html"><div class="ttname"><a href="struct_senergy_1_1_fast_map_item.html">Senergy::FastMapItem</a></div><div class="ttdoc">The structure that FastMap stores in it&#39;s vector, this emulates a std::map iterator. </div><div class="ttdef"><b>Definition:</b> <a href="fastmap_8h_source.html#l00041">fastmap.h:41</a></div></div>
+<div class="ttc" id="class_senergy_1_1_fast_map_html_a2391a47cf91bcc3561837800777ae91f"><div class="ttname"><a href="class_senergy_1_1_fast_map.html#a2391a47cf91bcc3561837800777ae91f">Senergy::FastMap::Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdoc">Clears the map of any existing records. </div><div class="ttdef"><b>Definition:</b> <a href="fastmap_8h_source.html#l00081">fastmap.h:81</a></div></div>
 <div class="ttc" id="struct_senergy_1_1_fast_map_item_html_a685a9e654410404e550d65acd951c7ca"><div class="ttname"><a href="struct_senergy_1_1_fast_map_item.html#a685a9e654410404e550d65acd951c7ca">Senergy::FastMapItem::second</a></div><div class="ttdeci">TValue second</div><div class="ttdef"><b>Definition:</b> <a href="fastmap_8h_source.html#l00044">fastmap.h:44</a></div></div>
 <div class="ttc" id="class_senergy_1_1_fast_map_html"><div class="ttname"><a href="class_senergy_1_1_fast_map.html">Senergy::FastMap</a></div><div class="ttdoc">The fast map is an alternative to std::map. An std::map is relatively slow with a small number of ite...</div><div class="ttdef"><b>Definition:</b> <a href="fastmap_8h_source.html#l00059">fastmap.h:59</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -193,7 +198,7 @@ $(document).ready(function(){initNavTree('fastmap_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_43fe9c611a9fdc7364335d381ea28669.html">senergy</a></li><li class="navelem"><a class="el" href="fastmap_8h.html">fastmap.h</a></li>
-    <li class="footer">Generated on Tue Feb 11 2014 21:56:42 for Senergy by
+    <li class="footer">Generated on Tue Feb 25 2014 22:51:26 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

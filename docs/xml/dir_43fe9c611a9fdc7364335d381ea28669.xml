@@ -7,6 +7,7 @@
     <innerfile refid="circular__buffer_8h">circular_buffer.h</innerfile>
     <innerfile refid="console_8h">console.h</innerfile>
     <innerfile refid="convert_8h">convert.h</innerfile>
+    <innerfile refid="enum__mapper_8h">enum_mapper.h</innerfile>
     <innerfile refid="fastmap_8h">fastmap.h</innerfile>
     <innerfile refid="logger_8h">logger.h</innerfile>
     <innerfile refid="print_8h">print.h</innerfile>
@@ -18,6 +19,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/"/>
+    <location file="/home/photonios/Documents/senergy/src/senergy/"/>
   </compounddef>
 </doxygen>

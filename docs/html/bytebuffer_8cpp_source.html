@@ -31,7 +31,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="senergy-dns.ico"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Senergy
    &#160;<span id="projectnumber">1.0</span>
@@ -294,149 +293,210 @@ $(document).ready(function(){initNavTree('bytebuffer_8cpp_source.html','');});
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    __write_native_type&lt;unsigned short&gt;(value);</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;}</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
-<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#ae4e73e6e193bec7b9f7df0919d1641d9">  183</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#ae4e73e6e193bec7b9f7df0919d1641d9">ByteBuffer::Read</a>(<span class="keywordtype">char</span> *buffer, <span class="keywordtype">int</span> size)</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#ad810aade775871238b82deb38629510e">  183</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#ad810aade775871238b82deb38629510e">ByteBuffer::WriteNop</a>()</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;{</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">if</span>(buffer == NULL || size &lt;= 0)</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    __write_native_type&lt;char&gt;(0);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;}</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">int</span> buffer_end_offset = m_position + size;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">if</span>(buffer_end_offset &gt; (<span class="keywordtype">int</span>) m_current_size)</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    memcpy(buffer, m_data + m_position, size);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    m_position += size;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>; </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;}</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#ace3d04d38706d534a16e596ee291630b">  198</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#ae4e73e6e193bec7b9f7df0919d1641d9">ByteBuffer::Read</a>(<span class="keywordtype">char</span> *buffer, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size)</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;{</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#ae4e73e6e193bec7b9f7df0919d1641d9">Read</a>(buffer, (<span class="keywordtype">int</span>)size);</div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#ae4e73e6e193bec7b9f7df0919d1641d9">  188</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#ae4e73e6e193bec7b9f7df0919d1641d9">ByteBuffer::Read</a>(<span class="keywordtype">char</span> *buffer, <span class="keywordtype">int</span> size)</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;{</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">if</span>(buffer == NULL || size &lt;= 0)</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordtype">int</span> buffer_end_offset = m_position + size;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">if</span>(buffer_end_offset &gt; (<span class="keywordtype">int</span>) m_current_size)</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    memcpy(buffer, m_data + m_position, size);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    m_position += size;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>; </div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;}</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#ab15f04d43dd82cebf6dc25254d210e4e">  203</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#ab15f04d43dd82cebf6dc25254d210e4e">ByteBuffer::ReadInt</a>()</div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#ace3d04d38706d534a16e596ee291630b">  203</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#ae4e73e6e193bec7b9f7df0919d1641d9">ByteBuffer::Read</a>(<span class="keywordtype">char</span> *buffer, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size)</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;{</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">return</span> __read_native_type&lt;int&gt;();</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#ae4e73e6e193bec7b9f7df0919d1641d9">Read</a>(buffer, (<span class="keywordtype">int</span>)size);</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
-<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#a7abe5475b2a9adcad384d3125640aba2">  208</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#a7abe5475b2a9adcad384d3125640aba2">ByteBuffer::ReadUnsignedInt</a>()</div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#ab15f04d43dd82cebf6dc25254d210e4e">  208</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#ab15f04d43dd82cebf6dc25254d210e4e">ByteBuffer::ReadInt</a>()</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;{</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordflow">return</span> __read_native_type&lt;unsigned int&gt;();</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordflow">return</span> __read_native_type&lt;int&gt;();</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
-<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#a806db1b33ff86b572a0804879d181dc8">  213</a></span>&#160;<span class="keywordtype">char</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#a806db1b33ff86b572a0804879d181dc8">ByteBuffer::ReadChar</a>()</div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#a7abe5475b2a9adcad384d3125640aba2">  213</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#a7abe5475b2a9adcad384d3125640aba2">ByteBuffer::ReadUnsignedInt</a>()</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;{</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">return</span> __read_native_type&lt;char&gt;();</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">return</span> __read_native_type&lt;unsigned int&gt;();</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;}</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
-<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#ad9a7a05b0285fe070cde3983458de5f6">  218</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#ad9a7a05b0285fe070cde3983458de5f6">ByteBuffer::ReadUnsignedChar</a>()</div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#a806db1b33ff86b572a0804879d181dc8">  218</a></span>&#160;<span class="keywordtype">char</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#a806db1b33ff86b572a0804879d181dc8">ByteBuffer::ReadChar</a>()</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;{</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">return</span> __read_native_type&lt;unsigned char&gt;();</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">return</span> __read_native_type&lt;char&gt;();</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;}</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
-<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#a989443842e20c2feba4268e968911fe8">  223</a></span>&#160;<span class="keywordtype">short</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#a989443842e20c2feba4268e968911fe8">ByteBuffer::ReadShort</a>()</div>
+<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#ad9a7a05b0285fe070cde3983458de5f6">  223</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#ad9a7a05b0285fe070cde3983458de5f6">ByteBuffer::ReadUnsignedChar</a>()</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;{</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">return</span> __read_native_type&lt;short&gt;();</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">return</span> __read_native_type&lt;unsigned char&gt;();</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;}</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
-<div class="line"><a name="l00228"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#aa6b6bfdb398a75b92c79bcdfc1986821">  228</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#aa6b6bfdb398a75b92c79bcdfc1986821">ByteBuffer::ReadUnsignedShort</a>()</div>
+<div class="line"><a name="l00228"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#a989443842e20c2feba4268e968911fe8">  228</a></span>&#160;<span class="keywordtype">short</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#a989443842e20c2feba4268e968911fe8">ByteBuffer::ReadShort</a>()</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;{</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordflow">return</span> __read_native_type&lt;unsigned short&gt;();</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordflow">return</span> __read_native_type&lt;short&gt;();</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;}</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
-<div class="line"><a name="l00233"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#ab1f14bdb0b09b2144d1775fa2dff95a6">  233</a></span>&#160;std::string <a class="code" href="class_senergy_1_1_byte_buffer.html#ab1f14bdb0b09b2144d1775fa2dff95a6">ByteBuffer::ReadString</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> max_length <span class="comment">/* = 0 */</span>)</div>
+<div class="line"><a name="l00233"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#aa6b6bfdb398a75b92c79bcdfc1986821">  233</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#aa6b6bfdb398a75b92c79bcdfc1986821">ByteBuffer::ReadUnsignedShort</a>()</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;{</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    std::string result_string = <span class="stringliteral">&quot;&quot;</span>; </div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordflow">while</span>(<a class="code" href="class_senergy_1_1_byte_buffer.html#ab938ed32f9f909145f93099f4620da69">GetRemainingSize</a>() &gt; 0)</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    {</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordtype">char</span> current_character = <a class="code" href="class_senergy_1_1_byte_buffer.html#a806db1b33ff86b572a0804879d181dc8">ReadChar</a>();</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordflow">if</span>(current_character == 0 || result_string.size() &gt;= max_length)</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        result_string += current_character;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">return</span> result_string;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#a5c3f960422533abc898061be11b6f613">  249</a></span>&#160;std::string <a class="code" href="class_senergy_1_1_byte_buffer.html#a5c3f960422533abc898061be11b6f613">ByteBuffer::ReadAll</a>()</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;{</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">if</span>(m_current_size &lt;= 0)</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        </div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordflow">return</span> std::string(m_data, m_current_size);</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;}</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="keywordtype">void</span> ByteBuffer::__set_size(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> new_size)</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;{   </div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">if</span>(m_current_size &gt;= new_size)</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">return</span> __read_native_type&lt;unsigned short&gt;();</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;}</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#ab1f14bdb0b09b2144d1775fa2dff95a6">  238</a></span>&#160;std::string <a class="code" href="class_senergy_1_1_byte_buffer.html#ab1f14bdb0b09b2144d1775fa2dff95a6">ByteBuffer::ReadString</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> max_length <span class="comment">/* = 0 */</span>)</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;{</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    std::string result_string = <span class="stringliteral">&quot;&quot;</span>; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">while</span>(<a class="code" href="class_senergy_1_1_byte_buffer.html#ab938ed32f9f909145f93099f4620da69">GetRemainingSize</a>() &gt; 0)</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordtype">char</span> current_character = <a class="code" href="class_senergy_1_1_byte_buffer.html#a806db1b33ff86b572a0804879d181dc8">ReadChar</a>();</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordflow">if</span>(current_character == 0 || result_string.size() &gt;= max_length)</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        result_string += current_character;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">return</span> result_string;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#a5c3f960422533abc898061be11b6f613">  254</a></span>&#160;std::string <a class="code" href="class_senergy_1_1_byte_buffer.html#a5c3f960422533abc898061be11b6f613">ByteBuffer::ReadAll</a>()</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;{</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">if</span>(m_current_size &lt;= 0)</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">return</span> std::string(m_data, m_current_size);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;}</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size_increment = new_size - m_current_size;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    m_data = (<span class="keywordtype">char</span>*) realloc(m_data, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>) * new_size);</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    memset(m_data + m_current_size, 0, size_increment);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="keywordtype">void</span> ByteBuffer::__set_size(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> new_size)</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;{   </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">if</span>(m_current_size &gt;= new_size)</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    m_current_size = new_size;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;}</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
-<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#a475f2133734cd74c4bce78bdf09950f3">  270</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#a475f2133734cd74c4bce78bdf09950f3">ByteBuffer::DumpHexadecimal</a>()</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;{</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordtype">int</span> current_position = <a class="code" href="class_senergy_1_1_byte_buffer.html#a286e096451b62a14a8d645e1c9da62af">GetPosition</a>();</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordtype">int</span> current_remaining_bytes = <a class="code" href="class_senergy_1_1_byte_buffer.html#ab938ed32f9f909145f93099f4620da69">GetRemainingSize</a>();</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size_increment = new_size - m_current_size;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    m_data = (<span class="keywordtype">char</span>*) realloc(m_data, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>) * new_size);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    memset(m_data + m_current_size, 0, size_increment);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    m_current_size = new_size;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;}</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordflow">if</span>(current_remaining_bytes &lt;= 0)</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">int</span> line_count = 0;</div>
+<div class="line"><a name="l00275"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#a475f2133734cd74c4bce78bdf09950f3">  275</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#a475f2133734cd74c4bce78bdf09950f3">ByteBuffer::DumpHexadecimal</a>()</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;{</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">int</span> current_position = <a class="code" href="class_senergy_1_1_byte_buffer.html#a286e096451b62a14a8d645e1c9da62af">GetPosition</a>();</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">int</span> current_remaining_bytes = <a class="code" href="class_senergy_1_1_byte_buffer.html#ab938ed32f9f909145f93099f4620da69">GetRemainingSize</a>();</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; current_remaining_bytes; ++i)</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    {</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        printf(<span class="stringliteral">&quot;%02x &quot;</span>, <a class="code" href="class_senergy_1_1_byte_buffer.html#a806db1b33ff86b572a0804879d181dc8">ReadChar</a>());</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        line_count++;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">if</span>(current_remaining_bytes &lt;= 0)</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordtype">int</span> line_count = 0;</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordflow">if</span>(line_count &gt;= 35)</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            line_count = 0;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        }</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    } </div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <a class="code" href="class_senergy_1_1_byte_buffer.html#a13dd8a2eec8b93ac224f0da614c7f6f8">SetPosition</a>(current_position);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;}</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;} <span class="comment">// namespace Senergy</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; current_remaining_bytes; ++i)</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    {</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        printf(<span class="stringliteral">&quot;%02X &quot;</span>, <a class="code" href="class_senergy_1_1_byte_buffer.html#a806db1b33ff86b572a0804879d181dc8">ReadChar</a>());</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        line_count++;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">if</span>(line_count &gt;= 35)</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            line_count = 0;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        }</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    } </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <a class="code" href="class_senergy_1_1_print.html#a39d34bc30221b803f96ec25d6cf7e86a">Print::NewLine</a>();</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <a class="code" href="class_senergy_1_1_byte_buffer.html#a13dd8a2eec8b93ac224f0da614c7f6f8">SetPosition</a>(current_position);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;}</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
+<div class="line"><a name="l00301"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#a4276f5ed69bd1d2fe9c26e05193715f2">  301</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#a475f2133734cd74c4bce78bdf09950f3">ByteBuffer::DumpHexadecimal</a>(<span class="keywordtype">int</span> start, <span class="keywordtype">int</span> amount)</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;{</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordtype">int</span> current_position = <a class="code" href="class_senergy_1_1_byte_buffer.html#a286e096451b62a14a8d645e1c9da62af">GetPosition</a>();</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <a class="code" href="class_senergy_1_1_byte_buffer.html#a13dd8a2eec8b93ac224f0da614c7f6f8">SetPosition</a>(start);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordtype">int</span> current_remaining_bytes = <a class="code" href="class_senergy_1_1_byte_buffer.html#ab938ed32f9f909145f93099f4620da69">GetRemainingSize</a>();</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    </div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">if</span>(current_remaining_bytes &gt; amount)</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        current_remaining_bytes = amount;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keywordflow">if</span>(current_remaining_bytes &lt;= 0)</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordtype">int</span> line_count = 0;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; current_remaining_bytes; ++i)</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        printf(<span class="stringliteral">&quot;%02X &quot;</span>, <a class="code" href="class_senergy_1_1_byte_buffer.html#a806db1b33ff86b572a0804879d181dc8">ReadChar</a>());</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        line_count++;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="keywordflow">if</span>(line_count &gt;= 35)</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            line_count = 0;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        }</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    } </div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    </div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <a class="code" href="class_senergy_1_1_print.html#a39d34bc30221b803f96ec25d6cf7e86a">Print::NewLine</a>();</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <a class="code" href="class_senergy_1_1_byte_buffer.html#a13dd8a2eec8b93ac224f0da614c7f6f8">SetPosition</a>(current_position);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;}</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;</div>
+<div class="line"><a name="l00332"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#a2db9cbd7f2eadd1ecb561c72feaca7ad">  332</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#a2db9cbd7f2eadd1ecb561c72feaca7ad">ByteBuffer::CopyTo</a>(<a class="code" href="class_senergy_1_1_byte_buffer.html">ByteBuffer</a> &amp;buffer, <span class="keywordtype">int</span> amount)</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;{</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordflow">if</span>(amount &gt; this-&gt;<a class="code" href="class_senergy_1_1_byte_buffer.html#ab938ed32f9f909145f93099f4620da69">GetRemainingSize</a>())</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; amount; ++i)</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        buffer.<a class="code" href="class_senergy_1_1_byte_buffer.html#a9a561b3dd8778ee68e75e5a62a38fa60">Write</a>(buffer.<a class="code" href="class_senergy_1_1_byte_buffer.html#a806db1b33ff86b572a0804879d181dc8">ReadChar</a>());</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;}</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
+<div class="line"><a name="l00343"></a><span class="lineno"><a class="line" href="class_senergy_1_1_byte_buffer.html#a2747633838b3fae217b90700ff737840">  343</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_senergy_1_1_byte_buffer.html#a2747633838b3fae217b90700ff737840">ByteBuffer::HasReachedEnd</a>()</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;{</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_senergy_1_1_byte_buffer.html#ab938ed32f9f909145f93099f4620da69">GetRemainingSize</a>() &lt;= 0)</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;}</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;} <span class="comment">// namespace Senergy</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
 <div class="ttc" id="class_senergy_1_1_byte_buffer_html_ad2ed70d80d2a794d2ce35931819a66da"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#ad2ed70d80d2a794d2ce35931819a66da">Senergy::ByteBuffer::IncreasePosition</a></div><div class="ttdeci">bool IncreasePosition(int amount=1)</div><div class="ttdoc">Increases the position by the specified amount of bytes. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00087">bytebuffer.cpp:87</a></div></div>
 <div class="ttc" id="class_senergy_1_1_byte_buffer_html_a13dd8a2eec8b93ac224f0da614c7f6f8"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a13dd8a2eec8b93ac224f0da614c7f6f8">Senergy::ByteBuffer::SetPosition</a></div><div class="ttdeci">bool SetPosition(int position)</div><div class="ttdoc">Sets the current position within the byte buffer. The position is the offset within the buffer that w...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00073">bytebuffer.cpp:73</a></div></div>
-<div class="ttc" id="class_senergy_1_1_byte_buffer_html_aa6b6bfdb398a75b92c79bcdfc1986821"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#aa6b6bfdb398a75b92c79bcdfc1986821">Senergy::ByteBuffer::ReadUnsignedShort</a></div><div class="ttdeci">unsigned short ReadUnsignedShort()</div><div class="ttdoc">Reads an unsigned short from the buffer. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00228">bytebuffer.cpp:228</a></div></div>
-<div class="ttc" id="class_senergy_1_1_byte_buffer_html_a989443842e20c2feba4268e968911fe8"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a989443842e20c2feba4268e968911fe8">Senergy::ByteBuffer::ReadShort</a></div><div class="ttdeci">short ReadShort()</div><div class="ttdoc">Reads a short from the buffer. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00223">bytebuffer.cpp:223</a></div></div>
+<div class="ttc" id="class_senergy_1_1_byte_buffer_html_aa6b6bfdb398a75b92c79bcdfc1986821"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#aa6b6bfdb398a75b92c79bcdfc1986821">Senergy::ByteBuffer::ReadUnsignedShort</a></div><div class="ttdeci">unsigned short ReadUnsignedShort()</div><div class="ttdoc">Reads an unsigned short from the buffer. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00233">bytebuffer.cpp:233</a></div></div>
+<div class="ttc" id="class_senergy_1_1_byte_buffer_html_a2db9cbd7f2eadd1ecb561c72feaca7ad"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a2db9cbd7f2eadd1ecb561c72feaca7ad">Senergy::ByteBuffer::CopyTo</a></div><div class="ttdeci">bool CopyTo(ByteBuffer &amp;buffer, int amount)</div><div class="ttdoc">Copies the specified amount of bytes from the current position into the specified buffer...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00332">bytebuffer.cpp:332</a></div></div>
+<div class="ttc" id="class_senergy_1_1_byte_buffer_html_a989443842e20c2feba4268e968911fe8"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a989443842e20c2feba4268e968911fe8">Senergy::ByteBuffer::ReadShort</a></div><div class="ttdeci">short ReadShort()</div><div class="ttdoc">Reads a short from the buffer. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00228">bytebuffer.cpp:228</a></div></div>
 <div class="ttc" id="class_senergy_1_1_byte_buffer_html_a22be2d9d356958c4cf352bc31edb1735"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a22be2d9d356958c4cf352bc31edb1735">Senergy::ByteBuffer::Size</a></div><div class="ttdeci">int Size()</div><div class="ttdoc">Gets the size of the buffer. This is not the same as the data size. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00058">bytebuffer.cpp:58</a></div></div>
 <div class="ttc" id="class_senergy_1_1_byte_buffer_html_aef390f867878292a797065c21cec6afe"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#aef390f867878292a797065c21cec6afe">Senergy::ByteBuffer::~ByteBuffer</a></div><div class="ttdeci">~ByteBuffer()</div><div class="ttdoc">The ByteBuffer&#39;s destructor. Free&#39;s the underlying buffer, and cleans up used resources. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00043">bytebuffer.cpp:43</a></div></div>
-<div class="ttc" id="class_senergy_1_1_byte_buffer_html_ad9a7a05b0285fe070cde3983458de5f6"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#ad9a7a05b0285fe070cde3983458de5f6">Senergy::ByteBuffer::ReadUnsignedChar</a></div><div class="ttdeci">unsigned char ReadUnsignedChar()</div><div class="ttdoc">Reads an unsigned char from the buffer. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00218">bytebuffer.cpp:218</a></div></div>
+<div class="ttc" id="class_senergy_1_1_byte_buffer_html_ad9a7a05b0285fe070cde3983458de5f6"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#ad9a7a05b0285fe070cde3983458de5f6">Senergy::ByteBuffer::ReadUnsignedChar</a></div><div class="ttdeci">unsigned char ReadUnsignedChar()</div><div class="ttdoc">Reads an unsigned char from the buffer. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00223">bytebuffer.cpp:223</a></div></div>
 <div class="ttc" id="class_senergy_1_1_byte_buffer_html_ab3b85c02a2ee01df37673e8887df7956"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#ab3b85c02a2ee01df37673e8887df7956">Senergy::ByteBuffer::ByteBuffer</a></div><div class="ttdeci">ByteBuffer()</div><div class="ttdoc">Initializes a new instance of the ByteBuffer class. The intial buffer size is 0 bytes. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00027">bytebuffer.cpp:27</a></div></div>
+<div class="ttc" id="class_senergy_1_1_byte_buffer_html_ad810aade775871238b82deb38629510e"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#ad810aade775871238b82deb38629510e">Senergy::ByteBuffer::WriteNop</a></div><div class="ttdeci">void WriteNop()</div><div class="ttdoc">Writes a null byte (0) to the byte buffer. The buffer is automaticlly resized when the specified valu...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00183">bytebuffer.cpp:183</a></div></div>
 <div class="ttc" id="class_senergy_1_1_byte_buffer_html_ab938ed32f9f909145f93099f4620da69"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#ab938ed32f9f909145f93099f4620da69">Senergy::ByteBuffer::GetRemainingSize</a></div><div class="ttdeci">int GetRemainingSize()</div><div class="ttdoc">Gets the amount of bytes that can be read until the end of the buffer is reached. ...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00068">bytebuffer.cpp:68</a></div></div>
 <div class="ttc" id="class_senergy_1_1_byte_buffer_html_a86a02f0e4d2aece53b7867e9a8011e70"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a86a02f0e4d2aece53b7867e9a8011e70">Senergy::ByteBuffer::DecreasePosition</a></div><div class="ttdeci">bool DecreasePosition(int amount=1)</div><div class="ttdoc">Decreases the position by the specified amount of bytes. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00092">bytebuffer.cpp:92</a></div></div>
-<div class="ttc" id="class_senergy_1_1_byte_buffer_html_ab15f04d43dd82cebf6dc25254d210e4e"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#ab15f04d43dd82cebf6dc25254d210e4e">Senergy::ByteBuffer::ReadInt</a></div><div class="ttdeci">int ReadInt()</div><div class="ttdoc">Reads an integer from the buffer. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00203">bytebuffer.cpp:203</a></div></div>
-<div class="ttc" id="class_senergy_1_1_byte_buffer_html_ae4e73e6e193bec7b9f7df0919d1641d9"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#ae4e73e6e193bec7b9f7df0919d1641d9">Senergy::ByteBuffer::Read</a></div><div class="ttdeci">bool Read(char *buffer, int size)</div><div class="ttdoc">Reads the specified amount of bytes from the buffer and copies it into the specified buffer...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00183">bytebuffer.cpp:183</a></div></div>
-<div class="ttc" id="class_senergy_1_1_byte_buffer_html_ab1f14bdb0b09b2144d1775fa2dff95a6"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#ab1f14bdb0b09b2144d1775fa2dff95a6">Senergy::ByteBuffer::ReadString</a></div><div class="ttdeci">std::string ReadString(unsigned int max_length=0)</div><div class="ttdoc">Attempts to read a string for the buffer until a string termination character, or the end of the buff...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00233">bytebuffer.cpp:233</a></div></div>
+<div class="ttc" id="class_senergy_1_1_byte_buffer_html"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html">Senergy::ByteBuffer</a></div><div class="ttdoc">A dynamiclly sized buffer for binary data. Resizes the underlying buffer when new data is written...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8h_source.html#l00040">bytebuffer.h:40</a></div></div>
+<div class="ttc" id="class_senergy_1_1_print_html_a39d34bc30221b803f96ec25d6cf7e86a"><div class="ttname"><a href="class_senergy_1_1_print.html#a39d34bc30221b803f96ec25d6cf7e86a">Senergy::Print::NewLine</a></div><div class="ttdeci">static void NewLine()</div><div class="ttdoc">Prints a new-line character to the standard output ( ), and thus causing all content that is coming n...</div><div class="ttdef"><b>Definition:</b> <a href="print_8cpp_source.html#l00054">print.cpp:54</a></div></div>
+<div class="ttc" id="class_senergy_1_1_byte_buffer_html_ab15f04d43dd82cebf6dc25254d210e4e"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#ab15f04d43dd82cebf6dc25254d210e4e">Senergy::ByteBuffer::ReadInt</a></div><div class="ttdeci">int ReadInt()</div><div class="ttdoc">Reads an integer from the buffer. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00208">bytebuffer.cpp:208</a></div></div>
+<div class="ttc" id="class_senergy_1_1_byte_buffer_html_ae4e73e6e193bec7b9f7df0919d1641d9"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#ae4e73e6e193bec7b9f7df0919d1641d9">Senergy::ByteBuffer::Read</a></div><div class="ttdeci">bool Read(char *buffer, int size)</div><div class="ttdoc">Reads the specified amount of bytes from the buffer and copies it into the specified buffer...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00188">bytebuffer.cpp:188</a></div></div>
+<div class="ttc" id="class_senergy_1_1_byte_buffer_html_a2747633838b3fae217b90700ff737840"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a2747633838b3fae217b90700ff737840">Senergy::ByteBuffer::HasReachedEnd</a></div><div class="ttdeci">bool HasReachedEnd()</div><div class="ttdoc">Checks if the buffer&#39;s position is currently at the end of the buffer. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00343">bytebuffer.cpp:343</a></div></div>
+<div class="ttc" id="class_senergy_1_1_byte_buffer_html_ab1f14bdb0b09b2144d1775fa2dff95a6"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#ab1f14bdb0b09b2144d1775fa2dff95a6">Senergy::ByteBuffer::ReadString</a></div><div class="ttdeci">std::string ReadString(unsigned int max_length=0)</div><div class="ttdoc">Attempts to read a string for the buffer until a string termination character, or the end of the buff...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00238">bytebuffer.cpp:238</a></div></div>
 <div class="ttc" id="class_senergy_1_1_byte_buffer_html_a286e096451b62a14a8d645e1c9da62af"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a286e096451b62a14a8d645e1c9da62af">Senergy::ByteBuffer::GetPosition</a></div><div class="ttdeci">int GetPosition()</div><div class="ttdoc">Gets the current position within the byte buffer. The position is the offset within the buffer that w...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00063">bytebuffer.cpp:63</a></div></div>
 <div class="ttc" id="class_senergy_1_1_byte_buffer_html_ad141d494b81ff561ede715c4f7ceb840"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#ad141d494b81ff561ede715c4f7ceb840">Senergy::ByteBuffer::IsEmpty</a></div><div class="ttdeci">bool IsEmpty()</div><div class="ttdoc">Checks if the buffer is empty and returns true when the buffer is empty and false when the buffer is ...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00053">bytebuffer.cpp:53</a></div></div>
 <div class="ttc" id="class_senergy_1_1_byte_buffer_html_a25b96a3aed3e617362dbaee66915c33a"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a25b96a3aed3e617362dbaee66915c33a">Senergy::ByteBuffer::Reserve</a></div><div class="ttdeci">void Reserve(unsigned int size)</div><div class="ttdoc">Assures that the buffer is of the specified size and enlarges the buffer when the current size of the...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00097">bytebuffer.cpp:97</a></div></div>
-<div class="ttc" id="class_senergy_1_1_byte_buffer_html_a5c3f960422533abc898061be11b6f613"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a5c3f960422533abc898061be11b6f613">Senergy::ByteBuffer::ReadAll</a></div><div class="ttdeci">std::string ReadAll()</div><div class="ttdoc">Reads the contents of the buffer from start to end and returns the contents as a string. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00249">bytebuffer.cpp:249</a></div></div>
-<div class="ttc" id="class_senergy_1_1_byte_buffer_html_a7abe5475b2a9adcad384d3125640aba2"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a7abe5475b2a9adcad384d3125640aba2">Senergy::ByteBuffer::ReadUnsignedInt</a></div><div class="ttdeci">unsigned int ReadUnsignedInt()</div><div class="ttdoc">Reads an unsigned integer from the buffer. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00208">bytebuffer.cpp:208</a></div></div>
-<div class="ttc" id="class_senergy_1_1_byte_buffer_html_a475f2133734cd74c4bce78bdf09950f3"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a475f2133734cd74c4bce78bdf09950f3">Senergy::ByteBuffer::DumpHexadecimal</a></div><div class="ttdeci">void DumpHexadecimal()</div><div class="ttdoc">Dump everything from the current position to the standard output, where each byte in the buffer is du...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00270">bytebuffer.cpp:270</a></div></div>
+<div class="ttc" id="class_senergy_1_1_byte_buffer_html_a5c3f960422533abc898061be11b6f613"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a5c3f960422533abc898061be11b6f613">Senergy::ByteBuffer::ReadAll</a></div><div class="ttdeci">std::string ReadAll()</div><div class="ttdoc">Reads the contents of the buffer from start to end and returns the contents as a string. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00254">bytebuffer.cpp:254</a></div></div>
+<div class="ttc" id="class_senergy_1_1_byte_buffer_html_a7abe5475b2a9adcad384d3125640aba2"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a7abe5475b2a9adcad384d3125640aba2">Senergy::ByteBuffer::ReadUnsignedInt</a></div><div class="ttdeci">unsigned int ReadUnsignedInt()</div><div class="ttdoc">Reads an unsigned integer from the buffer. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00213">bytebuffer.cpp:213</a></div></div>
+<div class="ttc" id="class_senergy_1_1_byte_buffer_html_a475f2133734cd74c4bce78bdf09950f3"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a475f2133734cd74c4bce78bdf09950f3">Senergy::ByteBuffer::DumpHexadecimal</a></div><div class="ttdeci">void DumpHexadecimal()</div><div class="ttdoc">Dump everything from the current position to the standard output, where each byte in the buffer is du...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00275">bytebuffer.cpp:275</a></div></div>
 <div class="ttc" id="class_senergy_1_1_byte_buffer_html_a9a561b3dd8778ee68e75e5a62a38fa60"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a9a561b3dd8778ee68e75e5a62a38fa60">Senergy::ByteBuffer::Write</a></div><div class="ttdeci">void Write(char *data, unsigned int size)</div><div class="ttdoc">Writes the specified data of the specified size to the buffer. The buffer is automaticlly resized whe...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00116">bytebuffer.cpp:116</a></div></div>
 <div class="ttc" id="bytebuffer_8h_html"><div class="ttname"><a href="bytebuffer_8h.html">bytebuffer.h</a></div></div>
-<div class="ttc" id="class_senergy_1_1_byte_buffer_html_a806db1b33ff86b572a0804879d181dc8"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a806db1b33ff86b572a0804879d181dc8">Senergy::ByteBuffer::ReadChar</a></div><div class="ttdeci">char ReadChar()</div><div class="ttdoc">Reads a char from the buffer. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00213">bytebuffer.cpp:213</a></div></div>
+<div class="ttc" id="class_senergy_1_1_byte_buffer_html_a806db1b33ff86b572a0804879d181dc8"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html#a806db1b33ff86b572a0804879d181dc8">Senergy::ByteBuffer::ReadChar</a></div><div class="ttdeci">char ReadChar()</div><div class="ttdoc">Reads a char from the buffer. </div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8cpp_source.html#l00218">bytebuffer.cpp:218</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="bytebuffer_8cpp.html">bytebuffer.cpp</a></li>
-    <li class="footer">Generated on Tue Feb 11 2014 21:56:42 for Senergy by
+    <li class="footer">Generated on Tue Feb 25 2014 22:51:26 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -10,6 +10,8 @@ var searchData=
   ['ipseckey',['IPSECKEY',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a2b356a14948fa1c2a2ef3c14355c83ea',1,'Senergy::Dns']]],
   ['ipv4addressfrombinary',['IPV4AddressFromBinary',['../class_senergy_1_1_socket.html#a824cf26338b12e1591b78d23abf6032a',1,'Senergy::Socket']]],
   ['ipv4addresstobinary',['IPV4AddressToBinary',['../class_senergy_1_1_socket.html#a74c62f0fb79be1192eed5f2fd092dd50',1,'Senergy::Socket']]],
+  ['ipv4record',['IPV4Record',['../class_senergy_1_1_dns_1_1_i_p_v4_record.html',1,'Senergy::Dns']]],
+  ['ipv4record',['IPV4Record',['../class_senergy_1_1_dns_1_1_i_p_v4_record.html#a9239e0aa9254080bb92ab1ba8352bd56',1,'Senergy::Dns::IPV4Record']]],
   ['isconnected',['IsConnected',['../class_senergy_1_1_socket.html#a6d22575e6fc0d6ab4a61097d60b6e773',1,'Senergy::Socket']]],
   ['isdn',['ISDN',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a6b76a4f6461388db72ddf5cc41979c4b',1,'Senergy::Dns']]],
   ['isempty',['IsEmpty',['../class_senergy_1_1_byte_buffer.html#ad141d494b81ff561ede715c4f7ceb840',1,'Senergy::ByteBuffer']]],

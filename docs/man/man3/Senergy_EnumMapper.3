@@ -1,0 +1,82 @@
+.TH "Senergy::EnumMapper< T >" 3 "Tue Feb 25 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::EnumMapper< T > \- 
+.PP
+Simple wrapper for a hash map that maps enum values to their textual value (name)\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <enum_mapper\&.h>\fP
+.PP
+Inherits \fBSenergy::FastMap< T, std::string >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBMap\fP (T enum_value, const std::string &enum_value_name)"
+.br
+.RI "\fIMaps the specified enumuration value to the specified textual representation\&. \fP"
+.ti -1c
+.RI "std::string \fBGetMapping\fP (T enum_value)"
+.br
+.RI "\fIFinds the textual representation for the specified enumuration value\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T>class Senergy::EnumMapper< T >"
+Simple wrapper for a hash map that maps enum values to their textual value (name)\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij 
+.RE
+.PP
+
+.PP
+Definition at line 37 of file enum_mapper\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T> std::string \fBSenergy::EnumMapper\fP< T >::GetMapping (Tenum_value)\fC [inline]\fP"
+
+.PP
+Finds the textual representation for the specified enumuration value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIenum_value\fP A value from the enumuration to find the textual representation for\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The textual representation of the specified enumuration value\&. An empty string is returned when no mapping exists for the specified enumuration value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 59 of file enum_mapper\&.h\&.
+.SS "template<typename T> void \fBSenergy::EnumMapper\fP< T >::Map (Tenum_value, const std::string &enum_value_name)\fC [inline]\fP"
+
+.PP
+Maps the specified enumuration value to the specified textual representation\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIenum_value\fP A value from the enumuration to map to the specified textual representation\&. 
+.br
+\fIenum_value_name\fP The textual representation of the specified enum value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 46 of file enum_mapper\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

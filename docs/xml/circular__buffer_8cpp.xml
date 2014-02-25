@@ -49,6 +49,6 @@
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Implementation<sp/>is<sp/>in<sp/>header<sp/>because<sp/>of<sp/>templates</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="circular__buffer_8h" kindref="compound">senergy/circular_buffer.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/photonios/Documents/Senergy/src/circular_buffer.cpp"/>
+    <location file="/home/photonios/Documents/senergy/src/circular_buffer.cpp"/>
   </compounddef>
 </doxygen>

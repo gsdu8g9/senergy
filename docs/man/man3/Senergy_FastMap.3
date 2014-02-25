@@ -1,4 +1,4 @@
-.TH "Senergy::FastMap< TKey, TValue >" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::FastMap< TKey, TValue >" 3 "Tue Feb 25 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -20,6 +20,10 @@ Inherits vector< FastMapItem< TKey, TValue > >\&.
 .RI "\fBFastMapItem\fP< TKey, TValue > & \fBat\fP (int index)"
 .br
 .RI "\fIProvides access to the base class's at method\&. \fP"
+.ti -1c
+.RI "void \fBClear\fP ()"
+.br
+.RI "\fIClears the map of any existing records\&. \fP"
 .ti -1c
 .RI "TValue & \fBoperator[]\fP (TKey key)"
 .br
@@ -43,7 +47,7 @@ Swen Kooij (Photonios)
 Definition at line 59 of file fastmap\&.h\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "template<class TKey , class TValue > \fBFastMapItem\fP<TKey, TValue>& \fBSenergy::FastMap\fP< TKey, TValue >::at (intindex)\fC [inline]\fP"
+.SS "template<class TKey, class TValue> \fBFastMapItem\fP<TKey, TValue>& \fBSenergy::FastMap\fP< TKey, TValue >::at (intindex)\fC [inline]\fP"
 
 .PP
 Provides access to the base class's at method\&. 
@@ -61,7 +65,13 @@ The fast map item at the specified index\&.
 
 .PP
 Definition at line 73 of file fastmap\&.h\&.
-.SS "template<class TKey , class TValue > TValue& \fBSenergy::FastMap\fP< TKey, TValue >::operator[] (TKeykey)\fC [inline]\fP"
+.SS "template<class TKey, class TValue> void \fBSenergy::FastMap\fP< TKey, TValue >::Clear ()\fC [inline]\fP"
+
+.PP
+Clears the map of any existing records\&. 
+.PP
+Definition at line 81 of file fastmap\&.h\&.
+.SS "template<class TKey, class TValue> TValue& \fBSenergy::FastMap\fP< TKey, TValue >::operator[] (TKeykey)\fC [inline]\fP"
 
 .PP
 Allows access to the pairs stored inside this map, one specifies the key of the item to retrieve, and the value is returned as a reference\&. If the specified key does not exists yet, it will be created, and the specified value will be set\&. If the specified key is already set, then the value will be set\&.
@@ -78,7 +88,7 @@ The value of that is associated with the specified pair\&.
 .PP
 
 .PP
-Definition at line 89 of file fastmap\&.h\&.
+Definition at line 97 of file fastmap\&.h\&.
 
 .SH "Author"
 .PP 

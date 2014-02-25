@@ -1,4 +1,4 @@
-.TH "Senergy::Dns::ResourceRecordInterface" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::Dns::ResourceRecordInterface" 3 "Tue Feb 25 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -11,11 +11,13 @@ Defines an interface using pure virtuals for classes that wish to implement a sp
 .PP
 .PP
 \fC#include <resource_record_interface\&.h>\fP
+.PP
+Inherited by \fBSenergy::Dns::IPV4Record\fP, \fBSenergy::Dns::NameServerRecord\fP, and \fBSenergy::Dns::UnknownRecord\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBResourceRecordInterface\fP (\fBResourceRecordBase\fP &base)"
+.RI "\fBResourceRecordInterface\fP (\fBResourceRecordBasePtr\fP base)"
 .br
 .RI "\fIInitializes a new instance of of the ResourceRecordInterfacePtr class with a reference to an instance of the \fBResourceRecordBase\fP class\&. \fP"
 .ti -1c
@@ -27,7 +29,7 @@ Defines an interface using pure virtuals for classes that wish to implement a sp
 .br
 .RI "\fIDeserializes the record from the specified buffer\&. This does not handle deserialization of the first (base) part of the resource record\&. Call DeserializeBase for that\&. \fP"
 .ti -1c
-.RI "virtual ResourceRecordInterfacePtr \fBCreate\fP (\fBResourceRecordBase\fP &base)=0"
+.RI "virtual \fBResourceRecordInterfacePtr\fP \fBCreate\fP (\fBResourceRecordBasePtr\fP base)=0"
 .br
 .RI "\fICreates a new instance of this class, and returns it as a shared pointer to an instance of the \fBResourceRecordInterface\fP class\&. \fP"
 .ti -1c
@@ -39,23 +41,52 @@ Defines an interface using pure virtuals for classes that wish to implement a sp
 .br
 .RI "\fIGets the class of this record\&. This will almost always be the same and does not have to be implemented by the derived class\&. \fP"
 .ti -1c
-.RI "\fBResourceRecordBase\fP & \fBGetBase\fP () const "
+.RI "\fBResourceRecordBasePtr\fP \fBGetBase\fP () const "
 .br
 .RI "\fIReturns the underlying base resource record for this record\&. \fP"
+.ti -1c
+.RI "virtual void \fBDump\fP ()"
+.br
+.RI "\fIDumps all fields to the standard output, with their values\&. In the following format: \fP"
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<class T > static \fBResourceRecordInterfacePtr\fP \fBCreateCast\fP (\fBResourceRecordBasePtr\fP base)"
+.br
+.RI "\fICreates a new instance of the specified type with the specified resource record base instance, and casts it to a shared ppinter to a \fBResourceRecordInterface\fP class (polymorhpism)\&. The specified type must inherit from \fBResourceRecordInterface\fP\&. \fP"
 .in -1c
 .SS "Protected Types"
 
 .in +1c
 .ti -1c
+.RI "typedef std::shared_ptr
+.br
+< \fBResourceRecordInterface\fP > \fBResourceRecordInterfacePtr\fP"
+.br
+.ti -1c
 .RI "typedef \fBResourceRecordBase\fP \fBBase\fP"
 .br
 .RI "\fIMore logical way to allow access to the base class\&. \fP"
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBSetResourceSize\fP (unsigned short resource_size)"
+.br
+.RI "\fISets the resource size in the base record\&. \fP"
+.ti -1c
+.RI "bool \fBSetResourceSize\fP (unsigned int resource_size)"
+.br
+.RI "\fISets the resource size in the base record\&. \fP"
 .in -1c
 .SS "Protected Attributes"
 
 .in +1c
 .ti -1c
-.RI "\fBResourceRecordBase\fP & \fBm_base\fP"
+.RI "\fBResourceRecordBasePtr\fP \fBm_base\fP"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -71,7 +102,7 @@ Swen Kooij (Photonios)\&.
 .PP
 
 .PP
-Definition at line 42 of file resource_record_interface\&.h\&.
+Definition at line 43 of file resource_record_interface\&.h\&.
 .SH "Member Typedef Documentation"
 .PP 
 .SS "typedef \fBResourceRecordBase\fP \fBSenergy::Dns::ResourceRecordInterface::Base\fP\fC [protected]\fP"
@@ -79,10 +110,14 @@ Definition at line 42 of file resource_record_interface\&.h\&.
 .PP
 More logical way to allow access to the base class\&. 
 .PP
-Definition at line 125 of file resource_record_interface\&.h\&.
+Definition at line 166 of file resource_record_interface\&.h\&.
+.SS "typedef std::shared_ptr<\fBResourceRecordInterface\fP> \fBSenergy::Dns::ResourceRecordInterface::ResourceRecordInterfacePtr\fP\fC [protected]\fP"
+
+.PP
+Definition at line 48 of file resource_record_interface\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "Senergy::Dns::ResourceRecordInterface::ResourceRecordInterface (\fBResourceRecordBase\fP &base)"
+.SS "Senergy::Dns::ResourceRecordInterface::ResourceRecordInterface (\fBResourceRecordBasePtr\fPbase)"
 
 .PP
 Initializes a new instance of of the ResourceRecordInterfacePtr class with a reference to an instance of the \fBResourceRecordBase\fP class\&. 
@@ -97,7 +132,7 @@ The first part of a resource record is always the same\&. This is why we need an
 Definition at line 29 of file dns_resource_record_interface\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "virtual ResourceRecordInterfacePtr Senergy::Dns::ResourceRecordInterface::Create (\fBResourceRecordBase\fP &base)\fC [pure virtual]\fP"
+.SS "virtual \fBResourceRecordInterfacePtr\fP Senergy::Dns::ResourceRecordInterface::Create (\fBResourceRecordBasePtr\fPbase)\fC [pure virtual]\fP"
 
 .PP
 Creates a new instance of this class, and returns it as a shared pointer to an instance of the \fBResourceRecordInterface\fP class\&. The derived class should create an instance of itself and return the polymorphic form (as it's base)\&.
@@ -113,6 +148,21 @@ A shared pointer to an instance of the \fBResourceRecordInterface\fP class, whic
 .RE
 .PP
 
+.PP
+Implemented in \fBSenergy::Dns::IPV4Record\fP, \fBSenergy::Dns::NameServerRecord\fP, and \fBSenergy::Dns::UnknownRecord\fP\&.
+.SS "template<class T > static \fBResourceRecordInterfacePtr\fP Senergy::Dns::ResourceRecordInterface::CreateCast (\fBResourceRecordBasePtr\fPbase)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Creates a new instance of the specified type with the specified resource record base instance, and casts it to a shared ppinter to a \fBResourceRecordInterface\fP class (polymorhpism)\&. The specified type must inherit from \fBResourceRecordInterface\fP\&. T The type to create and cast to \fBResourceRecordInterface\fP shared pointer\&.
+.PP
+\fBReturns:\fP
+.RS 4
+An instance of the specified type but, casted to an instance of the \fBResourceRecordInterface\fP class (shared pointer)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 140 of file resource_record_interface\&.h\&.
 .SS "virtual bool Senergy::Dns::ResourceRecordInterface::Deserialize (\fBByteBuffer\fP &buffer)\fC [pure virtual]\fP"
 
 .PP
@@ -124,7 +174,17 @@ Deserializes the record from the specified buffer\&. This does not handle deseri
 .RE
 .PP
 
-.SS "\fBResourceRecordBase\fP & Senergy::Dns::ResourceRecordInterface::GetBase () const"
+.PP
+Implemented in \fBSenergy::Dns::IPV4Record\fP, \fBSenergy::Dns::NameServerRecord\fP, and \fBSenergy::Dns::UnknownRecord\fP\&.
+.SS "void Senergy::Dns::ResourceRecordInterface::Dump ()\fC [virtual]\fP"
+
+.PP
+Dumps all fields to the standard output, with their values\&. In the following format: 
+.PP
+Reimplemented in \fBSenergy::Dns::IPV4Record\fP, and \fBSenergy::Dns::NameServerRecord\fP\&.
+.PP
+Definition at line 54 of file dns_resource_record_interface\&.cpp\&.
+.SS "\fBResourceRecordBasePtr\fP Senergy::Dns::ResourceRecordInterface::GetBase () const"
 
 .PP
 Returns the underlying base resource record for this record\&. 
@@ -161,6 +221,8 @@ A value from the ResourceRecordType enumuration which denotes the type of this r
 .RE
 .PP
 
+.PP
+Implemented in \fBSenergy::Dns::IPV4Record\fP, \fBSenergy::Dns::NameServerRecord\fP, and \fBSenergy::Dns::UnknownRecord\fP\&.
 .SS "virtual bool Senergy::Dns::ResourceRecordInterface::Serialize (\fBByteBuffer\fP &buffer)\fC [pure virtual]\fP"
 
 .PP
@@ -177,12 +239,40 @@ A boolean indicating whether the serialization was successful\&.
 .RE
 .PP
 
-.SH "Member Data Documentation"
-.PP 
-.SS "\fBResourceRecordBase\fP& Senergy::Dns::ResourceRecordInterface::m_base\fC [protected]\fP"
+.PP
+Implemented in \fBSenergy::Dns::IPV4Record\fP, \fBSenergy::Dns::NameServerRecord\fP, and \fBSenergy::Dns::UnknownRecord\fP\&.
+.SS "void Senergy::Dns::ResourceRecordInterface::SetResourceSize (unsigned shortresource_size)\fC [protected]\fP"
 
 .PP
-Definition at line 128 of file resource_record_interface\&.h\&.
+Sets the resource size in the base record\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIresource_size\fP The size of the resource 
+.RE
+.PP
+
+.PP
+Definition at line 44 of file dns_resource_record_interface\&.cpp\&.
+.SS "bool Senergy::Dns::ResourceRecordInterface::SetResourceSize (unsigned intresource_size)\fC [protected]\fP"
+
+.PP
+Sets the resource size in the base record\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIresource_size\fP The size of the resource 
+.RE
+.PP
+
+.PP
+Definition at line 49 of file dns_resource_record_interface\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBResourceRecordBasePtr\fP Senergy::Dns::ResourceRecordInterface::m_base\fC [protected]\fP"
+
+.PP
+Definition at line 170 of file resource_record_interface\&.h\&.
 
 .SH "Author"
 .PP 

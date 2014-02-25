@@ -31,7 +31,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="senergy-dns.ico"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Senergy
    &#160;<span id="projectnumber">1.0</span>
@@ -150,6 +149,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a1e72009ea8004f0e8cc1ce0ea07f4ad1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_senergy_1_1_dns.html#a6983ff2422cfa510ca61831ae5cf1ffc">MessageQuestionPtrVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_message.html#a1e72009ea8004f0e8cc1ce0ea07f4ad1">Questions</a></td></tr>
 <tr class="memdesc:a1e72009ea8004f0e8cc1ce0ea07f4ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds all the 'question messages' that are part of this DNS message.  <a href="#a1e72009ea8004f0e8cc1ce0ea07f4ad1">More...</a><br/></td></tr>
 <tr class="separator:a1e72009ea8004f0e8cc1ce0ea07f4ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c5d3af474d43d46dd1a6992567fc38b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_collection.html">ResourceRecordCollection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_dns_1_1_message.html#a9c5d3af474d43d46dd1a6992567fc38b">ResourceRecords</a></td></tr>
+<tr class="memdesc:a9c5d3af474d43d46dd1a6992567fc38b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds all the resource records that are part of this DNS message. Resource records can appear in all three last sections in a DNS message/packet.  <a href="#a9c5d3af474d43d46dd1a6992567fc38b">More...</a><br/></td></tr>
+<tr class="separator:a9c5d3af474d43d46dd1a6992567fc38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a DNS packet as described in section 4 of RFC-1035. A DNS packet is the standard message format that is transmitted and received by DNS clients and hosts. </p>
@@ -205,7 +207,7 @@ If the operation suceseeded, the buffer's position will have at least advanced 1
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A boolean indicating whether deserialization was succesfull. True is returned when it was a success and false is returned when it failed. </dd></dl>
 
-<p>Definition at line <a class="el" href="dns__message_8cpp_source.html#l00033">33</a> of file <a class="el" href="dns__message_8cpp_source.html">dns_message.cpp</a>.</p>
+<p>Definition at line <a class="el" href="dns__message_8cpp_source.html#l00034">34</a> of file <a class="el" href="dns__message_8cpp_source.html">dns_message.cpp</a>.</p>
 
 </div>
 </div>
@@ -224,7 +226,7 @@ If the operation suceseeded, the buffer's position will have at least advanced 1
 
 <p>Dumps all information currently in this message to the standard output. </p>
 
-<p>Definition at line <a class="el" href="dns__message_8cpp_source.html#l00084">84</a> of file <a class="el" href="dns__message_8cpp_source.html">dns_message.cpp</a>.</p>
+<p>Definition at line <a class="el" href="dns__message_8cpp_source.html#l00092">92</a> of file <a class="el" href="dns__message_8cpp_source.html">dns_message.cpp</a>.</p>
 
 </div>
 </div>
@@ -244,7 +246,7 @@ If the operation suceseeded, the buffer's position will have at least advanced 1
 <p>Gets the amount of questions this DNS message currently holds. </p>
 <dl class="section return"><dt>Returns</dt><dd>The amount of questions this DNS message currently holds. </dd></dl>
 
-<p>Definition at line <a class="el" href="dns__message_8cpp_source.html#l00079">79</a> of file <a class="el" href="dns__message_8cpp_source.html">dns_message.cpp</a>.</p>
+<p>Definition at line <a class="el" href="dns__message_8cpp_source.html#l00087">87</a> of file <a class="el" href="dns__message_8cpp_source.html">dns_message.cpp</a>.</p>
 
 </div>
 </div>
@@ -263,7 +265,7 @@ If the operation suceseeded, the buffer's position will have at least advanced 1
 
 <p>Resets this message so that all vectors/collections will be cleared, and default values restored. </p>
 
-<p>Definition at line <a class="el" href="dns__message_8cpp_source.html#l00074">74</a> of file <a class="el" href="dns__message_8cpp_source.html">dns_message.cpp</a>.</p>
+<p>Definition at line <a class="el" href="dns__message_8cpp_source.html#l00082">82</a> of file <a class="el" href="dns__message_8cpp_source.html">dns_message.cpp</a>.</p>
 
 </div>
 </div>
@@ -290,7 +292,7 @@ If the operation suceseeded, the buffer's position will have at least advanced 1
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A boolean indicating whether serialization was succesfull. True is returned when it was a success and false is returned when it failed. </dd></dl>
 
-<p>Definition at line <a class="el" href="dns__message_8cpp_source.html#l00052">52</a> of file <a class="el" href="dns__message_8cpp_source.html">dns_message.cpp</a>.</p>
+<p>Definition at line <a class="el" href="dns__message_8cpp_source.html#l00057">57</a> of file <a class="el" href="dns__message_8cpp_source.html">dns_message.cpp</a>.</p>
 
 </div>
 </div>
@@ -311,6 +313,22 @@ If the operation suceseeded, the buffer's position will have at least advanced 1
 
 </div>
 </div>
+<a class="anchor" id="a9c5d3af474d43d46dd1a6992567fc38b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_senergy_1_1_dns_1_1_resource_record_collection.html">ResourceRecordCollection</a> Senergy::Dns::Message::ResourceRecords</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Holds all the resource records that are part of this DNS message. Resource records can appear in all three last sections in a DNS message/packet. </p>
+
+<p>Definition at line <a class="el" href="message_8h_source.html#l00116">116</a> of file <a class="el" href="message_8h_source.html">message.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/senergy/dns/<a class="el" href="message_8h_source.html">message.h</a></li>
 <li>src/<a class="el" href="dns__message_8cpp_source.html">dns_message.cpp</a></li>
@@ -321,7 +339,7 @@ If the operation suceseeded, the buffer's position will have at least advanced 1
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_senergy.html">Senergy</a></li><li class="navelem"><a class="el" href="namespace_senergy_1_1_dns.html">Dns</a></li><li class="navelem"><a class="el" href="class_senergy_1_1_dns_1_1_message.html">Message</a></li>
-    <li class="footer">Generated on Tue Feb 11 2014 21:56:44 for Senergy by
+    <li class="footer">Generated on Tue Feb 25 2014 22:51:27 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

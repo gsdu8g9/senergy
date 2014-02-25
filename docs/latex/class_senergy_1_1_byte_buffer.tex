@@ -61,6 +61,8 @@ void \hyperlink{class_senergy_1_1_byte_buffer_ae0e9d53b9afa8b098eed7b517a60b938}
 \begin{DoxyCompactList}\small\item\em Writes the specified value to the buffer. The buffer is automaticlly resized when the specified value does not fit into the buffer. \end{DoxyCompactList}\item 
 void \hyperlink{class_senergy_1_1_byte_buffer_a9286d05c71ce66859098778f11be9c51}{Write} (unsigned short value)
 \begin{DoxyCompactList}\small\item\em Writes the specified value to the buffer. The buffer is automaticlly resized when the specified value does not fit into the buffer. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_byte_buffer_ad810aade775871238b82deb38629510e}{Write\-Nop} ()
+\begin{DoxyCompactList}\small\item\em Writes a null byte (0) to the byte buffer. The buffer is automaticlly resized when the specified value does not fit into the buffer. \end{DoxyCompactList}\item 
 bool \hyperlink{class_senergy_1_1_byte_buffer_ae4e73e6e193bec7b9f7df0919d1641d9}{Read} (char $\ast$buffer, int size)
 \begin{DoxyCompactList}\small\item\em Reads the specified amount of bytes from the buffer and copies it into the specified buffer. \end{DoxyCompactList}\item 
 bool \hyperlink{class_senergy_1_1_byte_buffer_ace3d04d38706d534a16e596ee291630b}{Read} (char $\ast$buffer, unsigned int size)
@@ -86,7 +88,13 @@ std\-::string \hyperlink{class_senergy_1_1_byte_buffer_ab1f14bdb0b09b2144d1775fa
 std\-::string \hyperlink{class_senergy_1_1_byte_buffer_a5c3f960422533abc898061be11b6f613}{Read\-All} ()
 \begin{DoxyCompactList}\small\item\em Reads the contents of the buffer from start to end and returns the contents as a string. \end{DoxyCompactList}\item 
 void \hyperlink{class_senergy_1_1_byte_buffer_a475f2133734cd74c4bce78bdf09950f3}{Dump\-Hexadecimal} ()
-\begin{DoxyCompactList}\small\item\em Dump everything from the current position to the standard output, where each byte in the buffer is dumped in it's hexadecimal representation. Each byte will be separated by a space and after 35 bytes, a new line is created. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Dump everything from the current position to the standard output, where each byte in the buffer is dumped in it's hexadecimal representation. Each byte will be separated by a space and after 35 bytes, a new line is created. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_byte_buffer_a4276f5ed69bd1d2fe9c26e05193715f2}{Dump\-Hexadecimal} (int start, int amount)
+\begin{DoxyCompactList}\small\item\em Dump everything from the current position to the standard output, where each byte in the buffer is dumped in it's hexadecimal representation. Each byte will be separated by a space and after 35 bytes, a new line is created. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_byte_buffer_a2db9cbd7f2eadd1ecb561c72feaca7ad}{Copy\-To} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer, int amount)
+\begin{DoxyCompactList}\small\item\em Copies the specified amount of bytes from the current position into the specified buffer. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_byte_buffer_a2747633838b3fae217b90700ff737840}{Has\-Reached\-End} ()
+\begin{DoxyCompactList}\small\item\em Checks if the buffer's position is currently at the end of the buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -155,6 +163,32 @@ Definition at line 43 of file bytebuffer.\-cpp.
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_byte_buffer_a2db9cbd7f2eadd1ecb561c72feaca7ad}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Copy\-To@{Copy\-To}}
+\index{Copy\-To@{Copy\-To}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Copy\-To}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Byte\-Buffer\-::\-Copy\-To (
+\begin{DoxyParamCaption}
+\item[{{\bf Byte\-Buffer} \&}]{buffer, }
+\item[{int}]{amount}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a2db9cbd7f2eadd1ecb561c72feaca7ad}
+
+
+Copies the specified amount of bytes from the current position into the specified buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to copy the bytes to. \\
+\hline
+{\em amount} & The amount of bytes to copy to the specified buffer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether the copy operation was a success, false is returned when the copy failed and true is returned when the copy was a success. Failure is usually caused by specifiying an amount that is more then the remaining size. 
+\end{DoxyReturn}
+
+
+Definition at line 332 of file bytebuffer.\-cpp.
+
 \hypertarget{class_senergy_1_1_byte_buffer_a86a02f0e4d2aece53b7867e9a8011e70}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Decrease\-Position@{Decrease\-Position}}
 \index{Decrease\-Position@{Decrease\-Position}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
 \subsubsection[{Decrease\-Position}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Byte\-Buffer\-::\-Decrease\-Position (
@@ -191,7 +225,30 @@ Dump everything from the current position to the standard output, where each byt
 
 
 
-Definition at line 270 of file bytebuffer.\-cpp.
+Definition at line 275 of file bytebuffer.\-cpp.
+
+\hypertarget{class_senergy_1_1_byte_buffer_a4276f5ed69bd1d2fe9c26e05193715f2}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Dump\-Hexadecimal@{Dump\-Hexadecimal}}
+\index{Dump\-Hexadecimal@{Dump\-Hexadecimal}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Dump\-Hexadecimal}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Byte\-Buffer\-::\-Dump\-Hexadecimal (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{amount}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a4276f5ed69bd1d2fe9c26e05193715f2}
+
+
+Dump everything from the current position to the standard output, where each byte in the buffer is dumped in it's hexadecimal representation. Each byte will be separated by a space and after 35 bytes, a new line is created. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & The offset/position at which we should start dumping \\
+\hline
+{\em amount} & The amount of bytes to display from the specified offset/position. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 301 of file bytebuffer.\-cpp.
 
 \hypertarget{class_senergy_1_1_byte_buffer_a286e096451b62a14a8d645e1c9da62af}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Get\-Position@{Get\-Position}}
 \index{Get\-Position@{Get\-Position}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
@@ -228,6 +285,24 @@ The amount of bytes that can be read until the end of the buffer is reached.
 
 
 Definition at line 68 of file bytebuffer.\-cpp.
+
+\hypertarget{class_senergy_1_1_byte_buffer_a2747633838b3fae217b90700ff737840}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Has\-Reached\-End@{Has\-Reached\-End}}
+\index{Has\-Reached\-End@{Has\-Reached\-End}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Has\-Reached\-End}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Byte\-Buffer\-::\-Has\-Reached\-End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_a2747633838b3fae217b90700ff737840}
+
+
+Checks if the buffer's position is currently at the end of the buffer. 
+
+\begin{DoxyReturn}{Returns}
+True when the end of the buffer was reached and false when it has not reached the end of the buffer. 
+\end{DoxyReturn}
+
+
+Definition at line 343 of file bytebuffer.\-cpp.
 
 \hypertarget{class_senergy_1_1_byte_buffer_ad2ed70d80d2a794d2ce35931819a66da}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Increase\-Position@{Increase\-Position}}
 \index{Increase\-Position@{Increase\-Position}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
@@ -294,7 +369,7 @@ A boolean indicating whether reading succeseeded. True is returned when reading 
 \end{DoxyReturn}
 
 
-Definition at line 183 of file bytebuffer.\-cpp.
+Definition at line 188 of file bytebuffer.\-cpp.
 
 \hypertarget{class_senergy_1_1_byte_buffer_ace3d04d38706d534a16e596ee291630b}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read@{Read}}
 \index{Read@{Read}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
@@ -320,7 +395,7 @@ A boolean indicating whether reading succeseeded. True is returned when reading 
 \end{DoxyReturn}
 
 
-Definition at line 198 of file bytebuffer.\-cpp.
+Definition at line 203 of file bytebuffer.\-cpp.
 
 \hypertarget{class_senergy_1_1_byte_buffer_a5c3f960422533abc898061be11b6f613}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-All@{Read\-All}}
 \index{Read\-All@{Read\-All}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
@@ -341,7 +416,7 @@ The contents of the buffer as a string.
 \end{DoxyReturn}
 
 
-Definition at line 249 of file bytebuffer.\-cpp.
+Definition at line 254 of file bytebuffer.\-cpp.
 
 \hypertarget{class_senergy_1_1_byte_buffer_a806db1b33ff86b572a0804879d181dc8}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-Char@{Read\-Char}}
 \index{Read\-Char@{Read\-Char}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
@@ -359,7 +434,7 @@ The char that was read from the buffer. -\/1 is returned when reading failed.
 \end{DoxyReturn}
 
 
-Definition at line 213 of file bytebuffer.\-cpp.
+Definition at line 218 of file bytebuffer.\-cpp.
 
 \hypertarget{class_senergy_1_1_byte_buffer_ab15f04d43dd82cebf6dc25254d210e4e}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-Int@{Read\-Int}}
 \index{Read\-Int@{Read\-Int}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
@@ -377,7 +452,7 @@ The integer that was read from the buffer. -\/1 is returned when reading failed.
 \end{DoxyReturn}
 
 
-Definition at line 203 of file bytebuffer.\-cpp.
+Definition at line 208 of file bytebuffer.\-cpp.
 
 \hypertarget{class_senergy_1_1_byte_buffer_a391deafd9b6e3c4b4c2b92fe78358ebf}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-Remaining@{Read\-Remaining}}
 \index{Read\-Remaining@{Read\-Remaining}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
@@ -439,7 +514,7 @@ The short that was read from the buffer. -\/1 is returned when reading failed.
 \end{DoxyReturn}
 
 
-Definition at line 223 of file bytebuffer.\-cpp.
+Definition at line 228 of file bytebuffer.\-cpp.
 
 \hypertarget{class_senergy_1_1_byte_buffer_ab1f14bdb0b09b2144d1775fa2dff95a6}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-String@{Read\-String}}
 \index{Read\-String@{Read\-String}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
@@ -462,7 +537,7 @@ The string that was read, if something went wrong, or the end of the buffer was 
 \end{DoxyReturn}
 
 
-Definition at line 233 of file bytebuffer.\-cpp.
+Definition at line 238 of file bytebuffer.\-cpp.
 
 \hypertarget{class_senergy_1_1_byte_buffer_ad9a7a05b0285fe070cde3983458de5f6}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-Unsigned\-Char@{Read\-Unsigned\-Char}}
 \index{Read\-Unsigned\-Char@{Read\-Unsigned\-Char}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
@@ -480,7 +555,7 @@ The unsigned char that was read from the buffer. 0 is returned when reading fail
 \end{DoxyReturn}
 
 
-Definition at line 218 of file bytebuffer.\-cpp.
+Definition at line 223 of file bytebuffer.\-cpp.
 
 \hypertarget{class_senergy_1_1_byte_buffer_a7abe5475b2a9adcad384d3125640aba2}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-Unsigned\-Int@{Read\-Unsigned\-Int}}
 \index{Read\-Unsigned\-Int@{Read\-Unsigned\-Int}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
@@ -498,7 +573,7 @@ The unsigned integer that was read from the buffer. 0 is returned when reading f
 \end{DoxyReturn}
 
 
-Definition at line 208 of file bytebuffer.\-cpp.
+Definition at line 213 of file bytebuffer.\-cpp.
 
 \hypertarget{class_senergy_1_1_byte_buffer_aa6b6bfdb398a75b92c79bcdfc1986821}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Read\-Unsigned\-Short@{Read\-Unsigned\-Short}}
 \index{Read\-Unsigned\-Short@{Read\-Unsigned\-Short}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
@@ -516,7 +591,7 @@ The unsigned short that was read from the buffer. 0 is returned when reading fai
 \end{DoxyReturn}
 
 
-Definition at line 228 of file bytebuffer.\-cpp.
+Definition at line 233 of file bytebuffer.\-cpp.
 
 \hypertarget{class_senergy_1_1_byte_buffer_a25b96a3aed3e617362dbaee66915c33a}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Reserve@{Reserve}}
 \index{Reserve@{Reserve}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
@@ -888,6 +963,24 @@ Increases the position by the size of the specified value.
 
 
 Definition at line 178 of file bytebuffer.\-cpp.
+
+\hypertarget{class_senergy_1_1_byte_buffer_ad810aade775871238b82deb38629510e}{\index{Senergy\-::\-Byte\-Buffer@{Senergy\-::\-Byte\-Buffer}!Write\-Nop@{Write\-Nop}}
+\index{Write\-Nop@{Write\-Nop}!Senergy::ByteBuffer@{Senergy\-::\-Byte\-Buffer}}
+\subsubsection[{Write\-Nop}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Byte\-Buffer\-::\-Write\-Nop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_byte_buffer_ad810aade775871238b82deb38629510e}
+
+
+Writes a null byte (0) to the byte buffer. The buffer is automaticlly resized when the specified value does not fit into the buffer. 
+
+\begin{DoxyNote}{Note}
+Increases the position by 1. 
+\end{DoxyNote}
+
+
+Definition at line 183 of file bytebuffer.\-cpp.
 
 
 

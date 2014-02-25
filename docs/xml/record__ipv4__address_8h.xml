@@ -1,0 +1,346 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="record__ipv4__address_8h" kind="file">
+    <compoundname>record_ipv4_address.h</compoundname>
+    <includes local="no">memory</includes>
+    <includes refid="bytebuffer_8h" local="no">senergy/bytebuffer.h</includes>
+    <includes refid="socket_8h" local="no">senergy/socket.h</includes>
+    <includes refid="resource__record__types_8h" local="no">senergy/dns/resource_record_types.h</includes>
+    <includes refid="resource__record__interface_8h" local="no">senergy/dns/resource_record_interface.h</includes>
+    <includes refid="resource__record__base_8h" local="no">senergy/dns/resource_record_base.h</includes>
+    <includedby refid="dns__record__ipv4__address_8cpp" local="no">src/dns_record_ipv4_address.cpp</includedby>
+    <includedby refid="resource__record__collection_8h" local="no">src/senergy/dns/resource_record_collection.h</includedby>
+    <incdepgraph>
+      <node id="702">
+        <label>netinet/in.h</label>
+      </node>
+      <node id="700">
+        <label>arpa/inet.h</label>
+      </node>
+      <node id="687">
+        <label>src/senergy/dns/record_ipv4_address.h</label>
+        <link refid="record_ipv4_address.h"/>
+        <childnode refid="688" relation="include">
+        </childnode>
+        <childnode refid="689" relation="include">
+        </childnode>
+        <childnode refid="695" relation="include">
+        </childnode>
+        <childnode refid="705" relation="include">
+        </childnode>
+        <childnode refid="709" relation="include">
+        </childnode>
+        <childnode refid="711" relation="include">
+        </childnode>
+      </node>
+      <node id="706">
+        <label>senergy/enum_mapper.h</label>
+        <link refid="enum__mapper_8h"/>
+        <childnode refid="690" relation="include">
+        </childnode>
+        <childnode refid="707" relation="include">
+        </childnode>
+      </node>
+      <node id="698">
+        <label>cmath</label>
+      </node>
+      <node id="704">
+        <label>errno.h</label>
+      </node>
+      <node id="689">
+        <label>senergy/bytebuffer.h</label>
+        <link refid="bytebuffer_8h"/>
+        <childnode refid="690" relation="include">
+        </childnode>
+        <childnode refid="691" relation="include">
+        </childnode>
+        <childnode refid="692" relation="include">
+        </childnode>
+        <childnode refid="688" relation="include">
+        </childnode>
+        <childnode refid="693" relation="include">
+        </childnode>
+      </node>
+      <node id="690">
+        <label>string</label>
+      </node>
+      <node id="709">
+        <label>senergy/dns/resource_record_interface.h</label>
+        <link refid="resource__record__interface_8h"/>
+        <childnode refid="688" relation="include">
+        </childnode>
+        <childnode refid="710" relation="include">
+        </childnode>
+        <childnode refid="711" relation="include">
+        </childnode>
+        <childnode refid="705" relation="include">
+        </childnode>
+        <childnode refid="712" relation="include">
+        </childnode>
+        <childnode refid="689" relation="include">
+        </childnode>
+      </node>
+      <node id="708">
+        <label>stddef.h</label>
+      </node>
+      <node id="695">
+        <label>senergy/socket.h</label>
+        <link refid="socket_8h"/>
+        <childnode refid="691" relation="include">
+        </childnode>
+        <childnode refid="690" relation="include">
+        </childnode>
+        <childnode refid="696" relation="include">
+        </childnode>
+        <childnode refid="688" relation="include">
+        </childnode>
+        <childnode refid="689" relation="include">
+        </childnode>
+        <childnode refid="697" relation="include">
+        </childnode>
+        <childnode refid="700" relation="include">
+        </childnode>
+        <childnode refid="701" relation="include">
+        </childnode>
+        <childnode refid="702" relation="include">
+        </childnode>
+        <childnode refid="703" relation="include">
+        </childnode>
+        <childnode refid="704" relation="include">
+        </childnode>
+      </node>
+      <node id="703">
+        <label>netdb.h</label>
+      </node>
+      <node id="707">
+        <label>senergy/fastmap.h</label>
+        <link refid="fastmap_8h"/>
+        <childnode refid="696" relation="include">
+        </childnode>
+        <childnode refid="708" relation="include">
+        </childnode>
+      </node>
+      <node id="705">
+        <label>senergy/dns/resource_record_types.h</label>
+        <link refid="resource__record__types_8h"/>
+        <childnode refid="706" relation="include">
+        </childnode>
+      </node>
+      <node id="712">
+        <label>senergy/dns/resource_record_classes.h</label>
+        <link refid="resource__record__classes_8h"/>
+      </node>
+      <node id="693">
+        <label>senergy/print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="694" relation="include">
+        </childnode>
+        <childnode refid="690" relation="include">
+        </childnode>
+      </node>
+      <node id="694">
+        <label>cstdio</label>
+      </node>
+      <node id="696">
+        <label>vector</label>
+      </node>
+      <node id="713">
+        <label>senergy/dns/utils.h</label>
+        <link refid="utils_8h"/>
+        <childnode refid="690" relation="include">
+        </childnode>
+        <childnode refid="689" relation="include">
+        </childnode>
+        <childnode refid="700" relation="include">
+        </childnode>
+      </node>
+      <node id="699">
+        <label>ctgmath</label>
+      </node>
+      <node id="692">
+        <label>cstdlib</label>
+      </node>
+      <node id="701">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="711">
+        <label>senergy/dns/resource_record_base.h</label>
+        <link refid="resource__record__base_8h"/>
+        <childnode refid="690" relation="include">
+        </childnode>
+        <childnode refid="688" relation="include">
+        </childnode>
+        <childnode refid="705" relation="include">
+        </childnode>
+        <childnode refid="712" relation="include">
+        </childnode>
+        <childnode refid="713" relation="include">
+        </childnode>
+        <childnode refid="689" relation="include">
+        </childnode>
+        <childnode refid="697" relation="include">
+        </childnode>
+      </node>
+      <node id="697">
+        <label>senergy/convert.h</label>
+        <link refid="convert_8h"/>
+        <childnode refid="690" relation="include">
+        </childnode>
+        <childnode refid="694" relation="include">
+        </childnode>
+        <childnode refid="698" relation="include">
+        </childnode>
+        <childnode refid="699" relation="include">
+        </childnode>
+      </node>
+      <node id="710">
+        <label>type_traits</label>
+      </node>
+      <node id="691">
+        <label>cstring</label>
+      </node>
+      <node id="688">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="721">
+        <label>src/dns_requester.cpp</label>
+        <link refid="dns__requester_8cpp"/>
+      </node>
+      <node id="714">
+        <label>src/senergy/dns/record_ipv4_address.h</label>
+        <link refid="record_ipv4_address.h"/>
+        <childnode refid="715" relation="include">
+        </childnode>
+        <childnode refid="716" relation="include">
+        </childnode>
+      </node>
+      <node id="722">
+        <label>src/senergy/senergy.h</label>
+        <link refid="senergy_8h"/>
+        <childnode refid="723" relation="include">
+        </childnode>
+      </node>
+      <node id="716">
+        <label>src/senergy/dns/resource_record_collection.h</label>
+        <link refid="resource__record__collection_8h"/>
+        <childnode refid="717" relation="include">
+        </childnode>
+        <childnode refid="718" relation="include">
+        </childnode>
+      </node>
+      <node id="717">
+        <label>src/dns_resource_record_collection.cpp</label>
+        <link refid="dns__resource__record__collection_8cpp"/>
+      </node>
+      <node id="720">
+        <label>src/senergy/dns/requester.h</label>
+        <link refid="requester_8h"/>
+        <childnode refid="721" relation="include">
+        </childnode>
+        <childnode refid="722" relation="include">
+        </childnode>
+      </node>
+      <node id="719">
+        <label>src/dns_message.cpp</label>
+        <link refid="dns__message_8cpp"/>
+      </node>
+      <node id="723">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="718">
+        <label>src/senergy/dns/message.h</label>
+        <link refid="message_8h"/>
+        <childnode refid="719" relation="include">
+        </childnode>
+        <childnode refid="720" relation="include">
+        </childnode>
+        <childnode refid="722" relation="include">
+        </childnode>
+      </node>
+      <node id="715">
+        <label>src/dns_record_ipv4_address.cpp</label>
+        <link refid="dns__record__ipv4__address_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_senergy_1_1_dns_1_1_i_p_v4_record" prot="public">Senergy::Dns::IPV4Record</innerclass>
+    <innernamespace refid="namespace_senergy">Senergy</innernamespace>
+    <innernamespace refid="namespace_senergy_1_1_dns">Senergy::Dns</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>Senergy.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Senergy<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Senergy<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/>along<sp/>with<sp/>Senergy.<sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Swen<sp/>Kooij<sp/>(Photonios)<sp/>&lt;swenkooij@gmail.com&gt;<sp/>&lt;photonios@outlook.com&gt;</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*******************************************************************************/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SY_RECORD_IPV4_ADDRESS_H</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SY_RECORD_IPV4_ADDRESS_H</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="bytebuffer_8h" kindref="compound">senergy/bytebuffer.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="socket_8h" kindref="compound">senergy/socket.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="resource__record__types_8h" kindref="compound">senergy/dns/resource_record_types.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="resource__record__interface_8h" kindref="compound">senergy/dns/resource_record_interface.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="resource__record__base_8h" kindref="compound">senergy/dns/resource_record_base.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Senergy</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Dns</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="class_senergy_1_1_dns_1_1_i_p_v4_record" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_senergy_1_1_dns_1_1_i_p_v4_record" kindref="compound">IPV4Record</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_interface" kindref="compound">ResourceRecordInterface</ref></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructor<sp/>inheritance..</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_interface_1a8e4eb71ac27838d547e48a171774142f" kindref="member">ResourceRecordInterface::ResourceRecordInterface</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_dns_1_1_i_p_v4_record_1a9239e0aa9254080bb92ab1ba8352bd56" kindref="member">IPV4Record</ref>(<ref refid="namespace_senergy_1_1_dns_1a72915c893fbf242018e79d8f92e1646b" kindref="member">ResourceRecordBasePtr</ref><sp/>base);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_i_p_v4_record_1adc8bfc217949628f7b88fe69d065d630" kindref="member">Serialize</ref>(<ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref><sp/>&amp;buffer);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_i_p_v4_record_1a6fffdc2823b53f8f2fede5263e45b232" kindref="member">Deserialize</ref>(<ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref><sp/>&amp;buffer);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_senergy_1_1_dns_1_1_resource_record_interface_1abf5eec20c95f05b57c5c02eaed349e16" kindref="member">ResourceRecordInterfacePtr</ref><sp/><ref refid="class_senergy_1_1_dns_1_1_i_p_v4_record_1a4d31a8d3f562f8128c053071120d6dd2" kindref="member">Create</ref>(<ref refid="namespace_senergy_1_1_dns_1a72915c893fbf242018e79d8f92e1646b" kindref="member">ResourceRecordBasePtr</ref><sp/>base);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0" kindref="member">ResourceRecordType</ref><sp/><ref refid="class_senergy_1_1_dns_1_1_i_p_v4_record_1a7f67f0546dc2d93b04a264fabf871d78" kindref="member">GetType</ref>();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_i_p_v4_record_1a9bbb0fc972caec65cca5df46357c35e6" kindref="member">SetAddress</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;address);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_senergy_1_1_dns_1_1_i_p_v4_record_1ab1417b773cb8281a8766ad092b559a1e" kindref="member">GetAddress</ref>();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_i_p_v4_record_1a5dc31b6ac003bf5b8897d1431e9eb0db" kindref="member">Dump</ref>();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Contains<sp/>the<sp/>address<sp/>that<sp/>is<sp/>going<sp/>to<sp/>be<sp/>serialized,<sp/>or<sp/>the<sp/>address<sp/>that<sp/>was<sp/>deserialized.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>m_address;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Dns</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SY_RECORD_IPV4_ADDRESS_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/photonios/Documents/senergy/src/senergy/dns/record_ipv4_address.h"/>
+  </compounddef>
+</doxygen>

@@ -5,58 +5,238 @@
     <includes local="no">vector</includes>
     <includes local="no">stddef.h</includes>
     <includedby refid="fastmap_8cpp" local="no">src/fastmap.cpp</includedby>
+    <includedby refid="resource__record__collection_8h" local="no">src/senergy/dns/resource_record_collection.h</includedby>
     <includedby refid="resource__record__mapper_8h" local="no">src/senergy/dns/resource_record_mapper.h</includedby>
+    <includedby refid="enum__mapper_8h" local="no">src/senergy/enum_mapper.h</includedby>
     <includedby refid="senergy_8h" local="no">src/senergy/senergy.h</includedby>
     <incdepgraph>
-      <node id="600">
+      <node id="1127">
         <label>stddef.h</label>
       </node>
-      <node id="599">
-        <label>vector</label>
-      </node>
-      <node id="598">
+      <node id="1125">
         <label>src/senergy/fastmap.h</label>
         <link refid="fastmap.h"/>
-        <childnode refid="599" relation="include">
+        <childnode refid="1126" relation="include">
         </childnode>
-        <childnode refid="600" relation="include">
+        <childnode refid="1127" relation="include">
         </childnode>
+      </node>
+      <node id="1126">
+        <label>vector</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="602">
-        <label>src/fastmap.cpp</label>
-        <link refid="fastmap_8cpp"/>
+      <node id="1144">
+        <label>src/senergy/dns/message_question.h</label>
+        <link refid="message__question_8h"/>
+        <childnode refid="1145" relation="include">
+        </childnode>
+        <childnode refid="1132" relation="include">
+        </childnode>
+        <childnode refid="1136" relation="include">
+        </childnode>
       </node>
-      <node id="606">
-        <label>src/main.cpp</label>
-        <link refid="main_8cpp"/>
-      </node>
-      <node id="604">
+      <node id="1139">
         <label>src/dns_resource_record_mapper.cpp</label>
         <link refid="dns__resource__record__mapper_8cpp"/>
       </node>
-      <node id="603">
-        <label>src/senergy/dns/resource_record_mapper.h</label>
-        <link refid="resource__record__mapper_8h"/>
-        <childnode refid="604" relation="include">
+      <node id="1135">
+        <label>src/dns_requester.cpp</label>
+        <link refid="dns__requester_8cpp"/>
+      </node>
+      <node id="1155">
+        <label>src/dns_resource_record_interface.cpp</label>
+        <link refid="dns__resource__record__interface_8cpp"/>
+      </node>
+      <node id="1150">
+        <label>src/senergy/dns/record_unknown.h</label>
+        <link refid="record__unknown_8h"/>
+        <childnode refid="1151" relation="include">
+        </childnode>
+        <childnode refid="1138" relation="include">
         </childnode>
       </node>
-      <node id="605">
+      <node id="1146">
+        <label>src/senergy/dns/record_ipv4_address.h</label>
+        <link refid="record__ipv4__address_8h"/>
+        <childnode refid="1147" relation="include">
+        </childnode>
+        <childnode refid="1130" relation="include">
+        </childnode>
+      </node>
+      <node id="1151">
+        <label>src/dns_record_unknown.cpp</label>
+        <link refid="dns__record__unknown_8cpp"/>
+      </node>
+      <node id="1140">
+        <label>src/senergy/enum_mapper.h</label>
+        <link refid="enum__mapper_8h"/>
+        <childnode refid="1141" relation="include">
+        </childnode>
+        <childnode refid="1142" relation="include">
+        </childnode>
+      </node>
+      <node id="1141">
+        <label>src/enum_mapper.cpp</label>
+        <link refid="enum__mapper_8cpp"/>
+      </node>
+      <node id="1136">
         <label>src/senergy/senergy.h</label>
         <link refid="senergy_8h"/>
-        <childnode refid="606" relation="include">
+        <childnode refid="1137" relation="include">
         </childnode>
       </node>
-      <node id="601">
+      <node id="1130">
+        <label>src/senergy/dns/resource_record_collection.h</label>
+        <link refid="resource__record__collection_8h"/>
+        <childnode refid="1131" relation="include">
+        </childnode>
+        <childnode refid="1132" relation="include">
+        </childnode>
+      </node>
+      <node id="1154">
+        <label>src/senergy/dns/resource_record_interface.h</label>
+        <link refid="resource__record__interface_8h"/>
+        <childnode refid="1155" relation="include">
+        </childnode>
+        <childnode refid="1146" relation="include">
+        </childnode>
+        <childnode refid="1148" relation="include">
+        </childnode>
+        <childnode refid="1150" relation="include">
+        </childnode>
+        <childnode refid="1130" relation="include">
+        </childnode>
+        <childnode refid="1138" relation="include">
+        </childnode>
+      </node>
+      <node id="1148">
+        <label>src/senergy/dns/record_nameserver.h</label>
+        <link refid="record__nameserver_8h"/>
+        <childnode refid="1149" relation="include">
+        </childnode>
+        <childnode refid="1130" relation="include">
+        </childnode>
+      </node>
+      <node id="1131">
+        <label>src/dns_resource_record_collection.cpp</label>
+        <link refid="dns__resource__record__collection_8cpp"/>
+      </node>
+      <node id="1128">
         <label>src/senergy/fastmap.h</label>
         <link refid="fastmap.h"/>
-        <childnode refid="602" relation="include">
+        <childnode refid="1129" relation="include">
         </childnode>
-        <childnode refid="603" relation="include">
+        <childnode refid="1130" relation="include">
         </childnode>
-        <childnode refid="605" relation="include">
+        <childnode refid="1138" relation="include">
         </childnode>
+        <childnode refid="1140" relation="include">
+        </childnode>
+        <childnode refid="1136" relation="include">
+        </childnode>
+      </node>
+      <node id="1134">
+        <label>src/senergy/dns/requester.h</label>
+        <link refid="requester_8h"/>
+        <childnode refid="1135" relation="include">
+        </childnode>
+        <childnode refid="1136" relation="include">
+        </childnode>
+      </node>
+      <node id="1142">
+        <label>src/senergy/dns/resource_record_types.h</label>
+        <link refid="resource__record__types_8h"/>
+        <childnode refid="1143" relation="include">
+        </childnode>
+        <childnode refid="1144" relation="include">
+        </childnode>
+        <childnode refid="1146" relation="include">
+        </childnode>
+        <childnode refid="1148" relation="include">
+        </childnode>
+        <childnode refid="1150" relation="include">
+        </childnode>
+        <childnode refid="1134" relation="include">
+        </childnode>
+        <childnode refid="1152" relation="include">
+        </childnode>
+        <childnode refid="1130" relation="include">
+        </childnode>
+        <childnode refid="1154" relation="include">
+        </childnode>
+        <childnode refid="1138" relation="include">
+        </childnode>
+        <childnode refid="1136" relation="include">
+        </childnode>
+      </node>
+      <node id="1133">
+        <label>src/dns_message.cpp</label>
+        <link refid="dns__message_8cpp"/>
+      </node>
+      <node id="1149">
+        <label>src/dns_record_nameserver.cpp</label>
+        <link refid="dns__record__nameserver_8cpp"/>
+      </node>
+      <node id="1129">
+        <label>src/fastmap.cpp</label>
+        <link refid="fastmap_8cpp"/>
+      </node>
+      <node id="1137">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="1143">
+        <label>src/dns_resource_record_types.cpp</label>
+        <link refid="dns__resource__record__types_8cpp"/>
+      </node>
+      <node id="1138">
+        <label>src/senergy/dns/resource_record_mapper.h</label>
+        <link refid="resource__record__mapper_8h"/>
+        <childnode refid="1139" relation="include">
+        </childnode>
+        <childnode refid="1130" relation="include">
+        </childnode>
+      </node>
+      <node id="1145">
+        <label>src/dns_message_question.cpp</label>
+        <link refid="dns__message__question_8cpp"/>
+      </node>
+      <node id="1152">
+        <label>src/senergy/dns/resource_record_base.h</label>
+        <link refid="resource__record__base_8h"/>
+        <childnode refid="1153" relation="include">
+        </childnode>
+        <childnode refid="1146" relation="include">
+        </childnode>
+        <childnode refid="1148" relation="include">
+        </childnode>
+        <childnode refid="1150" relation="include">
+        </childnode>
+        <childnode refid="1130" relation="include">
+        </childnode>
+        <childnode refid="1154" relation="include">
+        </childnode>
+        <childnode refid="1138" relation="include">
+        </childnode>
+      </node>
+      <node id="1132">
+        <label>src/senergy/dns/message.h</label>
+        <link refid="message_8h"/>
+        <childnode refid="1133" relation="include">
+        </childnode>
+        <childnode refid="1134" relation="include">
+        </childnode>
+        <childnode refid="1136" relation="include">
+        </childnode>
+      </node>
+      <node id="1153">
+        <label>src/dns_resource_record_base.cpp</label>
+        <link refid="dns__resource__record__base_8cpp"/>
+      </node>
+      <node id="1147">
+        <label>src/dns_record_ipv4_address.cpp</label>
+        <link refid="dns__record__ipv4__address_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="struct_senergy_1_1_fast_map_item" prot="public">Senergy::FastMapItem</innerclass>
@@ -117,26 +297,31 @@
 <codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FastMapBase::at(index);</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89" refid="class_senergy_1_1_fast_map_1ac06929fda5af594e6ccf96198eac1819" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>TValue<sp/>&amp;<sp/><ref refid="class_senergy_1_1_fast_map_1ac06929fda5af594e6ccf96198eac1819" kindref="member">operator[] </ref>(TKey<sp/>key)</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>FastMapBase::size();<sp/>i++)</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(FastMapBase::at(i).first<sp/>==<sp/>key)</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FastMapBase::at(i).second;</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_senergy_1_1_fast_map_item" kindref="compound">FastMapItem&lt;TKey, TValue&gt;</ref><sp/>fast_map_item;</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fast_map_item.<ref refid="struct_senergy_1_1_fast_map_item_1a99e39296732f934331d581936e2ddb26" kindref="member">first</ref><sp/>=<sp/>key;</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FastMapBase::push_back(fast_map_item);</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FastMapBase::at(FastMapBase::size()<sp/>-<sp/>1).first;</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="103"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="81" refid="class_senergy_1_1_fast_map_1a2391a47cf91bcc3561837800777ae91f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_fast_map_1a2391a47cf91bcc3561837800777ae91f" kindref="member">Clear</ref>()</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FastMapBase::clear();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="class_senergy_1_1_fast_map_1ac06929fda5af594e6ccf96198eac1819" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>TValue<sp/>&amp;<sp/><ref refid="class_senergy_1_1_fast_map_1ac06929fda5af594e6ccf96198eac1819" kindref="member">operator[] </ref>(TKey<sp/>key)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>FastMapBase::size();<sp/>i++)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(FastMapBase::at(i).first<sp/>==<sp/>key)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FastMapBase::at(i).second;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SY_FAST_MAP_H</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_senergy_1_1_fast_map_item" kindref="compound">FastMapItem&lt;TKey, TValue&gt;</ref><sp/>fast_map_item;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fast_map_item.<ref refid="struct_senergy_1_1_fast_map_item_1a99e39296732f934331d581936e2ddb26" kindref="member">first</ref><sp/>=<sp/>key;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FastMapBase::push_back(fast_map_item);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FastMapBase::at(FastMapBase::size()<sp/>-<sp/>1).second;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SY_FAST_MAP_H</highlight></codeline>
     </programlisting>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/fastmap.h"/>
+    <location file="/home/photonios/Documents/senergy/src/senergy/fastmap.h"/>
   </compounddef>
 </doxygen>

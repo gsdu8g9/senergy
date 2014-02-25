@@ -8,57 +8,57 @@
     <includedby refid="logger_8h" local="no">src/senergy/logger.h</includedby>
     <includedby refid="senergy_8h" local="no">src/senergy/senergy.h</includedby>
     <incdepgraph>
-      <node id="321">
+      <node id="527">
         <label>string</label>
       </node>
-      <node id="320">
+      <node id="528">
+        <label>iostream</label>
+      </node>
+      <node id="526">
         <label>src/senergy/console.h</label>
         <link refid="console.h"/>
-        <childnode refid="321" relation="include">
+        <childnode refid="527" relation="include">
         </childnode>
-        <childnode refid="322" relation="include">
+        <childnode refid="528" relation="include">
         </childnode>
-      </node>
-      <node id="322">
-        <label>iostream</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="326">
-        <label>src/logger.cpp</label>
-        <link refid="logger_8cpp"/>
+      <node id="533">
+        <label>src/senergy/senergy.h</label>
+        <link refid="senergy_8h"/>
+        <childnode refid="534" relation="include">
+        </childnode>
       </node>
-      <node id="328">
+      <node id="530">
+        <label>src/console.cpp</label>
+        <link refid="console_8cpp"/>
+      </node>
+      <node id="534">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="323">
+      <node id="532">
+        <label>src/logger.cpp</label>
+        <link refid="logger_8cpp"/>
+      </node>
+      <node id="529">
         <label>src/senergy/console.h</label>
         <link refid="console.h"/>
-        <childnode refid="324" relation="include">
+        <childnode refid="530" relation="include">
         </childnode>
-        <childnode refid="325" relation="include">
+        <childnode refid="531" relation="include">
         </childnode>
-        <childnode refid="327" relation="include">
-        </childnode>
-      </node>
-      <node id="327">
-        <label>src/senergy/senergy.h</label>
-        <link refid="senergy_8h"/>
-        <childnode refid="328" relation="include">
+        <childnode refid="533" relation="include">
         </childnode>
       </node>
-      <node id="325">
+      <node id="531">
         <label>src/senergy/logger.h</label>
         <link refid="logger_8h"/>
-        <childnode refid="326" relation="include">
+        <childnode refid="532" relation="include">
         </childnode>
-        <childnode refid="327" relation="include">
+        <childnode refid="533" relation="include">
         </childnode>
-      </node>
-      <node id="324">
-        <label>src/console.cpp</label>
-        <link refid="console_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_senergy_1_1_console" prot="public">Senergy::Console</innerclass>
@@ -170,6 +170,6 @@
 <codeline lineno="170"><highlight class="normal"></highlight></codeline>
 <codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SY_CONSOLE_H</highlight></codeline>
     </programlisting>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/console.h"/>
+    <location file="/home/photonios/Documents/senergy/src/senergy/console.h"/>
   </compounddef>
 </doxygen>

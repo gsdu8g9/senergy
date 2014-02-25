@@ -31,7 +31,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="senergy-dns.ico"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Senergy
    &#160;<span id="projectnumber">1.0</span>
@@ -109,6 +108,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
       <li><a href="#index_t"><span>t</span></a></li>
+      <li><a href="#index_u"><span>u</span></a></li>
       <li><a href="#index_v"><span>v</span></a></li>
       <li><a href="#index_w"><span>w</span></a></li>
       <li class="current"><a href="#index_~"><span>~</span></a></li>
@@ -154,7 +154,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_senergy_1_1_vector_x.html#a4df34dceed944ef14df649a538d9c1b1">Senergy::VectorX&lt; T &gt;</a>
 </li>
 <li>ApplyMapping()
-: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_mapper.html#a28d49f50fa6c0703b060ef56f93c5341">Senergy::Dns::ResourceRecordMapper</a>
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_mapper.html#ad9335f22e9d4a069ae38e65d1565f509">Senergy::Dns::ResourceRecordMapper</a>
 </li>
 <li>ApplyReverseMapping()
 : <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_mapper.html#a4a12162b6962aa857c2075ab17ef4375">Senergy::Dns::ResourceRecordMapper</a>
@@ -176,16 +176,30 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>CircularBuffer()
 : <a class="el" href="class_senergy_1_1_circular_buffer.html#abc3a5a67343d46ce83e2bbf678e83393">Senergy::CircularBuffer&lt; T &gt;</a>
 </li>
+<li>Clear()
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_collection.html#ad0d89b82d1a6d862d84e411decf81527">Senergy::Dns::ResourceRecordCollection</a>
+, <a class="el" href="class_senergy_1_1_fast_map.html#a2391a47cf91bcc3561837800777ae91f">Senergy::FastMap&lt; TKey, TValue &gt;</a>
+, <a class="el" href="class_senergy_1_1_vector_x.html#a2b84162c380303ed38e73d8d529c62dd">Senergy::VectorX&lt; T &gt;</a>
+</li>
 <li>Close()
 : <a class="el" href="class_senergy_1_1_socket.html#a859e2c4eec6792215f04363404658b0a">Senergy::Socket</a>
 </li>
 <li>Connect()
 : <a class="el" href="class_senergy_1_1_socket.html#a75946ce55f263abb105a22611819e11e">Senergy::Socket</a>
 </li>
+<li>CopyTo()
+: <a class="el" href="class_senergy_1_1_byte_buffer.html#a2db9cbd7f2eadd1ecb561c72feaca7ad">Senergy::ByteBuffer</a>
+</li>
 <li>Create()
-: <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#ae8237696d15da3b4b67f96fbd3d1d3e3">Senergy::Dns::MessageQuestion</a>
+: <a class="el" href="class_senergy_1_1_dns_1_1_i_p_v4_record.html#a4d31a8d3f562f8128c053071120d6dd2">Senergy::Dns::IPV4Record</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#ae8237696d15da3b4b67f96fbd3d1d3e3">Senergy::Dns::MessageQuestion</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_name_server_record.html#a006930a7fc6c7d736cfe5c0ee1d79b9d">Senergy::Dns::NameServerRecord</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html#a21ea1d5b7a354e2025c01248c019f6a1">Senergy::Dns::ResourceRecordBase</a>
-, <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#acac5440b40f3904f889f1ee59a3b9786">Senergy::Dns::ResourceRecordInterface</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#abe37068b670f89481a145e1e9c2c8267">Senergy::Dns::ResourceRecordInterface</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_unknown_record.html#a98f66426e8e89449eaac24e0ac4eeb60">Senergy::Dns::UnknownRecord</a>
+</li>
+<li>CreateCast()
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#a342b71b9977f20ecb1dc7b3fd6ae0751">Senergy::Dns::ResourceRecordInterface</a>
 </li>
 </ul>
 
@@ -201,20 +215,28 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_senergy_1_1_byte_buffer.html#a86a02f0e4d2aece53b7867e9a8011e70">Senergy::ByteBuffer</a>
 </li>
 <li>Deserialize()
-: <a class="el" href="class_senergy_1_1_dns_1_1_message.html#a3857764a799ab123405420345f9b03ee">Senergy::Dns::Message</a>
+: <a class="el" href="class_senergy_1_1_dns_1_1_i_p_v4_record.html#a6fffdc2823b53f8f2fede5263e45b232">Senergy::Dns::IPV4Record</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_message.html#a3857764a799ab123405420345f9b03ee">Senergy::Dns::Message</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_message_header.html#aa54f3864838fe22a4406e0c52a90a010">Senergy::Dns::MessageHeader</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a1c66b45b448f262a4f2cf1317c89b5b3">Senergy::Dns::MessageQuestion</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_name_server_record.html#a6e01ac3f215b4766cae9ccc7fa58987a">Senergy::Dns::NameServerRecord</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html#aee80193d3c782a3e3e69d78a1a27f205">Senergy::Dns::ResourceRecordBase</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_collection.html#ae228f7ec1cf020033f64f68a3f5ea4e1">Senergy::Dns::ResourceRecordCollection</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#ade2e0b9817476ea2161b694efd3e02db">Senergy::Dns::ResourceRecordInterface</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_unknown_record.html#af58fb86354cd176aefaa0000a706d646">Senergy::Dns::UnknownRecord</a>
 </li>
 <li>Dump()
-: <a class="el" href="class_senergy_1_1_dns_1_1_message.html#ab4ce784232a2b68d7fe27512913447a0">Senergy::Dns::Message</a>
+: <a class="el" href="class_senergy_1_1_dns_1_1_i_p_v4_record.html#a5dc31b6ac003bf5b8897d1431e9eb0db">Senergy::Dns::IPV4Record</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_message.html#ab4ce784232a2b68d7fe27512913447a0">Senergy::Dns::Message</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_message_header.html#a54b75c73f901b0fc7cf21bed6391aa4e">Senergy::Dns::MessageHeader</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a7ac084601ff3285c6e47e7ce7ccc09cf">Senergy::Dns::MessageQuestion</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_name_server_record.html#a95047855d9e9fb77fbbfa8534c3ddb62">Senergy::Dns::NameServerRecord</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html#ae4c4b80c9325c026eed376e28cd6ddc3">Senergy::Dns::ResourceRecordBase</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_collection.html#a62ac608c82f209ec4b0c2ed5bc155a73">Senergy::Dns::ResourceRecordCollection</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#aced6e4bc388ce3568d72d9670a2e9da5">Senergy::Dns::ResourceRecordInterface</a>
 </li>
 <li>DumpHexadecimal()
-: <a class="el" href="class_senergy_1_1_byte_buffer.html#a475f2133734cd74c4bce78bdf09950f3">Senergy::ByteBuffer</a>
+: <a class="el" href="class_senergy_1_1_byte_buffer.html#a4276f5ed69bd1d2fe9c26e05193715f2">Senergy::ByteBuffer</a>
 </li>
 </ul>
 
@@ -233,8 +255,15 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>GenerateId()
 : <a class="el" href="class_senergy_1_1_dns_1_1_id_factory.html#aac705471a570313494ca2661a5888b3d">Senergy::Dns::IdFactory</a>
 </li>
+<li>Get()
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_type_map.html#a3099645859209cf5c05d1f95ed2a4be0">Senergy::Dns::ResourceRecordTypeMap</a>
+</li>
+<li>GetAddress()
+: <a class="el" href="class_senergy_1_1_dns_1_1_i_p_v4_record.html#ab1417b773cb8281a8766ad092b559a1e">Senergy::Dns::IPV4Record</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_name_server_record.html#a012e369dd4a94c98cb01e6df87ea8cbc">Senergy::Dns::NameServerRecord</a>
+</li>
 <li>GetBase()
-: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#a2d83a278096ff51e7c8fb9a5e77f70a5">Senergy::Dns::ResourceRecordInterface</a>
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#a6f603d9d3ffe34e4376ea8b27fd0c72d">Senergy::Dns::ResourceRecordInterface</a>
 </li>
 <li>GetClass()
 : <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#ae86936e1268d7abf0a2210df9caa0840">Senergy::Dns::MessageQuestion</a>
@@ -248,8 +277,14 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a5fa467b516be4914f865bc5d053e98be">Senergy::Dns::MessageQuestion</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html#a486427180da21f76701001a5e411e369">Senergy::Dns::ResourceRecordBase</a>
 </li>
+<li>GetMapping()
+: <a class="el" href="class_senergy_1_1_enum_mapper.html#a54d34e6d45397b9ec4d5d19ec5234b2c">Senergy::EnumMapper&lt; T &gt;</a>
+</li>
 <li>GetMaxCachingTime()
 : <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html#a96094f0e13f517b6462cd193f9b82f80">Senergy::Dns::ResourceRecordBase</a>
+</li>
+<li>GetMinimalSize()
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html#a2b4f8d43e9a21fd1aff168e4aa88cc9a">Senergy::Dns::ResourceRecordBase</a>
 </li>
 <li>GetPosition()
 : <a class="el" href="class_senergy_1_1_byte_buffer.html#a286e096451b62a14a8d645e1c9da62af">Senergy::ByteBuffer</a>
@@ -271,19 +306,28 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a0a007a1d002a37189ce0f8c943335216">Senergy::Dns::MessageQuestion</a>
 </li>
 <li>GetType()
-: <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a66d9d051672d30c1f4b5663d25430ec8">Senergy::Dns::MessageQuestion</a>
+: <a class="el" href="class_senergy_1_1_dns_1_1_i_p_v4_record.html#a7f67f0546dc2d93b04a264fabf871d78">Senergy::Dns::IPV4Record</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a66d9d051672d30c1f4b5663d25430ec8">Senergy::Dns::MessageQuestion</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_name_server_record.html#a2ad5b053bceedbf8bf927a275d530431">Senergy::Dns::NameServerRecord</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html#acabfef62c1a3ef4332556bd312c42bdc">Senergy::Dns::ResourceRecordBase</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#af895ba199749599d42f8e6a737eb9118">Senergy::Dns::ResourceRecordInterface</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_unknown_record.html#a3b6e5feb0277646b2513432cede8ebbd">Senergy::Dns::UnknownRecord</a>
+</li>
+<li>GetTypeString()
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html#a2410ada2a69ff9d2f5b6599c5cda8dc1">Senergy::Dns::ResourceRecordBase</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
+<li>HasReachedEnd()
+: <a class="el" href="class_senergy_1_1_byte_buffer.html#a2747633838b3fae217b90700ff737840">Senergy::ByteBuffer</a>
+</li>
 <li>Hexadecimal()
 : <a class="el" href="class_senergy_1_1_print.html#a6c6b70bd91e56896058004bf82201010">Senergy::Print</a>
 </li>
 <li>HostToNetworkByteOrder()
-: <a class="el" href="class_senergy_1_1_dns_1_1_utils.html#a26ed8e47210810c24f8ab5a2588bf276">Senergy::Dns::Utils</a>
+: <a class="el" href="class_senergy_1_1_dns_1_1_utils.html#a952d70b6ddc617c92819eb2ad7e37f0d">Senergy::Dns::Utils</a>
 </li>
 </ul>
 
@@ -303,6 +347,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </li>
 <li>IPV4AddressToBinary()
 : <a class="el" href="class_senergy_1_1_socket.html#a74c62f0fb79be1192eed5f2fd092dd50">Senergy::Socket</a>
+</li>
+<li>IPV4Record()
+: <a class="el" href="class_senergy_1_1_dns_1_1_i_p_v4_record.html#a9239e0aa9254080bb92ab1ba8352bd56">Senergy::Dns::IPV4Record</a>
 </li>
 <li>IsConnected()
 : <a class="el" href="class_senergy_1_1_socket.html#a6d22575e6fc0d6ab4a61097d60b6e773">Senergy::Socket</a>
@@ -327,6 +374,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>Map()
+: <a class="el" href="class_senergy_1_1_enum_mapper.html#a1bded4a48eb23c33dca633c7c59aba7e">Senergy::EnumMapper&lt; T &gt;</a>
+</li>
 <li>Message()
 : <a class="el" href="class_senergy_1_1_dns_1_1_message.html#a3e7192f2293903a43e7d08960b08a8b1">Senergy::Dns::Message</a>
 </li>
@@ -340,6 +390,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>NameServerRecord()
+: <a class="el" href="class_senergy_1_1_dns_1_1_name_server_record.html#a435c6b989e070adcfce7b72c02ae83fb">Senergy::Dns::NameServerRecord</a>
+</li>
 <li>NeedsCaching()
 : <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html#a7b6733ccb332b22335e33e09ad7bddd0">Senergy::Dns::ResourceRecordBase</a>
 </li>
@@ -354,7 +407,8 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 <h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
 <li>operator[]()
-: <a class="el" href="class_senergy_1_1_fast_map.html#ac06929fda5af594e6ccf96198eac1819">Senergy::FastMap&lt; TKey, TValue &gt;</a>
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_collection.html#a8c1ab4704d6a5fd1fa58daadbd9f69d5">Senergy::Dns::ResourceRecordCollection</a>
+, <a class="el" href="class_senergy_1_1_fast_map.html#ac06929fda5af594e6ccf96198eac1819">Senergy::FastMap&lt; TKey, TValue &gt;</a>
 </li>
 </ul>
 
@@ -380,13 +434,13 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_senergy_1_1_byte_buffer.html#a806db1b33ff86b572a0804879d181dc8">Senergy::ByteBuffer</a>
 </li>
 <li>ReadHostnameFromBuffer()
-: <a class="el" href="class_senergy_1_1_dns_1_1_utils.html#a6b995d31d85ef39a5e8ac57928fa35ed">Senergy::Dns::Utils</a>
+: <a class="el" href="class_senergy_1_1_dns_1_1_utils.html#a81879edd7a9daec1d6dfbf952549c500">Senergy::Dns::Utils</a>
 </li>
 <li>ReadInt()
 : <a class="el" href="class_senergy_1_1_byte_buffer.html#ab15f04d43dd82cebf6dc25254d210e4e">Senergy::ByteBuffer</a>
 </li>
 <li>ReadRemaining()
-: <a class="el" href="class_senergy_1_1_byte_buffer.html#a8e9ec7a8d6c26c01a738768928fff704">Senergy::ByteBuffer</a>
+: <a class="el" href="class_senergy_1_1_byte_buffer.html#a391deafd9b6e3c4b4c2b92fe78358ebf">Senergy::ByteBuffer</a>
 </li>
 <li>ReadShort()
 : <a class="el" href="class_senergy_1_1_byte_buffer.html#a989443842e20c2feba4268e968911fe8">Senergy::ByteBuffer</a>
@@ -404,10 +458,10 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_senergy_1_1_byte_buffer.html#aa6b6bfdb398a75b92c79bcdfc1986821">Senergy::ByteBuffer</a>
 </li>
 <li>Receive()
-: <a class="el" href="class_senergy_1_1_socket.html#a0c1510be39bef49de15e8647b64dbb5e">Senergy::Socket</a>
+: <a class="el" href="class_senergy_1_1_socket.html#a7045f756d3c542ee1187a92ca13fa232">Senergy::Socket</a>
 </li>
-<li>RegsisterMapping()
-: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_mapper.html#a27870caab159dc28b03592fba162ddb0">Senergy::Dns::ResourceRecordMapper</a>
+<li>RegisterMapping()
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_mapper.html#ace6af26f447a87243388f5527abf870c">Senergy::Dns::ResourceRecordMapper</a>
 </li>
 <li>Requester()
 : <a class="el" href="class_senergy_1_1_dns_1_1_requester.html#a1b5fbbb5b5b115bdee9da48ce1466be0">Senergy::Dns::Requester</a>
@@ -421,11 +475,17 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>ResourceRecordBase()
 : <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html#add24f5a9168db8b1c3db85ae37715f4c">Senergy::Dns::ResourceRecordBase</a>
 </li>
+<li>ResourceRecordCollection()
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_collection.html#a66f740bd63a874374e471973ee236d78">Senergy::Dns::ResourceRecordCollection</a>
+</li>
 <li>ResourceRecordInterface()
-: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#a512292e35ab101cc53bafe4c21edac4c">Senergy::Dns::ResourceRecordInterface</a>
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#a8e4eb71ac27838d547e48a171774142f">Senergy::Dns::ResourceRecordInterface</a>
 </li>
 <li>ResourceRecordMapper()
 : <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_mapper.html#a2442004b11c8561651561074f12cc3c9">Senergy::Dns::ResourceRecordMapper</a>
+</li>
+<li>ResourceRecordTypeMap()
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_type_map.html#ae64533ac9d0639fcf887888cd0d975c7">Senergy::Dns::ResourceRecordTypeMap</a>
 </li>
 </ul>
 
@@ -435,11 +495,19 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_senergy_1_1_socket.html#aa475d6aa0daf4d73ce627bce6ee04849">Senergy::Socket</a>
 </li>
 <li>Serialize()
-: <a class="el" href="class_senergy_1_1_dns_1_1_message.html#a2e7978e799fadaa4f03fc881e5c8e0f6">Senergy::Dns::Message</a>
+: <a class="el" href="class_senergy_1_1_dns_1_1_i_p_v4_record.html#adc8bfc217949628f7b88fe69d065d630">Senergy::Dns::IPV4Record</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_message.html#a2e7978e799fadaa4f03fc881e5c8e0f6">Senergy::Dns::Message</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_message_header.html#ab443595ff8e11a828022f0cc5f3f6fbe">Senergy::Dns::MessageHeader</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a60772687d382e1d376852e1b5ff59968">Senergy::Dns::MessageQuestion</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_name_server_record.html#a9e9b980a9c341cff47bb5840fc01ed06">Senergy::Dns::NameServerRecord</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html#a3a343750cf6e6a4455d25c064d4412f5">Senergy::Dns::ResourceRecordBase</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_collection.html#affa4da32b82b69f712c2383ab4f9ee8c">Senergy::Dns::ResourceRecordCollection</a>
 , <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#ab81e0a7ea292513c5c34a3be0c7a6dca">Senergy::Dns::ResourceRecordInterface</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_unknown_record.html#aa792712816e5f177b554f1b7d6018563">Senergy::Dns::UnknownRecord</a>
+</li>
+<li>SetAddress()
+: <a class="el" href="class_senergy_1_1_dns_1_1_i_p_v4_record.html#a9bbb0fc972caec65cca5df46357c35e6">Senergy::Dns::IPV4Record</a>
+, <a class="el" href="class_senergy_1_1_dns_1_1_name_server_record.html#a013b114dfa28ff37eb3f1a3c24390646">Senergy::Dns::NameServerRecord</a>
 </li>
 <li>SetClass()
 : <a class="el" href="class_senergy_1_1_dns_1_1_message_question.html#a8676f25315240afe4473154f3708d3e5">Senergy::Dns::MessageQuestion</a>
@@ -450,7 +518,10 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_base.html#ad5f8a096ae61dcf0ddaac380f84bf052">Senergy::Dns::ResourceRecordBase</a>
 </li>
 <li>SetPosition()
-: <a class="el" href="class_senergy_1_1_byte_buffer.html#a52af5d53098be5cb179f9a05f84f39e2">Senergy::ByteBuffer</a>
+: <a class="el" href="class_senergy_1_1_byte_buffer.html#a13dd8a2eec8b93ac224f0da614c7f6f8">Senergy::ByteBuffer</a>
+</li>
+<li>SetResourceSize()
+: <a class="el" href="class_senergy_1_1_dns_1_1_resource_record_interface.html#a54207eceee2ae035ae5293209b3e721c">Senergy::Dns::ResourceRecordInterface</a>
 </li>
 <li>SetTimeout()
 : <a class="el" href="class_senergy_1_1_socket.html#a7ca3e4fb2e2f216773498e6f29e9ea14">Senergy::Socket</a>
@@ -463,7 +534,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_senergy_1_1_byte_buffer.html#a22be2d9d356958c4cf352bc31edb1735">Senergy::ByteBuffer</a>
 </li>
 <li>Socket()
-: <a class="el" href="class_senergy_1_1_socket.html#ad287e0ea5d32febd95ed7ba590d9e08d">Senergy::Socket</a>
+: <a class="el" href="class_senergy_1_1_socket.html#ad6ac199d691bbbb3915c375900a11ca7">Senergy::Socket</a>
 </li>
 </ul>
 
@@ -473,7 +544,14 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_senergy_1_1_convert.html#a66c09e2b461268212cc384e71a2f57c6">Senergy::Convert</a>
 </li>
 <li>ToString()
-: <a class="el" href="class_senergy_1_1_convert.html#ac468bf5d893e3437883763d8457adc1c">Senergy::Convert</a>
+: <a class="el" href="class_senergy_1_1_convert.html#a80cf7b84b0ff65171da68ca40cbf817f">Senergy::Convert</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
+<li>UnknownRecord()
+: <a class="el" href="class_senergy_1_1_dns_1_1_unknown_record.html#ac28afe26d98dc7729160d182c1aa25bd">Senergy::Dns::UnknownRecord</a>
 </li>
 </ul>
 
@@ -490,7 +568,10 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_senergy_1_1_logger.html#ac68f5e14b8fe1bb3004d66289ff95150">Senergy::Logger</a>
 </li>
 <li>Write()
-: <a class="el" href="class_senergy_1_1_byte_buffer.html#a9286d05c71ce66859098778f11be9c51">Senergy::ByteBuffer</a>
+: <a class="el" href="class_senergy_1_1_byte_buffer.html#a9a561b3dd8778ee68e75e5a62a38fa60">Senergy::ByteBuffer</a>
+</li>
+<li>WriteNop()
+: <a class="el" href="class_senergy_1_1_byte_buffer.html#ad810aade775871238b82deb38629510e">Senergy::ByteBuffer</a>
 </li>
 </ul>
 
@@ -505,7 +586,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Feb 11 2014 21:56:45 for Senergy by
+    <li class="footer">Generated on Tue Feb 25 2014 22:51:27 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

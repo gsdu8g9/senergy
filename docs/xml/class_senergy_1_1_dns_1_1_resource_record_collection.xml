@@ -3,32 +3,47 @@
   <compounddef id="class_senergy_1_1_dns_1_1_resource_record_collection" kind="class" prot="public">
     <compoundname>Senergy::Dns::ResourceRecordCollection</compoundname>
     <includes refid="resource__record__collection_8h" local="no">resource_record_collection.h</includes>
-      <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_resource_record_collection_1a0ca3a73fcaabee1703b18c9c8ca453f9" prot="public" static="no" mutable="no">
-        <type><ref refid="namespace_senergy_1_1_dns_1_1_records_1a5b9115e6124c4999bbb000e69cfe5d2c" kindref="member">Records::IPV4AddressPtrVector</ref></type>
-        <definition>Records::IPV4AddressPtrVector Senergy::Dns::ResourceRecordCollection::IPV4Answers</definition>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_senergy_1_1_dns_1_1_resource_record_collection_1aee27f65b6b0ada40ef25de8189d55436" prot="private" static="no">
+        <type><ref refid="class_senergy_1_1_fast_map" kindref="compound">FastMap</ref>&lt; <ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0" kindref="member">ResourceRecordType</ref>, <ref refid="class_senergy_1_1_vector_x" kindref="compound">VectorX</ref>&lt; <ref refid="namespace_senergy_1_1_dns_1a425b37e088cb64a1bda6205581ade5c8" kindref="member">ResourceRecordInterfacePtr</ref> &gt; &gt;</type>
+        <definition>typedef FastMap&lt;ResourceRecordType, VectorX&lt;ResourceRecordInterfacePtr&gt; &gt; Senergy::Dns::ResourceRecordCollection::ResourceRecordMapCollection</definition>
         <argsstring></argsstring>
-        <name>IPV4Answers</name>
+        <name>ResourceRecordMapCollection</name>
         <briefdescription>
-<para>All &apos;A&apos; records in this collection. See the IPV4Address class for more information.. </para>        </briefdescription>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_collection.h" line="84" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_collection.h" bodystart="84" bodyend="-1"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_collection.h" line="56" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_collection.h" bodystart="56" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_resource_record_collection_1a1ad19da9ca3420c4aa1ad865099e387d" prot="public" static="no" mutable="no">
-        <type><ref refid="namespace_senergy_1_1_dns_1ad5ef448b2b508ce86c6ed91dccc10d3e" kindref="member">ResourceRecordPtrVector</ref></type>
-        <definition>ResourceRecordPtrVector Senergy::Dns::ResourceRecordCollection::UnknownRecords</definition>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_resource_record_collection_1af5358ca4090c15dfe0366a8b16724fa3" prot="private" static="no" mutable="no">
+        <type><ref refid="class_senergy_1_1_dns_1_1_resource_record_mapper" kindref="compound">ResourceRecordMapper</ref></type>
+        <definition>ResourceRecordMapper Senergy::Dns::ResourceRecordCollection::m_mapper</definition>
         <argsstring></argsstring>
-        <name>UnknownRecords</name>
+        <name>m_mapper</name>
         <briefdescription>
-<para>All resource records that could not be parsed because we do not support their type. </para>        </briefdescription>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_collection.h" line="90" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_collection.h" bodystart="90" bodyend="-1"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_collection.h" line="122" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_collection.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_resource_record_collection_1a0f29ad274da2c4509bd1971a257fa6d2" prot="private" static="no" mutable="no">
+        <type><ref refid="class_senergy_1_1_fast_map" kindref="compound">ResourceRecordMapCollection</ref></type>
+        <definition>ResourceRecordMapCollection Senergy::Dns::ResourceRecordCollection::m_records</definition>
+        <argsstring></argsstring>
+        <name>m_records</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_collection.h" line="125" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_collection.h" bodystart="125" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -43,44 +58,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_collection.h" line="49" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_resource_record_collection.cpp" bodystart="29" bodyend="31"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_collection.h" line="62" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_resource_record_collection.cpp" bodystart="29" bodyend="34"/>
       </memberdef>
-      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_collection_1affa4da32b82b69f712c2383ab4f9ee8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Senergy::Dns::ResourceRecordCollection::Serialize</definition>
-        <argsstring>(MessageHeader &amp;header, ByteBuffer &amp;buffer)</argsstring>
-        <name>Serialize</name>
-        <param>
-          <type><ref refid="class_senergy_1_1_dns_1_1_message_header" kindref="compound">MessageHeader</ref> &amp;</type>
-          <declname>header</declname>
-        </param>
-        <param>
-          <type><ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> &amp;</type>
-          <declname>buffer</declname>
-        </param>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_collection_1ad0d89b82d1a6d862d84e411decf81527" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::Dns::ResourceRecordCollection::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
         <briefdescription>
-<para>Serializes all records in this collection into the specified buffer. </para>        </briefdescription>
+<para>Clears the collection of any existing records. </para>        </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>buffer</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The buffer to write the serialized data to. </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>header</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The header to write to how many resource records we serialized.</para></parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>A boolean indicating whether this operation was a success. </para></simplesect>
-</para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_collection.h" line="60" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_resource_record_collection.cpp" bodystart="33" bodyend="36"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_collection.h" line="67" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_resource_record_collection.cpp" bodystart="36" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_collection_1ae228f7ec1cf020033f64f68a3f5ea4e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -96,28 +87,66 @@
           <declname>buffer</declname>
         </param>
         <briefdescription>
-<para>Deserializes the content of the specified buffer into this collection. </para>        </briefdescription>
+<para>Deserializes all resource records from the specified buffer, according to the information in the specified DNS message header. </para>        </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>buffer</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The buffer to read from. </para></parameterdescription>
-</parameteritem>
-<parameteritem>
+<para><simplesect kind="note"><para>This clears this collection of all existing records.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>header</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The header to use as the information source during deserialization. The header contains information on how many resource records have been returned.</para></parameterdescription>
+<para>The DNS message header to read the information on the amount of resource records from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to read/deserialize the records from.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>A boolean indicating whether this operation was a success. </para></simplesect>
+<simplesect kind="return"><para>A boolean indicating whether the deserialization was succesful. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_collection.h" line="72" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_resource_record_collection.cpp" bodystart="38" bodyend="76"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_collection.h" line="81" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_resource_record_collection.cpp" bodystart="41" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_collection_1affa4da32b82b69f712c2383ab4f9ee8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Senergy::Dns::ResourceRecordCollection::Serialize</definition>
+        <argsstring>(MessageHeader &amp;header, ByteBuffer &amp;buffer)</argsstring>
+        <name>Serialize</name>
+        <param>
+          <type><ref refid="class_senergy_1_1_dns_1_1_message_header" kindref="compound">MessageHeader</ref> &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type><ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Serializeds all resource records from the specified buffer, according to the information in the specified DNS message header. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The DNS message header to write the information on the amount of resource records to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to write the serialized records to.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean indicating whether the serialization was succesful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_collection.h" line="93" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_resource_record_collection.cpp" bodystart="76" bodyend="80"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_collection_1a62ac608c82f209ec4b0c2ed5bc155a73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -125,73 +154,72 @@
         <argsstring>()</argsstring>
         <name>Dump</name>
         <briefdescription>
-<para>Calls the &apos;<ref refid="class_senergy_1_1_dns_1_1_resource_record_collection_1a62ac608c82f209ec4b0c2ed5bc155a73" kindref="member">Dump()</ref>&apos; method of all records, and thus dumping the fields of each record to standard output. </para>        </briefdescription>
+<para>Dumps the contents of this collection to the console. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_collection.h" line="78" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_resource_record_collection.cpp" bodystart="84" bodyend="102"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_collection.h" line="98" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_resource_record_collection.cpp" bodystart="88" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_collection_1a8c1ab4704d6a5fd1fa58daadbd9f69d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_senergy_1_1_vector_x" kindref="compound">VectorX</ref>&lt; <ref refid="namespace_senergy_1_1_dns_1a425b37e088cb64a1bda6205581ade5c8" kindref="member">ResourceRecordInterfacePtr</ref> &gt; &amp;</type>
+        <definition>VectorX&lt;ResourceRecordInterfacePtr&gt;&amp; Senergy::Dns::ResourceRecordCollection::operator[]</definition>
+        <argsstring>(ResourceRecordType resource_record_type)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0" kindref="member">ResourceRecordType</ref></type>
+          <declname>resource_record_type</declname>
+        </param>
+        <briefdescription>
+<para>Provides access the resource records in this collection based on the specified resource record type. Returns all the resource records of the specified type. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>resource_record_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A value from the ResourceRecordType enumuration which indicates which type of resource records to return.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of resource records of the specified type, they are returned in their polymorphic form. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_collection.h" line="110" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_collection.h" bodystart="110" bodyend="113"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
-      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_collection_1a9de3dcdf2eec61f25ee9f5c500f31637" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_collection_1ae4f58b8c1715119407f5ad2bcbdf5c60" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Senergy::Dns::ResourceRecordCollection::__clear_collections</definition>
+        <definition>void Senergy::Dns::ResourceRecordCollection::__register_mappings</definition>
         <argsstring>()</argsstring>
-        <name>__clear_collections</name>
+        <name>__register_mappings</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_collection.h" line="94" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_resource_record_collection.cpp" bodystart="78" bodyend="82"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_collection.h" line="117" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_resource_record_collection.cpp" bodystart="82" bodyend="86"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Simple container for all types of resource records we support. This is to prevent creating hundreds of separate containers in the <ref refid="class_senergy_1_1_dns_1_1_message" kindref="compound">Message</ref> class. </para>    </briefdescription>
+<para>A collection of resource record. We have many types of resource record. <ref refid="namespace_senergy" kindref="compound">Senergy</ref> DNS has a flexbile desing to simplify the implementation of additional records. This container is part of that design. It has the ability to contain all kinds of resource records. It also helps in serialization and deserialization. </para>    </briefdescription>
     <detaileddescription>
 <para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
 </para>    </detaileddescription>
-    <collaborationgraph>
-      <node id="41">
-        <label>std::vector&lt; IPV4AddressPtr &gt;</label>
-      </node>
-      <node id="39">
-        <label>Senergy::Dns::ResourceRecordCollection</label>
-        <link refid="class_senergy_1_1_dns_1_1_resource_record_collection"/>
-        <childnode refid="40" relation="usage">
-          <edgelabel>IPV4Answers</edgelabel>
-        </childnode>
-        <childnode refid="42" relation="usage">
-          <edgelabel>UnknownRecords</edgelabel>
-        </childnode>
-      </node>
-      <node id="40">
-        <label>Senergy::VectorX&lt; IPV4AddressPtr &gt;</label>
-        <link refid="class_senergy_1_1_vector_x"/>
-        <childnode refid="41" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="42">
-        <label>Senergy::VectorX&lt; ResourceRecordPtr &gt;</label>
-        <link refid="class_senergy_1_1_vector_x"/>
-        <childnode refid="43" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="43">
-        <label>std::vector&lt; ResourceRecordPtr  &gt;</label>
-      </node>
-    </collaborationgraph>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_collection.h" line="44" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_collection.h" bodystart="43" bodyend="95"/>
+    <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_collection.h" line="53" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_collection.h" bodystart="52" bodyend="126"/>
     <listofallmembers>
-      <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1a9de3dcdf2eec61f25ee9f5c500f31637" prot="private" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordCollection</scope><name>__clear_collections</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1ae4f58b8c1715119407f5ad2bcbdf5c60" prot="private" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordCollection</scope><name>__register_mappings</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1ad0d89b82d1a6d862d84e411decf81527" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordCollection</scope><name>Clear</name></member>
       <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1ae228f7ec1cf020033f64f68a3f5ea4e1" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordCollection</scope><name>Deserialize</name></member>
       <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1a62ac608c82f209ec4b0c2ed5bc155a73" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordCollection</scope><name>Dump</name></member>
-      <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1a0ca3a73fcaabee1703b18c9c8ca453f9" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordCollection</scope><name>IPV4Answers</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1af5358ca4090c15dfe0366a8b16724fa3" prot="private" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordCollection</scope><name>m_mapper</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1a0f29ad274da2c4509bd1971a257fa6d2" prot="private" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordCollection</scope><name>m_records</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1a8c1ab4704d6a5fd1fa58daadbd9f69d5" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordCollection</scope><name>operator[]</name></member>
       <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1a66f740bd63a874374e471973ee236d78" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordCollection</scope><name>ResourceRecordCollection</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1aee27f65b6b0ada40ef25de8189d55436" prot="private" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordCollection</scope><name>ResourceRecordMapCollection</name></member>
       <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1affa4da32b82b69f712c2383ab4f9ee8c" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordCollection</scope><name>Serialize</name></member>
-      <member refid="class_senergy_1_1_dns_1_1_resource_record_collection_1a1ad19da9ca3420c4aa1ad865099e387d" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordCollection</scope><name>UnknownRecords</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

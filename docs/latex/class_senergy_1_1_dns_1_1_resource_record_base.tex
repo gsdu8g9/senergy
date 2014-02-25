@@ -25,6 +25,8 @@ void \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base_ad5f8a096ae61dcf0
 \begin{DoxyCompactList}\small\item\em Sets the hostname for this answer. \end{DoxyCompactList}\item 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0}{Resource\-Record\-Type} \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base_acabfef62c1a3ef4332556bd312c42bdc}{Get\-Type} ()
 \begin{DoxyCompactList}\small\item\em Gets the resource record type, the type of resource this record contains. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base_a2410ada2a69ff9d2f5b6599c5cda8dc1}{Get\-Type\-String} ()
+\begin{DoxyCompactList}\small\item\em Gets the resource record type of this record, as a string. \end{DoxyCompactList}\item 
 void \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base_affcaab56c3632a361a654ed5bc79b3c4}{Set\-Type} (\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0}{Resource\-Record\-Type} type)
 \begin{DoxyCompactList}\small\item\em Sets the resource record type, the type of resource this record contains. \end{DoxyCompactList}\item 
 \hyperlink{namespace_senergy_1_1_dns_a953f153bc411213d621d00c1e1b3eb9d}{Resource\-Record\-Class} \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base_a4abfe4f1eeb552494be535c271abe18f}{Get\-Class} ()
@@ -43,7 +45,14 @@ void \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base_ae4c4b80c9325c026
 \begin{DoxyCompactItemize}
 \item 
 static Resource\-Record\-Base\-Ptr \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base_a21ea1d5b7a354e2025c01248c019f6a1}{Create} ()
-\begin{DoxyCompactList}\small\item\em Creates a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Resource\-Record\-Base} class as a shared pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Resource\-Record\-Base} class as a shared pointer. \end{DoxyCompactList}\item 
+static int \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base_a2b4f8d43e9a21fd1aff168e4aa88cc9a}{Get\-Minimal\-Size} ()
+\begin{DoxyCompactList}\small\item\em Gets the minimal size of a resource record, the size that is required to contain all fiels except the resource data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base_a33acbda019abea688a25ca962f4b7815}{Resource\-Record\-Interface}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -54,7 +63,7 @@ Swen Kooij (Photonios)
 \end{DoxyAuthor}
 
 
-Definition at line 47 of file resource\-\_\-record\-\_\-base.\-h.
+Definition at line 48 of file resource\-\_\-record\-\_\-base.\-h.
 
 
 
@@ -138,7 +147,7 @@ Dumps all fields to the standard output, with their values. In the following for
 
 
 
-Definition at line 129 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
+Definition at line 136 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_resource_record_base_a4abfe4f1eeb552494be535c271abe18f}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Base@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}!Get\-Class@{Get\-Class}}
 \index{Get\-Class@{Get\-Class}!Senergy::Dns::ResourceRecordBase@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}}
@@ -156,7 +165,7 @@ A value from the Resource\-Record\-Class enumuration, which indicates what class
 \end{DoxyReturn}
 
 
-Definition at line 104 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
+Definition at line 111 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_resource_record_base_a486427180da21f76701001a5e411e369}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Base@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}!Get\-Hostname@{Get\-Hostname}}
 \index{Get\-Hostname@{Get\-Hostname}!Senergy::Dns::ResourceRecordBase@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}}
@@ -174,7 +183,7 @@ The hostname configured in this answer.
 \end{DoxyReturn}
 
 
-Definition at line 84 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
+Definition at line 83 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_resource_record_base_a96094f0e13f517b6462cd193f9b82f80}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Base@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}!Get\-Max\-Caching\-Time@{Get\-Max\-Caching\-Time}}
 \index{Get\-Max\-Caching\-Time@{Get\-Max\-Caching\-Time}!Senergy::Dns::ResourceRecordBase@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}}
@@ -192,7 +201,25 @@ The maximum amount of seconds the resource in this record should be cached. If z
 \end{DoxyReturn}
 
 
-Definition at line 119 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
+Definition at line 126 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_base_a2b4f8d43e9a21fd1aff168e4aa88cc9a}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Base@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}!Get\-Minimal\-Size@{Get\-Minimal\-Size}}
+\index{Get\-Minimal\-Size@{Get\-Minimal\-Size}!Senergy::Dns::ResourceRecordBase@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}}
+\subsubsection[{Get\-Minimal\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int Senergy\-::\-Dns\-::\-Resource\-Record\-Base\-::\-Get\-Minimal\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_resource_record_base_a2b4f8d43e9a21fd1aff168e4aa88cc9a}
+
+
+Gets the minimal size of a resource record, the size that is required to contain all fiels except the resource data. 
+
+\begin{DoxyReturn}{Returns}
+The amount of bytes that the minimal size of a resource record is. 
+\end{DoxyReturn}
+
+
+Definition at line 145 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_resource_record_base_ad077545843d4565a39a4d6e1cffb8859}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Base@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}!Get\-Resource\-Size@{Get\-Resource\-Size}}
 \index{Get\-Resource\-Size@{Get\-Resource\-Size}!Senergy::Dns::ResourceRecordBase@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}}
@@ -210,7 +237,7 @@ The size of the resource in this record (amount of bytes).
 \end{DoxyReturn}
 
 
-Definition at line 124 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
+Definition at line 131 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_resource_record_base_acabfef62c1a3ef4332556bd312c42bdc}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Base@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}!Get\-Type@{Get\-Type}}
 \index{Get\-Type@{Get\-Type}!Senergy::Dns::ResourceRecordBase@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}}
@@ -228,7 +255,25 @@ A value from the Resource\-Record\-Type enumuration, which indicates what kind o
 \end{DoxyReturn}
 
 
-Definition at line 94 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
+Definition at line 93 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_base_a2410ada2a69ff9d2f5b6599c5cda8dc1}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Base@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}!Get\-Type\-String@{Get\-Type\-String}}
+\index{Get\-Type\-String@{Get\-Type\-String}!Senergy::Dns::ResourceRecordBase@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}}
+\subsubsection[{Get\-Type\-String}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Senergy\-::\-Dns\-::\-Resource\-Record\-Base\-::\-Get\-Type\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_resource_record_base_a2410ada2a69ff9d2f5b6599c5cda8dc1}
+
+
+Gets the resource record type of this record, as a string. 
+
+\begin{DoxyReturn}{Returns}
+The type of this resource record as a string, which is basiclly the name of the configued Resource\-Record\-Type enumuration value. 
+\end{DoxyReturn}
+
+
+Definition at line 98 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_resource_record_base_a7b6733ccb332b22335e33e09ad7bddd0}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Base@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}!Needs\-Caching@{Needs\-Caching}}
 \index{Needs\-Caching@{Needs\-Caching}!Senergy::Dns::ResourceRecordBase@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}}
@@ -246,7 +291,7 @@ True when this record needs to be cached, and false when it should not be cached
 \end{DoxyReturn}
 
 
-Definition at line 114 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
+Definition at line 121 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_resource_record_base_a3a343750cf6e6a4455d25c064d4412f5}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Base@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}!Serialize@{Serialize}}
 \index{Serialize@{Serialize}!Senergy::Dns::ResourceRecordBase@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}}
@@ -276,7 +321,7 @@ A boolean indicating whether serialization was successful. True is returned when
 \end{DoxyReturn}
 
 
-Definition at line 69 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
+Definition at line 68 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_resource_record_base_a87d4a0202837700dbc6662d9aff8f385}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Base@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}!Set\-Class@{Set\-Class}}
 \index{Set\-Class@{Set\-Class}!Senergy::Dns::ResourceRecordBase@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}}
@@ -296,7 +341,7 @@ Sets the resource record class, the class of resource this record contains.
 \end{DoxyParams}
 
 
-Definition at line 109 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
+Definition at line 116 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_resource_record_base_ad5f8a096ae61dcf0ddaac380f84bf052}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Base@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}!Set\-Hostname@{Set\-Hostname}}
 \index{Set\-Hostname@{Set\-Hostname}!Senergy::Dns::ResourceRecordBase@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}}
@@ -316,7 +361,7 @@ Sets the hostname for this answer.
 \end{DoxyParams}
 
 
-Definition at line 89 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
+Definition at line 88 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
 
 \hypertarget{class_senergy_1_1_dns_1_1_resource_record_base_affcaab56c3632a361a654ed5bc79b3c4}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Base@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}!Set\-Type@{Set\-Type}}
 \index{Set\-Type@{Set\-Type}!Senergy::Dns::ResourceRecordBase@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}}
@@ -336,7 +381,17 @@ Sets the resource record type, the type of resource this record contains.
 \end{DoxyParams}
 
 
-Definition at line 99 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
+Definition at line 106 of file dns\-\_\-resource\-\_\-record\-\_\-base.\-cpp.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_base_a33acbda019abea688a25ca962f4b7815}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Base@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}!Resource\-Record\-Interface@{Resource\-Record\-Interface}}
+\index{Resource\-Record\-Interface@{Resource\-Record\-Interface}!Senergy::Dns::ResourceRecordBase@{Senergy\-::\-Dns\-::\-Resource\-Record\-Base}}
+\subsubsection[{Resource\-Record\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Resource\-Record\-Interface}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_senergy_1_1_dns_1_1_resource_record_base_a33acbda019abea688a25ca962f4b7815}
+
+
+Definition at line 51 of file resource\-\_\-record\-\_\-base.\-h.
 
 
 

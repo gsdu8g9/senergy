@@ -7,10 +7,15 @@
     <innerclass refid="struct_senergy_1_1_dns_1_1_message_header_fields" prot="public">Senergy::Dns::MessageHeaderFields</innerclass>
     <innerclass refid="class_senergy_1_1_dns_1_1_message_header" prot="public">Senergy::Dns::MessageHeader</innerclass>
     <innerclass refid="class_senergy_1_1_dns_1_1_message_question" prot="public">Senergy::Dns::MessageQuestion</innerclass>
+    <innerclass refid="class_senergy_1_1_dns_1_1_i_p_v4_record" prot="public">Senergy::Dns::IPV4Record</innerclass>
+    <innerclass refid="class_senergy_1_1_dns_1_1_name_server_record" prot="public">Senergy::Dns::NameServerRecord</innerclass>
+    <innerclass refid="class_senergy_1_1_dns_1_1_unknown_record" prot="public">Senergy::Dns::UnknownRecord</innerclass>
     <innerclass refid="class_senergy_1_1_dns_1_1_requester" prot="public">Senergy::Dns::Requester</innerclass>
     <innerclass refid="class_senergy_1_1_dns_1_1_resource_record_base" prot="public">Senergy::Dns::ResourceRecordBase</innerclass>
+    <innerclass refid="class_senergy_1_1_dns_1_1_resource_record_collection" prot="public">Senergy::Dns::ResourceRecordCollection</innerclass>
     <innerclass refid="class_senergy_1_1_dns_1_1_resource_record_interface" prot="public">Senergy::Dns::ResourceRecordInterface</innerclass>
     <innerclass refid="class_senergy_1_1_dns_1_1_resource_record_mapper" prot="public">Senergy::Dns::ResourceRecordMapper</innerclass>
+    <innerclass refid="class_senergy_1_1_dns_1_1_resource_record_type_map" prot="public">Senergy::Dns::ResourceRecordTypeMap</innerclass>
     <innerclass refid="class_senergy_1_1_dns_1_1_root_name_server" prot="public">Senergy::Dns::RootNameServer</innerclass>
     <innerclass refid="class_senergy_1_1_dns_1_1_utils" prot="public">Senergy::Dns::Utils</innerclass>
       <sectiondef kind="enum">
@@ -72,10 +77,18 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_classes.h" line="39" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_classes.h" bodystart="38" bodyend="46"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_classes.h" line="39" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_classes.h" bodystart="38" bodyend="46"/>
       </memberdef>
       <memberdef kind="enum" id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0" prot="public" static="no">
         <name>ResourceRecordType</name>
+        <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a88183b946cc5f0e8c96b2e66e1c74a7e" prot="public">
+          <name>Unknown</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Unknown. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
         <enumvalue id="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29" prot="public">
           <name>A</name>
           <initializer>= 1</initializer>
@@ -716,7 +729,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_types.h" line="38" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_types.h" bodystart="37" bodyend="441"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_types.h" line="40" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_types.h" bodystart="39" bodyend="448"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -731,7 +744,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="193" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="193" bodyend="-1"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/message_question.h" line="193" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/message_question.h" bodystart="193" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespace_senergy_1_1_dns_1a6983ff2422cfa510ca61831ae5cf1ffc" prot="public" static="no">
         <type><ref refid="class_senergy_1_1_vector_x" kindref="compound">VectorX</ref>&lt; <ref refid="namespace_senergy_1_1_dns_1a425a2a6f3b5c18973c524a99bdfa4ef0" kindref="member">MessageQuestionPtr</ref> &gt;</type>
@@ -744,7 +757,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" line="198" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/message_question.h" bodystart="198" bodyend="-1"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/message_question.h" line="198" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/message_question.h" bodystart="198" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespace_senergy_1_1_dns_1a72915c893fbf242018e79d8f92e1646b" prot="public" static="no">
         <type>std::shared_ptr&lt; <ref refid="class_senergy_1_1_dns_1_1_resource_record_base" kindref="compound">ResourceRecordBase</ref> &gt;</type>
@@ -757,7 +770,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_base.h" line="209" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_base.h" bodystart="209" bodyend="-1"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_base.h" line="229" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_base.h" bodystart="229" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespace_senergy_1_1_dns_1a425b37e088cb64a1bda6205581ade5c8" prot="public" static="no">
         <type>std::shared_ptr&lt; <ref refid="class_senergy_1_1_dns_1_1_resource_record_interface" kindref="compound">ResourceRecordInterface</ref> &gt;</type>
@@ -770,13 +783,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_interface.h" line="134" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_interface.h" bodystart="134" bodyend="-1"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_interface.h" line="176" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_interface.h" bodystart="176" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/photonios/Documents/Senergy/src/dns_id_factory.cpp" line="27" column="1"/>
+    <location file="/home/photonios/Documents/senergy/src/dns_id_factory.cpp" line="27" column="1"/>
   </compounddef>
 </doxygen>

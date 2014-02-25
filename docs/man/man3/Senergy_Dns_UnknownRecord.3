@@ -1,0 +1,145 @@
+.TH "Senergy::Dns::UnknownRecord" 3 "Tue Feb 25 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::Dns::UnknownRecord \- 
+.PP
+Represents a record that could not be handled by one of the other classes that implement the \fBResourceRecordInterface\fP class\&. All records that are of a type that is not supported by the mapper are handled by this class\&. This class makes sure the resource record data is skipped when deserialization and serialization\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <record_unknown\&.h>\fP
+.PP
+Inherits \fBSenergy::Dns::ResourceRecordInterface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBUnknownRecord\fP (\fBResourceRecordBasePtr\fP base)"
+.br
+.RI "\fIInitializes a new instance of the \fBUnknownRecord\fP class with the specified resource record base\&. \fP"
+.ti -1c
+.RI "bool \fBSerialize\fP (\fBByteBuffer\fP &buffer)"
+.br
+.RI "\fISerializes this record into the specified buffer\&. This does not handle the serialization of the first (base) part of the resource record\&. Call SerializeBase for that\&. \fP"
+.ti -1c
+.RI "bool \fBDeserialize\fP (\fBByteBuffer\fP &buffer)"
+.br
+.RI "\fIDeserializes the record from the specified buffer\&. This does not handle deserialization of the first (base) part of the resource record\&. Call DeserializeBase for that\&. \fP"
+.ti -1c
+.RI "\fBResourceRecordInterfacePtr\fP \fBCreate\fP (\fBResourceRecordBasePtr\fP base)"
+.br
+.RI "\fICreates a new instance of this class, and returns it as a shared pointer to an instance of the \fBResourceRecordInterface\fP class\&. \fP"
+.ti -1c
+.RI "\fBResourceRecordType\fP \fBGetType\fP ()"
+.br
+.RI "\fIGets the type of of this record (derived), wich is a value from the ResourceRecordType enumuration\&. \fP"
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Represents a record that could not be handled by one of the other classes that implement the \fBResourceRecordInterface\fP class\&. All records that are of a type that is not supported by the mapper are handled by this class\&. This class makes sure the resource record data is skipped when deserialization and serialization\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.PP
+Definition at line 43 of file record_unknown\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Senergy::Dns::UnknownRecord::UnknownRecord (\fBResourceRecordBasePtr\fPbase)"
+
+.PP
+Initializes a new instance of the \fBUnknownRecord\fP class with the specified resource record base\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbase\fP A smart pointer to an instance of the \fBResourceRecordBase\fP class, wich serves as the base of this instance\&. 
+.RE
+.PP
+
+.PP
+Definition at line 29 of file dns_record_unknown\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBResourceRecordInterfacePtr\fP Senergy::Dns::UnknownRecord::Create (\fBResourceRecordBasePtr\fPbase)\fC [virtual]\fP"
+
+.PP
+Creates a new instance of this class, and returns it as a shared pointer to an instance of the \fBResourceRecordInterface\fP class\&. The derived class should create an instance of itself and return the polymorphic form (as it's base)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbase\fP The \fBResourceRecordBase\fP class to pass to the constructor\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A shared pointer to an instance of the \fBResourceRecordInterface\fP class, which is just the polymorphic form of the derived class\&. 
+.RE
+.PP
+
+.PP
+Implements \fBSenergy::Dns::ResourceRecordInterface\fP\&.
+.PP
+Definition at line 63 of file dns_record_unknown\&.cpp\&.
+.SS "bool Senergy::Dns::UnknownRecord::Deserialize (\fBByteBuffer\fP &buffer)\fC [virtual]\fP"
+
+.PP
+Deserializes the record from the specified buffer\&. This does not handle deserialization of the first (base) part of the resource record\&. Call DeserializeBase for that\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to deserialize from\&. 
+.RE
+.PP
+
+.PP
+Implements \fBSenergy::Dns::ResourceRecordInterface\fP\&.
+.PP
+Definition at line 36 of file dns_record_unknown\&.cpp\&.
+.SS "\fBResourceRecordType\fP Senergy::Dns::UnknownRecord::GetType ()\fC [virtual]\fP"
+
+.PP
+Gets the type of of this record (derived), wich is a value from the ResourceRecordType enumuration\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A value from the ResourceRecordType enumuration which denotes the type of this record\&. 
+.RE
+.PP
+
+.PP
+Implements \fBSenergy::Dns::ResourceRecordInterface\fP\&.
+.PP
+Definition at line 68 of file dns_record_unknown\&.cpp\&.
+.SS "bool Senergy::Dns::UnknownRecord::Serialize (\fBByteBuffer\fP &buffer)\fC [virtual]\fP"
+
+.PP
+Serializes this record into the specified buffer\&. This does not handle the serialization of the first (base) part of the resource record\&. Call SerializeBase for that\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to serialize to\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether the serialization was successful\&. 
+.RE
+.PP
+
+.PP
+Implements \fBSenergy::Dns::ResourceRecordInterface\fP\&.
+.PP
+Definition at line 52 of file dns_record_unknown\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

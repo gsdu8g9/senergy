@@ -1,0 +1,241 @@
+\hypertarget{class_senergy_1_1_dns_1_1_name_server_record}{\section{Senergy\-:\-:Dns\-:\-:Name\-Server\-Record Class Reference}
+\label{class_senergy_1_1_dns_1_1_name_server_record}\index{Senergy\-::\-Dns\-::\-Name\-Server\-Record@{Senergy\-::\-Dns\-::\-Name\-Server\-Record}}
+}
+
+
+Represents a D\-N\-S 'N\-S' record, which is a resource record that contains an nameserver address. It is what root D\-N\-S servers usually send back. This is defined in section 3.\-3.\-11 of R\-F\-C 1035.  
+
+
+
+
+{\ttfamily \#include $<$record\-\_\-nameserver.\-h$>$}
+
+Inheritance diagram for Senergy\-:\-:Dns\-:\-:Name\-Server\-Record\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_senergy_1_1_dns_1_1_name_server_record}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_senergy_1_1_dns_1_1_name_server_record_a435c6b989e070adcfce7b72c02ae83fb}{Name\-Server\-Record} (\hyperlink{namespace_senergy_1_1_dns_a72915c893fbf242018e79d8f92e1646b}{Resource\-Record\-Base\-Ptr} base)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_name_server_record}{Name\-Server\-Record} class with the specified resource record base. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_dns_1_1_name_server_record_a9e9b980a9c341cff47bb5840fc01ed06}{Serialize} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
+\begin{DoxyCompactList}\small\item\em Serializes this record into the specified buffer. This does not handle the serialization of the first (base) part of the resource record. Call Serialize\-Base for that. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_dns_1_1_name_server_record_a6e01ac3f215b4766cae9ccc7fa58987a}{Deserialize} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
+\begin{DoxyCompactList}\small\item\em Deserializes the record from the specified buffer. This does not handle deserialization of the first (base) part of the resource record. Call Deserialize\-Base for that. \end{DoxyCompactList}\item 
+\hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_abf5eec20c95f05b57c5c02eaed349e16}{Resource\-Record\-Interface\-Ptr} \hyperlink{class_senergy_1_1_dns_1_1_name_server_record_a006930a7fc6c7d736cfe5c0ee1d79b9d}{Create} (\hyperlink{namespace_senergy_1_1_dns_a72915c893fbf242018e79d8f92e1646b}{Resource\-Record\-Base\-Ptr} base)
+\begin{DoxyCompactList}\small\item\em Creates a new instance of this class, and returns it as a shared pointer to an instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class. \end{DoxyCompactList}\item 
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0}{Resource\-Record\-Type} \hyperlink{class_senergy_1_1_dns_1_1_name_server_record_a2ad5b053bceedbf8bf927a275d530431}{Get\-Type} ()
+\begin{DoxyCompactList}\small\item\em Gets the type of of this record (derived), wich is a value from the Resource\-Record\-Type enumuration. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_dns_1_1_name_server_record_a013b114dfa28ff37eb3f1a3c24390646}{Set\-Address} (const std\-::string \&address)
+\begin{DoxyCompactList}\small\item\em Sets the Name\-Server address that needs to be serialized. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_senergy_1_1_dns_1_1_name_server_record_a012e369dd4a94c98cb01e6df87ea8cbc}{Get\-Address} ()
+\begin{DoxyCompactList}\small\item\em Gets the Name\-Server address that was deserialized. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_dns_1_1_name_server_record_a95047855d9e9fb77fbbfa8534c3ddb62}{Dump} ()
+\begin{DoxyCompactList}\small\item\em Dumps all fields to the standard output, with their values. In the following format\-: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents a D\-N\-S 'N\-S' record, which is a resource record that contains an nameserver address. It is what root D\-N\-S servers usually send back. This is defined in section 3.\-3.\-11 of R\-F\-C 1035. 
+
+\begin{DoxyAuthor}{Author}
+Swen Kooij (Photonios) 
+\end{DoxyAuthor}
+
+
+Definition at line 43 of file record\-\_\-nameserver.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_name_server_record_a435c6b989e070adcfce7b72c02ae83fb}{\index{Senergy\-::\-Dns\-::\-Name\-Server\-Record@{Senergy\-::\-Dns\-::\-Name\-Server\-Record}!Name\-Server\-Record@{Name\-Server\-Record}}
+\index{Name\-Server\-Record@{Name\-Server\-Record}!Senergy::Dns::NameServerRecord@{Senergy\-::\-Dns\-::\-Name\-Server\-Record}}
+\subsubsection[{Name\-Server\-Record}]{\setlength{\rightskip}{0pt plus 5cm}Senergy\-::\-Dns\-::\-Name\-Server\-Record\-::\-Name\-Server\-Record (
+\begin{DoxyParamCaption}
+\item[{{\bf Resource\-Record\-Base\-Ptr}}]{base}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_name_server_record_a435c6b989e070adcfce7b72c02ae83fb}
+
+
+Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_name_server_record}{Name\-Server\-Record} class with the specified resource record base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & The base resource record instance to use for the Name\-Server record. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file dns\-\_\-record\-\_\-nameserver.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_name_server_record_a006930a7fc6c7d736cfe5c0ee1d79b9d}{\index{Senergy\-::\-Dns\-::\-Name\-Server\-Record@{Senergy\-::\-Dns\-::\-Name\-Server\-Record}!Create@{Create}}
+\index{Create@{Create}!Senergy::Dns::NameServerRecord@{Senergy\-::\-Dns\-::\-Name\-Server\-Record}}
+\subsubsection[{Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\-Record\-Interface\-Ptr} Senergy\-::\-Dns\-::\-Name\-Server\-Record\-::\-Create (
+\begin{DoxyParamCaption}
+\item[{{\bf Resource\-Record\-Base\-Ptr}}]{base}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_senergy_1_1_dns_1_1_name_server_record_a006930a7fc6c7d736cfe5c0ee1d79b9d}
+
+
+Creates a new instance of this class, and returns it as a shared pointer to an instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class. 
+
+The derived class should create an instance of itself and return the polymorphic form (as it's base).
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & The \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Resource\-Record\-Base} class to pass to the constructor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to an instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class, which is just the polymorphic form of the derived class. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_abe37068b670f89481a145e1e9c2c8267}{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}.
+
+
+
+Definition at line 55 of file dns\-\_\-record\-\_\-nameserver.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_name_server_record_a6e01ac3f215b4766cae9ccc7fa58987a}{\index{Senergy\-::\-Dns\-::\-Name\-Server\-Record@{Senergy\-::\-Dns\-::\-Name\-Server\-Record}!Deserialize@{Deserialize}}
+\index{Deserialize@{Deserialize}!Senergy::Dns::NameServerRecord@{Senergy\-::\-Dns\-::\-Name\-Server\-Record}}
+\subsubsection[{Deserialize}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Name\-Server\-Record\-::\-Deserialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Byte\-Buffer} \&}]{buffer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_senergy_1_1_dns_1_1_name_server_record_a6e01ac3f215b4766cae9ccc7fa58987a}
+
+
+Deserializes the record from the specified buffer. This does not handle deserialization of the first (base) part of the resource record. Call Deserialize\-Base for that. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to deserialize from. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_ade2e0b9817476ea2161b694efd3e02db}{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}.
+
+
+
+Definition at line 36 of file dns\-\_\-record\-\_\-nameserver.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_name_server_record_a95047855d9e9fb77fbbfa8534c3ddb62}{\index{Senergy\-::\-Dns\-::\-Name\-Server\-Record@{Senergy\-::\-Dns\-::\-Name\-Server\-Record}!Dump@{Dump}}
+\index{Dump@{Dump}!Senergy::Dns::NameServerRecord@{Senergy\-::\-Dns\-::\-Name\-Server\-Record}}
+\subsubsection[{Dump}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Dns\-::\-Name\-Server\-Record\-::\-Dump (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_senergy_1_1_dns_1_1_name_server_record_a95047855d9e9fb77fbbfa8534c3ddb62}
+
+
+Dumps all fields to the standard output, with their values. In the following format\-: 
+
+
+
+Reimplemented from \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_aced6e4bc388ce3568d72d9670a2e9da5}{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}.
+
+
+
+Definition at line 75 of file dns\-\_\-record\-\_\-nameserver.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_name_server_record_a012e369dd4a94c98cb01e6df87ea8cbc}{\index{Senergy\-::\-Dns\-::\-Name\-Server\-Record@{Senergy\-::\-Dns\-::\-Name\-Server\-Record}!Get\-Address@{Get\-Address}}
+\index{Get\-Address@{Get\-Address}!Senergy::Dns::NameServerRecord@{Senergy\-::\-Dns\-::\-Name\-Server\-Record}}
+\subsubsection[{Get\-Address}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Senergy\-::\-Dns\-::\-Name\-Server\-Record\-::\-Get\-Address (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_name_server_record_a012e369dd4a94c98cb01e6df87ea8cbc}
+
+
+Gets the Name\-Server address that was deserialized. 
+
+\begin{DoxyReturn}{Returns}
+The Name\-Server address that was deserialized. 
+\end{DoxyReturn}
+
+
+Definition at line 70 of file dns\-\_\-record\-\_\-nameserver.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_name_server_record_a2ad5b053bceedbf8bf927a275d530431}{\index{Senergy\-::\-Dns\-::\-Name\-Server\-Record@{Senergy\-::\-Dns\-::\-Name\-Server\-Record}!Get\-Type@{Get\-Type}}
+\index{Get\-Type@{Get\-Type}!Senergy::Dns::NameServerRecord@{Senergy\-::\-Dns\-::\-Name\-Server\-Record}}
+\subsubsection[{Get\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\-Record\-Type} Senergy\-::\-Dns\-::\-Name\-Server\-Record\-::\-Get\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_senergy_1_1_dns_1_1_name_server_record_a2ad5b053bceedbf8bf927a275d530431}
+
+
+Gets the type of of this record (derived), wich is a value from the Resource\-Record\-Type enumuration. 
+
+\begin{DoxyReturn}{Returns}
+A value from the Resource\-Record\-Type enumuration which denotes the type of this record. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_af895ba199749599d42f8e6a737eb9118}{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}.
+
+
+
+Definition at line 60 of file dns\-\_\-record\-\_\-nameserver.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_name_server_record_a9e9b980a9c341cff47bb5840fc01ed06}{\index{Senergy\-::\-Dns\-::\-Name\-Server\-Record@{Senergy\-::\-Dns\-::\-Name\-Server\-Record}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Senergy::Dns::NameServerRecord@{Senergy\-::\-Dns\-::\-Name\-Server\-Record}}
+\subsubsection[{Serialize}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Name\-Server\-Record\-::\-Serialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Byte\-Buffer} \&}]{buffer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_senergy_1_1_dns_1_1_name_server_record_a9e9b980a9c341cff47bb5840fc01ed06}
+
+
+Serializes this record into the specified buffer. This does not handle the serialization of the first (base) part of the resource record. Call Serialize\-Base for that. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to serialize to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether the serialization was successful. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_ab81e0a7ea292513c5c34a3be0c7a6dca}{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}.
+
+
+
+Definition at line 46 of file dns\-\_\-record\-\_\-nameserver.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_name_server_record_a013b114dfa28ff37eb3f1a3c24390646}{\index{Senergy\-::\-Dns\-::\-Name\-Server\-Record@{Senergy\-::\-Dns\-::\-Name\-Server\-Record}!Set\-Address@{Set\-Address}}
+\index{Set\-Address@{Set\-Address}!Senergy::Dns::NameServerRecord@{Senergy\-::\-Dns\-::\-Name\-Server\-Record}}
+\subsubsection[{Set\-Address}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Dns\-::\-Name\-Server\-Record\-::\-Set\-Address (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{address}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_name_server_record_a013b114dfa28ff37eb3f1a3c24390646}
+
+
+Sets the Name\-Server address that needs to be serialized. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The Name\-Server address to be serialized. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 65 of file dns\-\_\-record\-\_\-nameserver.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/senergy/dns/\hyperlink{record__nameserver_8h}{record\-\_\-nameserver.\-h}\item 
+src/\hyperlink{dns__record__nameserver_8cpp}{dns\-\_\-record\-\_\-nameserver.\-cpp}\end{DoxyCompactItemize}

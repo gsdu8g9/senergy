@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_senergy_1_1_dns_1_1_resource_record_type_map" kind="class" prot="public">
+    <compoundname>Senergy::Dns::ResourceRecordTypeMap</compoundname>
+    <basecompoundref refid="class_senergy_1_1_enum_mapper" prot="public" virt="non-virtual">Senergy::EnumMapper&lt; ResourceRecordType &gt;</basecompoundref>
+    <includes refid="resource__record__types_8h" local="no">resource_record_types.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_resource_record_type_map_1afc3640731db922a037e022654646b76d" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_senergy_1_1_dns_1_1_resource_record_type_map" kindref="compound">ResourceRecordTypeMap</ref></type>
+        <definition>ResourceRecordTypeMap Senergy::Dns::ResourceRecordTypeMap::s_map</definition>
+        <argsstring></argsstring>
+        <name>s_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_types.h" line="479" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_types.h" bodystart="479" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_type_map_1ae64533ac9d0639fcf887888cd0d975c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Senergy::Dns::ResourceRecordTypeMap::ResourceRecordTypeMap</definition>
+        <argsstring>()</argsstring>
+        <name>ResourceRecordTypeMap</name>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_senergy_1_1_dns_1_1_resource_record_type_map" kindref="compound">ResourceRecordTypeMap</ref> class and maps all the values from the ResourceRecordType enumuration. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_types.h" line="463" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_resource_record_types.cpp" bodystart="32" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_type_map_1a3099645859209cf5c05d1f95ed2a4be0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Senergy::Dns::ResourceRecordTypeMap::Get</definition>
+        <argsstring>(ResourceRecordType type)</argsstring>
+        <name>Get</name>
+        <param>
+          <type><ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0" kindref="member">ResourceRecordType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Gets the textual representation of the specified resource record type. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A value from the ResourceRecordType enumuration, the value to get the textual represenation of.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The textual represenatation of the specified value from the ResourceRecordType enumuration. If no mapping for the specified value exists, an empty string is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_types.h" line="474" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_resource_record_types.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Statis class that helps mapping values from the ResourceRecordType enumuration to their textual representation. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="63">
+        <label>Senergy::Dns::ResourceRecordTypeMap</label>
+        <link refid="class_senergy_1_1_dns_1_1_resource_record_type_map"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>Senergy::EnumMapper&lt; ResourceRecordType &gt;</label>
+        <link refid="class_senergy_1_1_enum_mapper"/>
+        <childnode refid="65" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>Senergy::FastMap&lt; ResourceRecordType, std::string &gt;</label>
+        <link refid="class_senergy_1_1_fast_map"/>
+        <childnode refid="66" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>std::vector&lt; FastMapItem&lt; ResourceRecordType, std::string &gt; &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="67">
+        <label>Senergy::Dns::ResourceRecordTypeMap</label>
+        <link refid="class_senergy_1_1_dns_1_1_resource_record_type_map"/>
+        <childnode refid="68" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>Senergy::EnumMapper&lt; ResourceRecordType &gt;</label>
+        <link refid="class_senergy_1_1_enum_mapper"/>
+        <childnode refid="69" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>Senergy::FastMap&lt; ResourceRecordType, std::string &gt;</label>
+        <link refid="class_senergy_1_1_fast_map"/>
+        <childnode refid="70" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>std::vector&lt; FastMapItem&lt; ResourceRecordType, std::string &gt; &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_types.h" line="457" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_types.h" bodystart="456" bodyend="480"/>
+    <listofallmembers>
+      <member refid="class_senergy_1_1_fast_map_1a869e057da1eeb6d54f510e1302a8b7a1" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordTypeMap</scope><name>at</name></member>
+      <member refid="class_senergy_1_1_fast_map_1a2391a47cf91bcc3561837800777ae91f" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordTypeMap</scope><name>Clear</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_type_map_1a3099645859209cf5c05d1f95ed2a4be0" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordTypeMap</scope><name>Get</name></member>
+      <member refid="class_senergy_1_1_enum_mapper_1a54d34e6d45397b9ec4d5d19ec5234b2c" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordTypeMap</scope><name>GetMapping</name></member>
+      <member refid="class_senergy_1_1_enum_mapper_1a1bded4a48eb23c33dca633c7c59aba7e" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordTypeMap</scope><name>Map</name></member>
+      <member refid="class_senergy_1_1_fast_map_1ac06929fda5af594e6ccf96198eac1819" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordTypeMap</scope><name>operator[]</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_type_map_1ae64533ac9d0639fcf887888cd0d975c7" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordTypeMap</scope><name>ResourceRecordTypeMap</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_type_map_1afc3640731db922a037e022654646b76d" prot="private" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordTypeMap</scope><name>s_map</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

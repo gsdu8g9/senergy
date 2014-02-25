@@ -28,7 +28,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="64" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_utils.cpp" bodystart="29" bodyend="65"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/utils.h" line="64" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_utils.cpp" bodystart="29" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_utils_1ad621e66ca0463aaa21c9b74b489f09f3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -54,7 +54,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="86" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_utils.cpp" bodystart="67" bodyend="99"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/utils.h" line="86" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_utils.cpp" bodystart="67" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_utils_1a26ed8e47210810c24f8ab5a2588bf276" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned short</type>
@@ -80,7 +80,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="96" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_utils.cpp" bodystart="101" bodyend="104"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/utils.h" line="96" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_utils.cpp" bodystart="101" bodyend="104"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_utils_1aa4e117a17add157b5e9bcb5fada4ac49" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned short</type>
@@ -106,7 +106,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="106" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_utils.cpp" bodystart="106" bodyend="109"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/utils.h" line="106" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_utils.cpp" bodystart="106" bodyend="109"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_utils_1a952d70b6ddc617c92819eb2ad7e37f0d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned char</type>
@@ -132,7 +132,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="116" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_utils.cpp" bodystart="111" bodyend="114"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/utils.h" line="116" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_utils.cpp" bodystart="111" bodyend="114"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_utils_1ac34288e7acfa54f6faaa775ab5654192" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned char</type>
@@ -158,7 +158,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="126" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_utils.cpp" bodystart="116" bodyend="119"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/utils.h" line="126" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_utils.cpp" bodystart="116" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_utils_1a7a521aadbb12776e2127abe8028411dc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -184,7 +184,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="136" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_utils.cpp" bodystart="121" bodyend="124"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/utils.h" line="136" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_utils.cpp" bodystart="121" bodyend="124"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_utils_1ad4711275abcbc1d332f3c0208e74c4b8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -210,16 +210,21 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="146" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_utils.cpp" bodystart="126" bodyend="129"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/utils.h" line="146" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_utils.cpp" bodystart="126" bodyend="129"/>
       </memberdef>
-      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_utils_1a6b995d31d85ef39a5e8ac57928fa35ed" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_utils_1a81879edd7a9daec1d6dfbf952549c500" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
         <definition>std::string Senergy::Dns::Utils::ReadHostnameFromBuffer</definition>
-        <argsstring>(ByteBuffer &amp;buffer)</argsstring>
+        <argsstring>(ByteBuffer &amp;buffer, bool decode=true)</argsstring>
         <name>ReadHostnameFromBuffer</name>
         <param>
           <type><ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> &amp;</type>
           <declname>buffer</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>decode</declname>
+          <defval>true</defval>
         </param>
         <briefdescription>
 <para>Reads a domain name from the specified buffer, also known as a &apos;QNAME&apos;. </para>        </briefdescription>
@@ -230,14 +235,21 @@
 <parametername>buffer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The buffer to read the domain name from.</para></parameterdescription>
+<para>The buffer to read the domain name from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>decode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional parameters that indicates whether the returned string should be decoded using the <ref refid="class_senergy_1_1_dns_1_1_utils_1ad621e66ca0463aaa21c9b74b489f09f3" kindref="member">Utils::DecodeHostname</ref> function or not. If set to true the returned hostname will be decoded, if set to false it will not be decoded. We use this parameter when reading a domain name pointer.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
 <simplesect kind="return"><para>The domain name that was read from the buffer, or an empty string if something went wrong. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="169" column="1" bodyfile="/home/photonios/Documents/Senergy/src/dns_utils.cpp" bodystart="131" bodyend="161"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/utils.h" line="173" column="1" bodyfile="/home/photonios/Documents/senergy/src/dns_utils.cpp" bodystart="131" bodyend="167"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -245,7 +257,7 @@
     <detaileddescription>
 <para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" line="46" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/utils.h" bodystart="45" bodyend="170"/>
+    <location file="/home/photonios/Documents/senergy/src/senergy/dns/utils.h" line="46" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/utils.h" bodystart="45" bodyend="174"/>
     <listofallmembers>
       <member refid="class_senergy_1_1_dns_1_1_utils_1ad621e66ca0463aaa21c9b74b489f09f3" prot="public" virt="non-virtual"><scope>Senergy::Dns::Utils</scope><name>DecodeHostname</name></member>
       <member refid="class_senergy_1_1_dns_1_1_utils_1a68f1ebf9810ecb225a4f73c4200778bf" prot="public" virt="non-virtual"><scope>Senergy::Dns::Utils</scope><name>EncodeHostname</name></member>
@@ -255,7 +267,7 @@
       <member refid="class_senergy_1_1_dns_1_1_utils_1aa4e117a17add157b5e9bcb5fada4ac49" prot="public" virt="non-virtual"><scope>Senergy::Dns::Utils</scope><name>NetworkToHostByteOrder</name></member>
       <member refid="class_senergy_1_1_dns_1_1_utils_1ac34288e7acfa54f6faaa775ab5654192" prot="public" virt="non-virtual"><scope>Senergy::Dns::Utils</scope><name>NetworkToHostByteOrder</name></member>
       <member refid="class_senergy_1_1_dns_1_1_utils_1ad4711275abcbc1d332f3c0208e74c4b8" prot="public" virt="non-virtual"><scope>Senergy::Dns::Utils</scope><name>NetworkToHostByteOrder</name></member>
-      <member refid="class_senergy_1_1_dns_1_1_utils_1a6b995d31d85ef39a5e8ac57928fa35ed" prot="public" virt="non-virtual"><scope>Senergy::Dns::Utils</scope><name>ReadHostnameFromBuffer</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_utils_1a81879edd7a9daec1d6dfbf952549c500" prot="public" virt="non-virtual"><scope>Senergy::Dns::Utils</scope><name>ReadHostnameFromBuffer</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -6,6 +6,7 @@ var namespace_senergy =
     [ "CircularBuffer", "class_senergy_1_1_circular_buffer.html", "class_senergy_1_1_circular_buffer" ],
     [ "Console", "class_senergy_1_1_console.html", "class_senergy_1_1_console" ],
     [ "Convert", "class_senergy_1_1_convert.html", "class_senergy_1_1_convert" ],
+    [ "EnumMapper", "class_senergy_1_1_enum_mapper.html", "class_senergy_1_1_enum_mapper" ],
     [ "FastMapItem", "struct_senergy_1_1_fast_map_item.html", "struct_senergy_1_1_fast_map_item" ],
     [ "FastMap", "class_senergy_1_1_fast_map.html", "class_senergy_1_1_fast_map" ],
     [ "Logger", "class_senergy_1_1_logger.html", "class_senergy_1_1_logger" ],

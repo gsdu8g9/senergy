@@ -3,10 +3,13 @@ var class_senergy_1_1_byte_buffer =
     [ "ByteBuffer", "class_senergy_1_1_byte_buffer.html#ab3b85c02a2ee01df37673e8887df7956", null ],
     [ "ByteBuffer", "class_senergy_1_1_byte_buffer.html#a95197b8b57bb0a752ad7650a59d5facd", null ],
     [ "~ByteBuffer", "class_senergy_1_1_byte_buffer.html#aef390f867878292a797065c21cec6afe", null ],
+    [ "CopyTo", "class_senergy_1_1_byte_buffer.html#a2db9cbd7f2eadd1ecb561c72feaca7ad", null ],
     [ "DecreasePosition", "class_senergy_1_1_byte_buffer.html#a86a02f0e4d2aece53b7867e9a8011e70", null ],
     [ "DumpHexadecimal", "class_senergy_1_1_byte_buffer.html#a475f2133734cd74c4bce78bdf09950f3", null ],
+    [ "DumpHexadecimal", "class_senergy_1_1_byte_buffer.html#a4276f5ed69bd1d2fe9c26e05193715f2", null ],
     [ "GetPosition", "class_senergy_1_1_byte_buffer.html#a286e096451b62a14a8d645e1c9da62af", null ],
     [ "GetRemainingSize", "class_senergy_1_1_byte_buffer.html#ab938ed32f9f909145f93099f4620da69", null ],
+    [ "HasReachedEnd", "class_senergy_1_1_byte_buffer.html#a2747633838b3fae217b90700ff737840", null ],
     [ "IncreasePosition", "class_senergy_1_1_byte_buffer.html#ad2ed70d80d2a794d2ce35931819a66da", null ],
     [ "IsEmpty", "class_senergy_1_1_byte_buffer.html#ad141d494b81ff561ede715c4f7ceb840", null ],
     [ "Read", "class_senergy_1_1_byte_buffer.html#ae4e73e6e193bec7b9f7df0919d1641d9", null ],
@@ -37,5 +40,6 @@ var class_senergy_1_1_byte_buffer =
     [ "Write", "class_senergy_1_1_byte_buffer.html#a061fe3c4158ba940e68bf4545639561e", null ],
     [ "Write", "class_senergy_1_1_byte_buffer.html#ae0e9d53b9afa8b098eed7b517a60b938", null ],
     [ "Write", "class_senergy_1_1_byte_buffer.html#a9286d05c71ce66859098778f11be9c51", null ],
+    [ "WriteNop", "class_senergy_1_1_byte_buffer.html#ad810aade775871238b82deb38629510e", null ],
     [ "Socket", "class_senergy_1_1_byte_buffer.html#ab510887d735ee73ab1cb598c66260e87", null ]
 ];

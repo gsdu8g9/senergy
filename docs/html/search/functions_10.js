@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vectorx',['VectorX',['../class_senergy_1_1_vector_x.html#a99bed6d49a3a93e6a133837330218ee7',1,'Senergy::VectorX']]]
+  ['unknownrecord',['UnknownRecord',['../class_senergy_1_1_dns_1_1_unknown_record.html#ac28afe26d98dc7729160d182c1aa25bd',1,'Senergy::Dns::UnknownRecord']]]
 ];

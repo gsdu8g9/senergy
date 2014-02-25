@@ -10,32 +10,55 @@ Defines an interface using pure virtuals for classes that wish to implement a sp
 
 {\ttfamily \#include $<$resource\-\_\-record\-\_\-interface.\-h$>$}
 
+Inheritance diagram for Senergy\-:\-:Dns\-:\-:Resource\-Record\-Interface\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.511471cm]{class_senergy_1_1_dns_1_1_resource_record_interface}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_a512292e35ab101cc53bafe4c21edac4c}{Resource\-Record\-Interface} (\hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Resource\-Record\-Base} \&base)
+\hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_a8e4eb71ac27838d547e48a171774142f}{Resource\-Record\-Interface} (\hyperlink{namespace_senergy_1_1_dns_a72915c893fbf242018e79d8f92e1646b}{Resource\-Record\-Base\-Ptr} base)
 \begin{DoxyCompactList}\small\item\em Initializes a new instance of of the Resource\-Record\-Interface\-Ptr class with a reference to an instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Resource\-Record\-Base} class. \end{DoxyCompactList}\item 
 virtual bool \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_ab81e0a7ea292513c5c34a3be0c7a6dca}{Serialize} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)=0
 \begin{DoxyCompactList}\small\item\em Serializes this record into the specified buffer. This does not handle the serialization of the first (base) part of the resource record. Call Serialize\-Base for that. \end{DoxyCompactList}\item 
 virtual bool \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_ade2e0b9817476ea2161b694efd3e02db}{Deserialize} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)=0
 \begin{DoxyCompactList}\small\item\em Deserializes the record from the specified buffer. This does not handle deserialization of the first (base) part of the resource record. Call Deserialize\-Base for that. \end{DoxyCompactList}\item 
-virtual Resource\-Record\-Interface\-Ptr \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_acac5440b40f3904f889f1ee59a3b9786}{Create} (\hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Resource\-Record\-Base} \&base)=0
+virtual \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_abf5eec20c95f05b57c5c02eaed349e16}{Resource\-Record\-Interface\-Ptr} \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_abe37068b670f89481a145e1e9c2c8267}{Create} (\hyperlink{namespace_senergy_1_1_dns_a72915c893fbf242018e79d8f92e1646b}{Resource\-Record\-Base\-Ptr} base)=0
 \begin{DoxyCompactList}\small\item\em Creates a new instance of this class, and returns it as a shared pointer to an instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class. \end{DoxyCompactList}\item 
 virtual \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0}{Resource\-Record\-Type} \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_af895ba199749599d42f8e6a737eb9118}{Get\-Type} ()=0
 \begin{DoxyCompactList}\small\item\em Gets the type of of this record (derived), wich is a value from the Resource\-Record\-Type enumuration. \end{DoxyCompactList}\item 
 virtual \hyperlink{namespace_senergy_1_1_dns_a953f153bc411213d621d00c1e1b3eb9d}{Resource\-Record\-Class} \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_a4332e80632928d846abe9a58f912c217}{Get\-Class} ()
 \begin{DoxyCompactList}\small\item\em Gets the class of this record. This will almost always be the same and does not have to be implemented by the derived class. \end{DoxyCompactList}\item 
-\hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Resource\-Record\-Base} \& \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_a2d83a278096ff51e7c8fb9a5e77f70a5}{Get\-Base} () const 
-\begin{DoxyCompactList}\small\item\em Returns the underlying base resource record for this record. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{namespace_senergy_1_1_dns_a72915c893fbf242018e79d8f92e1646b}{Resource\-Record\-Base\-Ptr} \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_a6f603d9d3ffe34e4376ea8b27fd0c72d}{Get\-Base} () const 
+\begin{DoxyCompactList}\small\item\em Returns the underlying base resource record for this record. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_aced6e4bc388ce3568d72d9670a2e9da5}{Dump} ()
+\begin{DoxyCompactList}\small\item\em Dumps all fields to the standard output, with their values. In the following format\-: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\static \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_abf5eec20c95f05b57c5c02eaed349e16}{Resource\-Record\-Interface\-Ptr} \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_a342b71b9977f20ecb1dc7b3fd6ae0751}{Create\-Cast} (\hyperlink{namespace_senergy_1_1_dns_a72915c893fbf242018e79d8f92e1646b}{Resource\-Record\-Base\-Ptr} base)
+\begin{DoxyCompactList}\small\item\em Creates a new instance of the specified type with the specified resource record base instance, and casts it to a shared ppinter to a \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class (polymorhpism). The specified type must inherit from \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Types}
 \begin{DoxyCompactItemize}
 \item 
+typedef std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} $>$ \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_abf5eec20c95f05b57c5c02eaed349e16}{Resource\-Record\-Interface\-Ptr}
+\item 
 typedef \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Resource\-Record\-Base} \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_a59bcfc62cfc3a68464245b13ad3785e6}{Base}
 \begin{DoxyCompactList}\small\item\em More logical way to allow access to the base class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_aaebfbc52b464557ce9a3f36fbc08acd3}{Set\-Resource\-Size} (unsigned short resource\-\_\-size)
+\begin{DoxyCompactList}\small\item\em Sets the resource size in the base record. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_a54207eceee2ae035ae5293209b3e721c}{Set\-Resource\-Size} (unsigned int resource\-\_\-size)
+\begin{DoxyCompactList}\small\item\em Sets the resource size in the base record. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Resource\-Record\-Base} \& \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_a8342949ee3626a2b02021343de3be8a0}{m\-\_\-base}
+\hyperlink{namespace_senergy_1_1_dns_a72915c893fbf242018e79d8f92e1646b}{Resource\-Record\-Base\-Ptr} \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_ae2ffc1e85320769af1eabe781fcfc412}{m\-\_\-base}
 \end{DoxyCompactItemize}
 
 
@@ -47,7 +70,7 @@ Swen Kooij (Photonios).
 \end{DoxyAuthor}
 
 
-Definition at line 42 of file resource\-\_\-record\-\_\-interface.\-h.
+Definition at line 43 of file resource\-\_\-record\-\_\-interface.\-h.
 
 
 
@@ -61,18 +84,25 @@ More logical way to allow access to the base class.
 
 
 
-Definition at line 125 of file resource\-\_\-record\-\_\-interface.\-h.
+Definition at line 166 of file resource\-\_\-record\-\_\-interface.\-h.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_interface_abf5eec20c95f05b57c5c02eaed349e16}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}!Resource\-Record\-Interface\-Ptr@{Resource\-Record\-Interface\-Ptr}}
+\index{Resource\-Record\-Interface\-Ptr@{Resource\-Record\-Interface\-Ptr}!Senergy::Dns::ResourceRecordInterface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}}
+\subsubsection[{Resource\-Record\-Interface\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::shared\-\_\-ptr$<${\bf Resource\-Record\-Interface}$>$ {\bf Senergy\-::\-Dns\-::\-Resource\-Record\-Interface\-::\-Resource\-Record\-Interface\-Ptr}\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_senergy_1_1_dns_1_1_resource_record_interface_abf5eec20c95f05b57c5c02eaed349e16}
+
+
+Definition at line 48 of file resource\-\_\-record\-\_\-interface.\-h.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_senergy_1_1_dns_1_1_resource_record_interface_a512292e35ab101cc53bafe4c21edac4c}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}!Resource\-Record\-Interface@{Resource\-Record\-Interface}}
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_interface_a8e4eb71ac27838d547e48a171774142f}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}!Resource\-Record\-Interface@{Resource\-Record\-Interface}}
 \index{Resource\-Record\-Interface@{Resource\-Record\-Interface}!Senergy::Dns::ResourceRecordInterface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}}
 \subsubsection[{Resource\-Record\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}Senergy\-::\-Dns\-::\-Resource\-Record\-Interface\-::\-Resource\-Record\-Interface (
 \begin{DoxyParamCaption}
-\item[{{\bf Resource\-Record\-Base} \&}]{base}
+\item[{{\bf Resource\-Record\-Base\-Ptr}}]{base}
 \end{DoxyParamCaption}
-)}}\label{class_senergy_1_1_dns_1_1_resource_record_interface_a512292e35ab101cc53bafe4c21edac4c}
+)}}\label{class_senergy_1_1_dns_1_1_resource_record_interface_a8e4eb71ac27838d547e48a171774142f}
 
 
 Initializes a new instance of of the Resource\-Record\-Interface\-Ptr class with a reference to an instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Resource\-Record\-Base} class. 
@@ -89,13 +119,13 @@ Definition at line 29 of file dns\-\_\-resource\-\_\-record\-\_\-interface.\-cpp
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_senergy_1_1_dns_1_1_resource_record_interface_acac5440b40f3904f889f1ee59a3b9786}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}!Create@{Create}}
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_interface_abe37068b670f89481a145e1e9c2c8267}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}!Create@{Create}}
 \index{Create@{Create}!Senergy::Dns::ResourceRecordInterface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}}
-\subsubsection[{Create}]{\setlength{\rightskip}{0pt plus 5cm}virtual Resource\-Record\-Interface\-Ptr Senergy\-::\-Dns\-::\-Resource\-Record\-Interface\-::\-Create (
+\subsubsection[{Create}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Resource\-Record\-Interface\-Ptr} Senergy\-::\-Dns\-::\-Resource\-Record\-Interface\-::\-Create (
 \begin{DoxyParamCaption}
-\item[{{\bf Resource\-Record\-Base} \&}]{base}
+\item[{{\bf Resource\-Record\-Base\-Ptr}}]{base}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_senergy_1_1_dns_1_1_resource_record_interface_acac5440b40f3904f889f1ee59a3b9786}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_senergy_1_1_dns_1_1_resource_record_interface_abe37068b670f89481a145e1e9c2c8267}
 
 
 Creates a new instance of this class, and returns it as a shared pointer to an instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class. 
@@ -110,6 +140,30 @@ The derived class should create an instance of itself and return the polymorphic
 \begin{DoxyReturn}{Returns}
 A shared pointer to an instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class, which is just the polymorphic form of the derived class. 
 \end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_senergy_1_1_dns_1_1_i_p_v4_record_a4d31a8d3f562f8128c053071120d6dd2}{Senergy\-::\-Dns\-::\-I\-P\-V4\-Record}, \hyperlink{class_senergy_1_1_dns_1_1_name_server_record_a006930a7fc6c7d736cfe5c0ee1d79b9d}{Senergy\-::\-Dns\-::\-Name\-Server\-Record}, and \hyperlink{class_senergy_1_1_dns_1_1_unknown_record_a98f66426e8e89449eaac24e0ac4eeb60}{Senergy\-::\-Dns\-::\-Unknown\-Record}.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_interface_a342b71b9977f20ecb1dc7b3fd6ae0751}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}!Create\-Cast@{Create\-Cast}}
+\index{Create\-Cast@{Create\-Cast}!Senergy::Dns::ResourceRecordInterface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}}
+\subsubsection[{Create\-Cast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static {\bf Resource\-Record\-Interface\-Ptr} Senergy\-::\-Dns\-::\-Resource\-Record\-Interface\-::\-Create\-Cast (
+\begin{DoxyParamCaption}
+\item[{{\bf Resource\-Record\-Base\-Ptr}}]{base}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_senergy_1_1_dns_1_1_resource_record_interface_a342b71b9977f20ecb1dc7b3fd6ae0751}
+
+
+Creates a new instance of the specified type with the specified resource record base instance, and casts it to a shared ppinter to a \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class (polymorhpism). The specified type must inherit from \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface}. 
+
+T The type to create and cast to \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} shared pointer.
+
+\begin{DoxyReturn}{Returns}
+An instance of the specified type but, casted to an instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class (shared pointer). 
+\end{DoxyReturn}
+
+
+Definition at line 140 of file resource\-\_\-record\-\_\-interface.\-h.
+
 \hypertarget{class_senergy_1_1_dns_1_1_resource_record_interface_ade2e0b9817476ea2161b694efd3e02db}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}!Deserialize@{Deserialize}}
 \index{Deserialize@{Deserialize}!Senergy::Dns::ResourceRecordInterface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}}
 \subsubsection[{Deserialize}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Senergy\-::\-Dns\-::\-Resource\-Record\-Interface\-::\-Deserialize (
@@ -126,13 +180,36 @@ Deserializes the record from the specified buffer. This does not handle deserial
 {\em buffer} & The buffer to deserialize from. \\
 \hline
 \end{DoxyParams}
-\hypertarget{class_senergy_1_1_dns_1_1_resource_record_interface_a2d83a278096ff51e7c8fb9a5e77f70a5}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}!Get\-Base@{Get\-Base}}
-\index{Get\-Base@{Get\-Base}!Senergy::Dns::ResourceRecordInterface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}}
-\subsubsection[{Get\-Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\-Record\-Base} \& Senergy\-::\-Dns\-::\-Resource\-Record\-Interface\-::\-Get\-Base (
+
+
+Implemented in \hyperlink{class_senergy_1_1_dns_1_1_i_p_v4_record_a6fffdc2823b53f8f2fede5263e45b232}{Senergy\-::\-Dns\-::\-I\-P\-V4\-Record}, \hyperlink{class_senergy_1_1_dns_1_1_name_server_record_a6e01ac3f215b4766cae9ccc7fa58987a}{Senergy\-::\-Dns\-::\-Name\-Server\-Record}, and \hyperlink{class_senergy_1_1_dns_1_1_unknown_record_af58fb86354cd176aefaa0000a706d646}{Senergy\-::\-Dns\-::\-Unknown\-Record}.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_interface_aced6e4bc388ce3568d72d9670a2e9da5}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}!Dump@{Dump}}
+\index{Dump@{Dump}!Senergy::Dns::ResourceRecordInterface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}}
+\subsubsection[{Dump}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Dns\-::\-Resource\-Record\-Interface\-::\-Dump (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const}}\label{class_senergy_1_1_dns_1_1_resource_record_interface_a2d83a278096ff51e7c8fb9a5e77f70a5}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_senergy_1_1_dns_1_1_resource_record_interface_aced6e4bc388ce3568d72d9670a2e9da5}
+
+
+Dumps all fields to the standard output, with their values. In the following format\-: 
+
+
+
+Reimplemented in \hyperlink{class_senergy_1_1_dns_1_1_i_p_v4_record_a5dc31b6ac003bf5b8897d1431e9eb0db}{Senergy\-::\-Dns\-::\-I\-P\-V4\-Record}, and \hyperlink{class_senergy_1_1_dns_1_1_name_server_record_a95047855d9e9fb77fbbfa8534c3ddb62}{Senergy\-::\-Dns\-::\-Name\-Server\-Record}.
+
+
+
+Definition at line 54 of file dns\-\_\-resource\-\_\-record\-\_\-interface.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_interface_a6f603d9d3ffe34e4376ea8b27fd0c72d}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}!Get\-Base@{Get\-Base}}
+\index{Get\-Base@{Get\-Base}!Senergy::Dns::ResourceRecordInterface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}}
+\subsubsection[{Get\-Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\-Record\-Base\-Ptr} Senergy\-::\-Dns\-::\-Resource\-Record\-Interface\-::\-Get\-Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_senergy_1_1_dns_1_1_resource_record_interface_a6f603d9d3ffe34e4376ea8b27fd0c72d}
 
 
 Returns the underlying base resource record for this record. 
@@ -176,6 +253,10 @@ Gets the type of of this record (derived), wich is a value from the Resource\-Re
 \begin{DoxyReturn}{Returns}
 A value from the Resource\-Record\-Type enumuration which denotes the type of this record. 
 \end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_senergy_1_1_dns_1_1_i_p_v4_record_a7f67f0546dc2d93b04a264fabf871d78}{Senergy\-::\-Dns\-::\-I\-P\-V4\-Record}, \hyperlink{class_senergy_1_1_dns_1_1_name_server_record_a2ad5b053bceedbf8bf927a275d530431}{Senergy\-::\-Dns\-::\-Name\-Server\-Record}, and \hyperlink{class_senergy_1_1_dns_1_1_unknown_record_a3b6e5feb0277646b2513432cede8ebbd}{Senergy\-::\-Dns\-::\-Unknown\-Record}.
+
 \hypertarget{class_senergy_1_1_dns_1_1_resource_record_interface_ab81e0a7ea292513c5c34a3be0c7a6dca}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}!Serialize@{Serialize}}
 \index{Serialize@{Serialize}!Senergy::Dns::ResourceRecordInterface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}}
 \subsubsection[{Serialize}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Senergy\-::\-Dns\-::\-Resource\-Record\-Interface\-::\-Serialize (
@@ -197,13 +278,57 @@ A boolean indicating whether the serialization was successful.
 \end{DoxyReturn}
 
 
+Implemented in \hyperlink{class_senergy_1_1_dns_1_1_i_p_v4_record_adc8bfc217949628f7b88fe69d065d630}{Senergy\-::\-Dns\-::\-I\-P\-V4\-Record}, \hyperlink{class_senergy_1_1_dns_1_1_name_server_record_a9e9b980a9c341cff47bb5840fc01ed06}{Senergy\-::\-Dns\-::\-Name\-Server\-Record}, and \hyperlink{class_senergy_1_1_dns_1_1_unknown_record_aa792712816e5f177b554f1b7d6018563}{Senergy\-::\-Dns\-::\-Unknown\-Record}.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_interface_aaebfbc52b464557ce9a3f36fbc08acd3}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}!Set\-Resource\-Size@{Set\-Resource\-Size}}
+\index{Set\-Resource\-Size@{Set\-Resource\-Size}!Senergy::Dns::ResourceRecordInterface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}}
+\subsubsection[{Set\-Resource\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void Senergy\-::\-Dns\-::\-Resource\-Record\-Interface\-::\-Set\-Resource\-Size (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{resource\-\_\-size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_senergy_1_1_dns_1_1_resource_record_interface_aaebfbc52b464557ce9a3f36fbc08acd3}
+
+
+Sets the resource size in the base record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource\-\_\-size} & The size of the resource \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 44 of file dns\-\_\-resource\-\_\-record\-\_\-interface.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_interface_a54207eceee2ae035ae5293209b3e721c}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}!Set\-Resource\-Size@{Set\-Resource\-Size}}
+\index{Set\-Resource\-Size@{Set\-Resource\-Size}!Senergy::Dns::ResourceRecordInterface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}}
+\subsubsection[{Set\-Resource\-Size}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Resource\-Record\-Interface\-::\-Set\-Resource\-Size (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{resource\-\_\-size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_senergy_1_1_dns_1_1_resource_record_interface_a54207eceee2ae035ae5293209b3e721c}
+
+
+Sets the resource size in the base record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource\-\_\-size} & The size of the resource \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 49 of file dns\-\_\-resource\-\_\-record\-\_\-interface.\-cpp.
+
+
+
 \subsection{Member Data Documentation}
-\hypertarget{class_senergy_1_1_dns_1_1_resource_record_interface_a8342949ee3626a2b02021343de3be8a0}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}!m\-\_\-base@{m\-\_\-base}}
+\hypertarget{class_senergy_1_1_dns_1_1_resource_record_interface_ae2ffc1e85320769af1eabe781fcfc412}{\index{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}!m\-\_\-base@{m\-\_\-base}}
 \index{m\-\_\-base@{m\-\_\-base}!Senergy::Dns::ResourceRecordInterface@{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}}
-\subsubsection[{m\-\_\-base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\-Record\-Base}\& Senergy\-::\-Dns\-::\-Resource\-Record\-Interface\-::m\-\_\-base\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_senergy_1_1_dns_1_1_resource_record_interface_a8342949ee3626a2b02021343de3be8a0}
+\subsubsection[{m\-\_\-base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\-Record\-Base\-Ptr} Senergy\-::\-Dns\-::\-Resource\-Record\-Interface\-::m\-\_\-base\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_senergy_1_1_dns_1_1_resource_record_interface_ae2ffc1e85320769af1eabe781fcfc412}
 
 
-Definition at line 128 of file resource\-\_\-record\-\_\-interface.\-h.
+Definition at line 170 of file resource\-\_\-record\-\_\-interface.\-h.
 
 
 

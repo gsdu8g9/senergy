@@ -4,60 +4,60 @@
     <compoundname>dns_utils.cpp</compoundname>
     <includes refid="utils_8h" local="no">senergy/dns/utils.h</includes>
     <incdepgraph>
-      <node id="209">
+      <node id="389">
         <label>arpa/inet.h</label>
       </node>
-      <node id="202">
-        <label>string</label>
-      </node>
-      <node id="200">
-        <label>src/dns_utils.cpp</label>
-        <link refid="dns_utils.cpp"/>
-        <childnode refid="201" relation="include">
-        </childnode>
-      </node>
-      <node id="208">
-        <label>cstdio</label>
-      </node>
-      <node id="201">
-        <label>senergy/dns/utils.h</label>
-        <link refid="utils_8h"/>
-        <childnode refid="202" relation="include">
-        </childnode>
-        <childnode refid="203" relation="include">
-        </childnode>
-        <childnode refid="209" relation="include">
-        </childnode>
-      </node>
-      <node id="207">
-        <label>senergy/print.h</label>
-        <link refid="print_8h"/>
-        <childnode refid="208" relation="include">
-        </childnode>
-        <childnode refid="202" relation="include">
-        </childnode>
-      </node>
-      <node id="205">
-        <label>cstdlib</label>
-      </node>
-      <node id="203">
+      <node id="383">
         <label>senergy/bytebuffer.h</label>
         <link refid="bytebuffer_8h"/>
-        <childnode refid="202" relation="include">
+        <childnode refid="382" relation="include">
         </childnode>
-        <childnode refid="204" relation="include">
+        <childnode refid="384" relation="include">
         </childnode>
-        <childnode refid="205" relation="include">
+        <childnode refid="385" relation="include">
         </childnode>
-        <childnode refid="206" relation="include">
+        <childnode refid="386" relation="include">
         </childnode>
-        <childnode refid="207" relation="include">
+        <childnode refid="387" relation="include">
         </childnode>
       </node>
-      <node id="204">
+      <node id="382">
+        <label>string</label>
+      </node>
+      <node id="380">
+        <label>src/dns_utils.cpp</label>
+        <link refid="dns_utils.cpp"/>
+        <childnode refid="381" relation="include">
+        </childnode>
+      </node>
+      <node id="387">
+        <label>senergy/print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="388" relation="include">
+        </childnode>
+        <childnode refid="382" relation="include">
+        </childnode>
+      </node>
+      <node id="388">
+        <label>cstdio</label>
+      </node>
+      <node id="381">
+        <label>senergy/dns/utils.h</label>
+        <link refid="utils_8h"/>
+        <childnode refid="382" relation="include">
+        </childnode>
+        <childnode refid="383" relation="include">
+        </childnode>
+        <childnode refid="389" relation="include">
+        </childnode>
+      </node>
+      <node id="385">
+        <label>cstdlib</label>
+      </node>
+      <node id="384">
         <label>cstring</label>
       </node>
-      <node id="206">
+      <node id="386">
         <label>memory</label>
       </node>
     </incdepgraph>
@@ -198,41 +198,47 @@
 <codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ntohs(value);</highlight></codeline>
 <codeline lineno="129"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131" refid="class_senergy_1_1_dns_1_1_utils_1a6b995d31d85ef39a5e8ac57928fa35ed" refkind="member"><highlight class="normal">std::string<sp/><ref refid="class_senergy_1_1_dns_1_1_utils_1a6b995d31d85ef39a5e8ac57928fa35ed" kindref="member">Utils::ReadHostnameFromBuffer</ref>(<ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref><sp/>&amp;buffer)</highlight></codeline>
+<codeline lineno="131" refid="class_senergy_1_1_dns_1_1_utils_1a81879edd7a9daec1d6dfbf952549c500" refkind="member"><highlight class="normal">std::string<sp/><ref refid="class_senergy_1_1_dns_1_1_utils_1a81879edd7a9daec1d6dfbf952549c500" kindref="member">Utils::ReadHostnameFromBuffer</ref>(<ref refid="class_senergy_1_1_byte_buffer" kindref="compound">ByteBuffer</ref><sp/>&amp;buffer,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>decode)</highlight></codeline>
 <codeline lineno="132"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(buffer.<ref refid="class_senergy_1_1_byte_buffer_1ab938ed32f9f909145f93099f4620da69" kindref="member">GetRemainingSize</ref>()<sp/>&lt;<sp/>1)</highlight></codeline>
 <codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>first_byte<sp/>=<sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1ad9a7a05b0285fe070cde3983458de5f6" kindref="member">ReadUnsignedChar</ref>();</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(first_byte<sp/>&gt;=<sp/>192)<sp/></highlight><highlight class="comment">//<sp/>192<sp/>=<sp/>11<sp/>=<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset<sp/>=<sp/>(int)<sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1ad9a7a05b0285fe070cde3983458de5f6" kindref="member">ReadUnsignedChar</ref>();</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"></highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>current_buffer_position<sp/>=<sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a286e096451b62a14a8d645e1c9da62af" kindref="member">GetPosition</ref>();</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a13dd8a2eec8b93ac224f0da614c7f6f8" kindref="member">SetPosition</ref>(offset);</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>hostname<sp/>=<sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1ab1f14bdb0b09b2144d1775fa2dff95a6" kindref="member">ReadString</ref>(256);</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hostname<sp/>=<sp/><ref refid="class_senergy_1_1_dns_1_1_utils_1ad621e66ca0463aaa21c9b74b489f09f3" kindref="member">DecodeHostname</ref>(hostname);</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"></highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a13dd8a2eec8b93ac224f0da614c7f6f8" kindref="member">SetPosition</ref>(current_buffer_position);</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hostname;</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a86a02f0e4d2aece53b7867e9a8011e70" kindref="member">DecreasePosition</ref>();</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"></highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>hostname<sp/>=<sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1ab1f14bdb0b09b2144d1775fa2dff95a6" kindref="member">ReadString</ref>(256);</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hostname<sp/>=<sp/><ref refid="class_senergy_1_1_dns_1_1_utils_1ad621e66ca0463aaa21c9b74b489f09f3" kindref="member">DecodeHostname</ref>(hostname);</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"></highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hostname;</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"></highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"></highlight></codeline>
-<codeline lineno="163"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Dns</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="164"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>read_hostname<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(!buffer.<ref refid="class_senergy_1_1_byte_buffer_1a2747633838b3fae217b90700ff737840" kindref="member">HasReachedEnd</ref>())</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>current_char<sp/>=<sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1ad9a7a05b0285fe070cde3983458de5f6" kindref="member">ReadUnsignedChar</ref>();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(current_char<sp/>==<sp/>0x0)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(current_char<sp/>==<sp/>0xFFFFFFEC<sp/>||<sp/>current_char<sp/>&gt;=<sp/>192)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset<sp/>=<sp/>(int)<sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1ad9a7a05b0285fe070cde3983458de5f6" kindref="member">ReadUnsignedChar</ref>();</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>current_buffer_position<sp/>=<sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a286e096451b62a14a8d645e1c9da62af" kindref="member">GetPosition</ref>();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a13dd8a2eec8b93ac224f0da614c7f6f8" kindref="member">SetPosition</ref>(offset);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>found<sp/>=<sp/><ref refid="class_senergy_1_1_dns_1_1_utils_1a81879edd7a9daec1d6dfbf952549c500" kindref="member">ReadHostnameFromBuffer</ref>(buffer,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>read_hostname<sp/>+=<sp/>found;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer.<ref refid="class_senergy_1_1_byte_buffer_1a13dd8a2eec8b93ac224f0da614c7f6f8" kindref="member">SetPosition</ref>(current_buffer_position);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>read_hostname<sp/>+=<sp/>current_char;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(decode)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_senergy_1_1_dns_1_1_utils_1ad621e66ca0463aaa21c9b74b489f09f3" kindref="member">Utils::DecodeHostname</ref>(read_hostname);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>read_hostname;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Dns</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Senergy</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/photonios/Documents/Senergy/src/dns_utils.cpp"/>
+    <location file="/home/photonios/Documents/senergy/src/dns_utils.cpp"/>
   </compounddef>
 </doxygen>

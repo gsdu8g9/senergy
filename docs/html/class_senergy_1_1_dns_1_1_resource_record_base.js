@@ -7,11 +7,14 @@ var class_senergy_1_1_dns_1_1_resource_record_base =
     [ "GetClass", "class_senergy_1_1_dns_1_1_resource_record_base.html#a4abfe4f1eeb552494be535c271abe18f", null ],
     [ "GetHostname", "class_senergy_1_1_dns_1_1_resource_record_base.html#a486427180da21f76701001a5e411e369", null ],
     [ "GetMaxCachingTime", "class_senergy_1_1_dns_1_1_resource_record_base.html#a96094f0e13f517b6462cd193f9b82f80", null ],
+    [ "GetMinimalSize", "class_senergy_1_1_dns_1_1_resource_record_base.html#a2b4f8d43e9a21fd1aff168e4aa88cc9a", null ],
     [ "GetResourceSize", "class_senergy_1_1_dns_1_1_resource_record_base.html#ad077545843d4565a39a4d6e1cffb8859", null ],
     [ "GetType", "class_senergy_1_1_dns_1_1_resource_record_base.html#acabfef62c1a3ef4332556bd312c42bdc", null ],
+    [ "GetTypeString", "class_senergy_1_1_dns_1_1_resource_record_base.html#a2410ada2a69ff9d2f5b6599c5cda8dc1", null ],
     [ "NeedsCaching", "class_senergy_1_1_dns_1_1_resource_record_base.html#a7b6733ccb332b22335e33e09ad7bddd0", null ],
     [ "Serialize", "class_senergy_1_1_dns_1_1_resource_record_base.html#a3a343750cf6e6a4455d25c064d4412f5", null ],
     [ "SetClass", "class_senergy_1_1_dns_1_1_resource_record_base.html#a87d4a0202837700dbc6662d9aff8f385", null ],
     [ "SetHostname", "class_senergy_1_1_dns_1_1_resource_record_base.html#ad5f8a096ae61dcf0ddaac380f84bf052", null ],
-    [ "SetType", "class_senergy_1_1_dns_1_1_resource_record_base.html#affcaab56c3632a361a654ed5bc79b3c4", null ]
+    [ "SetType", "class_senergy_1_1_dns_1_1_resource_record_base.html#affcaab56c3632a361a654ed5bc79b3c4", null ],
+    [ "ResourceRecordInterface", "class_senergy_1_1_dns_1_1_resource_record_base.html#a33acbda019abea688a25ca962f4b7815", null ]
 ];

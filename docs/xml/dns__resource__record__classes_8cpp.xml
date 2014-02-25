@@ -4,15 +4,15 @@
     <compoundname>dns_resource_record_classes.cpp</compoundname>
     <includes refid="resource__record__classes_8h" local="no">senergy/dns/resource_record_classes.h</includes>
     <incdepgraph>
-      <node id="155">
-        <label>src/dns_resource_record_classes.cpp</label>
-        <link refid="dns_resource_record_classes.cpp"/>
-        <childnode refid="156" relation="include">
-        </childnode>
-      </node>
-      <node id="156">
+      <node id="277">
         <label>senergy/dns/resource_record_classes.h</label>
         <link refid="resource__record__classes_8h"/>
+      </node>
+      <node id="276">
+        <label>src/dns_resource_record_classes.cpp</label>
+        <link refid="dns_resource_record_classes.cpp"/>
+        <childnode refid="277" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <briefdescription>
@@ -43,6 +43,6 @@
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="resource__record__classes_8h" kindref="compound">senergy/dns/resource_record_classes.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/photonios/Documents/Senergy/src/dns_resource_record_classes.cpp"/>
+    <location file="/home/photonios/Documents/senergy/src/dns_resource_record_classes.cpp"/>
   </compounddef>
 </doxygen>

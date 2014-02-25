@@ -1,0 +1,40 @@
+.TH "src/senergy/dns/record_unknown.h" 3 "Tue Feb 25 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/senergy/dns/record_unknown.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <memory>\fP
+.br
+\fC#include <senergy/bytebuffer\&.h>\fP
+.br
+\fC#include <senergy/dns/resource_record_types\&.h>\fP
+.br
+\fC#include <senergy/dns/resource_record_interface\&.h>\fP
+.br
+\fC#include <senergy/dns/resource_record_base\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBSenergy::Dns::UnknownRecord\fP"
+.br
+.RI "\fIRepresents a record that could not be handled by one of the other classes that implement the \fBResourceRecordInterface\fP class\&. All records that are of a type that is not supported by the mapper are handled by this class\&. This class makes sure the resource record data is skipped when deserialization and serialization\&. \fP"
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "\fBSenergy\fP"
+.br
+.ti -1c
+.RI "\fBSenergy::Dns\fP"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

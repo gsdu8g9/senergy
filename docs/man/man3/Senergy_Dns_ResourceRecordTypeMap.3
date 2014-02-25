@@ -1,0 +1,77 @@
+.TH "Senergy::Dns::ResourceRecordTypeMap" 3 "Tue Feb 25 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::Dns::ResourceRecordTypeMap \- 
+.PP
+Statis class that helps mapping values from the ResourceRecordType enumuration to their textual representation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <resource_record_types\&.h>\fP
+.PP
+Inherits \fBSenergy::EnumMapper< ResourceRecordType >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBResourceRecordTypeMap\fP ()"
+.br
+.RI "\fIInitializes a new instance of the \fBResourceRecordTypeMap\fP class and maps all the values from the ResourceRecordType enumuration\&. \fP"
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static std::string \fBGet\fP (\fBResourceRecordType\fP type)"
+.br
+.RI "\fIGets the textual representation of the specified resource record type\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Statis class that helps mapping values from the ResourceRecordType enumuration to their textual representation\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.PP
+Definition at line 456 of file resource_record_types\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Senergy::Dns::ResourceRecordTypeMap::ResourceRecordTypeMap ()"
+
+.PP
+Initializes a new instance of the \fBResourceRecordTypeMap\fP class and maps all the values from the ResourceRecordType enumuration\&. 
+.PP
+Definition at line 32 of file dns_resource_record_types\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "std::string Senergy::Dns::ResourceRecordTypeMap::Get (\fBResourceRecordType\fPtype)\fC [static]\fP"
+
+.PP
+Gets the textual representation of the specified resource record type\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItype\fP A value from the ResourceRecordType enumuration, the value to get the textual represenation of\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The textual represenatation of the specified value from the ResourceRecordType enumuration\&. If no mapping for the specified value exists, an empty string is returned\&. 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file dns_resource_record_types\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

@@ -1,0 +1,93 @@
+\hypertarget{class_senergy_1_1_enum_mapper}{\section{Senergy\-:\-:Enum\-Mapper$<$ T $>$ Class Template Reference}
+\label{class_senergy_1_1_enum_mapper}\index{Senergy\-::\-Enum\-Mapper$<$ T $>$@{Senergy\-::\-Enum\-Mapper$<$ T $>$}}
+}
+
+
+Simple wrapper for a hash map that maps enum values to their textual value (name).  
+
+
+
+
+{\ttfamily \#include $<$enum\-\_\-mapper.\-h$>$}
+
+Inheritance diagram for Senergy\-:\-:Enum\-Mapper$<$ T $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_senergy_1_1_enum_mapper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_senergy_1_1_enum_mapper_a1bded4a48eb23c33dca633c7c59aba7e}{Map} (T enum\-\_\-value, const std\-::string \&enum\-\_\-value\-\_\-name)
+\begin{DoxyCompactList}\small\item\em Maps the specified enumuration value to the specified textual representation. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_senergy_1_1_enum_mapper_a54d34e6d45397b9ec4d5d19ec5234b2c}{Get\-Mapping} (T enum\-\_\-value)
+\begin{DoxyCompactList}\small\item\em Finds the textual representation for the specified enumuration value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$class Senergy\-::\-Enum\-Mapper$<$ T $>$}
+
+Simple wrapper for a hash map that maps enum values to their textual value (name). 
+
+\begin{DoxyAuthor}{Author}
+Swen Kooij 
+\end{DoxyAuthor}
+
+
+Definition at line 37 of file enum\-\_\-mapper.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_enum_mapper_a54d34e6d45397b9ec4d5d19ec5234b2c}{\index{Senergy\-::\-Enum\-Mapper@{Senergy\-::\-Enum\-Mapper}!Get\-Mapping@{Get\-Mapping}}
+\index{Get\-Mapping@{Get\-Mapping}!Senergy::EnumMapper@{Senergy\-::\-Enum\-Mapper}}
+\subsubsection[{Get\-Mapping}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ std\-::string {\bf Senergy\-::\-Enum\-Mapper}$<$ T $>$\-::Get\-Mapping (
+\begin{DoxyParamCaption}
+\item[{T}]{enum\-\_\-value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_senergy_1_1_enum_mapper_a54d34e6d45397b9ec4d5d19ec5234b2c}
+
+
+Finds the textual representation for the specified enumuration value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enum\-\_\-value} & A value from the enumuration to find the textual representation for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The textual representation of the specified enumuration value. An empty string is returned when no mapping exists for the specified enumuration value. 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file enum\-\_\-mapper.\-h.
+
+\hypertarget{class_senergy_1_1_enum_mapper_a1bded4a48eb23c33dca633c7c59aba7e}{\index{Senergy\-::\-Enum\-Mapper@{Senergy\-::\-Enum\-Mapper}!Map@{Map}}
+\index{Map@{Map}!Senergy::EnumMapper@{Senergy\-::\-Enum\-Mapper}}
+\subsubsection[{Map}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Senergy\-::\-Enum\-Mapper}$<$ T $>$\-::Map (
+\begin{DoxyParamCaption}
+\item[{T}]{enum\-\_\-value, }
+\item[{const std\-::string \&}]{enum\-\_\-value\-\_\-name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_senergy_1_1_enum_mapper_a1bded4a48eb23c33dca633c7c59aba7e}
+
+
+Maps the specified enumuration value to the specified textual representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enum\-\_\-value} & A value from the enumuration to map to the specified textual representation. \\
+\hline
+{\em enum\-\_\-value\-\_\-name} & The textual representation of the specified enum value. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 46 of file enum\-\_\-mapper.\-h.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/senergy/\hyperlink{enum__mapper_8h}{enum\-\_\-mapper.\-h}\end{DoxyCompactItemize}

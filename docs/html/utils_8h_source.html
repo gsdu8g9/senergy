@@ -31,7 +31,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="senergy-dns.ico"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Senergy
    &#160;<span id="projectnumber">1.0</span>
@@ -169,18 +168,18 @@ $(document).ready(function(){initNavTree('utils_8h_source.html','');});
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    </div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_senergy_1_1_dns_1_1_utils.html#aa4e117a17add157b5e9bcb5fada4ac49">NetworkToHostByteOrder</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> value);</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">static</span> std::string <a class="code" href="class_senergy_1_1_dns_1_1_utils.html#a6b995d31d85ef39a5e8ac57928fa35ed">ReadHostnameFromBuffer</a>(<a class="code" href="class_senergy_1_1_byte_buffer.html">ByteBuffer</a> &amp;buffer);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;};</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;} <span class="comment">// namespace Dns</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;} <span class="comment">// namespace Senergy</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">#endif // SY_DNS_UTILS_H</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keyword">static</span> std::string <a class="code" href="class_senergy_1_1_dns_1_1_utils.html#a81879edd7a9daec1d6dfbf952549c500">ReadHostnameFromBuffer</a>(<a class="code" href="class_senergy_1_1_byte_buffer.html">ByteBuffer</a> &amp;buffer, <span class="keywordtype">bool</span> decode = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;};</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;} <span class="comment">// namespace Dns</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;} <span class="comment">// namespace Senergy</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor">#endif // SY_DNS_UTILS_H</span></div>
+<div class="ttc" id="class_senergy_1_1_dns_1_1_utils_html_a81879edd7a9daec1d6dfbf952549c500"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_utils.html#a81879edd7a9daec1d6dfbf952549c500">Senergy::Dns::Utils::ReadHostnameFromBuffer</a></div><div class="ttdeci">static std::string ReadHostnameFromBuffer(ByteBuffer &amp;buffer, bool decode=true)</div><div class="ttdoc">Reads a domain name from the specified buffer, also known as a &#39;QNAME&#39;. </div><div class="ttdef"><b>Definition:</b> <a href="dns__utils_8cpp_source.html#l00131">dns_utils.cpp:131</a></div></div>
 <div class="ttc" id="class_senergy_1_1_dns_1_1_utils_html"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_utils.html">Senergy::Dns::Utils</a></div><div class="ttdoc">Contains various utilities related to the DNS protocol. This are mostly functions that are used throu...</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00045">utils.h:45</a></div></div>
 <div class="ttc" id="class_senergy_1_1_byte_buffer_html"><div class="ttname"><a href="class_senergy_1_1_byte_buffer.html">Senergy::ByteBuffer</a></div><div class="ttdoc">A dynamiclly sized buffer for binary data. Resizes the underlying buffer when new data is written...</div><div class="ttdef"><b>Definition:</b> <a href="bytebuffer_8h_source.html#l00040">bytebuffer.h:40</a></div></div>
 <div class="ttc" id="class_senergy_1_1_dns_1_1_utils_html_aa4e117a17add157b5e9bcb5fada4ac49"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_utils.html#aa4e117a17add157b5e9bcb5fada4ac49">Senergy::Dns::Utils::NetworkToHostByteOrder</a></div><div class="ttdeci">static unsigned short NetworkToHostByteOrder(unsigned short value)</div><div class="ttdoc">Converts the specified unsigned short value from network to host byte order. </div><div class="ttdef"><b>Definition:</b> <a href="dns__utils_8cpp_source.html#l00106">dns_utils.cpp:106</a></div></div>
 <div class="ttc" id="class_senergy_1_1_dns_1_1_utils_html_a68f1ebf9810ecb225a4f73c4200778bf"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_utils.html#a68f1ebf9810ecb225a4f73c4200778bf">Senergy::Dns::Utils::EncodeHostname</a></div><div class="ttdeci">static std::string EncodeHostname(const std::string &amp;hostname)</div><div class="ttdoc">Encodes the specified hostname and returns the result. Encoding a hostname means, replacing all dots...</div><div class="ttdef"><b>Definition:</b> <a href="dns__utils_8cpp_source.html#l00029">dns_utils.cpp:29</a></div></div>
-<div class="ttc" id="class_senergy_1_1_dns_1_1_utils_html_a6b995d31d85ef39a5e8ac57928fa35ed"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_utils.html#a6b995d31d85ef39a5e8ac57928fa35ed">Senergy::Dns::Utils::ReadHostnameFromBuffer</a></div><div class="ttdeci">static std::string ReadHostnameFromBuffer(ByteBuffer &amp;buffer)</div><div class="ttdoc">Reads a domain name from the specified buffer, also known as a &#39;QNAME&#39;. </div><div class="ttdef"><b>Definition:</b> <a href="dns__utils_8cpp_source.html#l00131">dns_utils.cpp:131</a></div></div>
 <div class="ttc" id="class_senergy_1_1_dns_1_1_utils_html_a26ed8e47210810c24f8ab5a2588bf276"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_utils.html#a26ed8e47210810c24f8ab5a2588bf276">Senergy::Dns::Utils::HostToNetworkByteOrder</a></div><div class="ttdeci">static unsigned short HostToNetworkByteOrder(unsigned short value)</div><div class="ttdoc">Converts the specified unsigned short value from host to network byte order. </div><div class="ttdef"><b>Definition:</b> <a href="dns__utils_8cpp_source.html#l00101">dns_utils.cpp:101</a></div></div>
 <div class="ttc" id="class_senergy_1_1_dns_1_1_utils_html_ad621e66ca0463aaa21c9b74b489f09f3"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_utils.html#ad621e66ca0463aaa21c9b74b489f09f3">Senergy::Dns::Utils::DecodeHostname</a></div><div class="ttdeci">static std::string DecodeHostname(const std::string &amp;hostname)</div><div class="ttdoc">Decodes the specified hostname and returns the result, reverse the result of encoding a hostname...</div><div class="ttdef"><b>Definition:</b> <a href="dns__utils_8cpp_source.html#l00067">dns_utils.cpp:67</a></div></div>
 <div class="ttc" id="bytebuffer_8h_html"><div class="ttname"><a href="bytebuffer_8h.html">bytebuffer.h</a></div></div>
@@ -190,7 +189,7 @@ $(document).ready(function(){initNavTree('utils_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_43fe9c611a9fdc7364335d381ea28669.html">senergy</a></li><li class="navelem"><a class="el" href="dir_12060af884c4747a1bab5c3df0820300.html">dns</a></li><li class="navelem"><a class="el" href="utils_8h.html">utils.h</a></li>
-    <li class="footer">Generated on Tue Feb 11 2014 21:56:42 for Senergy by
+    <li class="footer">Generated on Tue Feb 25 2014 22:51:26 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

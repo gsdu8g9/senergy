@@ -31,7 +31,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="senergy-dns.ico"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Senergy
    &#160;<span id="projectnumber">1.0</span>
@@ -136,186 +135,205 @@ $(document).ready(function(){initNavTree('resource__record__types_8h_source.html
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#ifndef SY_DNS_RESOURCE_RECORD_TYPES_H</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SY_DNS_RESOURCE_RECORD_TYPES_H</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>Senergy</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>Dns</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="enum__mapper_8h.html">senergy/enum_mapper.h</a>&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>Senergy</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0">   37</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0">ResourceRecordType</a> : unsigned short</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29">A</a> = 1,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a53c8d15a175221d2127083e66a8cc937">NS</a> = 2,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7dc10e66da5549d351765bd940b81be9">MD</a> = 3,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a12c578c9f48dd6727464670d5daa0f9c">MF</a> = 4,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aadc4bfdb0829dae99e3699393e3fbaa4">CNAME</a> = 5,</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0abe5a791366c5f2810d7dd6132dc0f06c">SOA</a> = 6,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a8d8fcc1abd550c5f25dbfaa57d59cb67">MB</a> = 7,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aba2a034f4d913f87fe07cad29368d114">MG</a> = 8,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ad5c44258d51659f96279c470ce8185dc">MR</a> = 9,</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a890f5fe6581170eeff26bec1c1e6a023">NUL</a> = 10,</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aeed02d24534183b7a268008603930b67">WKS</a> = 11,</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0accf95d5d6208e6821c61433d43848f16">PTR</a> = 12,</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a6039bc6fb2965fe1e923383f3c3ac936">HINFO</a> = 13,</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0adfb31d06b1b1f36e6a6ddfe0f94b33da">MINFO</a> = 14,</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a0b98720dcb2cc6fd60358a45dfbc5b87">MX</a> = 15,</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a5956a437e724cdfc8b1c70dc7bdeebcb">TXT</a> = 16,</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ac4cb0a6bcf9b947b0e647a11ebfacefa">RP</a> = 17,</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ab9e4ee544eaa7fe99267355742f7a03e">AFSDB</a> = 18,</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ab9f72c6f03e2177e0ea0f3f31ba05da1">X25</a> = 19,</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a6b76a4f6461388db72ddf5cc41979c4b">ISDN</a> = 20,</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a705610ed3e5ec724f5cb0d76a5fd3aa1">RT</a> = 21,</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ab1749646110d92e1818f7f7cf24d374e">NSAP</a> = 22,</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ae71f755427c9351f13e0b14103a8a549">NSAP_PTR</a> = 23,</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    </div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a8e40932558a1eaaf985335ab7154d6dc">SIG</a> = 24,</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a3b5949e0c26b87767a4752a276de9570">KEY</a> = 25,</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a87e6c078833a3c35b65067a50c936b37">PX</a> = 26,</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7fa7750863127fa3f9f1255b582ac34d">GPOS</a> = 27,</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a098890dde069e9abad63f19a0d9e1f32">AAAA</a> = 28,</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7982b1597f92456d71b333fe2aead996">LOC</a> = 29,</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a3f15fada7994f98f3bc6207bed01c16b">NXT</a> = 30,</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a02cf6cb778382bf4014cc10c4c15b449">EID</a> = 31,</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a1ffe19e6ac60395518851cb93ca2e1cf">NIMLOC</a> = 32,</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ab71ecf0b186ac1b938e15483f792b7db">SRV</a> = 33,</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a130eec8777bec09e591885428f2ffb75">ATMA</a> = 34,</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a9bf4e5a83e8c043c90b39c0d1c6a1587">NAPTR</a> = 35,</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a33ac0876e2026575dc3b41a0b74c3015">KX</a> = 36,</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a5d2cfab83ed6e86a4812690790dc7ad5">CERT</a> = 37,</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a0b3d5609ee81e50809b7351e848e4698">A6</a> = 38,</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a78e5dce13f93104bcc1c380f63d7ac17">DNAME</a> = 39,</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a6091f77137cf4570917f3f4d30585bb1">SINK</a> = 40,</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ad64669882d28591f1a0fe0926f80e751">OPT</a> = 41,</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0acd5451fbbc151dc5f8020fb1bbc9ef86">APL</a> = 42,</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a47b79bd259e22596ffc4be2ffbbe5c5a">DS</a> = 43,</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0af228c42396e41cfc2c31c9ee79c50f39">SSHFP</a> = 44,</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a2b356a14948fa1c2a2ef3c14355c83ea">IPSECKEY</a> = 45,</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0acedf979874cc1ac262a7a836f504a9a3">RRSIG</a> = 46,</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a6ac9d5292ffcb6323409509895e59c6a">NSEC</a> = 47,</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a548deb43a9afe4abcde34a605eb44700">DNSKEY</a> = 48,</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a6e70731664048d83678c263374c8dd35">DHCID</a> = 49,</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aa573cb9749bec7cdc7c1689504db06fa">NSEC3</a> = 50,</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ac31c935076390d6c1f649299c706b21a">NSEC3PARAM</a> = 51,</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a2528196793228f3ed012ef32a973842d">TLSA</a> = 52,</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="comment">// 53 - 54 Unassinged.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>Dns</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0">   39</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0">ResourceRecordType</a> : unsigned short</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</a> = 0,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29">A</a> = 1,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a53c8d15a175221d2127083e66a8cc937">NS</a> = 2,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7dc10e66da5549d351765bd940b81be9">MD</a> = 3,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a12c578c9f48dd6727464670d5daa0f9c">MF</a> = 4,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aadc4bfdb0829dae99e3699393e3fbaa4">CNAME</a> = 5,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0abe5a791366c5f2810d7dd6132dc0f06c">SOA</a> = 6,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a8d8fcc1abd550c5f25dbfaa57d59cb67">MB</a> = 7,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aba2a034f4d913f87fe07cad29368d114">MG</a> = 8,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ad5c44258d51659f96279c470ce8185dc">MR</a> = 9,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a890f5fe6581170eeff26bec1c1e6a023">NUL</a> = 10,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aeed02d24534183b7a268008603930b67">WKS</a> = 11,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0accf95d5d6208e6821c61433d43848f16">PTR</a> = 12,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a6039bc6fb2965fe1e923383f3c3ac936">HINFO</a> = 13,</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0adfb31d06b1b1f36e6a6ddfe0f94b33da">MINFO</a> = 14,</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a0b98720dcb2cc6fd60358a45dfbc5b87">MX</a> = 15,</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a5956a437e724cdfc8b1c70dc7bdeebcb">TXT</a> = 16,</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ac4cb0a6bcf9b947b0e647a11ebfacefa">RP</a> = 17,</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ab9e4ee544eaa7fe99267355742f7a03e">AFSDB</a> = 18,</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ab9f72c6f03e2177e0ea0f3f31ba05da1">X25</a> = 19,</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a6b76a4f6461388db72ddf5cc41979c4b">ISDN</a> = 20,</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a705610ed3e5ec724f5cb0d76a5fd3aa1">RT</a> = 21,</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ab1749646110d92e1818f7f7cf24d374e">NSAP</a> = 22,</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ae71f755427c9351f13e0b14103a8a549">NSAP_PTR</a> = 23,</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a8e40932558a1eaaf985335ab7154d6dc">SIG</a> = 24,</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a3b5949e0c26b87767a4752a276de9570">KEY</a> = 25,</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a87e6c078833a3c35b65067a50c936b37">PX</a> = 26,</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7fa7750863127fa3f9f1255b582ac34d">GPOS</a> = 27,</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a098890dde069e9abad63f19a0d9e1f32">AAAA</a> = 28,</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7982b1597f92456d71b333fe2aead996">LOC</a> = 29,</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a3f15fada7994f98f3bc6207bed01c16b">NXT</a> = 30,</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a02cf6cb778382bf4014cc10c4c15b449">EID</a> = 31,</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a1ffe19e6ac60395518851cb93ca2e1cf">NIMLOC</a> = 32,</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ab71ecf0b186ac1b938e15483f792b7db">SRV</a> = 33,</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a130eec8777bec09e591885428f2ffb75">ATMA</a> = 34,</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a9bf4e5a83e8c043c90b39c0d1c6a1587">NAPTR</a> = 35,</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a33ac0876e2026575dc3b41a0b74c3015">KX</a> = 36,</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a5d2cfab83ed6e86a4812690790dc7ad5">CERT</a> = 37,</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a0b3d5609ee81e50809b7351e848e4698">A6</a> = 38,</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a78e5dce13f93104bcc1c380f63d7ac17">DNAME</a> = 39,</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a6091f77137cf4570917f3f4d30585bb1">SINK</a> = 40,</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ad64669882d28591f1a0fe0926f80e751">OPT</a> = 41,</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0acd5451fbbc151dc5f8020fb1bbc9ef86">APL</a> = 42,</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a47b79bd259e22596ffc4be2ffbbe5c5a">DS</a> = 43,</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0af228c42396e41cfc2c31c9ee79c50f39">SSHFP</a> = 44,</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a2b356a14948fa1c2a2ef3c14355c83ea">IPSECKEY</a> = 45,</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0acedf979874cc1ac262a7a836f504a9a3">RRSIG</a> = 46,</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a6ac9d5292ffcb6323409509895e59c6a">NSEC</a> = 47,</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a548deb43a9afe4abcde34a605eb44700">DNSKEY</a> = 48,</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a6e70731664048d83678c263374c8dd35">DHCID</a> = 49,</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aa573cb9749bec7cdc7c1689504db06fa">NSEC3</a> = 50,</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ac31c935076390d6c1f649299c706b21a">NSEC3PARAM</a> = 51,</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a5e4576beae2ab86d6ad1b8b1700d2e11">HIP</a> = 55,</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a2528196793228f3ed012ef32a973842d">TLSA</a> = 52,</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0af2c8bdba2e1534ec4f29d0d7fd637976">NFINO</a> = 56,</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aa0c7a61ee259167ff4eb02668a90798e">RKEY</a> = 57,</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aae5740157bf2828808b460ef253c6d64">TALINK</a> = 58,</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ab1da7839edd4969a1aaa4435721a149c">CDS</a> = 59,</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="comment">// 60 - 98 Unassigned.</span></div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    </div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ab4efb35349e5d93905531be07dbacd6d">SPF</a> = 99,</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="comment">// 53 - 54 Unassinged.</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a5e4576beae2ab86d6ad1b8b1700d2e11">HIP</a> = 55,</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0af2c8bdba2e1534ec4f29d0d7fd637976">NFINO</a> = 56,</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aa0c7a61ee259167ff4eb02668a90798e">RKEY</a> = 57,</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aae5740157bf2828808b460ef253c6d64">TALINK</a> = 58,</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ab1da7839edd4969a1aaa4435721a149c">CDS</a> = 59,</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ae9d3d23146a9fbf510b755d3356199b4">UINFO</a> = 100,</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ae7d22294bdcb7133967c3548ece982e5">UID</a> = 101,</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7af9d03ef884836d52bd6c23c4fc2f79">GID</a> = 102,</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a2f03cf10116568e1dbf5263143cffaec">UNSPEC</a> = 103,</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ab0db97f062879a0e0cd0788528386743">NID</a> = 104,</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a3b80517688b93186611e64fe9268fca7">L32</a> = 105,</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    </div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a036a76b97b96b5d46742bb4bcd2ff24d">L64</a> = 106,</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a233724c5adf28da47784390134db3c66">LP</a> = 107,</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ac986a9cd71834016d263ca68de5ac2f4">EUI48</a> = 108,</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a5dc04c568f0c0746f9a76d193723e13e">EUI64</a> = 109,</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="comment">// 110 - 248 Unassigned.</span></div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    </div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ad2500ad054637dfb9c46375eb28f7182">TKEY</a> = 249,</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="comment">// 60 - 98 Unassigned.</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    </div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ab4efb35349e5d93905531be07dbacd6d">SPF</a> = 99,</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ae9d3d23146a9fbf510b755d3356199b4">UINFO</a> = 100,</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ae7d22294bdcb7133967c3548ece982e5">UID</a> = 101,</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7af9d03ef884836d52bd6c23c4fc2f79">GID</a> = 102,</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a2f03cf10116568e1dbf5263143cffaec">UNSPEC</a> = 103,</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ab0db97f062879a0e0cd0788528386743">NID</a> = 104,</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a3b80517688b93186611e64fe9268fca7">L32</a> = 105,</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    </div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a036a76b97b96b5d46742bb4bcd2ff24d">L64</a> = 106,</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a233724c5adf28da47784390134db3c66">LP</a> = 107,</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ac986a9cd71834016d263ca68de5ac2f4">EUI48</a> = 108,</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a5dc04c568f0c0746f9a76d193723e13e">EUI64</a> = 109,</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a60508804d4e825c7191fbdf5a1c6d54b">TSIG</a> = 250,</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0afad4f5e8316e9f88b1adcb0ee474c6ac">IXFR</a> = 251,</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aafa24a70b614aef02cc1a12e829625f7">AXFR</a> = 252,</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ae599722792c31154f99048e56b9cf384">MAILB</a> = 253,</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a59fe37d7dd88b5a7c76146d14db1331f">MAILA</a> = 254,</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a8261d4e71736b8ae72eae60ff8e18191">ALL_RECORDS</a> = 255,</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a8447306210a0972ac94b7d774799df1a">URI</a> = 256,</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ad7ff895c2bd9c10f958833aeb0289ad4">CAA</a> = 257,</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    </div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <span class="comment">// 258 - 32767 Unassigned</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="comment">// 110 - 248 Unassigned.</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    </div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ad2500ad054637dfb9c46375eb28f7182">TKEY</a> = 249,</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a60508804d4e825c7191fbdf5a1c6d54b">TSIG</a> = 250,</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0afad4f5e8316e9f88b1adcb0ee474c6ac">IXFR</a> = 251,</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aafa24a70b614aef02cc1a12e829625f7">AXFR</a> = 252,</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ae599722792c31154f99048e56b9cf384">MAILB</a> = 253,</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a59fe37d7dd88b5a7c76146d14db1331f">MAILA</a> = 254,</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a8261d4e71736b8ae72eae60ff8e18191">ALL_RECORDS</a> = 255,</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a8447306210a0972ac94b7d774799df1a">URI</a> = 256,</div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a890a10788493e3d572586e991cd43543">TA</a> = 32768,</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aede320f6102f02f5903553674ed8a3f5">DLV</a> = 32769,</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;};</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;} <span class="comment">// namespace Dns</span></div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;} <span class="comment">// namespace Senergy</span></div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="preprocessor">#endif // SY_DNS_RESOURCE_RECORD_TYPES_H</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ad7ff895c2bd9c10f958833aeb0289ad4">CAA</a> = 257,</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    </div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <span class="comment">// 258 - 32767 Unassigned</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a890a10788493e3d572586e991cd43543">TA</a> = 32768,</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aede320f6102f02f5903553674ed8a3f5">DLV</a> = 32769,</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;};</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;</div>
+<div class="line"><a name="l00456"></a><span class="lineno"><a class="line" href="class_senergy_1_1_dns_1_1_resource_record_type_map.html">  456</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_senergy_1_1_dns_1_1_resource_record_type_map.html">ResourceRecordTypeMap</a> : <span class="keyword">public</span> <a class="code" href="class_senergy_1_1_enum_mapper.html">EnumMapper</a>&lt;ResourceRecordType&gt;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;{</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <a class="code" href="class_senergy_1_1_dns_1_1_resource_record_type_map.html#ae64533ac9d0639fcf887888cd0d975c7">ResourceRecordTypeMap</a>();</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    </div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    <span class="keyword">static</span> std::string <a class="code" href="class_senergy_1_1_dns_1_1_resource_record_type_map.html#a3099645859209cf5c05d1f95ed2a4be0">Get</a>(<a class="code" href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0">ResourceRecordType</a> type);</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    </div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    <span class="comment">// The instance of this class, this is so we dont&#39; have to create instances of this class over and</span></div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    <span class="comment">// over again...</span></div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_senergy_1_1_dns_1_1_resource_record_type_map.html">ResourceRecordTypeMap</a> s_map;</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;};</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;} <span class="comment">// namespace Dns</span></div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;} <span class="comment">// namespace Senergy</span></div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;<span class="preprocessor">#endif // SY_DNS_RESOURCE_RECORD_TYPES_H</span></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0abe5a791366c5f2810d7dd6132dc0f06c"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0abe5a791366c5f2810d7dd6132dc0f06c">Senergy::Dns::ResourceRecordType::SOA</a></div><div class="ttdoc">Sexueel Overdraagbare Aandoening (Marks the start of a zone of authority). </div></div>
+<div class="ttc" id="class_senergy_1_1_dns_1_1_resource_record_type_map_html"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_resource_record_type_map.html">Senergy::Dns::ResourceRecordTypeMap</a></div><div class="ttdoc">Statis class that helps mapping values from the ResourceRecordType enumuration to their textual repre...</div><div class="ttdef"><b>Definition:</b> <a href="resource__record__types_8h_source.html#l00456">resource_record_types.h:456</a></div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0a3f15fada7994f98f3bc6207bed01c16b"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a3f15fada7994f98f3bc6207bed01c16b">Senergy::Dns::ResourceRecordType::NXT</a></div><div class="ttdoc">Next domain (Obsolete). </div></div>
+<div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0a88183b946cc5f0e8c96b2e66e1c74a7e"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a88183b946cc5f0e8c96b2e66e1c74a7e">Senergy::Dns::ResourceRecordType::Unknown</a></div><div class="ttdoc">Unknown. </div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0a1ffe19e6ac60395518851cb93ca2e1cf"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a1ffe19e6ac60395518851cb93ca2e1cf">Senergy::Dns::ResourceRecordType::NIMLOC</a></div><div class="ttdoc">Nimloc locator. </div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0a78e5dce13f93104bcc1c380f63d7ac17"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a78e5dce13f93104bcc1c380f63d7ac17">Senergy::Dns::ResourceRecordType::DNAME</a></div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0ab9e4ee544eaa7fe99267355742f7a03e"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ab9e4ee544eaa7fe99267355742f7a03e">Senergy::Dns::ResourceRecordType::AFSDB</a></div><div class="ttdoc">For AFS database location. </div></div>
@@ -327,13 +345,15 @@ $(document).ready(function(){initNavTree('resource__record__types_8h_source.html
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0aba2a034f4d913f87fe07cad29368d114"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aba2a034f4d913f87fe07cad29368d114">Senergy::Dns::ResourceRecordType::MG</a></div><div class="ttdoc">Mail group member (EXPERIMENTAL). </div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0a59fe37d7dd88b5a7c76146d14db1331f"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a59fe37d7dd88b5a7c76146d14db1331f">Senergy::Dns::ResourceRecordType::MAILA</a></div><div class="ttdoc">Mail agent resource records (RR) (Obsolete, see MX). </div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0a87e6c078833a3c35b65067a50c936b37"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a87e6c078833a3c35b65067a50c936b37">Senergy::Dns::ResourceRecordType::PX</a></div><div class="ttdoc">X.400 mail mapping information. </div></div>
-<div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0">Senergy::Dns::ResourceRecordType</a></div><div class="ttdeci">ResourceRecordType</div><div class="ttdoc">An enumuration of all possible resource record types (RR), as defined by IANA. </div><div class="ttdef"><b>Definition:</b> <a href="resource__record__types_8h_source.html#l00037">resource_record_types.h:37</a></div></div>
+<div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0">Senergy::Dns::ResourceRecordType</a></div><div class="ttdeci">ResourceRecordType</div><div class="ttdoc">An enumuration of all possible resource record types (RR), as defined by IANA. </div><div class="ttdef"><b>Definition:</b> <a href="resource__record__types_8h_source.html#l00039">resource_record_types.h:39</a></div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0ae7d22294bdcb7133967c3548ece982e5"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ae7d22294bdcb7133967c3548ece982e5">Senergy::Dns::ResourceRecordType::UID</a></div><div class="ttdoc">UID (IANA-Reserved). </div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0a7982b1597f92456d71b333fe2aead996"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7982b1597f92456d71b333fe2aead996">Senergy::Dns::ResourceRecordType::LOC</a></div><div class="ttdoc">Location finformation. </div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0af2c8bdba2e1534ec4f29d0d7fd637976"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0af2c8bdba2e1534ec4f29d0d7fd637976">Senergy::Dns::ResourceRecordType::NFINO</a></div><div class="ttdoc">NINFO. </div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0ae9d3d23146a9fbf510b755d3356199b4"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ae9d3d23146a9fbf510b755d3356199b4">Senergy::Dns::ResourceRecordType::UINFO</a></div><div class="ttdoc">UINFO (IANA-Reserved). </div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0ad5c44258d51659f96279c470ce8185dc"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ad5c44258d51659f96279c470ce8185dc">Senergy::Dns::ResourceRecordType::MR</a></div><div class="ttdoc">Mail rename domain name (EXPERIMENTAL). </div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29">Senergy::Dns::ResourceRecordType::A</a></div><div class="ttdoc">A host address. </div></div>
+<div class="ttc" id="class_senergy_1_1_dns_1_1_resource_record_type_map_html_ae64533ac9d0639fcf887888cd0d975c7"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_resource_record_type_map.html#ae64533ac9d0639fcf887888cd0d975c7">Senergy::Dns::ResourceRecordTypeMap::ResourceRecordTypeMap</a></div><div class="ttdeci">ResourceRecordTypeMap()</div><div class="ttdoc">Initializes a new instance of the ResourceRecordTypeMap class and maps all the values from the Resour...</div><div class="ttdef"><b>Definition:</b> <a href="dns__resource__record__types_8cpp_source.html#l00032">dns_resource_record_types.cpp:32</a></div></div>
+<div class="ttc" id="class_senergy_1_1_dns_1_1_resource_record_type_map_html_a3099645859209cf5c05d1f95ed2a4be0"><div class="ttname"><a href="class_senergy_1_1_dns_1_1_resource_record_type_map.html#a3099645859209cf5c05d1f95ed2a4be0">Senergy::Dns::ResourceRecordTypeMap::Get</a></div><div class="ttdeci">static std::string Get(ResourceRecordType type)</div><div class="ttdoc">Gets the textual representation of the specified resource record type. </div><div class="ttdef"><b>Definition:</b> <a href="dns__resource__record__types_8cpp_source.html#l00039">dns_resource_record_types.cpp:39</a></div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0a7af9d03ef884836d52bd6c23c4fc2f79"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7af9d03ef884836d52bd6c23c4fc2f79">Senergy::Dns::ResourceRecordType::GID</a></div><div class="ttdoc">GID (IANA-Reserved). </div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0afad4f5e8316e9f88b1adcb0ee474c6ac"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0afad4f5e8316e9f88b1adcb0ee474c6ac">Senergy::Dns::ResourceRecordType::IXFR</a></div><div class="ttdoc">Incremental transfer. </div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0a9bf4e5a83e8c043c90b39c0d1c6a1587"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a9bf4e5a83e8c043c90b39c0d1c6a1587">Senergy::Dns::ResourceRecordType::NAPTR</a></div><div class="ttdoc">Naming authority pointer. </div></div>
@@ -350,6 +370,7 @@ $(document).ready(function(){initNavTree('resource__record__types_8h_source.html
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0ac4cb0a6bcf9b947b0e647a11ebfacefa"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ac4cb0a6bcf9b947b0e647a11ebfacefa">Senergy::Dns::ResourceRecordType::RP</a></div><div class="ttdoc">Responsible person. </div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0a233724c5adf28da47784390134db3c66"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a233724c5adf28da47784390134db3c66">Senergy::Dns::ResourceRecordType::LP</a></div><div class="ttdoc">LP. </div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0ab0db97f062879a0e0cd0788528386743"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ab0db97f062879a0e0cd0788528386743">Senergy::Dns::ResourceRecordType::NID</a></div><div class="ttdoc">NID. </div></div>
+<div class="ttc" id="class_senergy_1_1_enum_mapper_html"><div class="ttname"><a href="class_senergy_1_1_enum_mapper.html">Senergy::EnumMapper</a></div><div class="ttdoc">Simple wrapper for a hash map that maps enum values to their textual value (name). </div><div class="ttdef"><b>Definition:</b> <a href="enum__mapper_8h_source.html#l00037">enum_mapper.h:37</a></div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0a5e4576beae2ab86d6ad1b8b1700d2e11"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a5e4576beae2ab86d6ad1b8b1700d2e11">Senergy::Dns::ResourceRecordType::HIP</a></div><div class="ttdoc">Host identify protocol. </div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0aafa24a70b614aef02cc1a12e829625f7"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aafa24a70b614aef02cc1a12e829625f7">Senergy::Dns::ResourceRecordType::AXFR</a></div><div class="ttdoc">Transfer of an entire zone. </div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0aeed02d24534183b7a268008603930b67"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0aeed02d24534183b7a268008603930b67">Senergy::Dns::ResourceRecordType::WKS</a></div><div class="ttdoc">Well-known service description. </div></div>
@@ -394,13 +415,14 @@ $(document).ready(function(){initNavTree('resource__record__types_8h_source.html
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0a2528196793228f3ed012ef32a973842d"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a2528196793228f3ed012ef32a973842d">Senergy::Dns::ResourceRecordType::TLSA</a></div><div class="ttdoc">TLSA. </div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0accf95d5d6208e6821c61433d43848f16"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0accf95d5d6208e6821c61433d43848f16">Senergy::Dns::ResourceRecordType::PTR</a></div><div class="ttdoc">Domain name pointer. </div></div>
 <div class="ttc" id="namespace_senergy_1_1_dns_html_a590bfd748c955364770f5ce358d9dfe0a890a10788493e3d572586e991cd43543"><div class="ttname"><a href="namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a890a10788493e3d572586e991cd43543">Senergy::Dns::ResourceRecordType::TA</a></div><div class="ttdoc">DNSSEC Trust authorities. </div></div>
+<div class="ttc" id="enum__mapper_8h_html"><div class="ttname"><a href="enum__mapper_8h.html">enum_mapper.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_43fe9c611a9fdc7364335d381ea28669.html">senergy</a></li><li class="navelem"><a class="el" href="dir_12060af884c4747a1bab5c3df0820300.html">dns</a></li><li class="navelem"><a class="el" href="resource__record__types_8h.html">resource_record_types.h</a></li>
-    <li class="footer">Generated on Tue Feb 11 2014 21:56:42 for Senergy by
+    <li class="footer">Generated on Tue Feb 25 2014 22:51:26 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

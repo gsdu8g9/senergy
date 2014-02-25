@@ -1,6 +1,12 @@
 \hypertarget{resource__record__types_8h}{\section{src/senergy/dns/resource\-\_\-record\-\_\-types.h File Reference}
 \label{resource__record__types_8h}\index{src/senergy/dns/resource\-\_\-record\-\_\-types.\-h@{src/senergy/dns/resource\-\_\-record\-\_\-types.\-h}}
 }
+{\ttfamily \#include $<$senergy/enum\-\_\-mapper.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_senergy_1_1_dns_1_1_resource_record_type_map}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-Map}
+\begin{DoxyCompactList}\small\item\em Statis class that helps mapping values from the Resource\-Record\-Type enumuration to their textual representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -12,101 +18,102 @@
 \begin{DoxyCompactItemize}
 \item 
 enum \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type} \-: unsigned short \{ \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a88183b946cc5f0e8c96b2e66e1c74a7e}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-Unknown} = 0, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-A} = 1, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a53c8d15a175221d2127083e66a8cc937}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-N\-S} = 2, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a7dc10e66da5549d351765bd940b81be9}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-M\-D} = 3, 
-\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a12c578c9f48dd6727464670d5daa0f9c}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-M\-F} = 4, 
 \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a12c578c9f48dd6727464670d5daa0f9c}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-M\-F} = 4, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0aadc4bfdb0829dae99e3699393e3fbaa4}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-C\-N\-A\-M\-E} = 5, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0abe5a791366c5f2810d7dd6132dc0f06c}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-S\-O\-A} = 6, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a8d8fcc1abd550c5f25dbfaa57d59cb67}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-M\-B} = 7, 
-\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0aba2a034f4d913f87fe07cad29368d114}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-M\-G} = 8, 
 \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0aba2a034f4d913f87fe07cad29368d114}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-M\-G} = 8, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0ad5c44258d51659f96279c470ce8185dc}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-M\-R} = 9, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a890f5fe6581170eeff26bec1c1e6a023}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-N\-U\-L} = 10, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0aeed02d24534183b7a268008603930b67}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-W\-K\-S} = 11, 
-\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0accf95d5d6208e6821c61433d43848f16}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-P\-T\-R} = 12, 
 \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0accf95d5d6208e6821c61433d43848f16}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-P\-T\-R} = 12, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a6039bc6fb2965fe1e923383f3c3ac936}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-H\-I\-N\-F\-O} = 13, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0adfb31d06b1b1f36e6a6ddfe0f94b33da}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-M\-I\-N\-F\-O} = 14, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a0b98720dcb2cc6fd60358a45dfbc5b87}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-M\-X} = 15, 
-\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a5956a437e724cdfc8b1c70dc7bdeebcb}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-T\-X\-T} = 16, 
 \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a5956a437e724cdfc8b1c70dc7bdeebcb}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-T\-X\-T} = 16, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0ac4cb0a6bcf9b947b0e647a11ebfacefa}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-R\-P} = 17, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0ab9e4ee544eaa7fe99267355742f7a03e}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-A\-F\-S\-D\-B} = 18, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0ab9f72c6f03e2177e0ea0f3f31ba05da1}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-X25} = 19, 
-\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a6b76a4f6461388db72ddf5cc41979c4b}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-I\-S\-D\-N} = 20, 
 \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a6b76a4f6461388db72ddf5cc41979c4b}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-I\-S\-D\-N} = 20, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a705610ed3e5ec724f5cb0d76a5fd3aa1}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-R\-T} = 21, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0ab1749646110d92e1818f7f7cf24d374e}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-N\-S\-A\-P} = 22, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0ae71f755427c9351f13e0b14103a8a549}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-N\-S\-A\-P\-\_\-\-P\-T\-R} = 23, 
-\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a8e40932558a1eaaf985335ab7154d6dc}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-S\-I\-G} = 24, 
 \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a8e40932558a1eaaf985335ab7154d6dc}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-S\-I\-G} = 24, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a3b5949e0c26b87767a4752a276de9570}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-K\-E\-Y} = 25, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a87e6c078833a3c35b65067a50c936b37}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-P\-X} = 26, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a7fa7750863127fa3f9f1255b582ac34d}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-G\-P\-O\-S} = 27, 
-\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a098890dde069e9abad63f19a0d9e1f32}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-A\-A\-A\-A} = 28, 
 \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a098890dde069e9abad63f19a0d9e1f32}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-A\-A\-A\-A} = 28, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a7982b1597f92456d71b333fe2aead996}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-L\-O\-C} = 29, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a3f15fada7994f98f3bc6207bed01c16b}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-N\-X\-T} = 30, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a02cf6cb778382bf4014cc10c4c15b449}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-E\-I\-D} = 31, 
-\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a1ffe19e6ac60395518851cb93ca2e1cf}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-N\-I\-M\-L\-O\-C} = 32, 
 \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a1ffe19e6ac60395518851cb93ca2e1cf}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-N\-I\-M\-L\-O\-C} = 32, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0ab71ecf0b186ac1b938e15483f792b7db}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-S\-R\-V} = 33, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a130eec8777bec09e591885428f2ffb75}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-A\-T\-M\-A} = 34, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a9bf4e5a83e8c043c90b39c0d1c6a1587}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-N\-A\-P\-T\-R} = 35, 
-\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a33ac0876e2026575dc3b41a0b74c3015}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-K\-X} = 36, 
 \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a33ac0876e2026575dc3b41a0b74c3015}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-K\-X} = 36, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a5d2cfab83ed6e86a4812690790dc7ad5}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-C\-E\-R\-T} = 37, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a0b3d5609ee81e50809b7351e848e4698}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-A6} = 38, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a78e5dce13f93104bcc1c380f63d7ac17}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-D\-N\-A\-M\-E} = 39, 
-\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a6091f77137cf4570917f3f4d30585bb1}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-S\-I\-N\-K} = 40, 
 \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a6091f77137cf4570917f3f4d30585bb1}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-S\-I\-N\-K} = 40, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0ad64669882d28591f1a0fe0926f80e751}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-O\-P\-T} = 41, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0acd5451fbbc151dc5f8020fb1bbc9ef86}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-A\-P\-L} = 42, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a47b79bd259e22596ffc4be2ffbbe5c5a}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-D\-S} = 43, 
-\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0af228c42396e41cfc2c31c9ee79c50f39}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-S\-S\-H\-F\-P} = 44, 
 \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0af228c42396e41cfc2c31c9ee79c50f39}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-S\-S\-H\-F\-P} = 44, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a2b356a14948fa1c2a2ef3c14355c83ea}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-I\-P\-S\-E\-C\-K\-E\-Y} = 45, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0acedf979874cc1ac262a7a836f504a9a3}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-R\-R\-S\-I\-G} = 46, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a6ac9d5292ffcb6323409509895e59c6a}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-N\-S\-E\-C} = 47, 
-\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a548deb43a9afe4abcde34a605eb44700}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-D\-N\-S\-K\-E\-Y} = 48, 
 \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a548deb43a9afe4abcde34a605eb44700}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-D\-N\-S\-K\-E\-Y} = 48, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a6e70731664048d83678c263374c8dd35}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-D\-H\-C\-I\-D} = 49, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0aa573cb9749bec7cdc7c1689504db06fa}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-N\-S\-E\-C3} = 50, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0ac31c935076390d6c1f649299c706b21a}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-N\-S\-E\-C3\-P\-A\-R\-A\-M} = 51, 
-\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a2528196793228f3ed012ef32a973842d}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-T\-L\-S\-A} = 52, 
 \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a2528196793228f3ed012ef32a973842d}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-T\-L\-S\-A} = 52, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a5e4576beae2ab86d6ad1b8b1700d2e11}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-H\-I\-P} = 55, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0af2c8bdba2e1534ec4f29d0d7fd637976}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-N\-F\-I\-N\-O} = 56, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0aa0c7a61ee259167ff4eb02668a90798e}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-R\-K\-E\-Y} = 57, 
-\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0aae5740157bf2828808b460ef253c6d64}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-T\-A\-L\-I\-N\-K} = 58, 
 \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0aae5740157bf2828808b460ef253c6d64}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-T\-A\-L\-I\-N\-K} = 58, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0ab1da7839edd4969a1aaa4435721a149c}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-C\-D\-S} = 59, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0ab4efb35349e5d93905531be07dbacd6d}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-S\-P\-F} = 99, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0ae9d3d23146a9fbf510b755d3356199b4}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-U\-I\-N\-F\-O} = 100, 
-\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0ae7d22294bdcb7133967c3548ece982e5}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-U\-I\-D} = 101, 
 \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0ae7d22294bdcb7133967c3548ece982e5}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-U\-I\-D} = 101, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a7af9d03ef884836d52bd6c23c4fc2f79}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-G\-I\-D} = 102, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a2f03cf10116568e1dbf5263143cffaec}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-U\-N\-S\-P\-E\-C} = 103, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0ab0db97f062879a0e0cd0788528386743}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-N\-I\-D} = 104, 
-\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a3b80517688b93186611e64fe9268fca7}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-L32} = 105, 
 \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a3b80517688b93186611e64fe9268fca7}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-L32} = 105, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a036a76b97b96b5d46742bb4bcd2ff24d}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-L64} = 106, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a233724c5adf28da47784390134db3c66}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-L\-P} = 107, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0ac986a9cd71834016d263ca68de5ac2f4}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-E\-U\-I48} = 108, 
-\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a5dc04c568f0c0746f9a76d193723e13e}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-E\-U\-I64} = 109, 
 \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a5dc04c568f0c0746f9a76d193723e13e}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-E\-U\-I64} = 109, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0ad2500ad054637dfb9c46375eb28f7182}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-T\-K\-E\-Y} = 249, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a60508804d4e825c7191fbdf5a1c6d54b}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-T\-S\-I\-G} = 250, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0afad4f5e8316e9f88b1adcb0ee474c6ac}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-I\-X\-F\-R} = 251, 
-\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0aafa24a70b614aef02cc1a12e829625f7}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-A\-X\-F\-R} = 252, 
 \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0aafa24a70b614aef02cc1a12e829625f7}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-A\-X\-F\-R} = 252, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0ae599722792c31154f99048e56b9cf384}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-M\-A\-I\-L\-B} = 253, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a59fe37d7dd88b5a7c76146d14db1331f}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-M\-A\-I\-L\-A} = 254, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a8261d4e71736b8ae72eae60ff8e18191}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-A\-L\-L\-\_\-\-R\-E\-C\-O\-R\-D\-S} = 255, 
-\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a8447306210a0972ac94b7d774799df1a}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-U\-R\-I} = 256, 
 \\*
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a8447306210a0972ac94b7d774799df1a}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-U\-R\-I} = 256, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0ad7ff895c2bd9c10f958833aeb0289ad4}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-C\-A\-A} = 257, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0a890a10788493e3d572586e991cd43543}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-T\-A} = 32768, 
 \hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0aede320f6102f02f5903553674ed8a3f5}{Senergy\-::\-Dns\-::\-Resource\-Record\-Type\-::\-D\-L\-V} = 32769

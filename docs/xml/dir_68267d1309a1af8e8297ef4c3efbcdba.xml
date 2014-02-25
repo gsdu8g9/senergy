@@ -11,14 +11,19 @@
     <innerfile refid="dns__message_8cpp">dns_message.cpp</innerfile>
     <innerfile refid="dns__message__header_8cpp">dns_message_header.cpp</innerfile>
     <innerfile refid="dns__message__question_8cpp">dns_message_question.cpp</innerfile>
+    <innerfile refid="dns__record__ipv4__address_8cpp">dns_record_ipv4_address.cpp</innerfile>
+    <innerfile refid="dns__record__nameserver_8cpp">dns_record_nameserver.cpp</innerfile>
+    <innerfile refid="dns__record__unknown_8cpp">dns_record_unknown.cpp</innerfile>
     <innerfile refid="dns__requester_8cpp">dns_requester.cpp</innerfile>
     <innerfile refid="dns__resource__record__base_8cpp">dns_resource_record_base.cpp</innerfile>
     <innerfile refid="dns__resource__record__classes_8cpp">dns_resource_record_classes.cpp</innerfile>
+    <innerfile refid="dns__resource__record__collection_8cpp">dns_resource_record_collection.cpp</innerfile>
     <innerfile refid="dns__resource__record__interface_8cpp">dns_resource_record_interface.cpp</innerfile>
     <innerfile refid="dns__resource__record__mapper_8cpp">dns_resource_record_mapper.cpp</innerfile>
     <innerfile refid="dns__resource__record__types_8cpp">dns_resource_record_types.cpp</innerfile>
     <innerfile refid="dns__rootnameserver_8cpp">dns_rootnameserver.cpp</innerfile>
     <innerfile refid="dns__utils_8cpp">dns_utils.cpp</innerfile>
+    <innerfile refid="enum__mapper_8cpp">enum_mapper.cpp</innerfile>
     <innerfile refid="fastmap_8cpp">fastmap.cpp</innerfile>
     <innerfile refid="logger_8cpp">logger.cpp</innerfile>
     <innerfile refid="main_8cpp">main.cpp</innerfile>
@@ -29,6 +34,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/photonios/Documents/Senergy/src/"/>
+    <location file="/home/photonios/Documents/senergy/src/"/>
   </compounddef>
 </doxygen>

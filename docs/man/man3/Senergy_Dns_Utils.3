@@ -1,4 +1,4 @@
-.TH "Senergy::Dns::Utils" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::Dns::Utils" 3 "Tue Feb 25 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -47,7 +47,7 @@ Contains various utilities related to the DNS protocol\&. This are mostly functi
 .br
 .RI "\fIConverts the specified unsigned integer value from network to host byte order\&. \fP"
 .ti -1c
-.RI "static std::string \fBReadHostnameFromBuffer\fP (\fBByteBuffer\fP &buffer)"
+.RI "static std::string \fBReadHostnameFromBuffer\fP (\fBByteBuffer\fP &buffer, bool decode=true)"
 .br
 .RI "\fIReads a domain name from the specified buffer, also known as a 'QNAME'\&. \fP"
 .in -1c
@@ -219,7 +219,7 @@ The input value, in host byte order\&.
 
 .PP
 Definition at line 126 of file dns_utils\&.cpp\&.
-.SS "std::string Senergy::Dns::Utils::ReadHostnameFromBuffer (\fBByteBuffer\fP &buffer)\fC [static]\fP"
+.SS "std::string Senergy::Dns::Utils::ReadHostnameFromBuffer (\fBByteBuffer\fP &buffer, booldecode = \fCtrue\fP)\fC [static]\fP"
 
 .PP
 Reads a domain name from the specified buffer, also known as a 'QNAME'\&. A domain name in a DNS message is basiclly a string (but, see \fBUtils::EncodeHostname\fP and \fBUtils::DecodeHostname\fP), however, in a answer (resource record) the domain name could also be a 'pointer'\&. A pointer in a DNS message means a offset in the buffer where the domain name can be read\&. This is also known as 'message compression', this is defined in section 4\&.1\&.4 of RFC 1035\&.
@@ -233,7 +233,9 @@ Section 4\&.1\&.4 of RFC-1025 (\fBMessage\fP compression)\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIbuffer\fP The buffer to read the domain name from\&.
+\fIbuffer\fP The buffer to read the domain name from\&. 
+.br
+\fIdecode\fP An optional parameters that indicates whether the returned string should be decoded using the \fBUtils::DecodeHostname\fP function or not\&. If set to true the returned hostname will be decoded, if set to false it will not be decoded\&. We use this parameter when reading a domain name pointer\&.
 .RE
 .PP
 \fBReturns:\fP

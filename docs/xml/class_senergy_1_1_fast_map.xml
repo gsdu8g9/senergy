@@ -6,10 +6,14 @@
     <includes refid="fastmap_8h" local="no">fastmap.h</includes>
     <templateparamlist>
       <param>
-        <type>class TKey</type>
+        <type>class</type>
+        <declname>TKey</declname>
+        <defname>TKey</defname>
       </param>
       <param>
-        <type>class TValue</type>
+        <type>class</type>
+        <declname>TValue</declname>
+        <defname>TValue</defname>
       </param>
     </templateparamlist>
       <sectiondef kind="private-type">
@@ -24,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" line="63" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" bodystart="63" bodyend="-1"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/fastmap.h" line="63" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/fastmap.h" bodystart="63" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -52,7 +56,20 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" line="73" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" bodystart="73" bodyend="76"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/fastmap.h" line="73" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/fastmap.h" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_fast_map_1a2391a47cf91bcc3561837800777ae91f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Senergy::FastMap&lt; TKey, TValue &gt;::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <briefdescription>
+<para>Clears the map of any existing records. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/fastmap.h" line="81" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/fastmap.h" bodystart="81" bodyend="84"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_fast_map_1ac06929fda5af594e6ccf96198eac1819" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>TValue &amp;</type>
@@ -78,7 +95,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" line="89" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" bodystart="89" bodyend="102"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/fastmap.h" line="97" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/fastmap.h" bodystart="97" bodyend="110"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -87,30 +104,31 @@
 <para>TKey The data type of the key that is stored in the map.  TValue The data type of the value that is stored in the map.</para><para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11">
+      <node id="17">
         <label>std::vector&lt; FastMapItem&lt; TKey, TValue &gt; &gt;</label>
       </node>
-      <node id="10">
+      <node id="16">
         <label>Senergy::FastMap&lt; TKey, TValue &gt;</label>
         <link refid="class_senergy_1_1_fast_map"/>
-        <childnode refid="11" relation="public-inheritance">
+        <childnode refid="17" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="13">
+      <node id="19">
         <label>std::vector&lt; FastMapItem&lt; TKey, TValue &gt; &gt;</label>
       </node>
-      <node id="12">
+      <node id="18">
         <label>Senergy::FastMap&lt; TKey, TValue &gt;</label>
         <link refid="class_senergy_1_1_fast_map"/>
-        <childnode refid="13" relation="public-inheritance">
+        <childnode refid="19" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" line="60" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/fastmap.h" bodystart="59" bodyend="103"/>
+    <location file="/home/photonios/Documents/senergy/src/senergy/fastmap.h" line="60" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/fastmap.h" bodystart="59" bodyend="111"/>
     <listofallmembers>
       <member refid="class_senergy_1_1_fast_map_1a869e057da1eeb6d54f510e1302a8b7a1" prot="public" virt="non-virtual"><scope>Senergy::FastMap</scope><name>at</name></member>
+      <member refid="class_senergy_1_1_fast_map_1a2391a47cf91bcc3561837800777ae91f" prot="public" virt="non-virtual"><scope>Senergy::FastMap</scope><name>Clear</name></member>
       <member refid="class_senergy_1_1_fast_map_1a4becdc6892e192722b85e8a177d4518d" prot="private" virt="non-virtual"><scope>Senergy::FastMap</scope><name>FastMapBase</name></member>
       <member refid="class_senergy_1_1_fast_map_1ac06929fda5af594e6ccf96198eac1819" prot="public" virt="non-virtual"><scope>Senergy::FastMap</scope><name>operator[]</name></member>
     </listofallmembers>

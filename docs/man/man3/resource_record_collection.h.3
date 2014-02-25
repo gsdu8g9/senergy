@@ -1,4 +1,4 @@
-.TH "src/senergy/dns/resource_record_collection.h" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "src/senergy/dns/resource_record_collection.h" 3 "Tue Feb 25 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,17 +6,31 @@ src/senergy/dns/resource_record_collection.h \-
 .SH SYNOPSIS
 .br
 .PP
+\fC#include <vector>\fP
+.br
 \fC#include <string>\fP
 .br
-\fC#include <memory>\fP
+\fC#include <senergy/bytebuffer\&.h>\fP
+.br
+\fC#include <senergy/fastmap\&.h>\fP
+.br
+\fC#include <senergy/vectorx\&.h>\fP
+.br
+\fC#include <senergy/dns/message_header\&.h>\fP
 .br
 \fC#include <senergy/dns/resource_record_types\&.h>\fP
 .br
 \fC#include <senergy/dns/resource_record_classes\&.h>\fP
 .br
-\fC#include <senergy/dns/resource_record\&.h>\fP
+\fC#include <senergy/dns/resource_record_base\&.h>\fP
 .br
-\fC#include <senergy/dns/record_ipv4address\&.h>\fP
+\fC#include <senergy/dns/resource_record_interface\&.h>\fP
+.br
+\fC#include <senergy/dns/resource_record_mapper\&.h>\fP
+.br
+\fC#include <senergy/dns/record_ipv4_address\&.h>\fP
+.br
+\fC#include <senergy/dns/record_nameserver\&.h>\fP
 .br
 
 .SS "Classes"
@@ -25,7 +39,7 @@ src/senergy/dns/resource_record_collection.h \-
 .ti -1c
 .RI "class \fBSenergy::Dns::ResourceRecordCollection\fP"
 .br
-.RI "\fISimple container for all types of resource records we support\&. This is to prevent creating hundreds of separate containers in the \fBMessage\fP class\&. \fP"
+.RI "\fIA collection of resource record\&. We have many types of resource record\&. \fBSenergy\fP DNS has a flexbile desing to simplify the implementation of additional records\&. This container is part of that design\&. It has the ability to contain all kinds of resource records\&. It also helps in serialization and deserialization\&. \fP"
 .in -1c
 .SS "Namespaces"
 

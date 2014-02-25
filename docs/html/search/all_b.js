@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['m_5fbase',['m_base',['../class_senergy_1_1_dns_1_1_resource_record_interface.html#a8342949ee3626a2b02021343de3be8a0',1,'Senergy::Dns::ResourceRecordInterface']]],
+  ['m_5fbase',['m_base',['../class_senergy_1_1_dns_1_1_resource_record_interface.html#ae2ffc1e85320769af1eabe781fcfc412',1,'Senergy::Dns::ResourceRecordInterface']]],
   ['maila',['MAILA',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a59fe37d7dd88b5a7c76146d14db1331f',1,'Senergy::Dns']]],
   ['mailb',['MAILB',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0ae599722792c31154f99048e56b9cf384',1,'Senergy::Dns']]],
   ['main',['main',['../main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.cpp']]],
   ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]],
   ['mainpage_2edox',['mainpage.dox',['../mainpage_8dox.html',1,'']]],
+  ['map',['Map',['../class_senergy_1_1_enum_mapper.html#a1bded4a48eb23c33dca633c7c59aba7e',1,'Senergy::EnumMapper']]],
   ['maximumbuffersize',['MaximumBufferSize',['../class_senergy_1_1_dns_1_1_id_factory.html#ae3169f3201faed02512868b1f128bbcb',1,'Senergy::Dns::IdFactory']]],
   ['mb',['MB',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a8d8fcc1abd550c5f25dbfaa57d59cb67',1,'Senergy::Dns']]],
   ['md',['MD',['../namespace_senergy_1_1_dns.html#a590bfd748c955364770f5ce358d9dfe0a7dc10e66da5549d351765bd940b81be9',1,'Senergy::Dns']]],

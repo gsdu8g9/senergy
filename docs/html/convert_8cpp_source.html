@@ -31,7 +31,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="senergy-dns.ico"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Senergy
    &#160;<span id="projectnumber">1.0</span>
@@ -140,38 +139,27 @@ $(document).ready(function(){initNavTree('convert_8cpp_source.html','');});
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_senergy_1_1_convert.html#a80cf7b84b0ff65171da68ca40cbf817f">   27</a></span>&#160;std::string <a class="code" href="class_senergy_1_1_convert.html#a80cf7b84b0ff65171da68ca40cbf817f">Convert::ToString</a>(<span class="keywordtype">int</span> value)</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> digits = floor((<span class="keywordtype">double</span>)log10(abs(value))) + 1;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span>(value == 0)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        digits = 1;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">    #ifdef _WIN32</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor"></span>        <span class="keywordtype">char</span> *raw_result = (<span class="keywordtype">char</span> *) malloc(digits);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">    #else</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor"></span>        <span class="keywordtype">char</span> raw_result[digits];</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">    #endif</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    sprintf(raw_result, <span class="stringliteral">&quot;%d&quot;</span>, value); </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">    #ifdef _WIN32</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor"></span>        free(raw_result);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">    #endif</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">return</span> std::string(raw_result);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_senergy_1_1_convert.html#ac468bf5d893e3437883763d8457adc1c">   55</a></span>&#160;std::string <a class="code" href="class_senergy_1_1_convert.html#a80cf7b84b0ff65171da68ca40cbf817f">Convert::ToString</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> value)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_senergy_1_1_convert.html#a80cf7b84b0ff65171da68ca40cbf817f">ToString</a>((<span class="keywordtype">int</span>)value);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_senergy_1_1_convert.html#a66c09e2b461268212cc384e71a2f57c6">   60</a></span>&#160;<span class="keywordtype">char</span> <a class="code" href="class_senergy_1_1_convert.html#a66c09e2b461268212cc384e71a2f57c6">Convert::ToChar</a>(<span class="keywordtype">int</span> value)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_senergy_1_1_convert.html#a80cf7b84b0ff65171da68ca40cbf817f">ToString</a>(value)[0];</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;} <span class="comment">// namespace Senergy</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> __numeric_to_string&lt;int&gt;(value, <span class="stringliteral">&quot;%i&quot;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_senergy_1_1_convert.html#a14a9a727adf896d752b604d82d4d8164">   32</a></span>&#160;std::string <a class="code" href="class_senergy_1_1_convert.html#a80cf7b84b0ff65171da68ca40cbf817f">Convert::ToString</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> value)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> __numeric_to_string&lt;unsigned short&gt;(value, <span class="stringliteral">&quot;%hu&quot;</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_senergy_1_1_convert.html#ac468bf5d893e3437883763d8457adc1c">   37</a></span>&#160;std::string <a class="code" href="class_senergy_1_1_convert.html#a80cf7b84b0ff65171da68ca40cbf817f">Convert::ToString</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> value)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> __numeric_to_string&lt;unsigned int&gt;(value, <span class="stringliteral">&quot;%u&quot;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_senergy_1_1_convert.html#a66c09e2b461268212cc384e71a2f57c6">   42</a></span>&#160;<span class="keywordtype">char</span> <a class="code" href="class_senergy_1_1_convert.html#a66c09e2b461268212cc384e71a2f57c6">Convert::ToChar</a>(<span class="keywordtype">int</span> value)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_senergy_1_1_convert.html#a80cf7b84b0ff65171da68ca40cbf817f">ToString</a>(value)[0];</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;} <span class="comment">// namespace Senergy</span></div>
 <div class="ttc" id="class_senergy_1_1_convert_html_a80cf7b84b0ff65171da68ca40cbf817f"><div class="ttname"><a href="class_senergy_1_1_convert.html#a80cf7b84b0ff65171da68ca40cbf817f">Senergy::Convert::ToString</a></div><div class="ttdeci">static std::string ToString(int value)</div><div class="ttdoc">Converts the specified integer value to a string. </div><div class="ttdef"><b>Definition:</b> <a href="convert_8cpp_source.html#l00027">convert.cpp:27</a></div></div>
-<div class="ttc" id="class_senergy_1_1_convert_html_a66c09e2b461268212cc384e71a2f57c6"><div class="ttname"><a href="class_senergy_1_1_convert.html#a66c09e2b461268212cc384e71a2f57c6">Senergy::Convert::ToChar</a></div><div class="ttdeci">static char ToChar(int value)</div><div class="ttdoc">Converts the specified integer value to a character. </div><div class="ttdef"><b>Definition:</b> <a href="convert_8cpp_source.html#l00060">convert.cpp:60</a></div></div>
+<div class="ttc" id="class_senergy_1_1_convert_html_a66c09e2b461268212cc384e71a2f57c6"><div class="ttname"><a href="class_senergy_1_1_convert.html#a66c09e2b461268212cc384e71a2f57c6">Senergy::Convert::ToChar</a></div><div class="ttdeci">static char ToChar(int value)</div><div class="ttdoc">Converts the specified integer value to a character. </div><div class="ttdef"><b>Definition:</b> <a href="convert_8cpp_source.html#l00042">convert.cpp:42</a></div></div>
 <div class="ttc" id="convert_8h_html"><div class="ttname"><a href="convert_8h.html">convert.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -179,7 +167,7 @@ $(document).ready(function(){initNavTree('convert_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="convert_8cpp.html">convert.cpp</a></li>
-    <li class="footer">Generated on Tue Feb 11 2014 21:56:42 for Senergy by
+    <li class="footer">Generated on Tue Feb 25 2014 22:51:26 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

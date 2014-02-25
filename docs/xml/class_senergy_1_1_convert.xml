@@ -28,7 +28,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/convert.h" line="50" column="1" bodyfile="/home/photonios/Documents/Senergy/src/convert.cpp" bodystart="27" bodyend="46"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/convert.h" line="50" column="1" bodyfile="/home/photonios/Documents/senergy/src/convert.cpp" bodystart="27" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_convert_1ac468bf5d893e3437883763d8457adc1c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -42,7 +42,7 @@
         <briefdescription>
 <para>Converts the specified unsigned integer value to a string. </para>        </briefdescription>
         <detaileddescription>
-<para>Converts the specified integer value to a string.</para><para><parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>value</parametername>
 </parameternamelist>
@@ -50,20 +50,37 @@
 <para>The unsigned integer value to convert to a string.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>The specified unsigned integer value as a string.</para></simplesect>
-<parameterlist kind="param"><parameteritem>
+<simplesect kind="return"><para>The specified unsigned integer value as a string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/convert.h" line="59" column="1" bodyfile="/home/photonios/Documents/senergy/src/convert.cpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_senergy_1_1_convert_1a14a9a727adf896d752b604d82d4d8164" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Senergy::Convert::ToString</definition>
+        <argsstring>(unsigned short value)</argsstring>
+        <name>ToString</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Converts the specified unsigned short value to a string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>value</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The integer value to convert to a string.</para></parameterdescription>
+<para>The unsigned short value to convert to a string.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>The specified integer value as a string. </para></simplesect>
+<simplesect kind="return"><para>The specified unsigned short value as a string. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/convert.h" line="59" column="1" bodyfile="/home/photonios/Documents/Senergy/src/convert.cpp" bodystart="55" bodyend="58"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/convert.h" line="68" column="1" bodyfile="/home/photonios/Documents/senergy/src/convert.cpp" bodystart="32" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_convert_1a66c09e2b461268212cc384e71a2f57c6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>char</type>
@@ -89,7 +106,51 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/convert.h" line="68" column="1" bodyfile="/home/photonios/Documents/Senergy/src/convert.cpp" bodystart="60" bodyend="63"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/convert.h" line="77" column="1" bodyfile="/home/photonios/Documents/senergy/src/convert.cpp" bodystart="42" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_senergy_1_1_convert_1a2147d256693f98350a9b6bd4f0e2f3f8" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>static std::string Senergy::Convert::__numeric_to_string</definition>
+        <argsstring>(T value, const std::string &amp;printf_identifier)</argsstring>
+        <name>__numeric_to_string</name>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>printf_identifier</declname>
+        </param>
+        <briefdescription>
+<para>Converts the specified integer/number type to a string using the specified &apos;printf identifier&apos;. </para>        </briefdescription>
+        <detaileddescription>
+<para>T The integer type to convert to a string.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer/numeric value to convert to a string. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>printf_identfier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The &apos;printf identifier&apos; to use, for example, for an unsigned integer, &apos;u&apos; is specified.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The specified integer/numeric value as a string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/photonios/Documents/senergy/src/senergy/convert.h" line="91" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/convert.h" bodystart="91" bodyend="105"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -97,11 +158,13 @@
     <detaileddescription>
 <para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/convert.h" line="41" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/convert.h" bodystart="40" bodyend="69"/>
+    <location file="/home/photonios/Documents/senergy/src/senergy/convert.h" line="41" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/convert.h" bodystart="40" bodyend="106"/>
     <listofallmembers>
+      <member refid="class_senergy_1_1_convert_1a2147d256693f98350a9b6bd4f0e2f3f8" prot="private" virt="non-virtual"><scope>Senergy::Convert</scope><name>__numeric_to_string</name></member>
       <member refid="class_senergy_1_1_convert_1a66c09e2b461268212cc384e71a2f57c6" prot="public" virt="non-virtual"><scope>Senergy::Convert</scope><name>ToChar</name></member>
       <member refid="class_senergy_1_1_convert_1a80cf7b84b0ff65171da68ca40cbf817f" prot="public" virt="non-virtual"><scope>Senergy::Convert</scope><name>ToString</name></member>
       <member refid="class_senergy_1_1_convert_1ac468bf5d893e3437883763d8457adc1c" prot="public" virt="non-virtual"><scope>Senergy::Convert</scope><name>ToString</name></member>
+      <member refid="class_senergy_1_1_convert_1a14a9a727adf896d752b604d82d4d8164" prot="public" virt="non-virtual"><scope>Senergy::Convert</scope><name>ToString</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

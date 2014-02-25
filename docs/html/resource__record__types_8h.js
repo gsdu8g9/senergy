@@ -1,6 +1,8 @@
 var resource__record__types_8h =
 [
+    [ "ResourceRecordTypeMap", "class_senergy_1_1_dns_1_1_resource_record_type_map.html", "class_senergy_1_1_dns_1_1_resource_record_type_map" ],
     [ "ResourceRecordType", "resource__record__types_8h.html#a590bfd748c955364770f5ce358d9dfe0", [
+      [ "Unknown", "resource__record__types_8h.html#a590bfd748c955364770f5ce358d9dfe0a88183b946cc5f0e8c96b2e66e1c74a7e", null ],
       [ "A", "resource__record__types_8h.html#a590bfd748c955364770f5ce358d9dfe0a7fc56270e7a70fa81a5935b72eacbe29", null ],
       [ "NS", "resource__record__types_8h.html#a590bfd748c955364770f5ce358d9dfe0a53c8d15a175221d2127083e66a8cc937", null ],
       [ "MD", "resource__record__types_8h.html#a590bfd748c955364770f5ce358d9dfe0a7dc10e66da5549d351765bd940b81be9", null ],

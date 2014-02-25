@@ -50,7 +50,7 @@ bool Message::Deserialize(ByteBuffer &buffer)
 	if(!this->ResourceRecords.Deserialize(m_header, buffer))
 		return false;
 
-	this->ResourceRecords.Dump();
+	//this->ResourceRecords.Dump();
 	return true;
 }
 
@@ -72,6 +72,9 @@ bool Message::Serialize(ByteBuffer &buffer)
 		if(!current_question->Serialize(buffer))
 			return false;
 	}
+
+	if(!this->ResourceRecords.Serialize(m_header, buffer))
+		return false;
 
 	return true;
 }

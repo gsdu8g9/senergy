@@ -31,7 +31,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="senergy-dns.ico"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Senergy
    &#160;<span id="projectnumber">1.0</span>
@@ -136,6 +135,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a869e057da1eeb6d54f510e1302a8b7a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_senergy_1_1_fast_map_item.html">FastMapItem</a>&lt; TKey, TValue &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_fast_map.html#a869e057da1eeb6d54f510e1302a8b7a1">at</a> (int index)</td></tr>
 <tr class="memdesc:a869e057da1eeb6d54f510e1302a8b7a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the base class's at method.  <a href="#a869e057da1eeb6d54f510e1302a8b7a1">More...</a><br/></td></tr>
 <tr class="separator:a869e057da1eeb6d54f510e1302a8b7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2391a47cf91bcc3561837800777ae91f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_fast_map.html#a2391a47cf91bcc3561837800777ae91f">Clear</a> ()</td></tr>
+<tr class="memdesc:a2391a47cf91bcc3561837800777ae91f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the map of any existing records.  <a href="#a2391a47cf91bcc3561837800777ae91f">More...</a><br/></td></tr>
+<tr class="separator:a2391a47cf91bcc3561837800777ae91f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac06929fda5af594e6ccf96198eac1819"><td class="memItemLeft" align="right" valign="top">TValue &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senergy_1_1_fast_map.html#ac06929fda5af594e6ccf96198eac1819">operator[]</a> (TKey key)</td></tr>
 <tr class="memdesc:ac06929fda5af594e6ccf96198eac1819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows access to the pairs stored inside this map, one specifies the key of the item to retrieve, and the value is returned as a reference. If the specified key does not exists yet, it will be created, and the specified value will be set.  <a href="#ac06929fda5af594e6ccf96198eac1819">More...</a><br/></td></tr>
 <tr class="separator:ac06929fda5af594e6ccf96198eac1819"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,7 +156,7 @@ class Senergy::FastMap&lt; TKey, TValue &gt;</h3>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class TKey , class TValue &gt; </div>
+template&lt;class TKey, class TValue&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -187,11 +189,40 @@ template&lt;class TKey , class TValue &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a2391a47cf91bcc3561837800777ae91f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TKey, class TValue&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_senergy_1_1_fast_map.html">Senergy::FastMap</a>&lt; TKey, TValue &gt;::Clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clears the map of any existing records. </p>
+
+<p>Definition at line <a class="el" href="fastmap_8h_source.html#l00081">81</a> of file <a class="el" href="fastmap_8h_source.html">fastmap.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ac06929fda5af594e6ccf96198eac1819"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class TKey , class TValue &gt; </div>
+template&lt;class TKey, class TValue&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -221,7 +252,7 @@ template&lt;class TKey , class TValue &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The value of that is associated with the specified pair. </dd></dl>
 
-<p>Definition at line <a class="el" href="fastmap_8h_source.html#l00089">89</a> of file <a class="el" href="fastmap_8h_source.html">fastmap.h</a>.</p>
+<p>Definition at line <a class="el" href="fastmap_8h_source.html#l00097">97</a> of file <a class="el" href="fastmap_8h_source.html">fastmap.h</a>.</p>
 
 </div>
 </div>
@@ -234,7 +265,7 @@ template&lt;class TKey , class TValue &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_senergy.html">Senergy</a></li><li class="navelem"><a class="el" href="class_senergy_1_1_fast_map.html">FastMap</a></li>
-    <li class="footer">Generated on Tue Feb 11 2014 21:56:44 for Senergy by
+    <li class="footer">Generated on Tue Feb 25 2014 22:51:26 for Senergy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -1,17 +1,24 @@
 \hypertarget{resource__record__collection_8h}{\section{src/senergy/dns/resource\-\_\-record\-\_\-collection.h File Reference}
 \label{resource__record__collection_8h}\index{src/senergy/dns/resource\-\_\-record\-\_\-collection.\-h@{src/senergy/dns/resource\-\_\-record\-\_\-collection.\-h}}
 }
+{\ttfamily \#include $<$vector$>$}\\*
 {\ttfamily \#include $<$string$>$}\\*
-{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$senergy/bytebuffer.\-h$>$}\\*
+{\ttfamily \#include $<$senergy/fastmap.\-h$>$}\\*
+{\ttfamily \#include $<$senergy/vectorx.\-h$>$}\\*
+{\ttfamily \#include $<$senergy/dns/message\-\_\-header.\-h$>$}\\*
 {\ttfamily \#include $<$senergy/dns/resource\-\_\-record\-\_\-types.\-h$>$}\\*
 {\ttfamily \#include $<$senergy/dns/resource\-\_\-record\-\_\-classes.\-h$>$}\\*
-{\ttfamily \#include $<$senergy/dns/resource\-\_\-record.\-h$>$}\\*
-{\ttfamily \#include $<$senergy/dns/record\-\_\-ipv4address.\-h$>$}\\*
+{\ttfamily \#include $<$senergy/dns/resource\-\_\-record\-\_\-base.\-h$>$}\\*
+{\ttfamily \#include $<$senergy/dns/resource\-\_\-record\-\_\-interface.\-h$>$}\\*
+{\ttfamily \#include $<$senergy/dns/resource\-\_\-record\-\_\-mapper.\-h$>$}\\*
+{\ttfamily \#include $<$senergy/dns/record\-\_\-ipv4\-\_\-address.\-h$>$}\\*
+{\ttfamily \#include $<$senergy/dns/record\-\_\-nameserver.\-h$>$}\\*
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \hyperlink{class_senergy_1_1_dns_1_1_resource_record_collection}{Senergy\-::\-Dns\-::\-Resource\-Record\-Collection}
-\begin{DoxyCompactList}\small\item\em Simple container for all types of resource records we support. This is to prevent creating hundreds of separate containers in the \hyperlink{class_senergy_1_1_dns_1_1_message}{Message} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A collection of resource record. We have many types of resource record. \hyperlink{namespace_senergy}{Senergy} D\-N\-S has a flexbile desing to simplify the implementation of additional records. This container is part of that design. It has the ability to contain all kinds of resource records. It also helps in serialization and deserialization. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 

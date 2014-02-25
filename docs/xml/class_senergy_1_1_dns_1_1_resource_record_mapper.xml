@@ -5,9 +5,9 @@
     <basecompoundref prot="protected" virt="non-virtual">std::map&lt; ResourceRecordType, ResourceRecordInterfacePtr &gt;</basecompoundref>
     <includes refid="resource__record__mapper_8h" local="no">resource_record_mapper.h</includes>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_resource_record_mapper_1a68fb9f483060af4463349265acd6c788" prot="private" static="no" mutable="no">
-        <type><ref refid="class_senergy_1_1_dns_1_1_resource_record_base" kindref="compound">ResourceRecordBase</ref></type>
-        <definition>ResourceRecordBase Senergy::Dns::ResourceRecordMapper::m_dummy_resource_record</definition>
+      <memberdef kind="variable" id="class_senergy_1_1_dns_1_1_resource_record_mapper_1a2a9fbac3b0dd8c1bc6a4fcd2494f1ba0" prot="private" static="no" mutable="no">
+        <type><ref refid="namespace_senergy_1_1_dns_1a72915c893fbf242018e79d8f92e1646b" kindref="member">ResourceRecordBasePtr</ref></type>
+        <definition>ResourceRecordBasePtr Senergy::Dns::ResourceRecordMapper::m_dummy_resource_record</definition>
         <argsstring></argsstring>
         <name>m_dummy_resource_record</name>
         <briefdescription>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_mapper.h" line="141" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_mapper.h" bodystart="141" bodyend="-1"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_mapper.h" line="133" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_mapper.h" bodystart="133" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -31,37 +31,37 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_mapper.h" line="56" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_mapper.h" bodystart="56" bodyend="59"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_mapper.h" line="57" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_mapper.h" bodystart="57" bodyend="60"/>
       </memberdef>
-      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_mapper_1a27870caab159dc28b03592fba162ddb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_mapper_1ace6af26f447a87243388f5527abf870c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>class T</type>
           </param>
         </templateparamlist>
         <type>void</type>
-        <definition>void Senergy::Dns::ResourceRecordMapper::RegsisterMapping</definition>
+        <definition>void Senergy::Dns::ResourceRecordMapper::RegisterMapping</definition>
         <argsstring>()</argsstring>
-        <name>RegsisterMapping</name>
+        <name>RegisterMapping</name>
         <briefdescription>
 <para>Maps the specified type, which MUST inherit from <ref refid="class_senergy_1_1_dns_1_1_resource_record_interface" kindref="compound">ResourceRecordInterface</ref>. This will create a dummy instance of T, using a dummy instance of the <ref refid="class_senergy_1_1_dns_1_1_resource_record_base" kindref="compound">ResourceRecordBase</ref> class, extract the type (-&gt;GetType), which is a member of the ResourceRecordType enumuration, and then add this mapping to the underlying map. </para>        </briefdescription>
         <detaileddescription>
 <para>To clarify: this[resource_record_type] = dummy_instance;</para><para>T A type that inherits from <ref refid="class_senergy_1_1_dns_1_1_resource_record_interface" kindref="compound">ResourceRecordInterface</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_mapper.h" line="73" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_mapper.h" bodystart="73" bodyend="85"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_mapper.h" line="74" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_mapper.h" bodystart="74" bodyend="82"/>
       </memberdef>
-      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_mapper_1a28d49f50fa6c0703b060ef56f93c5341" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_mapper_1ad9335f22e9d4a069ae38e65d1565f509" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespace_senergy_1_1_dns_1a425b37e088cb64a1bda6205581ade5c8" kindref="member">ResourceRecordInterfacePtr</ref></type>
         <definition>ResourceRecordInterfacePtr Senergy::Dns::ResourceRecordMapper::ApplyMapping</definition>
-        <argsstring>(ResourceRecordType type, ResourceRecordBase &amp;base)</argsstring>
+        <argsstring>(ResourceRecordType type, ResourceRecordBasePtr base)</argsstring>
         <name>ApplyMapping</name>
         <param>
           <type><ref refid="namespace_senergy_1_1_dns_1a590bfd748c955364770f5ce358d9dfe0" kindref="member">ResourceRecordType</ref></type>
           <declname>type</declname>
         </param>
         <param>
-          <type><ref refid="class_senergy_1_1_dns_1_1_resource_record_base" kindref="compound">ResourceRecordBase</ref> &amp;</type>
+          <type><ref refid="namespace_senergy_1_1_dns_1a72915c893fbf242018e79d8f92e1646b" kindref="member">ResourceRecordBasePtr</ref></type>
           <declname>base</declname>
         </param>
         <briefdescription>
@@ -86,7 +86,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_mapper.h" line="106" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_mapper.h" bodystart="106" bodyend="113"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_mapper.h" line="103" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_mapper.h" bodystart="103" bodyend="110"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_dns_1_1_resource_record_mapper_1a4a12162b6962aa857c2075ab17ef4375" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -105,7 +105,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_mapper.h" line="125" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_mapper.h" bodystart="125" bodyend="136"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_mapper.h" line="122" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_mapper.h" bodystart="122" bodyend="128"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -116,33 +116,33 @@
 <simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="41">
+      <node id="60">
         <label>std::map&lt; ResourceRecordType, ResourceRecordInterfacePtr &gt;</label>
       </node>
-      <node id="40">
+      <node id="59">
         <label>Senergy::Dns::ResourceRecordMapper</label>
         <link refid="class_senergy_1_1_dns_1_1_resource_record_mapper"/>
-        <childnode refid="41" relation="protected-inheritance">
+        <childnode refid="60" relation="protected-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="43">
+      <node id="62">
         <label>std::map&lt; ResourceRecordType, ResourceRecordInterfacePtr &gt;</label>
       </node>
-      <node id="42">
+      <node id="61">
         <label>Senergy::Dns::ResourceRecordMapper</label>
         <link refid="class_senergy_1_1_dns_1_1_resource_record_mapper"/>
-        <childnode refid="43" relation="protected-inheritance">
+        <childnode refid="62" relation="protected-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_mapper.h" line="51" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/dns/resource_record_mapper.h" bodystart="50" bodyend="143"/>
+    <location file="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_mapper.h" line="52" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/dns/resource_record_mapper.h" bodystart="51" bodyend="135"/>
     <listofallmembers>
-      <member refid="class_senergy_1_1_dns_1_1_resource_record_mapper_1a28d49f50fa6c0703b060ef56f93c5341" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordMapper</scope><name>ApplyMapping</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_mapper_1ad9335f22e9d4a069ae38e65d1565f509" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordMapper</scope><name>ApplyMapping</name></member>
       <member refid="class_senergy_1_1_dns_1_1_resource_record_mapper_1a4a12162b6962aa857c2075ab17ef4375" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordMapper</scope><name>ApplyReverseMapping</name></member>
-      <member refid="class_senergy_1_1_dns_1_1_resource_record_mapper_1a68fb9f483060af4463349265acd6c788" prot="private" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordMapper</scope><name>m_dummy_resource_record</name></member>
-      <member refid="class_senergy_1_1_dns_1_1_resource_record_mapper_1a27870caab159dc28b03592fba162ddb0" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordMapper</scope><name>RegsisterMapping</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_mapper_1a2a9fbac3b0dd8c1bc6a4fcd2494f1ba0" prot="private" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordMapper</scope><name>m_dummy_resource_record</name></member>
+      <member refid="class_senergy_1_1_dns_1_1_resource_record_mapper_1ace6af26f447a87243388f5527abf870c" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordMapper</scope><name>RegisterMapping</name></member>
       <member refid="class_senergy_1_1_dns_1_1_resource_record_mapper_1a2442004b11c8561651561074f12cc3c9" prot="public" virt="non-virtual"><scope>Senergy::Dns::ResourceRecordMapper</scope><name>ResourceRecordMapper</name></member>
     </listofallmembers>
   </compounddef>

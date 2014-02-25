@@ -1,0 +1,191 @@
+.TH "Senergy::Dns::IPV4Record" 3 "Tue Feb 25 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Senergy::Dns::IPV4Record \- 
+.PP
+Represents a DNS 'A' record, which is a resource record that contains an IPV4 address\&. It is the reply to a DNS 'A' question\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <record_ipv4_address\&.h>\fP
+.PP
+Inherits \fBSenergy::Dns::ResourceRecordInterface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIPV4Record\fP (\fBResourceRecordBasePtr\fP base)"
+.br
+.RI "\fIInitializes a new instance of the \fBIPV4Record\fP class with the specified resource record base\&. \fP"
+.ti -1c
+.RI "bool \fBSerialize\fP (\fBByteBuffer\fP &buffer)"
+.br
+.RI "\fISerializes this record into the specified buffer\&. This does not handle the serialization of the first (base) part of the resource record\&. Call SerializeBase for that\&. \fP"
+.ti -1c
+.RI "bool \fBDeserialize\fP (\fBByteBuffer\fP &buffer)"
+.br
+.RI "\fIDeserializes the record from the specified buffer\&. This does not handle deserialization of the first (base) part of the resource record\&. Call DeserializeBase for that\&. \fP"
+.ti -1c
+.RI "\fBResourceRecordInterfacePtr\fP \fBCreate\fP (\fBResourceRecordBasePtr\fP base)"
+.br
+.RI "\fICreates a new instance of this class, and returns it as a shared pointer to an instance of the \fBResourceRecordInterface\fP class\&. \fP"
+.ti -1c
+.RI "\fBResourceRecordType\fP \fBGetType\fP ()"
+.br
+.RI "\fIGets the type of of this record (derived), wich is a value from the ResourceRecordType enumuration\&. \fP"
+.ti -1c
+.RI "void \fBSetAddress\fP (const std::string &address)"
+.br
+.RI "\fISets the IPV4 address that needs to be serialized\&. \fP"
+.ti -1c
+.RI "std::string \fBGetAddress\fP ()"
+.br
+.RI "\fIGets the IPV4 address that was deserialized\&. \fP"
+.ti -1c
+.RI "void \fBDump\fP ()"
+.br
+.RI "\fIDumps all fields to the standard output, with their values\&. In the following format: \fP"
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Represents a DNS 'A' record, which is a resource record that contains an IPV4 address\&. It is the reply to a DNS 'A' question\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Swen Kooij (Photonios) 
+.RE
+.PP
+
+.PP
+Definition at line 43 of file record_ipv4_address\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Senergy::Dns::IPV4Record::IPV4Record (\fBResourceRecordBasePtr\fPbase)"
+
+.PP
+Initializes a new instance of the \fBIPV4Record\fP class with the specified resource record base\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbase\fP The base resource record instance to use for the IPV4 record\&. 
+.RE
+.PP
+
+.PP
+Definition at line 29 of file dns_record_ipv4_address\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBResourceRecordInterfacePtr\fP Senergy::Dns::IPV4Record::Create (\fBResourceRecordBasePtr\fPbase)\fC [virtual]\fP"
+
+.PP
+Creates a new instance of this class, and returns it as a shared pointer to an instance of the \fBResourceRecordInterface\fP class\&. The derived class should create an instance of itself and return the polymorphic form (as it's base)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbase\fP The \fBResourceRecordBase\fP class to pass to the constructor\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A shared pointer to an instance of the \fBResourceRecordInterface\fP class, which is just the polymorphic form of the derived class\&. 
+.RE
+.PP
+
+.PP
+Implements \fBSenergy::Dns::ResourceRecordInterface\fP\&.
+.PP
+Definition at line 63 of file dns_record_ipv4_address\&.cpp\&.
+.SS "bool Senergy::Dns::IPV4Record::Deserialize (\fBByteBuffer\fP &buffer)\fC [virtual]\fP"
+
+.PP
+Deserializes the record from the specified buffer\&. This does not handle deserialization of the first (base) part of the resource record\&. Call DeserializeBase for that\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to deserialize from\&. 
+.RE
+.PP
+
+.PP
+Implements \fBSenergy::Dns::ResourceRecordInterface\fP\&.
+.PP
+Definition at line 46 of file dns_record_ipv4_address\&.cpp\&.
+.SS "void Senergy::Dns::IPV4Record::Dump ()\fC [virtual]\fP"
+
+.PP
+Dumps all fields to the standard output, with their values\&. In the following format: 
+.PP
+Reimplemented from \fBSenergy::Dns::ResourceRecordInterface\fP\&.
+.PP
+Definition at line 83 of file dns_record_ipv4_address\&.cpp\&.
+.SS "std::string Senergy::Dns::IPV4Record::GetAddress ()"
+
+.PP
+Gets the IPV4 address that was deserialized\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The IP address that was deserialized\&. 
+.RE
+.PP
+
+.PP
+Definition at line 78 of file dns_record_ipv4_address\&.cpp\&.
+.SS "\fBResourceRecordType\fP Senergy::Dns::IPV4Record::GetType ()\fC [virtual]\fP"
+
+.PP
+Gets the type of of this record (derived), wich is a value from the ResourceRecordType enumuration\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A value from the ResourceRecordType enumuration which denotes the type of this record\&. 
+.RE
+.PP
+
+.PP
+Implements \fBSenergy::Dns::ResourceRecordInterface\fP\&.
+.PP
+Definition at line 68 of file dns_record_ipv4_address\&.cpp\&.
+.SS "bool Senergy::Dns::IPV4Record::Serialize (\fBByteBuffer\fP &buffer)\fC [virtual]\fP"
+
+.PP
+Serializes this record into the specified buffer\&. This does not handle the serialization of the first (base) part of the resource record\&. Call SerializeBase for that\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to serialize to\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether the serialization was successful\&. 
+.RE
+.PP
+
+.PP
+Implements \fBSenergy::Dns::ResourceRecordInterface\fP\&.
+.PP
+Definition at line 36 of file dns_record_ipv4_address\&.cpp\&.
+.SS "void Senergy::Dns::IPV4Record::SetAddress (const std::string &address)"
+
+.PP
+Sets the IPV4 address that needs to be serialized\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIaddress\fP The IPV4 address to be serialized\&. 
+.RE
+.PP
+
+.PP
+Definition at line 73 of file dns_record_ipv4_address\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Senergy from the source code\&.

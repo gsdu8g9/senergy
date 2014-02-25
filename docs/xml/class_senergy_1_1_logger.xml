@@ -45,7 +45,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/logger.h" line="68" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/logger.h" bodystart="68" bodyend="71"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/logger.h" line="68" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/logger.h" bodystart="68" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_logger_1a2d5b9ef97d8c0de884254562395a01a7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -88,7 +88,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/logger.h" line="85" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/logger.h" bodystart="85" bodyend="88"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/logger.h" line="85" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/logger.h" bodystart="85" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_logger_1ac68f5e14b8fe1bb3004d66289ff95150" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -131,7 +131,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/logger.h" line="102" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/logger.h" bodystart="102" bodyend="105"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/logger.h" line="102" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/logger.h" bodystart="102" bodyend="105"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_logger_1a2595f879ddfbbb8f8ef6f08d4a9d18f3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -174,7 +174,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/logger.h" line="119" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/logger.h" bodystart="119" bodyend="122"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/logger.h" line="119" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/logger.h" bodystart="119" bodyend="122"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_logger_1ab1d3d33750896e5605bd1cf7947d762d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -228,7 +228,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/logger.h" line="137" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/logger.h" bodystart="137" bodyend="166"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/logger.h" line="137" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/logger.h" bodystart="137" bodyend="166"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-func">
@@ -243,7 +243,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/logger.h" line="170" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/logger.h" bodystart="170" bodyend="191"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/logger.h" line="170" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/logger.h" bodystart="170" bodyend="191"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -251,7 +251,7 @@
     <detaileddescription>
 <para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/logger.h" line="54" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/logger.h" bodystart="53" bodyend="192"/>
+    <location file="/home/photonios/Documents/senergy/src/senergy/logger.h" line="54" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/logger.h" bodystart="53" bodyend="192"/>
     <listofallmembers>
       <member refid="class_senergy_1_1_logger_1a15ec68bfa46a3574baf32d735d435177" prot="private" virt="non-virtual"><scope>Senergy::Logger</scope><name>__get_time_string</name></member>
       <member refid="class_senergy_1_1_logger_1a2595f879ddfbbb8f8ef6f08d4a9d18f3" prot="public" virt="non-virtual"><scope>Senergy::Logger</scope><name>Debug</name></member>

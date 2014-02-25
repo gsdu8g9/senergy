@@ -27,7 +27,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/console.h" line="47" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/console.h" bodystart="47" bodyend="50"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/console.h" line="47" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/console.h" bodystart="47" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_console_1adbdfcc53b64c164bdad1aa6fc739c252" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -78,7 +78,7 @@ T The type of the first element.  R The type of the current element (recursion).
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/console.h" line="70" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/console.h" bodystart="70" bodyend="75"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/console.h" line="70" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/console.h" bodystart="70" bodyend="75"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-func">
@@ -106,7 +106,7 @@ T The type of the first element.  R The type of the current element (recursion).
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/console.h" line="87" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/console.h" bodystart="87" bodyend="91"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/console.h" line="87" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/console.h" bodystart="87" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_console_1a4e7ab8391c20d29adbae2b55fc317b75" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -149,7 +149,7 @@ T The type of the first element.  R The type of the current element (recursion).
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/console.h" line="108" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/console.h" bodystart="108" bodyend="138"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/console.h" line="108" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/console.h" bodystart="108" bodyend="138"/>
       </memberdef>
       <memberdef kind="function" id="class_senergy_1_1_console_1a321f0293bd2c0b3ac3d3a6a4f747e3f5" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -208,7 +208,7 @@ T The type of the first element.  R The type of the current element (recursion).
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/photonios/Documents/Senergy/src/senergy/console.h" line="159" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/console.h" bodystart="159" bodyend="166"/>
+        <location file="/home/photonios/Documents/senergy/src/senergy/console.h" line="159" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/console.h" bodystart="159" bodyend="166"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -216,7 +216,7 @@ T The type of the first element.  R The type of the current element (recursion).
     <detaileddescription>
 <para><simplesect kind="author"><para>Swen Kooij (Photonios) </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/photonios/Documents/Senergy/src/senergy/console.h" line="39" column="1" bodyfile="/home/photonios/Documents/Senergy/src/senergy/console.h" bodystart="38" bodyend="167"/>
+    <location file="/home/photonios/Documents/senergy/src/senergy/console.h" line="39" column="1" bodyfile="/home/photonios/Documents/senergy/src/senergy/console.h" bodystart="38" bodyend="167"/>
     <listofallmembers>
       <member refid="class_senergy_1_1_console_1a569189f89d6a1a5e7c2b996de4e1991c" prot="private" virt="non-virtual"><scope>Senergy::Console</scope><name>__print</name></member>
       <member refid="class_senergy_1_1_console_1a4e7ab8391c20d29adbae2b55fc317b75" prot="private" virt="non-virtual"><scope>Senergy::Console</scope><name>__print</name></member>

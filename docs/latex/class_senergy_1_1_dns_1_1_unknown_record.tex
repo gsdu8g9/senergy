@@ -1,0 +1,178 @@
+\hypertarget{class_senergy_1_1_dns_1_1_unknown_record}{\section{Senergy\-:\-:Dns\-:\-:Unknown\-Record Class Reference}
+\label{class_senergy_1_1_dns_1_1_unknown_record}\index{Senergy\-::\-Dns\-::\-Unknown\-Record@{Senergy\-::\-Dns\-::\-Unknown\-Record}}
+}
+
+
+Represents a record that could not be handled by one of the other classes that implement the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class. All records that are of a type that is not supported by the mapper are handled by this class. This class makes sure the resource record data is skipped when deserialization and serialization.  
+
+
+
+
+{\ttfamily \#include $<$record\-\_\-unknown.\-h$>$}
+
+Inheritance diagram for Senergy\-:\-:Dns\-:\-:Unknown\-Record\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_senergy_1_1_dns_1_1_unknown_record}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_senergy_1_1_dns_1_1_unknown_record_ac28afe26d98dc7729160d182c1aa25bd}{Unknown\-Record} (\hyperlink{namespace_senergy_1_1_dns_a72915c893fbf242018e79d8f92e1646b}{Resource\-Record\-Base\-Ptr} base)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_unknown_record}{Unknown\-Record} class with the specified resource record base. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_dns_1_1_unknown_record_aa792712816e5f177b554f1b7d6018563}{Serialize} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
+\begin{DoxyCompactList}\small\item\em Serializes this record into the specified buffer. This does not handle the serialization of the first (base) part of the resource record. Call Serialize\-Base for that. \end{DoxyCompactList}\item 
+bool \hyperlink{class_senergy_1_1_dns_1_1_unknown_record_af58fb86354cd176aefaa0000a706d646}{Deserialize} (\hyperlink{class_senergy_1_1_byte_buffer}{Byte\-Buffer} \&buffer)
+\begin{DoxyCompactList}\small\item\em Deserializes the record from the specified buffer. This does not handle deserialization of the first (base) part of the resource record. Call Deserialize\-Base for that. \end{DoxyCompactList}\item 
+\hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_abf5eec20c95f05b57c5c02eaed349e16}{Resource\-Record\-Interface\-Ptr} \hyperlink{class_senergy_1_1_dns_1_1_unknown_record_a98f66426e8e89449eaac24e0ac4eeb60}{Create} (\hyperlink{namespace_senergy_1_1_dns_a72915c893fbf242018e79d8f92e1646b}{Resource\-Record\-Base\-Ptr} base)
+\begin{DoxyCompactList}\small\item\em Creates a new instance of this class, and returns it as a shared pointer to an instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class. \end{DoxyCompactList}\item 
+\hyperlink{namespace_senergy_1_1_dns_a590bfd748c955364770f5ce358d9dfe0}{Resource\-Record\-Type} \hyperlink{class_senergy_1_1_dns_1_1_unknown_record_a3b6e5feb0277646b2513432cede8ebbd}{Get\-Type} ()
+\begin{DoxyCompactList}\small\item\em Gets the type of of this record (derived), wich is a value from the Resource\-Record\-Type enumuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents a record that could not be handled by one of the other classes that implement the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class. All records that are of a type that is not supported by the mapper are handled by this class. This class makes sure the resource record data is skipped when deserialization and serialization. 
+
+\begin{DoxyAuthor}{Author}
+Swen Kooij (Photonios) 
+\end{DoxyAuthor}
+
+
+Definition at line 43 of file record\-\_\-unknown.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_unknown_record_ac28afe26d98dc7729160d182c1aa25bd}{\index{Senergy\-::\-Dns\-::\-Unknown\-Record@{Senergy\-::\-Dns\-::\-Unknown\-Record}!Unknown\-Record@{Unknown\-Record}}
+\index{Unknown\-Record@{Unknown\-Record}!Senergy::Dns::UnknownRecord@{Senergy\-::\-Dns\-::\-Unknown\-Record}}
+\subsubsection[{Unknown\-Record}]{\setlength{\rightskip}{0pt plus 5cm}Senergy\-::\-Dns\-::\-Unknown\-Record\-::\-Unknown\-Record (
+\begin{DoxyParamCaption}
+\item[{{\bf Resource\-Record\-Base\-Ptr}}]{base}
+\end{DoxyParamCaption}
+)}}\label{class_senergy_1_1_dns_1_1_unknown_record_ac28afe26d98dc7729160d182c1aa25bd}
+
+
+Initializes a new instance of the \hyperlink{class_senergy_1_1_dns_1_1_unknown_record}{Unknown\-Record} class with the specified resource record base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & A smart pointer to an instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Resource\-Record\-Base} class, wich serves as the base of this instance. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file dns\-\_\-record\-\_\-unknown.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_senergy_1_1_dns_1_1_unknown_record_a98f66426e8e89449eaac24e0ac4eeb60}{\index{Senergy\-::\-Dns\-::\-Unknown\-Record@{Senergy\-::\-Dns\-::\-Unknown\-Record}!Create@{Create}}
+\index{Create@{Create}!Senergy::Dns::UnknownRecord@{Senergy\-::\-Dns\-::\-Unknown\-Record}}
+\subsubsection[{Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\-Record\-Interface\-Ptr} Senergy\-::\-Dns\-::\-Unknown\-Record\-::\-Create (
+\begin{DoxyParamCaption}
+\item[{{\bf Resource\-Record\-Base\-Ptr}}]{base}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_senergy_1_1_dns_1_1_unknown_record_a98f66426e8e89449eaac24e0ac4eeb60}
+
+
+Creates a new instance of this class, and returns it as a shared pointer to an instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class. 
+
+The derived class should create an instance of itself and return the polymorphic form (as it's base).
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & The \hyperlink{class_senergy_1_1_dns_1_1_resource_record_base}{Resource\-Record\-Base} class to pass to the constructor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to an instance of the \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface}{Resource\-Record\-Interface} class, which is just the polymorphic form of the derived class. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_abe37068b670f89481a145e1e9c2c8267}{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}.
+
+
+
+Definition at line 63 of file dns\-\_\-record\-\_\-unknown.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_unknown_record_af58fb86354cd176aefaa0000a706d646}{\index{Senergy\-::\-Dns\-::\-Unknown\-Record@{Senergy\-::\-Dns\-::\-Unknown\-Record}!Deserialize@{Deserialize}}
+\index{Deserialize@{Deserialize}!Senergy::Dns::UnknownRecord@{Senergy\-::\-Dns\-::\-Unknown\-Record}}
+\subsubsection[{Deserialize}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Unknown\-Record\-::\-Deserialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Byte\-Buffer} \&}]{buffer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_senergy_1_1_dns_1_1_unknown_record_af58fb86354cd176aefaa0000a706d646}
+
+
+Deserializes the record from the specified buffer. This does not handle deserialization of the first (base) part of the resource record. Call Deserialize\-Base for that. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to deserialize from. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_ade2e0b9817476ea2161b694efd3e02db}{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}.
+
+
+
+Definition at line 36 of file dns\-\_\-record\-\_\-unknown.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_unknown_record_a3b6e5feb0277646b2513432cede8ebbd}{\index{Senergy\-::\-Dns\-::\-Unknown\-Record@{Senergy\-::\-Dns\-::\-Unknown\-Record}!Get\-Type@{Get\-Type}}
+\index{Get\-Type@{Get\-Type}!Senergy::Dns::UnknownRecord@{Senergy\-::\-Dns\-::\-Unknown\-Record}}
+\subsubsection[{Get\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\-Record\-Type} Senergy\-::\-Dns\-::\-Unknown\-Record\-::\-Get\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_senergy_1_1_dns_1_1_unknown_record_a3b6e5feb0277646b2513432cede8ebbd}
+
+
+Gets the type of of this record (derived), wich is a value from the Resource\-Record\-Type enumuration. 
+
+\begin{DoxyReturn}{Returns}
+A value from the Resource\-Record\-Type enumuration which denotes the type of this record. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_af895ba199749599d42f8e6a737eb9118}{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}.
+
+
+
+Definition at line 68 of file dns\-\_\-record\-\_\-unknown.\-cpp.
+
+\hypertarget{class_senergy_1_1_dns_1_1_unknown_record_aa792712816e5f177b554f1b7d6018563}{\index{Senergy\-::\-Dns\-::\-Unknown\-Record@{Senergy\-::\-Dns\-::\-Unknown\-Record}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Senergy::Dns::UnknownRecord@{Senergy\-::\-Dns\-::\-Unknown\-Record}}
+\subsubsection[{Serialize}]{\setlength{\rightskip}{0pt plus 5cm}bool Senergy\-::\-Dns\-::\-Unknown\-Record\-::\-Serialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Byte\-Buffer} \&}]{buffer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_senergy_1_1_dns_1_1_unknown_record_aa792712816e5f177b554f1b7d6018563}
+
+
+Serializes this record into the specified buffer. This does not handle the serialization of the first (base) part of the resource record. Call Serialize\-Base for that. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to serialize to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether the serialization was successful. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_senergy_1_1_dns_1_1_resource_record_interface_ab81e0a7ea292513c5c34a3be0c7a6dca}{Senergy\-::\-Dns\-::\-Resource\-Record\-Interface}.
+
+
+
+Definition at line 52 of file dns\-\_\-record\-\_\-unknown.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/senergy/dns/\hyperlink{record__unknown_8h}{record\-\_\-unknown.\-h}\item 
+src/\hyperlink{dns__record__unknown_8cpp}{dns\-\_\-record\-\_\-unknown.\-cpp}\end{DoxyCompactItemize}

@@ -21,6 +21,8 @@ Inheritance diagram for Senergy\-:\-:Fast\-Map$<$ T\-Key, T\-Value $>$\-:\begin{
 \item 
 \hyperlink{struct_senergy_1_1_fast_map_item}{Fast\-Map\-Item}$<$ T\-Key, T\-Value $>$ \& \hyperlink{class_senergy_1_1_fast_map_a869e057da1eeb6d54f510e1302a8b7a1}{at} (int index)
 \begin{DoxyCompactList}\small\item\em Provides access to the base class's at method. \end{DoxyCompactList}\item 
+void \hyperlink{class_senergy_1_1_fast_map_a2391a47cf91bcc3561837800777ae91f}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Clears the map of any existing records. \end{DoxyCompactList}\item 
 T\-Value \& \hyperlink{class_senergy_1_1_fast_map_ac06929fda5af594e6ccf96198eac1819}{operator\mbox{[}$\,$\mbox{]}} (T\-Key key)
 \begin{DoxyCompactList}\small\item\em Allows access to the pairs stored inside this map, one specifies the key of the item to retrieve, and the value is returned as a reference. If the specified key does not exists yet, it will be created, and the specified value will be set. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -44,7 +46,7 @@ Definition at line 59 of file fastmap.\-h.
 \subsection{Member Function Documentation}
 \hypertarget{class_senergy_1_1_fast_map_a869e057da1eeb6d54f510e1302a8b7a1}{\index{Senergy\-::\-Fast\-Map@{Senergy\-::\-Fast\-Map}!at@{at}}
 \index{at@{at}!Senergy::FastMap@{Senergy\-::\-Fast\-Map}}
-\subsubsection[{at}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T\-Key , class T\-Value $>$ {\bf Fast\-Map\-Item}$<$T\-Key, T\-Value$>$\& {\bf Senergy\-::\-Fast\-Map}$<$ T\-Key, T\-Value $>$\-::at (
+\subsubsection[{at}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T\-Key, class T\-Value$>$ {\bf Fast\-Map\-Item}$<$T\-Key, T\-Value$>$\& {\bf Senergy\-::\-Fast\-Map}$<$ T\-Key, T\-Value $>$\-::at (
 \begin{DoxyParamCaption}
 \item[{int}]{index}
 \end{DoxyParamCaption}
@@ -65,9 +67,24 @@ The fast map item at the specified index.
 
 Definition at line 73 of file fastmap.\-h.
 
+\hypertarget{class_senergy_1_1_fast_map_a2391a47cf91bcc3561837800777ae91f}{\index{Senergy\-::\-Fast\-Map@{Senergy\-::\-Fast\-Map}!Clear@{Clear}}
+\index{Clear@{Clear}!Senergy::FastMap@{Senergy\-::\-Fast\-Map}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T\-Key, class T\-Value$>$ void {\bf Senergy\-::\-Fast\-Map}$<$ T\-Key, T\-Value $>$\-::Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_senergy_1_1_fast_map_a2391a47cf91bcc3561837800777ae91f}
+
+
+Clears the map of any existing records. 
+
+
+
+Definition at line 81 of file fastmap.\-h.
+
 \hypertarget{class_senergy_1_1_fast_map_ac06929fda5af594e6ccf96198eac1819}{\index{Senergy\-::\-Fast\-Map@{Senergy\-::\-Fast\-Map}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
 \index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Senergy::FastMap@{Senergy\-::\-Fast\-Map}}
-\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T\-Key , class T\-Value $>$ T\-Value\& {\bf Senergy\-::\-Fast\-Map}$<$ T\-Key, T\-Value $>$\-::operator\mbox{[}$\,$\mbox{]} (
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T\-Key, class T\-Value$>$ T\-Value\& {\bf Senergy\-::\-Fast\-Map}$<$ T\-Key, T\-Value $>$\-::operator\mbox{[}$\,$\mbox{]} (
 \begin{DoxyParamCaption}
 \item[{T\-Key}]{key}
 \end{DoxyParamCaption}
@@ -88,7 +105,7 @@ The value of that is associated with the specified pair.
 \end{DoxyReturn}
 
 
-Definition at line 89 of file fastmap.\-h.
+Definition at line 97 of file fastmap.\-h.
 
 
 

@@ -1,4 +1,4 @@
-.TH "Senergy::Dns::ResourceRecordBase" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::Dns::ResourceRecordBase" 3 "Tue Feb 25 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -39,6 +39,10 @@ Represents the first part of a resource record\&. A resource record is defined i
 .br
 .RI "\fIGets the resource record type, the type of resource this record contains\&. \fP"
 .ti -1c
+.RI "std::string \fBGetTypeString\fP ()"
+.br
+.RI "\fIGets the resource record type of this record, as a string\&. \fP"
+.ti -1c
 .RI "void \fBSetType\fP (\fBResourceRecordType\fP type)"
 .br
 .RI "\fISets the resource record type, the type of resource this record contains\&. \fP"
@@ -74,6 +78,17 @@ Represents the first part of a resource record\&. A resource record is defined i
 .RI "static ResourceRecordBasePtr \fBCreate\fP ()"
 .br
 .RI "\fICreates a new instance of the \fBResourceRecordBase\fP class as a shared pointer\&. \fP"
+.ti -1c
+.RI "static int \fBGetMinimalSize\fP ()"
+.br
+.RI "\fIGets the minimal size of a resource record, the size that is required to contain all fiels except the resource data\&. \fP"
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBResourceRecordInterface\fP"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -88,7 +103,7 @@ Swen Kooij (Photonios)
 .PP
 
 .PP
-Definition at line 47 of file resource_record_base\&.h\&.
+Definition at line 48 of file resource_record_base\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Senergy::Dns::ResourceRecordBase::ResourceRecordBase ()"
@@ -142,7 +157,7 @@ Definition at line 43 of file dns_resource_record_base\&.cpp\&.
 .PP
 Dumps all fields to the standard output, with their values\&. In the following format: 
 .PP
-Definition at line 129 of file dns_resource_record_base\&.cpp\&.
+Definition at line 136 of file dns_resource_record_base\&.cpp\&.
 .SS "\fBResourceRecordClass\fP Senergy::Dns::ResourceRecordBase::GetClass ()"
 
 .PP
@@ -155,7 +170,7 @@ A value from the ResourceRecordClass enumuration, which indicates what class the
 .PP
 
 .PP
-Definition at line 104 of file dns_resource_record_base\&.cpp\&.
+Definition at line 111 of file dns_resource_record_base\&.cpp\&.
 .SS "std::string Senergy::Dns::ResourceRecordBase::GetHostname ()"
 
 .PP
@@ -168,7 +183,7 @@ The hostname configured in this answer\&.
 .PP
 
 .PP
-Definition at line 84 of file dns_resource_record_base\&.cpp\&.
+Definition at line 83 of file dns_resource_record_base\&.cpp\&.
 .SS "int Senergy::Dns::ResourceRecordBase::GetMaxCachingTime ()"
 
 .PP
@@ -181,7 +196,20 @@ The maximum amount of seconds the resource in this record should be cached\&. If
 .PP
 
 .PP
-Definition at line 119 of file dns_resource_record_base\&.cpp\&.
+Definition at line 126 of file dns_resource_record_base\&.cpp\&.
+.SS "int Senergy::Dns::ResourceRecordBase::GetMinimalSize ()\fC [static]\fP"
+
+.PP
+Gets the minimal size of a resource record, the size that is required to contain all fiels except the resource data\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The amount of bytes that the minimal size of a resource record is\&. 
+.RE
+.PP
+
+.PP
+Definition at line 145 of file dns_resource_record_base\&.cpp\&.
 .SS "int Senergy::Dns::ResourceRecordBase::GetResourceSize ()"
 
 .PP
@@ -194,7 +222,7 @@ The size of the resource in this record (amount of bytes)\&.
 .PP
 
 .PP
-Definition at line 124 of file dns_resource_record_base\&.cpp\&.
+Definition at line 131 of file dns_resource_record_base\&.cpp\&.
 .SS "\fBResourceRecordType\fP Senergy::Dns::ResourceRecordBase::GetType ()"
 
 .PP
@@ -207,7 +235,20 @@ A value from the ResourceRecordType enumuration, which indicates what kind of re
 .PP
 
 .PP
-Definition at line 94 of file dns_resource_record_base\&.cpp\&.
+Definition at line 93 of file dns_resource_record_base\&.cpp\&.
+.SS "std::string Senergy::Dns::ResourceRecordBase::GetTypeString ()"
+
+.PP
+Gets the resource record type of this record, as a string\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The type of this resource record as a string, which is basiclly the name of the configued ResourceRecordType enumuration value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 98 of file dns_resource_record_base\&.cpp\&.
 .SS "bool Senergy::Dns::ResourceRecordBase::NeedsCaching ()"
 
 .PP
@@ -220,7 +261,7 @@ True when this record needs to be cached, and false when it should not be cached
 .PP
 
 .PP
-Definition at line 114 of file dns_resource_record_base\&.cpp\&.
+Definition at line 121 of file dns_resource_record_base\&.cpp\&.
 .SS "bool Senergy::Dns::ResourceRecordBase::Serialize (\fBByteBuffer\fP &buffer)"
 
 .PP
@@ -245,7 +286,7 @@ A boolean indicating whether serialization was successful\&. True is returned wh
 .PP
 
 .PP
-Definition at line 69 of file dns_resource_record_base\&.cpp\&.
+Definition at line 68 of file dns_resource_record_base\&.cpp\&.
 .SS "void Senergy::Dns::ResourceRecordBase::SetClass (\fBResourceRecordClass\fPclas)"
 
 .PP
@@ -258,7 +299,7 @@ Sets the resource record class, the class of resource this record contains\&.
 .PP
 
 .PP
-Definition at line 109 of file dns_resource_record_base\&.cpp\&.
+Definition at line 116 of file dns_resource_record_base\&.cpp\&.
 .SS "void Senergy::Dns::ResourceRecordBase::SetHostname (const std::stringhostname)"
 
 .PP
@@ -271,7 +312,7 @@ Sets the hostname for this answer\&.
 .PP
 
 .PP
-Definition at line 89 of file dns_resource_record_base\&.cpp\&.
+Definition at line 88 of file dns_resource_record_base\&.cpp\&.
 .SS "void Senergy::Dns::ResourceRecordBase::SetType (\fBResourceRecordType\fPtype)"
 
 .PP
@@ -284,7 +325,13 @@ Sets the resource record type, the type of resource this record contains\&.
 .PP
 
 .PP
-Definition at line 99 of file dns_resource_record_base\&.cpp\&.
+Definition at line 106 of file dns_resource_record_base\&.cpp\&.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend class \fBResourceRecordInterface\fP\fC [friend]\fP"
+
+.PP
+Definition at line 51 of file resource_record_base\&.h\&.
 
 .SH "Author"
 .PP 

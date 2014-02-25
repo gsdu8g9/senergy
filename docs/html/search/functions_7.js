@@ -5,6 +5,7 @@ var searchData=
   ['integer',['Integer',['../class_senergy_1_1_print.html#a7899dd50cdb0b0a6e7ed144d62ea227d',1,'Senergy::Print']]],
   ['ipv4addressfrombinary',['IPV4AddressFromBinary',['../class_senergy_1_1_socket.html#a824cf26338b12e1591b78d23abf6032a',1,'Senergy::Socket']]],
   ['ipv4addresstobinary',['IPV4AddressToBinary',['../class_senergy_1_1_socket.html#a74c62f0fb79be1192eed5f2fd092dd50',1,'Senergy::Socket']]],
+  ['ipv4record',['IPV4Record',['../class_senergy_1_1_dns_1_1_i_p_v4_record.html#a9239e0aa9254080bb92ab1ba8352bd56',1,'Senergy::Dns::IPV4Record']]],
   ['isconnected',['IsConnected',['../class_senergy_1_1_socket.html#a6d22575e6fc0d6ab4a61097d60b6e773',1,'Senergy::Socket']]],
   ['isempty',['IsEmpty',['../class_senergy_1_1_byte_buffer.html#ad141d494b81ff561ede715c4f7ceb840',1,'Senergy::ByteBuffer']]]
 ];

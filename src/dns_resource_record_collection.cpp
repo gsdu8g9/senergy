@@ -75,6 +75,7 @@ bool ResourceRecordCollection::Deserialize(MessageHeader &header, ByteBuffer &bu
 
 bool ResourceRecordCollection::Serialize(MessageHeader &header, ByteBuffer &buffer)
 {
+	printf("WARNING: RESOURCE RECORD SERIALIZATION STILL HAS TO BE IMPLEMENTED\n");
 	return true;
 }
 

@@ -1,4 +1,4 @@
-.TH "Senergy::ByteBuffer" 3 "Tue Feb 11 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
+.TH "Senergy::ByteBuffer" 3 "Tue Feb 25 2014" "Version 1.0" "Senergy" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -111,6 +111,10 @@ A dynamiclly sized buffer for binary data\&. Resizes the underlying buffer when 
 .br
 .RI "\fIWrites the specified value to the buffer\&. The buffer is automaticlly resized when the specified value does not fit into the buffer\&. \fP"
 .ti -1c
+.RI "void \fBWriteNop\fP ()"
+.br
+.RI "\fIWrites a null byte (0) to the byte buffer\&. The buffer is automaticlly resized when the specified value does not fit into the buffer\&. \fP"
+.ti -1c
 .RI "bool \fBRead\fP (char *buffer, int size)"
 .br
 .RI "\fIReads the specified amount of bytes from the buffer and copies it into the specified buffer\&. \fP"
@@ -162,6 +166,18 @@ A dynamiclly sized buffer for binary data\&. Resizes the underlying buffer when 
 .RI "void \fBDumpHexadecimal\fP ()"
 .br
 .RI "\fIDump everything from the current position to the standard output, where each byte in the buffer is dumped in it's hexadecimal representation\&. Each byte will be separated by a space and after 35 bytes, a new line is created\&. \fP"
+.ti -1c
+.RI "void \fBDumpHexadecimal\fP (int start, int amount)"
+.br
+.RI "\fIDump everything from the current position to the standard output, where each byte in the buffer is dumped in it's hexadecimal representation\&. Each byte will be separated by a space and after 35 bytes, a new line is created\&. \fP"
+.ti -1c
+.RI "bool \fBCopyTo\fP (\fBByteBuffer\fP &buffer, int amount)"
+.br
+.RI "\fICopies the specified amount of bytes from the current position into the specified buffer\&. \fP"
+.ti -1c
+.RI "bool \fBHasReachedEnd\fP ()"
+.br
+.RI "\fIChecks if the buffer's position is currently at the end of the buffer\&. \fP"
 .in -1c
 .SS "Friends"
 
@@ -206,6 +222,26 @@ The \fBByteBuffer\fP's destructor\&. Free's the underlying buffer, and cleans up
 Definition at line 43 of file bytebuffer\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
+.SS "bool Senergy::ByteBuffer::CopyTo (\fBByteBuffer\fP &buffer, intamount)"
+
+.PP
+Copies the specified amount of bytes from the current position into the specified buffer\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP The buffer to copy the bytes to\&. 
+.br
+\fIamount\fP The amount of bytes to copy to the specified buffer\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean indicating whether the copy operation was a success, false is returned when the copy failed and true is returned when the copy was a success\&. Failure is usually caused by specifiying an amount that is more then the remaining size\&. 
+.RE
+.PP
+
+.PP
+Definition at line 332 of file bytebuffer\&.cpp\&.
 .SS "bool Senergy::ByteBuffer::DecreasePosition (intamount = \fC1\fP)"
 
 .PP
@@ -229,7 +265,22 @@ Definition at line 92 of file bytebuffer\&.cpp\&.
 .PP
 Dump everything from the current position to the standard output, where each byte in the buffer is dumped in it's hexadecimal representation\&. Each byte will be separated by a space and after 35 bytes, a new line is created\&. 
 .PP
-Definition at line 270 of file bytebuffer\&.cpp\&.
+Definition at line 275 of file bytebuffer\&.cpp\&.
+.SS "void Senergy::ByteBuffer::DumpHexadecimal (intstart, intamount)"
+
+.PP
+Dump everything from the current position to the standard output, where each byte in the buffer is dumped in it's hexadecimal representation\&. Each byte will be separated by a space and after 35 bytes, a new line is created\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstart\fP The offset/position at which we should start dumping 
+.br
+\fIamount\fP The amount of bytes to display from the specified offset/position\&. 
+.RE
+.PP
+
+.PP
+Definition at line 301 of file bytebuffer\&.cpp\&.
 .SS "int Senergy::ByteBuffer::GetPosition ()"
 
 .PP
@@ -256,6 +307,19 @@ The amount of bytes that can be read until the end of the buffer is reached\&.
 
 .PP
 Definition at line 68 of file bytebuffer\&.cpp\&.
+.SS "bool Senergy::ByteBuffer::HasReachedEnd ()"
+
+.PP
+Checks if the buffer's position is currently at the end of the buffer\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+True when the end of the buffer was reached and false when it has not reached the end of the buffer\&. 
+.RE
+.PP
+
+.PP
+Definition at line 343 of file bytebuffer\&.cpp\&.
 .SS "bool Senergy::ByteBuffer::IncreasePosition (intamount = \fC1\fP)"
 
 .PP
@@ -306,7 +370,7 @@ A boolean indicating whether reading succeseeded\&. True is returned when readin
 .PP
 
 .PP
-Definition at line 183 of file bytebuffer\&.cpp\&.
+Definition at line 188 of file bytebuffer\&.cpp\&.
 .SS "bool Senergy::ByteBuffer::Read (char *buffer, unsigned intsize)"
 
 .PP
@@ -326,7 +390,7 @@ A boolean indicating whether reading succeseeded\&. True is returned when readin
 .PP
 
 .PP
-Definition at line 198 of file bytebuffer\&.cpp\&.
+Definition at line 203 of file bytebuffer\&.cpp\&.
 .SS "std::string Senergy::ByteBuffer::ReadAll ()"
 
 .PP
@@ -344,7 +408,7 @@ The contents of the buffer as a string\&.
 .PP
 
 .PP
-Definition at line 249 of file bytebuffer\&.cpp\&.
+Definition at line 254 of file bytebuffer\&.cpp\&.
 .SS "char Senergy::ByteBuffer::ReadChar ()"
 
 .PP
@@ -357,7 +421,7 @@ The char that was read from the buffer\&. -1 is returned when reading failed\&.
 .PP
 
 .PP
-Definition at line 213 of file bytebuffer\&.cpp\&.
+Definition at line 218 of file bytebuffer\&.cpp\&.
 .SS "int Senergy::ByteBuffer::ReadInt ()"
 
 .PP
@@ -370,7 +434,7 @@ The integer that was read from the buffer\&. -1 is returned when reading failed\
 .PP
 
 .PP
-Definition at line 203 of file bytebuffer\&.cpp\&.
+Definition at line 208 of file bytebuffer\&.cpp\&.
 .SS "bool Senergy::ByteBuffer::ReadRemaining (char *buffer, intmax_size)"
 
 .PP
@@ -419,7 +483,7 @@ The short that was read from the buffer\&. -1 is returned when reading failed\&.
 .PP
 
 .PP
-Definition at line 223 of file bytebuffer\&.cpp\&.
+Definition at line 228 of file bytebuffer\&.cpp\&.
 .SS "std::string Senergy::ByteBuffer::ReadString (unsigned intmax_length = \fC0\fP)"
 
 .PP
@@ -437,7 +501,7 @@ The string that was read, if something went wrong, or the end of the buffer was 
 .PP
 
 .PP
-Definition at line 233 of file bytebuffer\&.cpp\&.
+Definition at line 238 of file bytebuffer\&.cpp\&.
 .SS "unsigned char Senergy::ByteBuffer::ReadUnsignedChar ()"
 
 .PP
@@ -450,7 +514,7 @@ The unsigned char that was read from the buffer\&. 0 is returned when reading fa
 .PP
 
 .PP
-Definition at line 218 of file bytebuffer\&.cpp\&.
+Definition at line 223 of file bytebuffer\&.cpp\&.
 .SS "unsigned int Senergy::ByteBuffer::ReadUnsignedInt ()"
 
 .PP
@@ -463,7 +527,7 @@ The unsigned integer that was read from the buffer\&. 0 is returned when reading
 .PP
 
 .PP
-Definition at line 208 of file bytebuffer\&.cpp\&.
+Definition at line 213 of file bytebuffer\&.cpp\&.
 .SS "unsigned short Senergy::ByteBuffer::ReadUnsignedShort ()"
 
 .PP
@@ -476,7 +540,7 @@ The unsigned short that was read from the buffer\&. 0 is returned when reading f
 .PP
 
 .PP
-Definition at line 228 of file bytebuffer\&.cpp\&.
+Definition at line 233 of file bytebuffer\&.cpp\&.
 .SS "void Senergy::ByteBuffer::Reserve (unsigned intsize)"
 
 .PP
@@ -760,6 +824,19 @@ Increases the position by the size of the specified value\&.
 
 .PP
 Definition at line 178 of file bytebuffer\&.cpp\&.
+.SS "void Senergy::ByteBuffer::WriteNop ()"
+
+.PP
+Writes a null byte (0) to the byte buffer\&. The buffer is automaticlly resized when the specified value does not fit into the buffer\&. 
+.PP
+\fBNote:\fP
+.RS 4
+Increases the position by 1\&. 
+.RE
+.PP
+
+.PP
+Definition at line 183 of file bytebuffer\&.cpp\&.
 .SH "Friends And Related Function Documentation"
 .PP 
 .SS "friend class \fBSocket\fP\fC [friend]\fP"
