@@ -97,6 +97,21 @@ public:
 	 */
 	void Dump();
 
+	/*!
+  	 * \brief Provides access the resource records in this collection based on the specified
+	 *		  resource record type. Returns all the resource records of the specified type.
+	 *
+	 * \param resource_record_type A value from the ResourceRecordType enumuration which indicates
+	 *							   which type of resource records to return.
+	 *
+ 	 * \returns A vector of resource records of the specified type, they are returned in their
+	 *			polymorphic form.
+ 	 */
+	VectorX<ResourceRecordInterfacePtr> & operator[] (ResourceRecordType resource_record_type)
+	{
+		return m_records[resource_record_type];
+	}
+
 private:
 	// Registers all mappings between values from the ResourceRecordType enumuration and the implementation classes...
 	void __register_mappings();
