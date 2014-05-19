@@ -145,9 +145,18 @@ void ByteBuffer::Write(void *data, int size)
 	Write(data, (unsigned int)size);
 }
 
-void ByteBuffer::Write(const std::string &data)
+void ByteBuffer::Write(const std::string &data, StringOptions options /* = StringOptions::ExcludeNullTerminator */)
 {
-	Write((char *)data.c_str(), (unsigned int)data.size() + 1);
+	switch(options)
+	{
+		case StringOptions::ExcludeNullTerminator:
+			Write((char *)data.c_str(), (unsigned int)data.size());
+			break;
+		
+		default:
+			Write((char *)data.c_str(), (unsigned int)data.size() + 1);
+			break;
+	}
 }
 
 void ByteBuffer::Write(int value)
@@ -241,8 +250,11 @@ std::string ByteBuffer::ReadString(unsigned int max_length /* = 0 */)
 
 	while(GetRemainingSize() > 0)
 	{
+		if(result_string.size() >= max_length)
+			break;
+
 		char current_character = ReadChar();
-		if(current_character == 0 || result_string.size() >= max_length)
+		if(current_character == 0)
 			break;
 
 		result_string += current_character;
@@ -294,7 +306,7 @@ void ByteBuffer::DumpHexadecimal()
 		}
 	} 
 	
-	Print::NewLine();
+	printf("\n");
 	SetPosition(current_position);
 }
 
@@ -325,18 +337,49 @@ void ByteBuffer::DumpHexadecimal(int start, int amount)
 		}
 	} 
 	
-	Print::NewLine();
+	printf("\n");
 	SetPosition(current_position);
 }
 
 bool ByteBuffer::CopyTo(ByteBuffer &buffer, int amount)
 {
-	if(amount > this->GetRemainingSize())
+	if(amount > GetRemainingSize())
 		return false;
 
-	for(int i = 0; i < amount; ++i)
-		buffer.Write(buffer.ReadChar());
+	buffer.Reserve(amount);	
+	memcpy(buffer.m_data + buffer.GetPosition(), m_data + GetPosition(), amount);
 
+	IncreasePosition(amount); 
+	return true;
+}
+
+bool ByteBuffer::CopyTo(ByteBufferPtr buffer, int amount)
+{
+	if(amount > GetRemainingSize())
+		return false;
+
+	buffer->Reserve(amount);	
+	memcpy(buffer->m_data + buffer->GetPosition(), m_data + GetPosition(), amount); 
+
+	IncreasePosition(amount);
+	return true;
+}
+
+bool ByteBuffer::CopyAllTo(ByteBuffer &buffer)
+{
+	int current_pos = GetPosition();
+
+	CopyTo(buffer, GetRemainingSize());
+	SetPosition(current_pos);
+	return true;
+}
+
+bool ByteBuffer::CopyAllTo(ByteBufferPtr buffer)
+{
+	int current_pos = GetPosition();
+
+	CopyTo(buffer, GetRemainingSize());
+	SetPosition(current_pos);
 	return true;
 }
 
@@ -348,5 +391,19 @@ bool ByteBuffer::HasReachedEnd()
 	return false;
 }
 
-} // namespace Senergy
+void ByteBuffer::Clear()
+{
+	if(m_data != NULL)
+		free(m_data);
 
+	m_data = NULL;
+	m_current_size = 0;
+	m_position = 0;
+}
+
+char * ByteBuffer::GetRawData()
+{
+	return m_data;
+}
+
+} // namespace Senergy

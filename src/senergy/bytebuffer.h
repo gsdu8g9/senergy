@@ -26,7 +26,6 @@
 #include <cstring>
 #include <cstdlib>
 #include <memory>
-#include <senergy/print.h>
 
 namespace Senergy
 {
@@ -44,6 +43,20 @@ class ByteBuffer
 //							   can directly access the underlying buffer,
 // 							   thus preventing memory allocations and copies.
 friend class Socket;
+
+// Simple hack to make this typedef work inside this class, real definition (public)
+// is at the bottom of this file..
+typedef std::shared_ptr<ByteBuffer> ByteBufferPtr;
+
+public:
+	/*!
+	 * \brief An enumuration of options for writing and reading strings.
+	 */
+	enum class StringOptions
+	{
+		IncludeNullTerminator,
+		ExcludeNullTerminator
+	};
 
 public:
 	/*! 
@@ -217,11 +230,13 @@ public:
 	 *		  the specified string does not fit into the buffer.
 	 *
 	 * \note Increases the position by the size of the specified string.
-	 * \note Accounts for the string termination character (\0).
 	 *
-	 * \param data The string to write to the buffer.
+	 * \param data 		The string to write to the buffer.
+	 * \param options	A value from the ByteBuffer::StringOptions enumuration which indicates
+	 *					whether to include the null termination (\0) when writing the string
+	 *					to the buffer.
 	 */
-	void Write(const std::string &data);
+	void Write(const std::string &data, StringOptions options = StringOptions::ExcludeNullTerminator);
 
 	/*!
 	 * \brief Writes the specified value to the buffer. The buffer is automaticlly resized when
@@ -443,6 +458,42 @@ public:
 	 *			 caused by specifiying an amount that is more then the remaining size.
 	 */
 	bool CopyTo(ByteBuffer &buffer, int amount);
+
+	/*!
+	 * \brief Copies the specified amount of bytes from the current position into the specified buffer.
+	 *
+	 * \param buffer The buffer to copy the bytes to.
+	 * \param amount The amount of bytes to copy to the specified buffer.
+	 *
+	 * \returns A boolean indicating whether the copy operation was a success, false is returned
+	 *			 when the copy failed and true is returned when the copy was a success. Failure is usually
+	 *			 caused by specifiying an amount that is more then the remaining size.
+	 */
+	bool CopyTo(ByteBufferPtr buffer, int amount);
+
+	/*!
+	 * \brief Copies the entire buffer into the specified buffer.
+	 *
+	 * \note This does not affect the current position of this buffer. It does
+	 *		 however increase the position of the buffer that you are copying to.
+	 * 
+	 * \parma buffer The buffer to copy the byte to.
+	 *
+	 * \returns A boolean indicating whether the copy operation was a success.
+	 */
+	bool CopyAllTo(ByteBuffer &buffer);
+
+	/*!
+	 * \brief Copies the entire buffer into the specified buffer.
+	 *
+	 * \note This does not affect the current position of this buffer. It does
+	 *		 however increase the position of the buffer that you are copying to.
+	 *
+	 * \parma buffer The buffer to copy the byte to.
+	 *
+	 * \returns A boolean indicating whether the copy operation was a success.
+	 */
+	bool CopyAllTo(ByteBufferPtr buffer);
 	
 	/*!
 	 * \brief Checks if the buffer's position is currently at the end of the buffer.
@@ -451,6 +502,16 @@ public:
 	 *			reached the end of the buffer.
 	 */
 	bool HasReachedEnd();
+
+	/*!
+ 	 * \brief Removes all data from the buffer and restores the initial state.
+ 	 */
+	void Clear();
+
+	/*!
+	 * \brief Gets the underlying raw buffer.
+	 */
+	char * GetRawData();
 	
 private:
 	// Sets the size of the buffer, by reallocating memory but checks
