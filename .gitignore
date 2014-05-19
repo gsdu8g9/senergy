@@ -11,3 +11,5 @@ backup.txt
 nul
 *.userprefs
 mono/*.userprefs
+*.log
+log.txt
